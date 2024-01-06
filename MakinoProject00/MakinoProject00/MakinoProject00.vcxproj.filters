@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework">
+      <UniqueIdentifier>{3b0b226b-2472-453f-a526-165caf68b366}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Application">
+      <UniqueIdentifier>{b0df94d3-3d7a-47f8-8acd-a5782ae6cf9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Graphics">
+      <UniqueIdentifier>{b40c27ee-22e3-4628-b72a-b9df84e12206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Graphics\Generic">
+      <UniqueIdentifier>{081cc4d0-a373-4b09-87e6-d22c3fc5c334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Utility">
+      <UniqueIdentifier>{cb95740e-86ca-43a5-ba66-64dc0661c820}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Debug">
+      <UniqueIdentifier>{331841e1-d8df-4ec1-9bba-4b1ae0081f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework">
+      <UniqueIdentifier>{eb08076a-ec77-4978-8159-fad01b5611ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Application">
+      <UniqueIdentifier>{9a505dac-2635-47e0-9248-4f8f172a29b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Graphics">
+      <UniqueIdentifier>{7502e4b3-095e-47e9-9413-e9dbe0d465f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Utility">
+      <UniqueIdentifier>{2b43cc39-a4d9-49db-80d5-71c1efa9fb9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Debug">
+      <UniqueIdentifier>{7fac0132-a124-4741-b4dc-9a226a18e2c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Graphics\Pipeline">
+      <UniqueIdentifier>{36edebf1-c783-476d-b1b1-35045ccd37cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Graphics\Generic">
+      <UniqueIdentifier>{33673e96-6b13-4eb8-ba93-5f04d3de3147}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Graphics\Pipeline">
+      <UniqueIdentifier>{37ef57ab-cc0d-4ebe-86eb-33d2621f02da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game">
+      <UniqueIdentifier>{aca50b0c-7e20-4cbb-b891-a5154e620e4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game">
+      <UniqueIdentifier>{c71fbe51-99ae-4057-a728-30ced32e205c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Useful">
+      <UniqueIdentifier>{d3da1c5f-210c-4939-8d04-2ba2ede0ad61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Useful">
+      <UniqueIdentifier>{cd3d4a47-7034-4955-9f9d-54d575aaad90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\SystemDesign">
+      <UniqueIdentifier>{c2f4ffa9-7908-4af5-b1c3-ee7610a6baec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\SystemDesign">
+      <UniqueIdentifier>{de8ce780-90a3-47ae-ae6c-ffa7d302877e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Graphics\Registry">
+      <UniqueIdentifier>{17a77ad7-ad6a-4c76-baff-64f90ef72c4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Graphics\Registry">
+      <UniqueIdentifier>{32524623-c917-46cf-807d-ee6af186d9e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Graphics\Resource">
+      <UniqueIdentifier>{3d967983-9a96-45de-9ecd-9c6ce003a35d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Graphics\Resource\ConstantBuffer">
+      <UniqueIdentifier>{baf768f5-5951-49e7-bc8c-7d55a6cf94ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Graphics\Resource\ShaderResource">
+      <UniqueIdentifier>{738cce1b-f275-46bc-80b2-e1be4541b705}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Graphics\Resource\StructuredBuffer">
+      <UniqueIdentifier>{26bec218-96d2-4565-8a5c-57864a584318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Standard">
+      <UniqueIdentifier>{20698230-7090-488f-b8dd-0ed55dabb09d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Standard\StandardComponent">
+      <UniqueIdentifier>{8f128ec5-3249-4053-8e90-63c16e86d249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Standard">
+      <UniqueIdentifier>{4e66886c-c582-4902-ae96-e3065ecaab27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Standard\StandardComponent">
+      <UniqueIdentifier>{4e4a9f34-453d-4f22-af22-31a17c6a2c1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Graphics\Resource">
+      <UniqueIdentifier>{71ca4d56-7867-49c5-ad32-e8a70157335d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Graphics\Resource\ShaderResource">
+      <UniqueIdentifier>{462f0e3e-822f-450d-8501-ecce614eeac4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Graphics\Resource\Mesh">
+      <UniqueIdentifier>{f8e374a9-bb98-440d-95fc-675e001902a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Graphics\Resource\Mesh">
+      <UniqueIdentifier>{5b3a3b35-eefe-4bc4-ba0b-f09acfa76793}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Standard\StandardResource">
+      <UniqueIdentifier>{c3f725d3-7fa7-4b94-b75e-c9683c37cabb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Standard\StandardResource">
+      <UniqueIdentifier>{96eec525-14a7-49c3-ba2f-f5c67977d73e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Crypter">
+      <UniqueIdentifier>{eee714cd-0263-4da4-95e5-b527fcf94022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Crypter">
+      <UniqueIdentifier>{0798d421-1418-4efb-8ec5-a3cef7a49ea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Main">
+      <UniqueIdentifier>{b1e13ce7-7299-47b7-b500-8694258cf8c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Main">
+      <UniqueIdentifier>{893eaa74-3795-4df7-b2a1-a202177d98d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PixelShader">
+      <UniqueIdentifier>{cebd1a49-7a87-4697-8db5-118240fc49d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\VertexShader">
+      <UniqueIdentifier>{23125487-fb63-4a77-8ae5-3782e185b8ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PixelShader\Standard">
+      <UniqueIdentifier>{f732d0bc-6002-4eb2-bd94-174ea9ed5cc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\VertexShader\Standard">
+      <UniqueIdentifier>{a04a1125-fe13-4748-9775-c4dfd6c7a6d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Other">
+      <UniqueIdentifier>{a36c1a2e-2e2b-4f91-b5aa-1dd8e906c7d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Resource">
+      <UniqueIdentifier>{a3f35066-9196-4eae-99ed-68eb22d8339e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>ソース ファイル\Framework\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplicationClock.cpp">
+      <Filter>ソース ファイル\Framework\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugForApplicationFramework.cpp">
+      <Filter>ソース ファイル\Framework\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsComponent.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>ソース ファイル\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityForDirectX.cpp">
+      <Filter>ソース ファイル\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityForString.cpp">
+      <Filter>ソース ファイル\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="DescriptorHeap.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandManager.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="GpuOptimizedResource.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapChain.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsLayerRegistry.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsObjectAsset.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsPipelineElements.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsPipelineState.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuffer.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Resource\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshBuffer.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Resource\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Resource\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureRegistry.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureResource.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderTarget.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityForMath.cpp">
+      <Filter>ソース ファイル\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Precompile.cpp">
+      <Filter>ソース ファイル\Framework\Useful</Filter>
+    </ClCompile>
+    <ClCompile Include="ReleaseSingleton.cpp">
+      <Filter>ソース ファイル\Framework\Useful</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPool.cpp">
+      <Filter>ソース ファイル\Framework\Useful</Filter>
+    </ClCompile>
+    <ClCompile Include="CallbackSystem.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticCbVPMat.cpp">
+      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicCbWorldMat.cpp">
+      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraRegistry.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticCbOrthographicMat.cpp">
+      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneRegistry.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="DepthStencil.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicCbRegistry.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderRegistry.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticResourceRegistry.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicSbAnimMat.cpp">
+      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicSbRegistry.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetCrypter.cpp">
+      <Filter>ソース ファイル\Crypter</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>ソース ファイル\Framework\Useful</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplicationMain.cpp">
+      <Filter>ソース ファイル\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="EncryptAssetMain.cpp">
+      <Filter>ソース ファイル\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>ソース ファイル\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSystem.cpp">
+      <Filter>ソース ファイル\Framework\Useful</Filter>
+    </ClCompile>
+    <ClCompile Include="IntKeyGenerater.cpp">
+      <Filter>ソース ファイル\Framework\Useful</Filter>
+    </ClCompile>
+    <ClCompile Include="DescriptorHeapPool.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="LayeredGPSOWrapper.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityForAsync.cpp">
+      <Filter>ソース ファイル\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityForException.cpp">
+      <Filter>ソース ファイル\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplicationError.cpp">
+      <Filter>ソース ファイル\Framework\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelRegistry.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadedModelInfo.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicCbColor.cpp">
+      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="PS_StandardColorOnly.hlsl">
+      <Filter>リソース ファイル\PixelShader\Standard</Filter>
+    </FxCompile>
+    <FxCompile Include="PS_StandardTex.hlsl">
+      <Filter>リソース ファイル\PixelShader\Standard</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_Standard2DSprite.hlsl">
+      <Filter>リソース ファイル\VertexShader\Standard</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_Standard3D.hlsl">
+      <Filter>リソース ファイル\VertexShader\Standard</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_Standard3DAnim.hlsl">
+      <Filter>リソース ファイル\VertexShader\Standard</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_Standard3DSprite.hlsl">
+      <Filter>リソース ファイル\VertexShader\Standard</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <Filter>リソース ファイル\Other</Filter>
+    </None>
+    <None Include="PSi_Standard.hlsli">
+      <Filter>リソース ファイル\PixelShader\Standard</Filter>
+    </None>
+    <None Include="VSi_Standard.hlsli">
+      <Filter>リソース ファイル\VertexShader\Standard</Filter>
+    </None>
+    <None Include="CommonResources.hlsli">
+      <Filter>リソース ファイル\Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Utility.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityForDirectX.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityForString.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>ヘッダー ファイル\Framework\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractCbAllocator.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantBufferResource.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureResource.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClInclude>
+    <ClInclude Include="GpuOptimizedResource.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationClock.h">
+      <Filter>ヘッダー ファイル\Framework\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugForApplicationFramework.h">
+      <Filter>ヘッダー ファイル\Framework\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsComponent.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsLayer.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderTarget.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshBuffer.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="SwapChain.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsPipelineElements.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsPipelineState.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsObjectAsset.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsLayerRegistry.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandManager.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="DescriptorHeap.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityForMath.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityForBit.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="MathStructures.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="Precompile.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="ReleaseSingleton.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Resource.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="UniquePtr.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="CallbackSystem.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticCbVPMat.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicCbWorldMat.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraRegistry.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicCbAllocator.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticCbOrthographicMat.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneRegistry.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="WeakPtr.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedPtr.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="DepthStencil.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicCbRegistry.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderRegistry.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticResourceRegistry.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureRegistry.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClInclude>
+    <ClInclude Include="StableHandleVector.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="StructuredBufferResource.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\StructuredBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractSbAllocator.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\StructuredBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticCbAllocator.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ConstantBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicSbAllocator.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\StructuredBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticResource.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicResource.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicSbAnimMat.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicSbRegistry.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetCrypter.h">
+      <Filter>ヘッダー ファイル\Crypter</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoKey.h">
+      <Filter>ヘッダー ファイル\Crypter</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationMain.h">
+      <Filter>ヘッダー ファイル\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="EncryptAssetMain.h">
+      <Filter>ヘッダー ファイル\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="IntKeyGenerater.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="DescriptorHeapPool.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationError.h">
+      <Filter>ヘッダー ファイル\Framework\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityForAsync.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="LayeredGPSOWrapper.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityForException.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelRegistry.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityForType.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadedModelInfo.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicCbColor.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\MakinoProject00.rc">
+      <Filter>リソース ファイル\Other</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
