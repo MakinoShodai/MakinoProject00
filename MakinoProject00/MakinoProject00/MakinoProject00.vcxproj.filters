@@ -94,14 +94,8 @@
     <Filter Include="ヘッダー ファイル\Framework\Standard">
       <UniqueIdentifier>{20698230-7090-488f-b8dd-0ed55dabb09d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル\Framework\Standard\StandardComponent">
-      <UniqueIdentifier>{8f128ec5-3249-4053-8e90-63c16e86d249}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Framework\Standard">
       <UniqueIdentifier>{4e66886c-c582-4902-ae96-e3065ecaab27}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Framework\Standard\StandardComponent">
-      <UniqueIdentifier>{4e4a9f34-453d-4f22-af22-31a17c6a2c1a}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\Framework\Graphics\Resource">
       <UniqueIdentifier>{71ca4d56-7867-49c5-ad32-e8a70157335d}</UniqueIdentifier>
@@ -114,12 +108,6 @@
     </Filter>
     <Filter Include="ヘッダー ファイル\Framework\Graphics\Resource\Mesh">
       <UniqueIdentifier>{5b3a3b35-eefe-4bc4-ba0b-f09acfa76793}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Framework\Standard\StandardResource">
-      <UniqueIdentifier>{c3f725d3-7fa7-4b94-b75e-c9683c37cabb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Framework\Standard\StandardResource">
-      <UniqueIdentifier>{96eec525-14a7-49c3-ba2f-f5c67977d73e}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\Crypter">
       <UniqueIdentifier>{eee714cd-0263-4da4-95e5-b527fcf94022}</UniqueIdentifier>
@@ -150,6 +138,24 @@
     </Filter>
     <Filter Include="リソース ファイル\Resource">
       <UniqueIdentifier>{a3f35066-9196-4eae-99ed-68eb22d8339e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Standard\Component">
+      <UniqueIdentifier>{8f128ec5-3249-4053-8e90-63c16e86d249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Standard\Resource">
+      <UniqueIdentifier>{c3f725d3-7fa7-4b94-b75e-c9683c37cabb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Standard\Component">
+      <UniqueIdentifier>{4e4a9f34-453d-4f22-af22-31a17c6a2c1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Standard\Resource">
+      <UniqueIdentifier>{96eec525-14a7-49c3-ba2f-f5c67977d73e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Standard\GPSO">
+      <UniqueIdentifier>{a953010d-504f-43e0-8efa-1f8edf93eba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Standard\GPSO">
+      <UniqueIdentifier>{b3347a93-cb42-4c4c-95ed-8093d78eecd5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -247,22 +253,22 @@
       <Filter>ソース ファイル\Framework\SystemDesign</Filter>
     </ClCompile>
     <ClCompile Include="StaticCbVPMat.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
     </ClCompile>
     <ClCompile Include="DynamicCbWorldMat.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
     </ClCompile>
     <ClCompile Include="CameraRegistry.cpp">
       <Filter>ソース ファイル\Framework\SystemDesign</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
     </ClCompile>
     <ClCompile Include="StaticCbOrthographicMat.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
     </ClCompile>
     <ClCompile Include="SceneRegistry.cpp">
       <Filter>ソース ファイル\Framework\SystemDesign</Filter>
@@ -280,7 +286,7 @@
       <Filter>ソース ファイル\Framework\Graphics\Registry</Filter>
     </ClCompile>
     <ClCompile Include="DynamicSbAnimMat.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
     </ClCompile>
     <ClCompile Include="DynamicSbRegistry.cpp">
       <Filter>ソース ファイル\Framework\Graphics\Registry</Filter>
@@ -325,16 +331,28 @@
       <Filter>ソース ファイル\Framework\Graphics\Registry</Filter>
     </ClCompile>
     <ClCompile Include="Model.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
     </ClCompile>
     <ClCompile Include="LoadedModelInfo.cpp">
       <Filter>ソース ファイル\Framework\Graphics\Generic</Filter>
     </ClCompile>
     <ClCompile Include="Shape.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
     </ClCompile>
     <ClCompile Include="DynamicCbColor.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="StandardGPSOWrapper.cpp">
+      <Filter>ソース ファイル\Framework\Standard\GPSO</Filter>
+    </ClCompile>
+    <ClCompile Include="SampleScene.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SampleComponent.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelLoadSetting.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -487,25 +505,25 @@
       <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
     </ClInclude>
     <ClInclude Include="StaticCbVPMat.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
     </ClInclude>
     <ClInclude Include="DynamicCbWorldMat.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
     </ClInclude>
     <ClInclude Include="CameraRegistry.h">
       <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
     </ClInclude>
     <ClInclude Include="Sprite.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
     </ClInclude>
     <ClInclude Include="DynamicCbAllocator.h">
       <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ConstantBuffer</Filter>
     </ClInclude>
     <ClInclude Include="StaticCbOrthographicMat.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
     </ClInclude>
     <ClInclude Include="SceneRegistry.h">
       <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
@@ -553,7 +571,7 @@
       <Filter>ヘッダー ファイル\Framework\Graphics\Resource</Filter>
     </ClInclude>
     <ClInclude Include="DynamicSbAnimMat.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
     </ClInclude>
     <ClInclude Include="DynamicSbRegistry.h">
       <Filter>ヘッダー ファイル\Framework\Graphics\Registry</Filter>
@@ -601,16 +619,31 @@
       <Filter>ヘッダー ファイル\Framework\Utility</Filter>
     </ClInclude>
     <ClInclude Include="Model.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
     </ClInclude>
     <ClInclude Include="LoadedModelInfo.h">
       <Filter>ヘッダー ファイル\Framework\Graphics\Generic</Filter>
     </ClInclude>
     <ClInclude Include="DynamicCbColor.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
     </ClInclude>
     <ClInclude Include="Shape.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="StandardGPSOWrapper.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\GPSO</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleScene.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleComponent.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetNameDefine.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelLoadSetting.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
