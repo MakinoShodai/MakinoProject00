@@ -68,6 +68,9 @@ void ACScene::Update() {
         // Pre drawing processing
         it->PreDraw();
     }
+
+    // Perform processing at the end of the update process from camera registry
+    m_cameraRegistry->EndUpdate();
 }
 
 // Processing at end of a frame

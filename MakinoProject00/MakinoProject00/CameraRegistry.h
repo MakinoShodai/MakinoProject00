@@ -24,6 +24,11 @@ public:
     ~CCameraRegistry() = default;
 
     /**
+       @brief Processing at the end of the update process
+    */
+    void EndUpdate();
+
+    /**
        @brief Get a camera with highest priority
        @return Weak pointer to camera component
     */

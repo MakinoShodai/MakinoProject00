@@ -30,6 +30,8 @@ protected:
     Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CSpriteUI* sprite);
     /** @brief Allocate data for sprite 3D */
     Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CSprite3D* sprite);
+    /** @brief Allocate data for billboard */
+    Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CBillboard* billboard);
 };
 
 #endif // !__DYNAMIC_CB_WORLD_MAT_H__

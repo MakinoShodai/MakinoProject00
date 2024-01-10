@@ -2,6 +2,7 @@
 #include "GraphicsComponent.h"
 #include "GameObject.h"
 #include "RenderTarget.h"
+#include "Scene.h"
 
 // Sprite coordinate system magnification
 float SPRITE_COORDINATE_SYSTEM_MAGNIFICATION = 1.0f / SPRITE_SCREEN_BOUNDARY;
@@ -95,4 +96,29 @@ Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicCbWorldMat::AllocateData(CSprite3D* sprit
     );
 
     return DirectDataCopy(&mat);
+}
+
+// Allocate data for billboard
+Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicCbWorldMat::AllocateData(CBillboard* billboard) {
+    auto camera = billboard->GetGameObj()->GetScene()->GetCameraRegistry()->GetCameraPriority();
+    if (camera) {
+        // Get the transform of the game object
+        const Transformf& transform = billboard->GetGameObj()->GetTransform();
+
+        // Calculate sprite scale according to resolution
+        float scaleX = transform.scale.x() * billboard->GetResolutionRatio();
+
+        // Calculate a world matrix
+        DirectX::XMFLOAT4X4 mat;
+        DirectX::XMStoreFloat4x4(&mat,
+            DirectX::XMMatrixScaling(scaleX, transform.scale.y(), transform.scale.z()) *
+            camera->GetRotationMatrix() *
+            DirectX::XMMatrixTranslation(transform.pos.x(), transform.pos.y(), transform.pos.z())
+        );
+
+        return DirectDataCopy(&mat);
+    }
+
+    OutputDebugString(L"Warning! Couldn't get the camera from the scene.\n");
+    return Utl::Dx::CPU_DESCRIPTOR_HANDLE();
 }

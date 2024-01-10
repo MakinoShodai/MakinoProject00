@@ -1,6 +1,14 @@
 ﻿#include "CameraRegistry.h"
 #include "Application.h"
 
+// Processing at the end of the update process
+void CCameraRegistry::EndUpdate() {
+    // Apply the rotation to look direction vector
+    for (auto& it : m_cameras) {
+        it->ApplyRotation();
+    }
+}
+
 // Get a camera with highest priority
 CWeakPtr<CCameraComponent> CCameraRegistry::GetCameraPriority() const {
     int highestPriority = Utl::Limit::INT_LOWEST;
