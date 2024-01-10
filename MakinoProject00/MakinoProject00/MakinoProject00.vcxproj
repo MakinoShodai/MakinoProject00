@@ -69,6 +69,7 @@
     <ClCompile Include="MeshBuffer.cpp" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="LoadedModelInfo.cpp" />
+    <ClCompile Include="ModelLoadSetting.cpp" />
     <ClCompile Include="ModelRegistry.cpp" />
     <ClCompile Include="Precompile.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -82,6 +83,8 @@
     </ClCompile>
     <ClCompile Include="ReleaseSingleton.cpp" />
     <ClCompile Include="RenderTarget.cpp" />
+    <ClCompile Include="SampleComponent.cpp" />
+    <ClCompile Include="SampleScene.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneRegistry.cpp" />
     <ClCompile Include="Shader.cpp" />
@@ -89,6 +92,7 @@
     <ClCompile Include="ShaderRegistry.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="StandardGPSOWrapper.cpp" />
     <ClCompile Include="StaticCbOrthographicMat.cpp" />
     <ClCompile Include="StaticCbVPMat.cpp" />
     <ClCompile Include="StaticResourceRegistry.cpp" />
@@ -178,6 +182,7 @@
     <ClInclude Include="ApplicationError.h" />
     <ClInclude Include="ApplicationMain.h" />
     <ClInclude Include="AssetCrypter.h" />
+    <ClInclude Include="AssetNameDefine.h" />
     <ClInclude Include="CallbackSystem.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CameraRegistry.h" />
@@ -216,12 +221,15 @@
     <ClInclude Include="MeshBuffer.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="LoadedModelInfo.h" />
+    <ClInclude Include="ModelLoadSetting.h" />
     <ClInclude Include="ModelRegistry.h" />
     <ClInclude Include="Precompile.h" />
     <ClInclude Include="ReleaseSingleton.h" />
     <ClInclude Include="RenderTarget.h" />
     <ClInclude Include="Resource\Resource.h" />
     <ClInclude Include="AbstractSbAllocator.h" />
+    <ClInclude Include="SampleComponent.h" />
+    <ClInclude Include="SampleScene.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneRegistry.h" />
     <ClInclude Include="Shader.h" />
@@ -232,6 +240,7 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="StableHandleVector.h" />
+    <ClInclude Include="StandardGPSOWrapper.h" />
     <ClInclude Include="StaticCbAllocator.h" />
     <ClInclude Include="StaticCbOrthographicMat.h" />
     <ClInclude Include="StaticCbVPMat.h" />
