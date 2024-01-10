@@ -132,7 +132,7 @@ public:
                 setting->ps = CShaderRegistry::GetAny().GetPS(PixelShaderType::StandardColor);
             }
             {
-                auto setting = standardSetting.AddOverrideSetting({ GraphicsComponentType::Sprite3D });
+                auto setting = standardSetting.AddOverrideSetting({ GraphicsComponentType::Sprite3D, GraphicsComponentType::Billboard });
                 setting->vs = CShaderRegistry::GetAny().GetVS(VertexShaderType::Standard3DSprite);
                 setting->rasterizerState = Gpso::RasterizerStateSetting();
                 setting->rasterizerState->cullMode = D3D12_CULL_MODE_NONE;
@@ -169,6 +169,10 @@ public:
         sprite2->AddComponent<CSprite3D>(GraphicsLayer::Standard, L"Texture/textest200x200.png");
         sprite2->AddComponent<RotateComponent>(Vector3f(0.0f, 1.0f, 0.0f).GetNormalize(), 3.0f);
 
+        // Billboard obj
+        auto billboard = CreateGameObject<CGameObject>(Transformf(Vector3f(0.0f, -1.5f, 0.0f), Vector3f::Ones(), Utl::DEG_2_RAD * Vector3f(0.0f, 0.0f, 0.0f)));
+        billboard->AddComponent<CBillboard>(GraphicsLayer::Standard, L"Texture/apollo11.png");
+
         // Box
         {
             auto box = CreateGameObject<CGameObject>(Transformf(Vector3f(0.0f, 0.0f, 0.0f), Vector3f::Ones(), Vector3f::Zero()));
@@ -200,6 +204,7 @@ public:
         // Camera obj
         auto camera = CreateGameObject<CGameObject>(Transformf(Vector3f(0.0f, 0.0f, -5.0f)));
         camera->AddComponent<CCameraComponent>(L"Main camera");
+        camera->AddComponent<RotateComponent>(Vector3f(0.0f, 1.0f, 0.0f), 0.1f);
     }
 
     void Draw() {
