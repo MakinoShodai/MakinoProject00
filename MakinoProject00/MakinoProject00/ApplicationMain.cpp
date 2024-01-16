@@ -17,8 +17,10 @@
 #include "DescriptorHeapPool.h"
 #include "ModelRegistry.h"
 #include "ModelLoadSetting.h"
+#include "TagSetting.h"
 #include "EncryptAssetMain.h"
 #include "SampleScene.h"
+#include "PhysicsSampleScene.h"
 
 // Width of window size
 const UINT WINDOW_WIDTH = 1920;
@@ -86,7 +88,7 @@ void ApplicationMain() {
     CApplication::GetMain().InitializeDirectX();
     
     // Initialize the application clock
-    CAppClock::GetMain().Initialize();
+    CAppClock::GetMain().Initialize(60.0);
     
     // Initialize the command manager
     CCommandManager::GetMain().Initialize();
@@ -101,7 +103,7 @@ void ApplicationMain() {
     CDynamicCbRegistry::GetMain().Initialize();
     
     // Initialize descriptor heap pool
-    CDescriptorHeapPool::GetMain().Initialize(2000, 1);
+    CDescriptorHeapPool::GetMain().Initialize(5000, 1);
     
     // Initialize the registry for static resources
     CStaticResourceRegistry::GetMain().Initialize();
@@ -120,8 +122,17 @@ void ApplicationMain() {
     CModelRegistry::GetMain().LoadModelPak(PAK_FILE_MODELS);
     CModelRegistry::GetMain().LoadAnimPak(PAK_FILE_ANIMATIONS);
 
+    // Perform setting for collider tag
+    TagSetting();
+
     // Set first scene
+#ifdef _SAMPLE
     CSceneRegistry::GetMain().Initialize<CSampleScene>();
+#elif _FOR_PHYSICS
+    CSceneRegistry::GetMain().Initialize<CPhysicsSampleScene>();
+#else
+    // #TODO : Set frist scene
+#endif
 
     // Main loop
     MSG msg = {};

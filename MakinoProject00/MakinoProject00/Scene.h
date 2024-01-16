@@ -16,6 +16,8 @@
 #include "GraphicsPipelineState.h"
 #include "DynamicSbRegistry.h"
 #include "IntKeyGenerater.h"
+#include "PhysicsWorld.h"
+#include "ScenePhase.h"
 
 /** @brief Is this a child class of CGameObject? */
 template <class T>
@@ -52,9 +54,24 @@ public:
     void Update();
 
     /**
+       @brief Physics simulation preprocessing
+    */
+    void PrePhysicsSimulation();
+
+    /**
+       @brief Physics simulation postprocessing
+    */
+    void PostPhysicsSimulation();
+
+    /**
        @brief Processing at end of a frame
     */
     void EndFrameProcess();
+
+    /**
+       @brief Transfer bit strings to observe the transform of all objects
+    */
+    void TransferObjectsTransformObserve();
 
     /**
        @brief Create a game object
@@ -84,10 +101,16 @@ public:
     */
     void AddGraphicsPipelineStatePointer(CGraphicsPipelineState* pipelineState) { if (pipelineState != nullptr) { m_gpsos.push_back(pipelineState); } }
 
+    /** @brief Get physics simulation environment class */
+    Mkpe::CPhysicsWorld* GetPhysicsWorld() { return &m_physicsWorld; }
+    /** @brief Get physics simulation environment class */
+    const Mkpe::CPhysicsWorld* GetPhysicsWorld() const { return &m_physicsWorld; }
+
     /** @brief Get weak pointer to camera registry */
     CWeakPtr<CCameraRegistry> GetCameraRegistry() { return m_cameraRegistry.GetWeakPtr(); }
     /** @brief Get weak pointer to camera registry */
-    const CWeakPtr<CCameraRegistry> GetCameraRegistry() const { return m_cameraRegistry.GetWeakPtr(); }
+    CWeakPtr<const CCameraRegistry> GetCameraRegistry() const { return m_cameraRegistry.GetWeakPtr(); }
+
     /** @brief Get registry class handles all structured buffer allocator per object */
     CDynamicSbRegistry* GetDynamicSbRegistry() { return &m_dynamicSbRegistry; }
     /** @brief Get pointer to the registry class handles graphics components array of each graphics layers */
@@ -95,7 +118,19 @@ public:
     /** @brief Get key generater class for mesh buffer */
     CIntKeyGenerater* GetMeshKeyGenerater() { return &m_meshKeyGenerater; }
 
+    /** @brief Get current phase of the scene currently being processed */
+    inline static ScenePhase GetCurrentScenePhase() { return ms_currentPhase; }
+
+protected:
+    /**
+       @brief Check if there are any objects to be destroyed, and if so, destroy them
+    */
+    void CheckObjectsDestroy();
+
 private:
+    /** @brief Current phase of the scene currently being processed */
+    static ScenePhase ms_currentPhase;
+
     /** @brief Dynamic array of game objects */
     std::vector<CUniquePtrWeakable<CGameObject>> m_gameObjects;
     /** @brief Game objects to be created in the future */
@@ -105,6 +140,8 @@ private:
     /** @brief Dynamic array to pointers to graphics pipeline state object */
     std::vector<CGraphicsPipelineState*> m_gpsos;
 
+    /** @brief Physics simulation environment class */
+    Mkpe::CPhysicsWorld m_physicsWorld;
     /** @brief Camera registry class */
     CUniquePtrWeakable<CCameraRegistry> m_cameraRegistry;
     /** @brief Registry class handles all structured buffer allocator per object */

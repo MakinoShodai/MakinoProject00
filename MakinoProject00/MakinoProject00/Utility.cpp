@@ -5,12 +5,12 @@ std::thread::id Utl::CMainThreadChecker::ms_mainThreadID = {};
 
 // Check if the value of Float is equal to 0
 const bool Utl::IsFloatZero(const float a) {
-    return std::abs(a) <= Utl::FLOAT_IGNORE ? true : false;
+    return (std::abs(a) <= Utl::FLOAT_IGNORE);
 }
 
 // Check if two values are equal
 const bool Utl::IsEqual(const float a, const float b) {
-    return std::abs(a - b) <= Utl::FLOAT_IGNORE ? true : false;
+    return (std::abs(a - b) <= Utl::FLOAT_IGNORE);
 }
 
 // Clamp a value in min to max

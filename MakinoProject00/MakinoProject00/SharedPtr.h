@@ -99,33 +99,22 @@ public:
     inline static CSharedPtr<T> Make(size_t size) requires std::is_array_v<T>;
 
     /** @brief Get instance */
-    inline InstanceType* Get() { return (m_strongRefCount) ? m_strongRefCount->m_ref : nullptr; }
-    /** @brief Get instance */
-    inline const InstanceType* Get() const { return (m_strongRefCount) ? m_strongRefCount->m_ref : nullptr; }
+    inline InstanceType* Get() const { return (m_strongRefCount) ? m_strongRefCount->m_ref : nullptr; }
     /** @brief Get weak ptr */
-    inline CWeakPtr<T> GetWeakPtr() { return CWeakPtr<T>(m_weakRefCount); }
-    /** @brief Get weak ptr */
-    inline const CWeakPtr<T> GetWeakPtr() const { return CWeakPtr<T>(m_weakRefCount); }
+    inline CWeakPtr<T> GetWeakPtr() const { return CWeakPtr<T>(m_weakRefCount); }
 
     /** @brief Instance reference operator */
-    inline InstanceType* operator->() { assert(m_strongRefCount != nullptr); return m_strongRefCount->m_ref; }
-    /** @brief Instance reference operator */
-    inline const InstanceType* operator->() const { assert(m_strongRefCount != nullptr); return m_strongRefCount->m_ref; }
+    inline InstanceType* operator->() const { assert(m_strongRefCount != nullptr); return m_strongRefCount->m_ref; }
 
     /** @brief Operator for array */
-    InstanceType& operator[](size_t index) requires std::is_array_v<T> { assert(m_strongRefCount != nullptr); return m_strongRefCount->m_ref[index]; }
-    /** @brief Operator for array */
-    const InstanceType& operator[](size_t index) const requires std::is_array_v<T> { assert(m_strongRefCount != nullptr); return m_strongRefCount->m_ref[index]; }
-
+    InstanceType& operator[](size_t index) const requires std::is_array_v<T> { assert(m_strongRefCount != nullptr); return m_strongRefCount->m_ref[index]; }
     /** @brief Dereference operator */
-    InstanceType& operator*() { assert(m_strongRefCount != nullptr); return *m_strongRefCount->m_ref; }
-    /** @brief Dereference operator */
-    const InstanceType& operator*() const { assert(m_strongRefCount != nullptr); return *m_strongRefCount->m_ref; }
+    InstanceType& operator*() const { assert(m_strongRefCount != nullptr); return *m_strongRefCount->m_ref; }
 
     /** @brief Comparison operator */
-    bool operator==(InstanceType* other) const { return (m_strongRefCount) ? m_strongRefCount->m_ref == other : other == nullptr; }
+    bool operator==(const InstanceType* instance) const { return (m_strongRefCount) ? m_strongRefCount->m_ref == instance : instance == nullptr; }
     /** @brief Comparison operator */
-    bool operator!=(InstanceType* other) const { return (m_strongRefCount) ? m_strongRefCount->m_ref != other : other != nullptr; }
+    bool operator!=(const InstanceType* instance) const { return (m_strongRefCount) ? m_strongRefCount->m_ref != instance : instance != nullptr; }
     /** @brief Comparison operator */
     bool operator==(const CSharedPtr& other) const { return m_strongRefCount == other.m_strongRefCount; }
     /** @brief Comparison operator */

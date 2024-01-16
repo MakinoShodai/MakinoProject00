@@ -158,8 +158,8 @@ Utl::Dx::CPU_DESCRIPTOR_HANDLE ACSbAllocater<StructBuffType>::DirectDataCopy(Mes
 // Create a per graphics component structured buffer
 template <class StructBuffType>
 void ACSbAllocater<StructBuffType>::CreatePerComponentBuffer(UINT size, UINT viewNum) {
-    m_buffers.emplace_back();
-    auto& newBuffer = m_buffers[*m_buffers.back_handle()];
+    m_buffers.EmplaceBack();
+    auto& newBuffer = m_buffers[*m_buffers.BackHandle()];
     // Create structured buffers and descriptor heaps
     for (UINT i = 0; i < SCREEN_BUFFERING_NUM; ++i) {
         newBuffer.structuredBuffers[i].Create(size);
@@ -171,7 +171,7 @@ void ACSbAllocater<StructBuffType>::CreatePerComponentBuffer(UINT size, UINT vie
 template <class StructBuffType>
 void ACSbAllocater<StructBuffType>::CreatePerMeshData(UINT meshIndex, MeshKey meshKey, UINT elementNum, UINT offset) {
     // Emplace data in the map
-    WeakStableHandle<SbDataPerComponent<StructBuffType>> handle = m_buffers.back_handle();
+    WeakStableHandle<SbDataPerComponent<StructBuffType>> handle = m_buffers.BackHandle();
     m_dataPerMesh.emplace(meshKey, SbDataPerMesh<StructBuffType>());
 
     // Copy needed data
@@ -209,7 +209,7 @@ void ACSbAllocater<StructBuffType>::Release(MeshKey meshKey) {
     if (it != m_dataPerMesh.end()) {
         // Release per component data
         if (it->second.handle) {
-            m_buffers.erase(*it->second.handle);
+            m_buffers.Erase(*it->second.handle);
         }
         // Release per mesh data
         m_dataPerMesh.erase(it);

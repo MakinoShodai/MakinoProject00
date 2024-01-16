@@ -46,17 +46,35 @@ public:
     */
     bool IsKeyUp(BYTE key);
 
+    /** @brief Get amount of change in cursor position from previous frame */
+    POINT GetDeltaCursorPos() { return m_deltaCursorPos; }
+
+    /** @brief Set a flag that the cursor repeats in the screen */
+    void SetIsRepeatCursorInScreen(bool isRepeat) { m_isRepeatCursor = isRepeat; }
+
 protected:
     /**
        @brief Constructor
     */
     CInputSystem();
 
+    /**
+       @brief Correct cursor position to repeat within specified range
+    */
+    void RepeatCursor(const RECT& repeatRange, POINT* cursorPos);
+
 private:
     /** @brief Key states at current frame */
     BYTE m_currentKeyStates[256];
     /** @brief Key states at previous frame */
     BYTE m_prevKeyStates[256];
+    /** @brief Amount of change in cursor position from previous frame */
+    POINT m_deltaCursorPos;
+    /** @brief Cursor position at previous frame */
+    POINT m_prevCursorPos;
+
+    /** @brief Does the cursor position repeat on the screen? */
+    bool m_isRepeatCursor;
 };
 
 #endif // !__INPUT_SYSTEM_H__

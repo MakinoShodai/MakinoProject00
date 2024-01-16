@@ -50,6 +50,8 @@ public:
     inline Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CTexShape* shape, UINT meshIndex) override { return InnerGetAllocateDataHandle(shape, meshIndex); }
     /** @brief Get handle of allocated data in structured buffer */
     inline Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CColorOnlyShape* shape, UINT meshIndex) override { return InnerGetAllocateDataHandle(shape, meshIndex); }
+    /** @brief Get handle of allocated data in structured buffer */
+    inline Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CDebugColliderShape* shape, UINT meshIndex) override { return InnerGetAllocateDataHandle(shape, meshIndex); }
 
     /**
        @brief Refresh process that must be called at the end of every frame
@@ -113,6 +115,8 @@ public:
     inline Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CTexShape* shape, UINT meshIndex) override final { return InnerGetAllocateDataHandle(shape, meshIndex); }
     /** @brief Get handle of allocated data in structured buffer */
     inline Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CColorOnlyShape* shape, UINT meshIndex) override final { return InnerGetAllocateDataHandle(shape, meshIndex); }
+    /** @brief Get handle of allocated data in structured buffer */
+    inline Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CDebugColliderShape* shape, UINT meshIndex) override final { return InnerGetAllocateDataHandle(shape, meshIndex); }
 
 protected:
     /**
@@ -140,6 +144,8 @@ protected:
     inline virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CTexShape* shape, UINT meshIndex) override final { return AllocateData(shape); }
     /** @brief Allocate data calculated for sent color only shape in the constant buffer */
     inline virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CColorOnlyShape* shape, UINT meshIndex) override final { return AllocateData(shape); }
+    /** @brief Allocate data calculated for sent color only shape in the constant buffer */
+    inline virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CDebugColliderShape* shape, UINT meshIndex) override final { return AllocateData(shape); }
 
     /**
        @brief Allocate data calculated for sent graphics component in the constant buffer
@@ -165,6 +171,8 @@ protected:
     inline virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CTexShape* shape) { return AllocateData(static_cast<ACGraphicsComponent*>(shape)); }
     /** @brief Allocate data calculated for sent color only shape in the constant buffer */
     inline virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CColorOnlyShape* shape) { return AllocateData(static_cast<ACGraphicsComponent*>(shape)); }
+    /** @brief Allocate data calculated for sent color only shape in the constant buffer */
+    inline virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CDebugColliderShape* shape) { return AllocateData(static_cast<ACGraphicsComponent*>(shape)); }
 
 private:
     /**

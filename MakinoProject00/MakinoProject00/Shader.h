@@ -9,7 +9,6 @@
 #ifndef __SHADER_H__
 #define __SHADER_H__
 
-#include <d3d12shader.h>
 #include "Application.h"
 #include "GraphicsPipelineElements.h"
 #include "UtilityForDirectX.h"

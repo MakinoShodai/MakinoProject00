@@ -10,6 +10,9 @@
 #define __SHAPE_H__
 
 #include "GraphicsComponent.h"
+#include "BoxCollider3D.h"
+#include "CapsuleCollider3D.h"
+#include "SphereCollider3D.h"
 
 /** @brief Kind of shape */
 enum class ShapeKind {
@@ -23,7 +26,7 @@ enum class ShapeKind {
     Max
 };
 
-/** @brief Graphics component for shape */
+/** @brief Shape for texture */
 class CTexShape : public ACGraphicsComponent {
 public:
     /**
@@ -40,7 +43,7 @@ private:
     ShapeKind m_kind;
 };
 
-/** @brief Graphics component for shape */
+/** @brief Shape for color only */
 class CColorOnlyShape : public ACGraphicsComponent {
 public:
     /**
@@ -55,6 +58,35 @@ public:
 private:
     /** @brief Kind of this shape */
     ShapeKind m_kind;
+};
+
+/** @brief Shape for debugging collider */
+class CDebugColliderShape : public ACGraphicsComponent {
+public:
+    /**
+       @brief Constructor
+       @param owner Game object that is the owner of this graphics component
+       @param layer Graphics layer to which this class belongs
+       @param collider Associate Collider
+    */
+    CDebugColliderShape(CGameObject* owner, GraphicsLayer layer, CWeakPtr<ACCollider3D> collider);
+
+    /**
+       @brief Drawing conditions
+       @return Can this shape draw?
+    */
+    inline bool IsDrawCondition() override { return m_collider != nullptr; }
+
+    /** @brief Get kind of shape */
+    ShapeKind GetKind() { return m_kind; }
+    /** @brief Get collider */
+    CWeakPtr<ACCollider3D> GetCollider() { return m_collider; }
+
+private:
+    /** @brief Kind of this shape */
+    ShapeKind m_kind;
+    /** @brief Weak pointer to collider */
+    CWeakPtr<ACCollider3D> m_collider;
 };
 
 /** @brief Static class that handles shape meshes */

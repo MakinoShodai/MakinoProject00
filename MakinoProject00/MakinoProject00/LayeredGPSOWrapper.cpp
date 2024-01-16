@@ -66,6 +66,6 @@ void CLayeredGPSOWrapper::EndFrameProcess() {
 }
 
 // Function that do nothing to avoid accidental calls from the outside
-void CLayeredGPSOWrapperPrefab::Create(ACScene* scene, const std::wstring gpsoName, const LayeredGPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers) {
+void ACLayeredGPSOWrapperPrefab::Create(ACScene* scene, const std::wstring gpsoName, const LayeredGPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers) {
     throw Utl::Error::CFatalError(L"This is function that does nothing");
 }

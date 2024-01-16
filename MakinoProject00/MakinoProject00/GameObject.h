@@ -15,6 +15,7 @@
 #include "GraphicsLayer.h"
 #include "Component.h"
 #include "GraphicsComponent.h"
+#include "ScenePhase.h"
 
 // Forward declaration
 class ACScene;
@@ -58,6 +59,11 @@ public:
     void Update();
 
     /**
+       @brief Pre-update process for physics simulation
+    */
+    void PrePhysicsUpdate();
+
+    /**
        @brief Pre drawing processing
     */
     void PreDraw();
@@ -67,24 +73,32 @@ public:
     */
     void OnDestroy();
 
-    /** @brief Processing at end of a frame */
-    void EndFrameProcess();
+    /**
+       @brief Processing for collider collisions
+    */
+    void OnCollision();
+
+    /** @brief Transfer current bit strings of the current scene phase to previous bit strings */
+    inline void TransferTransformObserve() { m_transformBits.Transfer(); }
 
     /** @brief Get the transform */
-    const Transformf& GetTransform() { return m_transform; }
+    const Transformf& GetTransform() const { return m_transform; }
     /** @brief Set transform */
-    void SetTransform(const Transformf& in) { m_transform = in; m_transformBit |= TransformObserve::All; }
+    void SetTransform(const Transformf& in) { m_transform = in; m_transformBits.SetBit(TransformObserve::All); }
     /** @brief Set position */
-    void SetPos(const Vector3f& pos) { m_transform.pos = pos; m_transformBit |= TransformObserve::Pos; }
+    void SetPos(const Vector3f& pos) { m_transform.pos = pos; m_transformBits.SetBit(TransformObserve::Pos); }
     /** @brief Set rotation */
-    void SetRotation(const Quaternionf& rotation) { m_transform.rotation = rotation; m_transformBit |= TransformObserve::Rotate; }
+    void SetRotation(const Quaternionf& rotation) { m_transform.rotation = rotation; m_transformBits.SetBit(TransformObserve::Rotate); }
     /** @brief Set scale */
-    void SetScale(const Vector3f& scale) { m_transform.scale = scale; m_transformBit |= TransformObserve::Scale; }
+    void SetScale(const Vector3f& scale) { m_transform.scale = scale; m_transformBits.SetBit(TransformObserve::Scale); }
 
-    /** @brief Get bits to observe transform changes for current frame */
-    TransformObserve GetTransformObserve() { return m_transformBit; }
-    /** @brief Get bits to observe transform changes for previous frame */
-    TransformObserve GetTransformObservePrev() { return m_transformBit >> 4; }
+    /**
+       @brief Check bit strings to observe transform in the specified phase
+       @param phase Scene phase to be checked
+       @param observe Bit for comparison
+       @return Result
+    */
+    inline bool CheckTransformObserve(ScenePhase phase, TransformObserve observe) { return m_transformBits.Check(phase, observe); }
 
     /**
        @brief Get a component
@@ -116,27 +130,36 @@ public:
 
     /** @brief Get weak pointer to the scene that is the owner of this game object */
     CWeakPtr<ACScene> GetScene() { return m_scene; }
+    /** @brief Get weak pointer to the scene that is the owner of this game object */
+    CWeakPtr<const ACScene> GetScene() const { return m_scene; }
     
     /** @brief Set name of this game object */
     void SetName(std::wstring name) { m_name = std::move(name); }
     /** @brief Get the name of this game object */
-    const std::wstring& GetName() { return m_name; }
+    const std::wstring& GetName() const { return m_name; }
 
-    /** @brief Set active flag */
-    void SetIsActive(bool isActive) { m_isActive = isActive; }
+    /** @brief Set the active flag */
+    void SetIsActive(bool isActive);
     /** @brief Is this game object active? */
-    bool IsActive() { return m_isActive; }
+    bool IsActive() const { return m_isActive; }
 
     /** @brief Get the callback system */
     CCallbackSystem* GetCallbackSystem();
+
+private:
+    /**
+       @brief Processing when a collider is added
+       @param collider Added collider
+    */
+    void ColliderAdded(const CWeakPtr<ACCollider3D>& collider);
 
 private:
     /** @brief Scene that is the owner of this game object */
     CWeakPtr<ACScene> m_scene;
     /** @brief Transform that has position and scale, rotation */
     Transformf m_transform;
-    /** @brief Bits to observe transform changes */
-    TransformObserve m_transformBit;
+    /** @brief Bit string structure for observing whether the transform was changed in the previous process */
+    TransformObserveBits m_transformBits;
     /** @brief Name of this game object */
     std::wstring m_name;
     /** @brief Is this game object active? */
@@ -148,6 +171,9 @@ private:
     std::vector<CUniquePtrWeakable<ACGraphicsComponent>> m_graphicsComponents;
     /** @brief Object's callback function system. Instantiate when used */
     CUniquePtrWeakable<CCallbackSystem> m_callbackSystem;
+
+    /** @brief Dynamic array of colliders in the array of components */
+    std::vector<const ACCollider3D*> m_colliders;
 };
 
 // Get a component
@@ -185,6 +211,11 @@ CWeakPtr<T> CGameObject::AddComponent(Args&&... args) {
     // Call awake processing
     CWeakPtr<T> addedComponent = m_components.back().GetWeakPtr();
     addedComponent->Awake();
+
+    // If T is derived class of ACCollider3D, Add it to the array of colliders
+    if constexpr (std::is_base_of_v<ACCollider3D, T>) {
+        ColliderAdded(addedComponent);
+    }
 
     // Return a weak pointer to the added component
     return addedComponent;

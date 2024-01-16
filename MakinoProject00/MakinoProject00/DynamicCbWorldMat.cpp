@@ -122,3 +122,53 @@ Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicCbWorldMat::AllocateData(CBillboard* bill
     OutputDebugString(L"Warning! Couldn't get the camera from the scene.\n");
     return Utl::Dx::CPU_DESCRIPTOR_HANDLE();
 }
+
+// Allocate data for debugging collider shape
+Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicCbWorldMat::AllocateData(CDebugColliderShape* shape) {
+    // Calculate the position and scale associated with the collider
+    Vector3f pos;
+    Vector3f scale;
+    switch (shape->GetKind()) {
+    // Sphere
+    case ShapeKind::Sphere:
+    {
+        CSphereCollider3D* sphere = dynamic_cast<CSphereCollider3D*>(shape->GetCollider().Get());
+        pos = sphere->GetCenter();
+        scale = (sphere->GetScalingRadius() * 2.0f) * Vector3f::Ones();
+    }
+        break;
+    // Capsule
+    case ShapeKind::Capsule:
+    {
+        CCapsuleCollider3D* capsule = dynamic_cast<CCapsuleCollider3D*>(shape->GetCollider().Get());
+        pos = capsule->GetCenter();
+        scale.z() = scale.x() = capsule->GetScalingRadius() * 2.0f;
+        scale.y() = capsule->GetHeight();
+    }
+        break;
+    // Box
+    case ShapeKind::Box:
+    {
+        CBoxCollider3D* box = dynamic_cast<CBoxCollider3D*>(shape->GetCollider().Get());
+        pos = box->GetCenter();
+        scale = box->GetScalingSize();
+    }
+        break;
+    default:
+        throw Utl::Error::CFatalError(L"Non-existent graphic type is sent to the collider");
+    }
+
+    // Set gameobject's quaternion to a XMVECTORF32
+    const Quaternionf& rotation = shape->GetGameObj()->GetTransform().rotation;
+    DirectX::XMVECTORF32 quaternion = { rotation.x(), rotation.y(), rotation.z(), rotation.w() };
+
+    // Calculate a world matrix
+    DirectX::XMFLOAT4X4 mat;
+    DirectX::XMStoreFloat4x4(&mat,
+        DirectX::XMMatrixScaling(scale.x(), scale.y(), scale.z()) *
+        DirectX::XMMatrixRotationQuaternion(quaternion) *
+        DirectX::XMMatrixTranslation(pos.x(), pos.y(), pos.z())
+    );
+
+    return DirectDataCopy(&mat);
+}

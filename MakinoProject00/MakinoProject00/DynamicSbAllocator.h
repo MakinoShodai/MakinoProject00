@@ -50,6 +50,8 @@ protected:
     inline virtual void CreateBuffer(CTexShape* shape) { return CreateBuffer(static_cast<ACGraphicsComponent*>(shape)); }
     /** @brief Create a strutured buffer corresponding to the component sent */
     inline virtual void CreateBuffer(CColorOnlyShape* shape) { return CreateBuffer(static_cast<ACGraphicsComponent*>(shape)); }
+    /** @brief Create a strutured buffer corresponding to the component sent */
+    inline virtual void CreateBuffer(CDebugColliderShape* shape) { return CreateBuffer(static_cast<ACGraphicsComponent*>(shape)); }
 };
 
 /** @brief Structured buffer allocator class that need to be allocated per object */
@@ -89,6 +91,8 @@ public:
     inline Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CTexShape* shape, UINT meshIndex) override final { return InnerGetAllocateDataHandle(shape, meshIndex); }
     /** @brief Get handle of allocated data in structured buffer */
     inline Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CColorOnlyShape* shape, UINT meshIndex) override final { return InnerGetAllocateDataHandle(shape, meshIndex); }
+    /** @brief Get handle of allocated data in structured buffer */
+    inline Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CDebugColliderShape* shape, UINT meshIndex) override final { return InnerGetAllocateDataHandle(shape, meshIndex); }
 
     /**
        @brief Refresh process that must be called at the end of every frame

@@ -20,10 +20,10 @@ void CCameraComponent::Start() {
     m_gameObj->GetScene()->GetCameraRegistry()->AddCamera(this);
 
     if (m_isFocusMode) {
-        m_focus = m_gameObj->GetTransform().pos + Utl::Math::UNIT3_Z;
+        m_focus = GetTransform().pos + Utl::Math::UNIT3_Z;
     }
     else {
-        m_focus = m_gameObj->GetTransform().rotation * Utl::Math::UNIT3_Z;
+        m_focus = GetTransform().rotation * Utl::Math::UNIT3_Z;
     }
 }
 
@@ -31,14 +31,12 @@ void CCameraComponent::Start() {
 void CCameraComponent::ApplyRotation() {
     // If not in focus mode, update look direction vector
     if (false == m_isFocusMode) {
-        if (Utl::CheckEnumBit(m_gameObj->GetTransformObserve() & TransformObserve::Rotate)) {
-            m_focus = m_gameObj->GetTransform().rotation * Utl::Math::UNIT3_Z;
+        m_focus = GetTransform().rotation * Utl::Math::UNIT3_Z;
 
-            // Calculate rotation matrix
-            m_rotationMatrix = GenerateViewMatrix();
-            m_rotationMatrix = DirectX::XMMatrixInverse(nullptr, m_rotationMatrix);
-            m_rotationMatrix.r[3] = DirectX::XMVectorSet(0.0f, 0.0f, 0.0f, 1.0f);
-        }
+        // Calculate rotation matrix
+        m_rotationMatrix = GenerateViewMatrix();
+        m_rotationMatrix = DirectX::XMMatrixInverse(nullptr, m_rotationMatrix);
+        m_rotationMatrix.r[3] = DirectX::XMVectorSet(0.0f, 0.0f, 0.0f, 1.0f);
     }
     else {
         // Calculate rotation matrix
@@ -53,7 +51,7 @@ DirectX::XMMATRIX CCameraComponent::GenerateViewMatrix() {
     DirectX::XMMATRIX mat;
 
     // Get the position of this game object
-    const Vector3f& pos = m_gameObj->GetTransform().pos;
+    const Vector3f& pos = GetTransform().pos;
 
     Vector3f focus;
     // If in focus mode, use focus position

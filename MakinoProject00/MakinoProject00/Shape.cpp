@@ -36,6 +36,36 @@ CColorOnlyShape::CColorOnlyShape(CGameObject* owner, GraphicsLayer layer, ShapeK
     SetColor(color);
 }
 
+// Shape for debugging collider
+CDebugColliderShape::CDebugColliderShape(CGameObject* owner, GraphicsLayer layer, CWeakPtr<ACCollider3D> collider)
+    : ACGraphicsComponent(GraphicsComponentType::DebugColliderShape, owner, layer)
+    , m_collider(collider)
+{
+    switch (collider->GetColliderType()) {
+    case ColliderType::Box:
+        m_kind = ShapeKind::Box;
+        break;
+    case ColliderType::Sphere:
+        m_kind = ShapeKind::Sphere;
+        break;
+    case ColliderType::Capsule:
+        m_kind = ShapeKind::Capsule;
+        break;
+    }
+
+    // Initialize mesh
+    InitializeMesh(1, 0);
+    const CMeshBufferFull& shapeMesh = CShapeMesh::GetMesh(m_kind);
+    SetMeshInfo(0, shapeMesh.GetVertexWeakPtr(), shapeMesh.GetIndexWeakPtr(), shapeMesh.GetTopologyType());
+
+    // Set color
+#ifdef _FOR_PHYSICS
+    SetColor(Colorf(1.0f, 1.0f, 1.0f, 1.0f));
+#else
+    SetColor(Colorf(0.0f, 1.0f, 0.0f, 0.4f));
+#endif // _FOR_PHYSICS
+}
+
 // Initialize
 void CShapeMesh::Initialize() {
     CreateSphere();

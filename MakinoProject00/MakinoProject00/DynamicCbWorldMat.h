@@ -32,6 +32,8 @@ protected:
     Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CSprite3D* sprite);
     /** @brief Allocate data for billboard */
     Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CBillboard* billboard);
+    /** @brief Allocate data for debugging collider shape */
+    Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CDebugColliderShape* shape);
 };
 
 #endif // !__DYNAMIC_CB_WORLD_MAT_H__

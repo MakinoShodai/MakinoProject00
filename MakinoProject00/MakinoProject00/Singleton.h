@@ -72,12 +72,6 @@ public:
     */
     void DestroyInstance() override final;
 
-    /**
-       @brief Check if the instance exists
-       @return Result
-    */
-    static const bool IsInstance() { return (ms_instance != nullptr); }
-
 protected:
     /**
        @brief Constructor
@@ -89,11 +83,6 @@ protected:
     ~ACSingletonBase() override { ACReleaseSingleton::RemoveInstanceToArray(this); }
 
     /**
-       @brief Process to be called at instance creation
-    */
-    virtual void OnCreate() {}
-
-    /**
        @brief Process to be called at instance destruction
     */
     virtual void OnDestroy() {}
@@ -102,11 +91,9 @@ protected:
        @brief Get singleton instance
        @return Instance
     */
-    inline static Derived& GetProtected();
+    inline static CUniquePtr<Derived>& GetProtected();
 
 private:
-    /** @brief Derived class instance */
-    static CUniquePtr<Derived> ms_instance;
 };
 
 /**
@@ -134,7 +121,7 @@ public:
         if (!Utl::CMainThreadChecker::IsMainThread()) {
             throw Utl::Error::CFatalError(L"This class can't be accessed from any thread other than the main thread");
         }
-        return ACSingletonBase<Derived>::GetProtected();
+        return *ACSingletonBase<Derived>::GetProtected();
     }
 
 protected:
@@ -160,38 +147,28 @@ public:
        @brief Get singleton instance for any thread
        @return Instance
     */
-    inline static Derived& GetAny() { return ACSingletonBase<Derived>::GetProtected(); }
+    inline static Derived& GetAny() { return *ACSingletonBase<Derived>::GetProtected(); }
 
 protected:
     // Using constructor
     using ACSingletonBase<Derived>::ACSingletonBase;
 };
 
-// Initialize instance
+//  Discard instance
 template<class Derived>
-CUniquePtr<Derived> ACSingletonBase<Derived>::ms_instance = nullptr;
+void ACSingletonBase<Derived>::DestroyInstance() {
+    // Call process at instance destruction
+    GetProtected()->OnDestroy();
+
+    // Reset instance
+    GetProtected().Reset();
+}
 
 // Get singleton instance
 template<class Derived>
-inline Derived& ACSingletonBase<Derived>::GetProtected() {
-    // If the instance doesn't exist, create it.
-    if (!ms_instance) {
-        ms_instance.Reset(new Derived());
-        ms_instance->OnCreate();
-    }
-
-    // Return instance
-    return *ms_instance.Get();
-}
-
-// Discard instance
-template<class Derived>
-void ACSingletonBase<Derived>::DestroyInstance() {
-    // Uninitialize
-    ms_instance->OnDestroy();
-
-    // Discard instance
-    ms_instance.Reset();
+inline CUniquePtr<Derived>& ACSingletonBase<Derived>::GetProtected() {
+    static CUniquePtr<Derived> instance = CUniquePtr<Derived>(new Derived());
+    return instance;
 }
 
 #endif // !__SINGLETON_H__

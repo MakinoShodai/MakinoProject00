@@ -92,7 +92,7 @@ public:
 
     /** @brief Get feature for thread-safe */
     inline static CThreadSafeFeature& GetAny() {
-        static CThreadSafeFeature instance(&GetProtected());
+        static CThreadSafeFeature instance(GetProtected().Get());
         return instance;
     }
 
@@ -100,12 +100,7 @@ protected:
     /**
        @brief Constructor
     */
-    CModelRegistry() : ACMainThreadSingleton(-10) {}
-
-    /**
-       @brief Process to be called at instance creation
-    */
-    void OnCreate() override;
+    CModelRegistry();
 
     /**
        @brief Extract relevant part from sent path

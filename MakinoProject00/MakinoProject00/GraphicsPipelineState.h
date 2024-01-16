@@ -166,6 +166,8 @@ private:
 template<class T>
 void CGraphicsPipelineState::SetCommandForComponent(const std::vector<T*>& componentsArray, ID3D12Device* device, ID3D12GraphicsCommandList* cmdList, CDescriptorHeapPool* pool) {
     for (T* component : componentsArray) {
+        if (!component->IsActiveOverall() || !component->IsDrawCondition()) { continue; }
+
         // Draw on all meshes the component has
         UINT meshNum = component->GetMeshNum();
         for (UINT meshIndex = 0; meshIndex < meshNum; ++meshIndex) {

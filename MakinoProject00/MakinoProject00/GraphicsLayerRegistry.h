@@ -25,7 +25,8 @@ using GraphicsComponentVectorVariantPtr = std::variant<
     std::vector<CBasicModel*>*,
     std::vector<CSkeletalModel*>*,
     std::vector<CTexShape*>*,
-    std::vector<CColorOnlyShape*>*
+    std::vector<CColorOnlyShape*>*,
+    std::vector<CDebugColliderShape*>*
 >;
 
 /** @brief Variant class for const pointer to dynamic array of graphics components */
@@ -60,6 +61,8 @@ struct EachGraphicsComponentVector {
     std::vector<CTexShape*> texShapes;
     /** @brief Dynamic array for CColorOnlyShape */
     std::vector<CColorOnlyShape*> colorShapes;
+    /** @brief Dynamic array for CDebugColliderShape */
+    std::vector<CDebugColliderShape*> colliderShapes;
 
     /**
        @brief Get dynamic array corresponding to the specified type
@@ -101,6 +104,8 @@ private:
             return static_cast<VariantPtrType>(&instance->texShapes);
         case GraphicsComponentType::ColorShape:
             return static_cast<VariantPtrType>(&instance->colorShapes);
+        case GraphicsComponentType::DebugColliderShape:
+            return static_cast<VariantPtrType>(&instance->colliderShapes);
         default:
             throw Utl::Error::CFatalError(L"Dynamic array corresponding to the specified type doesn't exist");
         }

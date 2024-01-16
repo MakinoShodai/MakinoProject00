@@ -109,6 +109,18 @@ namespace Utl {
     */
     int Sign(float value);
 
+    /**
+       @brief Function to call repeatedly to generate hash values from multiple variables
+       @param seed Variable to store the seed value
+       @param v Variable used for hash value generation
+       @details
+       Same process as hash_combine function in boost library
+    */
+    template <typename T>
+    void HashCombine(std::size_t* seed, const T& v) {
+        *seed ^= std::hash<T>()(v) + 0x9e3779b9 + (*seed << 6) + (*seed >> 2);
+    }
+
     /** @brief Class to check if it is the main thread */
     class CMainThreadChecker {
     public:
