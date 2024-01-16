@@ -41,5 +41,5 @@ CSkeletalModel::CSkeletalModel(CGameObject* owner, GraphicsLayer layer, const st
 
 // Pre drawing processing
 void CSkeletalModel::PreDraw() {
-    m_model.StepAnim((float)CAppClock::GetMain().GetDeltaTime());
+    m_model.StepAnim(CAppClock::GetMain().GetDeltaTime());
 }

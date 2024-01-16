@@ -1,7 +1,9 @@
+#ifdef _SAMPLE
 #include "SampleScene.h"
 #include "SampleComponent.h"
 #include "ShaderRegistry.h"
 #include "AssetNameDefine.h"
+#include "FreeCamera.h"
 
 // Clear color for screen render target
 const Colorf CLEAR_COLOR = Colorf(0.4f, 0.4f, 0.8f, 1.0f);
@@ -90,7 +92,7 @@ void CSampleScene::Start() {
     {
         auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(0.0f, 0.0f, -5.0f)));
         obj->AddComponent<CCameraComponent>(L"Main camera");
-        obj->AddComponent<CSampleRotateComponent>(Vector3f(0.0f, 1.0f, 0.0f), 0.1f);
+        obj->AddComponent<CFreeCameraControl>();
     }
 }
 
@@ -116,3 +118,5 @@ void CSampleScene::Draw() {
     // Command function of GPSO for UI
     m_gpsoUI.SetCommand();
 }
+
+#endif // _SAMPLE

@@ -41,7 +41,7 @@ concept IsNotArrayType = !std::is_array_v<T>;
 template<class T, class U>
     requires IsConvertibleSmartPtr<T, U>
 std::remove_extent_t<U>* CastSmartPtrInstance(std::remove_extent_t<T>* instance) {
-    if constexpr (Utl::Type::Relat::IsBaseOfRemoveExtent<T, U>) {
+    if constexpr (Utl::Type::Relat::IsBaseOfRemoveExtentNotSame<T, U>) {
         return dynamic_cast<std::remove_extent_t<U>*>(instance);
     }
     else {
@@ -145,28 +145,22 @@ public:
     inline void Release() { RefCount<T>::Decrement(m_refCount); m_refCount = nullptr; }
 
     /** @brief Get instance. If the instance has already been destroyed, return nullptr */
-    inline InstanceType* Get() { assert(m_refCount && m_refCount->m_ref); return m_refCount->m_ref; }
-    /** @brief Get instance. If the instance has already been destroyed, return nullptr */
-    inline const InstanceType* Get() const { assert(m_refCount && m_refCount->m_ref); return m_refCount->m_ref; }
+    inline InstanceType* Get() const { assert(m_refCount && m_refCount->m_ref); return m_refCount->m_ref; }
 
     /** @brief Instance reference operator. If the instance has already been destroyed, return nullptr */
-    inline InstanceType* operator->() { assert(m_refCount && m_refCount->m_ref); return m_refCount->m_ref; }
-    /** @brief Instance reference operator. If the instance has already been destroyed, return nullptr */
-    inline const InstanceType* operator->() const { assert(m_refCount && m_refCount->m_ref); return m_refCount->m_ref; }
+    inline InstanceType* operator->() const { assert(m_refCount && m_refCount->m_ref); return m_refCount->m_ref; }
 
     /** @brief Dereference operator */
-    InstanceType& operator*() { assert(m_refCount && m_refCount->m_ref); return *m_refCount->m_ref; }
-    /** @brief Dereference operator */
-    const InstanceType& operator*() const { assert(m_refCount && m_refCount->m_ref); return *m_refCount->m_ref; }
+    InstanceType& operator*() const { assert(m_refCount && m_refCount->m_ref); return *m_refCount->m_ref; }
 
     /** @brief Comparison operator */
-    bool operator==(InstanceType* other) { return (m_refCount) ? m_refCount->m_ref == other : other == nullptr; }
+    bool operator==(const InstanceType* instance) const { return (m_refCount) ? m_refCount->m_ref == instance : instance == nullptr; }
     /** @brief Comparison operator */
-    bool operator!=(InstanceType* other) { return (m_refCount) ? m_refCount->m_ref != other : other != nullptr; }
+    bool operator!=(const InstanceType* instance) const { return (m_refCount) ? m_refCount->m_ref != instance : instance != nullptr; }
     /** @brief Comparison operator */
-    bool operator==(CWeakPtr other) { return m_refCount == other.m_refCount; }
+    bool operator==(const CWeakPtr& other) const { return m_refCount == other.m_refCount; }
     /** @brief Comparison operator */
-    bool operator!=(CWeakPtr other) { return m_refCount != other.m_refCount; }
+    bool operator!=(const CWeakPtr& other) const { return m_refCount != other.m_refCount; }
 
     /** @brief Bool check operator */
     explicit operator bool() const { return m_refCount != nullptr && m_refCount->m_ref != nullptr; }
@@ -240,7 +234,7 @@ RefCount<U>* RefCount<T>::Cast(RefCount<T>* refCount) {
     // Null check
     if (refCount == nullptr) { return nullptr; }
     
-    if constexpr (Utl::Type::Relat::IsBaseOfRemoveExtent<T, U>) {
+    if constexpr (Utl::Type::Relat::IsBaseOfRemoveExtentNotSame<T, U>) {
         std::remove_extent_t<U>* tmp = dynamic_cast<std::remove_extent_t<U>*>(refCount->m_ref);
         if (tmp != nullptr) {
             return reinterpret_cast<RefCount<U>*>(refCount);

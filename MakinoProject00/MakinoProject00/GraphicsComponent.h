@@ -37,6 +37,8 @@ enum class GraphicsComponentType {
     TexShape,
     /** @brief Color only shape */
     ColorShape,
+    /** @brief Shape for debugging collider */
+    DebugColliderShape,
 };
 
 /** @brief Key for mesh buffer */
@@ -80,6 +82,12 @@ public:
     virtual void PreDraw() {}
 
     /**
+       @brief Drawing conditions set in derived classes
+       @return Can this graphcis component draw?
+    */
+    inline virtual bool IsDrawCondition() { return true; }
+
+    /**
        @brief Ask for textures assignment information to be built
        @param meshNum The number of all meshes
        @param gpso GPSO to assign textures
@@ -93,6 +101,13 @@ public:
        @param layer Layer to be belonged
     */
     void SetLayer(GraphicsLayer layer);
+
+    /** @brief Set active flag */
+    void SetIsActive(bool isActive) { m_isActive = isActive; }
+    /** @brief Is this graphics component itself active? */
+    bool IsActiveSelf() const { return m_isActive; }
+    /** @brief Is this graphics component itself and the game object that owns it active? */
+    bool IsActiveOverall() const;
 
     /** @brief Set color */
     void SetColor(const Colorf& color) { m_color = color; }
@@ -154,6 +169,9 @@ protected:
 private:
     /** @brief Type of this graphics component */
     const GraphicsComponentType m_type;
+    /** @brief Is this graphics component active? */
+    bool m_isActive;
+
     /** @brief Array of mesh buffers */
     CArrayUniquePtr<MeshWrapperForGraphics> m_meshWrappers;
     /** @brief Array of textures to be used per mesh */

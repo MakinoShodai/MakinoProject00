@@ -102,7 +102,7 @@ private:
 };
 
 /** @brief Abstract class for prefab of CLayeredGPSOWrapper */
-class CLayeredGPSOWrapperPrefab : public CLayeredGPSOWrapper {
+class ACLayeredGPSOWrapperPrefab : public CLayeredGPSOWrapper {
 public:
     /**
        @brief Function for creating a prefab of a gpso wrapper

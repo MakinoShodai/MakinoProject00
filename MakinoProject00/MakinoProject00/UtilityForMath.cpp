@@ -139,6 +139,11 @@ bool Utl::Math::IsUnitVector3fZero(const Vector3f& v) {
     return Utl::IsFloatZero(v.x() * v.x() + v.y() * v.y() + v.z() * v.z());
 }
 
+// Are all the values of the 3 dimensional vectors zero?
+bool Utl::Math::IsVector3fZero(const Vector3f& v) {
+    return Utl::IsFloatZero(v.x()) && Utl::IsFloatZero(v.y()) && Utl::IsFloatZero(v.z());
+}
+
 // Are the two vectors almost the same value?
 bool Utl::Math::IsEqualVector3f(const Vector3f& a, const Vector3f& b) {
     return Utl::IsEqual(a.x(), b.x()) && Utl::IsEqual(a.y(), b.y()) && Utl::IsEqual(a.z(), b.z());

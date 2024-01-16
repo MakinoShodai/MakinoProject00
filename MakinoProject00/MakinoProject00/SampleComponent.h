@@ -6,6 +6,8 @@
  * @date   2024/1/11
  */
 
+#ifdef _SAMPLE
+
 #ifndef __SAMPLE_COMPONENT_H__
 #define __SAMPLE_COMPONENT_H__
 
@@ -65,3 +67,5 @@ private:
 };
 
 #endif // !__SAMPLE_COMPONENT_H__
+
+#endif // !_SAMPLE

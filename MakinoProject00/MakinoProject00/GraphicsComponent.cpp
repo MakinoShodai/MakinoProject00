@@ -11,7 +11,8 @@ ACGraphicsComponent::ACGraphicsComponent(GraphicsComponentType type, CGameObject
     , m_gameObj(owner->WeakFromThis())
     , m_layer(layer)
     , m_texNumPerMesh(0)
-    , m_color(Colorf::Ones()) {
+    , m_color(Colorf::Ones())
+    , m_isActive(true) {
 }
 
 // Destructor
@@ -92,6 +93,11 @@ void ACGraphicsComponent::SetLayer(GraphicsLayer layer) {
     registry->Exclude(this);
     m_layer = layer;
     registry->Register(this);
+}
+
+// Is this graphics component itself and the game object that owns it active?
+bool ACGraphicsComponent::IsActiveOverall() const {
+    return m_isActive && m_gameObj->IsActive();
 }
 
 // Prepare arrays of the meshes and its textures

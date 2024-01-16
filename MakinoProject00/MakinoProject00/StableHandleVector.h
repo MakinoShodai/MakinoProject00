@@ -28,6 +28,9 @@ protected:
     */
     ReadOnlyStableHandle(std::size_t index) : index(index) {}
 
+    /** @brief Comparison operator */
+    bool operator==(const ReadOnlyStableHandle& other) const { return this->index == other.index; }
+
     // Friend declaration
     template <typename T>
     friend class StableHandleVector;
@@ -40,6 +43,9 @@ private:
     // Use the same constructor as the abstract class
     using ReadOnlyStableHandle<T>::ReadOnlyStableHandle;
 
+    /** @brief Comparison operator */
+    bool operator==(const StableHandle& other) const { return this->index == other.index; }
+
     // Friend declaration
     template <typename T>
     friend class StableHandleVector;
@@ -50,7 +56,7 @@ template <typename T>
 using WeakStableHandle = CWeakPtr<StableHandle<T>>;
 /** @brief Read only stable handle within a weak pointer */
 template <typename T>
-using WeakReadOnlyStableHandle = CWeakPtr<ReadOnlyStableHandle<T>>;
+using WeakROStableHandle = CWeakPtr<ReadOnlyStableHandle<T>>;
 
 /** @brief Dynamic array capable of generating stable handles */
 template <typename T>
@@ -66,14 +72,14 @@ public:
        @param in Element to be added
        @return Pointer to the handle for the element to be added
     */
-    WeakStableHandle<T> push_back(const T& in);
+    WeakStableHandle<T> PushBack(const T& in);
 
     /**
        @brief Add an element to the end of the dynamic array (move)
        @param in Element to be added
        @return Pointer to the handle for the element to be added
     */
-    WeakStableHandle<T> push_back(T&& in);
+    WeakStableHandle<T> PushBack(T&& in);
 
     /**
        @brief Build an element directly to the end of the dynamic array
@@ -83,37 +89,38 @@ public:
        @return Pointer to the handle for the element to be builded
     */
     template <typename... Args>
-    WeakStableHandle<T> emplace_back(Args&&... args);
+    WeakStableHandle<T> EmplaceBack(Args&&... args);
 
     /**
        @brief Get handle for the most backward element
        @return Handle for the most backward element
     */
-    WeakStableHandle<T> back_handle() { assert(m_handles.size() > 0); return m_handles.back().GetWeakPtr(); }
+    WeakStableHandle<T> BackHandle() { assert(m_handles.size() > 0); return m_handles.back().GetWeakPtr(); }
 
     /**
        @brief Erase an element from the array
        @param handle Handle for the element to be erased
        @attention Be sure to nullptr the pointer that held this handle after the function call
     */
-    void erase(StableHandle<T>& handle);
+    void Erase(StableHandle<T>& handle);
 
     /**
        @brief Clear the dynamic array of elements
     */
-    void clear() { m_vector.clear(); m_handles.clear(); }
+    void Clear() { m_vector.clear(); m_handles.clear(); }
+
+    /** @brief Is this vector empty? */
+    bool Empty() { return m_vector.size() <= 0; }
 
     /** @brief Accessing instance operator */
     T& operator[](const ReadOnlyStableHandle<T>& handle) { return m_vector[handle.index]; }
     /** @brief Accessing instance operator */
     const T& operator[](const ReadOnlyStableHandle<T>& handle) const { return m_vector[handle.index]; }
     
-    auto begin() { return m_vector.begin(); }
-    auto end() { return m_vector.end(); }
-    auto begin() const { return m_vector.begin(); }
-    auto end() const { return m_vector.end(); }
-    auto cbegin() const { return m_vector.cbegin(); }
-    auto cend() const { return m_vector.cend(); }
+    /** @brief Get the iterator that points to the first element */
+    auto Begin() { return m_vector.begin(); }
+    /** @brief Get the iterator that points to the next to last element */
+    auto End() { return m_vector.end(); }
 
 private:
     /** @brief Dynamic array of elements */
@@ -122,9 +129,19 @@ private:
     std::vector<CUniquePtrWeakable<StableHandle<T>>> m_handles;
 };
 
+namespace std {
+    /** @brief Overload of std::begin for StableHandleVector */
+    template<class T>
+    auto begin(StableHandleVector<T>& stableVector) { return stableVector.Begin(); }
+
+    /** @brief Overload of std::end for StableHandleVector */
+    template<class T>
+    auto end(StableHandleVector<T>& stableVector) { return stableVector.End(); }
+} // namespace std
+
 // Add an element to the end of the dynamic array (copy)
 template<typename T>
-WeakStableHandle<T> StableHandleVector<T>::push_back(const T& in) {
+WeakStableHandle<T> StableHandleVector<T>::PushBack(const T& in) {
     // Add element
     m_vector.push_back(in);
 
@@ -137,7 +154,7 @@ WeakStableHandle<T> StableHandleVector<T>::push_back(const T& in) {
 
 // Add an element to the end of the dynamic array (move)
 template<typename T>
-WeakStableHandle<T> StableHandleVector<T>::push_back(T&& in) {
+WeakStableHandle<T> StableHandleVector<T>::PushBack(T&& in) {
     // Add element
     m_vector.push_back(std::move(in));
 
@@ -151,7 +168,7 @@ WeakStableHandle<T> StableHandleVector<T>::push_back(T&& in) {
 // Build an element directly to the end of the dynamic array
 template<typename T>
 template<typename ...Args>
-WeakStableHandle<T> StableHandleVector<T>::emplace_back(Args && ...args) {
+WeakStableHandle<T> StableHandleVector<T>::EmplaceBack(Args&& ...args) {
     // Build an element
     m_vector.emplace_back(std::forward<Args>(args)...);
 
@@ -164,7 +181,7 @@ WeakStableHandle<T> StableHandleVector<T>::emplace_back(Args && ...args) {
 
 // Erase an element from the array
 template<typename T>
-void StableHandleVector<T>::erase(StableHandle<T>& handle) {
+void StableHandleVector<T>::Erase(StableHandle<T>& handle) {
     // Get an index of the handle for the element to be erased
     std::size_t index = handle.index;
 

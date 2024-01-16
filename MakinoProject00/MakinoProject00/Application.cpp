@@ -7,6 +7,20 @@ const UINT IDEAL_WINDOW_WIDTH = 1920;
 // Height of ideal window size
 const UINT IDEAL_WINDOW_HEIGHT = 1080;
 
+// Function to obtain the rectangular area of the monitor to be passed to EnumDisplayMonitors
+BOOL MonitorObtainRectProc(HMONITOR monitorHandle, HDC deviceContextHandle, LPRECT rectPtr, LPARAM rectVectorPtr) {
+    // Get information of monitor
+    MONITORINFOEX monitorInfo;
+    monitorInfo.cbSize = sizeof(monitorInfo);
+    GetMonitorInfo(monitorHandle, &monitorInfo);
+
+    // Add a RECT of a monitor to the dynamic array of RECTs
+    std::vector<RECT>* rectVector = reinterpret_cast<std::vector<RECT>*>(rectVectorPtr);
+    rectVector->push_back(monitorInfo.rcMonitor);
+
+    return TRUE;
+}
+
 // Create and display a window
 void CApplication::InitializeWnd(WNDPROC wndProc, UINT width, UINT height, const std::wstring& name) {
     // Calculate magnification of current window size relative to ideal window size
@@ -49,6 +63,9 @@ void CApplication::InitializeWnd(WNDPROC wndProc, UINT width, UINT height, const
         nullptr                             // No additional parameters are set
     );
     ShowWindow(m_wndHandle, SW_SHOW);
+
+    // Calculate the range of cursor position
+    CalculateCursorRange();
 }
 
 // Destroy window instance
@@ -111,4 +128,46 @@ void CApplication::InitializeDirectX() {
 void CApplication::OnDestroy() {
     // Destroy window
     DestroyWnd();
+}
+
+// Calculate the range of cursor position
+void CApplication::CalculateCursorRange() {
+    std::vector<RECT> rectVector;
+    EnumDisplayMonitors(NULL, NULL, MonitorObtainRectProc, reinterpret_cast<LPARAM>(&rectVector));
+
+    // If getting the monitor range fails, set 1920x1080 to the range of cursor position
+    if (rectVector.empty()) {
+        m_cursorRange.left = 0;
+        m_cursorRange.top = 0;
+        m_cursorRange.right = 1920;
+        m_cursorRange.bottom = 1080;
+    }
+    // If getting the monitor range succeeds, calculate the range of cursor position
+    else {
+        m_cursorRange = rectVector[0];
+        for (size_t i = 1; i < rectVector.size(); ++i) {
+            // Left
+            if (rectVector[i].left < m_cursorRange.left) {
+                m_cursorRange.left = rectVector[i].left;
+            }
+            // Right
+            if (rectVector[i].right > m_cursorRange.right) {
+                m_cursorRange.right = rectVector[i].right;
+            }
+            // Top
+            if (rectVector[i].top < m_cursorRange.top) {
+                m_cursorRange.top = rectVector[i].top;
+            }
+            // Bottom
+            if (rectVector[i].bottom > m_cursorRange.bottom) {
+                m_cursorRange.bottom = rectVector[i].bottom;
+            }
+        }
+    }
+
+    // Decrease the range by 1
+    m_cursorRange.left += 1;
+    m_cursorRange.top += 1;
+    m_cursorRange.right -= 1;
+    m_cursorRange.bottom -= 1;
 }

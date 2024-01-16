@@ -10,6 +10,7 @@
 #define __CAMERA_H__
 
 #include "Component.h"
+#include "GameObject.h"
 
 /** @brief Camera component */
 class CCameraComponent : public ACComponent {
@@ -65,6 +66,8 @@ public:
 
     /** @brief Get the focus position if in focus mode, otherwise, look direction vector */
     const Vector3f& GetFocus() const { return m_focus; }
+    /** @brief Obtain look direction vector regardless of focus mode */
+    Vector3f GetLookDir() const { return (m_isFocusMode) ? (m_focus - m_gameObj->GetTransform().pos).GetNormalize() : m_focus; }
     /** @brief Set a focus position. Value will not change unless in focus mode */
     void SetFocus(const Vector3f& focus) { if (m_isFocusMode) { m_focus = focus; } }
 

@@ -1,3 +1,4 @@
+#ifdef _SAMPLE
 #include "SampleComponent.h"
 #include "GameObject.h"
 #include "ApplicationClock.h"
@@ -5,8 +6,8 @@
 
 // Updating process for CSampleRotateComponent
 void CSampleRotateComponent::Update() {
-    Quaternionf rotate = m_gameObj->GetTransform().rotation;
-    rotate.AngleAxis(m_speed * (float)CAppClock::GetMain().GetDeltaTime(), m_axis);
+    Quaternionf rotate = GetTransform().rotation;
+    rotate.AngleAxis(m_speed * CAppClock::GetMain().GetDeltaTime(), m_axis);
     m_gameObj->SetRotation(rotate);
 }
 
@@ -33,3 +34,5 @@ void CSampleAnimComponent::Update() {
         m_model->GetController()->BindPose();
     }
 }
+
+#endif // _SAMPLE

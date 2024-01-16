@@ -131,8 +131,9 @@ const CStaticModelData& CModelRegistry::CThreadSafeFeature::GetModel(const std::
     }
 }
 
-// Process to be called at instance creation
-void CModelRegistry::OnCreate() {
+// Constructor
+CModelRegistry::CModelRegistry()
+    : ACMainThreadSingleton(-10) {
     m_modelLoadDescs = CUniquePtr<std::unordered_map<std::wstring, ModelInfo::Load::ModelDesc>>::Make();
     m_animLoadDescs = CUniquePtr<std::unordered_map<std::wstring, ModelInfo::Load::AnimDesc>>::Make();
     m_animInterpolationMap = CUniquePtr<std::map<std::wstring, ForMakeAnimToAnimData>>::Make();

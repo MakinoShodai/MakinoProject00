@@ -96,16 +96,6 @@ struct Transformf {
     Transformf& operator=(Transformf&& other) = default;
 };
 
-/** @brief Enum to observe transform changes */
-enum class TransformObserve : uint8_t {
-    None = 0,
-    Pos = 1 << 0,
-    Rotate = 1 << 1,
-    Scale = 1 << 2,
-    All = Pos | Rotate | Scale,
-};
-ENUM_TO_BITFLAG(TransformObserve); // Support for bit operation
-
 namespace Utl {
     /** @brief For mathematics */
     namespace Math {
@@ -219,6 +209,8 @@ namespace Utl {
         /** @brief Simple judgment of all elements of the unit vector are 0 or not */
         bool IsUnitVector3fZero(const Vector3f& v);
 
+        /** @brief Are all the values of the 3 dimensional vectors zero? */
+        bool IsVector3fZero(const Vector3f& v);
         /** @brief Are the two 3 dimensional vectors almost the same value? */
         bool IsEqualVector3f(const Vector3f& a, const Vector3f& b);
 

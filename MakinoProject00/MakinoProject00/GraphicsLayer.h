@@ -18,6 +18,8 @@ enum class GraphicsLayer : GraphicsLayerUINT {
     Standard = 0,
     /** @brief User interface */
     UI,
+    /** @brief Translucent object */
+    Transparent,
     /** @brief The maximum number of layer */
     Max,
 };

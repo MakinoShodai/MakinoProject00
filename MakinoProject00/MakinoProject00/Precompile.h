@@ -14,12 +14,16 @@
 #include <tchar.h>
 #include <string>
 #include <fstream>
+#include <array>
+#include <deque>
 #include <Windows.h>
 #include <wrl.h>
+#include <functional>
 #include <d3d12.h>
 #include <dxgi1_6.h>
 #include <DirectXMath.h>
 #include <DirectXTex/DirectXTex.h>
+#include <d3d12shader.h>
 #include <shlobj.h>
 #include <strsafe.h>
 #include <random>
