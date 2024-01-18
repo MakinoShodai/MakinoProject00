@@ -4,15 +4,15 @@
 
 // Performs setting when loading models
 void ModelLoadSetting() {
+    using namespace ModelInfo;
+    using namespace ModelInfo::Load;
+    CModelRegistry& registry = CModelRegistry::GetMain();
+
     // Model setting
-    CModelRegistry::GetMain().AddModelLoadDesc(MODEL_NAME_UNITYCHAN, ModelInfo::Load::ModelDesc(0.025f, ModelInfo::Load::CoordinateSystem::Standard, 1.0f));
-    CModelRegistry::GetMain().AddModelLoadDesc(MODEL_NAME_DESK, ModelInfo::Load::ModelDesc(0.025f, ModelInfo::Load::CoordinateSystem::Blender));
+    registry.AddModelLoadDesc(MODEL_NAME_DESK, ModelDesc(0.025f, CoordinateSystem::Blender));
+    registry.AddModelLoadDesc(MODEL_NAME_CUTEBIRD, ModelDesc(0.075f, CoordinateSystem::Standard, 0.2f));
 
     // Animation setting
-    CModelRegistry::GetMain().AddAnimLoadDesc(ANIM_NAME_UNITYCHAN_JUMP, ModelInfo::Load::AnimDesc(1.0f));
-    CModelRegistry::GetMain().AddAnimLoadDesc(ANIM_NAME_UNITYCHAN_RUN, ModelInfo::Load::AnimDesc(1.0f, true));
-
-    // Animation interpolation setting
-    CModelRegistry::GetMain().AddAnimToAnimSetting(ANIM_NAME_UNITYCHAN_JUMP, ANIM_NAME_UNITYCHAN_RUN, ModelInfo::InterpolationSetting(5.0f));
-    CModelRegistry::GetMain().AddAnimToAnimSetting(ANIM_NAME_UNITYCHAN_RUN, ANIM_NAME_UNITYCHAN_JUMP, ModelInfo::InterpolationSetting(0.3f));
+    registry.AddAnimLoadDesc(ANIM_NAME_CUTEBIRD_DIE, AnimDesc(0.25f));
+    registry.AddAnimLoadDesc(ANIM_NAME_CUTEBIRD_RUN, AnimDesc(0.75f));
 }

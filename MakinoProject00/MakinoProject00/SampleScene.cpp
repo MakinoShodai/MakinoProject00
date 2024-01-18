@@ -82,8 +82,8 @@ void CSampleScene::Start() {
 
     // Skeletal models
     for (int i = 0; i < 20; ++i) {
-        auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f((float)i - 10.0f, -1.0f, 5.0f), Vector3f::Ones(), Utl::DEG_2_RAD * Vector3f(0.0f, (float)i * 30.0f, 0.0f)));
-        obj->AddComponent<CSkeletalModel>(GraphicsLayer::Standard, MODEL_NAME_UNITYCHAN);
+        auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f((float)i * 2 + 3.0f, -1.0f, 5.0f), Vector3f::Ones(), Utl::DEG_2_RAD * Vector3f(0.0f, (float)i * 30.0f, 0.0f)));
+        obj->AddComponent<CSkeletalModel>(GraphicsLayer::Standard, MODEL_NAME_CUTEBIRD);
         obj->AddComponent<CSampleAnimComponent>();
         obj->AddComponent<CSampleRotateComponent>(Vector3f(0.0f, 1.0f, 0.0f).GetNormalize(), 3.0f);
     }

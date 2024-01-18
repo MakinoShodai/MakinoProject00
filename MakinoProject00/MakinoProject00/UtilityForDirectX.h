@@ -258,10 +258,12 @@ namespace Utl {
 
         /** @brief Handle class for a SRVProperty that can only be created from within the SRVProperty */
         class SRVPropertyHandle {
-            // Friend declarations
-            friend struct ASRVProperty;
-
         public:
+            /** @brief Constructor */
+            SRVPropertyHandle() : m_srvProperty(nullptr) {}
+            /** @brief Constructor */
+            SRVPropertyHandle(ASRVProperty* srvProperty) : m_srvProperty(srvProperty->WeakFromThis()) {}
+
             /** @brief Destructor */
             ~SRVPropertyHandle() = default;
             
@@ -284,10 +286,6 @@ namespace Utl {
             SRVPropertyHandle(SRVPropertyHandle&& other) = default;
             /** @brief Move assignment operator */
             SRVPropertyHandle& operator=(SRVPropertyHandle&& other) = default;
-
-        private:
-            /** @brief Constructor */
-            SRVPropertyHandle(ASRVProperty* srvProperty) : m_srvProperty(srvProperty->WeakFromThis()) {}
 
         private:
             /** @brief Pointer to SRV property */

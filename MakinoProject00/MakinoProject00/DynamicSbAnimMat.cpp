@@ -16,7 +16,7 @@ Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicSbAnimMat::AllocateData(CSkeletalModel* m
     CUniquePtr<DirectX::XMFLOAT4X4[]> boneMat = CUniquePtr<DirectX::XMFLOAT4X4[]>::Make(boneNum);
 
     // If it's not a bind pose, perform standard animation matrix calculation
-    if (!controller->CheckAnimMode(ModelInfo::AnimMode::BindPose)) {
+    if (!controller->IsBindPose()) {
         for (UINT i = 0; i < boneNum; ++i) {
             controller->CalculateAnimationMatrix(&boneMat[i], meshIndex, i);
         }

@@ -3,7 +3,7 @@
 #include "ModelRegistry.h"
 
 // Create mesh data and texture data
-void ACModel::CreateMesh() {
+void ACModel::CreateMesh(UINT additionalTexID) {
     // Get static data of model
     const CStaticModelData* staticData = GetStaticData();
 
@@ -19,24 +19,24 @@ void ACModel::CreateMesh() {
         // Set standard texture
         SetTexture(i, 0, CTexture(
             Utl::Dx::ShaderString(Utl::Dx::ShaderType::Pixel, "mainTex"),
-            *staticData->GetMaterial(mesh->materialIndex)->texture.Get()));
+            staticData->GetMaterial(mesh->materialIndex)->texture[additionalTexID]));
     }
 }
 
 // Constructor
-CBasicModel::CBasicModel(CGameObject* owner, GraphicsLayer layer, const std::wstring& modelPath) 
+CBasicModel::CBasicModel(CGameObject* owner, GraphicsLayer layer, const std::wstring& modelPath, UINT additionalTexID)
     : m_model(&CModelRegistry::GetAny().GetModel(modelPath))
     , ACModel(GraphicsComponentType::BasicModel, owner, layer) {
     // Create mesh data and texture data
-    CreateMesh();
+    CreateMesh(additionalTexID);
 }
 
 // Constructor
-CSkeletalModel::CSkeletalModel(CGameObject* owner, GraphicsLayer layer, const std::wstring& modelPath)
+CSkeletalModel::CSkeletalModel(CGameObject* owner, GraphicsLayer layer, const std::wstring& modelPath, UINT additionalTexID)
     : m_model(CModelRegistry::GetAny().GetModel(modelPath))
     , ACModel(GraphicsComponentType::SkeletalModel, owner, layer) {
     // Create mesh data and texture data
-    CreateMesh();
+    CreateMesh(additionalTexID);
 }
 
 // Pre drawing processing
