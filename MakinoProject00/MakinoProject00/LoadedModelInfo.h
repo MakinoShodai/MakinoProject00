@@ -54,8 +54,12 @@ namespace ModelInfo {
 
     /** @brief Material data of mesh */
     struct Material {
-        /** @brief Texture */
-        CUniquePtr<Utl::Dx::SRVPropertyHandle> texture;
+        /**
+           @brief Array of default and additional textures
+           @details 
+           index = 0 for default textures, and later for additional textures
+        */
+        CArrayUniquePtr<Utl::Dx::SRVPropertyHandle> texture;
     };
 
     /** @brief Mesh data */
@@ -131,13 +135,11 @@ namespace ModelInfo {
     struct DynamicAnimation {
         /** @brief Current play time */
         float currentTime;
-        /** @brief Current play rate */
-        float playRate;
         /** @brief Loop setting */
         bool isLoop;
 
         /** @brief Constructor */
-        DynamicAnimation() : currentTime(0.0f), playRate(1.0f), isLoop(false) {}
+        DynamicAnimation() : currentTime(0.0f), isLoop(false) {}
     };
 
     /** @brief Animation data per model */
@@ -152,18 +154,50 @@ namespace ModelInfo {
         std::unordered_map<AnimID, InterpolationSetting> interpolationMap;
     };
 
-    /** @brief Data that the model to be animated must have for each instance */
-    struct PerInstanceData {
-        /** @brief Current animation mode */
-        AnimMode animMode;
-        /** @brief ID of the currently playing animation */
-        AnimID currentPlayID[CONCURRENT_ANIMPLAY_NUM];
+    /** @brief Parameter for animation during playback */
+    struct AnimPlayBackParam {
+        /** @brief ID of this animation */
+        AnimID id;
+        /** @brief Current play time */
+        float currentTime;
+        /** @brief Loop setting */
+        bool isLoop;
+
+        /**
+           @brief Constructor
+           @param id ID of this animation
+           @param currentTime Current play time
+           @param isLoop Loop setting
+        */
+        AnimPlayBackParam(AnimID id, float currentTime, bool isLoop)
+            : id(id), currentTime(currentTime), isLoop(isLoop) {}
+    };
+
+    /** @brief Parameter for blending animation */
+    struct AnimBlendParam {
         /** @brief Current time of blending animation */
         float currentBlendTime;
         /** @brief Total time of blending animation */
         float totalBlendTime;
-        /** @brief Each animations data */
-        CUniquePtr<DynamicAnimation[]> animations;
+
+        /**
+           @brief Constructor
+           @param id ID of blending animation
+           @param currentBlendTime Current time of blending animation
+           @param totalBlendTime Total time of blending animation
+        */
+        AnimBlendParam(float currentBlendTime, float totalBlendTime)
+            : currentBlendTime(currentBlendTime), totalBlendTime(totalBlendTime) {}
+    };
+
+    /** @brief Data that the model to be animated must have for each instance */
+    struct PerInstanceData {
+        /** @brief Current play rate */
+        float playRate;
+        /** @brief Dynamic array of parameters for blending animation */
+        std::vector<AnimBlendParam> blendParams;
+        /** @brief Animations during playback */
+        std::vector<AnimPlayBackParam> playbackAnimations;
 
         /** @brief Animation transforms */
         CUniquePtr<Transformf[]> animTransforms;
@@ -176,16 +210,83 @@ namespace ModelInfo {
            @param animNum The number of animations
         */
         PerInstanceData(UINT nodeNum, UINT animNum);
+
+        /**
+           @brief Erase the blend parameter at the specified index and all preceding blend and playback parameters
+           @param index Index to be erased
+        */
+        void EraseBlendAnims(UINT index);
+
+        /**
+           @brief Get playback parameter from blending animation
+           @param index Index of blending animation
+           @return Reference to playback parameter
+        */
+        AnimPlayBackParam& GetPlaybackParamFromBlend(UINT index) { return playbackAnimations[index + 1]; }
+
+        /**
+           @brief Get blending parameter from playback animation
+           @param index Index of playback animation
+           @return Reference to blending parameter
+        */
+        AnimBlendParam* GetBlendParamFromPlayBack(UINT index) { return (index != 0) ? &blendParams[index + 1] : nullptr; }
+
+        /**
+           @brief Get ID of the currently main animation
+           @return ID of the currently main animation
+        */
+        AnimID GetCurrentMainID();
+
+        /** @brief Is the animation currently playing standardly? */
+        bool IsStandardPlayback() { return playbackAnimations.size() == 1; }
     };
 
     /** @brief For loading */
     namespace Load {
+        /** @brief ID when overriding additional texture as default texture */
+        const UINT ADDTEX_OVERRIDE_ID = 0;
+
         /** @brief Coordinate system of model to be loaded */
         enum class CoordinateSystem {
             /** @brief For model exported with Y-Up, Z-Forward */
             Standard,
             /** @brief For model exported with Z-Up, Y-Forward */
             Blender,
+        };
+
+        /** @brief Information of texture that model has */
+        struct ModelTex {
+            /** @brief Path of texture file */
+            std::wstring filePath;
+            /** @brief Index of this texture in model */
+            UINT index;
+
+            /**
+               @brief Constructor
+               @param index Index of the material to which this texture is assigned
+               @param filePath Path of texture file
+            */
+            ModelTex(UINT index, const std::wstring& filePath) : index(index), filePath(filePath) {}
+        };
+
+        /** @brief Additional texture of model */
+        struct AdditionalModelTex {
+            /** @brief All texture information for this ID */
+            std::unordered_map<UINT, std::wstring> infoMap;
+            /** @brief ID of an additional texture */
+            UINT id;
+            
+            /**
+               @brief Constructor
+               @param id 0 for override as default texture, 1 or later for additional texture
+               @param textures All texture information for this ID
+            */
+            AdditionalModelTex(UINT id, std::initializer_list<ModelTex> textures)
+                : id(id) {
+                for (auto& it : textures) {
+                    infoMap.emplace(it.index, it.filePath);
+                }
+            }
         };
 
         /** @brief Descriptor to load model */
@@ -196,6 +297,8 @@ namespace ModelInfo {
             CoordinateSystem coordSystem;
             /** @brief Interpolation time (seconds) if animation interpolation setting is not set */
             float standardInterpolationTime;
+            /** @brief Additional texture of model */
+            std::vector<AdditionalModelTex> additionalTex;
 
             /**
                @brief Constructor
@@ -350,7 +453,7 @@ public:
     /**
        @brief Set the animation mode is bind pose
     */
-    void BindPose() { m_dynamicData.animMode = ModelInfo::AnimMode::BindPose; }
+    void BindPose() { m_dynamicData.playbackAnimations.clear(); }
 
     /**
        @brief Calculate an animation matrix
@@ -360,12 +463,16 @@ public:
     */
     void CalculateAnimationMatrix(DirectX::XMFLOAT4X4* mat, UINT meshIndex, UINT boneIndex);
 
-    /** @brief Check if the animation mode and a sent animation mode are same */
-    bool CheckAnimMode(ModelInfo::AnimMode mode) { return m_dynamicData.animMode == mode; }
+    /** @brief Is this model currently in a bind pose? */
+    bool IsBindPose() { return m_dynamicData.playbackAnimations.empty(); }
+
+    /** @brief Set playrate of overall animation */
+    void SetAnimPlayRate(float playRate = 1.0f) { m_dynamicData.playRate = playRate; }
+    /** @brief Get the number of loaded animation */
+    UINT GetLoadedAnimNum() const { return m_staticData->GetAnimationNum(); }
 
     /** @brief Get static data of this model */
     const CStaticModelData* GetStaticData() const { return m_staticData; }
-
     /** @brief Get dynamic data of this model */
     const ModelInfo::PerInstanceData* GetDynamicData() const { return &m_dynamicData; }
 
@@ -387,19 +494,19 @@ private:
        @param blendTime Time required for blending
     */
     void BlendingPlayback(ModelInfo::AnimID animID, bool isLoop, float blendTime);
-
-    /**
-       @brief Initialize an animation
-       @param animID ID of animation to be initialized
-    */
-    void InitializeAnim(ModelInfo::AnimID animID);
     
     /**
        @brief Update an animation
-       @param animID ID of animation to be updated
+       @param anim Parameter of animation playback
        @param timeStep Time step to be advanced
     */
-    void UpdateAnim(ModelInfo::AnimID animID, float timeStep);
+    void UpdateAnim(ModelInfo::AnimPlayBackParam* anim, float timeStep);
+
+    /**
+       @brief Update blend animations
+       @param timeStep Time step to be advanced
+    */
+    void UpdateBlendAnims(float timeStep);
 
     /**
        @brief Calculate matrices of nodes
@@ -410,18 +517,16 @@ private:
     
     /**
        @brief Apply an animation to the animation transforms
-       @param uniqueData Unique data of model
-       @param animID Animation ID
+       @param anim Parameter of animation playback
     */
-    void ApplyAnimTransforms(ModelInfo::AnimID animID);
+    void ApplyAnimTransforms(const ModelInfo::AnimPlayBackParam& anim);
 
     /**
        @brief Apply more type animation to the animation transforms
-       @param uniqueData Unique data of model
-       @param animID Animation ID
+       @param anim Parameter of animation playback
        @param t Parameters to interpolate from the current animation transform
     */
-    void ApplyMoreAnimTransforms(ModelInfo::AnimID animID, float t);
+    void ApplyMoreAnimTransforms(const ModelInfo::AnimPlayBackParam& anim, float t);
 
     /**
        @brief Compute current time value from keyframes

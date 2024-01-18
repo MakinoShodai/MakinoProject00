@@ -102,7 +102,18 @@ bool CModelRegistry::LoadAnimPak(const std::wstring& filePath) {
 // Add descriptor to load model
 void CModelRegistry::AddModelLoadDesc(const std::wstring& filePath, ModelInfo::Load::ModelDesc loadDesc) {
     if (m_modelLoadDescs == nullptr) { throw Utl::Error::CFatalError(L"All models have already been loaded"); }
+    auto it = m_modelLoadDescs->find(filePath);
+    if (it != m_modelLoadDescs->end()) {
+        throw Utl::Error::CFatalError(L"The model descriptor is already created");
+    }
+
     m_modelLoadDescs->emplace(filePath, std::move(loadDesc));
+}
+
+// Add the additional texture of model
+void CModelRegistry::AddModelAdditionalTex(const std::wstring& modelFilePath, UINT id, std::initializer_list<ModelInfo::Load::ModelTex> textures) {
+    if (m_modelLoadDescs == nullptr) { throw Utl::Error::CFatalError(L"All models have already been loaded"); }
+    (*m_modelLoadDescs)[modelFilePath].additionalTex.push_back(ModelInfo::Load::AdditionalModelTex(id, textures));
 }
 
 // Add descriptor to load animation

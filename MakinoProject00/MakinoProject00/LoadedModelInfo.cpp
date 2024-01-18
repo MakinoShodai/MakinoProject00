@@ -3,23 +3,63 @@
 #include "UtilityForException.h"
 #include "UtilityForString.h"
 
-// Index of animation ID array for main animation
-const UINT MAIN_ANIM_INDEX = 0;
-// Index of animation ID array for blend animation
-const UINT BLEND_ANIM_INDEX = 1;
+// Index of base animation in array of playback parameters
+const UINT BASE_ANIM_INDEX = 0;
+
+// Create texture file path
+bool CreateTexPath(UINT index, std::wstring* ret, aiMaterial** mat, const std::wstring& dir, const ModelInfo::Load::ModelDesc& desc) {
+    auto findAssimpTex = [ret, mat, index, dir]() -> bool {
+        aiString str;
+        if (mat[index]->Get(AI_MATKEY_TEXTURE_DIFFUSE(0), str) == AI_SUCCESS) {
+            *ret = dir + Utl::Str::string2WString(str.C_Str());
+            return true;
+        }
+        return false;
+    };
+
+    if (mat != nullptr) {
+        // Find override texture
+        auto overrideTexIt = std::find_if(desc.additionalTex.begin(), desc.additionalTex.end(),
+            [](const ModelInfo::Load::AdditionalModelTex& item) { return item.id == ModelInfo::Load::ADDTEX_OVERRIDE_ID; });
+
+        // If it is exist, find override texture from it
+        if (overrideTexIt != desc.additionalTex.end()) {
+            auto it = overrideTexIt->infoMap.find(index);
+            if (it != overrideTexIt->infoMap.end()) {
+                *ret = dir + it->second;
+                return true;
+            }
+            // Find assimp texture
+            else {
+                return findAssimpTex();
+            }
+        }
+        // Find assimp texture
+        else {
+            return findAssimpTex();
+        }
+    }
+    return false;
+}
 
 // Data that the model to be animated must have for each instance
 ModelInfo::PerInstanceData::PerInstanceData(UINT nodeNum, UINT animNum)
-    : animMode(AnimMode::BindPose)
-    , currentBlendTime(0.0f)
-    , totalBlendTime(0.0f) {
-    // Initialize current play ID
-    std::fill(std::begin(currentPlayID), std::end(currentPlayID), 0);
-
+    : playRate(1.0f) {
     // Make array of unique ptr
-    animations = CUniquePtr<DynamicAnimation[]>::Make(animNum);
     animTransforms = CUniquePtr<Transformf[]>::Make(nodeNum);
     nodeMatrices = CUniquePtr<DirectX::XMMATRIX[]>::Make(nodeNum);
+}
+
+// Erase the blend parameter at the specified index and all preceding blend and playback parameters
+void ModelInfo::PerInstanceData::EraseBlendAnims(UINT index) {
+    index += 1;
+    blendParams.erase(blendParams.begin(), blendParams.begin() + index);
+    playbackAnimations.erase(playbackAnimations.begin(), playbackAnimations.begin() + index);
+}
+
+// Get ID of the currently main animation
+ModelInfo::AnimID ModelInfo::PerInstanceData::GetCurrentMainID() {
+    return (!playbackAnimations.empty()) ? playbackAnimations.back().id : 0;
 }
 
 // Static data per model
@@ -117,18 +157,42 @@ void CStaticModelData::LoadModel(const void* data, size_t size, const std::wstri
 
         // Set data of each materials to the array
         for (UINT i = 0; i < assimpScene->mNumMaterials; ++i) {
-            // Read texture
-            aiString path;
-            if (assimpScene->mMaterials[i]->Get(AI_MATKEY_TEXTURE_DIFFUSE(0), path) == AI_SUCCESS) {
-                // Create texture file path with directory
-                std::wstring file = dir + Utl::Str::string2WString(path.C_Str());
+            // Find override texture
+            auto overrideTexIt = std::find_if(desc.additionalTex.begin(), desc.additionalTex.end(),
+                [](const ModelInfo::Load::AdditionalModelTex& item) { return item.id == ModelInfo::Load::ADDTEX_OVERRIDE_ID; });
 
+            // Compute the number of additional textures + the number of normal texture
+            UINT texNum = (UINT)((overrideTexIt != desc.additionalTex.end()) ? desc.additionalTex.size() : desc.additionalTex.size() + 1);
+            // Initialize texture array
+            m_materials[i].texture.Resize(texNum);
+
+            // Read texture
+            std::wstring texFilePath;
+            if (CreateTexPath(i, &texFilePath, assimpScene->mMaterials, dir, desc)) {
                 // If the texture registry contains this texture file, set handle for its texture
-                if (CTextureRegistry::GetAny().IsContains(file)) {
-                    m_materials[i].texture = CUniquePtr<Utl::Dx::SRVPropertyHandle>::Make(CTextureRegistry::GetAny().GetSRVPropertyHandle(file));
+                if (CTextureRegistry::GetAny().IsContains(texFilePath)) {
+                    m_materials[i].texture[0] = CTextureRegistry::GetAny().GetSRVPropertyHandle(texFilePath);
                 }
                 else {
-                    throw Utl::Error::CFatalError(L"Texture data held by the model don't exist" + file);
+                    throw Utl::Error::CFatalError(L"Texture data held by the model don't exist" + texFilePath);
+                }
+            }
+
+            // Assign additional textures
+            for (UINT additionalIndex = 0; additionalIndex < (UINT)desc.additionalTex.size(); ++additionalIndex) {
+                // Ignore override textures
+                if (desc.additionalTex[additionalIndex].id == ModelInfo::Load::ADDTEX_OVERRIDE_ID) {
+                    continue;
+                }
+
+                // Find texture from additional textures
+                auto it = desc.additionalTex[additionalIndex].infoMap.find(i);
+                if (it != desc.additionalTex[additionalIndex].infoMap.end()) {
+                    m_materials[i].texture[i] = CTextureRegistry::GetAny().GetSRVPropertyHandle(it->second);
+                }
+                // If it is not exists, use default texture
+                else {
+                    m_materials[i].texture[i] = m_materials[i].texture[0];
                 }
             }
         }
@@ -350,36 +414,30 @@ CDynamicModelController::CDynamicModelController(const CStaticModelData& modelDa
 
 // Advance the time of animation
 void CDynamicModelController::StepAnim(float timeStep) {
-    // If the animation mode is bind pose, return
-    if (m_dynamicData.animMode == ModelInfo::AnimMode::BindPose) { return; }
+    // If the animation is not currently playing, return
+    if (m_dynamicData.playbackAnimations.empty()) { return; }
 
-    // Apply a main animation to the animation transfrom
-    ApplyAnimTransforms(m_dynamicData.currentPlayID[MAIN_ANIM_INDEX]);
+    // Apply a base animation to the animation transfrom
+    ApplyAnimTransforms(m_dynamicData.playbackAnimations[BASE_ANIM_INDEX]);
 
-    // If the animation mode is blending, apply a blend animation to the animation transfrom
-    if (m_dynamicData.animMode == ModelInfo::AnimMode::Blending) {
-        float t = m_dynamicData.currentBlendTime / m_dynamicData.totalBlendTime;
-        ApplyMoreAnimTransforms(m_dynamicData.currentPlayID[BLEND_ANIM_INDEX], t);
+    // If there are animations that are in blending playback, apply a blend animations to the animation transfrom
+    UINT blendAnimNum = (UINT)m_dynamicData.blendParams.size();
+    for (UINT i = 0; i < blendAnimNum; ++i) {
+        float t = m_dynamicData.blendParams[i].currentBlendTime / m_dynamicData.blendParams[i].totalBlendTime;
+        ApplyMoreAnimTransforms(m_dynamicData.playbackAnimations[1 + i], t);
     }
 
     // Calculate the node matrices
     CalculateNodesMatrices(0, DirectX::XMMatrixIdentity());
 
-    // Update a main animation
-    UpdateAnim(m_dynamicData.currentPlayID[MAIN_ANIM_INDEX], timeStep);
-    
-    // If the animation mode is blending, update a blend animation
-    if (m_dynamicData.animMode == ModelInfo::AnimMode::Blending) {
-        UpdateAnim(m_dynamicData.currentPlayID[BLEND_ANIM_INDEX], timeStep);
-        m_dynamicData.currentBlendTime += timeStep;
+    // Update All animations during playback
+    for (auto& it : m_dynamicData.playbackAnimations) {
+        UpdateAnim(&it, timeStep);
+    }
 
-        // If animation blending has been completed, finish animation blending
-        if (m_dynamicData.totalBlendTime <= m_dynamicData.currentBlendTime) {
-            m_dynamicData.currentBlendTime = 0.0f;
-            m_dynamicData.totalBlendTime = 0.0f;
-            m_dynamicData.currentPlayID[MAIN_ANIM_INDEX] = m_dynamicData.currentPlayID[BLEND_ANIM_INDEX];
-            m_dynamicData.animMode = ModelInfo::AnimMode::Standard;
-        }
+    // If there are animations that are in blending playback, update blend animations
+    if (blendAnimNum > 0) {
+        UpdateBlendAnims(timeStep);
     }
 }
 
@@ -388,26 +446,27 @@ void CDynamicModelController::Play(ModelInfo::AnimID animID, bool isLoop) {
     // If a non ID value is sent, do nothing
     if (animID >= m_staticData->GetAnimationNum()) { return; }
 
-    // If current animation mode is standard
-    if (m_dynamicData.animMode == ModelInfo::AnimMode::Standard) {
-        // If sent animation ID and current playback animation ID are the same, do nothing
-        if (m_dynamicData.currentPlayID[MAIN_ANIM_INDEX] == animID) { return; }
-
-        // Get currently playing animation
-        const ModelInfo::StaticAnimation* currentAnim = m_staticData->GetAnimation(m_dynamicData.currentPlayID[MAIN_ANIM_INDEX]);
-
-        // Get time for animation interpolation
-        auto it = currentAnim->interpolationMap.find(animID);
-        float interpolationTime = (it != currentAnim->interpolationMap.end()) ? it->second.interpolationTime : m_staticData->GetStandardInterpolationTime();
-        
-        // If interpolation time is not zero, so do blending playback
-        if (!Utl::IsFloatZero(interpolationTime)) {
-            BlendingPlayback(animID, isLoop, interpolationTime);
-            return;
-        }
+    // If no animation is currently playing, do standard playback
+    if (m_dynamicData.playbackAnimations.empty()) {
+        StandardPlayback(animID, isLoop);
+        return;
     }
 
-    StandardPlayback(animID, isLoop);
+    // If sent animation ID and currently main animation ID are the same, do nothing
+    ModelInfo::AnimID mainID = m_dynamicData.GetCurrentMainID();
+    if (mainID == animID) { return; }
+
+    // Get the currently main animation
+    const ModelInfo::StaticAnimation* currentAnim = m_staticData->GetAnimation(mainID);
+
+    // Get time for animation interpolation
+    auto it = currentAnim->interpolationMap.find(animID);
+    float interpolationTime = (it != currentAnim->interpolationMap.end()) ? it->second.interpolationTime : m_staticData->GetStandardInterpolationTime();
+
+    // If interpolation time is not zero, so do blending playback
+    if (!Utl::IsFloatZero(interpolationTime)) {
+        BlendingPlayback(animID, isLoop, interpolationTime);
+    }
 }
 
 // Play blend animation
@@ -415,8 +474,8 @@ void CDynamicModelController::PlayBlend(ModelInfo::AnimID animID, bool isLoop, f
     // If a non ID value is sent, do nothing
     if (animID >= m_staticData->GetAnimationNum()) { return; }
     // If the animation is not playing, so do standard playback without blending
-    if (m_dynamicData.animMode != ModelInfo::AnimMode::Standard) { 
-        Play(animID, isLoop); 
+    if (m_dynamicData.playbackAnimations.empty()) {
+        Play(animID, isLoop);
         return; 
     }
 
@@ -432,57 +491,79 @@ void CDynamicModelController::CalculateAnimationMatrix(DirectX::XMFLOAT4X4* mat,
 
 // Standard playback animation
 void CDynamicModelController::StandardPlayback(ModelInfo::AnimID animID, bool isLoop) {
-    // Initialize animation
-    InitializeAnim(animID);
-
-    // Set loop flag
-    m_dynamicData.animations[animID].isLoop = isLoop;
-    // Set the animation ID to the main animation
-    m_dynamicData.currentPlayID[MAIN_ANIM_INDEX] = animID;
-    // Set the animation mode is standard
-    m_dynamicData.animMode = ModelInfo::AnimMode::Standard;
+    if (!m_dynamicData.playbackAnimations.empty()) {
+        m_dynamicData.playbackAnimations.clear();
+    }
+    m_dynamicData.playbackAnimations.push_back(ModelInfo::AnimPlayBackParam(animID, 0.0f, isLoop));
 }
 
 // Blending playback animation
 void CDynamicModelController::BlendingPlayback(ModelInfo::AnimID animID, bool isLoop, float blendTime) {
-    // Initialize animation
-    InitializeAnim(animID);
+    if (m_dynamicData.GetCurrentMainID() == animID) { return; }
 
-    // Set loop flag
-    m_dynamicData.animations[animID].isLoop = isLoop;
-    // Set the animation ID to the blend animation
-    m_dynamicData.currentPlayID[BLEND_ANIM_INDEX] = animID;
-    // Reset current blend time
-    m_dynamicData.currentBlendTime = 0.0f;
-    // Set blending time of animation
-    m_dynamicData.totalBlendTime = blendTime;
-    // Set the animation mode is blending
-    m_dynamicData.animMode = ModelInfo::AnimMode::Blending;
-}
+    if (!isLoop) {
+        // Add playback parameter to the array
+        m_dynamicData.playbackAnimations.push_back(ModelInfo::AnimPlayBackParam(animID, 0.0f, isLoop));
+        // Add blend paramater to the array
+        m_dynamicData.blendParams.push_back(ModelInfo::AnimBlendParam(0.0f, blendTime));
+    }
+    else {
+        auto it = std::find_if(m_dynamicData.playbackAnimations.begin(), m_dynamicData.playbackAnimations.end(),
+            [animID](const ModelInfo::AnimPlayBackParam& it) { return it.id == animID; });
 
-// Initialize an animation
-void CDynamicModelController::InitializeAnim(ModelInfo::AnimID animID) {
-    ModelInfo::DynamicAnimation& anim = m_dynamicData.animations[animID];
-    anim.currentTime = 0.0f;
-    anim.playRate = 1.0f;
-    anim.isLoop = false;
+        if (it == m_dynamicData.playbackAnimations.end()) {
+            // Add playback parameter to the array
+            m_dynamicData.playbackAnimations.push_back(ModelInfo::AnimPlayBackParam(animID, 0.0f, isLoop));
+            // Add blend paramater to the array
+            m_dynamicData.blendParams.push_back(ModelInfo::AnimBlendParam(0.0f, blendTime));
+        }
+        else {
+            // Inherit current playback time of animation parameters
+            float startPlaybackTime = it->currentTime;
+            float startBlendTime = 0.0f;
+
+            // If the transition is to the same animation as the base animation, the transition time is inherited and erase it
+            if (m_dynamicData.blendParams.size() == 1 && m_dynamicData.playbackAnimations[BASE_ANIM_INDEX].id == animID) {
+                startBlendTime = 1.0f - (m_dynamicData.blendParams[0].currentBlendTime / m_dynamicData.blendParams[0].totalBlendTime) * blendTime;
+                m_dynamicData.EraseBlendAnims(0);
+            }
+
+            // Add playback parameter to the array
+            m_dynamicData.playbackAnimations.push_back(ModelInfo::AnimPlayBackParam(animID, startPlaybackTime, isLoop));
+            // Add blend paramater to the array
+            m_dynamicData.blendParams.push_back(ModelInfo::AnimBlendParam(startBlendTime, blendTime));
+        }
+    }
 }
 
 // Update an animation
-void CDynamicModelController::UpdateAnim(ModelInfo::AnimID animID, float timeStep) {
+void CDynamicModelController::UpdateAnim(ModelInfo::AnimPlayBackParam* anim, float timeStep) {
     // Get the animation data
-    const ModelInfo::StaticAnimation* staticAnimData = m_staticData->GetAnimation(animID);
-    ModelInfo::DynamicAnimation& anim = m_dynamicData.animations[animID];
+    const ModelInfo::StaticAnimation* staticAnimData = m_staticData->GetAnimation(anim->id);
     
     // Advance current playback time of animation
-    anim.currentTime += anim.playRate * timeStep;
+    anim->currentTime += m_dynamicData.playRate * timeStep;
 
     // If it's looping, correct the current playback time
-    if (anim.isLoop) {
-        while (anim.currentTime >= staticAnimData->totalTime)
-            anim.currentTime -= staticAnimData->totalTime;
+    if (anim->isLoop) {
+        while (anim->currentTime >= staticAnimData->totalTime)
+            anim->currentTime -= staticAnimData->totalTime;
     }
+}
 
+// Update blend animations
+void CDynamicModelController::UpdateBlendAnims(float timeStep) {
+    for (int i = 0; i < (int)m_dynamicData.blendParams.size(); ++i) {
+        ModelInfo::AnimBlendParam& blendParam = m_dynamicData.blendParams[i];
+        blendParam.currentBlendTime += timeStep;
+
+        // If animation blending has been completed, finish animation blending
+        if (blendParam.totalBlendTime <= blendParam.currentBlendTime) {
+            // Erase all preceding blend and playback parameters
+            m_dynamicData.EraseBlendAnims((UINT)i);
+            i = -1;
+        }
+    }
 }
 
 // Calculate matrices of nodes
@@ -509,13 +590,12 @@ void CDynamicModelController::CalculateNodesMatrices(ModelInfo::NodeIndex index,
 }
 
 // Apply an animation to the animation transforms
-void CDynamicModelController::ApplyAnimTransforms(ModelInfo::AnimID animID) {
-    ModelInfo::DynamicAnimation&  anim = m_dynamicData.animations[animID];
+void CDynamicModelController::ApplyAnimTransforms(const ModelInfo::AnimPlayBackParam& anim) {
     Vector3f    pos;
     Quaternionf quat;
     Vector3f    scale;
     
-    const std::vector<ModelInfo::Channel>& channels = m_staticData->GetAnimation(animID)->channels;
+    const std::vector<ModelInfo::Channel>& channels = m_staticData->GetAnimation(anim.id)->channels;
     for (const auto& channelIt : channels) {
         pos = ComputeValueFromKeyFrame<Vector3f>(channelIt.pos, anim.currentTime, Utl::Math::Lerp);
         quat = ComputeValueFromKeyFrame<Quaternionf>(channelIt.rotation, anim.currentTime, Utl::Math::Slerp);;
@@ -528,13 +608,12 @@ void CDynamicModelController::ApplyAnimTransforms(ModelInfo::AnimID animID) {
 }
 
 // Apply more type animation to the animation transforms
-void CDynamicModelController::ApplyMoreAnimTransforms(ModelInfo::AnimID animID, float t) {
-    ModelInfo::DynamicAnimation& anim = m_dynamicData.animations[animID];
+void CDynamicModelController::ApplyMoreAnimTransforms(const ModelInfo::AnimPlayBackParam& anim, float t) {
     Vector3f    pos;
     Quaternionf quat;
     Vector3f    scale;
 
-    const std::vector<ModelInfo::Channel>& channels = m_staticData->GetAnimation(animID)->channels;
+    const std::vector<ModelInfo::Channel>& channels = m_staticData->GetAnimation(anim.id)->channels;
     for (const auto& channelIt : channels) {
         pos = ComputeValueFromKeyFrame<Vector3f>(channelIt.pos, anim.currentTime, Utl::Math::Lerp);
         quat = ComputeValueFromKeyFrame<Quaternionf>(channelIt.rotation, anim.currentTime, Utl::Math::Slerp);;

@@ -3,6 +3,9 @@
 #include "Application.h"
 #include "ApplicationMain.h"
 #include "EncryptAssetMain.h"
+#ifdef _ENCRYPT_ASSET
+#include <iostream>
+#endif // _ENCRYPT_ASSET
 
 #ifdef _DEBUG
 // Define needed to check for memory leaks
@@ -13,6 +16,8 @@
 
 // Entry point
 #ifdef _DEBUG
+int main() {
+#elif _ENCRYPT_ASSET
 int main() {
 #else
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {

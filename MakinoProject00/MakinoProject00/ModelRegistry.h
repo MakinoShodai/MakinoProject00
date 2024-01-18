@@ -60,6 +60,14 @@ public:
     void AddModelLoadDesc(const std::wstring& filePath, ModelInfo::Load::ModelDesc loadDesc);
 
     /**
+       @brief Add the additional texture of model
+       @param modelFilePath Path of model file
+       @param id 0 for override as default texture, 1 or later for additional texture
+       @param textures All texture information for this ID
+    */
+    void AddModelAdditionalTex(const std::wstring& modelFilePath, UINT id, std::initializer_list<ModelInfo::Load::ModelTex> textures);
+
+    /**
        @brief Add descriptor to load animation
        @param filePath Path of model file
        @param loadDesc Descriptor to load animation

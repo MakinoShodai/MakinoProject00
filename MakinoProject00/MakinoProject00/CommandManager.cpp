@@ -4,6 +4,8 @@
 
 // Destructor
 CCommandManager::~CCommandManager() {
+    if (m_cmdQueue == nullptr) { return; }
+
     // Wait for GPU
     GetAny().WaitForGPU();
 

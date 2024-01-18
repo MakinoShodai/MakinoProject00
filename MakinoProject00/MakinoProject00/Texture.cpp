@@ -12,7 +12,7 @@ CTexture::CTexture(Utl::Dx::ShaderString hlslName, CRenderTargetTexture* rtt)
     , m_handle(rtt->GetSRVPropertyHandle())
 { }
 
-CTexture::CTexture(Utl::Dx::ShaderString hlslName, const Utl::Dx::SRVPropertyHandle & srvPropertyHandle)
+CTexture::CTexture(Utl::Dx::ShaderString hlslName, const Utl::Dx::SRVPropertyHandle& srvPropertyHandle)
     : m_hlslName(std::move(hlslName))
     , m_handle(srvPropertyHandle)
 { }

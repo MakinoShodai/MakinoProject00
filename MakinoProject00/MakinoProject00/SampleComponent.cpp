@@ -18,15 +18,23 @@ void CSampleAnimComponent::Start() {
 
     // Get model component and play animation
     m_model = m_gameObj->GetComponent<CSkeletalModel>();
-    m_model->GetController()->Play(m_currentAnimID, true);
+
+    m_model->GetController()->SetAnimPlayRate(0.25f);
 }
 
 // Updating process for CSampleAnimComponent
 void CSampleAnimComponent::Update() {
     // Change animation
     if (CInputSystem::GetMain().IsKeyDown('K')) {
-        m_currentAnimID = (m_currentAnimID + 1) % 2;
-        m_model->GetController()->Play(m_currentAnimID, true);
+        m_currentAnimID = (m_currentAnimID + 1) % 3;
+        m_model->GetController()->Play(m_currentAnimID + 1, true);
+    }
+
+    // Change animation
+    for (UINT i = 0; i < m_model->GetController()->GetLoadedAnimNum() && i <= 9; ++i) {
+        if (CInputSystem::GetMain().IsKeyDown('0' + i)) {
+            m_model->GetController()->Play(i, true);
+        }
     }
 
     // Bind pose

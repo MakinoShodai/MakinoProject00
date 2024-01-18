@@ -31,8 +31,9 @@ public:
 protected:
     /**
        @brief Create mesh data and texture data
+       @param additionalTexID If using an additional texture instead of the default texture, specify its ID
     */
-    void CreateMesh();
+    void CreateMesh(UINT additionalTexID);
 };
 
 /** @brief Non-animated model */
@@ -43,8 +44,9 @@ public:
        @param owner Game object that is the owner of this graphics component
        @param layer Graphics layer to which this class belongs
        @param modelPath Path of model file
+       @param additionalTexID If using an additional texture instead of the default texture, specify its ID
     */
-    CBasicModel(CGameObject* owner, GraphicsLayer layer, const std::wstring& modelPath);
+    CBasicModel(CGameObject* owner, GraphicsLayer layer, const std::wstring& modelPath, UINT additionalTexID = ModelInfo::Load::ADDTEX_OVERRIDE_ID);
 
     /** @brief Destructor */
     ~CBasicModel() override = default;
@@ -65,8 +67,9 @@ public:
        @param owner Game object that is the owner of this graphics component
        @param layer Graphics layer to which this class belongs
        @param modelPath Path of model file
+       @param additionalTexID If using an additional texture instead of the default texture, specify its ID
     */
-    CSkeletalModel(CGameObject* owner, GraphicsLayer layer, const std::wstring& modelPath);
+    CSkeletalModel(CGameObject* owner, GraphicsLayer layer, const std::wstring& modelPath, UINT additionalTexID = ModelInfo::Load::ADDTEX_OVERRIDE_ID);
 
     /** @brief Destructor */
     ~CSkeletalModel() override = default;

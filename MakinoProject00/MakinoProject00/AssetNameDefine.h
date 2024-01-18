@@ -15,16 +15,20 @@ const std::wstring TEX_NAME_TEST = L"Texture/textest200x200.png";
 const std::wstring TEX_NAME_TEST2 = L"Texture/apollo11.png";
 
 
-/** @brief Model name for Unity-chan */
-const std::wstring MODEL_NAME_UNITYCHAN = L"unitychan/unitychan.fbx";
 /** @brief Model name for desk */
 const std::wstring MODEL_NAME_DESK = L"desk/desk.fbx";
+/** @brief Model name for cute bird */
+const std::wstring MODEL_NAME_CUTEBIRD = L"Cutebird/Cute_Bird_b.fbx";
 
 
-/** @brief Animation name for jump animation of Unity-chan */
-const std::wstring ANIM_NAME_UNITYCHAN_JUMP = L"unitychan/jump.fbx";
-/** @brief Animation name for run animation of Unity-chan */
-const std::wstring ANIM_NAME_UNITYCHAN_RUN = L"unitychan/run.fbx";
+/** @brief Animation name for idle animation of cute bird */
+const std::wstring ANIM_NAME_CUTEBIRD_IDLE = L"Cutebird/Cutebird_IdleB.fbx";
+/** @brief Animation name for run animation of cute bird */
+const std::wstring ANIM_NAME_CUTEBIRD_RUN = L"Cutebird/Cutebird_Move.fbx";
+/** @brief Animation name for jump animation of cute bird */
+const std::wstring ANIM_NAME_CUTEBIRD_JUMP = L"Cutebird/Cutebird_Jump.fbx";
+/** @brief Animation name for die animation of cute bird */
+const std::wstring ANIM_NAME_CUTEBIRD_DIE = L"Cutebird/Cutebird_DieB.fbx";
 
 #endif // !__ASSET_NAME_DEFINE_H__
 
