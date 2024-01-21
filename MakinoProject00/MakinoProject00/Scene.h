@@ -74,6 +74,15 @@ public:
     void TransferObjectsTransformObserve();
 
     /**
+       @brief Set update mode
+       @param mode Update mode to be set
+       @details
+       The update mode switches at the end of the frame.
+       Only one update mode can be enabled at a time
+    */
+    void SetUpdateMode(UpdateMode mode);
+
+    /**
        @brief Create a game object
        @return Weak pointer to the created game object
     */
@@ -121,6 +130,11 @@ public:
     /** @brief Get current phase of the scene currently being processed */
     inline static ScenePhase GetCurrentScenePhase() { return ms_currentPhase; }
 
+    /** @brief Is update mode enabled? */
+    bool IsUpdateMode() { return (UpdateModeType)m_currentUpdateMode != 0; }
+    /** @brief Logical conjunction with current update mode bits */
+    bool CheckUpdateMode(UpdateMode mode) { return Utl::CheckEnumBit(m_currentUpdateMode & mode); }
+
 protected:
     /**
        @brief Check if there are any objects to be destroyed, and if so, destroy them
@@ -152,6 +166,10 @@ private:
     CIntKeyGenerater m_meshKeyGenerater;
     /** @brief Finished first update process? */
     bool m_isFirstUpdated;
+    /** @brief Current update mode of this scene */
+    UpdateMode m_currentUpdateMode;
+    /** @brief Switches to this update mode at the end of a scene */
+    UpdateMode m_scheduleUpdateMode;
 };
 
 // Create a game object

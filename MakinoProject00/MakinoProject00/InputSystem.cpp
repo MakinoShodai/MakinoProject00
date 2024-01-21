@@ -45,6 +45,26 @@ bool CInputSystem::IsKeyUp(BYTE key) {
     return (m_currentKeyStates[key] ^ m_prevKeyStates[key]) & m_prevKeyStates[key] & 0x80;
 }
 
+// Generate direction vectors based on key input
+bool CInputSystem::IsKeyGenerateDir(Vector2f* dir, BYTE plusX, BYTE minusX, BYTE plusY, BYTE minusY) {
+    bool isPressedX = false;
+    bool isPressedY = false;
+    *dir = Vector2f::Zero();
+    if (IsKey(plusX)) {
+        dir->x() += 1.0f; isPressedX = !isPressedX;
+    }
+    if (IsKey(minusX)) {
+        dir->x() -= 1.0f; isPressedX = !isPressedX;
+    }
+    if (IsKey(plusY)) {
+        dir->y() += 1.0f; isPressedY = !isPressedY;
+    }
+    if (IsKey(minusY)) {
+        dir->y() -= 1.0f; isPressedY = !isPressedY;
+    }
+    return isPressedX || isPressedY;
+}
+
 // Constructor
 CInputSystem::CInputSystem() 
     : ACMainThreadSingleton(0)

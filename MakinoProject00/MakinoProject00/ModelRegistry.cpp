@@ -111,9 +111,16 @@ void CModelRegistry::AddModelLoadDesc(const std::wstring& filePath, ModelInfo::L
 }
 
 // Add the additional texture of model
-void CModelRegistry::AddModelAdditionalTex(const std::wstring& modelFilePath, UINT id, std::initializer_list<ModelInfo::Load::ModelTex> textures) {
+void CModelRegistry::AddModelAdditionalTex(const std::wstring& modelFilePath, const std::wstring& srcTexPath, ModelInfo::Load::AdditionalModelTex additionalTex) {
     if (m_modelLoadDescs == nullptr) { throw Utl::Error::CFatalError(L"All models have already been loaded"); }
-    (*m_modelLoadDescs)[modelFilePath].additionalTex.push_back(ModelInfo::Load::AdditionalModelTex(id, textures));
+    ModelInfo::Load::ModelDesc& desc = (*m_modelLoadDescs)[modelFilePath];
+    desc.additionalTex[srcTexPath].push_back(additionalTex);
+}
+
+// Add a texture of the material to be forced in the transparent layer
+void CModelRegistry::AddModelTransparentTex(const std::wstring& modelFilePath, const std::wstring& transparentTexPath) {
+    if (m_modelLoadDescs == nullptr) { throw Utl::Error::CFatalError(L"All models have already been loaded"); }
+    (*m_modelLoadDescs)[modelFilePath].transparentTex.insert(transparentTexPath);
 }
 
 // Add descriptor to load animation
@@ -139,6 +146,17 @@ const CStaticModelData& CModelRegistry::CThreadSafeFeature::GetModel(const std::
     }
     else {
         throw Utl::Error::CFatalError(L"The model for specified path doesn't exist in the map! path : " + filePath);
+    }
+}
+
+// Get ID of a loaded animation
+const ModelInfo::AnimID CModelRegistry::CThreadSafeFeature::GetAnimID(const std::wstring& filePath) {
+    auto it = m_owner->m_loadedAnimIDMap.find(filePath);
+    if (it != m_owner->m_loadedAnimIDMap.end()) {
+        return it->second;
+    }
+    else {
+        throw Utl::Error::CFatalError(L"The animation for specified path doesn't exist in the map! path : " + filePath);
     }
 }
 

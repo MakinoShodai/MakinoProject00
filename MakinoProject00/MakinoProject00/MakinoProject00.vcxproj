@@ -90,6 +90,7 @@
     <ClCompile Include="ContactColliderList.cpp" />
     <ClCompile Include="ContactPoint.cpp" />
     <ClCompile Include="ContactPointMap.cpp" />
+    <ClCompile Include="DebugCamera.cpp" />
     <ClCompile Include="DepthStencil.cpp" />
     <ClCompile Include="DescriptorHeapPool.cpp" />
     <ClCompile Include="DynamicBVTree.cpp" />
@@ -126,6 +127,10 @@
     <ClCompile Include="PhysicsSampleComponent.cpp" />
     <ClCompile Include="PhysicsSampleScene.cpp" />
     <ClCompile Include="PhysicsWorld.cpp" />
+    <ClCompile Include="PlayerAnimControlComponent.cpp" />
+    <ClCompile Include="PlayerCamera.cpp" />
+    <ClCompile Include="PlayerControlComponent.cpp" />
+    <ClCompile Include="PlayerPrefab.cpp" />
     <ClCompile Include="Precompile.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|x64'">Create</PrecompiledHeader>
@@ -160,6 +165,7 @@
     <ClCompile Include="SolverConstraint.cpp" />
     <ClCompile Include="SphereCollider3D.cpp" />
     <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="StageSceneBase.cpp" />
     <ClCompile Include="StandardGPSOWrapper.cpp" />
     <ClCompile Include="StaticCbOrthographicMat.cpp" />
     <ClCompile Include="StaticCbVPMat.cpp" />
@@ -324,6 +330,7 @@
     <ClInclude Include="ContactPoint.h" />
     <ClInclude Include="ContactPointMap.h" />
     <ClInclude Include="CryptoKey.h" />
+    <ClInclude Include="DebugCamera.h" />
     <ClInclude Include="DepthStencil.h" />
     <ClInclude Include="DescriptorHeapPool.h" />
     <ClInclude Include="DynamicBVTree.h" />
@@ -341,6 +348,7 @@
     <ClInclude Include="DynamicSbAllocator.h" />
     <ClInclude Include="DynamicSbAnimMat.h" />
     <ClInclude Include="DynamicSbRegistry.h" />
+    <ClInclude Include="Easing.h" />
     <ClInclude Include="EncryptAssetMain.h" />
     <ClInclude Include="FreeCamera.h" />
     <ClInclude Include="GameObject.h" />
@@ -366,6 +374,10 @@
     <ClInclude Include="PhysicsSampleComponent.h" />
     <ClInclude Include="PhysicsSampleScene.h" />
     <ClInclude Include="PhysicsWorld.h" />
+    <ClInclude Include="PlayerAnimControlComponent.h" />
+    <ClInclude Include="PlayerCamera.h" />
+    <ClInclude Include="PlayerControlComponent.h" />
+    <ClInclude Include="PlayerPrefab.h" />
     <ClInclude Include="Precompile.h" />
     <ClInclude Include="ReleaseSingleton.h" />
     <ClInclude Include="RenderTarget.h" />
@@ -388,6 +400,7 @@
     <ClInclude Include="SphereCollider3D.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="StableHandleVector.h" />
+    <ClInclude Include="StageSceneBase.h" />
     <ClInclude Include="StandardGPSOWrapper.h" />
     <ClInclude Include="StaticCbAllocator.h" />
     <ClInclude Include="StaticCbOrthographicMat.h" />
@@ -402,6 +415,7 @@
     <ClInclude Include="TextureRegistry.h" />
     <ClInclude Include="ThreadPool.h" />
     <ClInclude Include="UniquePtr.h" />
+    <ClInclude Include="UpdateMode.h" />
     <ClInclude Include="Utility.h" />
     <ClInclude Include="UtilityForAsync.h" />
     <ClInclude Include="UtilityForBit.h" />

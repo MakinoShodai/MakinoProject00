@@ -65,29 +65,32 @@ void Mkpe::CPhysicsWorld::StepSimulation(float timeStep) {
             }
         }
 
-        {
-            // Set Update and OnCollision as the phase to check the pos and the rotation
-            ms_phaseForPosCheck.SetPhases({ ScenePhase::Update, ScenePhase::OnCollision });
-            ms_phaseForRotateCheck.SetPhases({ ScenePhase::Update, ScenePhase::OnCollision });
+        // If not in update mode
+        if (!m_scene->IsUpdateMode()) {
+            {
+                // Set Update and OnCollision as the phase to check the pos and the rotation
+                ms_phaseForPosCheck.SetPhases({ ScenePhase::Update, ScenePhase::OnCollision });
+                ms_phaseForRotateCheck.SetPhases({ ScenePhase::Update, ScenePhase::OnCollision });
 
-            // Update values that need to be updated for all simulation bodies
-            for (auto& it : m_exclusiveData.simulationBodies) {
-                if (false == it->IsActive()) { continue; }
-                // Required Processing
-                it->ApplyGravity();
-                it->ComputePseudoVelocityPerFrame(invTimeStep);
+                // Update values that need to be updated for all simulation bodies
+                for (auto& it : m_exclusiveData.simulationBodies) {
+                    if (false == it->IsActive()) { continue; }
+                    // Required Processing
+                    it->ApplyGravity();
+                    it->ComputePseudoVelocityPerFrame(invTimeStep);
+                }
             }
-        }
 
-        // Perform physics simulation for the number of times calculated
-        m_isFirstSimulationCurrentFrame = false;
-        for (int i = 0; i < realSimulationNum; ++i) {
-            PhysicsSimulation(invTimeStep);
-        }
+            // Perform physics simulation for the number of times calculated
+            m_isFirstSimulationCurrentFrame = false;
+            for (int i = 0; i < realSimulationNum; ++i) {
+                PhysicsSimulation(invTimeStep);
+            }
 
-        // Clear velocities of all non static object
-        for (auto& it : m_exclusiveData.simulationBodies) {
-            it->ClearVelocitiesEveryFrame();
+            // Clear velocities of all non static object
+            for (auto& it : m_exclusiveData.simulationBodies) {
+                it->ClearVelocitiesEveryFrame();
+            }
         }
     }
 

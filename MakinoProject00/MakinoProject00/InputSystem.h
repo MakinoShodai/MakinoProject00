@@ -10,6 +10,7 @@
 #define __INPUT_SYSTEM_H__
 
 #include "Singleton.h"
+#include "UtilityForMath.h"
 
 /** @brief This class handles key input information */
 class CInputSystem : public ACMainThreadSingleton<CInputSystem> {
@@ -45,6 +46,19 @@ public:
        @return Result
     */
     bool IsKeyUp(BYTE key);
+
+    /**
+       @brief Generate direction vectors based on key input
+       @param dir Return value for direction
+       @param plusX +X key
+       @param minusX -X key
+       @param plusY +Y key
+       @param minusY -Y key
+       @return Is the key pressed?
+       @details
+       If keys on the same axis are pressed at the same time, no input is assumed
+    */
+    bool IsKeyGenerateDir(Vector2f* dir, BYTE plusX = 'D', BYTE minusX = 'A', BYTE plusY = 'W', BYTE minusY = 'S');
 
     /** @brief Get amount of change in cursor position from previous frame */
     POINT GetDeltaCursorPos() { return m_deltaCursorPos; }

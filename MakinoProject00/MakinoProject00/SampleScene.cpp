@@ -15,8 +15,9 @@ void CSampleScene::Start() {
     m_dsv2D.Create(DXGI_FORMAT_D32_FLOAT, backBuffer->GetWidth(), backBuffer->GetHeight());
     m_dsv3D.Create(DXGI_FORMAT_D32_FLOAT, backBuffer->GetWidth(), backBuffer->GetHeight());
 
-    // Call prefab function of GPSO wrapper for standard layer
+    // Call prefab function of GPSO wrapper for standard layer and transparent layer
     m_standardGpso.Prefab(this);
+    m_transparentGpso.Prefab(this);
 
     // Create gpso2D
     {
@@ -32,37 +33,37 @@ void CSampleScene::Start() {
     // UI obj
     {
         auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(80.0f, -50.0f, 0.0f), Vector3f::Ones(), Utl::DEG_2_RAD * Vector3f(0.0f, 0.0f, 0.0f)));
-        obj->AddComponent<CSpriteUI>(GraphicsLayer::UI, TEX_NAME_TEST);
+        obj->AddComponent<CSpriteUI>(GraphicsLayer::UI, TexName::TEST);
         obj->AddComponent<CSampleRotateComponent>(Vector3f(0.0f, 0.0f, 1.0f).GetNormalize(), 1.5f);
     }
     {
         auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(70.0f, -40.0f, 0.5f), Vector3f::Ones(), Utl::DEG_2_RAD * Vector3f(0.0f, 0.0f, 0.0f)));
-        obj->AddComponent<CSpriteUI>(GraphicsLayer::UI, TEX_NAME_TEST);
+        obj->AddComponent<CSpriteUI>(GraphicsLayer::UI, TexName::TEST);
         obj->AddComponent<CSampleRotateComponent>(Vector3f(0.0f, 0.0f, 1.0f).GetNormalize(), 1.0f);
     }
 
     // Sprite obj
     {
         auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(0.0f, 0.0f, 0.0f), Vector3f::Ones(), Utl::DEG_2_RAD * Vector3f(0.0f, 20.0f, 0.0f)));
-        obj->AddComponent<CSprite3D>(GraphicsLayer::Standard, TEX_NAME_TEST2);
+        obj->AddComponent<CSprite3D>(GraphicsLayer::Standard, TexName::TEST2);
         obj->AddComponent<CSampleRotateComponent>(Vector3f(1.0f, 0.0f, 0.0f).GetNormalize(), 1.0f);
     }
     {
         auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(0.5f, 0.0f, 0.0f), Vector3f::Ones(), Utl::DEG_2_RAD * Vector3f(45.0f, 0.0f, 0.0f)));
-        obj->AddComponent<CSprite3D>(GraphicsLayer::Standard, TEX_NAME_TEST);
+        obj->AddComponent<CSprite3D>(GraphicsLayer::Standard, TexName::TEST);
         obj->AddComponent<CSampleRotateComponent>(Vector3f(0.0f, 1.0f, 0.0f).GetNormalize(), 3.0f);
     }
 
     // Billboard obj
     {
         auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(0.0f, -1.5f, 0.0f), Vector3f::Ones(), Utl::DEG_2_RAD * Vector3f(0.0f, 0.0f, 0.0f)));
-        obj->AddComponent<CBillboard>(GraphicsLayer::Standard, TEX_NAME_TEST2);
+        obj->AddComponent<CBillboard>(GraphicsLayer::Standard, TexName::TEST2);
     }
 
     // Box
     {
         auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(0.0f, 0.0f, 0.0f), Vector3f::Ones(), Vector3f::Zero()));
-        obj->AddComponent<CTexShape>(GraphicsLayer::Standard, ShapeKind::Box, TEX_NAME_TEST);
+        obj->AddComponent<CTexShape>(GraphicsLayer::Standard, ShapeKind::Box, TexName::TEST);
         obj->AddComponent<CSampleRotateComponent>(Vector3f(1.0f, 1.0f, 0.0f).GetNormalize(), 1.0f);
     }
 
@@ -76,14 +77,14 @@ void CSampleScene::Start() {
     // Desk
     {
         auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(-2.0f, 0.0f, 0.0f), Vector3f::Ones(), Vector3f::Zero()));
-        obj->AddComponent<CBasicModel>(GraphicsLayer::Standard, MODEL_NAME_DESK);
+        obj->AddComponent<CBasicModel>(GraphicsLayer::Standard, ModelName::DESK);
         obj->AddComponent<CSampleRotateComponent>(Vector3f(0.0f, 1.0f, 0.0f).GetNormalize(), 3.0f);
     }
 
     // Skeletal models
     for (int i = 0; i < 20; ++i) {
-        auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f((float)i * 2 + 3.0f, -1.0f, 5.0f), Vector3f::Ones(), Utl::DEG_2_RAD * Vector3f(0.0f, (float)i * 30.0f, 0.0f)));
-        obj->AddComponent<CSkeletalModel>(GraphicsLayer::Standard, MODEL_NAME_CUTEBIRD);
+        auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f((float)i * 2 + 3.0f - 10.0f, -1.0f, 5.0f), Vector3f::Ones(), Utl::DEG_2_RAD * Vector3f(0.0f, (float)i * 30.0f, 0.0f)));
+        obj->AddComponent<CSkeletalModel>(GraphicsLayer::Standard, ModelName::CUTEBIRD);
         obj->AddComponent<CSampleAnimComponent>();
         obj->AddComponent<CSampleRotateComponent>(Vector3f(0.0f, 1.0f, 0.0f).GetNormalize(), 3.0f);
     }
@@ -111,6 +112,8 @@ void CSampleScene::Draw() {
 
     // Command function of GPSO wrapper for standard layer
     m_standardGpso.SetCommand();
+    // Command function of GPSO wrapper for transparent layer
+    m_transparentGpso.SetCommand();
 
     // Apply 2D depth stencil view
     rtv->Apply(&m_dsv2D);

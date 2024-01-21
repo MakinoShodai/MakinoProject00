@@ -474,7 +474,7 @@ void CFindOBBIntersection::Find4_4(Mkpe::Dbvt::BVOverlapPair* pair,
     Vector3f* vertexArrayA, Vector3f* vertexArrayB, 
     const std::vector<int>& closestIndexA, const std::vector<int>& closestIndexB) {
     // Quaternions to be moved to a coordinate space where the normal direction is up
-    Quaternionf spaceMoveRotate = Utl::Math::VectorToVectorQuaternion(Utl::Math::UNIT3_Y, normalB);
+    Quaternionf spaceMoveRotate = Utl::Math::VectorToVectorQuaternion(Utl::Math::UNIT3_UP, normalB);
 
     // Move a vertex to another space coordinate
     Vector3f vertexSpaceA[4];
@@ -584,7 +584,7 @@ void CFindOBBIntersection::Find4_2(Mkpe::Dbvt::BVOverlapPair* pair,
     Vector3f* vertexArrayA, Vector3f* vertexArrayB, 
     const std::vector<int>& closestIndexA, const std::vector<int>& closestIndexB) {
     // Quaternions to be moved to a coordinate space where the normal direction is up
-    Quaternionf spaceMoveRotate = Utl::Math::VectorToVectorQuaternion(Utl::Math::UNIT3_Y, normalB);
+    Quaternionf spaceMoveRotate = Utl::Math::VectorToVectorQuaternion(Utl::Math::UNIT3_UP, normalB);
 
     // A is the side with 2 vertices?
     bool isA2Vertices = (closestIndexA.size() == 2) ? true : false;
@@ -694,7 +694,7 @@ void CFindOBBIntersection::Find2_2(Mkpe::Dbvt::BVOverlapPair* pair,
     Vector3f* vertexArrayA, Vector3f* vertexArrayB, 
     const std::vector<int>& closestIndexA, const std::vector<int>& closestIndexB) {
     // Quaternions to be moved to a coordinate space where the normal direction is up
-    Quaternionf spaceMoveRotate = Utl::Math::VectorToVectorQuaternion(Utl::Math::UNIT3_Y, normalB);
+    Quaternionf spaceMoveRotate = Utl::Math::VectorToVectorQuaternion(Utl::Math::UNIT3_UP, normalB);
 
     // Move a vertex to another space coordinate
     Vector3f vertexSpaceA[2];

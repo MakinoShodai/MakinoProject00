@@ -55,7 +55,7 @@ public:
         /** @brief DXGI factory object getter */
         IDXGIFactory6* GetDXGIFactory() { return m_owner->m_dxgiFactory.Get(); }
         /** @brief Get the size of descriptor heap type */
-        UINT GetHeapTypeSize(D3D12_DESCRIPTOR_HEAP_TYPE type) { return m_owner->m_dxDevice->GetDescriptorHandleIncrementSize(type); }
+        UINT GetHeapTypeSize(D3D12_DESCRIPTOR_HEAP_TYPE type) { return m_owner->m_heapTypeSize[type]; }
         /** @brief Magnification of current window size relative to ideal window size */
         const Vector2f& GetWndSizeMagnification() { return m_owner->m_wndSizeMagnification; }
         /** @brief Get range of cursor position */
@@ -98,6 +98,8 @@ private:
 
     /** @brief Range of cursor position */
     RECT m_cursorRange;
+    /** @brief Sizes of descriptor heap for each types */
+    UINT m_heapTypeSize[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES];
 };
 
 #endif // !__APPLICATION_H__

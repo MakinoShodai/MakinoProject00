@@ -196,6 +196,21 @@
     <Filter Include="ソース ファイル\Game\Scene">
       <UniqueIdentifier>{e1971948-7afa-4e69-88c7-19442faf6944}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\Game\Scene">
+      <UniqueIdentifier>{61d64c28-3607-4c6e-9516-a80c4a01dbdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\Player">
+      <UniqueIdentifier>{8d01ca90-e30b-4376-a5a7-568823aab609}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Player">
+      <UniqueIdentifier>{7606e5d3-e3b4-45e4-ba00-deb815641eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Camera">
+      <UniqueIdentifier>{2c728a0f-e6ba-464d-a4a8-8b4c759118cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\Camera">
+      <UniqueIdentifier>{2f0cc2f8-b675-4146-a3ac-5fb9364e9014}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -485,6 +500,24 @@
     </ClCompile>
     <ClCompile Include="ContactPointMap.cpp">
       <Filter>ソース ファイル\Framework\PhysicsEngine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="StageSceneBase.cpp">
+      <Filter>ソース ファイル\Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerPrefab.cpp">
+      <Filter>ソース ファイル\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugCamera.cpp">
+      <Filter>ソース ファイル\Game\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerControlComponent.cpp">
+      <Filter>ソース ファイル\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAnimControlComponent.cpp">
+      <Filter>ソース ファイル\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCamera.cpp">
+      <Filter>ソース ファイル\Game\Camera</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -872,6 +905,30 @@
     </ClInclude>
     <ClInclude Include="IDResource.h">
       <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="StageSceneBase.h">
+      <Filter>ヘッダー ファイル\Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerPrefab.h">
+      <Filter>ヘッダー ファイル\Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateMode.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="Easing.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugCamera.h">
+      <Filter>ヘッダー ファイル\Game\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCamera.h">
+      <Filter>ヘッダー ファイル\Game\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAnimControlComponent.h">
+      <Filter>ヘッダー ファイル\Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerControlComponent.h">
+      <Filter>ヘッダー ファイル\Game\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

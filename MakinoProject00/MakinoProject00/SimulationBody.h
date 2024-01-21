@@ -149,6 +149,12 @@ namespace Mkpe {
         virtual void UpdatePrevTransform() {}
 
 
+        /** @brief Set aerodynamic drag for movement by force */
+        virtual void SetLinearDrag(float drag) {}
+        /** @brief Set aerodynamic drag for rotation by torque */
+        virtual void SetAngularDrag(float drag) {}
+
+
         /** @brief Is this simulation body active? */
         virtual bool IsActive() const { return false; }
 
@@ -217,6 +223,10 @@ namespace Mkpe {
 
         /** @brief Gravity */
         float m_gravity;
+        /** @brief Aerodynamic drag for movement by force */
+        float m_linearDrag;
+        /** @brief Aerodynamic drag for rotation by torque */
+        float m_angularDrag;
 
         /** @brief Inverse of the inertia tensor */
         Matrix3x3f m_invInertiaTensor;
@@ -351,6 +361,10 @@ namespace Mkpe {
         */
         void UpdatePrevTransform() override;
 
+        /** @brief Set aerodynamic drag for movement by force */
+        void SetLinearDrag(float drag) override { m_linearDrag = drag; }
+        /** @brief Set aerodynamic drag for rotation by torque */
+        void SetAngularDrag(float drag) override { m_angularDrag = drag; }
 
         /** @brief Is this simulation body active? */
         bool IsActive() const override;
