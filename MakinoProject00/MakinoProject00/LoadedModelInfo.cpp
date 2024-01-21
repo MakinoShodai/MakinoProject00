@@ -7,39 +7,19 @@
 const UINT BASE_ANIM_INDEX = 0;
 
 // Create texture file path
-bool CreateTexPath(UINT index, std::wstring* ret, aiMaterial** mat, const std::wstring& dir, const ModelInfo::Load::ModelDesc& desc) {
-    auto findAssimpTex = [ret, mat, index, dir]() -> bool {
-        aiString str;
-        if (mat[index]->Get(AI_MATKEY_TEXTURE_DIFFUSE(0), str) == AI_SUCCESS) {
-            *ret = dir + Utl::Str::string2WString(str.C_Str());
-            return true;
-        }
-        return false;
-    };
-
-    if (mat != nullptr) {
-        // Find override texture
-        auto overrideTexIt = std::find_if(desc.additionalTex.begin(), desc.additionalTex.end(),
-            [](const ModelInfo::Load::AdditionalModelTex& item) { return item.id == ModelInfo::Load::ADDTEX_OVERRIDE_ID; });
-
-        // If it is exist, find override texture from it
-        if (overrideTexIt != desc.additionalTex.end()) {
-            auto it = overrideTexIt->infoMap.find(index);
-            if (it != overrideTexIt->infoMap.end()) {
-                *ret = dir + it->second;
-                return true;
-            }
-            // Find assimp texture
-            else {
-                return findAssimpTex();
-            }
-        }
-        // Find assimp texture
-        else {
-            return findAssimpTex();
-        }
+bool CreateTexPath(std::wstring* ret, aiMaterial* mat, const std::wstring& dir) {
+    aiString str;
+    if (mat->Get(AI_MATKEY_TEXTURE_DIFFUSE(0), str) == AI_SUCCESS) {
+        *ret = dir + Utl::Str::string2WString(str.C_Str());
+        return true;
     }
     return false;
+}
+
+// Get texture handle
+const Utl::Dx::SRVPropertyHandle& ModelInfo::Material::GetTex(int additionalID) const {
+    auto& tex = textures[(UINT)(additionalID + 1)];
+    return (tex.IsInstance()) ? tex : textures[0];
 }
 
 // Data that the model to be animated must have for each instance
@@ -71,8 +51,9 @@ CStaticModelData::CStaticModelData()
 // Loading process for model
 void CStaticModelData::LoadModel(const void* data, size_t size, const std::wstring& filePath, const ModelInfo::Load::ModelDesc& desc) {
     // Make setting to load
-    UINT flag = aiProcess_Triangulate | aiProcess_JoinIdenticalVertices | aiProcess_FlipUVs | aiProcess_MakeLeftHanded;
-    
+    UINT flag = aiProcess_Triangulate | aiProcess_JoinIdenticalVertices | aiProcess_FlipUVs;
+    flag |= (desc.isFlip) ? aiProcess_MakeLeftHanded : 0;
+
     // Load model with assimp
     Assimp::Importer importer;
     const aiScene* assimpScene = importer.ReadFileFromMemory(data, size, flag);
@@ -82,6 +63,7 @@ void CStaticModelData::LoadModel(const void* data, size_t size, const std::wstri
 
     // Set descriptor data
     m_modelScale = desc.scale;
+    m_isFlip = desc.isFlip;
     m_standardInterpolationTime = desc.standardInterpolationTime;
 
     // Make nodes of the model
@@ -130,11 +112,13 @@ void CStaticModelData::LoadModel(const void* data, size_t size, const std::wstri
         m_meshes[i].indices.Resize(assimpScene->mMeshes[i]->mNumFaces * 3);
 
         // Set indices
+        UINT idx1 = (m_isFlip) ? 2 : 1;
+        UINT idx2 = (m_isFlip) ? 1 : 2;
         for (UINT j = 0; j < assimpScene->mMeshes[i]->mNumFaces; ++j) {
             const aiFace& face = assimpScene->mMeshes[i]->mFaces[j];
             m_meshes[i].indices[j * 3 + 0] = face.mIndices[0];
-            m_meshes[i].indices[j * 3 + 1] = face.mIndices[2];
-            m_meshes[i].indices[j * 3 + 2] = face.mIndices[1];
+            m_meshes[i].indices[j * 3 + 1] = face.mIndices[idx1];
+            m_meshes[i].indices[j * 3 + 2] = face.mIndices[idx2];
         }
 
         // Set material index
@@ -155,46 +139,55 @@ void CStaticModelData::LoadModel(const void* data, size_t size, const std::wstri
         // Initialize the array of the materials
         m_materials.Resize(assimpScene->mNumMaterials);
 
+        // Compute the maximum number of additional textures this model has
+        UINT maxAdditionalTexNum = 0;
+        for (auto& it : desc.additionalTex) {
+            maxAdditionalTexNum = (std::max)((UINT)it.second.size(), maxAdditionalTexNum);
+        }
+
         // Set data of each materials to the array
         for (UINT i = 0; i < assimpScene->mNumMaterials; ++i) {
-            // Find override texture
-            auto overrideTexIt = std::find_if(desc.additionalTex.begin(), desc.additionalTex.end(),
-                [](const ModelInfo::Load::AdditionalModelTex& item) { return item.id == ModelInfo::Load::ADDTEX_OVERRIDE_ID; });
-
-            // Compute the number of additional textures + the number of normal texture
-            UINT texNum = (UINT)((overrideTexIt != desc.additionalTex.end()) ? desc.additionalTex.size() : desc.additionalTex.size() + 1);
-            // Initialize texture array
-            m_materials[i].texture.Resize(texNum);
+            // IDs that do not have additional textures are left with nullptr handles
+            m_materials[i].ResizeTex(maxAdditionalTexNum);
 
             // Read texture
             std::wstring texFilePath;
-            if (CreateTexPath(i, &texFilePath, assimpScene->mMaterials, dir, desc)) {
+            if (CreateTexPath(&texFilePath, assimpScene->mMaterials[i], dir)) {
                 // If the texture registry contains this texture file, set handle for its texture
                 if (CTextureRegistry::GetAny().IsContains(texFilePath)) {
-                    m_materials[i].texture[0] = CTextureRegistry::GetAny().GetSRVPropertyHandle(texFilePath);
+                    m_materials[i].SetTex(ModelInfo::NON_ADDITIONAL_TEX_ID, CTextureRegistry::GetAny().GetSRVPropertyHandle(texFilePath));
                 }
                 else {
                     throw Utl::Error::CFatalError(L"Texture data held by the model don't exist" + texFilePath);
                 }
             }
 
-            // Assign additional textures
-            for (UINT additionalIndex = 0; additionalIndex < (UINT)desc.additionalTex.size(); ++additionalIndex) {
-                // Ignore override textures
-                if (desc.additionalTex[additionalIndex].id == ModelInfo::Load::ADDTEX_OVERRIDE_ID) {
-                    continue;
-                }
+            // Compute the number of additional textures
+            auto additionalTexIt = desc.additionalTex.find(texFilePath);
+            UINT additionalNum = (additionalTexIt != desc.additionalTex.end()) ? (UINT)additionalTexIt->second.size() : 0;
 
-                // Find texture from additional textures
-                auto it = desc.additionalTex[additionalIndex].infoMap.find(i);
-                if (it != desc.additionalTex[additionalIndex].infoMap.end()) {
-                    m_materials[i].texture[i] = CTextureRegistry::GetAny().GetSRVPropertyHandle(it->second);
+            // Assign additional textures
+            for (UINT additionalIndex = 0; additionalIndex < additionalNum; ++additionalIndex) {
+                const ModelInfo::Load::AdditionalModelTex& additionalTex = additionalTexIt->second[additionalIndex];
+                if (additionalTex.id >= additionalNum) {
+                    throw Utl::Error::CFatalError(L"The ID of the additional texture must be less than the number of additional textures");
                 }
-                // If it is not exists, use default texture
-                else {
-                    m_materials[i].texture[i] = m_materials[i].texture[0];
-                }
+                m_materials[i].SetTex(additionalTex.id, CTextureRegistry::GetAny().GetSRVPropertyHandle(additionalTex.texFilePath));
             }
+
+            // Determine if it is a transparent texture and set the flag
+            auto transparentTexIt = desc.transparentTex.find(texFilePath);
+            m_materials[i].isTransparent = (transparentTexIt != desc.transparentTex.end()) ? true : false;
+        }
+    }
+
+    // Separate meshes into two groups: transparent textured and opaque textured
+    for (UINT i = 0; i < m_meshes.Size(); ++i) {
+        if (m_materials[m_meshes[i].materialIndex].isTransparent) {
+            m_transparentTexMeshIndices.push_back(i);
+        }
+        else {
+            m_opaqueTexMeshIndices.push_back(i);
         }
     }
 }
@@ -202,7 +195,7 @@ void CStaticModelData::LoadModel(const void* data, size_t size, const std::wstri
 // Loading process for animation
 ModelInfo::AnimID CStaticModelData::LoadAnimation(const void* data, size_t size, const ModelInfo::Load::AnimDesc& desc) {
     // Make setting to load
-    UINT flag = aiProcess_MakeLeftHanded;
+    UINT flag = (m_isFlip) ? aiProcess_MakeLeftHanded : 0;
     // Load animation with assimp
     Assimp::Importer importer;
     const aiScene* assimpScene = importer.ReadFileFromMemory(data, size, flag);
@@ -482,13 +475,6 @@ void CDynamicModelController::PlayBlend(ModelInfo::AnimID animID, bool isLoop, f
     BlendingPlayback(animID, isLoop, blendTime);
 }
 
-// Calculate an animation matrix
-void CDynamicModelController::CalculateAnimationMatrix(DirectX::XMFLOAT4X4* mat, UINT meshIndex, UINT boneIndex) {
-    DirectX::XMStoreFloat4x4(mat,
-        m_staticData->GetMesh(meshIndex)->bones[boneIndex].invOffset *
-        m_dynamicData.nodeMatrices[m_staticData->GetMesh(meshIndex)->bones[boneIndex].nodeIndex]);
-}
-
 // Standard playback animation
 void CDynamicModelController::StandardPlayback(ModelInfo::AnimID animID, bool isLoop) {
     if (!m_dynamicData.playbackAnimations.empty()) {
@@ -524,7 +510,7 @@ void CDynamicModelController::BlendingPlayback(ModelInfo::AnimID animID, bool is
 
             // If the transition is to the same animation as the base animation, the transition time is inherited and erase it
             if (m_dynamicData.blendParams.size() == 1 && m_dynamicData.playbackAnimations[BASE_ANIM_INDEX].id == animID) {
-                startBlendTime = 1.0f - (m_dynamicData.blendParams[0].currentBlendTime / m_dynamicData.blendParams[0].totalBlendTime) * blendTime;
+                startBlendTime = (1.0f - (m_dynamicData.blendParams[0].currentBlendTime / m_dynamicData.blendParams[0].totalBlendTime)) * blendTime;
                 m_dynamicData.EraseBlendAnims(0);
             }
 

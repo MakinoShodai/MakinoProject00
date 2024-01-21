@@ -97,10 +97,11 @@ public:
     /**
        @brief Calculate the angle of rotation from this vector to another vector in 2D, ignoring one axis
        @param v Another vector
-       @return Radian angle
+       @return Radian angle [-Pi, Pi]
        @attention
        Be sure to make both vectors unit vectors.
        No internal normalization is performed to improve computational efficiency.
+       The value of the axis to be ignored must be 0.
     */
     float AngleTo(const Vector& v, uint8_t ignoreAxis) const requires (SIZE == 3);
 
@@ -531,14 +532,26 @@ const Matrix<T, SIZE, SIZE> Vector<T, SIZE>::GetDiagonalMatrix() const {
 template<Utl::Type::Traits::IsFloatingPoint T, uint8_t SIZE>
 float Vector<T, SIZE>::AngleTo(const Vector& v, uint8_t ignoreAxis) const requires(SIZE == 3) {
     // Calculate dot product and cross product
-    T d = Dot(v);
-    Vector c = Cross(v);
+    T d = Utl::Clamp(Dot(v), T(-1), T(1));
 
-    // Convert Pi standard to 2Pi standard
-    if (c[ignoreAxis] < 0.0f)
-        return Utl::GetPI2<T>() - std::acos(d);
-    else
-        return std::acos(d);
+    T epsilon = std::numeric_limits<T>::epsilon();
+    // Vectors are parallel
+    if (std::abs(d - T(1)) < epsilon) {
+        return T(0);
+    }
+    // Vectors are antiparallel
+    else if (std::abs(d + T(1)) < epsilon) {
+        return Utl::GetPI<T>();
+    }
+    // Calculate angle normally
+    else {
+        // Convert [0, Pi] to [-Pi, Pi]
+        Vector c = Cross(v);
+        if (c[ignoreAxis] < T(0))
+            return -std::acos(d);
+        else
+            return std::acos(d);
+    }
 }
 
 // Get a inverse matrix
@@ -625,7 +638,7 @@ Quaternion<T>::Quaternion(T rad, const Vector<T, 3>& axis) {
 
 // Constructor
 template<Utl::Type::Traits::IsFloatingPoint T>
-inline Quaternion<T>::Quaternion(const Vector<T, 3>& eulerAngle) {
+Quaternion<T>::Quaternion(const Vector<T, 3>& eulerAngle) {
     // Prepare variables needed for calculations
     T cosX = std::cos(eulerAngle.x() * Utl::Inv::Get2<T>());
     T sinX = std::sin(eulerAngle.x() * Utl::Inv::Get2<T>());

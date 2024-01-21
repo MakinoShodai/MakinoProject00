@@ -1,5 +1,35 @@
 ﻿#include "UtilityForMath.h"
 
+// Get the forward vector of this transform
+Vector3f Transformf::GetForward() const {
+    return rotation * Utl::Math::UNIT3_FORWARD;
+}
+
+// Get the backward vector of this transform
+Vector3f Transformf::GetBackward() const {
+    return rotation * Utl::Math::UNIT3_BACKWARD;
+}
+
+// Get the right vector of this transform
+Vector3f Transformf::GetRight() const {
+    return rotation * Utl::Math::UNIT3_RIGHT;
+}
+
+// Get the left vector of this transform
+Vector3f Transformf::GetLeft() const {
+    return rotation * Utl::Math::UNIT3_LEFT;
+}
+
+// Get the up vector of this transform
+Vector3f Transformf::GetUp() const {
+    return rotation * Utl::Math::UNIT3_UP;
+}
+
+// Get the down vector of this transform
+Vector3f Transformf::GetDown() const {
+    return rotation * Utl::Math::UNIT3_DOWN;
+}
+
 // Linear interpolation
 Vector3f Utl::Math::Lerp(const Vector3f& a, const Vector3f& b, float t) {
     Vector3f diff = b - a;
@@ -50,9 +80,10 @@ Quaternionf Utl::Math::Slerp(const Quaternionf& a, const Quaternionf& b, float t
 // Calculate quaternion to rotate vector A to vector B
 Quaternionf Utl::Math::VectorToVectorQuaternion(const Vector3f& a, const Vector3f& b) {
     Vector3f cross = a.Cross(b);
+    cross.Normalize();
     // If not parallel vectors
     if (!Utl::Math::IsUnitVector3fZero(cross)) {
-        float angle = acosf(a.Dot(b));
+        float angle = acosf(Utl::Clamp(a.Dot(b), -1.0f, 1.0f));
 
         // Calculate the quaternion of this rotation
         return Quaternionf(angle, cross);
@@ -63,18 +94,15 @@ Quaternionf Utl::Math::VectorToVectorQuaternion(const Vector3f& a, const Vector3
         float dot = a.Dot(b);
         if (dot < 0.0f) {
             // Calculate a vector vertical with an appropriate vector that is not parallel to a
-            cross = a.Cross(Utl::Math::UNIT3_X);
-
-            // If this vector is also parallel, change the vector
-            if (Utl::Math::IsUnitVector3fZero(cross)) {
-                cross = a.Cross(Utl::Math::UNIT3_Y);
-            }
+            cross = a.Cross((std::abs(a.x()) > FLT_EPSILON) ? Utl::Math::UNIT3_UP : Utl::Math::UNIT3_RIGHT);
 
             // Calculate the quaternion of this rotation
-            return Quaternionf(Utl::PI, cross);
+            return Quaternionf(Utl::PI, cross.GetNormalize());
+        }
+        else {
+            return Quaternionf();
         }
     }
-    return Quaternionf();
 }
 
 // Calculate and return tangent vector
@@ -132,6 +160,31 @@ Vector3f Utl::Math::CrossMat3x3AxisToMat3x3Axis(const Matrix3x3f& matA, const Ma
         matA(indexA, Utl::Math::_Y) * matB(indexB, Utl::Math::_Z) - matA(indexA, Utl::Math::_Z) * matB(indexB, Utl::Math::_Y), 
         matA(indexA, Utl::Math::_Z) * matB(indexB, Utl::Math::_X) - matA(indexA, Utl::Math::_X) * matB(indexB, Utl::Math::_Z),
         matA(indexA, Utl::Math::_X) * matB(indexB, Utl::Math::_Y) - matA(indexA, Utl::Math::_Y) * matB(indexB, Utl::Math::_X));
+}
+
+// Advance the current value toward the target value
+float Utl::Math::MoveTowards(float currentVal, float targetVal, float absStep) {
+    if (Utl::IsEqual(currentVal, targetVal)) {
+        return targetVal;
+    }
+    else if (currentVal < targetVal) {
+        float ret = currentVal + absStep;
+        return (targetVal < ret) ? targetVal : ret;
+    }
+    else {
+        float ret = currentVal - absStep;
+        return (targetVal > ret) ? targetVal : ret;
+    }
+}
+
+// Advance the current value toward the target value
+Vector3f Utl::Math::MoveTowards(const Vector3f& currentVal, const Vector3f& targetVal, float absStep) {
+    Vector3f diff = (targetVal - currentVal).GetNormalize();
+    Vector3f ret = currentVal + diff * absStep;
+    for (uint8_t i = 0; i < 3; ++i) {
+        ret[i] = (currentVal[i] > targetVal[i]) ? (std::max)(ret[i], targetVal[i]) : (std::min)(ret[i], targetVal[i]);
+    }
+    return ret;
 }
 
 // Simple judgment of all elements of the unit vector are 0 or not

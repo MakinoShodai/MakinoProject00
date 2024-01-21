@@ -8,11 +8,12 @@ CCameraComponent::CCameraComponent(CGameObject* owner, std::wstring cameraName, 
     , m_name(std::move(cameraName))
     , m_priority(0)
     , m_isFocusMode(isFocusMode)
-    , m_up(Utl::Math::UNIT3_Y)
+    , m_up(Utl::Math::UNIT3_UP)
     , m_fovAngleY(Utl::DEG_2_RAD * 60.0f)
     , m_aspect(16.0f / 9.0f)
     , m_near(0.2f)
     , m_far(1000.0f)
+    , m_rotationMatrix(DirectX::XMMatrixIdentity())
 { }
 
 // Processing for the first update frame
@@ -20,10 +21,10 @@ void CCameraComponent::Start() {
     m_gameObj->GetScene()->GetCameraRegistry()->AddCamera(this);
 
     if (m_isFocusMode) {
-        m_focus = GetTransform().pos + Utl::Math::UNIT3_Z;
+        m_focus = GetTransform().pos + Utl::Math::UNIT3_FORWARD;
     }
     else {
-        m_focus = GetTransform().rotation * Utl::Math::UNIT3_Z;
+        m_focus = GetTransform().rotation * Utl::Math::UNIT3_FORWARD;
     }
 }
 
@@ -31,7 +32,7 @@ void CCameraComponent::Start() {
 void CCameraComponent::ApplyRotation() {
     // If not in focus mode, update look direction vector
     if (false == m_isFocusMode) {
-        m_focus = GetTransform().rotation * Utl::Math::UNIT3_Z;
+        m_focus = GetTransform().rotation * Utl::Math::UNIT3_FORWARD;
 
         // Calculate rotation matrix
         m_rotationMatrix = GenerateViewMatrix();
@@ -43,6 +44,10 @@ void CCameraComponent::ApplyRotation() {
         m_rotationMatrix = GenerateViewMatrix();
         m_rotationMatrix = DirectX::XMMatrixInverse(nullptr, m_rotationMatrix);
         m_rotationMatrix.r[3] = DirectX::XMVectorSet(0.0f, 0.0f, 0.0f, 1.0f);
+
+        Vector3f vFocus = m_focus - GetTransform().pos;
+        vFocus.Normalize();
+        m_gameObj->SetRotation(Utl::Math::VectorToVectorQuaternion(Utl::Math::UNIT3_FORWARD, vFocus));
     }
 }
 

@@ -74,7 +74,7 @@ public:
     /**
        @brief Processing for the first draw frame
     */
-    void Start();
+    virtual void Start();
 
     /**
        @brief Pre drawing processing
@@ -105,14 +105,14 @@ public:
     /** @brief Set active flag */
     void SetIsActive(bool isActive) { m_isActive = isActive; }
     /** @brief Is this graphics component itself active? */
-    bool IsActiveSelf() const { return m_isActive; }
+    inline virtual bool IsActiveSelf() const { return m_isActive; }
     /** @brief Is this graphics component itself and the game object that owns it active? */
-    bool IsActiveOverall() const;
+    virtual bool IsActiveOverall() const;
 
     /** @brief Set color */
     void SetColor(const Colorf& color) { m_color = color; }
     /** @brief Get color */
-    const Colorf& GetColor() { return m_color; }
+    virtual const Colorf& GetColor() const { return m_color; }
 
     /** @brief Get type of this graphics component */
     const GraphicsComponentType GetType() { return m_type; }

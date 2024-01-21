@@ -122,6 +122,11 @@ void CApplication::InitializeDirectX() {
     if (m_dxDevice == nullptr) {
         throw Utl::Error::CFatalError(L"Failed! \"Create DirectX12 device\"");
     }
+
+    // Initialize sizes of descriptor heap for each types
+    for (UINT i = 0; i < D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES; ++i) {
+        m_heapTypeSize[i] = m_dxDevice->GetDescriptorHandleIncrementSize(static_cast<D3D12_DESCRIPTOR_HEAP_TYPE>(i));
+    }
 }
 
 // Process to be called at instance destruction

@@ -69,7 +69,7 @@ namespace Mkpe {
             }
 
             /** @brief Destructor */
-            ~LeafData() = default;
+            ~LeafData() {}
         };
 
         /** @brief Internal node data */

@@ -358,6 +358,7 @@ float Mkpe::CConstraintSolverDirector::SolverImpulse(SolverConstraint* solver, f
     else {
         solver->appliedImpulse = sum;
     }
+
     // Apply force to the two bodies
     // #NOTE : The rotational one already takes the inertia tensor into account
     (bodyA->*solveFunc)(solver->linearNormalA * wrapperA->GetInvMass(), solver->angularAxisA, deltaImpulse);

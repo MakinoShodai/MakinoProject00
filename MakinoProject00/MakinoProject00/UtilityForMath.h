@@ -86,6 +86,19 @@ struct Transformf {
         return (rotation * localPos) + pos;
     }
 
+    /** @brief Get the forward vector of this transform */
+    Vector3f GetForward() const;
+    /** @brief Get the backward vector of this transform */
+    Vector3f GetBackward() const;
+    /** @brief Get the right vector of this transform */
+    Vector3f GetRight() const;
+    /** @brief Get the left vector of this transform */
+    Vector3f GetLeft() const;
+    /** @brief Get the up vector of this transform */
+    Vector3f GetUp() const;
+    /** @brief Get the down vector of this transform */
+    Vector3f GetDown() const;
+
     /** @brief Copy constructor */
     Transformf(const Transformf& other) = default;
     /** @brief Copy assignment operator */
@@ -118,11 +131,17 @@ namespace Utl {
         const uint8_t _A = 3;
 
         /** @brief 3 dimensional X unit vector */
-        const Vector3f UNIT3_X = Vector3f(1.0f, 0.0f, 0.0f);
+        const Vector3f UNIT3_RIGHT = Vector3f(1.0f, 0.0f, 0.0f);
+        /** @brief 3 dimensional X unit vector */
+        const Vector3f UNIT3_LEFT = Vector3f(-1.0f, 0.0f, 0.0f);
         /** @brief 3 dimensional Y unit vector */
-        const Vector3f UNIT3_Y = Vector3f(0.0f, 1.0f, 0.0f);
+        const Vector3f UNIT3_UP = Vector3f(0.0f, 1.0f, 0.0f);
+        /** @brief 3 dimensional Y unit vector */
+        const Vector3f UNIT3_DOWN = Vector3f(0.0f, -1.0f, 0.0f);
         /** @brief 3 dimensional Z unit vector */
-        const Vector3f UNIT3_Z = Vector3f(0.0f, 0.0f, 1.0f);
+        const Vector3f UNIT3_FORWARD = Vector3f(0.0f, 0.0f, 1.0f);
+        /** @brief 3 dimensional Z unit vector */
+        const Vector3f UNIT3_BACKWARD = Vector3f(0.0f, 0.0f, -1.0f);
 
         /**
            @brief Linear interpolation
@@ -205,6 +224,25 @@ namespace Utl {
         */
         Vector3f CrossMat3x3AxisToMat3x3Axis(const Matrix3x3f& matA, const Matrix3x3f& matB, uint8_t indexA, uint8_t indexB);
 
+        /**
+           @brief Advance the current value toward the target value
+           @param currentVal The current value
+           @param maxVal The target value
+           @param step Step one's advance (absolute value)
+           @details
+           If the current value is greater than the target value, subtract, if less, add
+        */
+        float MoveTowards(float currentVal, float targetVal, float absStep);
+
+        /**
+           @brief Advance the current value toward the target value
+           @param currentVal The current value
+           @param maxVal The target value
+           @param step Step one's advance (absolute value)
+           @details
+           If the current value is greater than the target value, subtract, if less, add
+        */
+        Vector3f MoveTowards(const Vector3f& currentVal, const Vector3f& targetVal, float absStep);
 
         /** @brief Simple judgment of all elements of the unit vector are 0 or not */
         bool IsUnitVector3fZero(const Vector3f& v);

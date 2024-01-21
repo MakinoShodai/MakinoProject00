@@ -16,6 +16,7 @@
 #include "Component.h"
 #include "GraphicsComponent.h"
 #include "ScenePhase.h"
+#include "UpdateMode.h"
 
 // Forward declaration
 class ACScene;
@@ -128,6 +129,11 @@ public:
     template<IsACGraphicsComponentChild T, typename... Args>
     CWeakPtr<T> AddComponent(GraphicsLayer layer, Args&&... args);
 
+    /** @brief Overwrite update mode for the scene that this game object is allowed to update */
+    void OverwriteUpdateMode(UpdateMode updateMode) { m_updateMode = updateMode; }
+    /** @brief Logical conjunction with own update mode bits */
+    inline bool CheckUpdateMode(UpdateMode mode) { return Utl::CheckEnumBit(mode & m_updateMode); }
+
     /** @brief Get weak pointer to the scene that is the owner of this game object */
     CWeakPtr<ACScene> GetScene() { return m_scene; }
     /** @brief Get weak pointer to the scene that is the owner of this game object */
@@ -164,6 +170,8 @@ private:
     std::wstring m_name;
     /** @brief Is this game object active? */
     bool m_isActive;
+    /** @brief Update mode for the scene that this game object is allowed to update */
+    UpdateMode m_updateMode;
 
     /** @brief Dynamic array of components of this game object */
     std::vector<CUniquePtrWeakable<ACComponent>> m_components;

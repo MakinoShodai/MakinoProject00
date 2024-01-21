@@ -17,6 +17,8 @@
 namespace ModelInfo {
     /** @brief Index of node */
     using NodeIndex = int;
+    /** @brief ID of basic texture */
+    const int NON_ADDITIONAL_TEX_ID = -1;
 
     /** @brief Vertex structure */
     struct Vertex {
@@ -54,12 +56,36 @@ namespace ModelInfo {
 
     /** @brief Material data of mesh */
     struct Material {
+        bool isTransparent;
+
+    private:
         /**
            @brief Array of default and additional textures
-           @details 
+           @details
            index = 0 for default textures, and later for additional textures
         */
-        CArrayUniquePtr<Utl::Dx::SRVPropertyHandle> texture;
+        CArrayUniquePtr<Utl::Dx::SRVPropertyHandle> textures;
+
+    public:
+        /**
+           @brief Resize with the number of additional textures + the  number of basic texture( == 1)
+           @param additionalTexNum the number of additional textures
+        */
+        void ResizeTex(UINT additionalTexNum) { textures.Resize(additionalTexNum + 1); }
+
+        /**
+           @brief Set texture
+           @param additionalID the number of additional textures
+           @param handle Handle for texture to be used
+        */
+        void SetTex(int additionalID, Utl::Dx::SRVPropertyHandle handle) { textures[(UINT)(additionalID + 1)] = handle; }
+
+        /**
+           @brief Get texture handle
+           @param additionalID the number of additional textures
+           @return If an additional texture ID is specified, the basic texture is returned if it is not available
+        */
+        const Utl::Dx::SRVPropertyHandle& GetTex(int additionalID = NON_ADDITIONAL_TEX_ID) const;
     };
 
     /** @brief Mesh data */
@@ -243,9 +269,6 @@ namespace ModelInfo {
 
     /** @brief For loading */
     namespace Load {
-        /** @brief ID when overriding additional texture as default texture */
-        const UINT ADDTEX_OVERRIDE_ID = 0;
-
         /** @brief Coordinate system of model to be loaded */
         enum class CoordinateSystem {
             /** @brief For model exported with Y-Up, Z-Forward */
@@ -254,60 +277,46 @@ namespace ModelInfo {
             Blender,
         };
 
-        /** @brief Information of texture that model has */
-        struct ModelTex {
-            /** @brief Path of texture file */
-            std::wstring filePath;
-            /** @brief Index of this texture in model */
-            UINT index;
-
-            /**
-               @brief Constructor
-               @param index Index of the material to which this texture is assigned
-               @param filePath Path of texture file
-            */
-            ModelTex(UINT index, const std::wstring& filePath) : index(index), filePath(filePath) {}
-        };
-
         /** @brief Additional texture of model */
         struct AdditionalModelTex {
-            /** @brief All texture information for this ID */
-            std::unordered_map<UINT, std::wstring> infoMap;
+            /** @brief Path of texture file to be added */
+            std::wstring texFilePath;
             /** @brief ID of an additional texture */
             UINT id;
             
             /**
                @brief Constructor
-               @param id 0 for override as default texture, 1 or later for additional texture
-               @param textures All texture information for this ID
+               @param id ID of an additional texture. additional textures that share a common ID are used at the same time
+               @param textures Path of texture file to be added
             */
-            AdditionalModelTex(UINT id, std::initializer_list<ModelTex> textures)
-                : id(id) {
-                for (auto& it : textures) {
-                    infoMap.emplace(it.index, it.filePath);
-                }
-            }
+            AdditionalModelTex(UINT id, const std::wstring& texFilePath)
+                : id(id), texFilePath(texFilePath) { }
         };
 
         /** @brief Descriptor to load model */
         struct ModelDesc {
             /** @brief Scale of model to be loaded */
             float scale;
+            /** @brief Flipping at load time? */
+            bool isFlip;
             /** @brief Loading coordinate system */
             CoordinateSystem coordSystem;
             /** @brief Interpolation time (seconds) if animation interpolation setting is not set */
             float standardInterpolationTime;
-            /** @brief Additional texture of model */
-            std::vector<AdditionalModelTex> additionalTex;
+            /** @brief Map that takes the source texture as a key and stores the additional texture */
+            std::unordered_map<std::wstring, std::vector<AdditionalModelTex>> additionalTex;
+            /** @brief Path of basic texture files of the material to be forced in the transparent layer */
+            std::unordered_set<std::wstring> transparentTex;
 
             /**
                @brief Constructor
                @param scale Scale of model to be loaded
                @param coordSystem Loading coordinate system
+               @param isFlip Flipping at load time?
                @param interpolationTime Interpolation time (seconds) if animation interpolation setting is not set
             */
-            ModelDesc(float scale = 1.0f, CoordinateSystem coordSystem = CoordinateSystem::Standard, float interpolationTime = 0.0f)
-                : scale(scale), coordSystem(coordSystem), standardInterpolationTime(interpolationTime) {}
+            ModelDesc(float scale = 1.0f, bool isFlip = false, CoordinateSystem coordSystem = CoordinateSystem::Standard, float interpolationTime = 0.0f)
+                : scale(scale), isFlip(isFlip), coordSystem(coordSystem), standardInterpolationTime(interpolationTime) {}
         };
 
         /** @brief Descriptor to load animation */
@@ -327,6 +336,19 @@ namespace ModelInfo {
         };
     } // namespace Load
 } // namespace ModelInfo
+
+/** @brief Structure wraps animation ID and loop flag */
+struct AnimIDWithLoop {
+    /** @brief ID of an animation */
+    ModelInfo::AnimID id;
+    /** @brief Loop flag */
+    bool isLoop;
+
+    /** @brief Constructor */
+    AnimIDWithLoop() : id(0), isLoop(false) {}
+    /** @brief Constructor */
+    AnimIDWithLoop(ModelInfo::AnimID id, bool isLoop) : id(id), isLoop(isLoop) {}
+};
 
 /** @brief Static data per model */
 class CStaticModelData {
@@ -370,10 +392,14 @@ public:
     */
     void AddAnimInterpolationSetting(ModelInfo::AnimID sourceID, ModelInfo::AnimID destID, const ModelInfo::InterpolationSetting& setting);
 
-    /** @brief Get a mesh of this model */
-    const ModelInfo::Mesh* GetMesh(UINT index) const { return &m_meshes[index]; }
-    /** @brief Get the number of meshes that this model has */
-    const UINT GetMeshNum() const { return m_meshes.Size(); }
+    /** @brief Get a mesh that has opacity texture */
+    const ModelInfo::Mesh* GetOpacityMesh(UINT index) const { return &m_meshes[m_opaqueTexMeshIndices[index]]; }
+    /** @brief Get a mesh that has transparent texture */
+    const ModelInfo::Mesh* GetTransparentMesh(UINT index) const { return &m_meshes[m_transparentTexMeshIndices[index]]; }
+    /** @brief Get the number of meshes that has opacity texture */
+    const UINT GetOpacityMeshNum() const { return (UINT)m_opaqueTexMeshIndices.size(); }
+    /** @brief Get the number of meshes that has transparent texture */
+    const UINT GetTransparentMeshNum() const { return (UINT)m_transparentTexMeshIndices.size(); }
 
     /** @brief Get a material of this model */
     const ModelInfo::Material* GetMaterial(UINT index) const { return &m_materials[index]; }
@@ -406,6 +432,8 @@ private:
 private:
     /** @brief Scale of model on loading */
     float m_modelScale;
+    /** @brief Flipping at load time? */
+    bool m_isFlip;
     /** @brief Interpolation time (seconds) if animation interpolation setting is not set */
     float m_standardInterpolationTime;
     /** @brief Meshes of this model */
@@ -418,6 +446,10 @@ private:
     std::unordered_map<std::string, ModelInfo::NodeIndex> m_nameToNodeMap;
     /** @brief Animations of this model */
     std::vector<ModelInfo::StaticAnimation> m_animations;
+    /** @brief Indices of meshes that has opaque texture */
+    std::vector<UINT> m_opaqueTexMeshIndices;
+    /** @brief Indices of meshes that has transparent texture */
+    std::vector<UINT> m_transparentTexMeshIndices;
 };
 
 /** @brief Controller class for animated models */
@@ -443,6 +475,12 @@ public:
     void Play(ModelInfo::AnimID animID, bool isLoop);
 
     /**
+       @brief Play animation
+       @param idWithLoop ID and loop flag
+    */
+    inline void Play(AnimIDWithLoop idWithLoop) { Play(idWithLoop.id, idWithLoop.isLoop); }
+
+    /**
        @brief Play blend animation
        @param animID ID of animation to be played
        @param isLoop Does it play on a loop?
@@ -454,14 +492,6 @@ public:
        @brief Set the animation mode is bind pose
     */
     void BindPose() { m_dynamicData.playbackAnimations.clear(); }
-
-    /**
-       @brief Calculate an animation matrix
-       @param mat Return value variable to receive the matrix
-       @param meshIndex Index of mesh
-       @param boneIndex Index of bone
-    */
-    void CalculateAnimationMatrix(DirectX::XMFLOAT4X4* mat, UINT meshIndex, UINT boneIndex);
 
     /** @brief Is this model currently in a bind pose? */
     bool IsBindPose() { return m_dynamicData.playbackAnimations.empty(); }
@@ -476,8 +506,10 @@ public:
     /** @brief Get dynamic data of this model */
     const ModelInfo::PerInstanceData* GetDynamicData() const { return &m_dynamicData; }
 
-    /** @brief Get the number of bones that the mesh has */
-    const UINT GetMeshBoneNum(UINT meshIndex) const { return m_staticData->GetMesh(meshIndex)->bones.Size(); }
+    /** @brief Get the number of bones that the opacity mesh has */
+    const UINT GetOpacityMeshBoneNum(UINT meshIndex) const { return m_staticData->GetOpacityMesh(meshIndex)->bones.Size(); }
+    /** @brief Get the number of bones that the transparent mesh has */
+    const UINT GetTransparentMeshBoneNum(UINT meshIndex) const { return m_staticData->GetTransparentMesh(meshIndex)->bones.Size(); }
 
 private:
     /**

@@ -268,7 +268,7 @@ namespace Utl {
             ~SRVPropertyHandle() = default;
             
             /** @brief Is the property instance valid? */
-            bool IsInstance() { return m_srvProperty != nullptr; }
+            bool IsInstance() const { return m_srvProperty != nullptr; }
             /** @brief Get CPU handle */
             CPU_DESCRIPTOR_HANDLE GetCPUHandle() { return m_srvProperty->cpuHandle; }
             /** @brief Get resource state controller */

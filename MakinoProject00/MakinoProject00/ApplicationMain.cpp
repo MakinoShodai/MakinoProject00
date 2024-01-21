@@ -21,6 +21,7 @@
 #include "EncryptAssetMain.h"
 #include "SampleScene.h"
 #include "PhysicsSampleScene.h"
+#include "StageSceneBase.h"
 
 // Width of window size
 const UINT WINDOW_WIDTH = 1920;
@@ -131,7 +132,7 @@ void ApplicationMain() {
 #elif _FOR_PHYSICS
     CSceneRegistry::GetMain().Initialize<CPhysicsSampleScene>();
 #else
-    // #TODO : Set frist scene
+    CSceneRegistry::GetMain().Initialize<CStageSceneBase>();
 #endif
 
     // Main loop

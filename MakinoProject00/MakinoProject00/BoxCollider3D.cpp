@@ -57,9 +57,9 @@ void CBoxCollider3D::UpdateLocalBoudingVolume() {
 
     // Project half size on each axis
     Vector3f dotHalfSize = Vector3f(
-        std::abs(Utl::Math::UNIT3_X.Dot(rotateSizeAxisX)) + std::abs(Utl::Math::UNIT3_X.Dot(rotateSizeAxisY)) + std::abs(Utl::Math::UNIT3_X.Dot(rotateSizeAxisZ)),
-        std::abs(Utl::Math::UNIT3_Y.Dot(rotateSizeAxisX)) + std::abs(Utl::Math::UNIT3_Y.Dot(rotateSizeAxisY)) + std::abs(Utl::Math::UNIT3_Y.Dot(rotateSizeAxisZ)),
-        std::abs(Utl::Math::UNIT3_Z.Dot(rotateSizeAxisX)) + std::abs(Utl::Math::UNIT3_Z.Dot(rotateSizeAxisY)) + std::abs(Utl::Math::UNIT3_Z.Dot(rotateSizeAxisZ))
+        std::abs(Utl::Math::UNIT3_RIGHT.Dot(rotateSizeAxisX)) + std::abs(Utl::Math::UNIT3_RIGHT.Dot(rotateSizeAxisY)) + std::abs(Utl::Math::UNIT3_RIGHT.Dot(rotateSizeAxisZ)),
+        std::abs(Utl::Math::UNIT3_UP.Dot(rotateSizeAxisX)) + std::abs(Utl::Math::UNIT3_UP.Dot(rotateSizeAxisY)) + std::abs(Utl::Math::UNIT3_UP.Dot(rotateSizeAxisZ)),
+        std::abs(Utl::Math::UNIT3_FORWARD.Dot(rotateSizeAxisX)) + std::abs(Utl::Math::UNIT3_FORWARD.Dot(rotateSizeAxisY)) + std::abs(Utl::Math::UNIT3_FORWARD.Dot(rotateSizeAxisZ))
     );
 
     m_localBV.minAABB = -dotHalfSize;

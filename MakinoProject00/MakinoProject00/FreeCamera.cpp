@@ -51,7 +51,7 @@ void CFreeCameraControl::Update() {
 
         // Get look direction vector and calculate right direction vector of it
         Vector3f lookDir = m_camera->GetLookDir();
-        Vector3f lookRightDir = Quaternionf(90.0f * Utl::DEG_2_RAD, Utl::Math::UNIT3_Y) * Vector3f(lookDir.x(), 0.0f, lookDir.z());
+        Vector3f lookRightDir = Quaternionf(90.0f * Utl::DEG_2_RAD, Utl::Math::UNIT3_UP) * Vector3f(lookDir.x(), 0.0f, lookDir.z());
         lookRightDir.Normalize();
 
         // Accepting movings of this gameobject
@@ -90,7 +90,7 @@ void CFreeCameraControl::Update() {
         POINT deltaCursor = inputSystem.GetDeltaCursorPos();
         if (std::abs(deltaCursor.x) > 0) {
             float rad = (float)deltaCursor.x * Utl::DEG_2_RAD * ROTATE_FACTOR;
-            rotation *= Quaternionf(rad, Utl::Math::UNIT3_Y);
+            rotation *= Quaternionf(rad, Utl::Math::UNIT3_UP);
             isRotate = true;
         }
         if (std::abs(deltaCursor.y) > 0) {
@@ -98,8 +98,8 @@ void CFreeCameraControl::Update() {
             Quaternionf calculatedRotation = Quaternionf(rad, lookRightDir) * rotation;
         
             // Correct rotation
-            Vector3f predictedLookDir = calculatedRotation * Utl::Math::UNIT3_Z;
-            float dot = Utl::Math::UNIT3_Y.Dot(predictedLookDir);
+            Vector3f predictedLookDir = calculatedRotation * Utl::Math::UNIT3_FORWARD;
+            float dot = Utl::Math::UNIT3_UP.Dot(predictedLookDir);
             if (std::abs(dot) < 0.99f) {
                 isRotate = true;
                 rotation = calculatedRotation;

@@ -11,6 +11,7 @@ CGameObject::CGameObject(ACScene* ownerScene, Transformf transform)
     , m_components()
     , m_name()
     , m_isActive(true)
+    , m_updateMode(UpdateMode::Null)
     , m_transform(std::move(transform))
     , m_transformBits()
 { }
@@ -137,7 +138,7 @@ void CGameObject::ColliderAdded(const CWeakPtr<ACCollider3D>& collider) {
 #ifdef _FOR_PHYSICS
     AddComponent<CDebugColliderShape>(GraphicsLayer::Standard, collider);
 #else
-#ifndef _DEBUG
+#ifdef _DEBUG
     AddComponent<CDebugColliderShape>(GraphicsLayer::Transparent, collider);
 #endif // _DEBUG
 #endif // _FOR_PHYSICS

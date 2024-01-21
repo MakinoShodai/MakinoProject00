@@ -11,6 +11,8 @@ ACScene::ACScene()
     : m_physicsWorld(this)
     , m_cameraRegistry(CUniquePtrWeakable<CCameraRegistry>::Make())
     , m_isFirstUpdated(false)
+    , m_currentUpdateMode(UpdateMode::Null)
+    , m_scheduleUpdateMode(UpdateMode::Null)
 { }
 
 // Destructor
@@ -23,12 +25,19 @@ ACScene::~ACScene() {
 
 // Update processing
 void ACScene::Update() {
+    // Is update mode enabled?
+    bool isUpdateMode = IsUpdateMode();
+
     // Create the game objects planned to be created
-    for (auto& it : m_gameObjectsToCreate) {
-        it->Start();
-        m_gameObjects.emplace_back(std::move(it));
+    if (!m_gameObjectsToCreate.empty()) {
+        std::vector<CUniquePtrWeakable<CGameObject>> objects;
+        objects.swap(m_gameObjectsToCreate);
+        for (auto& it : objects) {
+            it->Start();
+            m_gameObjects.emplace_back(std::move(it));
+        }
+        objects.clear();
     }
-    m_gameObjectsToCreate.clear();
 
     // First frame processing
     if (m_isFirstUpdated == false) {
@@ -48,7 +57,8 @@ void ACScene::Update() {
     // Update the existing game objects
     for (auto& it : m_gameObjects) {
         // Active check
-        if (!it->IsActive()) { continue; }
+        if (!it->IsActive() || (isUpdateMode && !it->CheckUpdateMode(m_currentUpdateMode))) { continue; }
+
         // Update processing
         it->Update();
     }
@@ -65,7 +75,7 @@ void ACScene::Update() {
     // Pre drawing process by the existing game objects
     for (auto& it : m_gameObjects) {
         // Active check
-        if (!it->IsActive()) { continue; }
+        if (!it->IsActive() || (isUpdateMode && !it->CheckUpdateMode(m_currentUpdateMode))) { continue; }
         // Pre drawing processing
         it->PreDraw();
     }
@@ -121,6 +131,9 @@ void ACScene::EndFrameProcess() {
 
     // Call refresh process of dynamic structured buffer registry
     m_dynamicSbRegistry.FrameRefresh();
+
+    // Set scheduled update mode to current update mode
+    m_currentUpdateMode = m_scheduleUpdateMode;
 }
 
 // Transfer bit strings to observe the transform of all objects
@@ -130,10 +143,19 @@ void ACScene::TransferObjectsTransformObserve() {
     }
 }
 
+// Set update mode
+void ACScene::SetUpdateMode(UpdateMode mode) {
+    // If there is more than one update mode, do nothing.
+    if (Utl::CountBits((UpdateModeType)mode) > 1) { return; }
+    m_scheduleUpdateMode = mode;
+}
+
 // Find a game object from the array of game objects
 CWeakPtr<CGameObject> ACScene::FindGameObject(const std::wstring& name) {
     // Existing game objects
     for (auto& it : m_gameObjects) {
+        if (it == nullptr) { continue; }
+
         // Return if name matches
         const auto& objName = it->GetName();
         if (!objName.empty() && objName == name) {
@@ -143,6 +165,8 @@ CWeakPtr<CGameObject> ACScene::FindGameObject(const std::wstring& name) {
 
     // Game objects to be created in the future
     for (auto& it : m_gameObjectsToCreate) {
+        if (it == nullptr) { continue; }
+
         // Return if name matches
         const auto& objName = it->GetName();
         if (!objName.empty() && objName == name) {

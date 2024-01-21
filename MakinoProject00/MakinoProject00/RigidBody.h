@@ -179,6 +179,11 @@ public:
     /** @brief Get the mass */
     float GetMass() const { return 1.0f / m_invMass; }
 
+    /** @brief Set aerodynamic drag for movement by force */
+    void SetLinearDrag(float drag) { if (m_simulationBodyHandle) { GetSimulation()->SetLinearDrag(drag); } }
+    /** @brief Set aerodynamic drag for rotation by torque */
+    void SetAngularDrag(float drag) { if (m_simulationBodyHandle) { GetSimulation()->SetAngularDrag(drag); } }
+
     /**
        @brief Set gravity scale
        @param gravityScale Don't use gravity scale in default argument

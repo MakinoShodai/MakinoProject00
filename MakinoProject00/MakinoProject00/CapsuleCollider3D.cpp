@@ -174,9 +174,9 @@ void CCapsuleCollider3D::UpdateLocalBoudingVolume() {
     // Project half size on each axis
     float radius2 = m_scalingRadius * 2.0f;
     Vector3f dotHalfSize = Vector3f(
-        std::abs(Utl::Math::UNIT3_X.Dot(rotateSizeAxis)) + radius2,
-        std::abs(Utl::Math::UNIT3_Y.Dot(rotateSizeAxis)) + radius2,
-        std::abs(Utl::Math::UNIT3_Z.Dot(rotateSizeAxis)) + radius2
+        std::abs(Utl::Math::UNIT3_RIGHT.Dot(rotateSizeAxis)) + radius2,
+        std::abs(Utl::Math::UNIT3_UP.Dot(rotateSizeAxis)) + radius2,
+        std::abs(Utl::Math::UNIT3_FORWARD.Dot(rotateSizeAxis)) + radius2
     );
 
     m_localBV.minAABB = -dotHalfSize;
