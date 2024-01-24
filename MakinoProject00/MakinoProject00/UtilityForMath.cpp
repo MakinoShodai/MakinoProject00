@@ -187,6 +187,23 @@ Vector3f Utl::Math::MoveTowards(const Vector3f& currentVal, const Vector3f& targ
     return ret;
 }
 
+// Convert DirectX::XMFLOAT3 to Vector3f
+Vector3f Utl::Math::ToVector3f(const DirectX::XMFLOAT3& v) { 
+    return Vector3f(v.x, v.y, v.z); 
+}
+
+// Convert DirectX::XMVECTOR to Vector3f
+Vector3f Utl::Math::ToVector3f(const DirectX::XMVECTOR& v) {
+    DirectX::XMFLOAT3 xmFloat;
+    DirectX::XMStoreFloat3(&xmFloat, v);
+    return Vector3f(xmFloat.x, xmFloat.y, xmFloat.z);
+}
+
+// Convert Vector3f to DirectX::XMVECTOR
+DirectX::XMVECTOR Utl::Math::ToXMVECTOR(const Vector3f& v, float w) {
+    return DirectX::XMVectorSet(v.x(), v.y(), v.z(), w);
+}
+
 // Simple judgment of all elements of the unit vector are 0 or not
 bool Utl::Math::IsUnitVector3fZero(const Vector3f& v) {
     return Utl::IsFloatZero(v.x() * v.x() + v.y() * v.y() + v.z() * v.z());

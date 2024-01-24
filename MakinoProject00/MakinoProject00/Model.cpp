@@ -30,6 +30,7 @@ void ACModel::CreateOpacityMesh() {
     InitializeMesh(meshNum, 1);
     for (UINT i = 0; i < meshNum; ++i) {
         const ModelInfo::Mesh* mesh = staticData->GetOpacityMesh(i);
+        const ModelInfo::Material* material = staticData->GetMaterial(mesh->materialIndex);
 
         // Set mesh buffer
         SetMeshInfo(i, mesh->meshbuffer.GetVertexWeakPtr(), mesh->meshbuffer.GetIndexWeakPtr(), mesh->meshbuffer.GetTopologyType());
@@ -37,7 +38,10 @@ void ACModel::CreateOpacityMesh() {
         // Set standard texture
         SetTexture(i, 0, CTexture(
             Utl::Dx::ShaderString(Utl::Dx::ShaderType::Pixel, "mainTex"),
-            staticData->GetMaterial(mesh->materialIndex)->GetTex(m_additionalTexID)));
+            material->GetTex(m_additionalTexID)));
+
+        // Set numeric part of the material
+        SetNumericPartMaterial(i, PerMeshMaterialNumeric(material->shininess, material->shininessScale));
     }
 }
 
@@ -51,6 +55,7 @@ void ACModel::CreateTransparentMesh() {
     InitializeMesh(meshNum, 1);
     for (UINT i = 0; i < meshNum; ++i) {
         const ModelInfo::Mesh* mesh = staticData->GetTransparentMesh(i);
+        const ModelInfo::Material* material = staticData->GetMaterial(mesh->materialIndex);
 
         // Set mesh buffer
         SetMeshInfo(i, mesh->meshbuffer.GetVertexWeakPtr(), mesh->meshbuffer.GetIndexWeakPtr(), mesh->meshbuffer.GetTopologyType());
@@ -58,7 +63,10 @@ void ACModel::CreateTransparentMesh() {
         // Set standard texture
         SetTexture(i, 0, CTexture(
             Utl::Dx::ShaderString(Utl::Dx::ShaderType::Pixel, "mainTex"),
-            staticData->GetMaterial(mesh->materialIndex)->GetTex(m_additionalTexID)));
+            material->GetTex(m_additionalTexID)));
+
+        // Set numeric part of the material
+        SetNumericPartMaterial(i, PerMeshMaterialNumeric(material->shininess, material->shininessScale));
     }
 }
 

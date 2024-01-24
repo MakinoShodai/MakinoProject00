@@ -205,9 +205,10 @@ void CGraphicsPipelineState::SetCommandForComponent(const std::vector<T*>& compo
             // Draw object
             {
                 // Associate descriptor heap with root parameter
+                UINT staticTableSize = (UINT)m_staticRootDescriptorTableOffset.size();
                 UINT tableSize = (UINT)m_dynamicRootDescriptorTableOffset.size();
                 for (UINT i = 0; i < tableSize; ++i) {
-                    cmdList->SetGraphicsRootDescriptorTable(m_totalStaticDescRangeNum + i,
+                    cmdList->SetGraphicsRootDescriptorTable(staticTableSize + i,
                         pool->GetGPUHandle(m_dynamicRootDescriptorTableOffset[i]));
                 }
 

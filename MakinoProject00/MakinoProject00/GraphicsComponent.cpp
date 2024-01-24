@@ -10,7 +10,7 @@ ACGraphicsComponent::ACGraphicsComponent(GraphicsComponentType type, CGameObject
     : m_type(type)
     , m_gameObj(owner->WeakFromThis())
     , m_layer(layer)
-    , m_texNumPerMesh(0)
+    , m_matNumPerMesh(0)
     , m_color(Colorf::Ones())
     , m_isActive(true) {
 }
@@ -41,8 +41,8 @@ void ACGraphicsComponent::Start() {
 bool ACGraphicsComponent::AskToAllocateTextures(UINT meshNum, const CGraphicsPipelineState& gpso, UINT totalNum) {
     CDescriptorHeapPool* pool = &CDescriptorHeapPool::GetMain();
 
-    for (UINT i = 0; i < m_texNumPerMesh; ++i) {
-        CTexture* tex = m_textures[meshNum][i].Get();
+    for (UINT i = 0; i < m_matNumPerMesh; ++i) {
+        CTexture* tex = m_materials[meshNum].texture[i].Get();
         const Utl::Dx::ShaderString& hlslName = tex->GetHLSLName();
 
         // Get offset of texture resource
@@ -100,7 +100,14 @@ bool ACGraphicsComponent::IsActiveOverall() const {
     return m_isActive && m_gameObj->IsActive();
 }
 
-// Prepare arrays of the meshes and its textures
+// Set numeric part of the material to all meshes
+void ACGraphicsComponent::SetNumericMaterialToAllMesh(const PerMeshMaterialNumeric& numeric) {
+    for (UINT i = 0; i < m_meshWrappers.Size(); ++i) {
+        m_materials[i].numeric = numeric;
+    }
+}
+
+// Prepare arrays of the meshes and its materials
 void ACGraphicsComponent::InitializeMesh(UINT meshNum, UINT texNumPerMesh) {
     // Initialize the number of meshes array
     m_meshWrappers.Resize(meshNum);
@@ -111,14 +118,14 @@ void ACGraphicsComponent::InitializeMesh(UINT meshNum, UINT texNumPerMesh) {
         m_meshWrappers[i].key = meshKeyGenerater->GenerateKey();
     }
 
-    // Initialize the number of textures arrays
+    // Initialize the number of materials arrays
+    m_materials = CUniquePtr<PerMeshMaterial[]>::Make(meshNum);
     if (texNumPerMesh > 0) {
-        m_textures = CUniquePtr<UniquePtrTextureArray[]>::Make(meshNum);
         for (size_t i = 0; i < meshNum; ++i) {
-            m_textures[i] = UniquePtrTextureArray::Make(texNumPerMesh);
+            m_materials[i].texture = CUniquePtr<CUniquePtr<CTexture>[]>::Make(texNumPerMesh);
         }
     }
 
     // Set sent argument
-    m_texNumPerMesh = texNumPerMesh;
+    m_matNumPerMesh = texNumPerMesh;
 }

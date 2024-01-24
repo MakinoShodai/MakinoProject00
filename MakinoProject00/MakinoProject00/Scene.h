@@ -18,6 +18,7 @@
 #include "IntKeyGenerater.h"
 #include "PhysicsWorld.h"
 #include "ScenePhase.h"
+#include "LightRegistry.h"
 
 /** @brief Is this a child class of CGameObject? */
 template <class T>
@@ -120,6 +121,9 @@ public:
     /** @brief Get weak pointer to camera registry */
     CWeakPtr<const CCameraRegistry> GetCameraRegistry() const { return m_cameraRegistry.GetWeakPtr(); }
 
+    /** @brief Get weak pointer to lights registry */
+    CWeakPtr<CLightRegistry> GetLightRegistry() { return m_lightRegistry.GetWeakPtr(); }
+
     /** @brief Get registry class handles all structured buffer allocator per object */
     CDynamicSbRegistry* GetDynamicSbRegistry() { return &m_dynamicSbRegistry; }
     /** @brief Get pointer to the registry class handles graphics components array of each graphics layers */
@@ -158,6 +162,8 @@ private:
     Mkpe::CPhysicsWorld m_physicsWorld;
     /** @brief Camera registry class */
     CUniquePtrWeakable<CCameraRegistry> m_cameraRegistry;
+    /** @brief Registry class for lights */
+    CUniquePtrWeakable<CLightRegistry> m_lightRegistry;
     /** @brief Registry class handles all structured buffer allocator per object */
     CDynamicSbRegistry m_dynamicSbRegistry;
     /** @brief Registry class handles graphics components array of each graphics layers */

@@ -11,6 +11,9 @@
 
 #include "Scene.h"
 #include "StandardGPSOWrapper.h"
+#include "ShadowGPSOWrapper.h"
+#include "StaticCbLightVPMat.h"
+#include "StaticSrvShadowMap.h"
 
 /** @brief Scene base class for stage 1 */
 class CStageSceneBase : public ACScene {
@@ -36,12 +39,23 @@ private:
     CStandardGPSOWrapper m_standardGpso;
     /** @brief GPSO wrapper for transparent layer */
     CTransparentGPSOWrapper m_transparentGpso;
+    /** @brief GPSO wrapper for writing shadow */
+    CWriteShadowGPSOWrapper m_writeShadowGpso;
+    /** @brief GPSO wrapper for shading */
+    CShadingGPSOWrapper m_shadingGpso;
     /** @brief GPSO for UI */
     CGraphicsPipelineState m_uiGpso;
     /** @brief Depth stencil view for 3D */
     CDepthStencil m_dsv3D;
     /** @brief Depth stencil view for 2D */
     CDepthStencil m_dsv2D;
+    /** @brief Depth stencil views for shadow map */
+    CDepthStencil m_shadowMapDsvs[CASCADE_NUM];
+
+    /** @brief Static CB allocater class that handles light view projection matrix */
+    CStaticCbLightVP* m_staticCbLightVP;
+    /** @brief Static SRV allocator class for shadow maps */
+    ACStaticSRVAllocator* m_staticShadowMapSrv[CASCADE_NUM];
 };
 
 #endif // !__STAGE_SCENE_BASE_H__

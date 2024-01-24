@@ -30,7 +30,7 @@ Mkpe::CSimulationBodyBase::CSimulationBodyBase(CRigidBody* rb)
     , m_invInertiaTensor(Matrix3x3f::Identity())
     , m_invInertiaLocal(Vector3f::Zero())
     , m_gravity(0.0f)
-    , m_linearDrag(0.0f)
+    , m_linearDrag(1.0f)
     , m_angularDrag(1.0f)
 {
     if (rb) {

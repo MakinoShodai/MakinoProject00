@@ -7,9 +7,10 @@
 ScenePhase ACScene::ms_currentPhase = ScenePhase::Update;
 
 // Constructor
-ACScene::ACScene() 
+ACScene::ACScene()
     : m_physicsWorld(this)
     , m_cameraRegistry(CUniquePtrWeakable<CCameraRegistry>::Make())
+    , m_lightRegistry(CUniquePtrWeakable<CLightRegistry>::Make())
     , m_isFirstUpdated(false)
     , m_currentUpdateMode(UpdateMode::Null)
     , m_scheduleUpdateMode(UpdateMode::Null)

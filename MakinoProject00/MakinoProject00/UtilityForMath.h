@@ -244,6 +244,14 @@ namespace Utl {
         */
         Vector3f MoveTowards(const Vector3f& currentVal, const Vector3f& targetVal, float absStep);
 
+        /** @brief Convert DirectX::XMFLOAT3 to Vector3f */
+        Vector3f ToVector3f(const DirectX::XMFLOAT3& v);
+        /** @brief Convert DirectX::XMVECTOR to Vector3f */
+        Vector3f ToVector3f(const DirectX::XMVECTOR& v);
+
+        /** @brief Convert Vector3f to DirectX::XMVECTOR */
+        DirectX::XMVECTOR ToXMVECTOR(const Vector3f& v, float w);
+
         /** @brief Simple judgment of all elements of the unit vector are 0 or not */
         bool IsUnitVector3fZero(const Vector3f& v);
 

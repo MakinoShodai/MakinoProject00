@@ -57,6 +57,10 @@ void CGameObject::PreDraw() {
 
 // Process to be called at instance destruction
 void CGameObject::OnDestroy() {
+    // Call processing at disable
+    for (auto& it : m_components) {
+        it->OnDisable();
+    }
     // Call processing at instance destruction from components
     for (auto& it : m_components) {
         it->OnDestroy();

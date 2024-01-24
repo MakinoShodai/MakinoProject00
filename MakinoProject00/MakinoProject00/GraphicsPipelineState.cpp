@@ -7,6 +7,7 @@
 #include "Scene.h"
 #include "DescriptorHeapPool.h"
 #include "UtilityForException.h"
+#include "UtilityForString.h"
 
 // Constructor
 CGraphicsPipelineState::CGraphicsPipelineState()
@@ -148,6 +149,11 @@ void CGraphicsPipelineState::Create(ACScene* scene, const std::wstring gpsoName,
 
 // Set this graphics pipeline state to command list
 void CGraphicsPipelineState::SetCommand() {
+    // If there is no object to draw, do nothing.
+    if (false == m_scene->GetGraphicsLayerRegistry()->CheckExists(m_useLayers, m_useComponentTypes) && m_externalGraphicsObjectAssets.empty()) {
+        return;
+    }
+
     // Variable declarations
     ID3D12GraphicsCommandList* cmdList = CCommandManager::GetMain().GetGraphicsCmdList();
     CDescriptorHeapPool* pool = &CDescriptorHeapPool::GetMain();
@@ -157,12 +163,6 @@ void CGraphicsPipelineState::SetCommand() {
     // Begin GPSO event
     PIX_BEGIN_EVENT(cmdList, PIX_COLOR_DEFAULT, (L"GPSO Event: " + m_gpsoName).c_str());
 #endif // _DEBUG
-
-    // Transition the state of a current applied depth stencil
-    CDepthStencil* currentAppliedDSV = ACRenderTarget::GetCurrentAppliedDepthStencil();
-    if (currentAppliedDSV != nullptr) {
-        currentAppliedDSV->StateTransition(m_dsvState);
-    }
 
     // Set gpso and root signature
     cmdList->SetPipelineState(m_gpso.Get());
@@ -223,9 +223,10 @@ void CGraphicsPipelineState::SetCommand() {
         // Draw object
         else {
             // Associate descriptor heap with root parameter
+            UINT staticTableSize = (UINT)m_staticRootDescriptorTableOffset.size();
             UINT tableSize = (UINT)m_dynamicRootDescriptorTableOffset.size();
             for (UINT i = 0; i < tableSize; ++i) {
-                cmdList->SetGraphicsRootDescriptorTable(m_totalStaticDescRangeNum + i,
+                cmdList->SetGraphicsRootDescriptorTable(staticTableSize + i,
                     pool->GetGPUHandle(m_dynamicRootDescriptorTableOffset[i]));
             }
 
@@ -320,7 +321,7 @@ void CGraphicsPipelineState::BindShaderInfo(ACShader* shader, D3D12_GRAPHICS_PIP
         // If it is not found
         else {
             // Error processing
-            throw Utl::Error::CFatalError(L"The static resource contained in the loaded shader, does not exist.");
+            throw Utl::Error::CFatalError(L"The static resource contained in the loaded shader, does not exist.\n" + Utl::Str::string2WString(it.first));
         }
     }
 
@@ -362,7 +363,7 @@ void CGraphicsPipelineState::BindShaderInfoDynamic(ACShader* shader, D3D12_GRAPH
             // If it is not found
             else {
                 // Error processing
-                throw Utl::Error::CFatalError(L"The constant buffer contained in the loaded shader, does not exist.");
+                throw Utl::Error::CFatalError(L"The constant buffer contained in the loaded shader, does not exist : " + Utl::Str::string2WString(it.first));
             }
         }
             break;
@@ -378,7 +379,7 @@ void CGraphicsPipelineState::BindShaderInfoDynamic(ACShader* shader, D3D12_GRAPH
             // If it is not found
             else {
                 // Error processing
-                throw Utl::Error::CFatalError(L"The constant buffer contained in the loaded shader, does not exist.");
+                throw Utl::Error::CFatalError(L"The constant buffer contained in the loaded shader, does not exist : " + Utl::Str::string2WString(it.first));
             }
         }
             break;

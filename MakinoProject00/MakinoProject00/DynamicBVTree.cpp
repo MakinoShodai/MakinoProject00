@@ -339,7 +339,7 @@ Mkpe::Dbvt::NodeCost* Mkpe::Dbvt::CDynamicBVTree::CalculationAddingInternalNode(
             if (!invalidatedNodes.contains(it_A.leastNode)) { break; }
 
             // Initialize cost
-            it_A.cost = (std::numeric_limits<float>::max)();
+            it_A.cost = Utl::Limit::FLAOT_HIGHEST;
             for (auto& it_B : remains) {
                 if (it_A.thisNode == it_B.thisNode) { continue; }
 

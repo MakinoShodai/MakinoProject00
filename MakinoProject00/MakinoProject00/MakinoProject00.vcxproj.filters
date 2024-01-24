@@ -211,6 +211,24 @@
     <Filter Include="ヘッダー ファイル\Game\Camera">
       <UniqueIdentifier>{2f0cc2f8-b675-4146-a3ac-5fb9364e9014}</UniqueIdentifier>
     </Filter>
+    <Filter Include="リソース ファイル\VertexShader\LightPosWorldPos">
+      <UniqueIdentifier>{f4dcbef0-cf24-4c24-b789-b5053d8d71ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\Shadow">
+      <UniqueIdentifier>{9609682a-228d-411b-be51-451781a87715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Shadow">
+      <UniqueIdentifier>{77453c6f-dd78-4339-ab81-a184b3022ce1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PixelShader\DepthWrite">
+      <UniqueIdentifier>{9f8797b5-7c70-472b-a019-5acb8eec84f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\VertexShader\LightVP">
+      <UniqueIdentifier>{66839765-3748-4594-a6e7-9f092a87aa83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PixelShader\NPRShading">
+      <UniqueIdentifier>{2725d695-6887-4026-8dbb-7ef8ddfbd206}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -519,6 +537,33 @@
     <ClCompile Include="PlayerCamera.cpp">
       <Filter>ソース ファイル\Game\Camera</Filter>
     </ClCompile>
+    <ClCompile Include="StaticCbLightVPMat.cpp">
+      <Filter>ソース ファイル\Game\Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowGPSOWrapper.cpp">
+      <Filter>ソース ファイル\Game\Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticCbDirLightParam.cpp">
+      <Filter>ソース ファイル\Game\Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticSrvAllocator.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicCbMaterial.cpp">
+      <Filter>ソース ファイル\Game\Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="LightRegistry.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLight.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionalLight.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticSbPointLights.cpp">
+      <Filter>ソース ファイル\Game\Shadow</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="PS_StandardColorOnly.hlsl">
@@ -539,6 +584,27 @@
     <FxCompile Include="VS_Standard3DSprite.hlsl">
       <Filter>リソース ファイル\VertexShader\Standard</Filter>
     </FxCompile>
+    <FxCompile Include="VS_LightPosWorldPos3D.hlsl">
+      <Filter>リソース ファイル\VertexShader\LightPosWorldPos</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_LightPosWorldPos3DAnim.hlsl">
+      <Filter>リソース ファイル\VertexShader\LightPosWorldPos</Filter>
+    </FxCompile>
+    <FxCompile Include="PS_DepthWrite.hlsl">
+      <Filter>リソース ファイル\PixelShader\DepthWrite</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_LightVP3D.hlsl">
+      <Filter>リソース ファイル\VertexShader\LightVP</Filter>
+    </FxCompile>
+    <FxCompile Include="PS_ShadingTex.hlsl">
+      <Filter>リソース ファイル\PixelShader\NPRShading</Filter>
+    </FxCompile>
+    <FxCompile Include="PS_ShadingColorOnly.hlsl">
+      <Filter>リソース ファイル\PixelShader\NPRShading</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_LightVP3DAnim.hlsl">
+      <Filter>リソース ファイル\VertexShader\LightVP</Filter>
+    </FxCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
@@ -552,6 +618,12 @@
     </None>
     <None Include="CommonResources.hlsli">
       <Filter>リソース ファイル\Resource</Filter>
+    </None>
+    <None Include="VSi_LightVP.hlsli">
+      <Filter>リソース ファイル\VertexShader\LightVP</Filter>
+    </None>
+    <None Include="PSi_Shading.hlsli">
+      <Filter>リソース ファイル\PixelShader\NPRShading</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -929,6 +1001,39 @@
     </ClInclude>
     <ClInclude Include="PlayerControlComponent.h">
       <Filter>ヘッダー ファイル\Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticSrvShadowMap.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticSrvAllocator.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticCbLightVPMat.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionalLight.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowGPSOWrapper.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticCbDirLightParam.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicCbMaterial.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="LightRegistry.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLight.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticSbAllocator.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticSbPointLights.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -14,6 +14,9 @@
 /** @brief Depth stencil class */
 class CDepthStencil {
 public:
+    /** @brief Get pointer to current applied depth stencil */
+    static CDepthStencil* GetCurrentAppliedDepthStencil() { return ms_currentAppliedDepthStencil; }
+
     /**
        @brief Constructor
     */
@@ -39,6 +42,18 @@ public:
        @param clearFlag Clear mask
     */
     void Clear(D3D12_DEPTH_STENCIL_VALUE clearValue = { 1.0f, 0 }, D3D12_CLEAR_FLAGS clearFlag = D3D12_CLEAR_FLAG_DEPTH | D3D12_CLEAR_FLAG_STENCIL);
+
+    /**
+       @brief Apply this depth stencil to the destination depth stencil by calling 'OMSetRenderTargets'
+       @details
+       If this function is called, RTV is not used
+    */
+    void Apply();
+
+    /**
+       @brief State check process to be called when applying a destination for drawing
+    */
+    void CheckStateAtApplying();
 
     /**
        @brief Get SRV property handle for depth buffer
@@ -83,6 +98,9 @@ private:
     bool IsStencilUseFormat(DXGI_FORMAT dsvFormat);
 
 private:
+    /** @brief Pointer to current applied depth stencil */
+    static CDepthStencil* ms_currentAppliedDepthStencil;
+
     /** @brief Depth stencil */
     Microsoft::WRL::ComPtr<ID3D12Resource> m_depthStencil;
     /** @brief DSV Descriptor heap */

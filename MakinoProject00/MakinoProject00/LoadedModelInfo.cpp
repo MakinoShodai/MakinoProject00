@@ -162,6 +162,11 @@ void CStaticModelData::LoadModel(const void* data, size_t size, const std::wstri
                 }
             }
 
+            // Get shininess
+            float shininess;
+            m_materials[i].shininess = (assimpScene->mMaterials[i]->Get(AI_MATKEY_SHININESS, shininess) == AI_SUCCESS) ? (std::abs(shininess) > FLT_EPSILON) ? 1.0f / shininess : 1.0f : 1.0f;
+            m_materials[i].shininessScale = (assimpScene->mMaterials[i]->Get(AI_MATKEY_SHININESS_STRENGTH, shininess) == AI_SUCCESS) ? shininess : 0.0f;
+            
             // Compute the number of additional textures
             auto additionalTexIt = desc.additionalTex.find(texFilePath);
             UINT additionalNum = (additionalTexIt != desc.additionalTex.end()) ? (UINT)additionalTexIt->second.size() : 0;
