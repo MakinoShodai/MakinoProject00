@@ -22,6 +22,14 @@ enum class VertexShaderType : UINT {
     Standard3D,
     /** @brief Standard shader for skeltal model */
     Standard3DAnim,
+    /** @brief Light position and world position shader for non-animated model */
+    LightPosWorldPos3D,
+    /** @brief Light position and world position shader for skeletal model */
+    LightPosWorldPos3DAnim,
+    /** @brief Light view projection matrix shader for non-animated model */
+    LightVP3D,
+    /** @brief Light view projection matrix shader for skeletal model */
+    LightVP3DAnim,
     /** @brief Max */
     Max
 };
@@ -32,6 +40,12 @@ enum class PixelShaderType : UINT {
     StandardTex = 0,
     /** @brief Standard shader for color only */
     StandardColor,
+    /** @brief Writing depth shader */
+    DepthWrite,
+    /** @brief Shading for using texture */
+    ShadingTex,
+    /** @brief Shading for color only */
+    ShadingColor,
     /** @brief Max */
     Max
 };

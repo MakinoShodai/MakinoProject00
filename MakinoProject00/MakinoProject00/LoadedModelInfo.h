@@ -56,7 +56,12 @@ namespace ModelInfo {
 
     /** @brief Material data of mesh */
     struct Material {
+        /** @brief Is this material transparent? */
         bool isTransparent;
+        /** @brief Specular shininess */
+        float shininess;
+        /** @brief Scale of specular shininess */
+        float shininessScale;
 
     private:
         /**

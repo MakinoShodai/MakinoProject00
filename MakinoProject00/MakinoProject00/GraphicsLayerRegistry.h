@@ -78,6 +78,13 @@ struct EachGraphicsComponentVector {
     */
     inline const ConstGraphicsComponentVectorVariantPtr GetTypeArrayConstPtr(GraphicsComponentType type) const { return InnerGetTypeArrayPtr(this, type); }
 
+    /**
+       @brief Check if the array of the specified type is empty
+       @param type Type of graphcis component
+       @return Result
+    */
+    bool CheckEmpty(GraphicsComponentType type) const;
+
 private:
     /**
        @brief Get dynamic array corresponding to the specified type (inside function)
@@ -136,6 +143,14 @@ public:
        @param component Graphics component to be excluded
     */
     void Exclude(ACGraphicsComponent* component);
+
+    /**
+       @brief Check if the graphics components to be drawn exists
+       @param layers Layers to be checked
+       @param types The type to check to see if it exists in the layer
+       @return Returns true if they exists
+    */
+    bool CheckExists(const std::vector<GraphicsLayer>& layers, const std::vector<GraphicsComponentType>& types);
 
     /** @brief Get all components belonging to a layer */
     const EachGraphicsComponentVector& GetLayerComponents(GraphicsLayer layer) { return m_layerComponents[(GraphicsLayerUINT)layer]; }

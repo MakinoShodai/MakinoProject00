@@ -219,6 +219,7 @@ CWeakPtr<T> CGameObject::AddComponent(Args&&... args) {
     // Call awake processing
     CWeakPtr<T> addedComponent = m_components.back().GetWeakPtr();
     addedComponent->Awake();
+    addedComponent->OnEnable();
 
     // If T is derived class of ACCollider3D, Add it to the array of colliders
     if constexpr (std::is_base_of_v<ACCollider3D, T>) {

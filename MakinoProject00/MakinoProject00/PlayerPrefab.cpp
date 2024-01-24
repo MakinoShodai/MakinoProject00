@@ -12,7 +12,7 @@ void CPlayerPrefab::Prefab() {
     SetName(OBJNAME_PLAYER);
 
     // Add movel
-    AddComponent<CSkeletalModel>(GraphicsLayer::Standard, ModelName::CUTEBIRD)->GetController()->Play(1, true);
+    AddComponent<CSkeletalModel>(GraphicsLayer::ReadWriteShading, ModelName::CUTEBIRD)->GetController();
     // Add collider
     AddComponent<CCapsuleCollider3D>(2.0f, 0.9f, Vector3f(0.0f, 1.0f, 0.0f));
     // Add rigid body
@@ -22,6 +22,7 @@ void CPlayerPrefab::Prefab() {
     rb->SetRotateLock(RigidBodyAxisLock::Flag::_X | RigidBodyAxisLock::Flag::_Z);
     rb->SetMaterial(RigidBodyMaterial(0.0f, 0.0f));
     rb->SetIsPseudoVelocity(true);
+    rb->SetLinearDrag(5.0f);
 
     // Add player specific components
     AddComponent<CPlayerControlComponent>();

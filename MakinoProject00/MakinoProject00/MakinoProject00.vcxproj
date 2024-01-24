@@ -93,8 +93,10 @@
     <ClCompile Include="DebugCamera.cpp" />
     <ClCompile Include="DepthStencil.cpp" />
     <ClCompile Include="DescriptorHeapPool.cpp" />
+    <ClCompile Include="DirectionalLight.cpp" />
     <ClCompile Include="DynamicBVTree.cpp" />
     <ClCompile Include="DynamicCbColor.cpp" />
+    <ClCompile Include="DynamicCbMaterial.cpp" />
     <ClCompile Include="DynamicCbRegistry.cpp" />
     <ClCompile Include="DynamicCbWorldMat.cpp" />
     <ClCompile Include="CommandManager.cpp" />
@@ -118,6 +120,7 @@
     <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="IntKeyGenerater.cpp" />
     <ClCompile Include="LayeredGPSOWrapper.cpp" />
+    <ClCompile Include="LightRegistry.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MeshBuffer.cpp" />
     <ClCompile Include="Model.cpp" />
@@ -131,6 +134,7 @@
     <ClCompile Include="PlayerCamera.cpp" />
     <ClCompile Include="PlayerControlComponent.cpp" />
     <ClCompile Include="PlayerPrefab.cpp" />
+    <ClCompile Include="PointLight.cpp" />
     <ClCompile Include="Precompile.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|x64'">Create</PrecompiledHeader>
@@ -160,6 +164,7 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="ShaderRegistry.cpp" />
+    <ClCompile Include="ShadowGPSOWrapper.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="SimulationBody.cpp" />
     <ClCompile Include="SolverConstraint.cpp" />
@@ -167,9 +172,13 @@
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="StageSceneBase.cpp" />
     <ClCompile Include="StandardGPSOWrapper.cpp" />
+    <ClCompile Include="StaticCbDirLightParam.cpp" />
+    <ClCompile Include="StaticCbLightVPMat.cpp" />
     <ClCompile Include="StaticCbOrthographicMat.cpp" />
     <ClCompile Include="StaticCbVPMat.cpp" />
     <ClCompile Include="StaticResourceRegistry.cpp" />
+    <ClCompile Include="StaticSbPointLights.cpp" />
+    <ClCompile Include="StaticSrvAllocator.cpp" />
     <ClCompile Include="SwapChain.cpp" />
     <ClCompile Include="TagSetting.cpp" />
     <ClCompile Include="Texture.cpp" />
@@ -188,6 +197,60 @@
     <ClCompile Include="VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <FxCompile Include="PS_DepthWrite.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="PS_ShadingColorOnly.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="PS_ShadingTex.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|x64'">Pixel</ShaderType>
+    </FxCompile>
     <FxCompile Include="PS_StandardColorOnly.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|x64'">Pixel</ShaderType>
@@ -223,6 +286,78 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|x64'">Pixel</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|x64'">Pixel</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="VS_LightPosWorldPos3D.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="VS_LightPosWorldPos3DAnim.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="VS_LightVP3D.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="VS_LightVP3DAnim.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Physics|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_EncryptAsset|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Physics|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_Sample|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release_EncryptAsset|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug_Sample|x64'">Vertex</ShaderType>
     </FxCompile>
     <FxCompile Include="VS_Standard2DSprite.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
@@ -301,6 +436,8 @@
     <None Include="CommonResources.hlsli" />
     <None Include="packages.config" />
     <None Include="PSi_Standard.hlsli" />
+    <None Include="VSi_LightVP.hlsli" />
+    <None Include="PSi_Shading.hlsli" />
     <None Include="VSi_Standard.hlsli" />
   </ItemGroup>
   <ItemGroup>
@@ -333,8 +470,10 @@
     <ClInclude Include="DebugCamera.h" />
     <ClInclude Include="DepthStencil.h" />
     <ClInclude Include="DescriptorHeapPool.h" />
+    <ClInclude Include="DirectionalLight.h" />
     <ClInclude Include="DynamicBVTree.h" />
     <ClInclude Include="DynamicCbColor.h" />
+    <ClInclude Include="DynamicCbMaterial.h" />
     <ClInclude Include="DynamicCbRegistry.h" />
     <ClInclude Include="DynamicCbWorldMat.h" />
     <ClInclude Include="CommandManager.h" />
@@ -365,6 +504,7 @@
     <ClInclude Include="InputSystem.h" />
     <ClInclude Include="IntKeyGenerater.h" />
     <ClInclude Include="LayeredGPSOWrapper.h" />
+    <ClInclude Include="LightRegistry.h" />
     <ClInclude Include="MathStructures.h" />
     <ClInclude Include="MeshBuffer.h" />
     <ClInclude Include="Model.h" />
@@ -378,6 +518,7 @@
     <ClInclude Include="PlayerCamera.h" />
     <ClInclude Include="PlayerControlComponent.h" />
     <ClInclude Include="PlayerPrefab.h" />
+    <ClInclude Include="PointLight.h" />
     <ClInclude Include="Precompile.h" />
     <ClInclude Include="ReleaseSingleton.h" />
     <ClInclude Include="RenderTarget.h" />
@@ -391,6 +532,7 @@
     <ClInclude Include="SceneRegistry.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderRegistry.h" />
+    <ClInclude Include="ShadowGPSOWrapper.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="SharedPtr.h" />
     <ClInclude Include="SimulationBody.h" />
@@ -403,10 +545,16 @@
     <ClInclude Include="StageSceneBase.h" />
     <ClInclude Include="StandardGPSOWrapper.h" />
     <ClInclude Include="StaticCbAllocator.h" />
+    <ClInclude Include="StaticCbDirLightParam.h" />
+    <ClInclude Include="StaticCbLightVPMat.h" />
     <ClInclude Include="StaticCbOrthographicMat.h" />
     <ClInclude Include="StaticCbVPMat.h" />
     <ClInclude Include="StaticResource.h" />
     <ClInclude Include="StaticResourceRegistry.h" />
+    <ClInclude Include="StaticSbAllocator.h" />
+    <ClInclude Include="StaticSbPointLights.h" />
+    <ClInclude Include="StaticSrvShadowMap.h" />
+    <ClInclude Include="StaticSrvAllocator.h" />
     <ClInclude Include="StructuredBufferResource.h" />
     <ClInclude Include="SwapChain.h" />
     <ClInclude Include="TagSetting.h" />

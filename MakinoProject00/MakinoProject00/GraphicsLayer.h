@@ -20,6 +20,8 @@ enum class GraphicsLayer : GraphicsLayerUINT {
     UI,
     /** @brief Translucent object */
     Transparent,
+    /** @brief Shading that both writes and reads */
+    ReadWriteShading,
     /** @brief The maximum number of layer */
     Max,
 };
@@ -35,6 +37,10 @@ inline std::wstring GraphicsLayerEnumToString(GraphicsLayer layer) {
         return L"STANDARD";
     case GraphicsLayer::UI:
         return L"UI";
+    case GraphicsLayer::Transparent:
+        return L"Transparent";
+    case GraphicsLayer::ReadWriteShading:
+        return L"ReadWriteShading";
     case GraphicsLayer::Max:
         return L"MAX";
     default:

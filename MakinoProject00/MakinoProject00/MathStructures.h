@@ -41,6 +41,10 @@ public:
     /** @brief Move assignment operator */
     Vector& operator=(Vector&& other) noexcept { if (this != &other) { for (uint8_t i = 0; i < SIZE; ++i) { vals[i] = std::move(other.vals[i]); } } return *this; }
 
+    /** @brief Set from different size */
+    template<uint8_t OTHER_SIZE, Utl::Type::Traits::IsFloatingPoint... Args>
+    void SetFromDiffSize(const Vector<T, OTHER_SIZE>& copy, Args... args);
+
     /** @brief Dot product */
     const T Dot(const Vector& other) const {
         T ret = T(0);
@@ -505,6 +509,26 @@ private:
     T vals[4];
 };
 
+// Set from different size
+template<Utl::Type::Traits::IsFloatingPoint T, uint8_t SIZE>
+template<uint8_t OTHER_SIZE, Utl::Type::Traits::IsFloatingPoint... Args>
+void Vector<T, SIZE>::SetFromDiffSize(const Vector<T, OTHER_SIZE>& copy, Args... args) {
+    static_assert(sizeof...(args) <= (SIZE - OTHER_SIZE), "Too many arguments provided to Vector constructor");
+
+    if constexpr (SIZE <= OTHER_SIZE) {
+        for (uint8_t i = 0; i < SIZE; ++i) {
+            vals[i] = copy[i];
+        }
+    }
+    else {
+        uint8_t i = 0;
+        for (; i < OTHER_SIZE; ++i) {
+            vals[i] = copy[i];
+        }
+
+        (..., (vals[i++] = args));
+    }
+}
 
 /** @brief float * Vector operator */
 template<Utl::Type::Traits::IsFloatingPoint T, uint8_t SIZE>

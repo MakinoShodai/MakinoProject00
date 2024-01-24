@@ -18,8 +18,6 @@ class ACRenderTarget {
 public:
     /** @brief Get pointer to current applied render target */
     static ACRenderTarget* GetCurrentAppliedRenderTarget() { return ms_currentAppliedRenderTarget; }
-    /** @brief Get pointer to current applied depth stencil */
-    static CDepthStencil* GetCurrentAppliedDepthStencil() { return ms_currentAppliedDepthStencil; }
 
     /** @brief Get CPU handle for rtv descriptor heap */
     virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE GetCPUHandleRTV() const = 0;
@@ -67,8 +65,6 @@ protected:
 protected:
     /** @brief Pointer to current applied render target */
     static ACRenderTarget* ms_currentAppliedRenderTarget;
-    /** @brief Pointer to current applied depth stencil */
-    static CDepthStencil* ms_currentAppliedDepthStencil;
     /** @brief Width of render target */
     UINT m_width;
     /** @brief Height of render target */

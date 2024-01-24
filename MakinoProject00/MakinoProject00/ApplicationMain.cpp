@@ -69,12 +69,6 @@ LRESULT WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
 
 // Main funciton for application
 void ApplicationMain() {
-    // Initialize the thread pool
-    CThreadPool::GetMain().Initialize((std::max)((unsigned int)1, std::thread::hardware_concurrency()));
-
-    // Create a window
-    CApplication::GetMain().InitializeWnd((WNDPROC)WindowProcedure, WINDOW_WIDTH, WINDOW_HEIGHT, L"DirectX12 Project");
-
 #ifdef _DEBUG
     // Enable DirectX debug layer
     Dbg::EnableDirectXDebugLayer();
@@ -84,6 +78,12 @@ void ApplicationMain() {
     // Load dll of Pix
     Dbg::LoadMicrosoftPixDLL();
 #endif // _DEBUG
+
+    // Initialize the thread pool
+    CThreadPool::GetMain().Initialize((std::max)((unsigned int)1, std::thread::hardware_concurrency()));
+
+    // Create a window
+    CApplication::GetMain().InitializeWnd((WNDPROC)WindowProcedure, WINDOW_WIDTH, WINDOW_HEIGHT, L"DirectX12 Project");
 
     // Initialize directX
     CApplication::GetMain().InitializeDirectX();

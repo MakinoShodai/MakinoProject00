@@ -156,7 +156,7 @@ bool Mkpe::CollisionAlgorithm::BoxBox(Dbvt::BVOverlapPair* pair) {
     float Q33 = std::abs(R33);
 
     // Variable declarations
-    float s = (std::numeric_limits<float>::lowest)(); // Lowest penetration depth
+    float s = Utl::Limit::FLAOT_LOWEST; // Lowest penetration depth
     int   codeNum = 0; // Which code calculations have the greatest depth
     float bestDotA;    // Result of obbA projection to the axis with the lowest penetration depth
     float bestDotB;    // Result of obbA projection to the axis with the lowest penetration depth
@@ -418,8 +418,8 @@ bool Mkpe::CollisionAlgorithm::BoxBox(Dbvt::BVOverlapPair* pair) {
     // Calculate distances of the 8 vertices to rge midplane
     float vertexDistanceA[8];
     float vertexDistanceB[8];
-    float minDistA = (std::numeric_limits<float>::max)();
-    float minDistB = (std::numeric_limits<float>::max)();
+    float minDistA = Utl::Limit::FLAOT_HIGHEST;
+    float minDistB = Utl::Limit::FLAOT_HIGHEST;
     for (int i = 0; i < 8; ++i) {
         vertexDistanceA[i] = Utl::Calc::CalculateDistancePlanePoint(separationPlaneA, normal, vertexA[i]);
         if (vertexDistanceA[i] < minDistA) {

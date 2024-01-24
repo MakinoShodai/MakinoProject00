@@ -34,13 +34,23 @@ struct RASTER_STANDARD {
 #ifndef _SPRITE
     float3 normal : NORMAL0;
 #endif // !_SPRITE
+    
+#ifdef _OUT_WORLDPOS
+    float4 worldPos : POSITION0;
+#endif // _OUT_WORLDPOS
+    
+#ifdef _OUT_CASCADE_LIGHTPOS
+    float depthVS : TEXCOORD1;
+#endif // _OUT_CASCADE_LIGHTPOS
 };
 
 RASTER_STANDARD main(INPUT_STANDARD input) {
     RASTER_STANDARD output;
     
+    // Convert float3 to float4
     output.pos = float4(input.pos, 1.0f);
     
+    // Apply animation matrices
 #ifdef _ANIM
     float4x4 animMat =
         DYNAMIC(animMatrices)[input.index.x] * input.weight.x +
@@ -50,14 +60,28 @@ RASTER_STANDARD main(INPUT_STANDARD input) {
     output.pos = mul(animMat, output.pos);
 #endif // _ANIM
     
+    // Apply world matrix
     output.pos = mul(worldMat.world, output.pos);
+    // Set output variable for world position
+#ifdef _OUT_WORLDPOS
+    output.worldPos = output.pos;
+#endif // _OUT_WORLDPOS
+    
+    // Apply view projection matrix
 #ifndef _2D
     output.pos = mul(viewProjMat.viewProj, output.pos);
 #else
     output.pos = mul(orthographicProjMat.proj, output.pos);
 #endif // !_2D
+    
+#ifdef _OUT_CASCADE_LIGHTPOS
+    output.depthVS = output.pos.w;
+#endif // _OUT_CASCADE_LIGHTPOS
+    
+    // Copy texture coordinate
     output.uv = input.uv;
 
+    // Apply rotation component of world matrix to normal svector
 #ifndef _SPRITE
     output.normal = mul((float3x3)worldMat.world, input.normal);
 #endif // !_SPRITE

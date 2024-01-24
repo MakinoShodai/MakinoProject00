@@ -218,6 +218,10 @@ namespace Utl {
     namespace Limit {
         /** @brief Int lowest value */
         constexpr int INT_LOWEST = (std::numeric_limits<int>::lowest)();
+        /** @brief float lowest value */
+        constexpr float FLAOT_LOWEST = (std::numeric_limits<float>::lowest)();
+        /** @brief float highest value */
+        constexpr float FLAOT_HIGHEST = (std::numeric_limits<float>::max)();
     }
 
     /** @brief Value used for geometric calculations */

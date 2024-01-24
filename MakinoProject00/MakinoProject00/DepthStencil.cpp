@@ -2,6 +2,9 @@
 #include "CommandManager.h"
 #include "UtilityForException.h"
 
+// Initialize
+CDepthStencil* CDepthStencil::ms_currentAppliedDepthStencil = nullptr;
+
 // Create depth stencil resource
 void CDepthStencil::Create(DXGI_FORMAT format, UINT width, UINT height, D3D12_DEPTH_STENCIL_VALUE defaultClearValue) {
     // Create heap property
@@ -86,6 +89,44 @@ void CDepthStencil::Clear(D3D12_DEPTH_STENCIL_VALUE clearValue, D3D12_CLEAR_FLAG
     // Clear
     CCommandManager::GetMain().GetGraphicsCmdList()->ClearDepthStencilView(
         GetCPUHandleDSV(), clearFlag, clearValue.Depth, clearValue.Stencil, 0, nullptr);
+}
+
+// Apply this depth stencil to the destination depth stencil by calling 'OMSetRenderTargets'
+void CDepthStencil::Apply() {
+    // Create viewport
+    D3D12_VIEWPORT viewPort = {};
+    viewPort.Width = (FLOAT)m_srvPropertyForDepth->width;   // Set the resolution as it is
+    viewPort.Height = (FLOAT)m_srvPropertyForDepth->height; // Set the resolution as it is
+    viewPort.TopLeftX = 0;                                  // Set the resolution as it is
+    viewPort.TopLeftY = 0;                                  // Set the resolution as it is
+    viewPort.MaxDepth = 1.0f;                               // Depth is 0～1
+    viewPort.MinDepth = 0.0f;                               // Depth is 0～1
+    // Create scissor rectangle
+    D3D12_RECT scissorRect = {};
+    scissorRect.left = 0;                                                       // No clipping
+    scissorRect.top = 0;                                                        // No clipping
+    scissorRect.right = scissorRect.left + (LONG)m_srvPropertyForDepth->width;  // No clipping
+    scissorRect.bottom = scissorRect.top + (LONG)m_srvPropertyForDepth->height; // No clipping
+    // Set viewport and scissor rectangle
+    auto cmdList = CCommandManager::GetMain().GetGraphicsCmdList();
+    cmdList->RSSetViewports(1, &viewPort);
+    cmdList->RSSetScissorRects(1, &scissorRect);
+
+    // State check process
+    CheckStateAtApplying();
+
+    // Apply
+    D3D12_CPU_DESCRIPTOR_HANDLE handle = GetCPUHandleDSV();
+    cmdList->OMSetRenderTargets(0, nullptr, FALSE, &handle);
+}
+
+// State check process to be called when applying a destination for drawing
+void CDepthStencil::CheckStateAtApplying() {
+    // Check state
+    StateTransition(D3D12_RESOURCE_STATE_DEPTH_WRITE);
+
+    // Set the sent depth stencil to the current applied depth stencil
+    ms_currentAppliedDepthStencil = this;
 }
 
 // Convert DSV format to SRV format for depth buffer
