@@ -111,6 +111,8 @@ public:
 
     /** @brief Get pointer to array of elements */
     const T* GetArrayPtr() const { return vals; }
+    /** @brief Get pointer to array of elements */
+    T* GetArrayPtr() { return vals; }
 
     /** @brief Get the first element */
     T& x() { return vals[0]; }

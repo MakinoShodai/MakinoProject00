@@ -1,4 +1,4 @@
-#include "StageSceneBase.h"
+#include "StandardRenderPass.h"
 #include "ShaderRegistry.h"
 #include "PlayerPrefab.h"
 #include "DebugCamera.h"
@@ -11,7 +11,7 @@
 const Colorf SCREEN_CLEAR_COLOR = Colorf(0.0f, 0.0f, 0.0f, 1.0f);
 
 // Starting process
-void CStageSceneBase::Start() {
+void CStandardRenderPass::Start() {
     // Get static cb allocator
     m_staticCbLightVP = CStaticResourceRegistry::GetAny().GetStaticResource<CStaticCbLightVP>();
     m_staticShadowMapSrv[0] = CStaticResourceRegistry::GetAny().GetStaticResource<CStaticSrvShadowMap1>();
@@ -29,10 +29,10 @@ void CStageSceneBase::Start() {
     }
 
     // Call prefab function of GPSO wrapper for standard layer
-    m_standardGpso.Prefab(this);
-    m_transparentGpso.Prefab(this);
-    m_writeShadowGpso.Prefab(this);
-    m_shadingGpso.Prefab(this);
+    m_standardGpso.Prefab(m_scene.Get());
+    m_transparentGpso.Prefab(m_scene.Get());
+    m_writeShadowGpso.Prefab(m_scene.Get());
+    m_shadingGpso.Prefab(m_scene.Get());
 
     // Create gpso2D
     {
@@ -42,46 +42,12 @@ void CStageSceneBase::Start() {
         gpsoSetting2D.rtvFormats.push_back(std::make_pair(DXGI_FORMAT_R8G8B8A8_UNORM_SRGB, Gpso::BlendStateSetting::Alpha));
         gpsoSetting2D.rasterizerState.cullMode = D3D12_CULL_MODE_BACK;
         gpsoSetting2D.depth.type = Gpso::DepthTestType::ReadWrite;
-        m_uiGpso.Create(this, L"UI GPSO", gpsoSetting2D, { GraphicsLayer::UI }, { GraphicsComponentType::SpriteUI });
+        m_uiGpso.Create(m_scene.Get(), L"UI GPSO", gpsoSetting2D, { GraphicsLayer::UI }, { GraphicsComponentType::SpriteUI });
     }
-
-    // Provisional terrain
-    {
-        auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(0.0f, -0.5f, 0.0f), Vector3f(100.0f, 1.0f, 100.0f)));
-        obj->AddComponent<CBoxCollider3D>();
-        obj->AddComponent<CColorOnlyShape>(GraphicsLayer::ReadWriteShading, ShapeKind::Box, Colorf(0.1f, 0.1f, 0.1f, 1.0f));
-    }
-
-    {
-        auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(0.0f, 10.0f, 0.0f), Vector3f(10.0f, 1.0f, 10.0f)));
-        obj->AddComponent<CColorOnlyShape>(GraphicsLayer::ReadWriteShading, ShapeKind::Box, Colorf(1.0f, 1.0f, 1.0f, 1.0f));
-    }
-
-    {
-        auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(0.0f, 1.0f, 0.0f), Vector3f(1.0f, 1.0f, 1.0f)));
-        obj->AddComponent<CPointLightComponent>(Colorf(1.0f, 1.0f, 1.0f, 1.0f));
-    }
-
-    // Box
-    {
-        auto obj = CreateGameObject<CGameObject>(Transformf(Vector3f(30.0f, 10.0f, 0.0f), Vector3f::Ones() * 10.0f, Utl::DEG_2_RAD * Vector3f(0.0f, 0.0f, 0.0f)));
-        obj->AddComponent<CSphereCollider3D>();
-        obj->AddComponent<CColorOnlyShape>(GraphicsLayer::ReadWriteShading, ShapeKind::Sphere, Colorf(1.0f, 1.0f, 1.0f, 1.0f));
-        auto rb = obj->AddComponent<CRigidBody>();
-        rb->SetBodyType(RigidBodyType::Dynamic);
-        rb->SetMaterial(RigidBodyMaterial(0.5f, 1.0f));
-    }
-
-    // Create prefabs
-    CreateGameObject<CDirectionalLightPrefab>(Transformf(Vector3f(0.0f, 10.0f, 0.0f)));
-    CreateGameObject<CPlayerPrefab>(Transformf(Vector3f(0.0f, 0.0f, 0.0f)));
-    CreateGameObject<CPlayerCameraPrefab>(Transformf(Vector3f(0.0f, 0.0f, -5.0f)));
-
-    CreateGameObject<CDebugCameraPrefab>();
 }
 
 // Drawing process
-void CStageSceneBase::Draw() {
+void CStandardRenderPass::Draw() {
     // Clear depth stencil views
     m_dsv3D.Clear();
     m_dsv2D.Clear();
@@ -117,7 +83,7 @@ void CStageSceneBase::Draw() {
     // Command function of GPSO wrapper for standard layer
     m_standardGpso.SetCommand();
     // Command function of GPSO wrapper for transparent layer
-    //m_transparentGpso.SetCommand();
+    m_transparentGpso.SetCommand();
 
     // Apply 2D depth stencil view
     rtv->Apply(&m_dsv2D);

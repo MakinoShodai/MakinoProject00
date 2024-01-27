@@ -14,7 +14,7 @@
 
 // Forward declarations
 class CGameObject;
-class ACScene;
+class CScene;
 class CCallbackSystem;
 class ACCollider3D;
 class CContactOpponent;
@@ -94,9 +94,9 @@ public:
     const Transformf& GetTransform() const;
 
     /** @brief Get scene where this component exists  */
-    CWeakPtr<ACScene> GetScene();
+    CWeakPtr<CScene> GetScene();
     /** @brief Get scene where this component exists  */
-    CWeakPtr<const ACScene> GetScene() const;
+    CWeakPtr<const CScene> GetScene() const;
 
     /** @brief Get the callback system that the gameobject has */
     CCallbackSystem* GetCallbackSystem();

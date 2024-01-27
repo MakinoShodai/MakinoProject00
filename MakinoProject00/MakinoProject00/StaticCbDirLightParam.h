@@ -42,10 +42,10 @@ struct DirLightParam {
 class CStaticCbDirLightParam : public ACStaticCbAllocator<DirLightParam> {
 public:
     /** @brief Constructor */
-    CStaticCbDirLightParam() : ACStaticCbAllocator("DirLightParam"), m_directionalLight(nullptr) {}
+    CStaticCbDirLightParam() : ACStaticCbAllocator("DirLightParam") {}
 
     /** @brief Scene start processing */
-    void Start(ACScene* scene) override;
+    void Start(CScene* scene) override;
 
     /** @brief Set class for computing all light-view projection matrices */
     void SetLightVPCalculater(CSharedPtr<CLightVPCalculator> calculater) { m_lightVPCaculator = calculater; }
@@ -57,8 +57,6 @@ protected:
 private:
     /** @brief Registry class for lights */
     CWeakPtr<CLightRegistry> m_lightRegistry;
-    /** @brief Directional light component that directional light object has */
-    CWeakPtr<CDirectionalLightComponent> m_directionalLight;
     /** @brief Class for computing all light-view projection matrices */
     CSharedPtr<CLightVPCalculator> m_lightVPCaculator;
 };

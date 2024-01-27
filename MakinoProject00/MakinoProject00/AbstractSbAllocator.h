@@ -138,8 +138,7 @@ Utl::Dx::CPU_DESCRIPTOR_HANDLE ACSbAllocater<StructBuffType>::DirectDataCopy(Mes
     // If mesh data doesn't exist in the map, return null data
     auto it = m_dataPerMesh.find(key);
     if (it == m_dataPerMesh.end()) {
-        OutputDebugString(L"Warning! Structured buffer data for a sent mesh doesn't exist map!\n");
-        return Utl::Dx::CPU_DESCRIPTOR_HANDLE();
+        throw Utl::Error::CStopDrawingSceneError(L"Warning! Structured buffer data for a sent mesh doesn't exist map!\n");
     }
 
     // Perform map operation

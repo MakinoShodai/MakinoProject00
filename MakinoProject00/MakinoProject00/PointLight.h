@@ -22,6 +22,11 @@ public:
     CPointLightComponent(CGameObject* owner, Colorf color = Colorf::Ones());
 
     /**
+       @brief Awake processing
+    */
+    void Awake() override;
+
+    /**
        @brief Starting process
     */
     void Start() override;

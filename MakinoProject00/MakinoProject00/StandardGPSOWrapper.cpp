@@ -2,7 +2,7 @@
 #include "ShaderRegistry.h"
 
 // Prefab helper function
-void ACStandardGPSOWrapper::PrefabHelper(std::wstring name, ACScene* scene, std::initializer_list<GraphicsLayer> useLayers, bool isDepthWrite) {
+void ACStandardGPSOWrapper::PrefabHelper(std::wstring name, CScene* scene, std::initializer_list<GraphicsLayer> useLayers, bool isDepthWrite) {
     // Default setting (For BasicModel and TexShape)
     LayeredGPSOSetting setting({ GraphicsComponentType::BasicModel, GraphicsComponentType::TexShape });
     setting.defaultSetting.vs = CShaderRegistry::GetAny().GetVS(VertexShaderType::Standard3D);
@@ -42,11 +42,11 @@ void ACStandardGPSOWrapper::PrefabHelper(std::wstring name, ACScene* scene, std:
 }
 
 // Prefab function
-void CStandardGPSOWrapper::Prefab(ACScene* scene) {
+void CStandardGPSOWrapper::Prefab(CScene* scene) {
     PrefabHelper(L"Standard GPSO", scene, { GraphicsLayer::Standard }, true);
 }
 
 // Prefab function
-void CTransparentGPSOWrapper::Prefab(ACScene* scene) {
+void CTransparentGPSOWrapper::Prefab(CScene* scene) {
     PrefabHelper(L"Transparent GPSO", scene, { GraphicsLayer::Transparent }, false);
 }

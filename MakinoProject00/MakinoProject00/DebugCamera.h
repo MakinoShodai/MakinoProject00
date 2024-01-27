@@ -45,5 +45,6 @@ public:
     */
     void Prefab() override;
 };
+REGISTER_PREFABCLASS(CDebugCameraPrefab);
 
 #endif // !__DEBUG_CAMERA_H__

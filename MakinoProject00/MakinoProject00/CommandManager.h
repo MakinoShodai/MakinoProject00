@@ -50,6 +50,16 @@ public:
     */
     void UnsafeGraphicsCommandsExecute();
 
+    /**
+       @brief Clear the current command list
+    */
+    void ClearCurrentCommandList();
+
+    /**
+       @brief Secure command queues and command lists
+    */
+    void SecureCommands();
+
     /** @brief Get command queue */
     ID3D12CommandQueue* GetCommandQueue() { return m_cmdQueue.Get(); }
     /** @brief Get command list for graphics */

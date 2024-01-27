@@ -12,6 +12,7 @@
 #include "StaticCbAllocator.h"
 #include "DirectionalLight.h"
 #include "SharedPtr.h"
+#include "LightRegistry.h"
 
 /** @brief Number of cascade shadow map */
 const UINT CASCADE_NUM = 3;
@@ -33,8 +34,8 @@ public:
     */
     CLightVPCalculator();
 
-    /** @brief Set directional light component */
-    void SetDirectionalLight(CWeakPtr<CDirectionalLightComponent> directionalLight) { m_directionalLight = directionalLight; }
+    /** @brief Set light registry */
+    void SetLightRegistry(CWeakPtr<CLightRegistry> lightRegistry) { m_lightRegistry = lightRegistry; }
 
     /**
        @brief Calculate all light view projection matrices and return it
@@ -67,15 +68,16 @@ public:
 private:
     /**
        @brief Calculate the shadow camera view projection matrix of the entire frustum
+       @param lightDir Direction vector of directional light
        @param frustumCorners Coordinates of each vertex of the entire frustum in world space
        @param toUVSpaceMatrix Matrix for offsetting from [-1, 1] projection space to [0, 1] UV space
        @param entireShadowMatrix Return variable that receives the shadow camera view projection matrix of the entire frustum
     */
-    void CalculateShadowMatrix(const Vector3f* frustumCorners, const DirectX::XMMATRIX& toUVSpaceMatrix, DirectX::XMMATRIX* entireShadowMatrix);
+    void CalculateShadowMatrix(const Vector3f& lightDir, const Vector3f* frustumCorners, const DirectX::XMMATRIX& toUVSpaceMatrix, DirectX::XMMATRIX* entireShadowMatrix);
 
 private:
-    /** @brief Directional light component that directional light object has */
-    CWeakPtr<CDirectionalLightComponent> m_directionalLight;
+    /** @brief Light registry */
+    CWeakPtr<CLightRegistry> m_lightRegistry;
     /** @brief All light view projection matrices */
     AllLightVP m_lightVPs;
     /** @brief Have you finished computing the values in current frame? */
@@ -99,7 +101,7 @@ public:
     CStaticCbLightVP();
 
     /** @brief Scene start processing */
-    void Start(ACScene* scene) override;
+    void Start(CScene* scene) override;
 
     /**
        @brief Advance to the next cascade shadow map

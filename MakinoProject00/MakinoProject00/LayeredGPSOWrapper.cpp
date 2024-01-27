@@ -9,7 +9,7 @@ CLayeredGPSOWrapper::CLayeredGPSOWrapper()
 { }
 
 // Create graphics pipeline states
-void CLayeredGPSOWrapper::Create(ACScene* scene, const std::wstring gpsoName, 
+void CLayeredGPSOWrapper::Create(CScene* scene, const std::wstring gpsoName, 
     const LayeredGPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers) {
     if (m_gpso.size() > 0) {
         throw Utl::Error::CFatalError(L"This gpso wrapper has been already created! : " + gpsoName);
@@ -66,6 +66,6 @@ void CLayeredGPSOWrapper::EndFrameProcess() {
 }
 
 // Function that do nothing to avoid accidental calls from the outside
-void ACLayeredGPSOWrapperPrefab::Create(ACScene* scene, const std::wstring gpsoName, const LayeredGPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers) {
+void ACLayeredGPSOWrapperPrefab::Create(CScene* scene, const std::wstring gpsoName, const LayeredGPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers) {
     throw Utl::Error::CFatalError(L"This is function that does nothing");
 }

@@ -2,7 +2,7 @@
 #include "Scene.h"
 
 // Scene start processing
-void CStaticCbVP::Start(ACScene* scene) {
+void CStaticCbVP::Start(CScene* scene) {
     m_cameraRegistry = scene->GetCameraRegistry();
 }
 
@@ -19,7 +19,5 @@ Utl::Dx::CPU_DESCRIPTOR_HANDLE CStaticCbVP::AllocateData() {
         }
     }
 
-    OutputDebugString(L"Warning! Couldn't get the render target when calculating a view projection matrix.\n");
-    // If not found, return the previous one as is
-    return GetPrevAllocatedData();
+    throw Utl::Error::CStopDrawingSceneError(L"Warning! Couldn't get the render target when calculating a view projection matrix.\n");
 }

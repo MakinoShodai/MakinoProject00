@@ -10,11 +10,11 @@ ScenePhasesWrapper Mkpe::CPhysicsWorld::ms_phaseForRotateCheck = {};
 float Mkpe::CPhysicsWorld::ms_currentTimeStep = 0.0f;
 
 // Constructor
-Mkpe::CPhysicsWorld::CPhysicsWorld(ACScene* scene)
+Mkpe::CPhysicsWorld::CPhysicsWorld(CScene* scene)
     : m_scene(scene)
     , m_solverDirector(this)
     , m_bvTree()
-    , m_fixedTimeStep(CAppClock::GetMain().GetFrameTime())
+    , m_fixedTimeStep(CAppClock::GetAny().GetFrameTime())
     , m_maxSimulationOnFrame(5)
     , m_maxTimeStep(0.1f)
     , m_totalSurplusTime(0.0f) 

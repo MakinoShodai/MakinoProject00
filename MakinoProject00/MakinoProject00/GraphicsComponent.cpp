@@ -4,6 +4,7 @@
 #include "GameObject.h"
 #include "Scene.h"
 #include "DescriptorHeapPool.h"
+#include "SceneRegistry.h"
 
 // Constructor
 ACGraphicsComponent::ACGraphicsComponent(GraphicsComponentType type, CGameObject* owner, GraphicsLayer layer)
@@ -17,24 +18,46 @@ ACGraphicsComponent::ACGraphicsComponent(GraphicsComponentType type, CGameObject
 
 // Destructor
 ACGraphicsComponent::~ACGraphicsComponent() {
+}
+
+// Processing when this component is added to an object
+void ACGraphicsComponent::Awake() {
+#ifdef _EDITOR
+    if (CSceneRegistry::GetAny().IsEditorMode()) {
+        // Register this graphics component in the registry
+        m_gameObj->GetScene()->GetGraphicsLayerRegistry()->Register(this);
+    }
+#endif // _EDITOR
+}
+
+// Processing for the first draw frame
+void ACGraphicsComponent::Start() {
+#ifdef _EDITOR
+    if (false == CSceneRegistry::GetAny().IsEditorMode()) { 
+        // Register this graphics component in the registry
+        m_gameObj->GetScene()->GetGraphicsLayerRegistry()->Register(this);
+    }
+#else
+    // Register this graphics component in the registry
+    m_gameObj->GetScene()->GetGraphicsLayerRegistry()->Register(this);
+#endif // !_EDITOR
+
+}
+
+// Process to be called at instance destruction
+void ACGraphicsComponent::OnDestroy() {
     // Release structured buffer corresponding to this graphics component
     m_gameObj->GetScene()->GetDynamicSbRegistry()->ReleaseBuffer(this);
-    
+
     // Release meshes keys
     CIntKeyGenerater* meshKeyGenerator = m_gameObj->GetScene()->GetMeshKeyGenerater();
     UINT meshNum = m_meshWrappers.Size();
     for (UINT i = 0; i < meshNum; ++i) {
         meshKeyGenerator->ReleaseKey(m_meshWrappers[i].key);
-    }
+}
 
     // Exclude this graphcis component from the registry
     m_gameObj->GetScene()->GetGraphicsLayerRegistry()->Exclude(this);
-}
-
-// Processing for the first draw frame
-void ACGraphicsComponent::Start() {
-    // Register this graphics component in the registry
-    m_gameObj->GetScene()->GetGraphicsLayerRegistry()->Register(this);
 }
 
 // Ask for textures assignment information to be built

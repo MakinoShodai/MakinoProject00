@@ -193,12 +193,6 @@
     <Filter Include="ヘッダー ファイル\Framework\Physics\Engine">
       <UniqueIdentifier>{18f5a1aa-114a-4bb1-b5f2-b3b486590fdb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Game\Scene">
-      <UniqueIdentifier>{e1971948-7afa-4e69-88c7-19442faf6944}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Game\Scene">
-      <UniqueIdentifier>{61d64c28-3607-4c6e-9516-a80c4a01dbdb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ヘッダー ファイル\Game\Player">
       <UniqueIdentifier>{8d01ca90-e30b-4376-a5a7-568823aab609}</UniqueIdentifier>
     </Filter>
@@ -228,6 +222,18 @@
     </Filter>
     <Filter Include="リソース ファイル\PixelShader\NPRShading">
       <UniqueIdentifier>{2725d695-6887-4026-8dbb-7ef8ddfbd206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\imgui">
+      <UniqueIdentifier>{d8d5491e-fa68-4887-b1dd-88eaf4b85603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\imgui">
+      <UniqueIdentifier>{98f0b488-f5e1-473b-bac6-df259f589a32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Standard\RenderPass">
+      <UniqueIdentifier>{a86da532-3637-4a69-ae5a-91c2bd80f767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Standard\RenderPass">
+      <UniqueIdentifier>{6aa1e60a-82d2-4050-bf34-234d70e5a063}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -420,15 +426,6 @@
     <ClCompile Include="ModelLoadSetting.cpp">
       <Filter>ソース ファイル\Game\Setting</Filter>
     </ClCompile>
-    <ClCompile Include="SampleComponent.cpp">
-      <Filter>ソース ファイル\Framework\Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="SampleScene.cpp">
-      <Filter>ソース ファイル\Framework\Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="PhysicsSampleScene.cpp">
-      <Filter>ソース ファイル\Framework\Sample</Filter>
-    </ClCompile>
     <ClCompile Include="FreeCamera.cpp">
       <Filter>ソース ファイル\Framework\Standard\Component</Filter>
     </ClCompile>
@@ -504,9 +501,6 @@
     <ClCompile Include="TagSetting.cpp">
       <Filter>ソース ファイル\Game\Setting</Filter>
     </ClCompile>
-    <ClCompile Include="PhysicsSampleComponent.cpp">
-      <Filter>ソース ファイル\Framework\Sample</Filter>
-    </ClCompile>
     <ClCompile Include="ColliderTag.cpp">
       <Filter>ソース ファイル\Game\Setting</Filter>
     </ClCompile>
@@ -518,9 +512,6 @@
     </ClCompile>
     <ClCompile Include="ContactPointMap.cpp">
       <Filter>ソース ファイル\Framework\PhysicsEngine\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="StageSceneBase.cpp">
-      <Filter>ソース ファイル\Game\Scene</Filter>
     </ClCompile>
     <ClCompile Include="PlayerPrefab.cpp">
       <Filter>ソース ファイル\Game\Player</Filter>
@@ -563,6 +554,45 @@
     </ClCompile>
     <ClCompile Include="StaticSbPointLights.cpp">
       <Filter>ソース ファイル\Game\Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_demo.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx12.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_win32.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImguiHelper.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="StandardRenderPass.cpp">
+      <Filter>ソース ファイル\Framework\Standard\RenderPass</Filter>
+    </ClCompile>
+    <ClCompile Include="SamplePrefab.cpp">
+      <Filter>ソース ファイル\Framework\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityForFile.cpp">
+      <Filter>ソース ファイル\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneFileSystem.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderPassAsset.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -876,23 +906,11 @@
     <ClInclude Include="ModelLoadSetting.h">
       <Filter>ヘッダー ファイル\Game\Setting</Filter>
     </ClInclude>
-    <ClInclude Include="SampleComponent.h">
-      <Filter>ヘッダー ファイル\Framework\Sample</Filter>
-    </ClInclude>
-    <ClInclude Include="SampleScene.h">
-      <Filter>ヘッダー ファイル\Framework\Sample</Filter>
-    </ClInclude>
-    <ClInclude Include="PhysicsSampleScene.h">
-      <Filter>ヘッダー ファイル\Framework\Sample</Filter>
-    </ClInclude>
     <ClInclude Include="UtilityForDebug.h">
       <Filter>ヘッダー ファイル\Framework\Utility</Filter>
     </ClInclude>
     <ClInclude Include="FreeCamera.h">
       <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="PhysicsSampleComponent.h">
-      <Filter>ヘッダー ファイル\Framework\Sample</Filter>
     </ClInclude>
     <ClInclude Include="UtilityForComplexCalculations.h">
       <Filter>ヘッダー ファイル\Framework\Utility</Filter>
@@ -978,9 +996,6 @@
     <ClInclude Include="IDResource.h">
       <Filter>ヘッダー ファイル\Framework\Useful</Filter>
     </ClInclude>
-    <ClInclude Include="StageSceneBase.h">
-      <Filter>ヘッダー ファイル\Game\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="PlayerPrefab.h">
       <Filter>ヘッダー ファイル\Game\Player</Filter>
     </ClInclude>
@@ -1034,6 +1049,48 @@
     </ClInclude>
     <ClInclude Include="StaticSbPointLights.h">
       <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx12.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_win32.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImguiHelper.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityForFile.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="StandardRenderPass.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\RenderPass</Filter>
+    </ClInclude>
+    <ClInclude Include="SamplePrefab.h">
+      <Filter>ヘッダー ファイル\Framework\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderPassAsset.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneFileSystem.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -59,11 +59,7 @@ CDebugColliderShape::CDebugColliderShape(CGameObject* owner, GraphicsLayer layer
     SetMeshInfo(0, shapeMesh.GetVertexWeakPtr(), shapeMesh.GetIndexWeakPtr(), shapeMesh.GetTopologyType());
 
     // Set color
-#ifdef _FOR_PHYSICS
-    SetColor(Colorf(1.0f, 1.0f, 1.0f, 1.0f));
-#else
     SetColor(Colorf(0.0f, 1.0f, 0.0f, 0.4f));
-#endif // _FOR_PHYSICS
 }
 
 // Initialize

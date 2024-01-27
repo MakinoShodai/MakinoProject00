@@ -1,6 +1,6 @@
 ﻿/**
  * @file   Scene.h
- * @brief  This file handles abstract class for scene.
+ * @brief  This file handles scene class.
  * 
  * @author Shodai Makino
  * @date   2023/12/1
@@ -19,35 +19,33 @@
 #include "PhysicsWorld.h"
 #include "ScenePhase.h"
 #include "LightRegistry.h"
+#include "RenderPassAsset.h"
 
-/** @brief Is this a child class of CGameObject? */
-template <class T>
-concept IsCGameObjectChild = std::is_base_of_v<CGameObject, T>;
-
-/** @brief This is abstract class for scene */
-class ACScene : public ACWeakPtrFromThis<ACScene> {
+/** @brief Scene class */
+class CScene : public ACWeakPtrFromThis<CScene> {
 public:
     /**
        @brief Constructor
+       @param renderPass Rendering pass asset to be used
     */
-    ACScene();
+    CScene(CUniquePtr<ACRenderPassAsset> renderPass);
 
     /**
-       @brief Destructor
+       @brief Processing when a scene is discarded
     */
-    virtual ~ACScene();
+    void OnDestroy();
 
     /**
        @brief Processing when switching to this scene
        @details
        This function is called outside the main thread
     */
-    virtual void Start() = 0;
+    void Start();
 
     /**
        @brief Drawing process
     */
-    virtual void Draw() = 0;
+    void Draw();
 
     /**
        @brief Updating process
@@ -85,10 +83,11 @@ public:
 
     /**
        @brief Create a game object
+       @param prefabName Prefab name of game object to be created
+       @param transform Transform of new game object
        @return Weak pointer to the created game object
     */
-    template<IsCGameObjectChild T, class... Args>
-    CWeakPtr<T> CreateGameObject(Args&&... args);
+    CWeakPtr<CGameObject> CreateGameObject(const std::string& prefabName, const Transformf& transform);
 
     /**
        @brief Find a game object from the array of game objects
@@ -139,7 +138,15 @@ public:
     /** @brief Logical conjunction with current update mode bits */
     bool CheckUpdateMode(UpdateMode mode) { return Utl::CheckEnumBit(m_currentUpdateMode & mode); }
 
-protected:
+#ifdef _EDITOR
+    /**
+       @brief Set rendering pass
+       @param renderPass Rendering pass asset to be used
+    */
+    void SetRenderPass(CUniquePtr<ACRenderPassAsset> renderPass);
+#endif // _EDITOR
+
+private:
     /**
        @brief Check if there are any objects to be destroyed, and if so, destroy them
     */
@@ -149,6 +156,8 @@ private:
     /** @brief Current phase of the scene currently being processed */
     static ScenePhase ms_currentPhase;
 
+    /** @brief Rendering pass asset to be used */
+    CUniquePtr<ACRenderPassAsset> m_renderPass;
     /** @brief Dynamic array of game objects */
     std::vector<CUniquePtrWeakable<CGameObject>> m_gameObjects;
     /** @brief Game objects to be created in the future */
@@ -178,17 +187,9 @@ private:
     UpdateMode m_scheduleUpdateMode;
 };
 
-// Create a game object
-template<IsCGameObjectChild T, class... Args>
-CWeakPtr<T> ACScene::CreateGameObject(Args&&... args) {
-    // Create game object to the array
-    m_gameObjectsToCreate.emplace_back(CUniquePtrWeakable<T>::Make(this, std::forward<Args>(args)...));
+/** @brief Is this a child of CScene? */
+template <class T>
+concept IsCSceneChild = std::is_base_of_v<CScene, T>;
 
-    // Call prefab processing
-    CWeakPtr<T> createdObject = m_gameObjectsToCreate.back().GetWeakPtr();
-    createdObject->Prefab();
-
-    return createdObject;
-}
 
 #endif // !__SCENE_H__

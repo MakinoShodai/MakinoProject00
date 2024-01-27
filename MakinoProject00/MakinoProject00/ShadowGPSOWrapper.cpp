@@ -2,7 +2,7 @@
 #include "ShaderRegistry.h"
 
 // Prefab function
-void CWriteShadowGPSOWrapper::Prefab(ACScene* scene) {
+void CWriteShadowGPSOWrapper::Prefab(CScene* scene) {
     // Default setting (For BasicModel and TexShape, ColorShape, DebugColliderShape)
     LayeredGPSOSetting setting({ GraphicsComponentType::BasicModel, GraphicsComponentType::TexShape, GraphicsComponentType::ColorShape, GraphicsComponentType::DebugColliderShape });
     setting.defaultSetting.vs = CShaderRegistry::GetAny().GetVS(VertexShaderType::LightVP3D);
@@ -19,7 +19,7 @@ void CWriteShadowGPSOWrapper::Prefab(ACScene* scene) {
 }
 
 // Prefab function
-void CShadingGPSOWrapper::Prefab(ACScene* scene) {
+void CShadingGPSOWrapper::Prefab(CScene* scene) {
     // Default setting (For BasicModel and TexShape, ColorShape, DebugColliderShape)
     LayeredGPSOSetting setting({ GraphicsComponentType::BasicModel, GraphicsComponentType::TexShape });
     setting.defaultSetting.vs = CShaderRegistry::GetAny().GetVS(VertexShaderType::LightPosWorldPos3D);
@@ -37,17 +37,6 @@ void CShadingGPSOWrapper::Prefab(ACScene* scene) {
         auto overrideSetting = setting.AddOverrideSetting({ GraphicsComponentType::ColorShape });
         overrideSetting->ps = CShaderRegistry::GetAny().GetPS(PixelShaderType::ShadingColor);
     }
-#ifdef _FOR_PHYSICS
-    // Override setting (For DebugColliderShape)
-    {
-        auto overrideSetting = setting.AddOverrideSetting({ GraphicsComponentType::DebugColliderShape });
-        overrideSetting->ps = CShaderRegistry::GetAny().GetPS(PixelShaderType::ShadingColor);
-        overrideSetting->rasterizerState = Gpso::RasterizerStateSetting();
-        overrideSetting->rasterizerState->cullMode = D3D12_CULL_MODE_BACK;
-        overrideSetting->rasterizerState->depthBiasParam.depthBias = -5;
-        overrideSetting->rasterizerState->depthBiasParam.slopeScaledDepthBias = -0.01f;
-    }
-#endif // _FOR_PHYSICS
 
     // Create
     CLayeredGPSOWrapper::Create(scene, L"Shading GPSO", setting, { GraphicsLayer::ReadWriteShading });

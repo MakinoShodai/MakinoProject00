@@ -103,6 +103,14 @@ void ACCollider3D::CheckScalingRotation() {
     }
 }
 
+// Update required values according to scale and rotation without checks
+void ACCollider3D::ScalingRotationUpdate() {
+    UpdateScalingOffset();
+    UpdateLocalBoudingVolume();
+    // Update scaling variables in derived classes
+    UpdateScaling();
+}
+
 // Is the ID sent the same as my leaf node ID?
 bool ACCollider3D::CheckMyLeafNodeID(Mkpe::Dbvt::NodeID id) const {
     return GetWrapper()->CheckMyLeafNodeID(id);

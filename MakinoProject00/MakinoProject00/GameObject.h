@@ -19,7 +19,7 @@
 #include "UpdateMode.h"
 
 // Forward declaration
-class ACScene;
+class CScene;
 
 /** @brief Is this a child component of ACComponent? */
 template <class T>
@@ -37,8 +37,9 @@ public:
     /**
        @brief Constructor
        @param ownerScene Scene that is the owner of this game object
+       @param transform Transform of this game object
     */
-    CGameObject(ACScene* ownerScene, Transformf transform = Transformf());
+    CGameObject(CScene* ownerScene, const Transformf& transform = Transformf());
     /**
        @brief Destructor
     */
@@ -115,6 +116,19 @@ public:
     CWeakPtr<T> GetComponent();
 
     /**
+       @brief Get type matched components
+       @return Dynamic array of weak pointer to the specified component
+    */
+    template<IsComponentChild T>
+    std::vector<CWeakPtr<T>> GetComponents();
+    /**
+       @brief Get type matched graphics components
+       @return Dynamic array of weak pointer to the specified graphics component
+    */
+    template<IsACGraphicsComponentChild T>
+    std::vector<CWeakPtr<T>> GetComponents();
+
+    /**
        @brief Add a component to the array of the components
        @param args Constructor arguments of the component except own object
        @return Weak pointer to the added component
@@ -135,9 +149,9 @@ public:
     inline bool CheckUpdateMode(UpdateMode mode) { return Utl::CheckEnumBit(mode & m_updateMode); }
 
     /** @brief Get weak pointer to the scene that is the owner of this game object */
-    CWeakPtr<ACScene> GetScene() { return m_scene; }
+    CWeakPtr<CScene> GetScene() { return m_scene; }
     /** @brief Get weak pointer to the scene that is the owner of this game object */
-    CWeakPtr<const ACScene> GetScene() const { return m_scene; }
+    CWeakPtr<const CScene> GetScene() const { return m_scene; }
     
     /** @brief Set name of this game object */
     void SetName(std::wstring name) { m_name = std::move(name); }
@@ -161,7 +175,7 @@ private:
 
 private:
     /** @brief Scene that is the owner of this game object */
-    CWeakPtr<ACScene> m_scene;
+    CWeakPtr<CScene> m_scene;
     /** @brief Transform that has position and scale, rotation */
     Transformf m_transform;
     /** @brief Bit string structure for observing whether the transform was changed in the previous process */
@@ -183,6 +197,58 @@ private:
     /** @brief Dynamic array of colliders in the array of components */
     std::vector<const ACCollider3D*> m_colliders;
 };
+
+/** @brief Class for registering game objects to map */
+class ACRegistrarForGameObject {
+public:
+    /** @brief Type of map associating class names with the function that created it */
+    using ClassMap = std::map<std::string, std::function<CGameObject* (CScene*, const Transformf&)>>;
+
+    /** @brief Constructor */
+    ACRegistrarForGameObject() = default;
+    /** @brief Destructor */
+    virtual ~ACRegistrarForGameObject() = default;
+
+    /**
+       @brief Create game object
+       @param className Name of class to be created
+       @param ownerScene Scene that is the owner of this game object
+       @param transform Transform of this game object
+       @return Returns a pointer to the class if it is successfully created, nullptr if not.
+    */
+    static CGameObject* CreateGameObject(const std::string& className, CScene* scene, const Transformf& transform);
+
+    /** @brief Get map associating class names with the function that created it */
+    static const ClassMap& GetClassMap() { return GetClassMapProtected(); }
+
+protected:
+    /** @brief Get map associating class names with the function that created it */
+    static ClassMap& GetClassMapProtected() { static ClassMap classMap; return classMap; }
+
+};
+
+/** @brief Is this a child class of CGameObject? */
+template <class T>
+concept IsCGameObjectChild = std::is_base_of_v<CGameObject, T>;
+
+/**
+   @brief Class for registering game object prefab to map
+   @details This class is called from a macro. Do not make the usual declarations
+*/
+template<IsCGameObjectChild T>
+class CRegistrarGameObjectPrefab : public ACRegistrarForGameObject {
+public:
+    /** @brief Constructor */
+    CRegistrarGameObjectPrefab(std::string className) {
+        ACRegistrarForGameObject::GetClassMapProtected().emplace(className, [](CScene* scene, const Transformf& transform)->CGameObject* { return new T(scene, transform); });
+    }
+
+    /** @brief Destructor */
+    ~CRegistrarGameObjectPrefab() override = default;
+};
+
+/** @brief Macro to register a Prefab and publish it to the inspector */
+#define REGISTER_PREFABCLASS(CLASS_NAME) static CRegistrarGameObjectPrefab<CLASS_NAME> registrar_##CLASS_NAME(#CLASS_NAME); 
 
 // Get a component
 template<IsComponentChild T>
@@ -208,6 +274,36 @@ CWeakPtr<T> CGameObject::GetComponent() {
     }
 
     return nullptr;
+}
+
+// Get Type matched components
+template<IsComponentChild T>
+std::vector<CWeakPtr<T>> CGameObject::GetComponents() {
+    std::vector<CWeakPtr<T>> ret;
+
+    for (auto& it : m_components) {
+        auto castIt = dynamic_cast<T*>(it.Get());
+        if (castIt != nullptr) {
+            ret.push_back(it.GetWeakPtr());
+        }
+    }
+
+    return ret;
+}
+
+// Get Type matched graphics components
+template<IsACGraphicsComponentChild T>
+std::vector<CWeakPtr<T>> CGameObject::GetComponents() {
+    std::vector<CWeakPtr<T>> ret;
+
+    for (auto& it : m_graphicsComponents) {
+        auto castIt = dynamic_cast<T*>(it.Get());
+        if (castIt != nullptr) {
+            ret.push_back(it.GetWeakPtr());
+        }
+    }
+
+    return ret;
 }
 
 // Add a component to the array of the components
@@ -236,8 +332,11 @@ CWeakPtr<T> CGameObject::AddComponent(GraphicsLayer layer, Args && ...args) {
     // Add component to array
     m_graphicsComponents.emplace_back(CUniquePtrWeakable<T>::Make(this, layer, std::forward<Args>(args)...));
 
+    CWeakPtr<T> addedComponent = m_graphicsComponents.back().GetWeakPtr();
+    addedComponent->Awake();
+
     // Return a weak pointer to the added component
-    return m_graphicsComponents.back().GetWeakPtr();
+    return addedComponent;
 }
 
 #endif // !__GAME_OBJECT_H__

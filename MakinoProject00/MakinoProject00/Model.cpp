@@ -1,6 +1,7 @@
 ﻿#include "Model.h"
 #include "ApplicationClock.h"
 #include "ModelRegistry.h"
+#include "SceneRegistry.h"
 
 // Constructor
 ACModel::ACModel(GraphicsComponentType type, CGameObject* owner, GraphicsLayer layer, bool isSubstance, int additionalTexID)
@@ -16,6 +17,17 @@ void ACModel::Start() {
         ACModel* transparent = GetTransparentComponent();
         if (transparent != nullptr) {
             transparent->ACGraphicsComponent::Start();
+        }
+    }
+}
+
+// Process to be called at instance destruction
+void ACModel::OnDestroy() {
+    ACGraphicsComponent::OnDestroy();
+    if (m_isSubstance) {
+        ACModel* transparent = GetTransparentComponent();
+        if (transparent != nullptr) {
+            transparent->ACGraphicsComponent::OnDestroy();
         }
     }
 }
@@ -98,6 +110,7 @@ CSkeletalModel::CSkeletalModel(CGameObject* owner, GraphicsLayer layer, const st
     // If this model has a translucent mesh, create a component for the translucent mesh
     if (GetStaticData()->GetTransparentMeshNum() > 0) {
         m_aspectParam.substanceParam.transparentMeshes = CUniquePtrWeakable<CSkeletalModel>(new CSkeletalModel(this));
+        m_aspectParam.substanceParam.transparentMeshes->Awake();
     }
 }
 

@@ -97,6 +97,11 @@ public:
     void CheckScalingRotation();
 
     /**
+       @brief Update required values according to scale and rotation without checks
+    */
+    void ScalingRotationUpdate();
+
+    /**
        @brief Is the ID sent the same as my leaf node ID?
        @param id ID to be checked
        @return Result

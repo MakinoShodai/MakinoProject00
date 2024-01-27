@@ -164,6 +164,9 @@ namespace Mkpe {
             StableHandleVector<CUniquePtr<Node>> nodes;
             /** @brief Pointer to root node */
             Node* rootNode;
+
+            /** @brief Constructor */
+            Tree() : rootNode(nullptr) {}
         };
 
         /** @brief Structure that manages cost of node */

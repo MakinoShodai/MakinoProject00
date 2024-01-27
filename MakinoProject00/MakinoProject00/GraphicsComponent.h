@@ -91,6 +91,11 @@ public:
     virtual ~ACGraphicsComponent();
 
     /**
+       @brief Processing when this component is added to an object
+    */
+    void Awake();
+
+    /**
        @brief Processing for the first draw frame
     */
     virtual void Start();
@@ -99,6 +104,11 @@ public:
        @brief Pre drawing processing
     */
     virtual void PreDraw() {}
+
+    /**
+       @brief Process to be called at instance destruction
+    */
+    virtual void OnDestroy();
 
     /**
        @brief Drawing conditions set in derived classes

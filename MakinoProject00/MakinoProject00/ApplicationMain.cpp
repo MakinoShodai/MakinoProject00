@@ -19,17 +19,21 @@
 #include "ModelLoadSetting.h"
 #include "TagSetting.h"
 #include "EncryptAssetMain.h"
-#include "SampleScene.h"
-#include "PhysicsSampleScene.h"
-#include "StageSceneBase.h"
+#include "ImguiHelper.h"
 
 // Width of window size
 const UINT WINDOW_WIDTH = 1920;
 // Height of window size
 const UINT WINDOW_HEIGHT = 1080;
 
+// Forward declare message handler from imgui_impl_win32.cpp
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
 // Window procedure
 LRESULT WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
+    if (ImGui_ImplWin32_WndProcHandler(hwnd, msg, wparam, lparam))
+        return true;
+
     switch (msg) {
     case WM_KEYDOWN:
         switch (wparam) {
@@ -87,9 +91,12 @@ void ApplicationMain() {
 
     // Initialize directX
     CApplication::GetMain().InitializeDirectX();
+
+    // Initialize imgui
+    CImguiHelper::GetMain().Initialize();
     
     // Initialize the application clock
-    CAppClock::GetMain().Initialize(60.0);
+    CAppClock::GetMain().Initialize(2000.0);
     
     // Initialize the command manager
     CCommandManager::GetMain().Initialize();
@@ -126,14 +133,8 @@ void ApplicationMain() {
     // Perform setting for collider tag
     TagSetting();
 
-    // Set first scene
-#ifdef _SAMPLE
-    CSceneRegistry::GetMain().Initialize<CSampleScene>();
-#elif _FOR_PHYSICS
-    CSceneRegistry::GetMain().Initialize<CPhysicsSampleScene>();
-#else
-    CSceneRegistry::GetMain().Initialize<CStageSceneBase>();
-#endif
+    // Initialize scene
+    CSceneRegistry::GetMain().Initialize();
 
     // Main loop
     MSG msg = {};

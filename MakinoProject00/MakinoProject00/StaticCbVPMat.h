@@ -19,7 +19,7 @@ public:
     CStaticCbVP() : ACStaticCbAllocator("ViewProjMat") {}
 
     /** @brief Scene start processing */
-    void Start(ACScene* scene) override;
+    void Start(CScene* scene) override;
 
 protected:
     /** @brief Allocate data */

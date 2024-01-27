@@ -37,7 +37,6 @@ namespace Utl {
            @attention You must always release the returned string using 'delete[]'
         */
         const char* ExtractString(const char* src);
-
     } // namespace Str
 } // namespace Utl
 

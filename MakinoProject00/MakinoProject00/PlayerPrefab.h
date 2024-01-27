@@ -25,6 +25,7 @@ public:
     void Prefab() override;
 
 };
+REGISTER_PREFABCLASS(CPlayerPrefab);
 
 #endif // !__PLAYER_PREFAB_H__
 
