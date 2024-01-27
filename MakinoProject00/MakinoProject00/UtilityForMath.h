@@ -109,6 +109,30 @@ struct Transformf {
     Transformf& operator=(Transformf&& other) = default;
 };
 
+/** @brief Transform that has Eular angle */
+struct EularTransformf {
+    /** @brief Position */
+    Vector3f pos;
+    /** @brief Scale */
+    Vector3f scale;
+    /** @brief Eular angle */
+    Vector3f angle;
+
+    /**
+       @brief Constructor
+       @param pos Position
+       @param scale Scale
+       @param angle Eular angle
+    */
+    EularTransformf(const Vector3f& pos = Vector3f::Zero(),
+        const Vector3f& scale = Vector3f::Ones(),
+        const Vector3f& angle = Vector3f::Zero())
+        : pos(pos)
+        , scale(scale)
+        , angle(angle)
+    {}
+};
+
 namespace Utl {
     /** @brief For mathematics */
     namespace Math {

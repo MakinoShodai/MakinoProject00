@@ -29,9 +29,9 @@ public:
     void Start() override;
 
     /**
-       @brief Update processing
+       @brief Destroy processing
     */
-    void Update() override {}
+    void OnDestroy() override;
 
     /**
        @brief Apply the rotation of this gameobject to this look direction vector

@@ -31,7 +31,7 @@ TransformObserveBits::TransformObserveBits()
 // Check bit strings in the specified phase
 bool TransformObserveBits::Check(ScenePhase phase, TransformObserve observe) const {
     // If the phase is currently processing, refer to the previous bitstring
-    if (phase == ACScene::GetCurrentScenePhase()) {
+    if (phase == CScene::GetCurrentScenePhase()) {
         switch (phase) {
         case ScenePhase::Update: 
             return (updateBit >> 3)      & (uint8_t)observe;
@@ -63,7 +63,7 @@ bool TransformObserveBits::Check(ScenePhase phase, TransformObserve observe) con
 
 // Transfer current bit strings of the current scene phase to previous bit strings
 void TransformObserveBits::Transfer() {
-    switch (ACScene::GetCurrentScenePhase()) {
+    switch (CScene::GetCurrentScenePhase()) {
     case ScenePhase::Update:
         updateBit      <<= 3;
         break;
@@ -83,7 +83,7 @@ void TransformObserveBits::Transfer() {
 
 // Stand a bit string of the current scene phase
 void TransformObserveBits::SetBit(TransformObserve observe) {
-    switch (ACScene::GetCurrentScenePhase()) {
+    switch (CScene::GetCurrentScenePhase()) {
     case ScenePhase::Update:
         updateBit      |= (uint8_t)observe;
         break;

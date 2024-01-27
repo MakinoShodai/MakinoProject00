@@ -21,7 +21,7 @@ protected:
        @param useLayers Layer to be used
        @param isDepthWrite Write to depth buffer?
     */
-    void PrefabHelper(std::wstring name, ACScene* scene, std::initializer_list<GraphicsLayer> useLayers, bool isDepthWrite);
+    void PrefabHelper(std::wstring name, CScene* scene, std::initializer_list<GraphicsLayer> useLayers, bool isDepthWrite);
 };
 
 /** @brief GPSO wrap class for standard layer */
@@ -31,7 +31,7 @@ public:
        @brief Prefab function
        @param scene The scene where this GPSO exists
     */
-    void Prefab(ACScene* scene) override;
+    void Prefab(CScene* scene) override;
 };
 
 /** @brief GPSO wrap class for transparent layer */
@@ -41,7 +41,7 @@ public:
        @brief Prefab function
        @param scene The scene where this GPSO exists
     */
-    void Prefab(ACScene* scene) override;
+    void Prefab(CScene* scene) override;
 };
 
 #endif // !__STANDARD_GPSO_WRAPPER_H__

@@ -1,4 +1,6 @@
 #include "DirectionalLight.h"
+#include "Scene.h"
+#include "SceneRegistry.h"
 
 // Initial light direction
 const Vector3f INIT_LIGHT_DIR = Vector3f(0.2f, -1.0f, 0.2f);
@@ -9,19 +11,34 @@ const Colorf INIT_AMBIENT_COLOR = Colorf(0.01f, 0.01f, 0.02f, 1.0f);
 // Initial intensity
 const float INIT_INTENSITY = 1.0f;
 
-// Starting process
-void CDirectionalLightComponent::Start() {
+// Awake processing
+void CDirectionalLightComponent::Awake() {
     SetLightDir(INIT_LIGHT_DIR);
     SetLightColor(INIT_LIGHT_COLOR);
     SetAmbientColor(INIT_AMBIENT_COLOR);
     SetIntensity(INIT_INTENSITY);
+
+#ifdef _EDITOR
+    if (CSceneRegistry::GetAny().IsEditorMode()) {
+        GetScene()->GetLightRegistry()->SetDirectionalLight(WeakFromThis());
+    }
+#endif // _EDITOR
+}
+
+// Starting process
+void CDirectionalLightComponent::Start() {
+#ifdef _EDITOR
+    if (false == CSceneRegistry::GetAny().IsEditorMode()) {
+        GetScene()->GetLightRegistry()->SetDirectionalLight(WeakFromThis());
+    }
+#else
+    GetScene()->GetLightRegistry()->SetDirectionalLight(WeakFromThis());
+#endif // !_EDITOR
 }
 
 // Set direction vector of this light
 void CDirectionalLightComponent::SetLightDir(const Vector3f& dir) {
-    m_lightDir = dir;
-    m_lightDir.Normalize();
-    m_gameObj->SetRotation(Utl::Math::VectorToVectorQuaternion(Utl::Math::UNIT3_FORWARD, m_lightDir));
+    m_gameObj->SetRotation(Utl::Math::VectorToVectorQuaternion(Utl::Math::UNIT3_FORWARD, dir.GetNormalize()));
 }
 
 // Prefab function

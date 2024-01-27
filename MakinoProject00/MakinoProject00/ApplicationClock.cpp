@@ -68,7 +68,7 @@ void CAppClock::SleepApplication(bool isSleep) {
 
 // Get the delta time appropriate for the timing of the call to this function
 float CAppClock::GetAppropriateDeltaTime() {
-    if (ACScene::GetCurrentScenePhase() == ScenePhase::Update) {
+    if (CScene::GetCurrentScenePhase() == ScenePhase::Update) {
         return (float)m_deltaTime;
     }
     else {

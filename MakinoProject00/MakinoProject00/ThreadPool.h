@@ -97,6 +97,7 @@ auto CThreadPool::CThreadSafeFeature::EnqueueTask(F&& function, Args && ...args)
         catch (const Utl::Error::CFatalError& e) {
             // Error processing
             CApplicationError::GetAny().Exit(e.WhatW());
+            throw e;
         }
     };
 

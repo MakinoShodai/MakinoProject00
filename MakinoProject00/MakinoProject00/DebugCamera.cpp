@@ -13,12 +13,18 @@ void CDebugCameraComponent::Start() {
     m_freeControl = m_gameObj->GetComponent<CFreeCameraControl>();
     m_cameraComponent = m_gameObj->GetComponent<CCameraComponent>();
 
+#ifdef _EDITOR
+    // Enable free control component
+    m_freeControl->SetIsActive(true);
+#else
     // Disable free control component
     m_freeControl->SetIsActive(false);
+#endif // _EDITOR
 }
 
 // Update processing
 void CDebugCameraComponent::Update() {
+#ifdef _EDITOR
     // If 0 key is pressed down
     if (CInputSystem::GetMain().IsKeyDown('0')) {
         // Disable debug mode and not allow the camera to move
@@ -31,7 +37,7 @@ void CDebugCameraComponent::Update() {
         }
         // Enable debug mode and allow the camera to move
         else {
-            ACScene* scene = GetScene().Get();
+            CScene* scene = GetScene().Get();
             scene->SetUpdateMode(UpdateMode::Debug);
             m_freeControl->SetIsActive(true);
 
@@ -44,6 +50,7 @@ void CDebugCameraComponent::Update() {
             m_cameraComponent->SetPriority(DEBUG_CAMERA_ENABLE_PRIORITY);
         }
     }
+#endif // _EDITOR
 }
 
 // Prefab function

@@ -21,7 +21,7 @@
 #include "SwapChain.h"
 
 // Forward declaration
-class ACScene;
+class CScene;
 
 /** @brief This class handles graphics pipeline state */
 class CGraphicsPipelineState {
@@ -44,7 +44,7 @@ public:
        @param useLayer Layers handled by this GPSO
        @param useTypes Graphics component types handled by this GPSO
     */
-    void Create(ACScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers, std::initializer_list<GraphicsComponentType> useTypes);
+    void Create(CScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers, std::initializer_list<GraphicsComponentType> useTypes);
 
     /**
        @brief Create graphics pipeline state
@@ -54,7 +54,7 @@ public:
        @param useLayer Layers handled by this GPSO
        @param useTypes Graphics component types handled by this GPSO
     */
-    void Create(ACScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers, std::vector<GraphicsComponentType> useTypes);
+    void Create(CScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers, std::vector<GraphicsComponentType> useTypes);
 
     /**
        @brief Set this graphics pipeline state to command list
@@ -123,7 +123,7 @@ private:
 
 private:
     /** @brief Weak pointer to the scene that has this graphics pipeline state */
-    CWeakPtr<ACScene> m_scene;
+    CWeakPtr<CScene> m_scene;
     /** @brief Graphics pipeline state object */
     Microsoft::WRL::ComPtr<ID3D12PipelineState> m_gpso;
     /** @brief Root signature object */
@@ -198,7 +198,7 @@ void CGraphicsPipelineState::SetCommandForComponent(const std::vector<T*>& compo
 
                 // If the necessary texture for this GPSO is not found, output a message
                 if (!isAllAllocate) {
-                    OutputDebugString(L"Warning! The necessary texture for this GPSO is not found\n");
+                    throw Utl::Error::CStopDrawingSceneError(L"Warning! The necessary texture for this GPSO is not found\n");
                 }
             }
 

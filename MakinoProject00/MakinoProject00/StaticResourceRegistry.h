@@ -13,7 +13,7 @@
 #include "StaticResource.h"
 
 // Forward declaration
-class ACScene;
+class CScene;
 
 /** @brief This class handles all static resources */
 class CStaticResourceRegistry : public ACMainThreadSingleton<CStaticResourceRegistry> {
@@ -35,7 +35,7 @@ public:
        @brief Processing when a new scene is created
 
     */
-    void SceneStart(ACScene* scene);
+    void SceneStart(CScene* scene);
 
     /**
        @brief Refresh process that must be called at the end of every frame

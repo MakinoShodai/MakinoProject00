@@ -4,11 +4,12 @@
 #include "ApplicationClock.h"
 
 // Initialize static member
-ScenePhase ACScene::ms_currentPhase = ScenePhase::Update;
+ScenePhase CScene::ms_currentPhase = ScenePhase::Update;
 
 // Constructor
-ACScene::ACScene()
-    : m_physicsWorld(this)
+CScene::CScene(CUniquePtr<ACRenderPassAsset> renderPass)
+    : m_renderPass(std::move(renderPass))
+    , m_physicsWorld(this)
     , m_cameraRegistry(CUniquePtrWeakable<CCameraRegistry>::Make())
     , m_lightRegistry(CUniquePtrWeakable<CLightRegistry>::Make())
     , m_isFirstUpdated(false)
@@ -16,16 +17,32 @@ ACScene::ACScene()
     , m_scheduleUpdateMode(UpdateMode::Null)
 { }
 
-// Destructor
-ACScene::~ACScene() {
+// Processing when a scene is discarded
+void CScene::OnDestroy() {
     // #NOTE : The object should be released first, since the destructor of the component must access m_meshKeyGenerater, etc.
+    for (auto& it : m_gameObjects) {
+        it->OnDestroy();
+    }
     m_gameObjects.clear();
+    for (auto& it : m_gameObjectsToCreate) {
+        it->OnDestroy();
+    }
     m_gameObjectsToCreate.clear();
     m_gameObjectsToDestroy.clear();
 }
 
+// Processing when switching to this scene
+void CScene::Start() {
+    m_renderPass->CallStart(WeakFromThis());
+}
+
+// Drawing process
+void CScene::Draw() {
+    m_renderPass->Draw();
+}
+
 // Update processing
-void ACScene::Update() {
+void CScene::Update() {
     // Is update mode enabled?
     bool isUpdateMode = IsUpdateMode();
 
@@ -86,7 +103,7 @@ void ACScene::Update() {
 }
 
 // Physics simulation preprocessing
-void ACScene::PrePhysicsSimulation() {
+void CScene::PrePhysicsSimulation() {
     // Phase to PrePhysicsUpdate and transfer the bit strings to observe the transforms
     ms_currentPhase = ScenePhase::PrePhysicsUpdate;
     TransferObjectsTransformObserve();
@@ -107,7 +124,7 @@ void ACScene::PrePhysicsSimulation() {
 }
 
 // Physics simulation postprocessing
-void ACScene::PostPhysicsSimulation() {
+void CScene::PostPhysicsSimulation() {
     // Phase to OnCollision and transfer the bit strings to observe the transforms
     ms_currentPhase = ScenePhase::OnCollision;
     TransferObjectsTransformObserve();
@@ -124,7 +141,7 @@ void ACScene::PostPhysicsSimulation() {
 }
 
 // Processing at end of a frame
-void ACScene::EndFrameProcess() {
+void CScene::EndFrameProcess() {
     // Call end frame process of graphics pipeline state objects
     for (auto& it : m_gpsos) {
         it->EndFrameProcess();
@@ -138,21 +155,39 @@ void ACScene::EndFrameProcess() {
 }
 
 // Transfer bit strings to observe the transform of all objects
-void ACScene::TransferObjectsTransformObserve() {
+void CScene::TransferObjectsTransformObserve() {
     for (auto& it : m_gameObjects) {
         it->TransferTransformObserve();
     }
 }
 
 // Set update mode
-void ACScene::SetUpdateMode(UpdateMode mode) {
+void CScene::SetUpdateMode(UpdateMode mode) {
     // If there is more than one update mode, do nothing.
     if (Utl::CountBits((UpdateModeType)mode) > 1) { return; }
     m_scheduleUpdateMode = mode;
 }
 
+// Create a game object
+CWeakPtr<CGameObject> CScene::CreateGameObject(const std::string& prefabName, const Transformf& transform) {
+    // Create prefab
+    CGameObject* obj = ACRegistrarForGameObject::CreateGameObject(prefabName, this, transform);
+    if (obj == nullptr) {
+        return nullptr;
+    }
+
+    // Add created object to the array
+    m_gameObjectsToCreate.emplace_back(CUniquePtrWeakable<CGameObject>(obj));
+
+    // Call prefab processing
+    CWeakPtr<CGameObject> createdObject = m_gameObjectsToCreate.back().GetWeakPtr();
+    createdObject->Prefab();
+
+    return createdObject;
+}
+
 // Find a game object from the array of game objects
-CWeakPtr<CGameObject> ACScene::FindGameObject(const std::wstring& name) {
+CWeakPtr<CGameObject> CScene::FindGameObject(const std::wstring& name) {
     // Existing game objects
     for (auto& it : m_gameObjects) {
         if (it == nullptr) { continue; }
@@ -180,13 +215,24 @@ CWeakPtr<CGameObject> ACScene::FindGameObject(const std::wstring& name) {
 }
 
 // Schedule destroying a game object from the array of game objects
-void ACScene::DestroyGameObject(CWeakPtr<CGameObject> object) {
+void CScene::DestroyGameObject(CWeakPtr<CGameObject> object) {
     if (object == nullptr) { return; }
     m_gameObjectsToDestroy.push_back(object);
 }
 
+#ifdef _EDITOR
+// Set rendering pass
+void CScene::SetRenderPass(CUniquePtr<ACRenderPassAsset> renderPass) {
+    m_renderPass = std::move(renderPass);
+    if (m_renderPass) {
+        m_renderPass->CallStart(WeakFromThis());
+    }
+    m_gpsos.clear();
+}
+#endif // _EDITOR
+
 // Check if there are any objects to be destroyed, and if so, destroy them
-void ACScene::CheckObjectsDestroy() {
+void CScene::CheckObjectsDestroy() {
     for (auto& objectToDestroy : m_gameObjectsToDestroy) {
         // Instance check
         CGameObject* instance = objectToDestroy.Get();

@@ -119,8 +119,7 @@ Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicCbWorldMat::AllocateData(CBillboard* bill
         return DirectDataCopy(&mat);
     }
 
-    OutputDebugString(L"Warning! Couldn't get the camera from the scene.\n");
-    return Utl::Dx::CPU_DESCRIPTOR_HANDLE();
+    throw Utl::Error::CStopDrawingSceneError(L"Warning! Couldn't get the camera from the scene.\n");
 }
 
 // Allocate data for debugging collider shape

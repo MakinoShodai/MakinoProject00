@@ -57,5 +57,6 @@ public:
     */
     void Prefab() override;
 };
+REGISTER_PREFABCLASS(CPlayerCameraPrefab);
 
 #endif // !__PLAYER_CAMERA_H__

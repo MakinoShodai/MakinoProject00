@@ -14,7 +14,7 @@
 #include "SwapChain.h"
 
 // Forward declaration
-class ACScene;
+class CScene;
 
 /** @brief interface for static resource that do not need to be updated on a per-object basis */
 class IStaticResource {
@@ -38,12 +38,12 @@ public:
     /**
        @brief Processing at scene start
     */
-    virtual void Start(ACScene* scene) {}
+    virtual void Start(CScene* scene) {}
 
     /**
        @brief Update process in scene
     */
-    virtual void Update(ACScene* scene) {}
+    virtual void Update(CScene* scene) {}
 
     /** @brief Get the name of resource defined in hlsl */
     virtual const std::string& GetName() = 0;

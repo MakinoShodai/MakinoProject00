@@ -1,5 +1,6 @@
 #include "PointLight.h"
 #include "Scene.h"
+#include "SceneRegistry.h"
 
 // Constructor
 CPointLightComponent::CPointLightComponent(CGameObject* owner, Colorf color)
@@ -12,11 +13,26 @@ CPointLightComponent::CPointLightComponent(CGameObject* owner, Colorf color)
     , m_isStart(false) {
 }
 
+// Awake processing
+void CPointLightComponent::Awake() {
+#ifdef _EDITOR
+    if (CSceneRegistry::GetAny().IsEditorMode()) {
+        GetScene()->GetLightRegistry()->AddPointLight(WeakFromThis());
+    }
+#endif // !_EDITOR
+}
+
 // Starting process
 void CPointLightComponent::Start() {
     m_isStart = true;
-    
+
+#ifdef _EDITOR
+    if (false == CSceneRegistry::GetAny().IsEditorMode()) {
+        GetScene()->GetLightRegistry()->AddPointLight(WeakFromThis());
+    }
+#else
     GetScene()->GetLightRegistry()->AddPointLight(WeakFromThis());
+#endif // !_EDITOR
 }
 
 // Process at enable

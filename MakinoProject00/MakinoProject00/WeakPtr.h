@@ -145,7 +145,7 @@ public:
     inline void Release() { RefCount<T>::Decrement(m_refCount); m_refCount = nullptr; }
 
     /** @brief Get instance. If the instance has already been destroyed, return nullptr */
-    inline InstanceType* Get() const { assert(m_refCount && m_refCount->m_ref); return m_refCount->m_ref; }
+    inline InstanceType* Get() const { return (m_refCount) ? m_refCount->m_ref : nullptr; }
 
     /** @brief Instance reference operator. If the instance has already been destroyed, return nullptr */
     inline InstanceType* operator->() const { assert(m_refCount && m_refCount->m_ref); return m_refCount->m_ref; }

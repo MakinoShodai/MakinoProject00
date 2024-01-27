@@ -21,12 +21,15 @@ public:
     using ACComponent::ACComponent;
 
     /**
+       @brief Awake processing
+    */
+    void Awake();
+
+    /**
        @brief Starting process
     */
     void Start();
 
-    /** @brief Get direction vector of this light */
-    const Vector3f& GetLightDir() const { return m_lightDir; }
     /** @brief Set direction vector of this light */
     void SetLightDir(const Vector3f& dir);
 
@@ -46,8 +49,6 @@ public:
     void SetIntensity(float intensity) { m_intensity = intensity; }
 
 private:
-    /** @brief Direction vector of this light */
-    Vector3f m_lightDir;
     /** @brief Color of directional light */
     Colorf m_lightColor;
     /** @brief Ambient color */
@@ -66,5 +67,6 @@ public:
     */
     void Prefab() override;
 };
+REGISTER_PREFABCLASS(CDirectionalLightPrefab);
 
 #endif // !_DIRECTIONAL_LIGHT_H__

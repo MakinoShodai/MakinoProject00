@@ -17,7 +17,7 @@
 #include "ScenePhase.h"
 
 // Forward declaration
-class ACScene;
+class CScene;
 
 namespace Mkpe {
     /**
@@ -41,7 +41,7 @@ namespace Mkpe {
            @brief Constructor
            @param scene Scene that has this class
         */
-        CPhysicsWorld(ACScene* scene);
+        CPhysicsWorld(CScene* scene);
         /**
            @brief Destructor
         */
@@ -127,7 +127,7 @@ namespace Mkpe {
         static float ms_currentTimeStep;
 
         /** @brief Scene that has this class */
-        ACScene* m_scene;
+        CScene* m_scene;
         /** @brief Data exclusive to the physics engine */
         PhysicsEngineExclusiveData m_exclusiveData;
         /** @brief Class that perform constraint solving */

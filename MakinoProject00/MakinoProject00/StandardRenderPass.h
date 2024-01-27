@@ -1,25 +1,31 @@
 /**
- * @file   StageSceneBase.h
+ * @file   StandardRenderPass.h
  * @brief  This file handles scene base class for stage.
  * 
  * @author Shodai Makino
  * @date   2024/1/18
  */
 
-#ifndef __STAGE_SCENE_BASE_H__
-#define __STAGE_SCENE_BASE_H__
+#ifndef __STANDARD_RENDER_PASS_H__
+#define __STANDARD_RENDER_PASS_H__
 
-#include "Scene.h"
+#include "RenderPassAsset.h"
 #include "StandardGPSOWrapper.h"
 #include "ShadowGPSOWrapper.h"
 #include "StaticCbLightVPMat.h"
 #include "StaticSrvShadowMap.h"
 
-/** @brief Scene base class for stage 1 */
-class CStageSceneBase : public ACScene {
+/** @brief Default render pass name */
+const std::string STANDARD_RENDER_PASS_NAME = "CStandardRenderPass";
+
+/** @brief Default rendering pass asset */
+class CStandardRenderPass : public ACRenderPassAsset {
 public:
+    using ACRenderPassAsset::ACRenderPassAsset;
+
     /**
-       @brief Starting process
+       @brief Start processing
+       @param scene Scene that has this class
     */
     void Start() override;
 
@@ -27,12 +33,6 @@ public:
        @brief Drawing process
     */
     void Draw() override;
-
-protected:
-    /**
-       @brief Starting process for derived class
-    */
-    virtual void StartDerived() {}
 
 private:
     /** @brief GPSO wrapper for standard layer */
@@ -57,5 +57,6 @@ private:
     /** @brief Static SRV allocator class for shadow maps */
     ACStaticSRVAllocator* m_staticShadowMapSrv[CASCADE_NUM];
 };
+REGISTER_RENDERPASS_CLASS(CStandardRenderPass);
 
-#endif // !__STAGE_SCENE_BASE_H__
+#endif // !__STANDARD_RENDER_PASS_H__

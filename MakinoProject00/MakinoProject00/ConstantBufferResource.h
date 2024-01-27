@@ -135,7 +135,7 @@ inline void CConstantBufferResource<T>::DataCopy(const T* src, UINT offset) {
         memcpy(m_mappedBuffer + (UINT64)offset * m_alignedSize, src, sizeof(T));
     }
     else {
-        OutputDebugString(L"Warning! Constant buffer you tried to copy, is being unmapped!\n");
+        throw Utl::Error::CStopDrawingSceneError(L"Warning! Constant buffer you tried to copy, is being unmapped!\n");
     }
 }
 

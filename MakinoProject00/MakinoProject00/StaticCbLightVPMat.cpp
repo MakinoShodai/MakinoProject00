@@ -17,7 +17,7 @@ const float SECOND_CASCADE_END_Z = 0.1f;
 
 // Constructor
 CLightVPCalculator::CLightVPCalculator()
-    : m_directionalLight(nullptr)
+    : m_lightRegistry(nullptr)
     , m_lightVPs()
     , m_isCalculated(false)
     , m_cascadeSplitsPassShader{}
@@ -36,11 +36,13 @@ const AllLightVP* CLightVPCalculator::Calculate() {
         return &m_lightVPs;
     }
 
-    if (m_directionalLight) {
-        CCameraComponent* camera = m_directionalLight->GetScene()->GetCameraRegistry()->GetCameraPriority().Get();
+    CDirectionalLightComponent* dirLight = m_lightRegistry->GetDirectionalLight().Get();
+
+    if (dirLight) {
+        CCameraComponent* camera = dirLight->GetScene()->GetCameraRegistry()->GetCameraPriority().Get();
         if (camera) {
             // Get each property
-            const Vector3f& lightDir = m_directionalLight->GetLightDir();
+            const Vector3f& lightDir = dirLight->GetTransform().GetForward();
             float cameraNear = camera->GetNear();
             float cameraFar = camera->GetFar();
 
@@ -70,7 +72,7 @@ const AllLightVP* CLightVPCalculator::Calculate() {
 
             // Calculate the shadow camera matrix for the entire frustum
             DirectX::XMMATRIX entireShadowMatrix;
-            CalculateShadowMatrix(entireFrustumCorners, toUVSpaceMatrix, &entireShadowMatrix);
+            CalculateShadowMatrix(lightDir, entireFrustumCorners, toUVSpaceMatrix, &entireShadowMatrix);
 
             // Calculate the view projection matrix for each cascade map
             for (UINT cascadeIndex = 0; cascadeIndex < CASCADE_NUM; ++cascadeIndex) {
@@ -171,9 +173,7 @@ const AllLightVP* CLightVPCalculator::Calculate() {
 }
 
 // Calculate the shadow camera view projection matrix of the entire frustum
-void CLightVPCalculator::CalculateShadowMatrix(const Vector3f* frustumCorners, const DirectX::XMMATRIX& toUVSpaceMatrix, DirectX::XMMATRIX* entireShadowMatrix) {
-    const Vector3f& lightDir = m_directionalLight->GetLightDir();
-
+void CLightVPCalculator::CalculateShadowMatrix(const Vector3f& lightDir, const Vector3f* frustumCorners, const DirectX::XMMATRIX& toUVSpaceMatrix, DirectX::XMMATRIX* entireShadowMatrix) {
     // Compute center position of frustum
     Vector3f frustumCenter = Vector3f::Zero();
     for (UINT i = 0; i < FRUSTUM_CORNER_NUM; ++i) {
@@ -215,10 +215,8 @@ CStaticCbLightVP::CStaticCbLightVP()
 }
 
 // Scene start processing
-void CStaticCbLightVP::Start(ACScene* scene) {
-    CWeakPtr<CGameObject> obj = scene->FindGameObject(OBJNAME_DIRECTIONAL_LIGHT);
-    CWeakPtr<CDirectionalLightComponent> diretionalLight = (obj != nullptr) ? obj->GetComponent<CDirectionalLightComponent>() : nullptr;
-    m_lightVPCaculator->SetDirectionalLight(diretionalLight);
+void CStaticCbLightVP::Start(CScene* scene) {
+    m_lightVPCaculator->SetLightRegistry(scene->GetLightRegistry());
 }
 
 // Advance to the next cascade shadow map
@@ -236,9 +234,7 @@ Utl::Dx::CPU_DESCRIPTOR_HANDLE CStaticCbLightVP::AllocateData() {
         return DirectDataCopy(&allLightVP->m_cascadeVPMatrices[m_cascadesIndex]);
     }
 
-    OutputDebugString(L"Warning! There is no directional light or camera in this scene.\n");
-    // If not found, return the previous one as is
-    return GetPrevAllocatedData();
+    throw Utl::Error::CStopDrawingSceneError(L"Warning! There is no directional light or camera in this scene.\n");
 }
 
 // Refresh process

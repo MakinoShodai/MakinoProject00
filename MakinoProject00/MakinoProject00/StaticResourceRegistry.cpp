@@ -19,7 +19,7 @@ void CStaticResourceRegistry::Initialize() {
 }
 
 // Processing when a new scene is created
-void CStaticResourceRegistry::SceneStart(ACScene* scene) {
+void CStaticResourceRegistry::SceneStart(CScene* scene) {
     for (auto& it : m_staticResources) {
         it->Start(scene);
     }

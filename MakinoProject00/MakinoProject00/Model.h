@@ -35,6 +35,11 @@ public:
     */
     void Start() override;
 
+    /**
+       @brief Process to be called at instance destruction
+    */
+    void OnDestroy() override;
+
     /** @brief Get ID of additional textures used */
     int GetAdditionalTexID() { return m_additionalTexID; }
 

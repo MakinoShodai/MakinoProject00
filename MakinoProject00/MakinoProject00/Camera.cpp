@@ -28,6 +28,11 @@ void CCameraComponent::Start() {
     }
 }
 
+// Destroy processing
+void CCameraComponent::OnDestroy() {
+    m_gameObj->GetScene()->GetCameraRegistry()->RemoveCamera(this);
+}
+
 // Apply the rotation of this gameobject to this look direction vector
 void CCameraComponent::ApplyRotation() {
     // If not in focus mode, update look direction vector

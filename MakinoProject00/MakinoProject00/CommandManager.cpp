@@ -81,6 +81,31 @@ void CCommandManager::UnsafeGraphicsCommandsExecute() {
     m_cmdQueue->ExecuteCommandLists(1, cmdList);
 }
 
+// Clear the current command list.
+void CCommandManager::ClearCurrentCommandList() {
+    // Get next back buffer index
+    UINT bufferIndex = CSwapChain::GetMain().GetNextBackBufferIndex();
+    // Close command list
+    HR_CHECK_OUTWIND("Close command list for graphics",
+        m_graphicsCmdList[bufferIndex]->Close()
+    );
+
+    // Just clear the commands
+    GetAny().UnsafeGraphicsCommandsClear(bufferIndex);
+}
+
+// Secure command queues and command lists
+void CCommandManager::SecureCommands() {
+    // Wait for present is called
+    CSwapChain::GetMain().WaitForPresent();
+    if (m_cmdQueue != nullptr) {
+        // Wait for GPU
+        GetAny().WaitForGPU();
+        // Clear current command list
+        ClearCurrentCommandList();
+    }
+}
+
 // Clear graphics command list and graphics command allocator, However, it is not associated with execution and is used only in special situations
 void CCommandManager::CThreadSafeFeature::UnsafeGraphicsCommandsClear(UINT index) {
     // Reset command allocater

@@ -2,7 +2,7 @@
 #include "Scene.h"
 
 // Scene start processing
-void CStaticSbPointLights::Start(ACScene* scene) {
+void CStaticSbPointLights::Start(CScene* scene) {
     m_lightRegistry = scene->GetLightRegistry();
 }
 

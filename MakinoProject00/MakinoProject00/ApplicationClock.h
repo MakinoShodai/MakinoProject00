@@ -56,9 +56,22 @@ public:
 
     /** @brief Get elapsed time from prev frame */
     float GetDeltaTime() { return m_deltaTime; }
-    /** @brief Get time per frame */
-    float GetFrameTime() { return (float)m_frameTime; }
 
+    /** @brief Feature for thread-safe */
+    class CThreadSafeFeature : public ACInnerClass<CAppClock> {
+    public:
+        // Friend declaration
+        using ACInnerClass<CAppClock>::ACInnerClass;
+
+        /** @brief Get time per frame */
+        float GetFrameTime() { return (float)m_owner->m_frameTime; }
+    };
+
+    /** @brief Get feature for thread-safe */
+    inline static CThreadSafeFeature& GetAny() {
+        static CThreadSafeFeature instance(GetProtected().Get());
+        return instance;
+    }
 protected:
     /**
        @brief Constructor
@@ -71,7 +84,7 @@ private:
     /** @brief Elapsed time from prev frame */
     float m_deltaTime;
     /** @brief Time per frame */
-    double m_frameTime;
+    std::atomic<double> m_frameTime;
     /** @brief Sleep the application? */
     bool m_isSleep;
 };

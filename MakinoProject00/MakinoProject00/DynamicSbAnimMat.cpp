@@ -26,8 +26,7 @@ void CDynamicSbAnimMat::CreateBuffer(CSkeletalModel* model) {
         bufferSize += model->GetMeshBoneNum(i);
     }
     if (bufferSize <= 0) {
-        OutputDebugString(L"Warning! The model that is supposed to use the animation matrices doesn't have bones\n");
-        return;
+        throw Utl::Error::CStopDrawingSceneError(L"Warning! The model that is supposed to use the animation matrices doesn't have bones\n");
     }
 
     // Create a per graphics component structured buffer

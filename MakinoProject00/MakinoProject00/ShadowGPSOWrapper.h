@@ -18,7 +18,7 @@ public:
        @brief Prefab function
        @param scene The scene where this GPSO exists
     */
-    void Prefab(ACScene* scene) override;
+    void Prefab(CScene* scene) override;
 };
 
 /** @brief GPSO wrapper class for Shading */
@@ -28,7 +28,7 @@ public:
        @brief Prefab function
        @param scene The scene where this GPSO exists
     */
-    void Prefab(ACScene* scene) override;
+    void Prefab(CScene* scene) override;
 };
 
 #endif // !__SHADOW_GPSO_WRAPPER_H__

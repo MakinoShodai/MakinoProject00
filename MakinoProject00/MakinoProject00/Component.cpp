@@ -14,12 +14,12 @@ const Transformf& ACComponent::GetTransform() const {
 }
 
 // Get scene where this component exists
-CWeakPtr<ACScene> ACComponent::GetScene() {
+CWeakPtr<CScene> ACComponent::GetScene() {
     return m_gameObj->GetScene();
 }
 
 // Get scene where this component exists
-CWeakPtr<const ACScene> ACComponent::GetScene() const {
+CWeakPtr<const CScene> ACComponent::GetScene() const {
     return m_gameObj->GetScene();
 }
 

@@ -26,14 +26,14 @@ CGraphicsPipelineState::~CGraphicsPipelineState() {
 }
 
 // Create graphics pipeline state
-void CGraphicsPipelineState::Create(ACScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, 
+void CGraphicsPipelineState::Create(CScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, 
     std::initializer_list<GraphicsLayer> useLayers, std::initializer_list<GraphicsComponentType> useTypes) {
     // Pass to function for std::vector
     Create(scene, gpsoName, setting, useLayers, std::vector<GraphicsComponentType>(useTypes.begin(), useTypes.end()));
 }
 
 // Create graphics pipeline state
-void CGraphicsPipelineState::Create(ACScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, 
+void CGraphicsPipelineState::Create(CScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, 
     std::initializer_list<GraphicsLayer> useLayers, std::vector<GraphicsComponentType> useTypes) {
     if (m_gpso != nullptr) {
         throw Utl::Error::CFatalError(L"This gpso has been already created!" + gpsoName);
@@ -209,7 +209,7 @@ void CGraphicsPipelineState::SetCommand() {
 
             // If the necessary texture for this GPSO is not found, output a message
             if (!isAllAllocate) {
-                OutputDebugString(L"Warning! The necessary texture for this GPSO is not found\n");
+                throw Utl::Error::CStopDrawingSceneError(L"Warning! The necessary texture for this GPSO is not found\n");
             }
         }
 

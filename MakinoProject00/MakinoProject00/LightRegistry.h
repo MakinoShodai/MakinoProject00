@@ -10,6 +10,7 @@
 #define __LIGHT_REGISTRY_H__
 
 #include "PointLight.h"
+#include "DirectionalLight.h"
 
 /** @brief Registry class for lights */
 class CLightRegistry {
@@ -37,10 +38,20 @@ public:
     void RemovePointLight(CPointLightComponent* point);
 
     /**
+       @brief Set directional light
+       @param dirLight Directional light to be set
+       @return Is a directional light already exists on the scene?
+    */
+    bool SetDirectionalLight(CWeakPtr<CDirectionalLightComponent> dirLight);
+
+    /**
        @brief Get point lights that the scene exists
        @return Array of point lights
     */
     const std::vector<CWeakPtr<CPointLightComponent>>& GetPointLights() { return m_pointLights; }
+
+    /** @brief Get directional light */
+    CWeakPtr<CDirectionalLightComponent> GetDirectionalLight() { return m_dirLight; }
 
     /** @brief Get the number of point lights */
     UINT GetPointLightsNum() { return (UINT)m_pointLights.size(); }
@@ -48,6 +59,8 @@ public:
 private:
     /** @brief Point lights */
     std::vector<CWeakPtr<CPointLightComponent>> m_pointLights;
+    /** @brief Directional light */
+    CWeakPtr<CDirectionalLightComponent> m_dirLight;
 };
 
 #endif // !__LIGHT_REGISTRY_H__

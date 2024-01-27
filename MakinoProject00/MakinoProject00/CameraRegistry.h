@@ -47,6 +47,12 @@ public:
     */
     void AddCamera(CCameraComponent* camera);
 
+    /**
+       @brief Remove a camera from the registry
+       @param camera Camera to be removed
+    */
+    void RemoveCamera(CCameraComponent* camera);
+
 private:
     /** @brief All cameras in a scene */
     std::vector<CWeakPtr<CCameraComponent>> m_cameras;
