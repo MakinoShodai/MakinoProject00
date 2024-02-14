@@ -2,6 +2,8 @@
 #include "Scene.h"
 #include "PhysicsWorld.h"
 #include "UtilityForDebug.h"
+#include "ImguiHelper.h"
+#include "SceneRegistry.h"
 
 // Destructor
 CAppClock::~CAppClock() {
@@ -32,10 +34,6 @@ bool CAppClock::ManageFrameRate() {
         
         // Recalculate elapsed time from previous frame
         m_deltaTime = (float)((currentTime - m_prevTime.value()).count());
-
-        // Output FPS
-        float fps = 1.0f / m_deltaTime;
-        OutputDebugStringNumeric(fps);
     }
     else {
         // Set the elapsed time to the time of one frame as it is
@@ -49,6 +47,34 @@ bool CAppClock::ManageFrameRate() {
 
 // Initialize
 void CAppClock::Initialize(double fps) {
+#ifdef _EDITOR
+    // Set window function for drawing fps
+    CImguiHelper::GetAny().AddWindowFunction([this]() -> bool {
+        if (CSceneRegistry::GetMain().IsDisplayFPS()) {
+            char fpsText[32];
+            snprintf(fpsText, sizeof(fpsText), "FPS: %.1f", 1.0f / this->m_deltaTime);
+
+            // Set background color of the next window to 0.2
+            ImGui::SetNextWindowBgAlpha(0.2f);
+
+            // Set position of the next window to top left of screen
+            ImGui::SetNextWindowPos(ImVec2(10, 10), ImGuiCond_Always);
+
+            // Calculate size of the fps text and set it to size of the next window
+            ImVec2 textSize = ImGui::CalcTextSize(fpsText);
+            ImGui::SetNextWindowSize(ImVec2(textSize.x + 20, textSize.y + 20));
+
+            // Draw fps
+            ImGuiWindowFlags flags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoSavedSettings;
+            ImGui::Begin("FPSWindow", nullptr, flags);
+            ImGui::Text("%s", fpsText);
+            ImGui::End();
+        }
+
+        return true;
+        });
+#endif // _EDITOR
+
     SetFPS(fps);
 
     // Request a minimum resolution for periodic timers

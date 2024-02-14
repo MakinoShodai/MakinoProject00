@@ -16,7 +16,7 @@ void Mkpe::CConstraintSolverDirector::CreateConstraint(float invTimeStep) {
 
     for (auto& it : *pairs) {
         // If contact points is nothing, do nothing
-        int size = it.contactData.GetContactPointSize();
+        UINT size = it.contactData.GetContactPointSize();
         if (size <= 0) { continue; }
 
         // Get the two wrappers
@@ -39,7 +39,7 @@ void Mkpe::CConstraintSolverDirector::CreateConstraint(float invTimeStep) {
         CUniquePtr<ContactPoint>* cpArray = it.contactData.GetContactPointArray();
 
         // Perform processing for all contact points
-        for (int i = 0; i < size; ++i) {
+        for (UINT i = 0; i < size; ++i) {
             CUniquePtr<ContactPoint>& cp = cpArray[i];
 
             // Compute the normal vector of wrapper A
@@ -167,16 +167,10 @@ void Mkpe::CConstraintSolverDirector::CreateFrictionConstraint(const Vector3f& f
     float rel_repulsionVel = CalculateDenomOfImpulse(frictionDirA, frictionDirB, solver, cp, wrapperA, wrapperB, bodyA, bodyB, relativePosA, relativePosB, isMoveA, isMoveB);
 
     // Calculate velocity impulse
-    solver->velocityImpulse = -rel_repulsionVel * (1.0f + cp->combinedRestitution) * solver->denomOfImpulse;
-
-    // Multiply the coefficient of friction
-    // #NOTE : Since it is represented by coefiicient of friction = friction force / repulsive force A
-    solver->velocityImpulse *= cp->combinedFriction;
+    solver->velocityImpulse = -rel_repulsionVel * solver->denomOfImpulse;
 
     // Set friction parameters
     solver->friction = cp->combinedFriction;
-    solver->lowerLimit = -solver->friction;
-    solver->upperLimit = solver->friction;
 }
 
 // Calculate denominator of impulse

@@ -68,18 +68,18 @@ Vector3f CCapsuleCollider3D::GetLocalSupportVector(const Vector3f& v) const {
     // Calculate own up vector
     Vector3f upVector = Vector3f::Zero();
     upVector[m_axis] = 1.0f;
-
+    
     // Check the direction with its own up vector and the given vector
     int sign = Utl::Sign(upVector.Dot(v));
     // Given a vertical vector, returns coordinates of center + radius
     if (sign == 0) {
-        return v * m_scalingRadius;
+        return v.GetNormalize() * m_scalingRadius;
     }
     // If the given vector is opposite to its own up-vector, invert the up-vector.
     else if (sign < 0) {
         upVector[m_axis] = -1.0f;
     }
-
+    
     // Calculate the intersection of this capsule as an infinite cylinder with the given vector directions
     // #NOTE : Omitted calculation of Utl::Math::CalculateIntersectLineInfiniteCylinder.
     //         Point on the center axis of the infinite cylinder is made the origin and UpVector.

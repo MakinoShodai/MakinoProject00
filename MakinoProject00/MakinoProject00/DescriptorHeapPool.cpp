@@ -21,6 +21,12 @@ void CDescriptorHeapPool::ReadyToDraw() {
     CCommandManager::GetMain().GetGraphicsCmdList()->SetDescriptorHeaps(1, m_descriptorHeap[CSwapChain::GetMain().GetNextBackBufferIndex()][m_currentArrayIndex].GetHeapAddress());
 }
 
+// Set current descriptor heap to command list
+void CDescriptorHeapPool::SetCurrentDescriptorHeapToCommand() {
+    // Register as descriptor heap to be used
+    CCommandManager::GetMain().GetGraphicsCmdList()->SetDescriptorHeaps(1, m_descriptorHeap[CSwapChain::GetMain().GetNextBackBufferIndex()][m_currentArrayIndex].GetHeapAddress());
+}
+
 // Advance to the next descriptor heap
 void CDescriptorHeapPool::AdvanceNextDescriptorHeap() {
     // Get index of next back buffer

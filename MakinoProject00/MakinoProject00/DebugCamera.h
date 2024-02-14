@@ -13,6 +13,9 @@
 #include "GameObject.h"
 #include "FreeCamera.h"
 
+/** @brief Prefab name for debug camera */
+const std::string PREFAB_NAME_DEBUGCAMERA = "CDebugCameraPrefab";
+
 /** @brief Component for debug camera */
 class CDebugCameraComponent : public ACComponent {
 public:

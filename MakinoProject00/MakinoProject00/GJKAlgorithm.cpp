@@ -10,10 +10,6 @@ struct MinkowskiPoint {
 
     // Constructor
     MinkowskiPoint() {}
-
-    // Move constructor and move operator
-    MinkowskiPoint(MinkowskiPoint&& move) = default;
-    MinkowskiPoint& operator=(MinkowskiPoint&& move) = default;
 };
 
 // Face information
@@ -53,9 +49,9 @@ public:
     Simplex() : m_size(0) {}
 
     // Add vertex
-    void AddVertex(MinkowskiPoint* vert) {
+    void AddVertex(const MinkowskiPoint& vert) {
         assert(m_size < 4);
-        m_vertices[m_size] = std::move(*vert);
+        m_vertices[m_size] = vert;
         m_size++;
     }
 
@@ -66,8 +62,8 @@ public:
     }
 
     // Overwrite vertex
-    void OverwriteVertex(UINT index, MinkowskiPoint* vert) {
-        m_vertices[index] = std::move(*vert);
+    void OverwriteVertex(UINT index, const MinkowskiPoint& vert) {
+        m_vertices[index] = vert;
     }
 
     // Get the vertex of the array
@@ -147,7 +143,7 @@ bool Mkpe::CollisionAlgorithm::GJKAlgorithm(Dbvt::BVOverlapPair* pair) {
         colliderB, localPosB, matB, invMatB);
 
     // Add a new vertex to the simplex
-    simplex.AddVertex(&support);
+    simplex.AddVertex(support);
 
     // Determine next search direction
     dir = -simplex.GetVertex(0)->v;
@@ -167,7 +163,7 @@ bool Mkpe::CollisionAlgorithm::GJKAlgorithm(Dbvt::BVOverlapPair* pair) {
         }
 
         // Add a new vertex to the simplex
-        simplex.AddVertex(&support);
+        simplex.AddVertex(support);
 
         // Simplex judgmenet
         int flag = DoSimplex(&simplex, &dir);
@@ -284,7 +280,7 @@ bool Mkpe::CollisionAlgorithm::GJKAlgorithm(Dbvt::BVOverlapPair* pair) {
             }
 
             // Add new vertex
-            polytope.push_back(std::move(support));
+            polytope.push_back(support);
 
             // New normals array
             std::vector<NormalInfo> newNormals;
@@ -363,16 +359,16 @@ void CalculateSupport(const Vector3f& dirA, MinkowskiPoint* point,
     const ACCollider3D* colliderA, const Vector3f& posA, const Matrix3x3f& matA, const Matrix3x3f& invMatA, 
     const ACCollider3D* colliderB, const Vector3f& posB, const Matrix3x3f& matB, const Matrix3x3f& invMatB) {
     // Calculate the local direction vectors of each collider
-    Vector3f localDirA = matA * dirA;
-    Vector3f localDirB = matB * (-dirA);
+    Vector3f localDirA = invMatA * dirA;
+    Vector3f localDirB = invMatB * (-dirA);
 
     // Calculate support vectors in local coordinate space
     Vector3f localSupportA = colliderA->GetLocalSupportVector(localDirA);
     Vector3f localSupportB = colliderB->GetLocalSupportVector(localDirB);
 
     // Convert support vectors to world coordinate system
-    point->supportA = invMatA * localSupportA + posA;
-    point->supportB = invMatB * localSupportB + posB;
+    point->supportA = matA * localSupportA + posA;
+    point->supportB = matB * localSupportB + posB;
     
     // Calculate Minkowski difference vector
     point->v = point->supportA - point->supportB;
@@ -424,7 +420,7 @@ int DoSimplex2(Simplex* simplex, Vector3f* nextDir) {
     // The origin exists in the Voronoi region of A
     else {
         // Reduce the number of dimensions of a simplex to have only A vertex
-        simplex->OverwriteVertex(0, A);
+        simplex->OverwriteVertex(0, *A);
         simplex->Resize(1);
         // Next search direction is a vector from A to O
         *nextDir = AO;
@@ -467,7 +463,7 @@ int DoSimplex3(Simplex* simplex, Vector3f* nextDir) {
         dot = AC.Dot(AO);
         if (dot >= -FLT_EPSILON) {
             // Reduce the number of dimensions of the simplex and make it a CA edge
-            simplex->OverwriteVertex(1, A);
+            simplex->OverwriteVertex(1, *A);
             simplex->Resize(2);
             // In this case, AC x AO x AC is the next search direction
             *nextDir = AC.Cross(AO).Cross(AC);
@@ -479,8 +475,8 @@ int DoSimplex3(Simplex* simplex, Vector3f* nextDir) {
             dot = AB.Dot(AO);
             if (dot >= -FLT_EPSILON) {
                 // Reduce the number of dimensions of the simplex and make it a BA edge
-                simplex->OverwriteVertex(0, B);
-                simplex->OverwriteVertex(1, A);
+                simplex->OverwriteVertex(0, *B);
+                simplex->OverwriteVertex(1, *A);
                 simplex->Resize(2);
                 // In this case, AB x AO x AB is the next search direction
                 *nextDir = AB.Cross(AO).Cross(AB);
@@ -488,7 +484,7 @@ int DoSimplex3(Simplex* simplex, Vector3f* nextDir) {
             // The origin exists in the Voronoi region of A
             else {
                 // Reduce the number of dimensions of the simplex and make vertex A the only vertex
-                simplex->OverwriteVertex(0, A);
+                simplex->OverwriteVertex(0, *A);
                 simplex->Resize(1);
                 // Next search direction is a vector from A to O
                 *nextDir = AO;
@@ -507,8 +503,8 @@ int DoSimplex3(Simplex* simplex, Vector3f* nextDir) {
             dot = AB.Dot(AO);
             if (dot >= -FLT_EPSILON) {
                 // Reduce the number of dimensions of the simplex and make it a BA edge
-                simplex->OverwriteVertex(0, B);
-                simplex->OverwriteVertex(1, A);
+                simplex->OverwriteVertex(0, *B);
+                simplex->OverwriteVertex(1, *A);
                 simplex->Resize(2);
                 // In this case, AB x AO x AB is the next search direction
                 *nextDir = AB.Cross(AO).Cross(AB);
@@ -516,7 +512,7 @@ int DoSimplex3(Simplex* simplex, Vector3f* nextDir) {
             // The origin exists in the Voronoi region of A
             else {
                 // Reduce the number of dimensions of the simplex and make vertex A the only vertex
-                simplex->OverwriteVertex(0, A);
+                simplex->OverwriteVertex(0, *A);
                 simplex->Resize(1);
                 // Next search direction is a vector from A to O
                 *nextDir = AO;
@@ -537,9 +533,9 @@ int DoSimplex3(Simplex* simplex, Vector3f* nextDir) {
                 *nextDir = -N_ABC;
 
                 // Reverse the orientation of the triangle
-                MinkowskiPoint temp = std::move(*C);
-                simplex->OverwriteVertex(0, B);
-                simplex->OverwriteVertex(1, &temp);
+                MinkowskiPoint temp = *C;
+                simplex->OverwriteVertex(0, *B);
+                simplex->OverwriteVertex(1, temp);
             }
         }
     }
@@ -621,23 +617,23 @@ int DoSimplex4(Simplex* simplex, Vector3f* nextDir) {
     }
     // Since D is the farthest from the origin among all the vertices of the tetrahedron, advance to the ABC triangle case
     else if (false == isInsideABC) {
-        simplex->OverwriteVertex(0, C);
-        simplex->OverwriteVertex(1, B);
-        simplex->OverwriteVertex(2, A);
+        simplex->OverwriteVertex(0, *C);
+        simplex->OverwriteVertex(1, *B);
+        simplex->OverwriteVertex(2, *A);
         simplex->Resize(3);
     }
     // Since B is the farthest from the origin among all the vertices of the tetrahedron, advance to the ACD triangle case
     else if (false == isInsideACD) {
         /* simplex->OverwriteVertex(0, D); */
         /* simplex->OverwriteVertex(1, C); */
-        simplex->OverwriteVertex(2, A);
+        simplex->OverwriteVertex(2, *A);
         simplex->Resize(3);
     }
     // Since C is the farthest from the origin among all the vertices of the tetrahedron, advance to the ADB triangle case
     else {
-        simplex->OverwriteVertex(1, D);
-        simplex->OverwriteVertex(0, B);
-        simplex->OverwriteVertex(2, A);
+        simplex->OverwriteVertex(1, *D);
+        simplex->OverwriteVertex(0, *B);
+        simplex->OverwriteVertex(2, *A);
         simplex->Resize(3);
     }
 

@@ -13,6 +13,9 @@
 #include "DescriptorHeap.h"
 #include "SharedPtr.h"
 
+ /** @brief Callback function to monitor prohibited non numeric characters */
+int ProhibitedNonNumericCallback(ImGuiInputTextCallbackData* data);
+
 /**
    @brief Function for ImGui window
    @return Returns false if this function is erased, true otherwise

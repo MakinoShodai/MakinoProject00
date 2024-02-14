@@ -16,6 +16,13 @@ class CDynamicCbColor : public ACDynamicCbAllocator<Colorf> {
 public:
     CDynamicCbColor(UINT maxUsePerFrame) : ACDynamicCbAllocator(maxUsePerFrame, "Color") {}
 
+    /**
+       @brief Allocate data for no component
+       @param color Color
+       @return Handle for CPU
+    */
+    Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateDataNoComponent(const Colorf& color);
+
 protected:
     /** @brief Allocate data */
     Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(ACGraphicsComponent* component);

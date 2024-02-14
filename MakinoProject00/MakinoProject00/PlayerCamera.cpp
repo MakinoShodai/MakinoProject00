@@ -40,7 +40,9 @@ void CPlayerCameraControl::Start() {
 
     // Set focus point of this camera
     if (m_playerControl) {
-        m_cameraComponent->SetFocus(m_playerControl->GetTransform().pos + Vector3f(0.0f, FOCUS_OFFSET_Y, 0.0f));
+        Vector3f playerPos = m_playerControl->GetTransform().pos;
+        m_gameObj->SetPos(playerPos - m_playerControl->GetTransform().GetForward());
+        m_cameraComponent->SetFocus(playerPos + Vector3f(0.0f, FOCUS_OFFSET_Y, 0.0f));
     }
 
 #ifdef _DEBUG

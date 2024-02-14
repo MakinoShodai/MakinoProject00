@@ -43,6 +43,32 @@ Vector3f CContactPointWrapper::GetOpponentPoint() {
     throw Utl::Error::CFatalError(L"Requesting a collision point for a wrapper that has no collision point");
 }
 
+// Get contact normal vector of my collider
+Vector3f CContactPointWrapper::GetMyNormal() {
+    if (m_point) {
+        if (m_opponent->IsNodeASelf()) {
+            return -m_point->normalWorldOnB;
+        }
+        else {
+            return m_point->normalWorldOnB;
+        }
+    }
+    throw Utl::Error::CFatalError(L"Requesting a collision point for a wrapper that has no collision point");
+}
+
+// Get contact normal vector of opponent collider
+Vector3f CContactPointWrapper::GetOpponentNormal() {
+    if (m_point) {
+        if (m_opponent->IsNodeASelf()) {
+            return m_point->normalWorldOnB;
+        }
+        else {
+            return -m_point->normalWorldOnB;
+        }
+    }
+    throw Utl::Error::CFatalError(L"Requesting a collision point for a wrapper that has no collision point");
+}
+
 // Constructor for CContactOpponent
 CContactOpponent::CContactOpponent(CWeakPtr<ACCollider3D> opponent, const Mkpe::Dbvt::BVOverlapPair* pairInfo)
     : m_opponent(std::move(opponent))
@@ -57,6 +83,11 @@ bool CContactOpponent::IsNodeASelf() const {
 // Get a contact point
 CContactPointWrapper CContactOpponent::GetContactPoint(UINT index) const {
     return CContactPointWrapper(m_pairInfo->contactData.GetContactPoint(index), this);
+}
+
+// Get the number of contact point
+UINT CContactOpponent::GetContactPointsNum() const {
+    return m_pairInfo->contactData.GetContactPointSize();
 }
 
 // Construtor for CContactColliderList

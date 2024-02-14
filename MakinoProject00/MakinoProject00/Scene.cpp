@@ -169,6 +169,18 @@ void CScene::SetUpdateMode(UpdateMode mode) {
 }
 
 // Create a game object
+CWeakPtr<CGameObject> CScene::CreateGameObject(const Transformf& transform) {
+    // Add created object to the array
+    m_gameObjectsToCreate.emplace_back(CUniquePtrWeakable<CGameObject>::Make(this, transform));
+
+    // Call prefab processing
+    CWeakPtr<CGameObject> createdObject = m_gameObjectsToCreate.back().GetWeakPtr();
+    createdObject->Prefab();
+
+    return createdObject;
+}
+
+// Create a game object
 CWeakPtr<CGameObject> CScene::CreateGameObject(const std::string& prefabName, const Transformf& transform) {
     // Create prefab
     CGameObject* obj = ACRegistrarForGameObject::CreateGameObject(prefabName, this, transform);

@@ -54,6 +54,11 @@ public:
     */
     void SetNextScene(const std::string& sceneName);
 
+#ifdef _EDITOR
+    /** @brief Display fps? */
+    bool IsDisplayFPS() { return m_isDisplayFps; }
+#endif // _EDITOR
+
     /** @brief Feature for thread-safe */
     class CThreadSafeFeature : public ACInnerClass<CSceneRegistry> {
     public:
@@ -96,24 +101,24 @@ private:
 
 #ifdef _EDITOR
     /**
-       @brief Inspector process
-       @return Returns false if the inspector process is finished
+       @brief Hierarchy process
+       @return Returns false if the hierarchy process is finished
     */
-    bool InspectorProcess();
+    bool HierarchyProcess();
 
     /**
-       @brief Fix inspector name to avoid duplicates
+       @brief Fix hierarchy name to avoid duplicates
        @param prevName Name before change
-       @param name Name of game object to display in inspector
+       @param name Name of game object to display in hierarchy
        @return fixed name
     */
-    CStringWithIntKey FixInspectorName(const CStringWithIntKey* prevName, std::string name);
+    CStringWithIntKey FixHierarchyName(const CStringWithIntKey* prevName, std::string name);
 
     /**
-       @brief Delete game object from inspector
+       @brief Delete game object from hierarchy
        @param index Index of game object to be deleted
     */
-    void DeleteFromInspector(size_t index);
+    void DeleteFromHierarchy(size_t index);
 
     /**
        @brief Display popup to save scene
@@ -145,8 +150,8 @@ private:
     /** @brief Future object to load a next scene */
     Utl::Async::CMainThreadFuture<SceneLoadResult> m_sceneLoadFuture;
     
-    /** @brief Game object data to display in inspector */
-    std::vector<CObjectInspectorData> m_inspectorData;
+    /** @brief Game object data to display in hierarchy */
+    std::vector<CObjectHierarchyData> m_hierarchyData;
     /** @brief Name of render pass asset to be used */
     std::string m_renderPassAssetName;
 
@@ -159,9 +164,11 @@ private:
     std::string m_inputName;
     /** @brief Drawing colliders? */
     std::atomic<bool> m_isColliderDrawing;
+    /** @brief Display fps? */
+    bool m_isDisplayFps;
 
-    /** @brief Name of game object to display in inspector already used */
-    std::unordered_map<std::string, CPriorityIntKeyGenerater> m_inspectorNameUsed;
+    /** @brief Name of game object to display in hierarchy already used */
+    std::unordered_map<std::string, CPriorityIntKeyGenerater> m_hierarchyNameUsed;
     /** @brief Index of current selected object */
     size_t m_currentSelectedObjectIndex;
     /** @brief Is the settings window open now? */
@@ -179,6 +186,10 @@ private:
     CUniquePtrWeakable<CGameObject> m_editorCamera;
     /** @brief Camera component for editor */
     CWeakPtr<CCameraComponent> m_editorCameraComponent;
+    /** @brief Gpso for drawing coordinate axis */
+    CGraphicsPipelineState m_coordAxisGpso;
+    /** @brief Coordinate axis object */
+    CUniquePtrWeakable<CGraphicsObjectAsset> m_coordAxisObject;
 #endif // _EDITOR
 };
 

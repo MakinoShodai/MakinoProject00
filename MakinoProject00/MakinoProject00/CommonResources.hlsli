@@ -35,6 +35,15 @@ cbuffer STATIC(ViewProjMat) : register(CB_REGISTER_VIEW_PROJ_MAT) {
 }
 #endif // CB_REGISTER_VIEW_PROJ_MAT
 
+// Orthographic remove a position view projection matrix
+#ifdef CB_REGISTER_REMOVE_POS_VIEW_PROJ_MAT
+cbuffer STATIC(RemovePosViewProjMat) : register(CB_REGISTER_REMOVE_POS_VIEW_PROJ_MAT) {
+    struct {
+        float4x4 viewProj;
+    } removePosViewProjMat;
+}
+#endif // CB_REGISTER_REMOVE_POS_VIEW_PROJ_MAT
+
 // Orthographic projection matrix
 #ifdef CB_REGISTER_ORTHOGRAPHIC_PROJ_MAT
 cbuffer STATIC(OrthographicProjMat) : register(CB_REGISTER_ORTHOGRAPHIC_PROJ_MAT) {
@@ -52,6 +61,15 @@ cbuffer STATIC(LightViewProjMat) : register(CB_REGISTER_LIGHT_VIEW_PROJ_MAT) {
     } lightViewProjMat;
 }
 #endif // CB_REGISTER_LIGHT_VIEW_PROJ_MAT
+
+// Texture coordinate parameter
+#ifdef CB_TEXCOORD_PARAMETER_REGISTER
+cbuffer DYNAMIC(TexCoordParam) : register(CB_TEXCOORD_PARAMETER_REGISTER) {
+    struct {
+        float4 param; // xy = tiling, zw = offset
+    } texCoordParam;
+}
+#endif // CB_TEXCOORD_PARAMETER_REGISTER
 
 // Color parameter
 #ifdef CB_REGISTER_COLOR_REGISTER

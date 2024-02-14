@@ -18,7 +18,7 @@
 const UINT CASCADE_NUM = 3;
 
 /** @brief Pixel size of shadow map */
-const UINT SHADOWMAP_SIZE = 4096;
+const UINT SHADOWMAP_SIZE = 2048;
 
 /** @brief All light view projection matrices in hlsl */
 struct AllLightVP {

@@ -73,11 +73,12 @@ void Mkpe::CPhysicsWorld::StepSimulation(float timeStep) {
                 ms_phaseForRotateCheck.SetPhases({ ScenePhase::Update, ScenePhase::OnCollision });
 
                 // Update values that need to be updated for all simulation bodies
+                float invTotalTimeStep = 1.0f / totalSimulationTime;
                 for (auto& it : m_exclusiveData.simulationBodies) {
                     if (false == it->IsActive()) { continue; }
                     // Required Processing
                     it->ApplyGravity();
-                    it->ComputePseudoVelocityPerFrame(invTimeStep);
+                    it->ComputePseudoVelocityPerFrame(invTotalTimeStep);
                 }
             }
 
@@ -95,6 +96,11 @@ void Mkpe::CPhysicsWorld::StepSimulation(float timeStep) {
     }
 
     ms_currentTimeStep = 0.0f;
+}
+
+// Reassign fixed time step based on current frame time of the application
+void Mkpe::CPhysicsWorld::ReassignFixedTimeStep() {
+    m_fixedTimeStep = CAppClock::GetAny().GetFrameTime();
 }
 
 // Perform physics calculations

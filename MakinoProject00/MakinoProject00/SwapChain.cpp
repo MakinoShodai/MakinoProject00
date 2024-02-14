@@ -41,7 +41,9 @@ void CRenderTargetSwapChain::CreateRTVs(IDXGISwapChain4* swapChainPtr, DXGI_FORM
             m_descriptorHeap.GetCpuHandle(i));
 
         // Create resource state controller
-        m_resStateController[i].Create(m_screenBuffers[i].Get(), D3D12_RESOURCE_STATE_PRESENT);
+        m_resStateController[i].Reset();
+        m_resStateController[i] = CUniquePtrWeakable<Utl::Dx::ResStateMaker>::Make();
+        m_resStateController[i]->Create(m_screenBuffers[i].Get(), D3D12_RESOURCE_STATE_PRESENT);
     }
 
     // Update resolution
@@ -68,7 +70,7 @@ ID3D12Resource* CRenderTargetSwapChain::GetResource() const {
 
 // Transition resource state
 void CRenderTargetSwapChain::StateTransition(D3D12_RESOURCE_STATES state) {
-    m_resStateController[CSwapChain::GetMain().GetNextBackBufferIndex()].StateTransition(state);
+    m_resStateController[CSwapChain::GetMain().GetNextBackBufferIndex()]->StateTransition(state);
 }
 
 // Create a swap chain

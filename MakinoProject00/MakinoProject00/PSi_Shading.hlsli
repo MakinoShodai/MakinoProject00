@@ -131,7 +131,15 @@ float3 CalculatePointLightColor(in float3 objPosWS, in float3 albedoColor, in fl
     return diffuse * albedoColor + specular;
 }
 
-float4 main(INPUT input) : SV_TARGET {
+float4 main(INPUT input) : SV_TARGET{
+#ifdef _USE_TEX
+    float4 color = float4(DYNAMIC(mainTex).Sample(mainSmp, input.uv)) * material.color;
+#else
+    float4 color = material.color;
+#endif // _USE_TEX
+    
+    clip(color.a - 0.001f);
+    
     // Pre calculating
     float3 N = normalize(input.normal);
     float3 vView = normalize(dirLightParam.cameraPos.xyz - input.worldPos.xyz);
@@ -146,12 +154,6 @@ float4 main(INPUT input) : SV_TARGET {
             break;
         }
     }
-    
-#ifdef _USE_TEX
-    float4 color = float4(DYNAMIC(mainTex).Sample(mainSmp, input.uv)) * material.color;
-#else
-    float4 color = material.color;
-#endif // _USE_TEX
     
     // Phong shading
     // Calculate directional light color

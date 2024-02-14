@@ -114,7 +114,7 @@ bool Mkpe::CollisionAlgorithm::BoxCapsule(Dbvt::BVOverlapPair* pair) {
         UINT8 axisIndex = capsule->GetAxisIndex();
 
         // Get the direction vector of the center axis of the capsule
-        Vector3f direction = Vector3f(capsuleMat(axisIndex, Utl::Math::_X), capsuleMat(axisIndex, Utl::Math::_Y), capsuleMat(axisIndex, Utl::Math::_Z));
+        Vector3f direction = Vector3f(capsuleMat(Utl::Math::_X, axisIndex), capsuleMat(Utl::Math::_Y, axisIndex), capsuleMat(Utl::Math::_Z, axisIndex));
 
         // Get positions of the two hemispheres of the capsule
         Vector3f capsulePos1 = capsulePos + direction * capsuleLengthHalf;

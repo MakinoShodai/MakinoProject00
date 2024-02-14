@@ -39,7 +39,7 @@ protected:
        @param resourceState After resource state
        @param mapFunc Mapping data function
     */
-    void CreateResource(UINT64 byteSize, D3D12_RESOURCE_STATES resourceState, const MappingFunction& mapFunc);
+    void CreateResource(UINT64 byteSize, D3D12_RESOURCE_STATES resourceState, MappingFunction mapFunc);
 
     /**
        @brief Update heap properties and resource descriptor, for resource

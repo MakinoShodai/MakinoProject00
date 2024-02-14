@@ -15,6 +15,9 @@
 /** @brief Name of directional light object */
 const std::wstring OBJNAME_DIRECTIONAL_LIGHT = L"Directional light";
 
+/** @brief Prefab name for diretional light */
+const std::string PREFAB_NAME_DIR_LIGHT = "CDirectionalLightPrefab";
+
 /** @brief Component for directional light */
 class CDirectionalLightComponent : public ACComponent {
 public:

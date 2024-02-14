@@ -9,7 +9,6 @@ void ModelLoadSetting() {
     CModelRegistry& registry = CModelRegistry::GetMain();
 
     // Model setting
-    registry.AddModelLoadDesc(ModelName::DESK, ModelDesc(0.025f, false, CoordinateSystem::Blender));
     registry.AddModelLoadDesc(ModelName::CUTEBIRD, ModelDesc(0.075f, false, CoordinateSystem::Standard, 0.2f));
 
     // Add model's texture
@@ -18,6 +17,11 @@ void ModelLoadSetting() {
 
     // Add model's transparent texture
     registry.AddModelTransparentTex(ModelName::CUTEBIRD, TexName::CUTEBIRD_FACE_BASIC);
+    registry.AddModelTransparentTex(ModelName::TREE01, TexName::TREE_PLANTS);
+    registry.AddModelTransparentTex(ModelName::TREE02, TexName::TREE_PLANTS);
+    registry.AddModelTransparentTex(ModelName::TREE03, TexName::TREE_PLANTS);
+    registry.AddModelTransparentTex(ModelName::TREE04, TexName::TREE_PLANTS);
+    registry.AddModelTransparentTex(ModelName::TREE05, TexName::TREE_PLANTS);
 
     // Animation setting
     registry.AddAnimLoadDesc(AnimName::CUTEBIRD_DIE, AnimDesc(0.25f));

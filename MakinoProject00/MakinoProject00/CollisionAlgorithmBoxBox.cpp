@@ -395,9 +395,9 @@ bool Mkpe::CollisionAlgorithm::BoxBox(Dbvt::BVOverlapPair* pair) {
     Vector3f normal(0.0f, 0.0f, 0.0f); // Normal vector of the contact point
     if (normalAxisMat != nullptr) {
         normal = Vector3f(
-            (*normalAxisMat)(normalIndex, Utl::Math::_X), 
-            (*normalAxisMat)(normalIndex, Utl::Math::_Y), 
-            (*normalAxisMat)(normalIndex, Utl::Math::_Z));
+            (*normalAxisMat)(Utl::Math::_X, normalIndex),
+            (*normalAxisMat)(Utl::Math::_Y, normalIndex),
+            (*normalAxisMat)(Utl::Math::_Z, normalIndex));
     }
 
     // If the normal needed to inverse, inverse it

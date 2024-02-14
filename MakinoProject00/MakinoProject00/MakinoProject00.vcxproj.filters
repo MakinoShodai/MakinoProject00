@@ -220,9 +220,6 @@
     <Filter Include="リソース ファイル\VertexShader\LightVP">
       <UniqueIdentifier>{66839765-3748-4594-a6e7-9f092a87aa83}</UniqueIdentifier>
     </Filter>
-    <Filter Include="リソース ファイル\PixelShader\NPRShading">
-      <UniqueIdentifier>{2725d695-6887-4026-8dbb-7ef8ddfbd206}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\imgui">
       <UniqueIdentifier>{d8d5491e-fa68-4887-b1dd-88eaf4b85603}</UniqueIdentifier>
     </Filter>
@@ -234,6 +231,15 @@
     </Filter>
     <Filter Include="ヘッダー ファイル\Framework\Standard\RenderPass">
       <UniqueIdentifier>{6aa1e60a-82d2-4050-bf34-234d70e5a063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\Environment">
+      <UniqueIdentifier>{32fa2057-be59-4522-b995-f18d064e1562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Environment">
+      <UniqueIdentifier>{4b948dca-f7c7-4dcb-8e0e-5fd048236a40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PixelShader\Shading">
+      <UniqueIdentifier>{2725d695-6887-4026-8dbb-7ef8ddfbd206}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -594,6 +600,27 @@
     <ClCompile Include="RenderPassAsset.cpp">
       <Filter>ソース ファイル\Framework\SystemDesign</Filter>
     </ClCompile>
+    <ClCompile Include="PointLightPrefab.cpp">
+      <Filter>ソース ファイル\Framework\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="StonePrefab.cpp">
+      <Filter>ソース ファイル\Game\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="Ruins.cpp">
+      <Filter>ソース ファイル\Game\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>ソース ファイル\Game\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyDome.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicCbTexCoordParam.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Trees.cpp">
+      <Filter>ソース ファイル\Game\Environment</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="PS_StandardColorOnly.hlsl">
@@ -627,12 +654,18 @@
       <Filter>リソース ファイル\VertexShader\LightVP</Filter>
     </FxCompile>
     <FxCompile Include="PS_ShadingTex.hlsl">
-      <Filter>リソース ファイル\PixelShader\NPRShading</Filter>
+      <Filter>リソース ファイル\PixelShader\Shading</Filter>
     </FxCompile>
     <FxCompile Include="PS_ShadingColorOnly.hlsl">
-      <Filter>リソース ファイル\PixelShader\NPRShading</Filter>
+      <Filter>リソース ファイル\PixelShader\Shading</Filter>
     </FxCompile>
     <FxCompile Include="VS_LightVP3DAnim.hlsl">
+      <Filter>リソース ファイル\VertexShader\LightVP</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_StandardRemovePos3D.hlsl">
+      <Filter>リソース ファイル\VertexShader\Standard</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_LightVPOutUV3D.hlsl">
       <Filter>リソース ファイル\VertexShader\LightVP</Filter>
     </FxCompile>
   </ItemGroup>
@@ -653,7 +686,7 @@
       <Filter>リソース ファイル\VertexShader\LightVP</Filter>
     </None>
     <None Include="PSi_Shading.hlsli">
-      <Filter>リソース ファイル\PixelShader\NPRShading</Filter>
+      <Filter>リソース ファイル\PixelShader\Shading</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -1026,9 +1059,6 @@
     <ClInclude Include="StaticCbLightVPMat.h">
       <Filter>ヘッダー ファイル\Game\Shadow</Filter>
     </ClInclude>
-    <ClInclude Include="DirectionalLight.h">
-      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
-    </ClInclude>
     <ClInclude Include="ShadowGPSOWrapper.h">
       <Filter>ヘッダー ファイル\Game\Shadow</Filter>
     </ClInclude>
@@ -1091,6 +1121,30 @@
     </ClInclude>
     <ClInclude Include="SceneFileSystem.h">
       <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLightPrefab.h">
+      <Filter>ヘッダー ファイル\Framework\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyDome.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionalLight.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="StonePrefab.h">
+      <Filter>ヘッダー ファイル\Game\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="Ruins.h">
+      <Filter>ヘッダー ファイル\Game\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>ヘッダー ファイル\Game\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicCbTexCoordParam.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Trees.h">
+      <Filter>ヘッダー ファイル\Game\Environment</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

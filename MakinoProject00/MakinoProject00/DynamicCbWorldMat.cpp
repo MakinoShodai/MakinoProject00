@@ -39,6 +39,22 @@ void CalculateSpriteScale(ACSprite* sprite, const Transformf& transform, Vector2
     }
 }
 
+// Allocate data for no component
+Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicCbWorldMat::AllocateDataNoComponent(Vector3f pos, Vector3f scale, Quaternionf rotation) {
+    // Get the transform of the game object and Set its quaternion to a XMVECTORF32
+    DirectX::XMVECTORF32 quaternion = { rotation.x(), rotation.y(), rotation.z(), rotation.w() };
+
+    // Calculate a world matrix
+    DirectX::XMFLOAT4X4 mat;
+    DirectX::XMStoreFloat4x4(&mat,
+        DirectX::XMMatrixScaling(scale.x(), scale.y(), scale.z()) *
+        DirectX::XMMatrixRotationQuaternion(quaternion) *
+        DirectX::XMMatrixTranslation(pos.x(), pos.y(), pos.z())
+    );
+
+    return DirectDataCopy(&mat);
+}
+
 // World matrix
 Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicCbWorldMat::AllocateData(ACGraphicsComponent* component) {
     // Get the transform of the game object and Set its quaternion to a XMVECTORF32

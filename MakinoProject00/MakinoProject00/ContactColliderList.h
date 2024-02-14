@@ -45,6 +45,18 @@ public:
     */
     Vector3f GetOpponentPoint();
 
+
+    /**
+       @brief Get contact normal vector of my collider
+       @return Contact normal vector of my collider
+    */
+    Vector3f GetMyNormal();
+    /**
+       @brief Get contact normal vector of opponent collider
+       @return Contact normal vector of opponent collider
+    */
+    Vector3f GetOpponentNormal();
+
 private:
     /** @brief Contact point */
     const Mkpe::ContactPoint* m_point;
@@ -85,6 +97,12 @@ public:
        @return Class with wrapped a contact point
     */
     CContactPointWrapper GetContactPoint(UINT index) const;
+
+    /**
+       @brief Get the number of contact point
+       @return The number of contact point
+    */
+    UINT GetContactPointsNum() const;
 
     /** @brief Get reference to weak pointer to collider of the contacted opponent */
     const CWeakPtr<ACCollider3D>& GetOpponent() const { return m_opponent; }

@@ -15,6 +15,10 @@ void CLayeredGPSOWrapper::Create(CScene* scene, const std::wstring gpsoName,
         throw Utl::Error::CFatalError(L"This gpso wrapper has been already created! : " + gpsoName);
     }
 
+#ifdef _DEBUG
+    m_name = gpsoName;
+#endif // _DEBUG
+
     // Add gpso class to the array
     size_t overrideSize = setting.overrideSettings.size();
     for (size_t i = 0; i < overrideSize + 1; ++i) {

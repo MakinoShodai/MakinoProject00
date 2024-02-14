@@ -20,8 +20,9 @@ protected:
        @param scene The scene where this GPSO exists
        @param useLayers Layer to be used
        @param isDepthWrite Write to depth buffer?
+       @param cullMode Culling mode
     */
-    void PrefabHelper(std::wstring name, CScene* scene, std::initializer_list<GraphicsLayer> useLayers, bool isDepthWrite);
+    void PrefabHelper(std::wstring name, CScene* scene, std::initializer_list<GraphicsLayer> useLayers, bool isDepthWrite, D3D12_CULL_MODE cullMode);
 };
 
 /** @brief GPSO wrap class for standard layer */
@@ -36,6 +37,16 @@ public:
 
 /** @brief GPSO wrap class for transparent layer */
 class CTransparentGPSOWrapper : public ACStandardGPSOWrapper {
+public:
+    /**
+       @brief Prefab function
+       @param scene The scene where this GPSO exists
+    */
+    void Prefab(CScene* scene) override;
+};
+
+/** @brief GPSO wrap class for transparent and no culling layer */
+class CTransparentNoCullingGPSOWrapper : public ACStandardGPSOWrapper {
 public:
     /**
        @brief Prefab function

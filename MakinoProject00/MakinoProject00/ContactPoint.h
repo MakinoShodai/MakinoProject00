@@ -102,7 +102,7 @@ namespace Mkpe {
         CColliderWrapper* GetWrapperB() const { return m_wrapperB.Get(); }
 
         /** @brief Get the size of the array of contact points */
-        int GetContactPointSize() { return m_nextPointIndex; }
+        UINT GetContactPointSize() const { return m_nextPointIndex; }
 
         /** @brief Get the array of contact points */
         CUniquePtr<ContactPoint>* GetContactPointArray() { return m_contactPoint; }

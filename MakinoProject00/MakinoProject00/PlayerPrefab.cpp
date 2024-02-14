@@ -1,7 +1,7 @@
 #include "PlayerPrefab.h"
 #include "Model.h"
 #include "AssetNameDefine.h"
-#include "CapsuleCollider3D.h"
+#include "SphereCollider3D.h"
 #include "RigidBody.h"
 #include "PlayerControlComponent.h"
 #include "PlayerAnimControlComponent.h"
@@ -11,15 +11,15 @@ void CPlayerPrefab::Prefab() {
     // Set the name to this object
     SetName(OBJNAME_PLAYER);
 
-    // Add movel
-    AddComponent<CSkeletalModel>(GraphicsLayer::ReadWriteShading, ModelName::CUTEBIRD)->GetController();
+    // Add model
+    AddComponent<CSkeletalModel>(GraphicsLayer::ReadWriteShading, ModelName::CUTEBIRD);
     // Add collider
-    AddComponent<CCapsuleCollider3D>(2.0f, 0.9f, Vector3f(0.0f, 1.0f, 0.0f));
+    AddComponent<CSphereCollider3D>(1.0f, Vector3f(0.0f, 1.0f, 0.0f));
     // Add rigid body
     auto rb = AddComponent<CRigidBody>();
     rb->SetGravityScale(2.0f);
     rb->SetBodyType(RigidBodyType::Dynamic);
-    rb->SetRotateLock(RigidBodyAxisLock::Flag::_X | RigidBodyAxisLock::Flag::_Z);
+    rb->SetRotateLock(RigidBodyAxisLock::Flag::_X | RigidBodyAxisLock::Flag::_Y | RigidBodyAxisLock::Flag::_Z);
     rb->SetMaterial(RigidBodyMaterial(0.0f, 0.0f));
     rb->SetIsPseudoVelocity(true);
     rb->SetLinearDrag(5.0f);

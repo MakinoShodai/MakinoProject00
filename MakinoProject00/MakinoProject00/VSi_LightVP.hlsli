@@ -23,6 +23,9 @@ struct INPUT_STANDARD {
 
 struct RASTER_STANDARD {
     float4 pos : SV_POSITION0;
+#ifdef _OUTUV
+    float2 uv : TEXCOORD0;
+#endif // _OUTUV
 };
 
 RASTER_STANDARD main(INPUT_STANDARD input) {
@@ -47,5 +50,9 @@ RASTER_STANDARD main(INPUT_STANDARD input) {
     // Apply light view projection matrix
     output.pos = mul(lightViewProjMat.viewProj, output.pos);
     
+#ifdef _OUTUV
+    output.uv = input.uv;
+#endif //_OUTUV
+
     return output;
 }
