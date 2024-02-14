@@ -47,4 +47,16 @@ public:
 };
 REGISTER_PREFABCLASS(CSampleClayBallPrefab);
 
+// Sample prefab for capsule tablet
+class CSampleCapsuleTabletPrefab : public CGameObject {
+public:
+    using CGameObject::CGameObject;
+
+    /**
+       @brief Prefab function
+    */
+    void Prefab() override;
+};
+REGISTER_PREFABCLASS(CSampleCapsuleTabletPrefab);
+
 #endif // !__SAMPLE_PREFAB_H__

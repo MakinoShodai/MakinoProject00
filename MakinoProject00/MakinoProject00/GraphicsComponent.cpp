@@ -13,6 +13,7 @@ ACGraphicsComponent::ACGraphicsComponent(GraphicsComponentType type, CGameObject
     , m_layer(layer)
     , m_matNumPerMesh(0)
     , m_color(Colorf::Ones())
+    , m_texCoordParam(Vector4f(1.0f, 1.0f, 0.0f, 0.0f))
     , m_isActive(true) {
 }
 

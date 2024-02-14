@@ -2,6 +2,7 @@
 #include "RigidBody.h"
 #include "ApplicationClock.h"
 #include "PhysicsWorld.h"
+#include "UtilityForDebug.h"
 
 // Apply tolerance vector to linear velocity
 #define LINEAR_APPLY_TOLERANCE(linear) (linear * m_rb->GetMoveAllowable())

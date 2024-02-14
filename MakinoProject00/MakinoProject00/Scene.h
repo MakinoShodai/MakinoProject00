@@ -83,6 +83,13 @@ public:
 
     /**
        @brief Create a game object
+       @param transform Transform of new game object
+       @return Weak pointer to the created game object
+    */
+    CWeakPtr<CGameObject> CreateGameObject(const Transformf& transform);
+
+    /**
+       @brief Create a game object
        @param prefabName Prefab name of game object to be created
        @param transform Transform of new game object
        @return Weak pointer to the created game object

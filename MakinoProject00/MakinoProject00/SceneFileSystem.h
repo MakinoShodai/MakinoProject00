@@ -15,26 +15,26 @@
  // Directory of scene file
 const std::string SCENE_FILE_DIR = "SceneData/";
 
-/** @brief Game object data to display in inspector */
-class CObjectInspectorData {
+/** @brief Game object data to display in hierarchy */
+class CObjectHierarchyData {
 public:
     /**
        @brief Constructor
-       @param inspectorName Name to display in inspector
+       @param hierarchyName Name to display in hierarchy
     */
-    CObjectInspectorData(CStringWithIntKey inspectorName);
+    CObjectHierarchyData(CStringWithIntKey hierarchyName);
 
     /**
        @brief Constructor
-       @param inspectorName Name to display in inspector
+       @param hierarchyName Name to display in hierarchy
        @param copy Copy source
     */
-    CObjectInspectorData(CStringWithIntKey inspectorName, const CObjectInspectorData& copy);
+    CObjectHierarchyData(CStringWithIntKey hierarchyName, const CObjectHierarchyData& copy);
 
     /** @brief Move constructor */
-    CObjectInspectorData(CObjectInspectorData&& other) = default;
+    CObjectHierarchyData(CObjectHierarchyData&& other) = default;
     /** @brief Move operator */
-    CObjectInspectorData& operator=(CObjectInspectorData&& other) = default;
+    CObjectHierarchyData& operator=(CObjectHierarchyData&& other) = default;
 
     /**
        @brief Destroy prefab
@@ -59,10 +59,10 @@ public:
     */
     void RebuildCurrentPrefab(CScene* scene);
 
-    /** @brief Set name to display in inspector */
-    void SetInspectorName(CStringWithIntKey name) { m_inspectorName = std::move(name); }
-    /** @brief Get name to display in inspector */
-    const CStringWithIntKey& GetInspectorName() const { return m_inspectorName; }
+    /** @brief Set name to display in hierarchy */
+    void SetHierarchyName(CStringWithIntKey name) { m_hierarchyName = std::move(name); }
+    /** @brief Get name to display in hierarchy */
+    const CStringWithIntKey& GetHierarchyName() const { return m_hierarchyName; }
 
     /** @brief Set prefab name (No prefab is created) */
     void SetPrefabName(const std::string& prefabName) { m_prefabName = prefabName; }
@@ -85,8 +85,14 @@ public:
     const Vector3f& GetEularAngle() const { return m_eularTransform.angle; }
 
 private:
-    /** @brief Name to display in inspector */
-    CStringWithIntKey m_inspectorName;
+    /**
+       @brief Processing when Prefab is destroyed
+    */
+    void OnDestroyPrefab();
+
+private:
+    /** @brief Name to display in hierarchy */
+    CStringWithIntKey m_hierarchyName;
     /** @brief Name of prefab to be used */
     std::string m_prefabName;
     /** @brief Unique pointer weakable to game object */
@@ -102,7 +108,7 @@ namespace SceneFileSystem {
        @param renderPassName Return variable for name of rendering pass asset that scene has
        @param objects Game object data that scene has
     */
-    bool LoadSceneData(const std::string& sceneName, std::string* retRenderPassName, std::vector<CObjectInspectorData>* objects);
+    bool LoadSceneData(const std::string& sceneName, std::string* retRenderPassName, std::vector<CObjectHierarchyData>* objects);
 
     /**
        @brief Save scene data to a file
@@ -110,7 +116,7 @@ namespace SceneFileSystem {
        @param renderPassName Name of rendering pass asset that scene has
        @param objects Game object data that scene has
     */
-    bool SaveSceneData(const std::string& sceneName, const std::string& renderPassName, const std::vector<CObjectInspectorData>& objects);
+    bool SaveSceneData(const std::string& sceneName, const std::string& renderPassName, const std::vector<CObjectHierarchyData>& objects);
 
     /** @brief Callback function to monitor prohibited characters */
     int ProhibitedCharacterCallback(ImGuiInputTextCallbackData* data);

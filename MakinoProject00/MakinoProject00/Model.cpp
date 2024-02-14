@@ -45,7 +45,7 @@ void ACModel::CreateOpacityMesh() {
         const ModelInfo::Material* material = staticData->GetMaterial(mesh->materialIndex);
 
         // Set mesh buffer
-        SetMeshInfo(i, mesh->meshbuffer.GetVertexWeakPtr(), mesh->meshbuffer.GetIndexWeakPtr(), mesh->meshbuffer.GetTopologyType());
+        SetMeshInfo(i, mesh->meshbuffer->GetVertexWeakPtr(), mesh->meshbuffer->GetIndexWeakPtr(), mesh->meshbuffer->GetTopologyType());
 
         // Set standard texture
         SetTexture(i, 0, CTexture(
@@ -70,7 +70,7 @@ void ACModel::CreateTransparentMesh() {
         const ModelInfo::Material* material = staticData->GetMaterial(mesh->materialIndex);
 
         // Set mesh buffer
-        SetMeshInfo(i, mesh->meshbuffer.GetVertexWeakPtr(), mesh->meshbuffer.GetIndexWeakPtr(), mesh->meshbuffer.GetTopologyType());
+        SetMeshInfo(i, mesh->meshbuffer->GetVertexWeakPtr(), mesh->meshbuffer->GetIndexWeakPtr(), mesh->meshbuffer->GetTopologyType());
 
         // Set standard texture
         SetTexture(i, 0, CTexture(
@@ -88,6 +88,13 @@ CBasicModel::CBasicModel(CGameObject* owner, GraphicsLayer layer, const std::wst
     , ACModel(GraphicsComponentType::BasicModel, owner, layer, true, additionalTexID) {
     // Create mesh data and texture data
     CreateOpacityMesh();
+
+    // If this model has a translucent mesh, create a component for the translucent mesh
+    if (GetStaticData()->GetTransparentMeshNum() > 0) {
+        m_aspectParam.substanceParam.transparentMeshes = CUniquePtrWeakable<CBasicModel>(new CBasicModel(this));
+        m_aspectParam.substanceParam.transparentMeshes->Awake();
+        m_aspectParam.substanceParam.transparentMeshes->SetNumericMaterialToAllMesh(PerMeshMaterialNumeric(1.0f, 0.0f));
+    }
 }
 
 // Destructor
@@ -98,6 +105,15 @@ CBasicModel::~CBasicModel() {
     else {
         m_aspectParam.transparentMeshParam.~TransparentMeshParam();
     }
+}
+
+// Constructor for transparent meshes
+CBasicModel::CBasicModel(CBasicModel* substance)
+    : m_aspectParam(substance)
+    , ACModel(GraphicsComponentType::BasicModel, substance->GetGameObj().Get(), GraphicsLayer::ReadWriteShadingForGrass, false, substance->GetAdditionalTexID())
+{
+    // Create mesh data and texture data
+    CreateTransparentMesh();
 }
 
 // Constructor

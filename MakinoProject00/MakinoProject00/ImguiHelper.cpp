@@ -95,3 +95,15 @@ void CImguiHelper::OnDestroy() {
     ImGui_ImplWin32_Shutdown();
     ImGui::DestroyContext();
 }
+
+// Callback function to monitor prohibited non numeric characters
+int ProhibitedNonNumericCallback(ImGuiInputTextCallbackData* data) {
+    if (data->EventFlag == ImGuiInputTextFlags_CallbackCharFilter) {
+        // Prohibited character
+        if (('0' <= data->EventChar && data->EventChar <= '9') || data->EventChar == '.' || data->EventChar == '-')
+            return 0;
+        else
+            return 1;
+    }
+    return 0;
+}

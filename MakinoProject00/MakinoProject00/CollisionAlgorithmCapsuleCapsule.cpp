@@ -34,8 +34,8 @@ bool Mkpe::CollisionAlgorithm::CapsuleCapsule(Dbvt::BVOverlapPair* pair) {
     UINT8 axisIndexB = capsuleB->GetAxisIndex();
 
     // Get the direction vectors of the center axes of the two capsules
-    Vector3f directionA = Vector3f(matA(axisIndexA, Utl::Math::_X), matA(axisIndexA, Utl::Math::_Y), matA(axisIndexA, Utl::Math::_Z));
-    Vector3f directionB = Vector3f(matB(axisIndexB, Utl::Math::_X), matB(axisIndexB, Utl::Math::_Y), matB(axisIndexB, Utl::Math::_Z));
+    Vector3f directionA = Vector3f(matA(Utl::Math::_X, axisIndexA), matA(Utl::Math::_Y, axisIndexA), matA(Utl::Math::_Z, axisIndexA));
+    Vector3f directionB = Vector3f(matB(Utl::Math::_X, axisIndexB), matB(Utl::Math::_Y, axisIndexB), matB(Utl::Math::_Z, axisIndexB));
 
     // Get half lengths of the axes of the two capsules
     float halfLengthA = capsuleA->GetScalingLength() * Utl::Inv::_2;
@@ -79,8 +79,8 @@ bool Mkpe::CollisionAlgorithm::CapsuleSphere(Dbvt::BVOverlapPair* pair) {
     UINT8 axisIndexB = (isCapsuleA) ? Utl::Math::_Y : capsule->GetAxisIndex();
 
     // Get the direction vectors of the center axes of the two colliders
-    Vector3f directionA = Vector3f(matA(axisIndexA, Utl::Math::_X), matA(axisIndexA, Utl::Math::_Y), matA(axisIndexA, Utl::Math::_Z));
-    Vector3f directionB = Vector3f(matB(axisIndexB, Utl::Math::_X), matB(axisIndexB, Utl::Math::_Y), matB(axisIndexB, Utl::Math::_Z));
+    Vector3f directionA = Vector3f(matA(Utl::Math::_X, axisIndexA), matA(Utl::Math::_Y, axisIndexA), matA(Utl::Math::_Z, axisIndexA));
+    Vector3f directionB = Vector3f(matB(Utl::Math::_X, axisIndexB), matB(Utl::Math::_Y, axisIndexB), matB(Utl::Math::_Z, axisIndexB));
 
     // Get half lengths of the axes of the two colliders
     float halfLengthA = (isCapsuleA) ? capsule->GetScalingLength() * Utl::Inv::_2 : 0.0f;

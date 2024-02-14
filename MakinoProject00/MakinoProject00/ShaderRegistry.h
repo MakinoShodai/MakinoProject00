@@ -22,6 +22,8 @@ enum class VertexShaderType : UINT {
     Standard3D,
     /** @brief Standard shader for skeltal model */
     Standard3DAnim,
+    /** @brief Standard remove a position from view for non-animated model */
+    StandardRemovePos3D,
     /** @brief Light position and world position shader for non-animated model */
     LightPosWorldPos3D,
     /** @brief Light position and world position shader for skeletal model */
@@ -30,6 +32,8 @@ enum class VertexShaderType : UINT {
     LightVP3D,
     /** @brief Light view projection matrix shader for skeletal model */
     LightVP3DAnim,
+    /** @brief Light view projection matrix shader (output uv) for non-animated model */
+    LightVPOutUV3D,
     /** @brief Max */
     Max
 };

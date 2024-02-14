@@ -79,6 +79,13 @@ void CCommandManager::UnsafeGraphicsCommandsExecute() {
 
     // Execute command list
     m_cmdQueue->ExecuteCommandLists(1, cmdList);
+
+    // command has been executed, determine the resource state on the GPU
+    for (auto& it : m_resStateControllers) {
+        if (it == nullptr) { continue; }
+        it->ApplyCurrentStateOnGpu();
+    }
+    m_resStateControllers.clear();
 }
 
 // Clear the current command list.
@@ -92,6 +99,13 @@ void CCommandManager::ClearCurrentCommandList() {
 
     // Just clear the commands
     GetAny().UnsafeGraphicsCommandsClear(bufferIndex);
+
+    // Command cleared without execution, modify resource states
+    for (auto& it : m_resStateControllers) {
+        if (it == nullptr) { continue; }
+        it->ModifyToCurrentStateOnGpu();
+    }
+    m_resStateControllers.clear();
 }
 
 // Secure command queues and command lists

@@ -21,8 +21,28 @@ public:
     void Prefab(CScene* scene) override;
 };
 
-/** @brief GPSO wrapper class for Shading */
+/** @brief GPSO wrapper class for shading */
 class CShadingGPSOWrapper : public ACLayeredGPSOWrapperPrefab {
+public:
+    /**
+       @brief Prefab function
+       @param scene The scene where this GPSO exists
+    */
+    void Prefab(CScene* scene) override;
+};
+
+/** @brief GPSO wrapper class for grass writing depth */
+class CGrassWriteShadowGPSOWrapper : public ACLayeredGPSOWrapperPrefab {
+public:
+    /**
+       @brief Prefab function
+       @param scene The scene where this GPSO exists
+    */
+    void Prefab(CScene* scene) override;
+};
+
+/** @brief GPSO wrapper class for grass shading */
+class CGrassShadingGPSOWrapper : public ACLayeredGPSOWrapperPrefab {
 public:
     /**
        @brief Prefab function

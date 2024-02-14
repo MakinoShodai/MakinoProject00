@@ -39,8 +39,13 @@ void CGraphicsPipelineState::Create(CScene* scene, const std::wstring gpsoName, 
         throw Utl::Error::CFatalError(L"This gpso has been already created!" + gpsoName);
     }
     
+    // If scene is nullptr
+    if (scene == nullptr && (useLayers.size() > 0 || useTypes.size() > 0)) {
+        throw Utl::Error::CFatalError(L"You are trying to do a layer or type specification with GPSO where no scene is specified!" + gpsoName);
+    }
+
     // Initialize variables
-    m_scene = scene->WeakFromThis();
+    m_scene = (scene) ? scene->WeakFromThis() : nullptr;
 #ifdef _DEBUG
     m_gpsoName = gpsoName;
 #endif // _DEBUG
@@ -143,14 +148,16 @@ void CGraphicsPipelineState::Create(CScene* scene, const std::wstring gpsoName, 
     HR_CHECK(L"Create graphics pipeline state object",
         CApplication::GetAny().GetDXDevice()->CreateGraphicsPipelineState(&gpipeline, IID_PPV_ARGS(m_gpso.GetAddressOf())));
 
-    // Send this graphics pipeline state to the scene
-    m_scene->AddGraphicsPipelineStatePointer(this);
+    if (m_scene) {
+        // Send this graphics pipeline state to the scene
+        m_scene->AddGraphicsPipelineStatePointer(this);
+    }
 }
 
 // Set this graphics pipeline state to command list
 void CGraphicsPipelineState::SetCommand() {
     // If there is no object to draw, do nothing.
-    if (false == m_scene->GetGraphicsLayerRegistry()->CheckExists(m_useLayers, m_useComponentTypes) && m_externalGraphicsObjectAssets.empty()) {
+    if ((m_scene && false == m_scene->GetGraphicsLayerRegistry()->CheckExists(m_useLayers, m_useComponentTypes)) && m_externalGraphicsObjectAssets.empty()) {
         return;
     }
 
@@ -184,6 +191,11 @@ void CGraphicsPipelineState::SetCommand() {
         if ((*it) == nullptr) {
             m_externalGraphicsObjectAssets.erase(it);
             it--;
+            continue;
+        }
+
+        // Active check
+        if (false == it->Get()->IsActive()) {
             continue;
         }
 

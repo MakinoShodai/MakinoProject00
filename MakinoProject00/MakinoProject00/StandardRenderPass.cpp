@@ -31,8 +31,11 @@ void CStandardRenderPass::Start() {
     // Call prefab function of GPSO wrapper for standard layer
     m_standardGpso.Prefab(m_scene.Get());
     m_transparentGpso.Prefab(m_scene.Get());
+    m_transparentNoCullGpso.Prefab(m_scene.Get());
     m_writeShadowGpso.Prefab(m_scene.Get());
     m_shadingGpso.Prefab(m_scene.Get());
+    m_grassWriteShadowGpso.Prefab(m_scene.Get());
+    m_grassShadingGpso.Prefab(m_scene.Get());
 
     // Create gpso2D
     {
@@ -43,6 +46,17 @@ void CStandardRenderPass::Start() {
         gpsoSetting2D.rasterizerState.cullMode = D3D12_CULL_MODE_BACK;
         gpsoSetting2D.depth.type = Gpso::DepthTestType::ReadWrite;
         m_uiGpso.Create(m_scene.Get(), L"UI GPSO", gpsoSetting2D, { GraphicsLayer::UI }, { GraphicsComponentType::SpriteUI });
+    }
+
+    // Create gpso for sky dome
+    {
+        Gpso::GPSOSetting skyDomeSetting;
+        skyDomeSetting.vs = CShaderRegistry::GetAny().GetVS(VertexShaderType::StandardRemovePos3D);
+        skyDomeSetting.ps = CShaderRegistry::GetAny().GetPS(PixelShaderType::StandardTex);
+        skyDomeSetting.rtvFormats.push_back(std::make_pair(DXGI_FORMAT_R8G8B8A8_UNORM_SRGB, Gpso::BlendStateSetting::Alpha));
+        skyDomeSetting.rasterizerState.cullMode = D3D12_CULL_MODE_FRONT;
+        skyDomeSetting.depth.type = Gpso::DepthTestType::None;
+        m_skyDomeGpso.Create(m_scene.Get(), L"Sky Doam GPSO", skyDomeSetting, { GraphicsLayer::SkyDome }, { GraphicsComponentType::TexShape });
     }
 }
 
@@ -61,6 +75,8 @@ void CStandardRenderPass::Draw() {
 
         // Command function of GPSO wrapper for writing shadow
         m_writeShadowGpso.SetCommand();
+        // Command function of GPSO wrapper for grass writing shadow
+        m_grassWriteShadowGpso.SetCommand();
 
         // Advance static constant buffer allocator for light view projection matrix
         m_staticCbLightVP->Advance();
@@ -78,10 +94,16 @@ void CStandardRenderPass::Draw() {
     // Apply 3D depth stencil view
     rtv->Apply(&m_dsv3D);
 
-    // Command function of GPSO wrapper for Shading
+    // Command function of GPSO for sky dome
+    m_skyDomeGpso.SetCommand();
+    // Command function of GPSO wrapper for shading
     m_shadingGpso.SetCommand();
+    // Command function of GPSO wrapper for grass shading
+    m_grassShadingGpso.SetCommand();
     // Command function of GPSO wrapper for standard layer
     m_standardGpso.SetCommand();
+    // Command function of GPSO wrapper for transparent and no culling layer
+    m_transparentNoCullGpso.SetCommand();
     // Command function of GPSO wrapper for transparent layer
     m_transparentGpso.SetCommand();
 

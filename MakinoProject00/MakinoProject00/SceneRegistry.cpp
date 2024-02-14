@@ -9,6 +9,15 @@
 #include "ApplicationClock.h"
 #include "UtilityForFile.h"
 #include "UtilityForString.h"
+#include "ShaderRegistry.h"
+#include "ModelRegistry.h"
+#include "AssetNameDefine.h"
+#include "DynamicCbWorldMat.h"
+#include "StaticCbVPMat.h"
+#include "DynamicCbColor.h"
+#include "DynamicCbTexCoordParam.h"
+#include "SkyDome.h"
+#include "DebugCamera.h"
 
 const Colorf SCREEN_CLEAR_COLOR = Colorf(0.0f, 0.0f, 0.0f, 1.0f);
 
@@ -25,8 +34,10 @@ ImGuiInputTextFlags INPUT_TEXT_FLAG = ImGuiInputTextFlags_AutoSelectAll | ImGuiI
 ImGuiWindowFlags POPUP_WINDOW_FLAG = ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoSavedSettings;
 
 #ifdef _EDITOR
-// Default name of game object to display in inspector
-const std::string DEFAULT_OBJECT_INSPECTOR_NAME = "Game object";
+// Standard distance of coordinate axis object
+const float AXIS_STANDARD_DISTANCE = 1000.0f;
+// Default name of game object to display in hierarchy
+const std::string DEFAULT_OBJECT_HIERARCHY_NAME = "Game object";
 #endif // _EDITOR
 
 // Initialize
@@ -45,8 +56,33 @@ void CSceneRegistry::Initialize() {
     OnLoadFinish(m_currentScene.Get());
 
     CImguiHelper::GetAny().AddWindowFunction([this]() -> bool {
-        return this->InspectorProcess();
+        return this->HierarchyProcess();
         });
+
+    // Add needed object at startup
+    m_hierarchyData.emplace_back(FixHierarchyName(nullptr, "Diretional light"));
+    m_hierarchyData.back().SetPrefab(m_currentScene.Get(), PREFAB_NAME_DIR_LIGHT);
+    m_hierarchyData.emplace_back(FixHierarchyName(nullptr, "Sky dome"));
+    m_hierarchyData.back().SetPrefab(m_currentScene.Get(), PREFAB_NAME_SKYDOME);
+    m_hierarchyData.emplace_back(FixHierarchyName(nullptr, "Debug camera"));
+    m_hierarchyData.back().SetPrefab(m_currentScene.Get(), PREFAB_NAME_DEBUGCAMERA);
+    m_hierarchyData.back().SetPos(Vector3f(0.0f, 1.0f, -10.0f));
+
+    // Create gpso for drawing coordinate axis
+    Gpso::GPSOSetting setting;
+    setting.vs = CShaderRegistry::GetAny().GetVS(VertexShaderType::Standard3D);
+    setting.ps = CShaderRegistry::GetAny().GetPS(PixelShaderType::StandardTex);
+    setting.rtvFormats.push_back(std::make_pair(DXGI_FORMAT_R8G8B8A8_UNORM_SRGB, Gpso::BlendStateSetting::Alpha));
+    setting.rasterizerState.cullMode = D3D12_CULL_MODE_BACK;
+    setting.depth.type = Gpso::DepthTestType::None;
+    m_coordAxisGpso.Create(nullptr, L"Coordinate Allow GPSO", setting, {}, {});
+
+    // Create graphics object asset for coordinate axis
+    m_coordAxisObject = CUniquePtrWeakable<CGraphicsObjectAsset>::Make();
+    const auto& model = CModelRegistry::GetAny().GetModel(ModelName::COORD_AXIS);
+    m_coordAxisObject->SetMeshBuff(model.GetOpacityMesh(0)->meshbuffer.GetWeakPtr());
+    m_coordAxisObject->AddSRV(CTexture(Utl::Dx::ShaderString(Utl::Dx::ShaderType::Pixel, "mainTex"), model.GetMaterial(0)->GetTex()));
+    m_coordAxisGpso.AddGraphicsObjectAsset(m_coordAxisObject.GetWeakPtr());
 #else
     // Load scene
     std::string sceneName = "DefaultScene";
@@ -140,7 +176,36 @@ void CSceneRegistry::ProcessPerFrame() {
         ACRenderTarget* rtv = CSwapChain::GetAny().GetBackBuffer();
         rtv->Clear(SCREEN_CLEAR_COLOR);
         rtv->Apply(nullptr);
+
+        // Set current descriptor heap
+        CDescriptorHeapPool::GetMain().SetCurrentDescriptorHeapToCommand();
     }
+
+#ifdef _EDITOR
+    CCameraComponent* camera = m_currentScene->GetCameraRegistry()->GetCameraPriority().Get();
+    if (m_isEditorMode && m_isObjectSelected && camera) {
+        m_coordAxisObject->SetIsActive(true);
+
+        // Get needed constant buffer allocator classes
+        CDynamicCbWorldMat* worldMatCb = CDynamicCbRegistry::GetAny().GetCbAllocator<CDynamicCbWorldMat>();
+        CDynamicCbColor* colorCb = CDynamicCbRegistry::GetAny().GetCbAllocator<CDynamicCbColor>();
+        CDynamicCbTexCoordParam* texCoordCb = CDynamicCbRegistry::GetAny().GetCbAllocator<CDynamicCbTexCoordParam>();
+        CStaticCbVP* viewProjCb = CStaticResourceRegistry::GetAny().GetStaticResource<CStaticCbVP>();
+
+        // Add constant buffer view
+        CObjectHierarchyData& object = m_hierarchyData[m_currentSelectedObjectIndex];
+        Vector3f scale = Vector3f::Ones() * ((camera->GetTransform().pos - object.GetPos()).Length() / AXIS_STANDARD_DISTANCE);
+        m_coordAxisObject->AddCBV(Utl::Dx::ShaderString(Utl::Dx::ShaderType::Vertex, worldMatCb->GetName()), worldMatCb->AllocateDataNoComponent(object.GetPos(), scale, Utl::DEG_2_RAD * object.GetEularAngle()));
+        m_coordAxisObject->AddCBV(Utl::Dx::ShaderString(Utl::Dx::ShaderType::Vertex, viewProjCb->GetName()), viewProjCb->GetAllocatedDataHandle());
+        m_coordAxisObject->AddCBV(Utl::Dx::ShaderString(Utl::Dx::ShaderType::Vertex, texCoordCb->GetName()), texCoordCb->AllocateDataNoComponent());
+        m_coordAxisObject->AddCBV(Utl::Dx::ShaderString(Utl::Dx::ShaderType::Pixel, colorCb->GetName()), colorCb->AllocateDataNoComponent(Colorf::Ones()));
+    }
+    else {
+        m_coordAxisObject->SetIsActive(false);
+    }
+    m_coordAxisGpso.SetCommand();
+    m_coordAxisGpso.EndFrameProcess();
+#endif // _EDITOR
 
     // Draw imgui
     CImguiHelper::GetMain().Draw();
@@ -163,7 +228,7 @@ void CSceneRegistry::SetNextScene(const std::string& sceneName) {
 
     m_sceneLoadFuture = CThreadPool::GetAny().EnqueueTask([this, sceneName]() {
         // Load scene file
-        if (SceneFileSystem::LoadSceneData(sceneName, &this->m_renderPassAssetName, &this->m_inspectorData)) {
+        if (SceneFileSystem::LoadSceneData(sceneName, &this->m_renderPassAssetName, &this->m_hierarchyData)) {
             // Initialize scene
             if (this->NextSceneInitialization()) {
                 return SceneLoadResult::Success;
@@ -189,13 +254,14 @@ CSceneRegistry::CSceneRegistry()
     , m_renderPassAssetName()
     , m_name("Scene")
     , m_inputName()
-    , m_inspectorData()
+    , m_hierarchyData()
     , m_currentSelectedObjectIndex(0)
     , m_isObjectSelected(false)
     , m_isWaitForMessagePopup(false)
     , m_isOpenSettingWindow(false)
     , m_nextOpenPopupName(nullptr)
     , m_isColliderDrawing(true)
+    , m_isDisplayFps(true)
 #endif // _EDITOR
 {}
 
@@ -204,8 +270,8 @@ void CSceneRegistry::OnLoadFinish(CScene* scene) {
 #ifdef _EDITOR
     if (m_isEditorMode) {
         // Create editor camera
-        m_editorCamera.Reset(new CGameObject(scene, Transformf(Vector3f(0.0f, 0.0f, -10.0f))));
-        m_editorCameraComponent = m_editorCamera->AddComponent<CCameraComponent>(L"Inspector camera");
+        m_editorCamera.Reset(new CGameObject(scene, Transformf(Vector3f(0.0f, 1.0f, -10.0f))));
+        m_editorCameraComponent = m_editorCamera->AddComponent<CCameraComponent>(L"Editor camera");
         m_editorCamera->AddComponent<CFreeCameraControl>();
         m_editorCamera->Start();
 
@@ -224,19 +290,19 @@ bool CSceneRegistry::NextSceneInitialization() {
     m_nextScene = CSharedPtr<CScene>::Make(renderPassAsset);
     m_nextScene->Start();
 
-    // Create all objects that exist in the inspector
-    for (auto& it : m_inspectorData) {
-        m_nextScene->CreateGameObject(it.GetPrefabName(), Transformf(it.GetPos(), it.GetScale(), it.GetEularAngle() * Utl::RAD_2_DEG));
+    // Create all objects that exist in the hierarchy
+    for (auto& it : m_hierarchyData) {
+        m_nextScene->CreateGameObject(it.GetPrefabName(), Transformf(it.GetPos(), it.GetScale(), it.GetEularAngle() * Utl::DEG_2_RAD));
     }
 
     return true;
 }
 
 #ifdef _EDITOR
-// Inspector process
-bool CSceneRegistry::InspectorProcess() {
+// Hierarchy process
+bool CSceneRegistry::HierarchyProcess() {
     // Window start
-    ImGui::Begin("Inspector");
+    ImGui::Begin("Hierarchy");
 
     // Open if pop-up reservation to be opened
     if (m_nextOpenPopupName != nullptr) {
@@ -250,7 +316,7 @@ bool CSceneRegistry::InspectorProcess() {
         // Sequre commands
         CCommandManager::GetMain().SecureCommands();
         // Destroy prefabs
-        for (auto& it : m_inspectorData) {
+        for (auto& it : m_hierarchyData) {
             it.DestroyPrefab();
         }
         // Destroy editor camera
@@ -390,7 +456,7 @@ bool CSceneRegistry::InspectorProcess() {
     // Add object
     ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
     if (ImGui::Button("Add")) {
-        m_inspectorData.push_back(CObjectInspectorData(FixInspectorName(nullptr, DEFAULT_OBJECT_INSPECTOR_NAME)));
+        m_hierarchyData.push_back(CObjectHierarchyData(FixHierarchyName(nullptr, DEFAULT_OBJECT_HIERARCHY_NAME)));
     }
     ImGui::PopStyleColor();
     
@@ -398,7 +464,7 @@ bool CSceneRegistry::InspectorProcess() {
     ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 0.0f, 1.0f, 1.0f));
     ImGui::SameLine();
     if (ImGui::Button("Delete") && m_isObjectSelected) {
-        DeleteFromInspector(m_currentSelectedObjectIndex);
+        DeleteFromHierarchy(m_currentSelectedObjectIndex);
     }
     ImGui::PopStyleColor();
     
@@ -406,9 +472,9 @@ bool CSceneRegistry::InspectorProcess() {
     ImGui::SameLine();
     ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.3f, 0.3f, 0.0f, 1.0f));
     if (ImGui::Button("Duplicate") && m_isObjectSelected) {
-        m_inspectorData.push_back(CObjectInspectorData(
-            FixInspectorName(nullptr, m_inspectorData[m_currentSelectedObjectIndex].GetInspectorName().GetWithIntKey()), 
-            m_inspectorData[m_currentSelectedObjectIndex]));
+        m_hierarchyData.push_back(CObjectHierarchyData(
+            FixHierarchyName(nullptr, m_hierarchyData[m_currentSelectedObjectIndex].GetHierarchyName().GetWithIntKey()), 
+            m_hierarchyData[m_currentSelectedObjectIndex]));
     }
     ImGui::PopStyleColor();
 
@@ -417,22 +483,22 @@ bool CSceneRegistry::InspectorProcess() {
     ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
     ImGui::SameLine();
     if (ImGui::Button("^") && m_isObjectSelected && m_currentSelectedObjectIndex > 0) {
-        std::swap(m_inspectorData[m_currentSelectedObjectIndex], m_inspectorData[m_currentSelectedObjectIndex - 1]);
+        std::swap(m_hierarchyData[m_currentSelectedObjectIndex], m_hierarchyData[m_currentSelectedObjectIndex - 1]);
         m_currentSelectedObjectIndex--;
     }
 
     // Down object
     ImGui::SameLine();
-    if (ImGui::Button("v") && m_isObjectSelected && m_currentSelectedObjectIndex < m_inspectorData.size() - 1) {
-        std::swap(m_inspectorData[m_currentSelectedObjectIndex], m_inspectorData[m_currentSelectedObjectIndex + 1]);
+    if (ImGui::Button("v") && m_isObjectSelected && m_currentSelectedObjectIndex < m_hierarchyData.size() - 1) {
+        std::swap(m_hierarchyData[m_currentSelectedObjectIndex], m_hierarchyData[m_currentSelectedObjectIndex + 1]);
         m_currentSelectedObjectIndex++;
     }
     ImGui::PopStyleColor(2);
 
-    // Display objects to inspector
-    size_t inspectorSize = m_inspectorData.size();
-    for (size_t i = 0; i < inspectorSize; ++i) {
-        if (ImGui::Selectable(m_inspectorData[i].GetInspectorName().GetWithIntKey().c_str(), m_currentSelectedObjectIndex == i && m_isObjectSelected)) {
+    // Display objects to hierarchy
+    size_t hierarchySize = m_hierarchyData.size();
+    for (size_t i = 0; i < hierarchySize; ++i) {
+        if (ImGui::Selectable(m_hierarchyData[i].GetHierarchyName().GetWithIntKey().c_str(), m_currentSelectedObjectIndex == i && m_isObjectSelected)) {
             m_currentSelectedObjectIndex = i;
             m_isObjectSelected = true;
         }
@@ -447,8 +513,8 @@ bool CSceneRegistry::InspectorProcess() {
     return true;
 }
 
-// Fix inspector name to avoid duplicates
-CStringWithIntKey CSceneRegistry::FixInspectorName(const CStringWithIntKey* prevName, std::string name) {
+// Fix hierarchy name to avoid duplicates
+CStringWithIntKey CSceneRegistry::FixHierarchyName(const CStringWithIntKey* prevName, std::string name) {
     // Remove trailing spaces
     size_t pos = name.find_last_not_of(' ');
     if (std::string::npos != pos) {
@@ -460,33 +526,33 @@ CStringWithIntKey CSceneRegistry::FixInspectorName(const CStringWithIntKey* prev
         if (prevName->GetWithIntKey() == name) {
             return *prevName;
         }
-        m_inspectorNameUsed[prevName->GetUnKeyedString()].ReleaseKey(prevName->GetIntKey());
+        m_hierarchyNameUsed[prevName->GetUnKeyedString()].ReleaseKey(prevName->GetIntKey());
     }
 
     IntKey key = nameWithKey.GetIntKey();
     if (key > 0) {
-        key = m_inspectorNameUsed[nameWithKey.GetUnKeyedString()].GenerateNotDuplicateKey(key);
+        key = m_hierarchyNameUsed[nameWithKey.GetUnKeyedString()].GenerateNotDuplicateKey(key);
         nameWithKey.SetIntKey(key);
         return nameWithKey;
     }
 
     // Avoid name duplicates
-    key = m_inspectorNameUsed[nameWithKey.GetUnKeyedString()].GenerateKey();
+    key = m_hierarchyNameUsed[nameWithKey.GetUnKeyedString()].GenerateKey();
     nameWithKey.SetIntKey(key);
 
     return nameWithKey;
 }
 
-// Delete game object from inspector
-void CSceneRegistry::DeleteFromInspector(size_t index) {
+// Delete game object from hierarchy
+void CSceneRegistry::DeleteFromHierarchy(size_t index) {
     // Erase previous name from map
-    auto it = m_inspectorNameUsed.find(m_inspectorData[index].GetInspectorName().GetUnKeyedString());
-    if (it != m_inspectorNameUsed.end()) {
+    auto it = m_hierarchyNameUsed.find(m_hierarchyData[index].GetHierarchyName().GetUnKeyedString());
+    if (it != m_hierarchyNameUsed.end()) {
         if (it->second.IsNotKeyAssignment()) {
-            m_inspectorNameUsed.erase(it);
+            m_hierarchyNameUsed.erase(it);
         }
         else {
-            it->second.ReleaseKey(m_inspectorData[index].GetInspectorName().GetIntKey());
+            it->second.ReleaseKey(m_hierarchyData[index].GetHierarchyName().GetIntKey());
         }
     }
 
@@ -494,9 +560,9 @@ void CSceneRegistry::DeleteFromInspector(size_t index) {
     CCommandManager::GetMain().SecureCommands();
 
     // Erase
-    m_inspectorData[index].DestroyPrefab();
-    m_inspectorData.erase(m_inspectorData.begin() + index);
-    if (index >= m_inspectorData.size()) {
+    m_hierarchyData[index].DestroyPrefab();
+    m_hierarchyData.erase(m_hierarchyData.begin() + index);
+    if (index >= m_hierarchyData.size()) {
         m_isObjectSelected = false;
         m_currentSelectedObjectIndex = 0;
     }
@@ -510,7 +576,7 @@ void CSceneRegistry::DisplaySaveScenePopup() {
         // Save
         ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 0.0f, 0.3f, 1.0f));
         if (ImGui::Button("Save")) {
-            if (SceneFileSystem::SaveSceneData(m_name, m_renderPassAssetName, m_inspectorData)) {
+            if (SceneFileSystem::SaveSceneData(m_name, m_renderPassAssetName, m_hierarchyData)) {
                 ImGui::OpenPopup("Save Success");
             }
             else {
@@ -540,7 +606,7 @@ void CSceneRegistry::DisplaySaveScenePopup() {
             }
 
             std::string saveFilename = BACKUP_SCENEFILE_DIRECTORY + m_name + BACKUP_SCENEFILE_FINALSTRING + std::to_string(maxNumber + 1);
-            if (SceneFileSystem::SaveSceneData(saveFilename, m_renderPassAssetName, m_inspectorData)) {
+            if (SceneFileSystem::SaveSceneData(saveFilename, m_renderPassAssetName, m_hierarchyData)) {
                 ImGui::OpenPopup("Save Success");
             }
             else {
@@ -619,13 +685,13 @@ void CSceneRegistry::DisplayLoadScenePopup(bool isBackup) {
         // Confirmation of input
         if (ImGui::Button("OK")) {
             std::string loadName = (isBackup) ? BACKUP_SCENEFILE_DIRECTORY + m_inputName : m_inputName;
-            if (SceneFileSystem::LoadSceneData(loadName, &m_renderPassAssetName, &m_inspectorData)) {
+            if (SceneFileSystem::LoadSceneData(loadName, &m_renderPassAssetName, &m_hierarchyData)) {
                 // Secure commands
                 CCommandManager::GetMain().SecureCommands();
 
                 ImGui::CloseCurrentPopup();
                 m_isObjectSelected = false;
-                m_inspectorNameUsed.clear();
+                m_hierarchyNameUsed.clear();
 
                 // Extract scene name
                 m_name = m_inputName;
@@ -643,9 +709,9 @@ void CSceneRegistry::DisplayLoadScenePopup(bool isBackup) {
                 m_currentScene->SetRenderPass(ACRegistrarForRenderPassAsset::CreateRenderPassAsset(m_renderPassAssetName));
 
                 // Rebuild game object
-                for (auto& it : m_inspectorData) {
+                for (auto& it : m_hierarchyData) {
                     it.RebuildCurrentPrefab(m_currentScene.Get());
-                    m_inspectorNameUsed[it.GetInspectorName().GetUnKeyedString()].RegisterUsedKey(it.GetInspectorName().GetIntKey());
+                    m_hierarchyNameUsed[it.GetHierarchyName().GetUnKeyedString()].RegisterUsedKey(it.GetHierarchyName().GetIntKey());
                 }
             }
             else {
@@ -679,12 +745,31 @@ void CSceneRegistry::DisplaySettingWindow() {
         ImGui::Begin("Settings");
 
         // Drawing collider
-        bool isDrawing = m_isColliderDrawing;
-        ImGui::Checkbox("Drawing Collider", &isDrawing);
-        if (isDrawing != m_isColliderDrawing) {
-            m_isColliderDrawing = isDrawing;
-            for (auto& it : m_inspectorData) {
+        bool tmp = m_isColliderDrawing;
+        ImGui::Checkbox("Drawing Collider", &tmp);
+        if (tmp != m_isColliderDrawing) {
+            m_isColliderDrawing = tmp;
+            for (auto& it : m_hierarchyData) {
                 it.SetDrawingCollider(m_isColliderDrawing);
+            }
+        }
+
+        // Display fps
+        tmp = m_isDisplayFps;
+        ImGui::Checkbox("Display FPS", &tmp);
+        if (tmp != m_isDisplayFps) {
+            m_isDisplayFps = tmp;
+        }
+
+        // Input FPS
+        ImGui::Text("FPS");
+        ImGui::SameLine();
+        float fps = 1.0f / CAppClock::GetAny().GetFrameTime();
+        ImGui::InputFloat("##FPS", &fps, 1.0f, 1.0f, "%.1f");
+        if (ImGui::IsItemDeactivatedAfterEdit()) {
+            if (fps > FLT_EPSILON) {
+                CAppClock::GetMain().SetFPS(fps);
+                m_currentScene->GetPhysicsWorld()->ReassignFixedTimeStep();
             }
         }
 
@@ -703,34 +788,34 @@ void CSceneRegistry::DisplayObjectDetails() {
         ImGui::Begin("Details");
 
         // Copy name
-        char inspectorName[256];
-        strncpy_s(inspectorName, m_inspectorData[m_currentSelectedObjectIndex].GetInspectorName().GetWithIntKey().c_str(), sizeof(inspectorName));
-        inspectorName[sizeof(inspectorName) - 1] = '\0';
+        char hierarchyName[256];
+        strncpy_s(hierarchyName, m_hierarchyData[m_currentSelectedObjectIndex].GetHierarchyName().GetWithIntKey().c_str(), sizeof(hierarchyName));
+        hierarchyName[sizeof(hierarchyName) - 1] = '\0';
 
-        // Inspector name
-        ImGui::Text("Inspector Name");
+        // Hierarchy name
+        ImGui::Text("Hierarchy Name");
         ImGui::SameLine();
-        ImGui::InputText("##Inspector Name", inspectorName, IM_ARRAYSIZE(inspectorName), INPUT_TEXT_FLAG, SceneFileSystem::ProhibitedCharacterCallback);
+        ImGui::InputText("##Hierarchy Name", hierarchyName, IM_ARRAYSIZE(hierarchyName), INPUT_TEXT_FLAG, SceneFileSystem::ProhibitedCharacterCallback);
         if (ImGui::IsItemDeactivatedAfterEdit()) {
-            std::string afterName = inspectorName;
+            std::string afterName = hierarchyName;
 
             if (!afterName.empty()) {
-                m_inspectorData[m_currentSelectedObjectIndex].SetInspectorName(
-                    FixInspectorName(&m_inspectorData[m_currentSelectedObjectIndex].GetInspectorName(), inspectorName));
+                m_hierarchyData[m_currentSelectedObjectIndex].SetHierarchyName(
+                    FixHierarchyName(&m_hierarchyData[m_currentSelectedObjectIndex].GetHierarchyName(), hierarchyName));
             }
         }
 
         // Prefab kind
         ImGui::Text("Prefab");
         ImGui::SameLine();
-        if (ImGui::BeginCombo("##Prefab", m_inspectorData[m_currentSelectedObjectIndex].GetPrefabName().c_str())) {
+        if (ImGui::BeginCombo("##Prefab", m_hierarchyData[m_currentSelectedObjectIndex].GetPrefabName().c_str())) {
             // Display prefab class name
             const auto& map = ACRegistrarForGameObject::GetClassMap();
             for (const auto& it : map) {
-                bool isSelected = (it.first == m_inspectorData[m_currentSelectedObjectIndex].GetPrefabName());
+                bool isSelected = (it.first == m_hierarchyData[m_currentSelectedObjectIndex].GetPrefabName());
                 // If changed
                 if (ImGui::Selectable(it.first.c_str(), isSelected)) {
-                    m_inspectorData[m_currentSelectedObjectIndex].SetPrefab(m_currentScene.Get(), it.first);
+                    m_hierarchyData[m_currentSelectedObjectIndex].SetPrefab(m_currentScene.Get(), it.first);
                 }
             }
             ImGui::EndCombo();
@@ -740,25 +825,25 @@ void CSceneRegistry::DisplayObjectDetails() {
             // Position
             ImGui::Text("Position");
             ImGui::SameLine();
-            Vector3f pos = m_inspectorData[m_currentSelectedObjectIndex].GetPos();
-            if (ImGui::InputFloat3("##Position", pos.GetArrayPtr(), "%.2f")) {
-                m_inspectorData[m_currentSelectedObjectIndex].SetPos(pos);
+            Vector3f pos = m_hierarchyData[m_currentSelectedObjectIndex].GetPos();
+            if (ImGui::InputFloat3("##Position", pos.GetArrayPtr(), "%.2f", ImGuiInputTextFlags_::ImGuiInputTextFlags_CallbackCharFilter, ProhibitedNonNumericCallback)) {
+                m_hierarchyData[m_currentSelectedObjectIndex].SetPos(pos);
             }
 
             // Scale
             ImGui::Text("Scale");
             ImGui::SameLine();
-            Vector3f scale = m_inspectorData[m_currentSelectedObjectIndex].GetScale();
-            if (ImGui::InputFloat3("##Scale", scale.GetArrayPtr(), "%.2f")) {
-                m_inspectorData[m_currentSelectedObjectIndex].SetScale(scale);
+            Vector3f scale = m_hierarchyData[m_currentSelectedObjectIndex].GetScale();
+            if (ImGui::InputFloat3("##Scale", scale.GetArrayPtr(), "%.2f", ImGuiInputTextFlags_::ImGuiInputTextFlags_CallbackCharFilter, ProhibitedNonNumericCallback)) {
+                m_hierarchyData[m_currentSelectedObjectIndex].SetScale(scale);
             }
 
             // Eular angle
             ImGui::Text("Angle");
             ImGui::SameLine();
-            Vector3f eularAngle = m_inspectorData[m_currentSelectedObjectIndex].GetEularAngle();
-            if (ImGui::InputFloat3("##Angle", eularAngle.GetArrayPtr(), "%.2f")) {
-                m_inspectorData[m_currentSelectedObjectIndex].SetEularAngle(eularAngle);
+            Vector3f eularAngle = m_hierarchyData[m_currentSelectedObjectIndex].GetEularAngle();
+            if (ImGui::InputFloat3("##Angle", eularAngle.GetArrayPtr(), "%.2f", ImGuiInputTextFlags_::ImGuiInputTextFlags_CallbackCharFilter, ProhibitedNonNumericCallback)) {
+                m_hierarchyData[m_currentSelectedObjectIndex].SetEularAngle(eularAngle);
             }
 
             ImGui::TreePop();

@@ -30,4 +30,22 @@ private:
     CWeakPtr<CCameraRegistry> m_cameraRegistry;
 };
 
+/** @brief Static CB allocater class that handles remove a position view projection matrix */
+class CStaticCbRemovePosVP : public ACStaticCbAllocator<DirectX::XMFLOAT4X4> {
+public:
+    /** @brief Constructor */
+    CStaticCbRemovePosVP() : ACStaticCbAllocator("RemovePosViewProjMat") {}
+
+    /** @brief Scene start processing */
+    void Start(CScene* scene) override;
+
+protected:
+    /** @brief Allocate data */
+    Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData() override;
+
+private:
+    /** @brief Camera registry */
+    CWeakPtr<CCameraRegistry> m_cameraRegistry;
+};
+
 #endif // !__STATIC_CB_VPMAT_H__

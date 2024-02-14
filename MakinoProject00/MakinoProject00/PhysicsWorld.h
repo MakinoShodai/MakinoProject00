@@ -60,6 +60,11 @@ namespace Mkpe {
         */
         void StepSimulation(float timeStep);
 
+        /**
+           @brief Reassign fixed time step based on current frame time of the application
+        */
+        void ReassignFixedTimeStep();
+
         /** @brief Get data exclusive to the physics engine */
         PhysicsEngineExclusiveData* GetExclusiveData() { return &m_exclusiveData; }
         /** @brief Get data exclusive to the physics engine */

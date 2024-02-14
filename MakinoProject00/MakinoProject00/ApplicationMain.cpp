@@ -87,7 +87,7 @@ void ApplicationMain() {
     CThreadPool::GetMain().Initialize((std::max)((unsigned int)1, std::thread::hardware_concurrency()));
 
     // Create a window
-    CApplication::GetMain().InitializeWnd((WNDPROC)WindowProcedure, WINDOW_WIDTH, WINDOW_HEIGHT, L"DirectX12 Project");
+    CApplication::GetMain().InitializeWnd((WNDPROC)WindowProcedure, WINDOW_WIDTH, WINDOW_HEIGHT, L"Physics x Async Render");
 
     // Initialize directX
     CApplication::GetMain().InitializeDirectX();
@@ -96,7 +96,7 @@ void ApplicationMain() {
     CImguiHelper::GetMain().Initialize();
     
     // Initialize the application clock
-    CAppClock::GetMain().Initialize(2000.0);
+    CAppClock::GetMain().Initialize(999.0);
     
     // Initialize the command manager
     CCommandManager::GetMain().Initialize();

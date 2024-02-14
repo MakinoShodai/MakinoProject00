@@ -39,5 +39,32 @@ void CShadingGPSOWrapper::Prefab(CScene* scene) {
     }
 
     // Create
-    CLayeredGPSOWrapper::Create(scene, L"Shading GPSO", setting, { GraphicsLayer::ReadWriteShading });
+    CLayeredGPSOWrapper::Create(scene, L"Shading GPSO", setting, { GraphicsLayer::ReadWriteShading, GraphicsLayer::ReadOnlyShading });
+}
+
+// Prefab function
+void CGrassWriteShadowGPSOWrapper::Prefab(CScene* scene) {
+    // Default setting (For BasicModel and TexShape, ColorShape, DebugColliderShape)
+    LayeredGPSOSetting setting({ GraphicsComponentType::BasicModel });
+    setting.defaultSetting.vs = CShaderRegistry::GetAny().GetVS(VertexShaderType::LightVPOutUV3D);
+    setting.defaultSetting.ps = CShaderRegistry::GetAny().GetPS(PixelShaderType::StandardTex);
+    setting.defaultSetting.rasterizerState.cullMode = D3D12_CULL_MODE_NONE;
+    setting.defaultSetting.depth.type = Gpso::DepthTestType::ReadWrite;
+
+    // Create
+    CLayeredGPSOWrapper::Create(scene, L"Grass Write Depth GPSO", setting, { GraphicsLayer::ReadWriteShadingForGrass });
+}
+
+// Prefab function
+void CGrassShadingGPSOWrapper::Prefab(CScene* scene) {
+    // Default setting (For BasicModel and TexShape, ColorShape, DebugColliderShape)
+    LayeredGPSOSetting setting({ GraphicsComponentType::BasicModel });
+    setting.defaultSetting.vs = CShaderRegistry::GetAny().GetVS(VertexShaderType::LightPosWorldPos3D);
+    setting.defaultSetting.ps = CShaderRegistry::GetAny().GetPS(PixelShaderType::ShadingTex);
+    setting.defaultSetting.rtvFormats.push_back(std::make_pair(DXGI_FORMAT_R8G8B8A8_UNORM_SRGB, Gpso::BlendStateSetting::Alpha));
+    setting.defaultSetting.rasterizerState.cullMode = D3D12_CULL_MODE_NONE;
+    setting.defaultSetting.depth.type = Gpso::DepthTestType::ReadWrite;
+
+    // Create
+    CLayeredGPSOWrapper::Create(scene, L"Grass Shading GPSO", setting, { GraphicsLayer::ReadWriteShadingForGrass });
 }

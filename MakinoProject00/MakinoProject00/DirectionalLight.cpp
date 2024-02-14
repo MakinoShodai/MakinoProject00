@@ -3,11 +3,11 @@
 #include "SceneRegistry.h"
 
 // Initial light direction
-const Vector3f INIT_LIGHT_DIR = Vector3f(0.2f, -1.0f, 0.2f);
+const Vector3f INIT_LIGHT_DIR = Vector3f(0.2f, -1.0f, -0.2f);
 // Initial light color
-const Colorf INIT_LIGHT_COLOR = Colorf(0.1f, 0.1f, 0.2f, 1.0f);
+const Colorf INIT_LIGHT_COLOR = Colorf(1.0f, 0.9568627450980392f, 0.8392156862745098f, 1.0f);
 // Initial ambient color
-const Colorf INIT_AMBIENT_COLOR = Colorf(0.01f, 0.01f, 0.02f, 1.0f);
+const Colorf INIT_AMBIENT_COLOR = Colorf(0.01f, 0.01f, 0.01f, 1.0f);
 // Initial intensity
 const float INIT_INTENSITY = 1.0f;
 

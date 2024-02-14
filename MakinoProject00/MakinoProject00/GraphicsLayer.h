@@ -20,8 +20,16 @@ enum class GraphicsLayer : GraphicsLayerUINT {
     UI,
     /** @brief Translucent object */
     Transparent,
+    /** @brief Translucent and no culling object */
+    TransparentNoCulling,
     /** @brief Shading that both writes and reads */
     ReadWriteShading,
+    /** @brief Shading (read only) */
+    ReadOnlyShading,
+    /** @brief Sky dome */
+    SkyDome,
+    /** @brief Shading that both writes and reads for grass */
+    ReadWriteShadingForGrass,
     /** @brief The maximum number of layer */
     Max,
 };

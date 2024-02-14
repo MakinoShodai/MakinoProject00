@@ -65,6 +65,7 @@ void ACCollider3D::Awake() {
 // Start processing
 void ACCollider3D::Start() {
     // Update scaling-related values
+    UpdateScalingOffset();
     UpdateScaling();
     UpdateLocalBoudingVolume();
 
@@ -90,16 +91,19 @@ Mkpe::BoundingVolume ACCollider3D::GenerateBoudingVolume() const {
 
 // Check if scaling and rotation updates are needed, update if necessary
 void ACCollider3D::CheckScalingRotation() {
-    // If scale has changed
-    if (Mkpe::CPhysicsWorld::CheckTransformObserveForScale(m_gameObj.Get())) {
-        // If Scale or Rotation has changed, offset and BV is updated
-        if (Mkpe::CPhysicsWorld::CheckTransformObserveForRotate(m_gameObj.Get())) {
-            UpdateScalingOffset();
-            UpdateLocalBoudingVolume();
-        }
+    bool isRotate = Mkpe::CPhysicsWorld::CheckTransformObserveForRotate(m_gameObj.Get());
+    bool isScale = Mkpe::CPhysicsWorld::CheckTransformObserveForScale(m_gameObj.Get());
 
+    // If scale has changed
+    if (isScale) {
         // Update scaling variables in derived classes
+        UpdateScalingOffset();
         UpdateScaling();
+    }
+
+    // If Scale or Rotation has changed, BV is updated
+    if (isRotate || isScale) {
+        UpdateLocalBoudingVolume();
     }
 }
 

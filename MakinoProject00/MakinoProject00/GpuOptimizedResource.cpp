@@ -5,7 +5,7 @@
 #include "UtilityForException.h"
 
 // Create resource
-void ACGpuOptimizedResource::CreateResource(UINT64 byteSize, D3D12_RESOURCE_STATES resourceState, const MappingFunction& mapFunc) {
+void ACGpuOptimizedResource::CreateResource(UINT64 byteSize, D3D12_RESOURCE_STATES resourceState, MappingFunction mapFunc) {
     // Create heap properties and resource descriptor
     Utl::Dx::HEAP_PROPERTIES heapProp(D3D12_HEAP_TYPE_UPLOAD); // Accessible from CPU
     Utl::Dx::RESOURCE_DESC resDesc(byteSize); // Bytes of all data

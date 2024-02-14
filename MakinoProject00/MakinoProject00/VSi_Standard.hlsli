@@ -2,11 +2,19 @@
 #define CB_REGISTER_WORLD_MAT b0
 
 // View projection matrix
+#ifndef REMOVE_POS_FROM_VIEW
+
 #ifndef _2D
 #define CB_REGISTER_VIEW_PROJ_MAT b1
 #else
 #define CB_REGISTER_ORTHOGRAPHIC_PROJ_MAT b1
 #endif // !_2D
+
+#else
+#define CB_REGISTER_REMOVE_POS_VIEW_PROJ_MAT b1
+#endif // !REMOVE_POS_FROM_VIEW
+
+#define CB_TEXCOORD_PARAMETER_REGISTER b2
 
 // Animation matrix
 #ifdef _ANIM
@@ -68,18 +76,23 @@ RASTER_STANDARD main(INPUT_STANDARD input) {
 #endif // _OUT_WORLDPOS
     
     // Apply view projection matrix
+#ifndef REMOVE_POS_FROM_VIEW
 #ifndef _2D
     output.pos = mul(viewProjMat.viewProj, output.pos);
 #else
     output.pos = mul(orthographicProjMat.proj, output.pos);
 #endif // !_2D
     
+#else
+    output.pos = mul(removePosViewProjMat.viewProj, output.pos);
+#endif // !REMOVE_POS_FROM_VIEW
+    
 #ifdef _OUT_CASCADE_LIGHTPOS
     output.depthVS = output.pos.w;
 #endif // _OUT_CASCADE_LIGHTPOS
     
     // Copy texture coordinate
-    output.uv = input.uv;
+    output.uv = input.uv / texCoordParam.param.xy + texCoordParam.param.zw;
 
     // Apply rotation component of world matrix to normal svector
 #ifndef _SPRITE

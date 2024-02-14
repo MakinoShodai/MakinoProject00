@@ -99,7 +99,7 @@ public:
     ~CRegistrarRenderPassAsset() override = default;
 };
 
-/** @brief Macro to register an asset and publish it to the inspector */
+/** @brief Macro to register an asset and publish it to the hierarchy */
 #define REGISTER_RENDERPASS_CLASS(CLASS_NAME) static CRegistrarRenderPassAsset<CLASS_NAME> registrar_##CLASS_NAME(#CLASS_NAME); 
 
 

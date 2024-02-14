@@ -168,6 +168,12 @@ public:
     MeshKey GetMeshKey(UINT meshIndex) { return m_meshWrappers[meshIndex].key; }
     /** @brief Get the number of all meshes */
     UINT GetMeshNum() { return m_meshWrappers.Size(); }
+    /** @brief Set uv tiling */
+    void SetUVTiling(const Vector2f& tiling) { m_texCoordParam.x() = tiling.x(); m_texCoordParam.y() = tiling.y(); }
+    /** @brief Set uv offset */
+    void SetUVOffset(const Vector2f& offset) { m_texCoordParam.z() = offset.x(); m_texCoordParam.w() = offset.y(); }
+    /** @brief Get parameter for texture coordinate (xy = tiling, zw = offset) */
+    const Vector4f& GetTexCoordParam() { return m_texCoordParam; }
 
 protected:
     /**
@@ -231,6 +237,8 @@ private:
 
     /** @brief Color of this graphics component */
     Colorf m_color;
+    /** @brief parameter for texture coordinate (xy = tiling, zw = offset) */
+    Vector4f m_texCoordParam;
 };
 
 #endif // !__GRAPHICS_COMPONENT_H__

@@ -11,7 +11,7 @@ void EncryptAssetMain() {
     AssetCrypter::CreatePakFile(PAK_FILE_TEXTURES, { ".png", ".jpg", ".tga" });
 
     // Create .pak file for model
-    AssetCrypter::CreatePakFile(PAK_FILE_MODELS, { ".fbx", }, Utl::Str::wstring2String(MODELASSET_DIR));
+    AssetCrypter::CreatePakFile(PAK_FILE_MODELS, { ".fbx" }, Utl::Str::wstring2String(MODELASSET_DIR));
 
     // Create .pak file for animation
     AssetCrypter::CreatePakFile(PAK_FILE_ANIMATIONS, { ".fbx", }, Utl::Str::wstring2String(ANIMASSET_DIR));

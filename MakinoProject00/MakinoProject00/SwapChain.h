@@ -58,7 +58,7 @@ private:
     /** @brief Descriptor heap */
     CDescriptorHeap m_descriptorHeap;
     /** @brief Resource state controllers */
-    Utl::Dx::ResStateMaker m_resStateController[SCREEN_BUFFERING_NUM];
+    CUniquePtrWeakable<Utl::Dx::ResStateMaker> m_resStateController[SCREEN_BUFFERING_NUM];
 };
 
 /** @brief Swap chain */

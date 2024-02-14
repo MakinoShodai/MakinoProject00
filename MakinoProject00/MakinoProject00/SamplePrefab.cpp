@@ -4,6 +4,8 @@
 #include "CapsuleCollider3D.h"
 #include "RigidBody.h"
 #include "Shape.h"
+#include "AssetNameDefine.h"
+#include "Model.h"
 
 // Sample prefab for static box
 void CSampleStaticBoxPrefab::Prefab() {
@@ -17,7 +19,7 @@ void CSampleStaticBoxPrefab::Prefab() {
 // Sample prefab for bouncing ball
 void CSampleSuperBallPrefab::Prefab() {
     AddComponent<CSphereCollider3D>();
-    AddComponent<CColorOnlyShape>(GraphicsLayer::ReadWriteShading, ShapeKind::Sphere, Colorf(1.0f, 0.0f, 0.0f, 1.0f))->SetNumericMaterialToAllMesh(PerMeshMaterialNumeric(1.0f, 1.0f));
+    AddComponent<CColorOnlyShape>(GraphicsLayer::ReadWriteShading, ShapeKind::Sphere, Colorf(1.0f, 0.0f, 0.0f, 1.0f))->SetNumericMaterialToAllMesh(PerMeshMaterialNumeric(20.0f, 1.0f));
     auto rb = AddComponent<CRigidBody>();
     rb->SetBodyType(RigidBodyType::Dynamic);
     rb->SetMaterial(RigidBodyMaterial(0.0f, 1.0f));
@@ -28,10 +30,21 @@ void CSampleSuperBallPrefab::Prefab() {
 // Sample prefab for clay ball
 void CSampleClayBallPrefab::Prefab() {
     AddComponent<CSphereCollider3D>();
-    AddComponent<CColorOnlyShape>(GraphicsLayer::ReadWriteShading, ShapeKind::Sphere, Colorf(0.58f, 0.42f, 0.1f, 1.0f));
+    AddComponent<CTexShape>(GraphicsLayer::ReadWriteShading, ShapeKind::Sphere, TexName::SOIL_TEX)->SetColor(Colorf(0.3f, 0.3f, 0.3f, 1.0f));
     auto rb = AddComponent<CRigidBody>();
     rb->SetBodyType(RigidBodyType::Dynamic);
     rb->SetMaterial(RigidBodyMaterial(1.0f, 0.0f));
     rb->SetMass(3.0f);
     rb->SetGravityScale(0.5f);
+}
+
+// Sample prefab for capsule
+void CSampleCapsuleTabletPrefab::Prefab() {
+    AddComponent<CCapsuleCollider3D>();
+    AddComponent<CTexShape>(GraphicsLayer::ReadWriteShading, ShapeKind::Capsule, TexName::CAPSULE_TABLET_TEX)->SetNumericMaterialToAllMesh(PerMeshMaterialNumeric(100.0f, 1.0f));
+    auto rb = AddComponent<CRigidBody>();
+    rb->SetBodyType(RigidBodyType::Dynamic);
+    rb->SetMaterial(RigidBodyMaterial(0.2f, 0.2f));
+    rb->SetMass(1.0f);
+    rb->SetGravityScale(1.0f);
 }

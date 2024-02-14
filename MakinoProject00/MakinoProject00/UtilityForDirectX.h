@@ -134,7 +134,7 @@ namespace Utl {
         };
 
         /** @brief Resource state controller */
-        class ResStateController {
+        class ResStateController : public ACWeakPtrFromThis<ResStateController> {
         public:
             /**
                @brief Transition resource state
@@ -142,18 +142,29 @@ namespace Utl {
             */
             void StateTransition(D3D12_RESOURCE_STATES state);
 
+            /**
+               @brief Determine the exact current resource state on the GPU
+            */
+            void ApplyCurrentStateOnGpu();
+
+            /**
+               @brief Modify the current resource state to the resource state on the gpu
+            */
+            void ModifyToCurrentStateOnGpu();
 
         protected:
             /**
                @brief Constructor
             */
-            ResStateController() : m_resource(nullptr), m_currentState(D3D12_RESOURCE_STATE_COMMON) {}
+            ResStateController() : m_resource(nullptr), m_currentState(D3D12_RESOURCE_STATE_COMMON), m_currentStateOnGpu(D3D12_RESOURCE_STATE_COMMON) {}
 
         protected:
             /** @brief Pointer to this resource */
             ID3D12Resource* m_resource;
             /** @brief Current resource state */
             D3D12_RESOURCE_STATES m_currentState;
+            /** @brief Exact current resource state on GPU */
+            D3D12_RESOURCE_STATES m_currentStateOnGpu;
         };
 
         /** @brief This class make 'ResStateController' */
@@ -169,7 +180,7 @@ namespace Utl {
                @param resource Pointer to the resource
                @param currentState Current resource state
             */
-            void Create(ID3D12Resource* resource, D3D12_RESOURCE_STATES currentState) { m_resource = resource; m_currentState = currentState; }
+            void Create(ID3D12Resource* resource, D3D12_RESOURCE_STATES currentState) { m_resource = resource; m_currentState = currentState; m_currentStateOnGpu = currentState; }
         };
 
         /** @brief Class with an attribute added to the string indicating which shader */

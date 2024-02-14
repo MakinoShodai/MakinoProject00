@@ -15,12 +15,15 @@ void CShaderRegistry::Initialize() {
     m_vertexShaders[static_cast<UINT>(VertexShaderType::Standard3DSprite)].Load("Assets/Shader/VS_Standard3DSprite.cso");
     m_vertexShaders[static_cast<UINT>(VertexShaderType::Standard3D)].Load("Assets/Shader/VS_Standard3D.cso");
     m_vertexShaders[static_cast<UINT>(VertexShaderType::Standard3DAnim)].Load("Assets/Shader/VS_Standard3DAnim.cso");
+    // VS standard remove a position from view
+    m_vertexShaders[static_cast<UINT>(VertexShaderType::StandardRemovePos3D)].Load("Assets/Shader/VS_StandardRemovePos3D.cso");
     // VS light position and world position 
     m_vertexShaders[static_cast<UINT>(VertexShaderType::LightPosWorldPos3D)].Load("Assets/Shader/VS_LightPosWorldPos3D.cso");
     m_vertexShaders[static_cast<UINT>(VertexShaderType::LightPosWorldPos3DAnim)].Load("Assets/Shader/VS_LightPosWorldPos3DAnim.cso");
     // VS light view projection matrix
     m_vertexShaders[static_cast<UINT>(VertexShaderType::LightVP3D)].Load("Assets/Shader/VS_LightVP3D.cso");
     m_vertexShaders[static_cast<UINT>(VertexShaderType::LightVP3DAnim)].Load("Assets/Shader/VS_LightVP3DAnim.cso");
+    m_vertexShaders[static_cast<UINT>(VertexShaderType::LightVPOutUV3D)].Load("Assets/Shader/VS_LightVPOutUV3D.cso");
     
     // PS standard tex
     m_pixelShaders[static_cast<UINT>(PixelShaderType::StandardTex)].Load("Assets/Shader/PS_StandardTex.cso");

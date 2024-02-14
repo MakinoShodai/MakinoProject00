@@ -133,21 +133,21 @@ float Utl::Math::CrossVector3In2D(const Vector3f& a, const Vector3f& b) {
 // Multiply the axis vectors of a 3x3 rotation matrix to a scalar value
 Vector3f Utl::Math::MultiplyMat3x3AxisToScalar(const Matrix3x3f& mat, const float& scaler, uint8_t index) {
     assert(Utl::Math::_X <= index && index <= Utl::Math::_Z);
-    return Vector3f(mat(index, Utl::Math::_X) * scaler, mat(index, Utl::Math::_Y) * scaler, mat(index, Utl::Math::_Z) * scaler);
+    return Vector3f(mat(Utl::Math::_X, index) * scaler, mat(Utl::Math::_Y, index) * scaler, mat(Utl::Math::_Z, index) * scaler);
 }
 
 // Calculate the dot product of a 3 dimensional vector from an axis vector with 3x3 rotation matrix
 float Utl::Math::DotMat3x3AxisToVector(const Matrix3x3f& mat, const Vector3f& v, uint8_t index) {
     assert(Utl::Math::_X <= index && index <= Utl::Math::_Z);
     // x * x + y * y + z * z
-    return mat(index, Utl::Math::_X) * v.x() + mat(index, Utl::Math::_Y)* v.y() + mat(index, Utl::Math::_Z) * v.z();
+    return mat(Utl::Math::_X, index) * v.x() + mat(Utl::Math::_Y, index) * v.y() + mat(Utl::Math::_Z, index) * v.z();
 }
 
 // Calculate the cross product between the axis vectors of 3x3 rotation matrices
 float Utl::Math::DotMat3x3AxisToMat3x3Axis(const Matrix3x3f& matA, const Matrix3x3f& matB, uint8_t indexA, uint8_t indexB) {
     assert(Utl::Math::_X <= indexA && indexA <= Utl::Math::_Z && Utl::Math::_X <= indexB && indexB <= Utl::Math::_Z);
     // x * x + y * y + z * z
-    return matA(indexA, Utl::Math::_X) * matB(indexB, Utl::Math::_X) + matA(indexA, Utl::Math::_Y) * matB(indexB, Utl::Math::_Y) + matA(indexA, Utl::Math::_Z) * matB(indexB, Utl::Math::_Z);
+    return matA(Utl::Math::_X, indexA) * matB(Utl::Math::_X, indexB) + matA(Utl::Math::_Y, indexA) * matB(Utl::Math::_Y, indexB) + matA(Utl::Math::_Z, indexA) * matB(Utl::Math::_Z, indexB);
 }
 
 // Calculate the cross product between the axis vectors of 3x3 rotation matrices
@@ -157,9 +157,9 @@ Vector3f Utl::Math::CrossMat3x3AxisToMat3x3Axis(const Matrix3x3f& matA, const Ma
     // z * r.x - x * r.z
     // x * r.y - y * r.x
     return Vector3f(
-        matA(indexA, Utl::Math::_Y) * matB(indexB, Utl::Math::_Z) - matA(indexA, Utl::Math::_Z) * matB(indexB, Utl::Math::_Y), 
-        matA(indexA, Utl::Math::_Z) * matB(indexB, Utl::Math::_X) - matA(indexA, Utl::Math::_X) * matB(indexB, Utl::Math::_Z),
-        matA(indexA, Utl::Math::_X) * matB(indexB, Utl::Math::_Y) - matA(indexA, Utl::Math::_Y) * matB(indexB, Utl::Math::_X));
+        matA(Utl::Math::_Y, indexA) * matB(Utl::Math::_Z, indexB) - matA(Utl::Math::_Z, indexA) * matB(Utl::Math::_Y, indexB),
+        matA(Utl::Math::_Z, indexA) * matB(Utl::Math::_X, indexB) - matA(Utl::Math::_X, indexA) * matB(Utl::Math::_Z, indexB),
+        matA(Utl::Math::_X, indexA) * matB(Utl::Math::_Y, indexB) - matA(Utl::Math::_Y, indexA) * matB(Utl::Math::_X, indexB));
 }
 
 // Advance the current value toward the target value

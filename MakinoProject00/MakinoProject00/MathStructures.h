@@ -263,7 +263,7 @@ public:
     Matrix& operator=(const Matrix& copy) { memcpy(&vals[0], &copy.vals[0], ROW * COLUMN * sizeof(T)); return *this; }
 
     /** @brief Get a transpose matrix */
-    Matrix Transpose() {
+    Matrix Transpose() const {
         Matrix ret;
         for (uint8_t i = 0; i < ROW; ++i) {
             for (uint8_t j = 0; j < COLUMN; ++j) {
@@ -297,7 +297,7 @@ public:
     }
 
     /** @brief Product with column vector */
-    const Vector<T, COLUMN> operator*(const Vector<T, COLUMN>& vec) const {
+    const Vector<T, ROW> operator*(const Vector<T, COLUMN>& vec) const {
         Vector<T, ROW> ret;
         for (uint8_t i = 0; i < ROW; ++i) {
             for (uint8_t j = 0; j < COLUMN; ++j) {
@@ -748,13 +748,13 @@ const Matrix<T, 3, 3> Quaternion<T>::GetMatrix() const {
     T wz = w() * z();
     // Calculate each components
     mat(0, 0) = T(1) - T(2) * (yy + zz);
-    mat(0, 1) = T(2) * (xy + wz);
-    mat(0, 2) = T(2) * (xz - wy);
-    mat(1, 0) = T(2) * (xy - wz);
+    mat(0, 1) = T(2) * (xy - wz);
+    mat(0, 2) = T(2) * (xz + wy);
+    mat(1, 0) = T(2) * (xy + wz);
     mat(1, 1) = T(1) - T(2) * (xx + zz);
-    mat(1, 2) = T(2) * (yz + wx);
-    mat(2, 0) = T(2) * (xz + wy);
-    mat(2, 1) = T(2) * (yz - wx);
+    mat(1, 2) = T(2) * (yz - wx);
+    mat(2, 0) = T(2) * (xz - wy);
+    mat(2, 1) = T(2) * (yz + wx);
     mat(2, 2) = T(1) - T(2) * (xx + yy);
     return mat;
 }

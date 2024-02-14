@@ -4,6 +4,7 @@
 #include "SwapChain.h"
 #include "CommandManager.h"
 #include "Shape.h"
+#include "PointLight.h"
 
 // Extension of scene file
 const std::string SCENE_FILE_EXTENSION = ".scene";
@@ -13,8 +14,8 @@ const char COMMON_DELIMITER = '"';
 
 // Delimiter after rendering pass name
 const std::string DELIMITER_AFTER_RENDERPASS = "renderpass";
-// Delimiter after inspector name
-const std::string DELIMITER_AFTER_INSPECTORNAME = "inspectorname";
+// Delimiter after hierarchy name
+const std::string DELIMITER_AFTER_HIERARCHYNAME = "hierarchyname";
 // Delimiter after prefab name
 const std::string DELIMITER_AFTER_PREFABNAME = "prefabname";
 // Delimiter after transform
@@ -62,18 +63,19 @@ bool GetVector3fFromString(std::string* text, Vector3f* vec) {
 }
 
 // Constructor
-CObjectInspectorData::CObjectInspectorData(CStringWithIntKey inspectorName)
-    : m_inspectorName(std::move(inspectorName))
+CObjectHierarchyData::CObjectHierarchyData(CStringWithIntKey hierarchyName)
+    : m_hierarchyName(std::move(hierarchyName))
     , m_prefabName()
     , m_objPtr(nullptr)
 {
 }
 
 // Copy constructor
-CObjectInspectorData::CObjectInspectorData(CStringWithIntKey inspectorName, const CObjectInspectorData& copy)
-    : m_inspectorName(std::move(inspectorName))
+CObjectHierarchyData::CObjectHierarchyData(CStringWithIntKey hierarchyName, const CObjectHierarchyData& copy)
+    : m_hierarchyName(std::move(hierarchyName))
     , m_prefabName(copy.m_prefabName)
-    , m_objPtr(nullptr) {
+    , m_objPtr(nullptr)
+    , m_eularTransform(copy.m_eularTransform) {
     if (nullptr != copy.m_objPtr) {
         m_objPtr.Reset(ACRegistrarForGameObject::CreateGameObject(
             copy.m_prefabName, copy.m_objPtr->GetScene().Get(), 
@@ -83,30 +85,24 @@ CObjectInspectorData::CObjectInspectorData(CStringWithIntKey inspectorName, cons
 }
 
 // Destroy prefab
-void CObjectInspectorData::DestroyPrefab() {
+void CObjectHierarchyData::DestroyPrefab() {
     if (m_objPtr) {
-        std::vector<CWeakPtr<ACGraphicsComponent>> graphicsComponents = m_objPtr->GetComponents<ACGraphicsComponent>();
-        for (auto& it : graphicsComponents) {
-            it->OnDestroy();
-        }
-        m_objPtr = nullptr;
+        OnDestroyPrefab();
+        m_objPtr.Reset();
     }
 }
 
 // Set prefab
-void CObjectInspectorData::SetPrefab(CScene* scene, const std::string& prefabName) {
+void CObjectHierarchyData::SetPrefab(CScene* scene, const std::string& prefabName) {
     if (m_prefabName != prefabName) {
         if (scene != nullptr) {
             if (m_objPtr) {
-                // Sequre commands
+                // Secure commands
                 CCommandManager::GetMain().SecureCommands();
-                std::vector<CWeakPtr<ACGraphicsComponent>> graphicsComponents = m_objPtr->GetComponents<ACGraphicsComponent>();
-                for (auto& it : graphicsComponents) {
-                    it->OnDestroy();
-                }
+                OnDestroyPrefab();
             }
 
-            m_objPtr.Reset(ACRegistrarForGameObject::CreateGameObject(prefabName, scene, Transformf()));
+            m_objPtr.Reset(ACRegistrarForGameObject::CreateGameObject(prefabName, scene, Transformf(m_eularTransform.pos, m_eularTransform.scale, m_eularTransform.angle * Utl::DEG_2_RAD)));
             m_objPtr->Prefab();
         }
         m_prefabName = prefabName;
@@ -114,7 +110,7 @@ void CObjectInspectorData::SetPrefab(CScene* scene, const std::string& prefabNam
 }
 
 // Set collider drawing on/off
-void CObjectInspectorData::SetDrawingCollider(bool isDrawing) {
+void CObjectHierarchyData::SetDrawingCollider(bool isDrawing) {
     if (m_objPtr) {
         std::vector<CWeakPtr<CDebugColliderShape>> shapes = m_objPtr->GetComponents<CDebugColliderShape>();
         for (auto& it : shapes) {
@@ -124,16 +120,26 @@ void CObjectInspectorData::SetDrawingCollider(bool isDrawing) {
 }
 
 // Rebuild the object with the current prefab name
-void CObjectInspectorData::RebuildCurrentPrefab(CScene* scene) {
+void CObjectHierarchyData::RebuildCurrentPrefab(CScene* scene) {
     if (!m_prefabName.empty() && scene != nullptr && !m_objPtr) {
-        m_objPtr.Reset(ACRegistrarForGameObject::CreateGameObject(m_prefabName, scene, 
-            Transformf(m_eularTransform.pos, m_eularTransform.scale, m_eularTransform.angle * Utl::DEG_2_RAD)));
-        m_objPtr->Prefab();
+        CGameObject* obj = ACRegistrarForGameObject::CreateGameObject(m_prefabName, scene,
+            Transformf(m_eularTransform.pos, m_eularTransform.scale, m_eularTransform.angle * Utl::DEG_2_RAD));
+        if (obj != nullptr) {
+            m_objPtr.Reset(obj);
+            m_objPtr->Prefab();
+            std::vector<CWeakPtr<ACCollider3D>> colliders = m_objPtr->GetComponents<ACCollider3D>();
+            for (auto& it : colliders) {
+                it->ScalingRotationUpdate();
+            }
+        }
+        else {
+            m_prefabName.clear();
+        }
     }
 }
 
 // Set position
-void CObjectInspectorData::SetPos(const Vector3f& pos) {
+void CObjectHierarchyData::SetPos(const Vector3f& pos) {
     m_eularTransform.pos = pos;
     if (m_objPtr) {
         m_objPtr->SetPos(pos);
@@ -141,7 +147,7 @@ void CObjectInspectorData::SetPos(const Vector3f& pos) {
 }
 
 // Set scale
-void CObjectInspectorData::SetScale(const Vector3f& scale) {
+void CObjectHierarchyData::SetScale(const Vector3f& scale) {
     m_eularTransform.scale = scale;
     if (m_objPtr) {
         m_objPtr->SetScale(scale);
@@ -155,7 +161,7 @@ void CObjectInspectorData::SetScale(const Vector3f& scale) {
 }
 
 // Set eular angle
-void CObjectInspectorData::SetEularAngle(const Vector3f& angle) {
+void CObjectHierarchyData::SetEularAngle(const Vector3f& angle) {
     m_eularTransform.angle = angle;
     if (m_objPtr) {
         m_objPtr->SetRotation(Quaternionf(angle * Utl::DEG_2_RAD));
@@ -167,8 +173,22 @@ void CObjectInspectorData::SetEularAngle(const Vector3f& angle) {
     }
 }
 
+// Processing when Prefab is destroyed
+void CObjectHierarchyData::OnDestroyPrefab() {
+    if (m_objPtr) {
+        std::vector<CWeakPtr<ACGraphicsComponent>> graphicsComponents = m_objPtr->GetComponents<ACGraphicsComponent>();
+        for (auto& it : graphicsComponents) {
+            it->OnDestroy();
+        }
+        std::vector<CWeakPtr<CPointLightComponent>> pointLights = m_objPtr->GetComponents<CPointLightComponent>();
+        for (auto& it : pointLights) {
+            it->OnDisable();
+        }
+    }
+}
+
 // Load scene data from a scene file
-bool SceneFileSystem::LoadSceneData(const std::string& sceneName, std::string* retRenderPassName, std::vector<CObjectInspectorData>* objects) {
+bool SceneFileSystem::LoadSceneData(const std::string& sceneName, std::string* retRenderPassName, std::vector<CObjectHierarchyData>* objects) {
     std::ifstream file(SCENE_FILE_DIR + sceneName + SCENE_FILE_EXTENSION, std::ios::binary);
     if (!file.is_open()) {
         return false;
@@ -183,10 +203,8 @@ bool SceneFileSystem::LoadSceneData(const std::string& sceneName, std::string* r
     file.close();
 
 #ifdef _EDITOR
-    // Clear current command list
-    CSwapChain::GetMain().WaitForPresent();
-    CCommandManager::GetAny().WaitForGPU();
-    CCommandManager::GetMain().ClearCurrentCommandList();
+    // Secure commands
+    CCommandManager::GetMain().SecureCommands();
 
     // Clear objects
     for (auto& it : *objects) {
@@ -203,12 +221,12 @@ bool SceneFileSystem::LoadSceneData(const std::string& sceneName, std::string* r
     }
 
     std::string tmp;
-    while (GetToDelimiter(&text, &tmp, &retDelimiter) && retDelimiter == DELIMITER_AFTER_INSPECTORNAME) {
-        // Set inspector name
+    while (GetToDelimiter(&text, &tmp, &retDelimiter) && retDelimiter == DELIMITER_AFTER_HIERARCHYNAME) {
+        // Set hierarchy name
         objects->emplace_back(tmp);
 
         // Read prefab name
-        CObjectInspectorData& object = objects->back();
+        CObjectHierarchyData& object = objects->back();
         if (false == (GetToDelimiter(&text, &tmp, &retDelimiter) && retDelimiter == DELIMITER_AFTER_PREFABNAME)) {
             break;
         }
@@ -237,16 +255,16 @@ bool SceneFileSystem::LoadSceneData(const std::string& sceneName, std::string* r
 
 // Save scene data to a file
 bool SceneFileSystem::SaveSceneData(const std::string& sceneName, const std::string& renderPassName, 
-    const std::vector<CObjectInspectorData>& objects) {
+    const std::vector<CObjectHierarchyData>& objects) {
     // Write rendering pass name
     std::string outputText = renderPassName;
     WriteDelimiter(&outputText, DELIMITER_AFTER_RENDERPASS);
 
     // Write objects
     for (const auto& it : objects) {
-        // Write inspector name
-        outputText += it.GetInspectorName().GetWithIntKey();
-        WriteDelimiter(&outputText, DELIMITER_AFTER_INSPECTORNAME);
+        // Write hierarchy name
+        outputText += it.GetHierarchyName().GetWithIntKey();
+        WriteDelimiter(&outputText, DELIMITER_AFTER_HIERARCHYNAME);
 
         // Write prefab name
         outputText += it.GetPrefabName();

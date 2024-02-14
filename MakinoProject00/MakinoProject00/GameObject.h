@@ -247,7 +247,7 @@ public:
     ~CRegistrarGameObjectPrefab() override = default;
 };
 
-/** @brief Macro to register a Prefab and publish it to the inspector */
+/** @brief Macro to register a Prefab and publish it to the hierarchy */
 #define REGISTER_PREFABCLASS(CLASS_NAME) static CRegistrarGameObjectPrefab<CLASS_NAME> registrar_##CLASS_NAME(#CLASS_NAME); 
 
 // Get a component

@@ -9,9 +9,11 @@
 // Initialize
 void CStaticResourceRegistry::Initialize() {
     EmplaceStaticAllocator<CStaticCbVP>();
+    EmplaceStaticAllocator<CStaticCbRemovePosVP>();
     EmplaceStaticAllocator<CStaticCbDirLightParam>();
     EmplaceStaticAllocator<CStaticCbLightVP>();
     EmplaceStaticAllocator<CStaticCbOrthographicMat>();
+    EmplaceStaticAllocator<CStaticCbOrthographicViewProjMat>();
     EmplaceStaticAllocator<CStaticSrvShadowMap1>();
     EmplaceStaticAllocator<CStaticSrvShadowMap2>();
     EmplaceStaticAllocator<CStaticSrvShadowMap3>();

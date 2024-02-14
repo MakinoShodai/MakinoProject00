@@ -39,10 +39,18 @@ private:
     CStandardGPSOWrapper m_standardGpso;
     /** @brief GPSO wrapper for transparent layer */
     CTransparentGPSOWrapper m_transparentGpso;
+    /** @brief GPSO wrapper for transparent and no culling layer */
+    CTransparentNoCullingGPSOWrapper m_transparentNoCullGpso;
     /** @brief GPSO wrapper for writing shadow */
     CWriteShadowGPSOWrapper m_writeShadowGpso;
     /** @brief GPSO wrapper for shading */
     CShadingGPSOWrapper m_shadingGpso;
+    /** @brief GPSO wrapper for grass writing shadow */
+    CGrassWriteShadowGPSOWrapper m_grassWriteShadowGpso;
+    /** @brief GPSO wrapper for grass shading */
+    CGrassShadingGPSOWrapper m_grassShadingGpso;
+    /** @brief GPSO for sky dome */
+    CGraphicsPipelineState m_skyDomeGpso;
     /** @brief GPSO for UI */
     CGraphicsPipelineState m_uiGpso;
     /** @brief Depth stencil view for 3D */

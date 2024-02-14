@@ -10,7 +10,9 @@ const UINT BASE_ANIM_INDEX = 0;
 bool CreateTexPath(std::wstring* ret, aiMaterial* mat, const std::wstring& dir) {
     aiString str;
     if (mat->Get(AI_MATKEY_TEXTURE_DIFFUSE(0), str) == AI_SUCCESS) {
+        // Replace all backslashes with forward slashes in the file path
         *ret = dir + Utl::Str::string2WString(str.C_Str());
+        std::replace(ret->begin(), ret->end(), '\\', '/');
         return true;
     }
     return false;
@@ -125,9 +127,10 @@ void CStaticModelData::LoadModel(const void* data, size_t size, const std::wstri
         m_meshes[i].materialIndex = assimpScene->mMeshes[i]->mMaterialIndex;
 
         // Create mesh buffer
-        m_meshes[i].meshbuffer.GetVertexEntity()->Create<ModelInfo::Vertex>(m_meshes[i].vertices.Get(), m_meshes[i].vertices.Size());
-        m_meshes[i].meshbuffer.GetIndexEntity()->Create<UINT>(m_meshes[i].indices.Get(), m_meshes[i].indices.Size());
-        m_meshes[i].meshbuffer.SetInfo(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+        m_meshes[i].meshbuffer = CUniquePtrWeakable<CMeshBufferFull>::Make();
+        m_meshes[i].meshbuffer->GetVertexEntity()->Create<ModelInfo::Vertex>(m_meshes[i].vertices.Get(), m_meshes[i].vertices.Size());
+        m_meshes[i].meshbuffer->GetIndexEntity()->Create<UINT>(m_meshes[i].indices.Get(), m_meshes[i].indices.Size());
+        m_meshes[i].meshbuffer->SetInfo(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
     }
     
     // Initialize the array of the indices

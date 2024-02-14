@@ -30,7 +30,7 @@ public:
     /**
        @brief Constructor
     */
-    CGraphicsObjectAsset() : m_meshBufferPtr(nullptr) {}
+    CGraphicsObjectAsset() : m_meshBufferPtr(nullptr), m_isActive(true) {}
 
     /**
        @brief Destructor
@@ -65,6 +65,10 @@ public:
     */
     void ClearCBVs() { m_cbvs.clear(); }
 
+    /** @brief Set active flag */
+    void SetIsActive(bool isActive) { m_isActive = isActive; }
+    /** @brief Is this asset active? */
+    bool IsActive() const { return m_isActive; }
     /** @brief Set pointer to vertex buffer */
     void SetMeshBuff(CWeakPtr<const CMeshBuffer> mesh) { m_meshBufferPtr = mesh; }
     /** @brief Get pointer to vertex buffer */
@@ -73,6 +77,8 @@ public:
     const std::vector<CBVWithNamePair>* GetCBVsArray() { return &m_cbvs; }
     
 private:
+    /** @brief Is this asset active? */
+    bool m_isActive;
     /** @brief Pointer to mesh buffer */
     CWeakPtr<const CMeshBuffer> m_meshBufferPtr;
     /** @brief Dynamic array of all SRVs */

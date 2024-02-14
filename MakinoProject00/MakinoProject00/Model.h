@@ -124,6 +124,13 @@ protected:
 
 private:
     /**
+       @brief Constructor for transparent meshes
+       @param substance Pointer to the substance that has this component as a variable
+    */
+    CBasicModel(CBasicModel* substance);
+
+private:
+    /**
        @brief Union to use different values for different uses of this component
        @details
        Since the layers of the component are applied to all meshes,

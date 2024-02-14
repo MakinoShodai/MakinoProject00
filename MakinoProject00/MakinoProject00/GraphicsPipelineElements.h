@@ -42,7 +42,7 @@ namespace Gpso {
         */
         SamplerStateSetting() {
             addressMode    = D3D12_TEXTURE_ADDRESS_MODE_WRAP;            // Wrap
-            filterMode     = D3D12_FILTER_COMPARISON_MIN_MAG_MIP_LINEAR; // Linear sampling
+            filterMode     = D3D12_FILTER_COMPARISON_MIN_MAG_MIP_POINT;  // Point sampling
             MinLOD         = 0;                                          // Minimum value
             MaxLOD         = D3D12_FLOAT32_MAX;                          // Maximum value
             MaxAnisotropy  = 1;                                          // Minimum valid value

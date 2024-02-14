@@ -11,9 +11,9 @@ const float INV_FRUSTUM_CORNER_NUM = 1.0f / (float)FRUSTUM_CORNER_NUM;
 const float DIV2_SHADOWMAP_SIZE = 2.0f / (float)SHADOWMAP_SIZE;
 
 // Value to split the first cascade
-const float FIRST_CASCADE_SPLIT_VALUE = 0.05f;
+const float FIRST_CASCADE_SPLIT_VALUE = 0.1f;
 // Value to split the second cascade
-const float SECOND_CASCADE_END_Z = 0.1f;
+const float SECOND_CASCADE_SPLIT_VALUE = 0.2f;
 
 // Constructor
 CLightVPCalculator::CLightVPCalculator()
@@ -26,7 +26,7 @@ CLightVPCalculator::CLightVPCalculator()
     , m_cascadeScales{}
 { 
     m_cascadeSplitVals[0] = FIRST_CASCADE_SPLIT_VALUE;
-    m_cascadeSplitVals[1] = SECOND_CASCADE_END_Z;
+    m_cascadeSplitVals[1] = SECOND_CASCADE_SPLIT_VALUE;
     m_cascadeSplitVals[2] = 1.0f;
 }
 

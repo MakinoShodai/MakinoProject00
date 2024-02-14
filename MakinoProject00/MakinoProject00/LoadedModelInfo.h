@@ -102,7 +102,7 @@ namespace ModelInfo {
         /** @brief Bone information */
         CArrayUniquePtr<Bone> bones;
         /** @brief Mesh buffer */
-        CMeshBufferFull meshbuffer;
+        CUniquePtrWeakable<CMeshBufferFull> meshbuffer;
         /** @brief Index of material to be associated */
         UINT materialIndex;
     };
