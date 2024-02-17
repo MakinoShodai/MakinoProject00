@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: TagSetting.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">TagSetting.cpp ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_tag_setting_8h_source.html">TagSetting.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_collider_tag_8h_source.html">ColliderTag.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+TagSetting.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_tag_setting_8cpp__incl.png" border="0" usemap="#a_tag_setting_8cpp" alt=""/></div>
+<map name="a_tag_setting_8cpp" id="a_tag_setting_8cpp">
+<area shape="rect" title=" " alt="" coords="58,5,167,32"/>
+<area shape="rect" href="_tag_setting_8h.html" title="This file handles function for setting tag." alt="" coords="5,80,100,107"/>
+<area shape="poly" title=" " alt="" coords="104,34,74,70,70,66,100,31"/>
+<area shape="rect" href="_collider_tag_8h.html" title="This file handles tag for collider." alt="" coords="124,80,221,107"/>
+<area shape="poly" title=" " alt="" coords="125,31,155,66,151,70,121,34"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="64,155,164,181"/>
+<area shape="poly" title=" " alt="" coords="164,109,136,144,131,141,160,106"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="188,155,274,181"/>
+<area shape="poly" title=" " alt="" coords="185,106,214,141,209,144,181,109"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="29,229,162,256"/>
+<area shape="poly" title=" " alt="" coords="209,184,134,224,131,219,206,180"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="187,229,276,256"/>
+<area shape="poly" title=" " alt="" coords="234,182,234,214,229,214,229,182"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="300,229,442,256"/>
+<area shape="poly" title=" " alt="" coords="257,180,334,219,332,224,254,184"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="190,304,273,331"/>
+<area shape="poly" title=" " alt="" coords="234,257,234,288,229,288,229,257"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="199,379,264,405"/>
+<area shape="poly" title=" " alt="" coords="234,331,234,363,229,363,229,331"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="175,453,287,480"/>
+<area shape="poly" title=" " alt="" coords="234,406,234,438,229,438,229,406"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:aa388da22383af1507793df57d27be957" id="r_aa388da22383af1507793df57d27be957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tag_setting_8cpp.html#aa388da22383af1507793df57d27be957">TagSetting</a> ()</td></tr>
+<tr class="memdesc:aa388da22383af1507793df57d27be957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform setting tag of collider  <br /></td></tr>
+<tr class="separator:aa388da22383af1507793df57d27be957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aa388da22383af1507793df57d27be957" name="aa388da22383af1507793df57d27be957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa388da22383af1507793df57d27be957">&#9670;&#160;</a></span>TagSetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TagSetting </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform setting tag of collider </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_tag_setting_8cpp_aa388da22383af1507793df57d27be957_cgraph.png" border="0" usemap="#a_tag_setting_8cpp_aa388da22383af1507793df57d27be957_cgraph" alt=""/></div>
+<map name="a_tag_setting_8cpp_aa388da22383af1507793df57d27be957_cgraph" id="a_tag_setting_8cpp_aa388da22383af1507793df57d27be957_cgraph">
+<area shape="rect" title="Perform setting tag of collider" alt="" coords="5,88,89,115"/>
+<area shape="rect" href="class_c_collider_tag_registry.html#ac4dd0ddaf3b3987122a92a2ac2f99ebd" title="Finish writing the value" alt="" coords="143,5,286,48"/>
+<area shape="poly" title=" " alt="" coords="77,85,136,58,148,52,150,57,138,62,79,90"/>
+<area shape="rect" href="class_a_c_any_thread_singleton.html#a7321978d9a2f747a0e596d17c18a8b98" title="Get singleton instance for any thread" alt="" coords="137,72,292,131"/>
+<area shape="poly" title=" " alt="" coords="89,99,121,99,121,104,89,104"/>
+<area shape="rect" href="class_c_collider_tag_registry.html#af5ab1c0a84bfdb414a6643d285c310b9" title="Set configure" alt="" coords="143,155,286,197"/>
+<area shape="poly" title=" " alt="" coords="79,113,138,140,150,146,148,150,136,145,77,118"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_tag_setting_8cpp_aa388da22383af1507793df57d27be957_icgraph.png" border="0" usemap="#a_tag_setting_8cpp_aa388da22383af1507793df57d27be957_icgraph" alt=""/></div>
+<map name="a_tag_setting_8cpp_aa388da22383af1507793df57d27be957_icgraph" id="a_tag_setting_8cpp_aa388da22383af1507793df57d27be957_icgraph">
+<area shape="rect" title="Perform setting tag of collider" alt="" coords="264,29,347,56"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,29,216,56"/>
+<area shape="poly" title=" " alt="" coords="248,45,217,45,217,40,248,40"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+<area shape="poly" title=" " alt="" coords="51,16,44,10,30,8,17,10,10,14,8,20,12,28,7,30,3,21,6,11,15,5,30,3,46,5,55,12"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

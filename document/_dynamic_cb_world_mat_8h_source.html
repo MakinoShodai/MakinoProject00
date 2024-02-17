@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: DynamicCbWorldMat.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">DynamicCbWorldMat.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_dynamic_cb_world_mat_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __DYNAMIC_CB_WORLD_MAT_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __DYNAMIC_CB_WORLD_MAT_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_dynamic_cb_allocator_8h.html">DynamicCbAllocator.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="_dynamic_cb_world_mat_8h.html#a1d7c78f7825199b9020bce75b7e82d70">   18</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_dynamic_cb_world_mat_8h.html#a1d7c78f7825199b9020bce75b7e82d70">SPRITE_SCREEN_BOUNDARY</a> = 100.0f;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_world_mat.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_dynamic_cb_world_mat.html">CDynamicCbWorldMat</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_dynamic_cb_allocator.html">ACDynamicCbAllocator</a>&lt;DirectX::XMFLOAT4X4&gt; {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_world_mat.html#ae3185bab1cbfef62f686694f28fbf29e">   23</a></span>    <a class="code hl_function" href="class_c_dynamic_cb_world_mat.html#ae3185bab1cbfef62f686694f28fbf29e">CDynamicCbWorldMat</a>(UINT maxUsePerFrame) : <a class="code hl_class" href="class_a_c_dynamic_cb_allocator.html">ACDynamicCbAllocator</a>(maxUsePerFrame, <span class="stringliteral">&quot;WorldMat&quot;</span>) {}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_world_mat.html#ad06532f9790e66fa2f1bce49a113fc99">AllocateDataNoComponent</a>(<a class="code hl_class" href="struct_vector.html">Vector3f</a> pos, <a class="code hl_class" href="struct_vector.html">Vector3f</a> scale, <a class="code hl_class" href="struct_quaternion.html">Quaternionf</a> rotation);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_world_mat.html#ac295bc80f0ff033e39ca4d2416c6695b">AllocateData</a>(<a class="code hl_class" href="class_a_c_graphics_component.html">ACGraphicsComponent</a>* component);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_world_mat.html#ac295bc80f0ff033e39ca4d2416c6695b">AllocateData</a>(<a class="code hl_class" href="class_c_sprite_u_i.html">CSpriteUI</a>* sprite);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_world_mat.html#ac295bc80f0ff033e39ca4d2416c6695b">AllocateData</a>(<a class="code hl_class" href="class_c_sprite3_d.html">CSprite3D</a>* sprite);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_world_mat.html#ac295bc80f0ff033e39ca4d2416c6695b">AllocateData</a>(<a class="code hl_class" href="class_c_billboard.html">CBillboard</a>* billboard);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_world_mat.html#ac295bc80f0ff033e39ca4d2416c6695b">AllocateData</a>(<a class="code hl_class" href="class_c_debug_collider_shape.html">CDebugColliderShape</a>* shape);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">// !__DYNAMIC_CB_WORLD_MAT_H__</span></div>
+<div class="ttc" id="a_dynamic_cb_allocator_8h_html"><div class="ttname"><a href="_dynamic_cb_allocator_8h.html">DynamicCbAllocator.h</a></div><div class="ttdoc">This file handles class that allocates data for constant buffer per object.</div></div>
+<div class="ttc" id="a_dynamic_cb_world_mat_8h_html_a1d7c78f7825199b9020bce75b7e82d70"><div class="ttname"><a href="_dynamic_cb_world_mat_8h.html#a1d7c78f7825199b9020bce75b7e82d70">SPRITE_SCREEN_BOUNDARY</a></div><div class="ttdeci">constexpr float SPRITE_SCREEN_BOUNDARY</div><div class="ttdoc">Defines the screen boundary coordinate</div><div class="ttdef"><b>Definition</b> DynamicCbWorldMat.h:18</div></div>
+<div class="ttc" id="aclass_a_c_dynamic_cb_allocator_html"><div class="ttname"><a href="class_a_c_dynamic_cb_allocator.html">ACDynamicCbAllocator</a></div><div class="ttdoc">This class allocates data for constant buffer view per object</div><div class="ttdef"><b>Definition</b> DynamicCbAllocator.h:88</div></div>
+<div class="ttc" id="aclass_a_c_graphics_component_html"><div class="ttname"><a href="class_a_c_graphics_component.html">ACGraphicsComponent</a></div><div class="ttdoc">Abstract class of component of graphics</div><div class="ttdef"><b>Definition</b> GraphicsComponent.h:78</div></div>
+<div class="ttc" id="aclass_c_billboard_html"><div class="ttname"><a href="class_c_billboard.html">CBillboard</a></div><div class="ttdoc">Billboard class</div><div class="ttdef"><b>Definition</b> Sprite.h:90</div></div>
+<div class="ttc" id="aclass_c_debug_collider_shape_html"><div class="ttname"><a href="class_c_debug_collider_shape.html">CDebugColliderShape</a></div><div class="ttdoc">Shape for debugging collider</div><div class="ttdef"><b>Definition</b> Shape.h:64</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_world_mat_html"><div class="ttname"><a href="class_c_dynamic_cb_world_mat.html">CDynamicCbWorldMat</a></div><div class="ttdoc">CB allocator class that handles world matrix</div><div class="ttdef"><b>Definition</b> DynamicCbWorldMat.h:21</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_world_mat_html_ac295bc80f0ff033e39ca4d2416c6695b"><div class="ttname"><a href="class_c_dynamic_cb_world_mat.html#ac295bc80f0ff033e39ca4d2416c6695b">CDynamicCbWorldMat::AllocateData</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(ACGraphicsComponent *component)</div><div class="ttdoc">Allocate data</div><div class="ttdef"><b>Definition</b> DynamicCbWorldMat.cpp:59</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_world_mat_html_ad06532f9790e66fa2f1bce49a113fc99"><div class="ttname"><a href="class_c_dynamic_cb_world_mat.html#ad06532f9790e66fa2f1bce49a113fc99">CDynamicCbWorldMat::AllocateDataNoComponent</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateDataNoComponent(Vector3f pos, Vector3f scale, Quaternionf rotation)</div><div class="ttdoc">Allocate data for no component</div><div class="ttdef"><b>Definition</b> DynamicCbWorldMat.cpp:43</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_world_mat_html_ae3185bab1cbfef62f686694f28fbf29e"><div class="ttname"><a href="class_c_dynamic_cb_world_mat.html#ae3185bab1cbfef62f686694f28fbf29e">CDynamicCbWorldMat::CDynamicCbWorldMat</a></div><div class="ttdeci">CDynamicCbWorldMat(UINT maxUsePerFrame)</div><div class="ttdef"><b>Definition</b> DynamicCbWorldMat.h:23</div></div>
+<div class="ttc" id="aclass_c_sprite3_d_html"><div class="ttname"><a href="class_c_sprite3_d.html">CSprite3D</a></div><div class="ttdoc">Sprite class for 3D coordinate space</div><div class="ttdef"><b>Definition</b> Sprite.h:78</div></div>
+<div class="ttc" id="aclass_c_sprite_u_i_html"><div class="ttname"><a href="class_c_sprite_u_i.html">CSpriteUI</a></div><div class="ttdoc">Sprite class for UI</div><div class="ttdef"><b>Definition</b> Sprite.h:66</div></div>
+<div class="ttc" id="astruct_quaternion_html"><div class="ttname"><a href="struct_quaternion.html">Quaternion&lt; float &gt;</a></div></div>
+<div class="ttc" id="astruct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e_html"><div class="ttname"><a href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a></div><div class="ttdoc">D3D12_CPU_DESCRIPTOR_HANDLE interface</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:68</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 3 &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

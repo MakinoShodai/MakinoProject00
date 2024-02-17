@@ -1,0 +1,1402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CGameObject クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_game_object-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CGameObject クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is base class for game object  
+ <a href="class_c_game_object.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_game_object_8h_source.html">GameObject.h</a>&gt;</code></p>
+<div class="dynheader">
+CGameObject の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object__inherit__graph.png" border="0" usemap="#a_c_game_object_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_game_object_inherit__map" id="a_c_game_object_inherit__map">
+<area shape="rect" title="This is base class for game object" alt="" coords="383,943,486,969"/>
+<area shape="rect" href="class_c_big_brick01_prefab.html" title="Prefab for big brick 01" alt="" coords="577,5,707,32"/>
+<area shape="poly" title=" " alt="" coords="434,927,444,736,463,455,476,314,492,189,511,95,521,62,532,42,552,27,576,19,577,24,555,32,536,46,526,65,516,96,497,190,482,315,468,456,449,736,440,927"/>
+<area shape="rect" href="class_c_big_brick02_prefab.html" title="Prefab for big brick 02" alt="" coords="577,56,707,83"/>
+<area shape="poly" title=" " alt="" coords="435,927,445,745,465,481,478,348,494,231,512,142,522,112,532,93,552,78,576,69,577,74,555,82,536,96,526,114,517,144,499,232,483,349,470,481,450,746,440,927"/>
+<area shape="rect" href="class_c_big_brick04_prefab.html" title="Prefab for big brick 04" alt="" coords="577,107,707,133"/>
+<area shape="poly" title=" " alt="" coords="435,927,446,756,466,507,480,383,495,273,513,190,522,161,532,144,552,128,576,120,578,125,555,133,536,147,527,164,518,191,500,274,485,383,471,508,451,756,440,928"/>
+<area shape="rect" href="class_c_column03_prefab.html" title="Prefab for ruin column 03" alt="" coords="579,157,705,184"/>
+<area shape="poly" title=" " alt="" coords="433,927,434,775,445,555,456,442,474,338,499,253,515,220,532,194,553,179,578,170,580,175,556,183,536,198,519,222,504,255,479,340,462,443,450,556,439,775,438,927"/>
+<area shape="rect" href="class_c_debug_camera_prefab.html" title="Prefab of debug camera object" alt="" coords="567,208,717,235"/>
+<area shape="poly" title=" " alt="" coords="433,927,435,785,448,580,460,475,477,379,501,299,516,268,532,245,548,232,566,224,568,229,551,237,536,248,520,271,506,301,482,380,465,476,453,581,441,785,438,927"/>
+<area shape="rect" href="class_c_directional_light_prefab.html" title="Prefab for directional light" alt="" coords="564,259,720,285"/>
+<area shape="poly" title=" " alt="" coords="434,927,437,794,451,604,463,507,480,419,503,346,517,317,532,296,546,284,562,276,564,281,549,289,536,299,521,320,508,348,485,420,468,508,456,605,443,794,439,927"/>
+<area shape="rect" href="class_c_grass_terrain_prefab.html" title="Prefab for grass terrain" alt="" coords="571,309,713,336"/>
+<area shape="poly" title=" " alt="" coords="434,927,439,802,454,628,466,540,483,459,505,392,518,366,532,346,550,333,570,325,572,330,552,337,536,350,522,369,510,394,488,460,472,541,459,629,444,803,439,927"/>
+<area shape="rect" href="class_c_physics_sample_box_prefab.html" title="Box prefab for physics sample" alt="" coords="551,360,733,387"/>
+<area shape="poly" title=" " alt="" coords="434,927,441,812,457,653,470,572,486,499,507,438,519,415,532,397,549,384,553,388,536,401,523,418,512,441,491,500,475,573,462,654,446,812,440,927"/>
+<area shape="rect" href="class_c_physics_sample_capsule_prefab.html" title="Capsule prefab for physics sample" alt="" coords="539,411,745,437"/>
+<area shape="poly" title=" " alt="" coords="435,927,443,821,460,678,473,605,489,539,509,485,532,448,547,436,551,440,536,451,514,487,494,541,479,606,466,679,448,822,440,927"/>
+<area shape="rect" href="class_c_physics_sample_generater_prefab.html" title="This prefab regularly generates physics sample prefabs" alt="" coords="534,461,750,488"/>
+<area shape="poly" title=" " alt="" coords="436,927,445,831,464,702,477,638,492,579,511,531,532,498,548,487,551,491,536,502,516,534,497,581,482,639,469,703,451,831,441,928"/>
+<area shape="rect" href="class_c_physics_sample_sphere_prefab.html" title="Sphere prefab for physics sample" alt="" coords="542,512,742,539"/>
+<area shape="poly" title=" " alt="" coords="436,927,448,840,467,727,495,620,513,578,532,549,548,537,551,541,536,553,517,580,501,621,473,728,453,841,442,928"/>
+<area shape="rect" href="class_c_piston_machine_high_power_prefab.html" title="Prefab for piston machine that has high power" alt="" coords="534,563,750,589"/>
+<area shape="poly" title=" " alt="" coords="432,927,434,860,447,772,459,725,477,679,501,637,533,599,549,588,552,592,536,603,506,640,482,681,464,727,452,773,440,860,438,927"/>
+<area shape="rect" href="class_c_piston_machine_prefab.html" title="Prefab for piston machine" alt="" coords="565,613,719,640"/>
+<area shape="poly" title=" " alt="" coords="434,927,439,868,454,794,466,755,483,716,505,681,533,650,564,632,566,637,536,654,509,684,488,719,471,757,459,795,444,869,439,927"/>
+<area shape="rect" href="class_c_player_camera_prefab.html" title="Prefab of player camera" alt="" coords="567,664,717,691"/>
+<area shape="poly" title=" " alt="" coords="436,927,444,878,461,817,489,754,509,726,533,701,548,690,566,683,568,688,551,695,536,705,513,729,494,757,466,818,449,879,441,928"/>
+<area shape="rect" href="class_c_player_prefab.html" title="Prefab of player" alt="" coords="590,715,694,741"/>
+<area shape="poly" title=" " alt="" coords="439,927,450,887,469,839,495,792,513,770,533,751,560,736,589,728,590,734,562,741,536,755,517,774,500,795,473,842,455,889,444,928"/>
+<area shape="rect" href="class_c_point_light_regular_prefab.html" title="Prefab for regular point light" alt="" coords="557,765,727,792"/>
+<area shape="poly" title=" " alt="" coords="444,927,477,863,502,830,533,802,555,790,558,794,536,806,506,834,481,866,449,929"/>
+<area shape="rect" href="class_c_point_light_strong_prefab.html" title="Prefab for strong point light" alt="" coords="560,816,724,843"/>
+<area shape="poly" title=" " alt="" coords="452,929,486,889,509,869,533,852,559,841,561,846,536,857,512,873,490,893,456,932"/>
+<area shape="rect" href="class_c_point_light_weak_prefab.html" title="Prefab for weak point light" alt="" coords="562,867,722,893"/>
+<area shape="poly" title=" " alt="" coords="471,932,533,903,571,891,572,897,535,908,473,937"/>
+<area shape="rect" href="class_c_sample_capsule_tablet_prefab.html" title=" " alt="" coords="545,917,739,944"/>
+<area shape="poly" title=" " alt="" coords="501,945,544,940,545,945,502,951"/>
+<area shape="rect" href="class_c_sample_clay_ball_prefab.html" title=" " alt="" coords="562,968,722,995"/>
+<area shape="poly" title=" " alt="" coords="502,961,562,969,562,974,501,967"/>
+<area shape="rect" href="class_c_sample_static_box_prefab.html" title=" " alt="" coords="558,1019,726,1045"/>
+<area shape="poly" title=" " alt="" coords="473,975,535,1004,572,1015,571,1021,533,1009,471,980"/>
+<area shape="rect" href="class_c_sample_super_ball_prefab.html" title=" " alt="" coords="558,1069,726,1096"/>
+<area shape="poly" title=" " alt="" coords="456,980,490,1019,512,1039,536,1055,561,1066,559,1071,533,1060,509,1043,486,1023,452,983"/>
+<area shape="rect" href="class_c_sky_dome_prefab.html" title=" " alt="" coords="580,1120,704,1147"/>
+<area shape="poly" title=" " alt="" coords="449,983,481,1046,506,1078,536,1106,557,1117,580,1124,579,1130,555,1122,533,1110,502,1082,477,1049,444,985"/>
+<area shape="rect" href="class_c_stone_middle01_prefab.html" title="Prefab for middle stone 01" alt="" coords="565,1171,719,1197"/>
+<area shape="poly" title=" " alt="" coords="444,984,455,1023,473,1070,500,1117,517,1138,536,1156,566,1172,563,1177,533,1161,513,1142,495,1120,469,1073,450,1025,439,985"/>
+<area shape="rect" href="class_c_stone_middle02_prefab.html" title="Prefab for middle stone 02" alt="" coords="565,1221,719,1248"/>
+<area shape="poly" title=" " alt="" coords="441,984,449,1033,466,1094,494,1155,513,1183,536,1207,566,1224,563,1229,533,1211,509,1186,489,1158,461,1095,444,1034,436,985"/>
+<area shape="rect" href="class_c_stone_middle03_prefab.html" title="Prefab for middle stone 03" alt="" coords="565,1272,719,1299"/>
+<area shape="poly" title=" " alt="" coords="439,985,444,1043,459,1117,471,1155,488,1193,509,1228,536,1258,566,1275,564,1280,533,1262,505,1231,483,1196,466,1157,454,1118,439,1044,434,985"/>
+<area shape="rect" href="class_c_stone_small01_prefab.html" title="Prefab for small stone 01" alt="" coords="568,1323,716,1349"/>
+<area shape="poly" title=" " alt="" coords="438,985,440,1052,452,1139,464,1185,482,1231,506,1272,536,1309,551,1320,568,1327,566,1332,548,1324,533,1313,501,1275,477,1233,459,1187,447,1140,434,1052,432,985"/>
+<area shape="rect" href="class_c_stone_small02_prefab.html" title="Prefab for small stone 02" alt="" coords="568,1373,716,1400"/>
+<area shape="poly" title=" " alt="" coords="442,984,453,1071,473,1184,501,1291,517,1332,536,1359,551,1371,569,1378,567,1383,548,1375,532,1363,513,1334,495,1292,467,1185,448,1072,436,985"/>
+<area shape="rect" href="class_c_stone_small03_prefab.html" title="Prefab for small stone 03" alt="" coords="568,1424,716,1451"/>
+<area shape="poly" title=" " alt="" coords="441,984,451,1081,469,1209,482,1273,497,1331,516,1378,536,1410,551,1421,569,1429,566,1434,548,1426,532,1414,511,1381,492,1333,477,1274,464,1210,445,1081,436,985"/>
+<area shape="rect" href="class_c_stone_small04_prefab.html" title="Prefab for small stone 04" alt="" coords="568,1475,716,1501"/>
+<area shape="poly" title=" " alt="" coords="440,985,448,1090,466,1233,479,1306,494,1371,514,1425,536,1461,551,1472,568,1480,566,1485,548,1477,532,1464,509,1427,489,1373,473,1307,460,1234,443,1091,435,985"/>
+<area shape="rect" href="class_c_stone_small05_prefab.html" title="Prefab for small stone 05" alt="" coords="568,1525,716,1552"/>
+<area shape="poly" title=" " alt="" coords="440,985,446,1100,462,1258,475,1339,491,1412,512,1471,523,1494,536,1511,551,1523,568,1530,566,1535,548,1527,532,1515,519,1497,507,1474,486,1413,470,1340,457,1259,441,1100,434,985"/>
+<area shape="rect" href="class_c_stone_small06_prefab.html" title="Prefab for small stone 06" alt="" coords="568,1576,716,1603"/>
+<area shape="poly" title=" " alt="" coords="439,985,444,1109,459,1283,472,1371,488,1452,510,1518,522,1543,536,1562,551,1574,569,1581,567,1586,548,1578,532,1566,518,1546,505,1520,483,1453,466,1372,454,1284,439,1110,434,985"/>
+<area shape="rect" href="class_c_tree01_prefab.html" title="Prefab for tree 01" alt="" coords="589,1627,695,1653"/>
+<area shape="poly" title=" " alt="" coords="439,985,443,1118,456,1307,468,1404,485,1492,508,1564,521,1592,536,1613,560,1629,589,1637,588,1642,558,1634,532,1617,517,1595,503,1566,480,1493,463,1405,451,1308,437,1118,434,985"/>
+<area shape="rect" href="class_c_tree02_prefab.html" title="Prefab for tree 02" alt="" coords="589,1677,695,1704"/>
+<area shape="poly" title=" " alt="" coords="438,985,441,1127,453,1331,465,1436,482,1532,506,1611,520,1641,536,1663,560,1680,589,1688,588,1693,558,1685,532,1667,516,1644,501,1613,477,1533,460,1437,448,1332,435,1127,433,985"/>
+<area shape="rect" href="class_c_tree03_prefab.html" title="Prefab for tree 03" alt="" coords="589,1728,695,1755"/>
+<area shape="poly" title=" " alt="" coords="438,985,439,1137,450,1356,462,1469,479,1572,504,1657,519,1690,536,1714,560,1731,589,1738,588,1743,558,1735,532,1718,515,1692,499,1659,474,1574,456,1470,445,1357,434,1137,433,985"/>
+<area shape="rect" href="class_c_tree04_prefab.html" title="Prefab for tree 04" alt="" coords="589,1779,695,1805"/>
+<area shape="poly" title=" " alt="" coords="440,984,451,1156,471,1404,485,1529,500,1638,518,1721,527,1748,536,1765,560,1781,589,1789,588,1794,558,1786,532,1768,522,1751,513,1722,495,1639,480,1529,466,1405,446,1156,435,985"/>
+<area shape="rect" href="class_c_tree05_prefab.html" title="Prefab for tree 05" alt="" coords="589,1829,695,1856"/>
+<area shape="poly" title=" " alt="" coords="440,985,450,1166,470,1431,483,1563,499,1680,517,1768,526,1798,536,1816,560,1832,589,1840,588,1845,558,1837,532,1819,522,1800,512,1770,494,1681,478,1564,465,1431,445,1167,435,985"/>
+<area shape="rect" href="class_c_wall_element02_prefab.html" title="Prefab for ruin wall element 02" alt="" coords="564,1880,720,1907"/>
+<area shape="poly" title=" " alt="" coords="440,985,449,1176,468,1456,482,1597,497,1722,516,1816,526,1847,536,1866,549,1877,565,1885,563,1890,546,1882,532,1870,521,1850,511,1817,492,1723,476,1598,463,1457,444,1176,434,985"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="183,935,335,977"/>
+<area shape="poly" title=" " alt="" coords="351,953,383,953,383,959,351,959"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="5,943,135,969"/>
+<area shape="poly" title=" " alt="" coords="150,953,182,953,182,959,150,959"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CGameObject 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object__coll__graph.png" border="0" usemap="#a_c_game_object_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_game_object_coll__map" id="a_c_game_object_coll__map">
+<area shape="rect" title="This is base class for game object" alt="" coords="30,171,133,197"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="5,80,158,123"/>
+<area shape="poly" title=" " alt="" coords="84,139,84,170,79,170,79,139"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="17,5,146,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,84,80,79,80,79,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a57bd00709e58bc5e164ab2c03736b554" id="r_a57bd00709e58bc5e164ab2c03736b554"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a57bd00709e58bc5e164ab2c03736b554">CGameObject</a> (<a class="el" href="class_c_scene.html">CScene</a> *<a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">ownerScene</a>, <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="struct_transformf.html">Transformf</a> &amp;<a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">transform</a>=<a class="el" href="struct_transformf.html">Transformf</a>())</td></tr>
+<tr class="memdesc:a57bd00709e58bc5e164ab2c03736b554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a57bd00709e58bc5e164ab2c03736b554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d2d2c45f22d61f4b99f4ed4ff01a5e" id="r_af4d2d2c45f22d61f4b99f4ed4ff01a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#af4d2d2c45f22d61f4b99f4ed4ff01a5e">~CGameObject</a> ()=<a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">default</a></td></tr>
+<tr class="memdesc:af4d2d2c45f22d61f4b99f4ed4ff01a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:af4d2d2c45f22d61f4b99f4ed4ff01a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842c65d720de1fed8edc6acace462909" id="r_a842c65d720de1fed8edc6acace462909"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">virtual</a> <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a842c65d720de1fed8edc6acace462909">Prefab</a> ()</td></tr>
+<tr class="memdesc:a842c65d720de1fed8edc6acace462909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for creating a prefab of a game object  <br /></td></tr>
+<tr class="separator:a842c65d720de1fed8edc6acace462909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7e8cd95b72c1ecc088a7de6cb72cb0" id="r_aeb7e8cd95b72c1ecc088a7de6cb72cb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#aeb7e8cd95b72c1ecc088a7de6cb72cb0">Start</a> ()</td></tr>
+<tr class="memdesc:aeb7e8cd95b72c1ecc088a7de6cb72cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing for the first update frame  <br /></td></tr>
+<tr class="separator:aeb7e8cd95b72c1ecc088a7de6cb72cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb21edbe5720ee697aeaf1425f1f032" id="r_a0cb21edbe5720ee697aeaf1425f1f032"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a0cb21edbe5720ee697aeaf1425f1f032">Update</a> ()</td></tr>
+<tr class="memdesc:a0cb21edbe5720ee697aeaf1425f1f032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update processing  <br /></td></tr>
+<tr class="separator:a0cb21edbe5720ee697aeaf1425f1f032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562b8521466842b9efe4df438afa8300" id="r_a562b8521466842b9efe4df438afa8300"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a562b8521466842b9efe4df438afa8300">PrePhysicsUpdate</a> ()</td></tr>
+<tr class="memdesc:a562b8521466842b9efe4df438afa8300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-update process for physics simulation  <br /></td></tr>
+<tr class="separator:a562b8521466842b9efe4df438afa8300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c6e0fb22409d9def0cf23dd9870d3a" id="r_aa3c6e0fb22409d9def0cf23dd9870d3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#aa3c6e0fb22409d9def0cf23dd9870d3a">PreDraw</a> ()</td></tr>
+<tr class="memdesc:aa3c6e0fb22409d9def0cf23dd9870d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre drawing processing  <br /></td></tr>
+<tr class="separator:aa3c6e0fb22409d9def0cf23dd9870d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0df7d53e4dd2cdd453ee04e35e36f89d" id="r_a0df7d53e4dd2cdd453ee04e35e36f89d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a0df7d53e4dd2cdd453ee04e35e36f89d">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:a0df7d53e4dd2cdd453ee04e35e36f89d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process to be called at instance destruction  <br /></td></tr>
+<tr class="separator:a0df7d53e4dd2cdd453ee04e35e36f89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb9e47cf05b5f3f4f84f153a9c78be51" id="r_abb9e47cf05b5f3f4f84f153a9c78be51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#abb9e47cf05b5f3f4f84f153a9c78be51">OnCollision</a> ()</td></tr>
+<tr class="memdesc:abb9e47cf05b5f3f4f84f153a9c78be51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing for collider collisions  <br /></td></tr>
+<tr class="separator:abb9e47cf05b5f3f4f84f153a9c78be51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b94ca018d0e20dfd72aac16450e16b" id="r_a08b94ca018d0e20dfd72aac16450e16b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a08b94ca018d0e20dfd72aac16450e16b">TransferTransformObserve</a> ()</td></tr>
+<tr class="memdesc:a08b94ca018d0e20dfd72aac16450e16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer current bit strings of the current scene phase to previous bit strings  <br /></td></tr>
+<tr class="separator:a08b94ca018d0e20dfd72aac16450e16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea0f114d3955d27ac3862204156339fe" id="r_aea0f114d3955d27ac3862204156339fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#aea0f114d3955d27ac3862204156339fe">GetTransform</a> () <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a></td></tr>
+<tr class="memdesc:aea0f114d3955d27ac3862204156339fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the transform  <br /></td></tr>
+<tr class="separator:aea0f114d3955d27ac3862204156339fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ac47d715694dcd50dc0f199b0a5b6cb" id="r_a5ac47d715694dcd50dc0f199b0a5b6cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a5ac47d715694dcd50dc0f199b0a5b6cb">SetTransform</a> (<a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="struct_transformf.html">Transformf</a> &amp;<a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">in</a>)</td></tr>
+<tr class="memdesc:a5ac47d715694dcd50dc0f199b0a5b6cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set transform  <br /></td></tr>
+<tr class="separator:a5ac47d715694dcd50dc0f199b0a5b6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57ab59b255611607b46c424cf8a29aa" id="r_ae57ab59b255611607b46c424cf8a29aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#ae57ab59b255611607b46c424cf8a29aa">SetPos</a> (<a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;pos)</td></tr>
+<tr class="memdesc:ae57ab59b255611607b46c424cf8a29aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set position  <br /></td></tr>
+<tr class="separator:ae57ab59b255611607b46c424cf8a29aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada045c10996f6378361261f6f91c83d4" id="r_ada045c10996f6378361261f6f91c83d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#ada045c10996f6378361261f6f91c83d4">SetRotation</a> (<a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="_utility_for_math_8h.html#a921972c08e164d124edfca2b19315d46">Quaternionf</a> &amp;rotation)</td></tr>
+<tr class="memdesc:ada045c10996f6378361261f6f91c83d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rotation  <br /></td></tr>
+<tr class="separator:ada045c10996f6378361261f6f91c83d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a280939e487213ab297ad27ca5197e588" id="r_a280939e487213ab297ad27ca5197e588"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a280939e487213ab297ad27ca5197e588">SetScale</a> (<a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;scale)</td></tr>
+<tr class="memdesc:a280939e487213ab297ad27ca5197e588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scale  <br /></td></tr>
+<tr class="separator:a280939e487213ab297ad27ca5197e588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5afcc331c12eff3ad992876ee67a887" id="r_ac5afcc331c12eff3ad992876ee67a887"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#ac5afcc331c12eff3ad992876ee67a887">CheckTransformObserve</a> (<a class="el" href="_scene_phase_8h.html#a2e732ece159fa6e4595e3b824782fe25">ScenePhase</a> <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">phase</a>, <a class="el" href="_scene_phase_8h.html#ab81199c2e3c33a3c1fb8ac953ad82c4f">TransformObserve</a> <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">observe</a>)</td></tr>
+<tr class="memdesc:ac5afcc331c12eff3ad992876ee67a887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check bit strings to observe transform in the specified phase  <br /></td></tr>
+<tr class="separator:ac5afcc331c12eff3ad992876ee67a887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3d5ae62f2082ac72a0d60953470a65" id="r_aaa3d5ae62f2082ac72a0d60953470a65"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_is_component_child.html">IsComponentChild</a> T&gt; </td></tr>
+<tr class="memitem:aaa3d5ae62f2082ac72a0d60953470a65"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#aaa3d5ae62f2082ac72a0d60953470a65">GetComponent</a> ()</td></tr>
+<tr class="memdesc:aaa3d5ae62f2082ac72a0d60953470a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a component  <br /></td></tr>
+<tr class="separator:aaa3d5ae62f2082ac72a0d60953470a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3d5ae62f2082ac72a0d60953470a65" id="r_aaa3d5ae62f2082ac72a0d60953470a65"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_is_a_c_graphics_component_child.html">IsACGraphicsComponentChild</a> T&gt; </td></tr>
+<tr class="memitem:aaa3d5ae62f2082ac72a0d60953470a65"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#aaa3d5ae62f2082ac72a0d60953470a65">GetComponent</a> ()</td></tr>
+<tr class="memdesc:aaa3d5ae62f2082ac72a0d60953470a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a graphics component  <br /></td></tr>
+<tr class="separator:aaa3d5ae62f2082ac72a0d60953470a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b000ff645d5af520b1eea33c57f8f67" id="r_a4b000ff645d5af520b1eea33c57f8f67"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_is_component_child.html">IsComponentChild</a> T&gt; </td></tr>
+<tr class="memitem:a4b000ff645d5af520b1eea33c57f8f67"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a4b000ff645d5af520b1eea33c57f8f67">GetComponents</a> ()</td></tr>
+<tr class="memdesc:a4b000ff645d5af520b1eea33c57f8f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type matched components  <br /></td></tr>
+<tr class="separator:a4b000ff645d5af520b1eea33c57f8f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b000ff645d5af520b1eea33c57f8f67" id="r_a4b000ff645d5af520b1eea33c57f8f67"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_is_a_c_graphics_component_child.html">IsACGraphicsComponentChild</a> T&gt; </td></tr>
+<tr class="memitem:a4b000ff645d5af520b1eea33c57f8f67"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a4b000ff645d5af520b1eea33c57f8f67">GetComponents</a> ()</td></tr>
+<tr class="memdesc:a4b000ff645d5af520b1eea33c57f8f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type matched graphics components  <br /></td></tr>
+<tr class="separator:a4b000ff645d5af520b1eea33c57f8f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f4f0b3d0baec86af180a539fdcf65dc" id="r_a0f4f0b3d0baec86af180a539fdcf65dc"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_is_a_c_component_child.html">IsACComponentChild</a> T, typename... Args&gt; </td></tr>
+<tr class="memitem:a0f4f0b3d0baec86af180a539fdcf65dc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">AddComponent</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a0f4f0b3d0baec86af180a539fdcf65dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a component to the array of the components  <br /></td></tr>
+<tr class="separator:a0f4f0b3d0baec86af180a539fdcf65dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3018f3d560c7ddf7de1e63c24c8542" id="r_afa3018f3d560c7ddf7de1e63c24c8542"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_is_a_c_graphics_component_child.html">IsACGraphicsComponentChild</a> T, typename... Args&gt; </td></tr>
+<tr class="memitem:afa3018f3d560c7ddf7de1e63c24c8542"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#afa3018f3d560c7ddf7de1e63c24c8542">AddComponent</a> (<a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:afa3018f3d560c7ddf7de1e63c24c8542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a graphics component to the array of the graphics components  <br /></td></tr>
+<tr class="separator:afa3018f3d560c7ddf7de1e63c24c8542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad790eac3ab5ac7f044da549f131c257b" id="r_ad790eac3ab5ac7f044da549f131c257b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#ad790eac3ab5ac7f044da549f131c257b">OverwriteUpdateMode</a> (<a class="el" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a> <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">updateMode</a>)</td></tr>
+<tr class="memdesc:ad790eac3ab5ac7f044da549f131c257b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overwrite update mode for the scene that this game object is allowed to update  <br /></td></tr>
+<tr class="separator:ad790eac3ab5ac7f044da549f131c257b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc13774dd012125dc5677f359cbd22dd" id="r_adc13774dd012125dc5677f359cbd22dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#adc13774dd012125dc5677f359cbd22dd">CheckUpdateMode</a> (<a class="el" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a> <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">mode</a>)</td></tr>
+<tr class="memdesc:adc13774dd012125dc5677f359cbd22dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical conjunction with own update mode bits  <br /></td></tr>
+<tr class="separator:adc13774dd012125dc5677f359cbd22dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0501909f9ac3874bd33eff4d6921ec7e" id="r_a0501909f9ac3874bd33eff4d6921ec7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a0501909f9ac3874bd33eff4d6921ec7e">GetScene</a> ()</td></tr>
+<tr class="memdesc:a0501909f9ac3874bd33eff4d6921ec7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer to the scene that is the owner of this game object  <br /></td></tr>
+<tr class="separator:a0501909f9ac3874bd33eff4d6921ec7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f061e20da88ba900b7d21091dc4d07" id="r_a66f061e20da88ba900b7d21091dc4d07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a66f061e20da88ba900b7d21091dc4d07">GetScene</a> () <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a></td></tr>
+<tr class="memdesc:a66f061e20da88ba900b7d21091dc4d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer to the scene that is the owner of this game object  <br /></td></tr>
+<tr class="separator:a66f061e20da88ba900b7d21091dc4d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c23ef38b7b8db185a5fecaa2be7ace" id="r_a88c23ef38b7b8db185a5fecaa2be7ace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a88c23ef38b7b8db185a5fecaa2be7ace">SetName</a> (std::wstring name)</td></tr>
+<tr class="memdesc:a88c23ef38b7b8db185a5fecaa2be7ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set name of this game object  <br /></td></tr>
+<tr class="separator:a88c23ef38b7b8db185a5fecaa2be7ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183638d173c5599348a4109a55bcfb80" id="r_a183638d173c5599348a4109a55bcfb80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> std::wstring &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a183638d173c5599348a4109a55bcfb80">GetName</a> () <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a></td></tr>
+<tr class="memdesc:a183638d173c5599348a4109a55bcfb80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of this game object  <br /></td></tr>
+<tr class="separator:a183638d173c5599348a4109a55bcfb80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dfe8e5e800121b0d62ad539d957f050" id="r_a1dfe8e5e800121b0d62ad539d957f050"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a1dfe8e5e800121b0d62ad539d957f050">SetIsActive</a> (<a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">bool</a> <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">isActive</a>)</td></tr>
+<tr class="memdesc:a1dfe8e5e800121b0d62ad539d957f050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the active flag  <br /></td></tr>
+<tr class="separator:a1dfe8e5e800121b0d62ad539d957f050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e69b2eb95e0a94a37e4643db806525f" id="r_a8e69b2eb95e0a94a37e4643db806525f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#a8e69b2eb95e0a94a37e4643db806525f">IsActive</a> () <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a></td></tr>
+<tr class="memdesc:a8e69b2eb95e0a94a37e4643db806525f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this game object active?  <br /></td></tr>
+<tr class="separator:a8e69b2eb95e0a94a37e4643db806525f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec33ae7c349494462728e1ba33ec6e4d" id="r_aec33ae7c349494462728e1ba33ec6e4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_callback_system.html">CCallbackSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_object.html#aec33ae7c349494462728e1ba33ec6e4d">GetCallbackSystem</a> ()</td></tr>
+<tr class="memdesc:aec33ae7c349494462728e1ba33ec6e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the callback system  <br /></td></tr>
+<tr class="separator:aec33ae7c349494462728e1ba33ec6e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis&lt; CGameObject &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_ab2905432621e2737bc3f95cb9101a8e2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#ab2905432621e2737bc3f95cb9101a8e2">~ACWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="memdesc:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_aa549f0fbf364d84137496a7eed607bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#aa549f0fbf364d84137496a7eed607bb5">WeakFromThis</a> ()</td></tr>
+<tr class="memdesc:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer from this class  <br /></td></tr>
+<tr class="separator:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_i_weak_ptr_from_this.html">IWeakPtrFromThis</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this" id="r_a5a3acc569a8076065b930bc52a87255c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_weak_ptr_from_this.html#a5a3acc569a8076065b930bc52a87255c">~IWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="separator:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This is base class for game object </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a57bd00709e58bc5e164ab2c03736b554" name="a57bd00709e58bc5e164ab2c03736b554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57bd00709e58bc5e164ab2c03736b554">&#9670;&#160;</a></span>CGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGameObject::CGameObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_scene.html">CScene</a> *&#160;</td>
+          <td class="paramname"><em>ownerScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td>
+          <td class="paramname"><em>transform</em> = <code><a class="el" href="struct_transformf.html">Transformf</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ownerScene</td><td>Scene that is the owner of this game object </td></tr>
+    <tr><td class="paramname">transform</td><td>Transform of this game object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af4d2d2c45f22d61f4b99f4ed4ff01a5e" name="af4d2d2c45f22d61f4b99f4ed4ff01a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4d2d2c45f22d61f4b99f4ed4ff01a5e">&#9670;&#160;</a></span>~CGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">virtual</a> CGameObject::~CGameObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a0f4f0b3d0baec86af180a539fdcf65dc" name="a0f4f0b3d0baec86af180a539fdcf65dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f4f0b3d0baec86af180a539fdcf65dc">&#9670;&#160;</a></span>AddComponent() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_is_a_c_component_child.html">IsACComponentChild</a> T, typename ... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt; CGameObject::AddComponent </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a component to the array of the components </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Constructor arguments of the component except own object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Weak pointer to the added component </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_a0f4f0b3d0baec86af180a539fdcf65dc_cgraph.png" border="0" usemap="#aclass_c_game_object_a0f4f0b3d0baec86af180a539fdcf65dc_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_a0f4f0b3d0baec86af180a539fdcf65dc_cgraph" id="aclass_c_game_object_a0f4f0b3d0baec86af180a539fdcf65dc_cgraph">
+<area shape="rect" title="Add a component to the array of the components" alt="" coords="5,29,206,56"/>
+<area shape="poly" title=" " alt="" coords="71,30,65,21,70,11,83,5,106,3,129,5,142,12,140,16,128,10,105,8,85,10,73,15,71,20,76,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afa3018f3d560c7ddf7de1e63c24c8542" name="afa3018f3d560c7ddf7de1e63c24c8542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa3018f3d560c7ddf7de1e63c24c8542">&#9670;&#160;</a></span>AddComponent() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_is_a_c_graphics_component_child.html">IsACGraphicsComponentChild</a> T, typename ... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt; CGameObject::AddComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a>&#160;</td>
+          <td class="paramname"><em>layer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a graphics component to the array of the graphics components </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Constructor arguments of the graphics component except own object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Weak pointer to the added graphics component </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_afa3018f3d560c7ddf7de1e63c24c8542_cgraph.png" border="0" usemap="#aclass_c_game_object_afa3018f3d560c7ddf7de1e63c24c8542_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_afa3018f3d560c7ddf7de1e63c24c8542_cgraph" id="aclass_c_game_object_afa3018f3d560c7ddf7de1e63c24c8542_cgraph">
+<area shape="rect" title="Add a graphics component to the array of the graphics components" alt="" coords="5,29,206,56"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="254,29,454,56"/>
+<area shape="poly" title=" " alt="" coords="206,40,238,40,238,45,206,45"/>
+<area shape="poly" title=" " alt="" coords="312,31,305,21,310,11,327,5,354,3,384,5,399,12,397,17,382,10,354,8,328,10,313,15,310,20,316,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac5afcc331c12eff3ad992876ee67a887" name="ac5afcc331c12eff3ad992876ee67a887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5afcc331c12eff3ad992876ee67a887">&#9670;&#160;</a></span>CheckTransformObserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">bool</a> CGameObject::CheckTransformObserve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_scene_phase_8h.html#a2e732ece159fa6e4595e3b824782fe25">ScenePhase</a>&#160;</td>
+          <td class="paramname"><em>phase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_scene_phase_8h.html#ab81199c2e3c33a3c1fb8ac953ad82c4f">TransformObserve</a>&#160;</td>
+          <td class="paramname"><em>observe</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check bit strings to observe transform in the specified phase </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">phase</td><td>Scene phase to be checked </td></tr>
+    <tr><td class="paramname">observe</td><td>Bit for comparison </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Result </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_ac5afcc331c12eff3ad992876ee67a887_cgraph.png" border="0" usemap="#aclass_c_game_object_ac5afcc331c12eff3ad992876ee67a887_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_ac5afcc331c12eff3ad992876ee67a887_cgraph" id="aclass_c_game_object_ac5afcc331c12eff3ad992876ee67a887_cgraph">
+<area shape="rect" title="Check bit strings to observe transform in the specified phase" alt="" coords="5,51,211,93"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="259,29,459,56"/>
+<area shape="poly" title=" " alt="" coords="211,57,243,54,243,59,211,63"/>
+<area shape="rect" href="struct_transform_observe_bits.html#a1a2e1ef327c11ce00d4521bfaaed0d6a" title="Check bit strings in the specified phase" alt="" coords="285,80,433,123"/>
+<area shape="poly" title=" " alt="" coords="211,81,270,88,269,94,211,87"/>
+<area shape="poly" title=" " alt="" coords="317,31,309,21,314,11,331,5,359,3,389,5,405,12,403,17,388,10,359,8,332,10,318,15,315,20,321,27"/>
+<area shape="rect" href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef" title="Get current phase of the scene currently being processed" alt="" coords="507,88,719,115"/>
+<area shape="poly" title=" " alt="" coords="434,99,491,99,491,104,434,104"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_ac5afcc331c12eff3ad992876ee67a887_icgraph.png" border="0" usemap="#aclass_c_game_object_ac5afcc331c12eff3ad992876ee67a887_icgraph" alt=""/></div>
+<map name="aclass_c_game_object_ac5afcc331c12eff3ad992876ee67a887_icgraph" id="aclass_c_game_object_ac5afcc331c12eff3ad992876ee67a887_icgraph">
+<area shape="rect" title="Check bit strings to observe transform in the specified phase" alt="" coords="785,101,991,144"/>
+<area shape="rect" href="class_scene_phases_wrapper.html#a09269b5b31f1498e43954785313eb4a1" title="Check the change of transform for the phase this class has" alt="" coords="567,101,737,144"/>
+<area shape="poly" title=" " alt="" coords="770,125,738,125,738,120,770,120"/>
+<area shape="rect" href="class_mkpe_1_1_c_physics_world.html#ab2bf4deb8cf77cf0ca695ebd20ff2e46" title="Check the transform has changed for position" alt="" coords="307,27,519,69"/>
+<area shape="poly" title=" " alt="" coords="566,99,483,73,485,67,568,94"/>
+<area shape="rect" href="class_mkpe_1_1_c_physics_world.html#a6a6687c5f56c3bdd61a242b0273d7eac" title="Check the transform has changed for rotation" alt="" coords="318,93,508,152"/>
+<area shape="poly" title=" " alt="" coords="551,125,508,125,508,120,551,120"/>
+<area shape="rect" href="class_mkpe_1_1_c_physics_world.html#af957e5a9fc1d64edba24a3a62c248c95" title="Check the transform has changed for scale" alt="" coords="318,176,508,235"/>
+<area shape="poly" title=" " alt="" coords="575,152,501,178,499,173,573,147"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body.html#a4504aae83edd219763f02a2400828cbf" title="Compute pseudo velocity in current time per frame" alt="" coords="17,5,247,48"/>
+<area shape="poly" title=" " alt="" coords="291,41,247,38,247,33,291,36"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body.html#a0ff3f877653d618017f757a5db3b9950" title="Compute pseudo velocity in current time per simulation" alt="" coords="5,72,259,115"/>
+<area shape="poly" title=" " alt="" coords="292,70,260,75,259,70,291,65"/>
+<area shape="poly" title=" " alt="" coords="319,90,306,84,258,62,222,51,224,46,260,58,308,79,322,85"/>
+<area shape="poly" title=" " alt="" coords="302,114,259,109,260,104,303,109"/>
+<area shape="rect" href="class_a_c_collider3_d.html#adaa50b7d2610e7004e9699e57ea568d3" title="Check if scaling and rotation updates are needed, update if necessary" alt="" coords="39,139,225,181"/>
+<area shape="poly" title=" " alt="" coords="303,140,226,150,225,145,302,135"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body.html#a32d28969b8faaa591e76afbb3d5011df" title="Processing of any scaling or rotation changes" alt="" coords="51,205,213,248"/>
+<area shape="poly" title=" " alt="" coords="319,161,308,166,284,181,260,196,214,212,212,207,258,191,282,177,305,162,316,156"/>
+<area shape="poly" title=" " alt="" coords="302,190,225,178,226,172,303,185"/>
+<area shape="poly" title=" " alt="" coords="303,216,213,223,213,218,303,211"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adc13774dd012125dc5677f359cbd22dd" name="adc13774dd012125dc5677f359cbd22dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc13774dd012125dc5677f359cbd22dd">&#9670;&#160;</a></span>CheckUpdateMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">bool</a> CGameObject::CheckUpdateMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logical conjunction with own update mode bits </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_adc13774dd012125dc5677f359cbd22dd_cgraph.png" border="0" usemap="#aclass_c_game_object_adc13774dd012125dc5677f359cbd22dd_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_adc13774dd012125dc5677f359cbd22dd_cgraph" id="aclass_c_game_object_adc13774dd012125dc5677f359cbd22dd_cgraph">
+<area shape="rect" title="Logical conjunction with own update mode bits" alt="" coords="5,55,227,81"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="275,29,475,56"/>
+<area shape="poly" title=" " alt="" coords="227,54,259,51,259,57,227,60"/>
+<area shape="rect" href="namespace_utl.html#a158d8d72098bfd624ad55df851dcaa43" title="Bool check of enum class for bit operation" alt="" coords="309,80,441,107"/>
+<area shape="poly" title=" " alt="" coords="227,76,293,83,293,88,227,82"/>
+<area shape="poly" title=" " alt="" coords="332,31,324,21,329,11,346,5,375,3,406,5,422,12,420,17,405,10,375,8,347,10,332,15,329,20,336,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aec33ae7c349494462728e1ba33ec6e4d" name="aec33ae7c349494462728e1ba33ec6e4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec33ae7c349494462728e1ba33ec6e4d">&#9670;&#160;</a></span>GetCallbackSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_callback_system.html">CCallbackSystem</a> * CGameObject::GetCallbackSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the callback system </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_aec33ae7c349494462728e1ba33ec6e4d_cgraph.png" border="0" usemap="#aclass_c_game_object_aec33ae7c349494462728e1ba33ec6e4d_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_aec33ae7c349494462728e1ba33ec6e4d_cgraph" id="aclass_c_game_object_aec33ae7c349494462728e1ba33ec6e4d_cgraph">
+<area shape="rect" title="Get the callback system" alt="" coords="5,27,188,69"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a4b64b02e3b999d7eea63bcd34f7ba5e8" title="Get instance" alt="" coords="236,5,410,32"/>
+<area shape="poly" title=" " alt="" coords="188,34,220,29,221,35,189,39"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a553fe022564762ba24fe35296d41dd77" title="Make unique pointer" alt="" coords="250,56,396,99"/>
+<area shape="poly" title=" " alt="" coords="189,57,235,63,234,69,188,62"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaa3d5ae62f2082ac72a0d60953470a65" name="aaa3d5ae62f2082ac72a0d60953470a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa3d5ae62f2082ac72a0d60953470a65">&#9670;&#160;</a></span>GetComponent() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_is_a_c_graphics_component_child.html">IsACGraphicsComponentChild</a> T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt; CGameObject::GetComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a component </p>
+<dl class="section return"><dt>戻り値</dt><dd>Weak pointer to the specified component </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_aaa3d5ae62f2082ac72a0d60953470a65_cgraph.png" border="0" usemap="#aclass_c_game_object_aaa3d5ae62f2082ac72a0d60953470a65_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_aaa3d5ae62f2082ac72a0d60953470a65_cgraph" id="aclass_c_game_object_aaa3d5ae62f2082ac72a0d60953470a65_cgraph">
+<area shape="rect" title="Get a component" alt="" coords="5,29,204,56"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="252,29,452,56"/>
+<area shape="poly" title=" " alt="" coords="204,40,236,40,236,45,204,45"/>
+<area shape="poly" title=" " alt="" coords="310,31,303,21,308,11,325,5,352,3,382,5,397,12,395,17,380,10,352,8,326,10,311,15,308,20,315,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaa3d5ae62f2082ac72a0d60953470a65" name="aaa3d5ae62f2082ac72a0d60953470a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa3d5ae62f2082ac72a0d60953470a65">&#9670;&#160;</a></span>GetComponent() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_is_a_c_graphics_component_child.html">IsACGraphicsComponentChild</a> T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt; CGameObject::GetComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a graphics component </p>
+<dl class="section return"><dt>戻り値</dt><dd>Weak pointer to the specified graphics component </dd></dl>
+
+</div>
+</div>
+<a id="a4b000ff645d5af520b1eea33c57f8f67" name="a4b000ff645d5af520b1eea33c57f8f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b000ff645d5af520b1eea33c57f8f67">&#9670;&#160;</a></span>GetComponents() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_is_a_c_graphics_component_child.html">IsACGraphicsComponentChild</a> T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt; &gt; CGameObject::GetComponents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get type matched components </p>
+<dl class="section return"><dt>戻り値</dt><dd>Dynamic array of weak pointer to the specified component </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_a4b000ff645d5af520b1eea33c57f8f67_cgraph.png" border="0" usemap="#aclass_c_game_object_a4b000ff645d5af520b1eea33c57f8f67_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_a4b000ff645d5af520b1eea33c57f8f67_cgraph" id="aclass_c_game_object_a4b000ff645d5af520b1eea33c57f8f67_cgraph">
+<area shape="rect" title="Get type matched components" alt="" coords="5,29,211,56"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="259,29,459,56"/>
+<area shape="poly" title=" " alt="" coords="211,40,243,40,243,45,211,45"/>
+<area shape="poly" title=" " alt="" coords="317,31,309,21,314,11,331,5,359,3,389,5,405,12,403,17,388,10,359,8,332,10,318,15,315,20,321,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4b000ff645d5af520b1eea33c57f8f67" name="a4b000ff645d5af520b1eea33c57f8f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b000ff645d5af520b1eea33c57f8f67">&#9670;&#160;</a></span>GetComponents() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_is_a_c_graphics_component_child.html">IsACGraphicsComponentChild</a> T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt; &gt; CGameObject::GetComponents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get type matched graphics components </p>
+<dl class="section return"><dt>戻り値</dt><dd>Dynamic array of weak pointer to the specified graphics component </dd></dl>
+
+</div>
+</div>
+<a id="a183638d173c5599348a4109a55bcfb80" name="a183638d173c5599348a4109a55bcfb80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183638d173c5599348a4109a55bcfb80">&#9670;&#160;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> std::wstring &amp; CGameObject::GetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the name of this game object </p>
+
+</div>
+</div>
+<a id="a0501909f9ac3874bd33eff4d6921ec7e" name="a0501909f9ac3874bd33eff4d6921ec7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0501909f9ac3874bd33eff4d6921ec7e">&#9670;&#160;</a></span>GetScene() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt; CGameObject::GetScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get weak pointer to the scene that is the owner of this game object </p>
+
+</div>
+</div>
+<a id="a66f061e20da88ba900b7d21091dc4d07" name="a66f061e20da88ba900b7d21091dc4d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f061e20da88ba900b7d21091dc4d07">&#9670;&#160;</a></span>GetScene() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="class_c_scene.html">CScene</a> &gt; CGameObject::GetScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get weak pointer to the scene that is the owner of this game object </p>
+
+</div>
+</div>
+<a id="aea0f114d3955d27ac3862204156339fe" name="aea0f114d3955d27ac3862204156339fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea0f114d3955d27ac3862204156339fe">&#9670;&#160;</a></span>GetTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="struct_transformf.html">Transformf</a> &amp; CGameObject::GetTransform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the transform </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_aea0f114d3955d27ac3862204156339fe_icgraph.png" border="0" usemap="#aclass_c_game_object_aea0f114d3955d27ac3862204156339fe_icgraph" alt=""/></div>
+<map name="aclass_c_game_object_aea0f114d3955d27ac3862204156339fe_icgraph" id="aclass_c_game_object_aea0f114d3955d27ac3862204156339fe_icgraph">
+<area shape="rect" title="Get the transform" alt="" coords="307,80,496,107"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body.html#a4504aae83edd219763f02a2400828cbf" title="Compute pseudo velocity in current time per frame" alt="" coords="17,5,247,48"/>
+<area shape="poly" title=" " alt="" coords="329,78,221,51,222,46,330,73"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body.html#a0ff3f877653d618017f757a5db3b9950" title="Compute pseudo velocity in current time per simulation" alt="" coords="5,72,259,115"/>
+<area shape="poly" title=" " alt="" coords="291,96,259,96,259,91,291,91"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body.html#ae8398877918680d9cb794ecaf527c0c2" title="Update transform in previous time of physics simulation" alt="" coords="51,139,213,181"/>
+<area shape="poly" title=" " alt="" coords="330,114,214,143,212,138,329,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e69b2eb95e0a94a37e4643db806525f" name="a8e69b2eb95e0a94a37e4643db806525f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e69b2eb95e0a94a37e4643db806525f">&#9670;&#160;</a></span>IsActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">bool</a> CGameObject::IsActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this game object active? </p>
+
+</div>
+</div>
+<a id="abb9e47cf05b5f3f4f84f153a9c78be51" name="abb9e47cf05b5f3f4f84f153a9c78be51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb9e47cf05b5f3f4f84f153a9c78be51">&#9670;&#160;</a></span>OnCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::OnCollision </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processing for collider collisions </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_abb9e47cf05b5f3f4f84f153a9c78be51_cgraph.png" border="0" usemap="#aclass_c_game_object_abb9e47cf05b5f3f4f84f153a9c78be51_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_abb9e47cf05b5f3f4f84f153a9c78be51_cgraph" id="aclass_c_game_object_abb9e47cf05b5f3f4f84f153a9c78be51_cgraph">
+<area shape="rect" title="Processing for collider collisions" alt="" coords="5,29,183,56"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="231,29,431,56"/>
+<area shape="poly" title=" " alt="" coords="183,40,215,40,215,45,183,45"/>
+<area shape="poly" title=" " alt="" coords="291,31,284,21,289,11,305,5,331,3,359,5,374,12,372,17,358,10,331,8,306,10,292,15,289,20,295,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0df7d53e4dd2cdd453ee04e35e36f89d" name="a0df7d53e4dd2cdd453ee04e35e36f89d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0df7d53e4dd2cdd453ee04e35e36f89d">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Process to be called at instance destruction </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_a0df7d53e4dd2cdd453ee04e35e36f89d_cgraph.png" border="0" usemap="#aclass_c_game_object_a0df7d53e4dd2cdd453ee04e35e36f89d_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_a0df7d53e4dd2cdd453ee04e35e36f89d_cgraph" id="aclass_c_game_object_a0df7d53e4dd2cdd453ee04e35e36f89d_cgraph">
+<area shape="rect" title="Process to be called at instance destruction" alt="" coords="5,29,179,56"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="227,29,427,56"/>
+<area shape="poly" title=" " alt="" coords="179,40,211,40,211,45,179,45"/>
+<area shape="poly" title=" " alt="" coords="287,31,280,21,285,11,301,5,327,3,355,5,370,12,368,17,354,10,327,8,302,10,289,15,286,20,292,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad790eac3ab5ac7f044da549f131c257b" name="ad790eac3ab5ac7f044da549f131c257b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad790eac3ab5ac7f044da549f131c257b">&#9670;&#160;</a></span>OverwriteUpdateMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::OverwriteUpdateMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a>&#160;</td>
+          <td class="paramname"><em>updateMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overwrite update mode for the scene that this game object is allowed to update </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_ad790eac3ab5ac7f044da549f131c257b_cgraph.png" border="0" usemap="#aclass_c_game_object_ad790eac3ab5ac7f044da549f131c257b_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_ad790eac3ab5ac7f044da549f131c257b_cgraph" id="aclass_c_game_object_ad790eac3ab5ac7f044da549f131c257b_cgraph">
+<area shape="rect" title="Overwrite update mode for the scene that this game object is allowed to update" alt="" coords="5,29,243,56"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="291,29,491,56"/>
+<area shape="poly" title=" " alt="" coords="243,40,275,40,275,45,243,45"/>
+<area shape="poly" title=" " alt="" coords="346,31,338,21,344,11,362,5,391,3,423,5,440,12,437,17,422,11,391,8,363,10,347,15,344,20,350,27"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_ad790eac3ab5ac7f044da549f131c257b_icgraph.png" border="0" usemap="#aclass_c_game_object_ad790eac3ab5ac7f044da549f131c257b_icgraph" alt=""/></div>
+<map name="aclass_c_game_object_ad790eac3ab5ac7f044da549f131c257b_icgraph" id="aclass_c_game_object_ad790eac3ab5ac7f044da549f131c257b_icgraph">
+<area shape="rect" title="Overwrite update mode for the scene that this game object is allowed to update" alt="" coords="203,13,440,40"/>
+<area shape="rect" href="class_c_debug_camera_prefab.html#a6cef15fe48ae8b5d700e13a3204c1004" title="Prefab function" alt="" coords="5,5,155,48"/>
+<area shape="poly" title=" " alt="" coords="187,29,155,29,155,24,187,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa3c6e0fb22409d9def0cf23dd9870d3a" name="aa3c6e0fb22409d9def0cf23dd9870d3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3c6e0fb22409d9def0cf23dd9870d3a">&#9670;&#160;</a></span>PreDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::PreDraw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pre drawing processing </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_aa3c6e0fb22409d9def0cf23dd9870d3a_cgraph.png" border="0" usemap="#aclass_c_game_object_aa3c6e0fb22409d9def0cf23dd9870d3a_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_aa3c6e0fb22409d9def0cf23dd9870d3a_cgraph" id="aclass_c_game_object_aa3c6e0fb22409d9def0cf23dd9870d3a_cgraph">
+<area shape="rect" title="Pre drawing processing" alt="" coords="5,29,166,56"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="214,29,414,56"/>
+<area shape="poly" title=" " alt="" coords="166,40,198,40,198,45,166,45"/>
+<area shape="poly" title=" " alt="" coords="275,30,268,21,273,11,289,5,314,3,341,5,356,12,353,17,340,10,314,8,290,10,277,15,274,20,280,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a842c65d720de1fed8edc6acace462909" name="a842c65d720de1fed8edc6acace462909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842c65d720de1fed8edc6acace462909">&#9670;&#160;</a></span>Prefab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">virtual</a> <a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::Prefab </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function for creating a prefab of a game object </p>
+
+<p><a class="el" href="class_c_debug_camera_prefab.html#a6cef15fe48ae8b5d700e13a3204c1004">CDebugCameraPrefab</a>, <a class="el" href="class_c_directional_light_prefab.html#a8fd64b39b41898cfc7d66e91885282eb">CDirectionalLightPrefab</a>, <a class="el" href="class_c_physics_sample_generater_prefab.html#afbfae2959bdeea644cf7f6cdf63fe934">CPhysicsSampleGeneraterPrefab</a>, <a class="el" href="class_c_physics_sample_sphere_prefab.html#a97a5a45e6ffbcef800d0a4408f9a7617">CPhysicsSampleSpherePrefab</a>, <a class="el" href="class_c_physics_sample_capsule_prefab.html#aa9a170e8363f7e1d7d369cf58972693d">CPhysicsSampleCapsulePrefab</a>, <a class="el" href="class_c_physics_sample_box_prefab.html#ab3715c6f98b68eae29d6005a36f67f33">CPhysicsSampleBoxPrefab</a>, <a class="el" href="class_c_piston_machine_prefab.html#a19d31b713a38a8dea5bd0ae7bc34af69">CPistonMachinePrefab</a>, <a class="el" href="class_c_piston_machine_high_power_prefab.html#a82dc28197fb3feef434783f1e4abf70f">CPistonMachineHighPowerPrefab</a>, <a class="el" href="class_c_player_camera_prefab.html#a92dba19121a02a903d46c714f0b51578">CPlayerCameraPrefab</a>, <a class="el" href="class_c_player_prefab.html#a82c05362442156eb6deb5f3aeaa97e3f">CPlayerPrefab</a>, <a class="el" href="class_c_point_light_regular_prefab.html#a67beeeb99c8095b6a7356aa37f048358">CPointLightRegularPrefab</a>, <a class="el" href="class_c_point_light_strong_prefab.html#ada3720615a11e5b1fca11c5f85162995">CPointLightStrongPrefab</a>, <a class="el" href="class_c_point_light_weak_prefab.html#a4efa898af5ac46717bba03ae546f1f8d">CPointLightWeakPrefab</a>, <a class="el" href="class_c_big_brick01_prefab.html#affd36a518b9ae972a0bc6328bf0ee208">CBigBrick01Prefab</a>, <a class="el" href="class_c_big_brick02_prefab.html#aa8d835a3ad11a684c7a7b090e939389c">CBigBrick02Prefab</a>, <a class="el" href="class_c_big_brick04_prefab.html#aac7dfbe00515322993ab1114023e5b7f">CBigBrick04Prefab</a>, <a class="el" href="class_c_column03_prefab.html#a3d5dbea228032abaa3311757a427d148">CColumn03Prefab</a>, <a class="el" href="class_c_wall_element02_prefab.html#ad1dd21074793f04a071470fb6b158bb7">CWallElement02Prefab</a>, <a class="el" href="class_c_sample_static_box_prefab.html#a65b7d3ec7297f986d02827500ccf825d">CSampleStaticBoxPrefab</a>, <a class="el" href="class_c_sample_super_ball_prefab.html#a99aac92491b26dc7405535960d407700">CSampleSuperBallPrefab</a>, <a class="el" href="class_c_sample_clay_ball_prefab.html#a784d8a46d1b478fd9303b15472187198">CSampleClayBallPrefab</a>, <a class="el" href="class_c_sample_capsule_tablet_prefab.html#a596fa1a5672d8034fe3ef26b69be8a81">CSampleCapsuleTabletPrefab</a>, <a class="el" href="class_c_sky_dome_prefab.html#aa8cf18aa5ae60240d4681288e5f45a0f">CSkyDomePrefab</a>, <a class="el" href="class_c_stone_middle01_prefab.html#ab85ffc4fa91adedf9de855ba63e970d4">CStoneMiddle01Prefab</a>, <a class="el" href="class_c_stone_middle02_prefab.html#a94241e4153d183350537d3f16afcc1e2">CStoneMiddle02Prefab</a>, <a class="el" href="class_c_stone_middle03_prefab.html#a7fefac23b770dfb8464b5856690f53f6">CStoneMiddle03Prefab</a>, <a class="el" href="class_c_stone_small01_prefab.html#af2fc8404725c34098346c81bf5a528d0">CStoneSmall01Prefab</a>, <a class="el" href="class_c_stone_small02_prefab.html#ab25b6f0fc0534156eef4ac44342c1c36">CStoneSmall02Prefab</a>, <a class="el" href="class_c_stone_small03_prefab.html#a0eb39f16e70585e366d2d2e6ad82d541">CStoneSmall03Prefab</a>, <a class="el" href="class_c_stone_small04_prefab.html#a7a669000d7bb795479e2f7a3e0ccf03b">CStoneSmall04Prefab</a>, <a class="el" href="class_c_stone_small05_prefab.html#a9469e45cd08ea5be7240eb5e234fee94">CStoneSmall05Prefab</a>, <a class="el" href="class_c_stone_small06_prefab.html#a161afbbff9278107149eebe0cd47cc61">CStoneSmall06Prefab</a>, <a class="el" href="class_c_grass_terrain_prefab.html#a59e08228c1e978268fdb0d0562183e7f">CGrassTerrainPrefab</a>, <a class="el" href="class_c_tree01_prefab.html#a242d664e5db56852e9898791f015380d">CTree01Prefab</a>, <a class="el" href="class_c_tree02_prefab.html#a169e8e33ad6e369cee5c6c0ff9529572">CTree02Prefab</a>, <a class="el" href="class_c_tree03_prefab.html#a6c3e914cefb4826ab2059563aee58910">CTree03Prefab</a>, <a class="el" href="class_c_tree04_prefab.html#ada061e67806f183bdfb6b1c818ea764c">CTree04Prefab</a>, <a class="el" href="class_c_tree05_prefab.html#abafcf4c12eae1d867dfa053becaa3791">CTree05Prefab</a> (計38項目)で再実装されています。</p>
+
+</div>
+</div>
+<a id="a562b8521466842b9efe4df438afa8300" name="a562b8521466842b9efe4df438afa8300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562b8521466842b9efe4df438afa8300">&#9670;&#160;</a></span>PrePhysicsUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::PrePhysicsUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pre-update process for physics simulation </p>
+
+</div>
+</div>
+<a id="a1dfe8e5e800121b0d62ad539d957f050" name="a1dfe8e5e800121b0d62ad539d957f050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dfe8e5e800121b0d62ad539d957f050">&#9670;&#160;</a></span>SetIsActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::SetIsActive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">bool</a>&#160;</td>
+          <td class="paramname"><em>isActive</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the active flag </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_a1dfe8e5e800121b0d62ad539d957f050_cgraph.png" border="0" usemap="#aclass_c_game_object_a1dfe8e5e800121b0d62ad539d957f050_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_a1dfe8e5e800121b0d62ad539d957f050_cgraph" id="aclass_c_game_object_a1dfe8e5e800121b0d62ad539d957f050_cgraph">
+<area shape="rect" title="Set the active flag" alt="" coords="5,29,182,56"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="230,29,430,56"/>
+<area shape="poly" title=" " alt="" coords="182,40,214,40,214,45,182,45"/>
+<area shape="poly" title=" " alt="" coords="290,31,283,21,288,11,304,5,330,3,358,5,373,12,371,17,357,10,330,8,305,10,291,15,288,20,294,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a88c23ef38b7b8db185a5fecaa2be7ace" name="a88c23ef38b7b8db185a5fecaa2be7ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c23ef38b7b8db185a5fecaa2be7ace">&#9670;&#160;</a></span>SetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::SetName </td>
+          <td>(</td>
+          <td class="paramtype">std::wstring&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set name of this game object </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_a88c23ef38b7b8db185a5fecaa2be7ace_icgraph.png" border="0" usemap="#aclass_c_game_object_a88c23ef38b7b8db185a5fecaa2be7ace_icgraph" alt=""/></div>
+<map name="aclass_c_game_object_a88c23ef38b7b8db185a5fecaa2be7ace_icgraph" id="aclass_c_game_object_a88c23ef38b7b8db185a5fecaa2be7ace_icgraph">
+<area shape="rect" title="Set name of this game object" alt="" coords="210,43,375,69"/>
+<area shape="rect" href="class_c_directional_light_prefab.html#a8fd64b39b41898cfc7d66e91885282eb" title="Prefab function" alt="" coords="5,5,162,48"/>
+<area shape="poly" title=" " alt="" coords="194,45,162,40,162,35,195,40"/>
+<area shape="rect" href="class_c_player_prefab.html#a82c05362442156eb6deb5f3aeaa97e3f" title="Prefab function" alt="" coords="9,72,158,99"/>
+<area shape="poly" title=" " alt="" coords="195,72,159,78,158,72,194,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae57ab59b255611607b46c424cf8a29aa" name="ae57ab59b255611607b46c424cf8a29aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae57ab59b255611607b46c424cf8a29aa">&#9670;&#160;</a></span>SetPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::SetPos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set position </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_ae57ab59b255611607b46c424cf8a29aa_cgraph.png" border="0" usemap="#aclass_c_game_object_ae57ab59b255611607b46c424cf8a29aa_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_ae57ab59b255611607b46c424cf8a29aa_cgraph" id="aclass_c_game_object_ae57ab59b255611607b46c424cf8a29aa_cgraph">
+<area shape="rect" title="Set position" alt="" coords="5,13,160,40"/>
+<area shape="rect" href="struct_transform_observe_bits.html#a2ff280090ad1aa7580251102e4d75d72" title="Stand a bit string of the current scene phase" alt="" coords="208,5,356,48"/>
+<area shape="poly" title=" " alt="" coords="160,24,192,24,192,29,160,29"/>
+<area shape="rect" href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef" title="Get current phase of the scene currently being processed" alt="" coords="404,13,616,40"/>
+<area shape="poly" title=" " alt="" coords="356,24,388,24,388,29,356,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ada045c10996f6378361261f6f91c83d4" name="ada045c10996f6378361261f6f91c83d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada045c10996f6378361261f6f91c83d4">&#9670;&#160;</a></span>SetRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::SetRotation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="_utility_for_math_8h.html#a921972c08e164d124edfca2b19315d46">Quaternionf</a> &amp;&#160;</td>
+          <td class="paramname"><em>rotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set rotation </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_ada045c10996f6378361261f6f91c83d4_cgraph.png" border="0" usemap="#aclass_c_game_object_ada045c10996f6378361261f6f91c83d4_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_ada045c10996f6378361261f6f91c83d4_cgraph" id="aclass_c_game_object_ada045c10996f6378361261f6f91c83d4_cgraph">
+<area shape="rect" title="Set rotation" alt="" coords="5,13,185,40"/>
+<area shape="rect" href="struct_transform_observe_bits.html#a2ff280090ad1aa7580251102e4d75d72" title="Stand a bit string of the current scene phase" alt="" coords="233,5,381,48"/>
+<area shape="poly" title=" " alt="" coords="185,24,217,24,217,29,185,29"/>
+<area shape="rect" href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef" title="Get current phase of the scene currently being processed" alt="" coords="429,13,641,40"/>
+<area shape="poly" title=" " alt="" coords="381,24,413,24,413,29,381,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a280939e487213ab297ad27ca5197e588" name="a280939e487213ab297ad27ca5197e588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a280939e487213ab297ad27ca5197e588">&#9670;&#160;</a></span>SetScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::SetScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>scale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set scale </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_a280939e487213ab297ad27ca5197e588_cgraph.png" border="0" usemap="#aclass_c_game_object_a280939e487213ab297ad27ca5197e588_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_a280939e487213ab297ad27ca5197e588_cgraph" id="aclass_c_game_object_a280939e487213ab297ad27ca5197e588_cgraph">
+<area shape="rect" title="Set scale" alt="" coords="5,13,170,40"/>
+<area shape="rect" href="struct_transform_observe_bits.html#a2ff280090ad1aa7580251102e4d75d72" title="Stand a bit string of the current scene phase" alt="" coords="218,5,366,48"/>
+<area shape="poly" title=" " alt="" coords="170,24,202,24,202,29,170,29"/>
+<area shape="rect" href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef" title="Get current phase of the scene currently being processed" alt="" coords="414,13,626,40"/>
+<area shape="poly" title=" " alt="" coords="366,24,398,24,398,29,366,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5ac47d715694dcd50dc0f199b0a5b6cb" name="a5ac47d715694dcd50dc0f199b0a5b6cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ac47d715694dcd50dc0f199b0a5b6cb">&#9670;&#160;</a></span>SetTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::SetTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">const</a> <a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set transform </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_a5ac47d715694dcd50dc0f199b0a5b6cb_cgraph.png" border="0" usemap="#aclass_c_game_object_a5ac47d715694dcd50dc0f199b0a5b6cb_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_a5ac47d715694dcd50dc0f199b0a5b6cb_cgraph" id="aclass_c_game_object_a5ac47d715694dcd50dc0f199b0a5b6cb_cgraph">
+<area shape="rect" title="Set transform" alt="" coords="5,59,194,85"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="242,29,442,56"/>
+<area shape="poly" title=" " alt="" coords="194,58,226,54,226,59,195,63"/>
+<area shape="rect" href="struct_transform_observe_bits.html#a2ff280090ad1aa7580251102e4d75d72" title="Stand a bit string of the current scene phase" alt="" coords="268,80,416,123"/>
+<area shape="poly" title=" " alt="" coords="195,81,253,88,252,93,194,86"/>
+<area shape="poly" title=" " alt="" coords="301,31,294,21,299,11,315,5,342,3,371,5,386,12,384,17,370,10,342,8,316,10,302,15,299,20,305,27"/>
+<area shape="rect" href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef" title="Get current phase of the scene currently being processed" alt="" coords="490,88,702,115"/>
+<area shape="poly" title=" " alt="" coords="417,99,474,99,474,104,417,104"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeb7e8cd95b72c1ecc088a7de6cb72cb0" name="aeb7e8cd95b72c1ecc088a7de6cb72cb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7e8cd95b72c1ecc088a7de6cb72cb0">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processing for the first update frame </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_aeb7e8cd95b72c1ecc088a7de6cb72cb0_cgraph.png" border="0" usemap="#aclass_c_game_object_aeb7e8cd95b72c1ecc088a7de6cb72cb0_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_aeb7e8cd95b72c1ecc088a7de6cb72cb0_cgraph" id="aclass_c_game_object_aeb7e8cd95b72c1ecc088a7de6cb72cb0_cgraph">
+<area shape="rect" title="Processing for the first update frame" alt="" coords="5,29,145,56"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="193,29,393,56"/>
+<area shape="poly" title=" " alt="" coords="145,40,177,40,177,45,145,45"/>
+<area shape="poly" title=" " alt="" coords="256,30,249,21,254,11,269,5,293,3,319,5,332,12,330,16,317,10,293,8,270,10,258,15,255,20,260,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a08b94ca018d0e20dfd72aac16450e16b" name="a08b94ca018d0e20dfd72aac16450e16b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b94ca018d0e20dfd72aac16450e16b">&#9670;&#160;</a></span>TransferTransformObserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::TransferTransformObserve </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transfer current bit strings of the current scene phase to previous bit strings </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_a08b94ca018d0e20dfd72aac16450e16b_cgraph.png" border="0" usemap="#aclass_c_game_object_a08b94ca018d0e20dfd72aac16450e16b_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_a08b94ca018d0e20dfd72aac16450e16b_cgraph" id="aclass_c_game_object_a08b94ca018d0e20dfd72aac16450e16b_cgraph">
+<area shape="rect" title="Transfer current bit strings of the current scene phase to previous bit strings" alt="" coords="5,5,220,48"/>
+<area shape="rect" href="struct_transform_observe_bits.html#a4b7456644b73965fde2458a7630076ee" title="Transfer current bit strings of the current scene phase to previous bit strings" alt="" coords="268,5,416,48"/>
+<area shape="poly" title=" " alt="" coords="220,24,252,24,252,29,220,29"/>
+<area shape="rect" href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef" title="Get current phase of the scene currently being processed" alt="" coords="464,13,676,40"/>
+<area shape="poly" title=" " alt="" coords="416,24,448,24,448,29,416,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0cb21edbe5720ee697aeaf1425f1f032" name="a0cb21edbe5720ee697aeaf1425f1f032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cb21edbe5720ee697aeaf1425f1f032">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc">void</a> CGameObject::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update processing </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_game_object_a0cb21edbe5720ee697aeaf1425f1f032_cgraph.png" border="0" usemap="#aclass_c_game_object_a0cb21edbe5720ee697aeaf1425f1f032_cgraph" alt=""/></div>
+<map name="aclass_c_game_object_a0cb21edbe5720ee697aeaf1425f1f032_cgraph" id="aclass_c_game_object_a0cb21edbe5720ee697aeaf1425f1f032_cgraph">
+<area shape="rect" title="Update processing" alt="" coords="5,29,158,56"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="206,29,406,56"/>
+<area shape="poly" title=" " alt="" coords="158,40,190,40,190,45,158,45"/>
+<area shape="poly" title=" " alt="" coords="268,30,261,21,266,11,281,5,306,3,332,5,347,12,344,17,331,10,306,8,282,10,269,15,267,20,272,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_game_object_8h_source.html">GameObject.h</a></li>
+<li><a class="el" href="_game_object_8cpp.html">GameObject.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: BVOverlapPair.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">BVOverlapPair.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_b_v_overlap_pair_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __BV_OVERLAP_PAIR_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __BV_OVERLAP_PAIR_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_b_v_node_8h.html">BVNode.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_i_d_resource_8h.html">IDResource.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_contact_point_8h.html">ContactPoint.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_stable_handle_vector_8h.html">StableHandleVector.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mkpe.html">Mkpe</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">namespace </span>Dbvt {</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">   20</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a96517f801d49a31698c6a5b66fd05f8b">   22</a></span>            <a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a96517f801d49a31698c6a5b66fd05f8b">leafID1</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#aca9c63bb76bcfb47bc80308babda79f6">   24</a></span>            <a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#aca9c63bb76bcfb47bc80308babda79f6">leafID2</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a1842f632b98135b6ecf2f1f7c6001695">   26</a></span>            <a class="code hl_class" href="class_mkpe_1_1_c_contact_data.html">CContactData</a> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a1842f632b98135b6ecf2f1f7c6001695">contactData</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a>(<a class="code hl_class" href="class_c_i_d_resource_accessor.html">IDNodeAccessor</a>* accesor, <a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a96517f801d49a31698c6a5b66fd05f8b">leafID1</a>, <a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#aca9c63bb76bcfb47bc80308babda79f6">leafID2</a>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a65baf47db869aaacf6c1673a9c49d5ee">CanOverlapAfterApproval</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a17b2d4659f0532cb69e3305d738e1c9e">   46</a></span>            <span class="keyword">inline</span> <a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>* <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a17b2d4659f0532cb69e3305d738e1c9e">GetWrapperA</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a1842f632b98135b6ecf2f1f7c6001695">contactData</a>.<a class="code hl_function" href="class_mkpe_1_1_c_contact_data.html#a0d013333c7f03bb10471df0afc0743be">GetWrapperA</a>(); }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a98cc111ac5911ed9a7dc786becf2143c">   48</a></span>            <span class="keyword">inline</span> <a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>* <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a98cc111ac5911ed9a7dc786becf2143c">GetWrapperB</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a1842f632b98135b6ecf2f1f7c6001695">contactData</a>.<a class="code hl_function" href="class_mkpe_1_1_c_contact_data.html#a8fbae4b836decf1ed31c643dea7e5295">GetWrapperB</a>(); }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a5df8cf32427a71f54efe5bd7d268e6aa">   52</a></span>            <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a5df8cf32427a71f54efe5bd7d268e6aa">BVOverlapPair</a>(<a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a>&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a15a31492d897c7062cbc95f357ebb9a2">   54</a></span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a>&amp; <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a15a31492d897c7062cbc95f357ebb9a2">operator=</a>(<a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a>&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a2f34b8c3c0e563a25358ebbf269ca9d1">   56</a></span>            <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a2f34b8c3c0e563a25358ebbf269ca9d1">BVOverlapPair</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a28f16978042f48a010d4e24c56118b32">   58</a></span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a>&amp; <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a28f16978042f48a010d4e24c56118b32">operator=</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        };</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="};">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_comparator.html">   62</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_comparator.html">BVOverlapPairComparator</a> {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_comparator.html#a5887d18acb8769c65c4971517bad927d">operator()</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a>&amp; a, <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a>&amp; b);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        };</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="namespace_mkpe_1_1_dbvt.html#ab82f7ccabacf47d051033919c14283c7">   68</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#ab82f7ccabacf47d051033919c14283c7">BVOverlapPairVector</a> = std::vector&lt;BVOverlapPair&gt;;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="};">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html">   71</a></span>        <span class="keyword">class </span><a class="code hl_class" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html">BVOverlapPairManager</a> {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <a class="code hl_class" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html">BVOverlapPairManager</a>(<a class="code hl_class" href="class_c_i_d_resource_accessor.html">IDNodeAccessor</a>* accesor);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a45ff449f3da724ef35df8189c00c90b2">   82</a></span>            <a class="code hl_function" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a45ff449f3da724ef35df8189c00c90b2">~BVOverlapPairManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a3444ac2ec21651e428cd4a1ef2e24544">MergePairs</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#aca5d82dd2726cb43f3b54642300cc398">   94</a></span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#aca5d82dd2726cb43f3b54642300cc398">AddPair</a>(<a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a> leafID1, <a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a> leafID2) { m_pairs.push_back(<a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a>(m_idNode, leafID1, leafID2)); }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a5693524a0783197cb9862ecb3f624989">   99</a></span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a5693524a0783197cb9862ecb3f624989">UpdatePrevSize</a>() { m_prevSize = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(m_pairs.size()); }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a9263c7f461562722db76f950e23d7bbd">  102</a></span>            <a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#ab82f7ccabacf47d051033919c14283c7">BVOverlapPairVector</a>* <a class="code hl_function" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a9263c7f461562722db76f950e23d7bbd">GetPair</a>() { <span class="keywordflow">return</span> &amp;m_pairs; }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <a class="code hl_class" href="class_c_i_d_resource_accessor.html">IDNodeAccessor</a>* m_idNode;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#ab82f7ccabacf47d051033919c14283c7">BVOverlapPairVector</a> m_pairs;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordtype">int</span> m_prevSize;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        };</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    } <span class="comment">// namespace Dbvt</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="};">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_overlap_pair_for_key.html">  115</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_overlap_pair_for_key.html">OverlapPairForKey</a> {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_overlap_pair_for_key.html#a84e3da1774212a9027177732dd27e070">  117</a></span>        <a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">Dbvt::NodeID</a> <a class="code hl_variable" href="struct_mkpe_1_1_overlap_pair_for_key.html#a84e3da1774212a9027177732dd27e070">leafID1</a>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_overlap_pair_for_key.html#a9d7bbcf31b995408bf8bb375457e7364">  119</a></span>        <a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">Dbvt::NodeID</a> <a class="code hl_variable" href="struct_mkpe_1_1_overlap_pair_for_key.html#a9d7bbcf31b995408bf8bb375457e7364">leafID2</a>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_overlap_pair_for_key.html#a984c116280667d677cce6bcc88d45bf2">  125</a></span>        <span class="keyword">inline</span> <a class="code hl_function" href="struct_mkpe_1_1_overlap_pair_for_key.html#a984c116280667d677cce6bcc88d45bf2">OverlapPairForKey</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">Dbvt::BVOverlapPair</a>&amp; pair) : <a class="code hl_variable" href="struct_mkpe_1_1_overlap_pair_for_key.html#a84e3da1774212a9027177732dd27e070">leafID1</a>(pair.<a class="code hl_variable" href="struct_mkpe_1_1_overlap_pair_for_key.html#a84e3da1774212a9027177732dd27e070">leafID1</a>), <a class="code hl_variable" href="struct_mkpe_1_1_overlap_pair_for_key.html#a9d7bbcf31b995408bf8bb375457e7364">leafID2</a>(pair.<a class="code hl_variable" href="struct_mkpe_1_1_overlap_pair_for_key.html#a9d7bbcf31b995408bf8bb375457e7364">leafID2</a>) {}</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_overlap_pair_for_key.html#a1e48aad8939d7864b7c15eac8ae2edbb">  128</a></span>        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_mkpe_1_1_overlap_pair_for_key.html#a1e48aad8939d7864b7c15eac8ae2edbb">operator==</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_overlap_pair_for_key.html">OverlapPairForKey</a>&amp; v)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_mkpe_1_1_overlap_pair_for_key.html#a84e3da1774212a9027177732dd27e070">leafID1</a> == v.<a class="code hl_variable" href="struct_mkpe_1_1_overlap_pair_for_key.html#a84e3da1774212a9027177732dd27e070">leafID1</a> &amp;&amp; <a class="code hl_variable" href="struct_mkpe_1_1_overlap_pair_for_key.html#a9d7bbcf31b995408bf8bb375457e7364">leafID2</a> == v.<a class="code hl_variable" href="struct_mkpe_1_1_overlap_pair_for_key.html#a9d7bbcf31b995408bf8bb375457e7364">leafID2</a>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    };</div>
+</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="foldopen" id="foldopen00134" data-start="{" data-end="};">
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_overlap_pair_key_hash.html">  134</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_overlap_pair_key_hash.html">OverlapPairKeyHash</a> {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keyword">inline</span> std::size_t <a class="code hl_function" href="struct_mkpe_1_1_overlap_pair_key_hash.html#a42b3d29975204feef8b7d95f7116bd44">operator()</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_overlap_pair_for_key.html">OverlapPairForKey</a>&amp; v) <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    };</div>
+</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>} <span class="comment">// namespace Mkpe</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">// Comparison operator</span></div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_comparator.html#a5887d18acb8769c65c4971517bad927d">  141</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_comparator.html#a5887d18acb8769c65c4971517bad927d">Mkpe::Dbvt::BVOverlapPairComparator::operator()</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">BVOverlapPair</a>&amp; a, <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">Dbvt::BVOverlapPair</a>&amp; b) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="comment">// Descending order comparison</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">return</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        a.<a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a96517f801d49a31698c6a5b66fd05f8b">leafID1</a> &gt; b.<a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a96517f801d49a31698c6a5b66fd05f8b">leafID1</a> ||</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        (a.<a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a96517f801d49a31698c6a5b66fd05f8b">leafID1</a> == b.<a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a96517f801d49a31698c6a5b66fd05f8b">leafID1</a> &amp;&amp; a.<a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#aca9c63bb76bcfb47bc80308babda79f6">leafID2</a> &gt; b.<a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#aca9c63bb76bcfb47bc80308babda79f6">leafID2</a>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}</div>
+</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">// Generating hash operator</span></div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_overlap_pair_key_hash.html#a42b3d29975204feef8b7d95f7116bd44">  149</a></span><span class="keyword">inline</span> std::size_t <a class="code hl_function" href="struct_mkpe_1_1_overlap_pair_key_hash.html#a42b3d29975204feef8b7d95f7116bd44">Mkpe::OverlapPairKeyHash::operator()</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_overlap_pair_for_key.html">OverlapPairForKey</a>&amp; v) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    std::size_t seed = 0;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_function" href="namespace_utl.html#af3df4bed685371944aa75fb5246e3999">Utl::HashCombine</a>(&amp;seed, v.leafID1);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <a class="code hl_function" href="namespace_utl.html#af3df4bed685371944aa75fb5246e3999">Utl::HashCombine</a>(&amp;seed, v.leafID2);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">return</span> seed;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
+</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">#endif </span><span class="comment">// !__BV_OVERLAP_PAIR_H__</span></div>
+<div class="ttc" id="a_b_v_node_8h_html"><div class="ttname"><a href="_b_v_node_8h.html">BVNode.h</a></div><div class="ttdoc">This file handles information needed for the dynamic bouding volume tree.</div></div>
+<div class="ttc" id="a_contact_point_8h_html"><div class="ttname"><a href="_contact_point_8h.html">ContactPoint.h</a></div><div class="ttdoc">This file handles contact point information between rigid bodies..</div></div>
+<div class="ttc" id="a_i_d_resource_8h_html"><div class="ttname"><a href="_i_d_resource_8h.html">IDResource.h</a></div><div class="ttdoc">This file handles class that links IDs and resources.</div></div>
+<div class="ttc" id="a_stable_handle_vector_8h_html"><div class="ttname"><a href="_stable_handle_vector_8h.html">StableHandleVector.h</a></div><div class="ttdoc">This file handles dynamic array capable of generating stable handles.</div></div>
+<div class="ttc" id="aclass_c_i_d_resource_accessor_html"><div class="ttname"><a href="class_c_i_d_resource_accessor.html">CIDResourceAccessor&lt; Node &gt;</a></div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html">Mkpe::CColliderWrapper</a></div><div class="ttdoc">Wrapper class that exists in a 1:1 relationship with a collider</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:24</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_contact_data_html"><div class="ttname"><a href="class_mkpe_1_1_c_contact_data.html">Mkpe::CContactData</a></div><div class="ttdoc">Contact point information for one collision pair</div><div class="ttdef"><b>Definition</b> ContactPoint.h:56</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_contact_data_html_a0d013333c7f03bb10471df0afc0743be"><div class="ttname"><a href="class_mkpe_1_1_c_contact_data.html#a0d013333c7f03bb10471df0afc0743be">Mkpe::CContactData::GetWrapperA</a></div><div class="ttdeci">CColliderWrapper * GetWrapperA() const</div><div class="ttdoc">Get the first collider wrapper</div><div class="ttdef"><b>Definition</b> ContactPoint.h:100</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_contact_data_html_a8fbae4b836decf1ed31c643dea7e5295"><div class="ttname"><a href="class_mkpe_1_1_c_contact_data.html#a8fbae4b836decf1ed31c643dea7e5295">Mkpe::CContactData::GetWrapperB</a></div><div class="ttdeci">CColliderWrapper * GetWrapperB() const</div><div class="ttdoc">Get the second collider wrapper</div><div class="ttdef"><b>Definition</b> ContactPoint.h:102</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager_html"><div class="ttname"><a href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html">Mkpe::Dbvt::BVOverlapPairManager</a></div><div class="ttdoc">Structure that manages pairs of bounding volumes in contact each other</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:71</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager_html_a3444ac2ec21651e428cd4a1ef2e24544"><div class="ttname"><a href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a3444ac2ec21651e428cd4a1ef2e24544">Mkpe::Dbvt::BVOverlapPairManager::MergePairs</a></div><div class="ttdeci">void MergePairs()</div><div class="ttdoc">Merge the pairs from the current physics simulation, with the pairs from the previous physics simulat...</div><div class="ttdef"><b>Definition</b> BVOverlapPair.cpp:48</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager_html_a45ff449f3da724ef35df8189c00c90b2"><div class="ttname"><a href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a45ff449f3da724ef35df8189c00c90b2">Mkpe::Dbvt::BVOverlapPairManager::~BVOverlapPairManager</a></div><div class="ttdeci">~BVOverlapPairManager()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager_html_a5693524a0783197cb9862ecb3f624989"><div class="ttname"><a href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a5693524a0783197cb9862ecb3f624989">Mkpe::Dbvt::BVOverlapPairManager::UpdatePrevSize</a></div><div class="ttdeci">void UpdatePrevSize()</div><div class="ttdoc">Update size of the pairs dynamic array at previous physics simulation</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:99</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager_html_a9263c7f461562722db76f950e23d7bbd"><div class="ttname"><a href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a9263c7f461562722db76f950e23d7bbd">Mkpe::Dbvt::BVOverlapPairManager::GetPair</a></div><div class="ttdeci">BVOverlapPairVector * GetPair()</div><div class="ttdoc">Get pointer to the dynamic array of, pairs of bounding volumes in contact each other</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:102</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager_html_aca5d82dd2726cb43f3b54642300cc398"><div class="ttname"><a href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#aca5d82dd2726cb43f3b54642300cc398">Mkpe::Dbvt::BVOverlapPairManager::AddPair</a></div><div class="ttdeci">void AddPair(NodeID leafID1, NodeID leafID2)</div><div class="ttdoc">Add a new pair</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:94</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_a6bf7f174a99e1d05a3ec19fc096ed037"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">Mkpe::Dbvt::NodeID</a></div><div class="ttdeci">UniqueID NodeID</div><div class="ttdoc">Node ID. internal node ID is 0</div><div class="ttdef"><b>Definition</b> BVNode.h:25</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_ab82f7ccabacf47d051033919c14283c7"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#ab82f7ccabacf47d051033919c14283c7">Mkpe::Dbvt::BVOverlapPairVector</a></div><div class="ttdeci">std::vector&lt; BVOverlapPair &gt; BVOverlapPairVector</div><div class="ttdoc">Dynamic array of, pairs of bounding volumes in contact each other</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:68</div></div>
+<div class="ttc" id="anamespace_mkpe_html"><div class="ttname"><a href="namespace_mkpe.html">Mkpe</a></div><div class="ttdef"><b>Definition</b> BoudingVolume.h:14</div></div>
+<div class="ttc" id="anamespace_utl_html_af3df4bed685371944aa75fb5246e3999"><div class="ttname"><a href="namespace_utl.html#af3df4bed685371944aa75fb5246e3999">Utl::HashCombine</a></div><div class="ttdeci">void HashCombine(std::size_t *seed, const T &amp;v)</div><div class="ttdoc">Function to call repeatedly to generate hash values from multiple variables</div><div class="ttdef"><b>Definition</b> Utility.h:169</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_comparator_html"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_comparator.html">Mkpe::Dbvt::BVOverlapPairComparator</a></div><div class="ttdoc">Comparison operator structure</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:62</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_comparator_html_a5887d18acb8769c65c4971517bad927d"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_comparator.html#a5887d18acb8769c65c4971517bad927d">Mkpe::Dbvt::BVOverlapPairComparator::operator()</a></div><div class="ttdeci">bool operator()(const BVOverlapPair &amp;a, const BVOverlapPair &amp;b)</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:141</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">Mkpe::Dbvt::BVOverlapPair</a></div><div class="ttdoc">Pair of bounding volumes in contact each other</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:20</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html_a15a31492d897c7062cbc95f357ebb9a2"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a15a31492d897c7062cbc95f357ebb9a2">Mkpe::Dbvt::BVOverlapPair::operator=</a></div><div class="ttdeci">BVOverlapPair &amp; operator=(BVOverlapPair &amp;&amp;)=default</div><div class="ttdoc">Allow the move operator</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html_a17b2d4659f0532cb69e3305d738e1c9e"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a17b2d4659f0532cb69e3305d738e1c9e">Mkpe::Dbvt::BVOverlapPair::GetWrapperA</a></div><div class="ttdeci">CColliderWrapper * GetWrapperA() const</div><div class="ttdoc">Get collider wrapper of the first leaf node</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:46</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html_a1842f632b98135b6ecf2f1f7c6001695"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a1842f632b98135b6ecf2f1f7c6001695">Mkpe::Dbvt::BVOverlapPair::contactData</a></div><div class="ttdeci">CContactData contactData</div><div class="ttdoc">Contact point information for this pair</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:26</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html_a28f16978042f48a010d4e24c56118b32"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a28f16978042f48a010d4e24c56118b32">Mkpe::Dbvt::BVOverlapPair::operator=</a></div><div class="ttdeci">BVOverlapPair &amp; operator=(const BVOverlapPair &amp;)=delete</div><div class="ttdoc">Disallow the copy operator</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html_a2f34b8c3c0e563a25358ebbf269ca9d1"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a2f34b8c3c0e563a25358ebbf269ca9d1">Mkpe::Dbvt::BVOverlapPair::BVOverlapPair</a></div><div class="ttdeci">BVOverlapPair(const BVOverlapPair &amp;)=delete</div><div class="ttdoc">Disallow the copy constructor</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html_a5df8cf32427a71f54efe5bd7d268e6aa"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a5df8cf32427a71f54efe5bd7d268e6aa">Mkpe::Dbvt::BVOverlapPair::BVOverlapPair</a></div><div class="ttdeci">BVOverlapPair(BVOverlapPair &amp;&amp;)=default</div><div class="ttdoc">Allow the move constructor</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html_a65baf47db869aaacf6c1673a9c49d5ee"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a65baf47db869aaacf6c1673a9c49d5ee">Mkpe::Dbvt::BVOverlapPair::CanOverlapAfterApproval</a></div><div class="ttdeci">bool CanOverlapAfterApproval()</div><div class="ttdoc">Returns the results of checking whether two colliders can overlap after approval each other as a cont...</div><div class="ttdef"><b>Definition</b> BVOverlapPair.cpp:14</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html_a96517f801d49a31698c6a5b66fd05f8b"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a96517f801d49a31698c6a5b66fd05f8b">Mkpe::Dbvt::BVOverlapPair::leafID1</a></div><div class="ttdeci">NodeID leafID1</div><div class="ttdoc">First leaf node</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:22</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html_a98cc111ac5911ed9a7dc786becf2143c"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a98cc111ac5911ed9a7dc786becf2143c">Mkpe::Dbvt::BVOverlapPair::GetWrapperB</a></div><div class="ttdeci">CColliderWrapper * GetWrapperB() const</div><div class="ttdoc">Get collider wrapper of the second leaf node</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:48</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html_aca9c63bb76bcfb47bc80308babda79f6"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#aca9c63bb76bcfb47bc80308babda79f6">Mkpe::Dbvt::BVOverlapPair::leafID2</a></div><div class="ttdeci">NodeID leafID2</div><div class="ttdoc">Second leaf node</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:24</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_overlap_pair_for_key_html"><div class="ttname"><a href="struct_mkpe_1_1_overlap_pair_for_key.html">Mkpe::OverlapPairForKey</a></div><div class="ttdoc">Structure from which only feature as key of BVOverlapPair is extracted</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:115</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_overlap_pair_for_key_html_a1e48aad8939d7864b7c15eac8ae2edbb"><div class="ttname"><a href="struct_mkpe_1_1_overlap_pair_for_key.html#a1e48aad8939d7864b7c15eac8ae2edbb">Mkpe::OverlapPairForKey::operator==</a></div><div class="ttdeci">bool operator==(const OverlapPairForKey &amp;v) const</div><div class="ttdoc">Comparison operator</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:128</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_overlap_pair_for_key_html_a84e3da1774212a9027177732dd27e070"><div class="ttname"><a href="struct_mkpe_1_1_overlap_pair_for_key.html#a84e3da1774212a9027177732dd27e070">Mkpe::OverlapPairForKey::leafID1</a></div><div class="ttdeci">Dbvt::NodeID leafID1</div><div class="ttdoc">First leaf node</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:117</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_overlap_pair_for_key_html_a984c116280667d677cce6bcc88d45bf2"><div class="ttname"><a href="struct_mkpe_1_1_overlap_pair_for_key.html#a984c116280667d677cce6bcc88d45bf2">Mkpe::OverlapPairForKey::OverlapPairForKey</a></div><div class="ttdeci">OverlapPairForKey(const Dbvt::BVOverlapPair &amp;pair)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:125</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_overlap_pair_for_key_html_a9d7bbcf31b995408bf8bb375457e7364"><div class="ttname"><a href="struct_mkpe_1_1_overlap_pair_for_key.html#a9d7bbcf31b995408bf8bb375457e7364">Mkpe::OverlapPairForKey::leafID2</a></div><div class="ttdeci">Dbvt::NodeID leafID2</div><div class="ttdoc">Second leaf node</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:119</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_overlap_pair_key_hash_html"><div class="ttname"><a href="struct_mkpe_1_1_overlap_pair_key_hash.html">Mkpe::OverlapPairKeyHash</a></div><div class="ttdoc">Structure to generate hash</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:134</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_overlap_pair_key_hash_html_a42b3d29975204feef8b7d95f7116bd44"><div class="ttname"><a href="struct_mkpe_1_1_overlap_pair_key_hash.html#a42b3d29975204feef8b7d95f7116bd44">Mkpe::OverlapPairKeyHash::operator()</a></div><div class="ttdeci">std::size_t operator()(const OverlapPairForKey &amp;v) const noexcept</div><div class="ttdoc">Generating hash operator</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:149</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

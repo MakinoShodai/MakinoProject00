@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CStandardRenderPass クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_standard_render_pass-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CStandardRenderPass クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Default rendering pass asset  
+ <a href="class_c_standard_render_pass.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_standard_render_pass_8h_source.html">StandardRenderPass.h</a>&gt;</code></p>
+<div class="dynheader">
+CStandardRenderPass の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_standard_render_pass__inherit__graph.png" border="0" usemap="#a_c_standard_render_pass_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_standard_render_pass_inherit__map" id="a_c_standard_render_pass_inherit__map">
+<area shape="rect" title="Default rendering pass asset" alt="" coords="5,80,159,107"/>
+<area shape="rect" href="class_a_c_render_pass_asset.html" title="Abstract class for rendering pass asset that scene uses" alt="" coords="10,5,154,32"/>
+<area shape="poly" title=" " alt="" coords="85,48,85,80,79,80,79,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CStandardRenderPass 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_standard_render_pass__coll__graph.png" border="0" usemap="#a_c_standard_render_pass_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_standard_render_pass_coll__map" id="a_c_standard_render_pass_coll__map">
+<area shape="rect" title="Default rendering pass asset" alt="" coords="5,172,159,199"/>
+<area shape="rect" href="class_a_c_render_pass_asset.html" title="Abstract class for rendering pass asset that scene uses" alt="" coords="10,96,154,123"/>
+<area shape="poly" title=" " alt="" coords="85,138,85,172,79,172,79,138"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="6,5,158,32"/>
+<area shape="poly" title=" " alt="" coords="85,48,85,95,79,95,79,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9c6b08c098524379f6d3877a4a06c228" id="r_a9c6b08c098524379f6d3877a4a06c228"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_standard_render_pass.html#a9c6b08c098524379f6d3877a4a06c228">Start</a> () override</td></tr>
+<tr class="memdesc:a9c6b08c098524379f6d3877a4a06c228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start processing  <br /></td></tr>
+<tr class="separator:a9c6b08c098524379f6d3877a4a06c228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac85040737d572664a90826556daf8e84" id="r_ac85040737d572664a90826556daf8e84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84">Draw</a> () override</td></tr>
+<tr class="memdesc:ac85040737d572664a90826556daf8e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing process  <br /></td></tr>
+<tr class="separator:ac85040737d572664a90826556daf8e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5018bf1857bc3d7ddbbda78638698a" id="r_a9f5018bf1857bc3d7ddbbda78638698a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_standard_render_pass.html#a9f5018bf1857bc3d7ddbbda78638698a">ACRenderPassAsset</a> ()=default</td></tr>
+<tr class="memdesc:a9f5018bf1857bc3d7ddbbda78638698a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a9f5018bf1857bc3d7ddbbda78638698a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_render_pass_asset"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_render_pass_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_render_pass_asset.html">ACRenderPassAsset</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a9f5018bf1857bc3d7ddbbda78638698a inherit pub_methods_class_a_c_render_pass_asset" id="r_a9f5018bf1857bc3d7ddbbda78638698a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_pass_asset.html#a9f5018bf1857bc3d7ddbbda78638698a">ACRenderPassAsset</a> ()=default</td></tr>
+<tr class="memdesc:a9f5018bf1857bc3d7ddbbda78638698a inherit pub_methods_class_a_c_render_pass_asset"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a9f5018bf1857bc3d7ddbbda78638698a inherit pub_methods_class_a_c_render_pass_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2012f27e530049376ee1599768e27a0a inherit pub_methods_class_a_c_render_pass_asset" id="r_a2012f27e530049376ee1599768e27a0a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_pass_asset.html#a2012f27e530049376ee1599768e27a0a">~ACRenderPassAsset</a> ()=default</td></tr>
+<tr class="memdesc:a2012f27e530049376ee1599768e27a0a inherit pub_methods_class_a_c_render_pass_asset"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detructor  <br /></td></tr>
+<tr class="separator:a2012f27e530049376ee1599768e27a0a inherit pub_methods_class_a_c_render_pass_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2820709c423745e9bac23abd6c57f703 inherit pub_methods_class_a_c_render_pass_asset" id="r_a2820709c423745e9bac23abd6c57f703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_pass_asset.html#a2820709c423745e9bac23abd6c57f703">CallStart</a> (<a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt; scene)</td></tr>
+<tr class="memdesc:a2820709c423745e9bac23abd6c57f703 inherit pub_methods_class_a_c_render_pass_asset"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call 'Start' function  <br /></td></tr>
+<tr class="separator:a2820709c423745e9bac23abd6c57f703 inherit pub_methods_class_a_c_render_pass_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_render_pass_asset"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_render_pass_asset')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_render_pass_asset.html">ACRenderPassAsset</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a347341f1cf316bed8c6bcb31971a113d inherit pro_attribs_class_a_c_render_pass_asset" id="r_a347341f1cf316bed8c6bcb31971a113d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_pass_asset.html#a347341f1cf316bed8c6bcb31971a113d">m_scene</a></td></tr>
+<tr class="memdesc:a347341f1cf316bed8c6bcb31971a113d inherit pro_attribs_class_a_c_render_pass_asset"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weak pointer to scene that has this class  <br /></td></tr>
+<tr class="separator:a347341f1cf316bed8c6bcb31971a113d inherit pro_attribs_class_a_c_render_pass_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Default rendering pass asset </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a9f5018bf1857bc3d7ddbbda78638698a" name="a9f5018bf1857bc3d7ddbbda78638698a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5018bf1857bc3d7ddbbda78638698a">&#9670;&#160;</a></span>ACRenderPassAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ACRenderPassAsset::ACRenderPassAsset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="ac85040737d572664a90826556daf8e84" name="ac85040737d572664a90826556daf8e84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac85040737d572664a90826556daf8e84">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CStandardRenderPass::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Drawing process </p>
+
+<p><a class="el" href="class_a_c_render_pass_asset.html#aaff825dbf53a65eaa7cf3ebfb99e7a03">ACRenderPassAsset</a>を実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_standard_render_pass_ac85040737d572664a90826556daf8e84_cgraph.png" border="0" usemap="#aclass_c_standard_render_pass_ac85040737d572664a90826556daf8e84_cgraph" alt=""/></div>
+<map name="aclass_c_standard_render_pass_ac85040737d572664a90826556daf8e84_cgraph" id="aclass_c_standard_render_pass_ac85040737d572664a90826556daf8e84_cgraph">
+<area shape="rect" title="Drawing process" alt="" coords="5,388,159,431"/>
+<area shape="rect" href="class_c_static_cb_light_v_p.html#af5a7b649622f2e5242464c42b1a19eb1" title="Advance to the next cascade shadow map" alt="" coords="226,85,409,112"/>
+<area shape="poly" title=" " alt="" coords="83,387,94,333,115,261,131,223,151,186,175,152,205,122,210,118,214,122,208,126,180,155,156,189,136,225,120,263,99,334,89,388"/>
+<area shape="rect" href="class_a_c_static_s_r_v_allocator.html#a440c4126ea1a5fe59927486133796c23" title="Allocate SRV handle" alt="" coords="242,136,393,179"/>
+<area shape="poly" title=" " alt="" coords="87,387,102,345,126,291,160,236,181,211,205,189,226,175,229,180,208,193,185,214,164,239,131,294,107,347,92,388"/>
+<area shape="rect" href="class_c_depth_stencil.html#ac30f2385fa2249d053cc52a94589744a" title="Apply this depth stencil to the destination depth stencil by calling &#39;OMSetRenderTargets&#39;" alt="" coords="245,283,390,309"/>
+<area shape="poly" title=" " alt="" coords="127,385,273,314,275,319,129,390"/>
+<area shape="rect" href="class_a_c_render_target.html#a40d00574c158fad570c77ffed5365e3a" title="Apply this render target to the destination render target by calling &#39;OMSetRenderTargets&#39;" alt="" coords="239,367,396,393"/>
+<area shape="poly" title=" " alt="" coords="159,397,223,389,224,394,159,402"/>
+<area shape="rect" href="class_a_c_render_target.html#a8ea9c42479cc0b6cf6bc57b78050a1be" title="Clear the color of all pixels on this render target" alt="" coords="240,509,395,536"/>
+<area shape="poly" title=" " alt="" coords="127,429,208,470,273,500,270,505,206,474,124,434"/>
+<area shape="rect" href="class_c_depth_stencil.html#ae8502d294033cd2322eebbad294dd0e5" title="Clear the depth stencil" alt="" coords="246,203,389,229"/>
+<area shape="poly" title=" " alt="" coords="96,386,142,329,172,298,205,269,235,249,265,234,268,238,237,254,208,273,176,301,146,333,100,389"/>
+<area shape="rect" href="class_c_swap_chain.html#ad394d0bb9aa7884085e9cf6067577967" title="Get feature for thread&#45;safe" alt="" coords="1039,1240,1187,1267"/>
+<area shape="poly" title=" " alt="" coords="85,431,85,503,90,615,105,754,134,908,155,988,181,1066,213,1143,251,1216,296,1285,348,1346,409,1400,477,1444,519,1462,561,1473,605,1478,650,1477,695,1471,739,1461,826,1430,908,1391,980,1348,1082,1274,1085,1278,983,1352,910,1395,829,1435,741,1466,696,1476,650,1482,605,1483,560,1478,517,1467,475,1449,405,1404,344,1350,292,1288,246,1219,208,1145,176,1068,150,989,129,909,100,755,85,615,80,503,80,431"/>
+<area shape="rect" href="class_c_swap_chain_1_1_c_thread_safe_feature.html#a7ca3f4d2670a1c68e4b5a4dcc2550fad" title="Get render target for back buffers" alt="" coords="207,560,428,603"/>
+<area shape="poly" title=" " alt="" coords="99,429,143,488,174,519,208,546,216,550,213,555,205,550,170,523,139,491,95,433"/>
+<area shape="rect" href="class_c_graphics_pipeline_state.html#abc3395de10313e13b40e56f7b07ec1ad" title="Set this graphics pipeline state to command list" alt="" coords="238,988,397,1031"/>
+<area shape="poly" title=" " alt="" coords="94,430,305,972,300,974,89,432"/>
+<area shape="rect" href="class_c_layered_g_p_s_o_wrapper.html#af7ad0865d69fa17988fe17da8e4c7134" title="Call &#39;SetCommand&#39; function from GPSOs wrapped this class" alt="" coords="236,417,399,460"/>
+<area shape="poly" title=" " alt="" coords="159,416,221,424,220,429,159,422"/>
+<area shape="rect" href="class_c_render_target_texture.html#a2112b4e96fa91a6c1e4ff60d3e9939f1" title="Get handle for SRV property" alt="" coords="512,5,678,48"/>
+<area shape="poly" title=" " alt="" coords="392,138,426,122,441,108,450,94,459,79,474,65,496,52,499,57,478,69,463,83,454,97,445,112,430,126,395,143"/>
+<area shape="rect" href="class_c_depth_stencil.html#a23db9d064a5f179b265bb334e1d62b7a" title="State check process to be called when applying a destination for drawing" alt="" coords="505,275,685,317"/>
+<area shape="poly" title=" " alt="" coords="390,293,489,293,489,299,390,299"/>
+<area shape="rect" href="class_c_depth_stencil.html#aa47b541d3b6156101a273d5d41978b3d" title="Get CPU handle for dsv descriptor heap" alt="" coords="481,173,708,200"/>
+<area shape="poly" title=" " alt="" coords="345,280,475,216,518,202,520,207,477,221,347,284"/>
+<area shape="rect" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52" title="Get command list for graphics" alt="" coords="485,392,705,435"/>
+<area shape="poly" title=" " alt="" coords="352,307,529,383,527,388,350,312"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="780,552,957,595"/>
+<area shape="poly" title=" " alt="" coords="345,280,416,251,463,236,514,225,567,219,619,222,670,235,715,261,736,282,747,304,751,327,751,351,749,400,753,427,764,455,796,501,833,540,829,544,792,505,759,457,748,428,743,401,745,350,746,327,742,306,732,285,712,265,668,240,619,227,567,225,515,230,464,241,418,256,347,285"/>
+<area shape="rect" href="class_c_depth_stencil.html#af1dc25468f778431258986e0251ccaed" title="Transition resource state" alt="" coords="769,177,968,204"/>
+<area shape="poly" title=" " alt="" coords="651,272,816,208,818,213,653,277"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="763,417,974,444"/>
+<area shape="poly" title=" " alt="" coords="677,198,715,216,764,260,804,310,836,361,857,402,853,404,831,363,800,314,760,263,712,221,674,203"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="1040,971,1186,997"/>
+<area shape="poly" title=" " alt="" coords="890,443,934,483,957,509,978,539,1007,595,1033,654,1072,773,1097,879,1110,955,1105,956,1091,880,1066,775,1028,656,1003,597,973,541,953,513,930,486,886,447"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="1024,409,1202,452"/>
+<area shape="poly" title=" " alt="" coords="975,428,1008,428,1008,433,975,433"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="1250,1215,1458,1241"/>
+<area shape="poly" title=" " alt="" coords="1130,996,1331,1202,1327,1205,1126,1000"/>
+<area shape="poly" title=" " alt="" coords="673,433,715,451,780,494,835,539,831,543,777,499,712,456,671,438"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="761,837,976,880"/>
+<area shape="poly" title=" " alt="" coords="639,433,679,460,716,496,855,822,850,824,711,499,675,464,636,437"/>
+<area shape="poly" title=" " alt="" coords="363,364,506,320,508,325,365,369"/>
+<area shape="poly" title=" " alt="" coords="351,364,389,345,426,319,441,305,450,291,459,277,474,261,513,230,552,206,555,210,516,235,478,265,464,280,455,294,445,308,430,323,391,349,354,369"/>
+<area shape="poly" title=" " alt="" coords="397,387,469,396,468,401,396,392"/>
+<area shape="poly" title=" " alt="" coords="366,363,438,349,527,340,576,341,624,347,671,358,715,378,734,394,744,412,751,432,764,454,837,539,833,543,759,458,746,435,739,414,730,397,712,382,669,363,623,352,575,346,528,345,439,354,367,369"/>
+<area shape="rect" href="class_a_c_render_target.html#a92904be9d0e8724a8737fea2b8f567b2" title="Get CPU handle for rtv descriptor heap" alt="" coords="476,560,713,587"/>
+<area shape="poly" title=" " alt="" coords="398,385,415,393,430,403,445,421,452,440,455,477,457,513,464,530,478,546,482,550,479,554,474,550,459,532,452,514,449,477,447,441,440,424,426,407,412,397,395,390"/>
+<area shape="rect" href="class_a_c_render_target.html#a79d77f5d913d004ac6b174311e3b098a" title="Transition resource state" alt="" coords="489,509,700,536"/>
+<area shape="poly" title=" " alt="" coords="397,391,429,403,455,422,478,445,558,499,555,503,474,449,451,426,427,408,395,396"/>
+<area shape="poly" title=" " alt="" coords="352,506,523,438,525,443,354,511"/>
+<area shape="poly" title=" " alt="" coords="396,529,430,546,442,559,448,572,453,600,459,626,465,637,477,647,520,666,565,675,612,674,659,666,704,653,747,636,818,600,821,605,749,641,706,658,660,671,612,679,564,680,518,671,475,652,461,640,454,628,448,601,443,574,437,562,426,550,394,533"/>
+<area shape="poly" title=" " alt="" coords="395,534,504,554,503,559,394,539"/>
+<area shape="poly" title=" " alt="" coords="395,520,474,520,474,525,395,525"/>
+<area shape="rect" href="struct_vector.html#aa3b9401b9d3e2aaea6506aa7af3d70b1" title="Get pointer to array of elements" alt="" coords="527,611,663,637"/>
+<area shape="poly" title=" " alt="" coords="396,532,429,546,445,558,454,572,463,585,477,596,513,611,511,616,475,601,459,588,450,575,441,562,427,550,394,537"/>
+<area shape="poly" title=" " alt="" coords="388,206,426,189,442,171,449,152,456,132,475,115,522,97,571,90,622,92,672,102,719,116,763,133,832,167,830,172,761,138,718,121,671,107,621,98,572,95,523,102,477,120,461,135,454,154,446,174,430,193,390,210"/>
+<area shape="poly" title=" " alt="" coords="389,206,465,198,466,203,389,211"/>
+<area shape="poly" title=" " alt="" coords="357,228,393,245,430,269,445,284,455,298,478,327,512,356,547,381,544,386,509,360,474,331,451,301,441,287,426,273,391,250,355,232"/>
+<area shape="poly" title=" " alt="" coords="388,201,427,188,450,173,460,165,475,159,544,137,602,122,630,121,657,126,686,138,715,159,744,192,758,226,760,261,756,296,750,333,746,372,750,412,764,455,795,502,831,540,827,544,790,505,759,457,744,413,741,372,745,333,751,296,755,261,753,227,740,195,712,163,683,143,656,131,630,126,603,128,545,142,477,164,463,170,453,177,429,193,390,206"/>
+<area shape="poly" title=" " alt="" coords="1187,1243,1234,1238,1235,1243,1187,1248"/>
+<area shape="poly" title=" " alt="" coords="397,1004,1024,984,1024,989,398,1009"/>
+<area shape="poly" title=" " alt="" coords="322,987,396,723,441,578,459,526,474,496,503,465,536,441,539,445,506,469,478,499,464,528,446,579,401,724,327,988"/>
+<area shape="poly" title=" " alt="" coords="335,986,391,912,430,871,475,835,508,817,538,806,594,797,650,789,679,778,712,760,755,726,794,685,825,643,848,607,853,610,829,646,798,688,759,730,715,765,681,783,651,794,595,803,540,811,510,822,477,840,433,875,395,916,339,989"/>
+<area shape="poly" title=" " alt="" coords="325,986,348,948,381,901,424,853,474,811,508,793,538,782,594,773,650,765,679,754,712,736,750,707,785,672,838,605,842,609,789,675,754,711,715,741,681,759,651,770,595,779,540,787,510,798,478,816,428,856,385,904,352,951,330,989"/>
+<area shape="rect" href="class_c_descriptor_heap_pool.html#a94be553cb145046459e138d08f98ead9" title="Get CPU handle for descriptor heap" alt="" coords="522,904,667,947"/>
+<area shape="poly" title=" " alt="" coords="390,985,506,949,508,954,391,990"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325" title="DirectX device getter" alt="" coords="507,1072,683,1115"/>
+<area shape="poly" title=" " alt="" coords="386,1029,477,1057,501,1065,499,1070,475,1063,384,1034"/>
+<area shape="rect" href="class_c_descriptor_heap_pool.html#a8e4f47141f8dd2146922c80146236e19" title="Get GPU handle for descriptor heap" alt="" coords="522,837,667,880"/>
+<area shape="poly" title=" " alt="" coords="340,986,399,938,436,912,475,890,506,877,508,882,477,894,439,916,402,942,344,990"/>
+<area shape="rect" href="class_c_mesh_buffer.html#a2d0e2030e49e9fa59ec6400c24ee244c" title="Get the pointer to index buffer" alt="" coords="517,1189,672,1216"/>
+<area shape="poly" title=" " alt="" coords="334,1029,358,1062,391,1102,431,1142,477,1175,503,1186,501,1191,475,1180,428,1146,387,1106,354,1065,330,1032"/>
+<area shape="rect" href="class_c_index_buffer.html#a2a48ff0562e1b7ad8d09f4ca727d68bd" title="Get the number of indices" alt="" coords="499,1240,690,1267"/>
+<area shape="poly" title=" " alt="" coords="330,1030,351,1072,383,1126,425,1180,450,1205,477,1226,486,1231,483,1235,475,1230,447,1209,421,1184,378,1129,346,1075,325,1032"/>
+<area shape="rect" href="class_c_mesh_buffer.html#a9cd84119359127ba6d60d14b5cb5ecba" title="Get the topology type" alt="" coords="493,1291,697,1317"/>
+<area shape="poly" title=" " alt="" coords="327,1030,345,1082,375,1149,419,1219,447,1250,478,1277,485,1281,482,1286,474,1281,443,1254,415,1222,371,1152,340,1084,322,1032"/>
+<area shape="rect" href="struct_each_graphics_component_vector.html#a02d130e6ba71a432036ef56c2468674e" title="Get dynamic array corresponding to the specified type" alt="" coords="491,1341,698,1384"/>
+<area shape="poly" title=" " alt="" coords="326,1030,341,1090,370,1170,390,1213,415,1255,444,1294,478,1327,482,1331,479,1335,474,1331,440,1297,410,1258,385,1215,365,1172,336,1091,320,1032"/>
+<area shape="rect" href="class_c_mesh_buffer.html#a13a81042cdaeaaadf1c2ab8fd685dda3" title="Get the pointer to vertex buffer" alt="" coords="514,1139,676,1165"/>
+<area shape="poly" title=" " alt="" coords="343,1029,401,1078,438,1103,477,1124,500,1133,498,1138,475,1129,435,1108,398,1082,339,1033"/>
+<area shape="rect" href="class_c_index_buffer.html#a21ee287ea2a9c1d7e3f56502dc457228" title="Get index buffer view" alt="" coords="519,1408,670,1435"/>
+<area shape="poly" title=" " alt="" coords="323,1031,334,1101,359,1200,379,1253,405,1305,438,1353,478,1394,506,1410,503,1414,474,1398,434,1356,401,1308,375,1256,354,1202,329,1102,318,1031"/>
+<area shape="rect" href="class_c_vertex_buffer.html#a92e7f7da3a62260ba1ac107deea4ab0c" title="Get vertex buffer view" alt="" coords="516,712,674,739"/>
+<area shape="poly" title=" " alt="" coords="323,987,343,939,374,876,418,811,445,781,474,755,500,741,502,746,478,760,448,785,422,814,379,879,348,941,328,989"/>
+<area shape="rect" href="_graphics_layer_8h.html#a6efe5820c32cb850755e2d8e96e8c912" title="Convert from &#39;GraphicsLayer&#39; to string" alt="" coords="501,1021,688,1048"/>
+<area shape="poly" title=" " alt="" coords="398,1014,486,1022,485,1027,397,1019"/>
+<area shape="poly" title=" " alt="" coords="667,913,691,903,712,890,729,870,749,840,788,763,852,608,857,610,793,765,753,843,734,873,715,894,693,908,669,918"/>
+<area shape="poly" title=" " alt="" coords="667,905,762,882,764,887,669,910"/>
+<area shape="poly" title=" " alt="" coords="667,840,690,830,712,817,760,768,800,711,830,655,851,608,856,610,835,658,805,714,764,771,715,821,693,835,669,845"/>
+<area shape="poly" title=" " alt="" coords="668,856,746,856,746,861,668,861"/>
+<area shape="rect" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219" title="Get instance. If the instance has already been destroyed, return nullptr" alt="" coords="813,1164,924,1191"/>
+<area shape="poly" title=" " alt="" coords="673,1193,797,1181,798,1186,673,1198"/>
+<area shape="poly" title=" " alt="" coords="677,1157,798,1168,798,1174,676,1162"/>
+<area shape="poly" title=" " alt="" coords="399,429,469,422,469,427,400,434"/>
+<area shape="poly" title=" " alt="" coords="400,441,547,458,632,473,714,495,769,517,819,542,817,546,767,521,713,500,631,478,547,463,399,446"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9c6b08c098524379f6d3877a4a06c228" name="a9c6b08c098524379f6d3877a4a06c228"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c6b08c098524379f6d3877a4a06c228">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CStandardRenderPass::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start processing </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td>Scene that has this class </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_a_c_render_pass_asset.html#a454351c5861e80e3c6b193b6d407111c">ACRenderPassAsset</a>を実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_standard_render_pass_a9c6b08c098524379f6d3877a4a06c228_cgraph.png" border="0" usemap="#aclass_c_standard_render_pass_a9c6b08c098524379f6d3877a4a06c228_cgraph" alt=""/></div>
+<map name="aclass_c_standard_render_pass_a9c6b08c098524379f6d3877a4a06c228_cgraph" id="aclass_c_standard_render_pass_a9c6b08c098524379f6d3877a4a06c228_cgraph">
+<area shape="rect" title="Start processing" alt="" coords="5,675,159,718"/>
+<area shape="rect" href="class_c_graphics_pipeline_state.html#ae6e8f7fdae3438349ae87e5ba7e77513" title="Create graphics pipeline state" alt="" coords="247,130,407,173"/>
+<area shape="poly" title=" " alt="" coords="83,675,96,571,121,424,137,348,157,279,179,222,205,183,232,164,235,169,209,187,184,224,162,281,143,349,126,425,101,572,88,676"/>
+<area shape="rect" href="class_c_depth_stencil.html#a7aa888ba8b968ee7aac9453f0311e7f0" title="Create depth stencil resource" alt="" coords="252,197,402,223"/>
+<area shape="poly" title=" " alt="" coords="86,674,100,615,125,533,160,440,204,349,251,283,298,232,302,236,255,287,209,351,165,442,130,535,106,617,91,675"/>
+<area shape="rect" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219" title="Get instance. If the instance has already been destroyed, return nullptr" alt="" coords="272,1011,382,1038"/>
+<area shape="poly" title=" " alt="" coords="88,718,98,773,119,847,135,886,155,924,179,960,208,991,231,1005,258,1015,256,1020,229,1010,205,995,175,963,150,927,130,888,114,849,93,774,83,719"/>
+<area shape="rect" href="class_c_shader_registry.html#aff1e63f1223a161ec2aec0509c0e8e79" title="Get feature for thread&#45;safe" alt="" coords="776,489,947,515"/>
+<area shape="poly" title=" " alt="" coords="84,674,95,623,117,557,133,523,153,489,177,459,205,433,250,410,311,392,382,379,459,372,537,370,611,372,675,379,725,391,760,408,792,430,840,475,837,479,788,434,757,412,723,397,674,385,610,377,537,375,460,377,383,385,312,397,252,415,208,438,180,463,157,492,138,525,122,559,100,625,89,675"/>
+<area shape="rect" href="class_c_static_resource_registry.html#a2806d173f0580dbb314597427c334c8a" title="Get feature for thread&#45;safe" alt="" coords="778,778,945,821"/>
+<area shape="poly" title=" " alt="" coords="93,718,107,756,131,802,165,847,185,866,208,881,279,915,343,936,401,945,458,945,516,937,578,923,723,881,776,858,821,828,824,833,779,863,725,886,579,928,517,942,459,950,401,950,341,941,277,920,205,886,182,870,161,850,127,804,102,758,88,720"/>
+<area shape="rect" href="class_c_swap_chain.html#ad394d0bb9aa7884085e9cf6067577967" title="Get feature for thread&#45;safe" alt="" coords="788,922,935,949"/>
+<area shape="poly" title=" " alt="" coords="89,718,99,769,120,834,136,868,155,900,179,929,208,952,252,969,312,978,385,981,465,980,631,966,772,947,773,952,632,971,466,985,385,987,312,984,250,974,205,956,176,933,151,903,131,871,115,836,94,770,83,719"/>
+<area shape="rect" href="class_c_swap_chain_1_1_c_thread_safe_feature.html#a7ca3f4d2670a1c68e4b5a4dcc2550fad" title="Get render target for back buffers" alt="" coords="216,1062,438,1105"/>
+<area shape="poly" title=" " alt="" coords="87,718,94,783,112,872,128,920,149,966,175,1010,209,1048,212,1051,208,1055,205,1052,171,1013,144,969,123,922,107,873,88,784,82,719"/>
+<area shape="rect" href="class_c_shader_registry_1_1_c_thread_safe_feature.html#a099dbb9e12b98575e77ce16722869f37" title="Get a pointer to a pixel shader" alt="" coords="774,673,949,715"/>
+<area shape="poly" title=" " alt="" coords="96,717,114,747,139,781,170,814,208,838,255,854,318,866,390,874,467,877,544,875,615,868,677,856,723,838,741,824,749,806,756,786,770,764,815,723,818,727,774,768,761,789,754,808,745,827,726,843,678,861,616,873,544,880,467,882,390,879,317,871,254,859,206,843,167,818,134,784,109,750,92,720"/>
+<area shape="rect" href="class_c_static_resource_registry_1_1_c_thread_safe_feature.html#a05ca503d3e8165399a94366d5efd1d64" title="Get static resource class with matching name" alt="" coords="243,1129,411,1187"/>
+<area shape="poly" title=" " alt="" coords="86,718,90,793,106,899,121,956,143,1013,172,1067,209,1115,231,1132,228,1136,205,1119,167,1070,138,1016,116,958,101,900,84,793,80,718"/>
+<area shape="rect" href="class_c_shader_registry_1_1_c_thread_safe_feature.html#afc0141f681e27d955d18b1cf1b633da7" title="Get a pointer to a vertex shader" alt="" coords="774,606,949,649"/>
+<area shape="poly" title=" " alt="" coords="103,717,148,759,176,779,208,794,272,811,325,812,447,794,528,787,593,780,623,774,653,764,686,748,723,725,738,710,746,693,755,676,771,659,776,655,779,659,774,663,759,679,751,696,743,713,726,729,689,752,655,769,624,779,594,786,529,792,447,799,325,818,271,816,206,799,174,784,144,763,100,720"/>
+<area shape="rect" href="class_c_write_shadow_g_p_s_o_wrapper.html#a8c459b33866eb117f6cf3f011ff137d2" title="Prefab function" alt="" coords="513,406,707,449"/>
+<area shape="poly" title=" " alt="" coords="87,674,101,632,125,580,159,527,181,504,205,484,239,464,275,449,351,428,427,418,497,416,497,421,427,423,352,433,277,454,241,469,208,488,184,508,163,530,129,583,106,634,92,676"/>
+<area shape="rect" href="class_c_shading_g_p_s_o_wrapper.html#a006de9e79b5b914ba3db0c27018a564b" title="Prefab function" alt="" coords="528,473,692,515"/>
+<area shape="poly" title=" " alt="" coords="90,674,107,640,132,600,165,561,205,529,242,511,281,498,362,482,441,477,512,479,512,485,441,482,363,487,283,503,244,516,208,534,168,564,136,603,111,643,95,676"/>
+<area shape="rect" href="class_c_grass_write_shadow_g_p_s_o_wrapper.html#a12ec67c7f32f363ebfcadfb6a065edc9" title="Prefab function" alt="" coords="495,539,724,582"/>
+<area shape="poly" title=" " alt="" coords="94,674,112,647,137,616,169,587,206,565,273,543,344,533,415,531,480,536,480,541,415,537,345,538,275,548,208,570,172,591,141,620,116,650,98,677"/>
+<area shape="rect" href="class_c_grass_shading_g_p_s_o_wrapper.html#ad37004db0825811143d5adcda0658b5d" title="Prefab function" alt="" coords="510,606,709,649"/>
+<area shape="poly" title=" " alt="" coords="100,673,144,630,174,610,206,594,246,583,289,576,374,575,455,584,525,599,524,604,454,589,374,580,289,581,248,588,208,599,176,614,148,634,103,677"/>
+<area shape="rect" href="class_c_standard_g_p_s_o_wrapper.html#a99a1b62d10fddcb8646a4f8305c87bb4" title="Prefab function" alt="" coords="242,609,412,651"/>
+<area shape="poly" title=" " alt="" coords="159,673,230,653,232,659,160,678"/>
+<area shape="rect" href="class_c_transparent_g_p_s_o_wrapper.html#abf51f8b428b01311da8feeb0ab76983a" title="Prefab function" alt="" coords="234,675,420,718"/>
+<area shape="poly" title=" " alt="" coords="159,694,219,694,219,699,159,699"/>
+<area shape="rect" href="class_c_transparent_no_culling_g_p_s_o_wrapper.html#a71c088c6c0c5f284e058b1112af6928a" title="Prefab function" alt="" coords="207,742,447,785"/>
+<area shape="poly" title=" " alt="" coords="160,715,232,735,230,740,159,720"/>
+<area shape="poly" title=" " alt="" coords="281,130,279,120,286,111,303,105,327,103,353,106,369,112,367,117,352,111,327,109,304,111,289,115,284,121,286,129"/>
+<area shape="rect" href="class_c_descriptor_heap.html#aecbd2207fc5a4526ef13ca74eca53dc8" title="Create descriptor heap" alt="" coords="527,54,692,81"/>
+<area shape="poly" title=" " alt="" coords="401,202,425,194,445,183,456,172,462,161,468,138,475,114,482,102,493,91,511,80,514,84,497,95,486,105,480,116,474,139,467,163,460,176,449,187,427,199,403,207"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="788,54,935,81"/>
+<area shape="poly" title=" " alt="" coords="401,204,425,196,445,183,459,166,465,149,467,111,469,74,477,56,493,40,532,19,575,7,619,3,664,5,749,22,817,45,815,50,747,27,664,10,619,8,576,12,534,24,497,44,482,59,474,75,472,111,471,150,463,169,449,187,427,201,403,209"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="504,105,715,131"/>
+<area shape="poly" title=" " alt="" coords="401,198,446,182,460,173,469,162,479,151,494,141,509,134,511,139,496,146,482,155,473,166,463,177,448,187,403,203"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325" title="DirectX device getter" alt="" coords="522,155,698,198"/>
+<area shape="poly" title=" " alt="" coords="402,199,506,186,507,191,403,204"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a0d15ed4211b1e3b86230bb15af25218b" title="Get weak ptr" alt="" coords="537,222,682,265"/>
+<area shape="poly" title=" " alt="" coords="403,216,522,230,521,236,402,221"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a553fe022564762ba24fe35296d41dd77" title="Make unique pointer" alt="" coords="537,289,682,331"/>
+<area shape="poly" title=" " alt="" coords="361,221,496,274,523,283,521,288,494,279,359,226"/>
+<area shape="poly" title=" " alt="" coords="693,65,772,65,772,70,693,70"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="999,618,1207,645"/>
+<area shape="poly" title=" " alt="" coords="937,79,952,91,978,120,1001,152,1038,220,1065,294,1084,368,1096,440,1102,506,1105,602,1100,603,1097,506,1091,441,1079,370,1060,296,1033,223,997,154,974,123,949,95,933,83"/>
+<area shape="poly" title=" " alt="" coords="679,101,776,82,778,87,680,107"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="772,105,951,147"/>
+<area shape="poly" title=" " alt="" coords="716,119,757,120,757,125,716,124"/>
+<area shape="poly" title=" " alt="" coords="922,513,952,525,1020,565,1075,606,1072,610,1017,569,950,530,920,518"/>
+<area shape="poly" title=" " alt="" coords="892,775,1068,652,1071,656,896,780"/>
+<area shape="poly" title=" " alt="" coords="873,920,949,831,1081,656,1085,659,953,834,877,923"/>
+<area shape="poly" title=" " alt="" coords="687,447,725,458,801,481,800,486,724,463,685,452"/>
+<area shape="poly" title=" " alt="" coords="709,446,726,459,740,476,748,493,752,526,755,560,762,576,774,592,777,594,773,598,770,596,757,578,750,561,746,527,742,494,735,478,723,463,706,450"/>
+<area shape="rect" href="class_c_layered_g_p_s_o_wrapper.html#a7c39ed9b17926bc66c2795f4d86968ad" title="Create graphics pipeline states" alt="" coords="780,539,943,582"/>
+<area shape="poly" title=" " alt="" coords="706,447,726,459,742,475,751,492,759,509,774,525,779,529,776,533,771,529,755,512,746,495,738,478,723,463,703,451"/>
+<area shape="poly" title=" " alt="" coords="692,494,760,496,760,501,692,499"/>
+<area shape="poly" title=" " alt="" coords="694,505,726,525,740,542,748,559,752,593,755,626,762,642,774,659,777,661,773,665,770,662,757,645,750,628,746,594,742,561,735,545,723,529,691,510"/>
+<area shape="poly" title=" " alt="" coords="693,508,726,525,742,542,751,559,759,576,774,592,779,596,776,600,771,596,755,579,746,561,738,545,723,529,691,513"/>
+<area shape="poly" title=" " alt="" coords="693,513,765,533,764,538,692,518"/>
+<area shape="poly" title=" " alt="" coords="704,536,785,517,787,522,705,541"/>
+<area shape="poly" title=" " alt="" coords="706,580,726,592,742,609,751,626,759,642,774,659,779,662,776,667,771,663,755,645,746,628,738,612,723,596,703,585"/>
+<area shape="poly" title=" " alt="" coords="694,580,765,599,763,604,692,585"/>
+<area shape="poly" title=" " alt="" coords="725,558,764,558,764,563,725,563"/>
+<area shape="poly" title=" " alt="" coords="703,603,723,592,738,576,746,559,754,542,771,525,779,520,781,525,774,529,759,545,751,562,742,579,726,596,706,608"/>
+<area shape="poly" title=" " alt="" coords="694,647,765,666,763,671,692,652"/>
+<area shape="poly" title=" " alt="" coords="710,625,758,625,758,630,710,630"/>
+<area shape="poly" title=" " alt="" coords="692,603,764,584,766,589,694,608"/>
+<area shape="rect" href="class_a_c_standard_g_p_s_o_wrapper.html#a0e3f688a53e1e5351ebb328cb5f2ceb4" title="Prefab helper function" alt="" coords="521,673,699,715"/>
+<area shape="poly" title=" " alt="" coords="412,647,506,668,505,673,411,652"/>
+<area shape="poly" title=" " alt="" coords="698,675,723,659,735,643,742,627,746,594,749,560,757,542,770,525,774,522,778,526,774,529,761,545,754,561,751,594,747,628,740,646,726,663,701,680"/>
+<area shape="poly" title=" " alt="" coords="699,691,758,691,758,697,699,697"/>
+<area shape="poly" title=" " alt="" coords="692,670,763,651,765,656,694,675"/>
+<area shape="poly" title=" " alt="" coords="698,672,723,659,738,643,746,627,755,609,771,592,776,588,779,592,774,596,759,612,751,629,742,646,726,663,700,677"/>
+<area shape="poly" title=" " alt="" coords="420,693,505,692,505,698,420,698"/>
+<area shape="poly" title=" " alt="" coords="416,739,505,717,506,722,417,744"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_standard_render_pass_8h_source.html">StandardRenderPass.h</a></li>
+<li><a class="el" href="_standard_render_pass_8cpp.html">StandardRenderPass.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

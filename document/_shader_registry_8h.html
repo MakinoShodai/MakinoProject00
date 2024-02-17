@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ShaderRegistry.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#enum-members">列挙型</a>  </div>
+  <div class="headertitle"><div class="title">ShaderRegistry.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file handles registry class that manages all shaders.  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_singleton_8h_source.html">Singleton.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_shader_8h_source.html">Shader.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+ShaderRegistry.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_shader_registry_8h__incl.png" border="0" usemap="#a_shader_registry_8h" alt=""/></div>
+<map name="a_shader_registry_8h" id="a_shader_registry_8h">
+<area shape="rect" title="This file handles registry class that manages all shaders." alt="" coords="300,5,421,32"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="228,229,314,256"/>
+<area shape="poly" title=" " alt="" coords="356,34,330,86,299,156,280,215,275,213,294,154,325,84,351,31"/>
+<area shape="rect" href="_shader_8h.html" title="This file handles each shaders." alt="" coords="417,80,491,107"/>
+<area shape="poly" title=" " alt="" coords="378,30,427,68,424,73,375,35"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="171,304,305,331"/>
+<area shape="poly" title=" " alt="" coords="268,258,252,291,247,289,263,255"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="468,304,557,331"/>
+<area shape="poly" title=" " alt="" coords="314,254,457,297,455,302,312,259"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="5,304,148,331"/>
+<area shape="poly" title=" " alt="" coords="238,259,126,301,124,296,236,254"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="471,379,554,405"/>
+<area shape="poly" title=" " alt="" coords="515,331,515,363,510,363,510,331"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="424,453,489,480"/>
+<area shape="poly" title=" " alt="" coords="505,408,477,443,473,439,501,404"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="364,528,477,555"/>
+<area shape="poly" title=" " alt="" coords="453,482,436,515,431,513,448,479"/>
+<area shape="poly" title=" " alt="" coords="466,106,500,157,518,192,531,229,533,261,526,290,521,289,527,260,526,230,513,194,495,160,461,109"/>
+<area shape="rect" href="_application_8h.html" title="This file handles application objects such as window and DirectX device." alt="" coords="308,155,405,181"/>
+<area shape="poly" title=" " alt="" coords="438,109,387,148,384,143,435,105"/>
+<area shape="rect" href="_graphics_pipeline_elements_8h.html" title="This file handles elements of graphics pipeline state." alt="" coords="592,155,777,181"/>
+<area shape="poly" title=" " alt="" coords="492,104,630,147,629,152,490,109"/>
+<area shape="rect" href="_utility_for_direct_x_8h.html" title="This file defines utility functions that are useful for DirectX." alt="" coords="391,229,517,256"/>
+<area shape="poly" title=" " alt="" coords="457,107,457,214,451,214,451,107"/>
+<area shape="poly" title=" " alt="" coords="343,184,299,221,295,217,340,180"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="329,304,443,331"/>
+<area shape="poly" title=" " alt="" coords="362,181,383,288,378,289,356,182"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="325,379,447,405"/>
+<area shape="poly" title=" " alt="" coords="389,331,389,363,383,363,383,331"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="201,379,301,405"/>
+<area shape="poly" title=" " alt="" coords="364,334,290,373,287,368,361,329"/>
+<area shape="poly" title=" " alt="" coords="400,404,436,440,432,444,396,408"/>
+<area shape="poly" title=" " alt="" coords="391,405,417,512,411,514,386,406"/>
+<area shape="poly" title=" " alt="" coords="466,255,495,290,491,293,462,258"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_shader_registry_8h__dep__incl.png" border="0" usemap="#a_shader_registry_8hdep" alt=""/></div>
+<map name="a_shader_registry_8hdep" id="a_shader_registry_8hdep">
+<area shape="rect" title="This file handles registry class that manages all shaders." alt="" coords="421,5,542,32"/>
+<area shape="rect" href="_application_main_8cpp.html" title=" " alt="" coords="5,80,144,107"/>
+<area shape="poly" title=" " alt="" coords="405,36,145,82,144,77,404,31"/>
+<area shape="rect" href="_scene_registry_8cpp.html" title=" " alt="" coords="168,80,299,107"/>
+<area shape="poly" title=" " alt="" coords="424,39,277,82,276,77,423,34"/>
+<area shape="rect" href="_shader_registry_8cpp.html" title=" " alt="" coords="323,80,458,107"/>
+<area shape="poly" title=" " alt="" coords="455,44,408,82,404,78,452,40"/>
+<area shape="rect" href="_shadow_g_p_s_o_wrapper_8cpp.html" title=" " alt="" coords="482,80,662,107"/>
+<area shape="poly" title=" " alt="" coords="510,40,558,78,555,82,507,44"/>
+<area shape="rect" href="_standard_g_p_s_o_wrapper_8cpp.html" title=" " alt="" coords="686,80,871,107"/>
+<area shape="poly" title=" " alt="" coords="549,34,727,77,726,82,547,39"/>
+<area shape="rect" href="_standard_render_pass_8cpp.html" title=" " alt="" coords="895,80,1065,107"/>
+<area shape="poly" title=" " alt="" coords="558,28,895,77,894,82,557,34"/>
+</map>
+</div>
+</div>
+<p><a href="_shader_registry_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shader_registry.html">CShaderRegistry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registry class manages all shaders  <a href="class_c_shader_registry.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shader_registry_1_1_c_thread_safe_feature.html">CShaderRegistry::CThreadSafeFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feature for thread-safe  <a href="class_c_shader_registry_1_1_c_thread_safe_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a24df3b40883460a32960f4b36d91656e" id="r_a24df3b40883460a32960f4b36d91656e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656e">VertexShaderType</a> : UINT { <br />
+&#160;&#160;<a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea50ff0b2f929aa743c8414256f8a8bd49">Standard2DSprite</a> = 0
+, <a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eac240af9cfc704891dfdfe45a83be712c">Standard3DSprite</a>
+, <a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea21ae25ee9814c82a72f3e97e71820906">Standard3D</a>
+, <a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea8acb0b51bc5d86ee451b34b87d8d3648">Standard3DAnim</a>
+, <br />
+&#160;&#160;<a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea38f3bc52310c8da5dd2d89906d5b3155">StandardRemovePos3D</a>
+, <a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eadfe2810769bbeeabc8b2b1572e16de35">LightPosWorldPos3D</a>
+, <a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eaff0aabec00174dcb259df6aee5770a57">LightPosWorldPos3DAnim</a>
+, <a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea4403b7e40f02f7ba56bf9f0f41479154">LightVP3D</a>
+, <br />
+&#160;&#160;<a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eacd801c3cbf996975cdfd0368b994490e">LightVP3DAnim</a>
+, <a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea0b5ce210917c4f8835b8962de0aeeb76">LightVPOutUV3D</a>
+, <a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea6a061313d22e51e0f25b7cd4dc065233">Max</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a24df3b40883460a32960f4b36d91656e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of vertex shaders  <a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656e">[詳解]</a><br /></td></tr>
+<tr class="separator:a24df3b40883460a32960f4b36d91656e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ccfadfce2364b92e404ec4cdd80c9b" id="r_a69ccfadfce2364b92e404ec4cdd80c9b"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9b">PixelShaderType</a> : UINT { <br />
+&#160;&#160;<a class="el" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba76ea39e8fe7f3c653b38595d626d3206">StandardTex</a> = 0
+, <a class="el" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba3b14ca83173819b48b37125d4dd44709">StandardColor</a>
+, <a class="el" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9bacbfb594cdd0d31f8741401233ee41929">DepthWrite</a>
+, <a class="el" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba21e77d6a4ebb2044f6c52555833412b1">ShadingTex</a>
+, <br />
+&#160;&#160;<a class="el" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9bae25d59bd32f462810db58390468f9695">ShadingColor</a>
+, <a class="el" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba6a061313d22e51e0f25b7cd4dc065233">Max</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a69ccfadfce2364b92e404ec4cdd80c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of pixel shaders  <a href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9b">[詳解]</a><br /></td></tr>
+<tr class="separator:a69ccfadfce2364b92e404ec4cdd80c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This file handles registry class that manages all shaders. </p>
+<dl class="section author"><dt>著者</dt><dd>Shodai Makino </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2023/12/10 </dd></dl>
+</div><h2 class="groupheader">列挙型詳解</h2>
+<a id="a69ccfadfce2364b92e404ec4cdd80c9b" name="a69ccfadfce2364b92e404ec4cdd80c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ccfadfce2364b92e404ec4cdd80c9b">&#9670;&#160;</a></span>PixelShaderType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9b">PixelShaderType</a> : UINT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Type of pixel shaders </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a69ccfadfce2364b92e404ec4cdd80c9ba76ea39e8fe7f3c653b38595d626d3206" name="a69ccfadfce2364b92e404ec4cdd80c9ba76ea39e8fe7f3c653b38595d626d3206"></a>StandardTex&#160;</td><td class="fielddoc"><p>Standard shader for texture mesh </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a69ccfadfce2364b92e404ec4cdd80c9ba3b14ca83173819b48b37125d4dd44709" name="a69ccfadfce2364b92e404ec4cdd80c9ba3b14ca83173819b48b37125d4dd44709"></a>StandardColor&#160;</td><td class="fielddoc"><p>Standard shader for color only </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a69ccfadfce2364b92e404ec4cdd80c9bacbfb594cdd0d31f8741401233ee41929" name="a69ccfadfce2364b92e404ec4cdd80c9bacbfb594cdd0d31f8741401233ee41929"></a>DepthWrite&#160;</td><td class="fielddoc"><p>Writing depth shader </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a69ccfadfce2364b92e404ec4cdd80c9ba21e77d6a4ebb2044f6c52555833412b1" name="a69ccfadfce2364b92e404ec4cdd80c9ba21e77d6a4ebb2044f6c52555833412b1"></a>ShadingTex&#160;</td><td class="fielddoc"><p>Shading for using texture </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a69ccfadfce2364b92e404ec4cdd80c9bae25d59bd32f462810db58390468f9695" name="a69ccfadfce2364b92e404ec4cdd80c9bae25d59bd32f462810db58390468f9695"></a>ShadingColor&#160;</td><td class="fielddoc"><p>Shading for color only </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a69ccfadfce2364b92e404ec4cdd80c9ba6a061313d22e51e0f25b7cd4dc065233" name="a69ccfadfce2364b92e404ec4cdd80c9ba6a061313d22e51e0f25b7cd4dc065233"></a>Max&#160;</td><td class="fielddoc"><p>Max </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a24df3b40883460a32960f4b36d91656e" name="a24df3b40883460a32960f4b36d91656e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24df3b40883460a32960f4b36d91656e">&#9670;&#160;</a></span>VertexShaderType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656e">VertexShaderType</a> : UINT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Type of vertex shaders </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a24df3b40883460a32960f4b36d91656ea50ff0b2f929aa743c8414256f8a8bd49" name="a24df3b40883460a32960f4b36d91656ea50ff0b2f929aa743c8414256f8a8bd49"></a>Standard2DSprite&#160;</td><td class="fielddoc"><p>Standard shader for 2D sprite </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24df3b40883460a32960f4b36d91656eac240af9cfc704891dfdfe45a83be712c" name="a24df3b40883460a32960f4b36d91656eac240af9cfc704891dfdfe45a83be712c"></a>Standard3DSprite&#160;</td><td class="fielddoc"><p>Standard shader for 3D sprite </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24df3b40883460a32960f4b36d91656ea21ae25ee9814c82a72f3e97e71820906" name="a24df3b40883460a32960f4b36d91656ea21ae25ee9814c82a72f3e97e71820906"></a>Standard3D&#160;</td><td class="fielddoc"><p>Standard shader for non-animated model </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24df3b40883460a32960f4b36d91656ea8acb0b51bc5d86ee451b34b87d8d3648" name="a24df3b40883460a32960f4b36d91656ea8acb0b51bc5d86ee451b34b87d8d3648"></a>Standard3DAnim&#160;</td><td class="fielddoc"><p>Standard shader for skeltal model </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24df3b40883460a32960f4b36d91656ea38f3bc52310c8da5dd2d89906d5b3155" name="a24df3b40883460a32960f4b36d91656ea38f3bc52310c8da5dd2d89906d5b3155"></a>StandardRemovePos3D&#160;</td><td class="fielddoc"><p>Standard remove a position from view for non-animated model </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24df3b40883460a32960f4b36d91656eadfe2810769bbeeabc8b2b1572e16de35" name="a24df3b40883460a32960f4b36d91656eadfe2810769bbeeabc8b2b1572e16de35"></a>LightPosWorldPos3D&#160;</td><td class="fielddoc"><p>Light position and world position shader for non-animated model </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24df3b40883460a32960f4b36d91656eaff0aabec00174dcb259df6aee5770a57" name="a24df3b40883460a32960f4b36d91656eaff0aabec00174dcb259df6aee5770a57"></a>LightPosWorldPos3DAnim&#160;</td><td class="fielddoc"><p>Light position and world position shader for skeletal model </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24df3b40883460a32960f4b36d91656ea4403b7e40f02f7ba56bf9f0f41479154" name="a24df3b40883460a32960f4b36d91656ea4403b7e40f02f7ba56bf9f0f41479154"></a>LightVP3D&#160;</td><td class="fielddoc"><p>Light view projection matrix shader for non-animated model </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24df3b40883460a32960f4b36d91656eacd801c3cbf996975cdfd0368b994490e" name="a24df3b40883460a32960f4b36d91656eacd801c3cbf996975cdfd0368b994490e"></a>LightVP3DAnim&#160;</td><td class="fielddoc"><p>Light view projection matrix shader for skeletal model </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24df3b40883460a32960f4b36d91656ea0b5ce210917c4f8835b8962de0aeeb76" name="a24df3b40883460a32960f4b36d91656ea0b5ce210917c4f8835b8962de0aeeb76"></a>LightVPOutUV3D&#160;</td><td class="fielddoc"><p>Light view projection matrix shader (output uv) for non-animated model </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a24df3b40883460a32960f4b36d91656ea6a061313d22e51e0f25b7cd4dc065233" name="a24df3b40883460a32960f4b36d91656ea6a061313d22e51e0f25b7cd4dc065233"></a>Max&#160;</td><td class="fielddoc"><p>Max </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

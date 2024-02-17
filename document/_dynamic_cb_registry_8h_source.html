@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: DynamicCbRegistry.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">DynamicCbRegistry.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_dynamic_cb_registry_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __DYNAMIC_CB_REGISTORY_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __DYNAMIC_CB_REGISTORY_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_dynamic_cb_allocator_8h.html">DynamicCbAllocator.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_registry.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_dynamic_cb_registry.html">CDynamicCbRegistry</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>&lt;CDynamicCbRegistry&gt; {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_registry.html#a3273bd1fe91a2694d70da9c751511d0b">   18</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_a_c_singleton_base.html">ACSingletonBase</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_registry.html#af25dd5b0e260212b76baaf3742c94b6b">   24</a></span>    <a class="code hl_function" href="class_c_dynamic_cb_registry.html#af25dd5b0e260212b76baaf3742c94b6b">~CDynamicCbRegistry</a>()<span class="keyword"> override </span>{}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_dynamic_cb_registry.html#af5f3b7aaccc2c3a9f2437906b2ce631a">Initialize</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_dynamic_cb_registry.html#a6a577f1ef2d7c4e329f0f1011f046e86">FrameRefresh</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_registry_1_1_c_thread_safe_feature.html">   37</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_c_dynamic_cb_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;CDynamicCbRegistry&gt; {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">using </span><a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;<a class="code hl_class" href="class_c_dynamic_cb_registry.html">CDynamicCbRegistry</a>&gt;<a class="code hl_class" href="class_a_c_inner_class.html">::ACInnerClass</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_registry_1_1_c_thread_safe_feature.html#ae05bbb829373d14f465fa2f6c7fa51cc">   47</a></span>        <a class="code hl_class" href="class_i_dynamic_resource.html">IDynamicResource</a>* <a class="code hl_function" href="class_c_dynamic_cb_registry_1_1_c_thread_safe_feature.html#ae05bbb829373d14f465fa2f6c7fa51cc">GetCbAllocator</a>(<span class="keyword">const</span> std::string&amp; name) { <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_nameToCBs.find(name); <span class="keywordflow">return</span> (it != <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_nameToCBs.end()) ? it-&gt;second : <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_registry_1_1_c_thread_safe_feature.html#aadff35e66d1c4f06528de9f7a7fc94c5">   55</a></span>        T* <a class="code hl_function" href="class_c_dynamic_cb_registry_1_1_c_thread_safe_feature.html#aadff35e66d1c4f06528de9f7a7fc94c5">GetCbAllocator</a>() { <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_typeToCBs.find(std::type_index(<span class="keyword">typeid</span>(T))); <span class="keywordflow">return</span> (it != <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_typeToCBs.end()) ? <span class="keyword">dynamic_cast&lt;</span>T*<span class="keyword">&gt;</span>(it-&gt;second) : <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    };</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_registry.html#a343d63f1a83466e6b0be90b0b6297e4a">   59</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="class_c_dynamic_cb_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a>&amp; <a class="code hl_function" href="class_c_dynamic_cb_registry.html#a343d63f1a83466e6b0be90b0b6297e4a">GetAny</a>() {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_c_dynamic_cb_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> instance(<a class="code hl_function" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a>().Get());</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_registry.html#afdf543588ff0fb0b6b91a864a77a3cb2">   68</a></span>    <a class="code hl_function" href="class_c_dynamic_cb_registry.html#afdf543588ff0fb0b6b91a864a77a3cb2">CDynamicCbRegistry</a>() : <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>(-5) {}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">requires</span> std::is_base_of&lt;IDynamicResource, T&gt;::value</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> EmplaceCbAllocator(UINT maxUsePerFrame);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    std::vector&lt;CUniquePtr&lt;IDynamicResource&gt;&gt; m_cbAllocators;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    std::unordered_map&lt;std::string, IDynamicResource*&gt; m_nameToCBs;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    std::unordered_map&lt;std::type_index, IDynamicResource*&gt; m_typeToCBs;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">// Emplace constant buffer allocator</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">requires</span> std::is_base_of&lt;IDynamicResource, T&gt;::value</div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_registry.html#aa88e666a5318451a3abe046e4b2f4eb4">   92</a></span><span class="keywordtype">void</span> CDynamicCbRegistry::EmplaceCbAllocator(UINT maxUsePerFrame) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    m_cbAllocators.emplace_back(<a class="code hl_class" href="class_c_unique_ptr.html">CUniquePtr&lt;T&gt;::Make</a>(maxUsePerFrame));</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_class" href="class_i_dynamic_resource.html">IDynamicResource</a>* allocator = m_cbAllocators.back().Get();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    m_nameToCBs.emplace(allocator-&gt;<a class="code hl_function" href="class_i_dynamic_resource.html#a5a662fc9f40dd0b382f1c27cf7ef1cc3">GetName</a>(), allocator);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    m_typeToCBs.emplace(std::type_index(<span class="keyword">typeid</span>(T)), allocator);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#endif </span><span class="comment">// !__DYNAMIC_CB_REGISTORY_H__</span></div>
+<div class="ttc" id="a_dynamic_cb_allocator_8h_html"><div class="ttname"><a href="_dynamic_cb_allocator_8h.html">DynamicCbAllocator.h</a></div><div class="ttdoc">This file handles class that allocates data for constant buffer per object.</div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">File handling abstract singleton class.</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html"><div class="ttname"><a href="class_a_c_inner_class.html">ACInnerClass</a></div><div class="ttdoc">Abstract inner class</div><div class="ttdef"><b>Definition</b> Singleton.h:23</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html_abbb5ecb30cbd08e599e20cc9f3532f6f"><div class="ttname"><a href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">ACInnerClass&lt; CDynamicCbRegistry &gt;::m_owner</a></div><div class="ttdeci">CDynamicCbRegistry * m_owner</div><div class="ttdoc">Pointer to owner of this class</div><div class="ttdef"><b>Definition</b> Singleton.h:45</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html"><div class="ttname"><a href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a></div><div class="ttdoc">Abstract singleton class for main thread only (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:111</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html"><div class="ttname"><a href="class_a_c_singleton_base.html">ACSingletonBase</a></div><div class="ttdoc">Abstract singleton base class (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:59</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html_a86122d51b9f611ffbc300eb790c3dabf"><div class="ttname"><a href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">ACSingletonBase::GetProtected</a></div><div class="ttdeci">static CUniquePtr&lt; Derived &gt; &amp; GetProtected()</div><div class="ttdoc">Get singleton instance</div><div class="ttdef"><b>Definition</b> Singleton.h:169</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_registry_1_1_c_thread_safe_feature_html"><div class="ttname"><a href="class_c_dynamic_cb_registry_1_1_c_thread_safe_feature.html">CDynamicCbRegistry::CThreadSafeFeature</a></div><div class="ttdoc">Feature for thread-safe</div><div class="ttdef"><b>Definition</b> DynamicCbRegistry.h:37</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_registry_1_1_c_thread_safe_feature_html_aadff35e66d1c4f06528de9f7a7fc94c5"><div class="ttname"><a href="class_c_dynamic_cb_registry_1_1_c_thread_safe_feature.html#aadff35e66d1c4f06528de9f7a7fc94c5">CDynamicCbRegistry::CThreadSafeFeature::GetCbAllocator</a></div><div class="ttdeci">T * GetCbAllocator()</div><div class="ttdoc">Get constant buffer class with matching class type</div><div class="ttdef"><b>Definition</b> DynamicCbRegistry.h:55</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_registry_1_1_c_thread_safe_feature_html_ae05bbb829373d14f465fa2f6c7fa51cc"><div class="ttname"><a href="class_c_dynamic_cb_registry_1_1_c_thread_safe_feature.html#ae05bbb829373d14f465fa2f6c7fa51cc">CDynamicCbRegistry::CThreadSafeFeature::GetCbAllocator</a></div><div class="ttdeci">IDynamicResource * GetCbAllocator(const std::string &amp;name)</div><div class="ttdoc">Get constant buffer class with matching name</div><div class="ttdef"><b>Definition</b> DynamicCbRegistry.h:47</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_registry_html"><div class="ttname"><a href="class_c_dynamic_cb_registry.html">CDynamicCbRegistry</a></div><div class="ttdoc">This class handles all constant buffer allocator per object</div><div class="ttdef"><b>Definition</b> DynamicCbRegistry.h:16</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_registry_html_a343d63f1a83466e6b0be90b0b6297e4a"><div class="ttname"><a href="class_c_dynamic_cb_registry.html#a343d63f1a83466e6b0be90b0b6297e4a">CDynamicCbRegistry::GetAny</a></div><div class="ttdeci">static CThreadSafeFeature &amp; GetAny()</div><div class="ttdoc">Get feature for thread-safe</div><div class="ttdef"><b>Definition</b> DynamicCbRegistry.h:59</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_registry_html_a6a577f1ef2d7c4e329f0f1011f046e86"><div class="ttname"><a href="class_c_dynamic_cb_registry.html#a6a577f1ef2d7c4e329f0f1011f046e86">CDynamicCbRegistry::FrameRefresh</a></div><div class="ttdeci">void FrameRefresh()</div><div class="ttdoc">Refresh process that must be called at the end of every frame</div><div class="ttdef"><b>Definition</b> DynamicCbRegistry.cpp:16</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_registry_html_af25dd5b0e260212b76baaf3742c94b6b"><div class="ttname"><a href="class_c_dynamic_cb_registry.html#af25dd5b0e260212b76baaf3742c94b6b">CDynamicCbRegistry::~CDynamicCbRegistry</a></div><div class="ttdeci">~CDynamicCbRegistry() override</div><div class="ttdoc">Destructor</div><div class="ttdef"><b>Definition</b> DynamicCbRegistry.h:24</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_registry_html_af5f3b7aaccc2c3a9f2437906b2ce631a"><div class="ttname"><a href="class_c_dynamic_cb_registry.html#af5f3b7aaccc2c3a9f2437906b2ce631a">CDynamicCbRegistry::Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdoc">Initialize</div><div class="ttdef"><b>Definition</b> DynamicCbRegistry.cpp:8</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_registry_html_afdf543588ff0fb0b6b91a864a77a3cb2"><div class="ttname"><a href="class_c_dynamic_cb_registry.html#afdf543588ff0fb0b6b91a864a77a3cb2">CDynamicCbRegistry::CDynamicCbRegistry</a></div><div class="ttdeci">CDynamicCbRegistry()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> DynamicCbRegistry.h:68</div></div>
+<div class="ttc" id="aclass_c_unique_ptr_html"><div class="ttname"><a href="class_c_unique_ptr.html">CUniquePtr</a></div><div class="ttdoc">Unique pointer that can't generate weak reference pointer</div><div class="ttdef"><b>Definition</b> UniquePtr.h:250</div></div>
+<div class="ttc" id="aclass_i_dynamic_resource_html"><div class="ttname"><a href="class_i_dynamic_resource.html">IDynamicResource</a></div><div class="ttdoc">Interface for dynamic resource that need to be allocated per object</div><div class="ttdef"><b>Definition</b> DynamicResource.h:19</div></div>
+<div class="ttc" id="aclass_i_dynamic_resource_html_a5a662fc9f40dd0b382f1c27cf7ef1cc3"><div class="ttname"><a href="class_i_dynamic_resource.html#a5a662fc9f40dd0b382f1c27cf7ef1cc3">IDynamicResource::GetName</a></div><div class="ttdeci">virtual const std::string &amp; GetName()=0</div><div class="ttdoc">Get the name of cbuffer defined in hlsl</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

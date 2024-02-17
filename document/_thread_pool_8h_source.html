@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ThreadPool.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ThreadPool.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_thread_pool_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __THREAD_POOL_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __THREAD_POOL_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_exception_8h.html">UtilityForException.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_application_error_8h.html">ApplicationError.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_c_thread_pool.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_thread_pool.html">CThreadPool</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>&lt;CThreadPool&gt; {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_c_thread_pool.html#a3273bd1fe91a2694d70da9c751511d0b">   19</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_a_c_singleton_base.html">ACSingletonBase</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="class_c_thread_pool.html#acb6a395b0928bd2472801b0d9ac8b3c0">~CThreadPool</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_thread_pool.html#accef68ebc940ea70c6e1a084037f981b">Initialize</a>(UINT threadNum);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_c_thread_pool_1_1_c_thread_safe_feature.html">   34</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_c_thread_pool_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;CThreadPool&gt; {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">using </span><a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;<a class="code hl_class" href="class_c_thread_pool.html">CThreadPool</a>&gt;<a class="code hl_class" href="class_a_c_inner_class.html">::ACInnerClass</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">template</span>&lt;<span class="keyword">class </span>F, <span class="keyword">class</span>... Args&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">auto</span> <a class="code hl_function" href="class_c_thread_pool_1_1_c_thread_safe_feature.html#a365b3ff228f94b7b31315a2cd2ca68aa">EnqueueTask</a>(F&amp;&amp; function, Args&amp;&amp;... args);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    };</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_thread_pool.html#a2c841434b5dedfd58266ec984546ff54">   53</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="class_c_thread_pool_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a>&amp; <a class="code hl_function" href="class_c_thread_pool.html#a2c841434b5dedfd58266ec984546ff54">GetAny</a>() {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_c_thread_pool_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> instance(<a class="code hl_function" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a>().Get());</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_thread_pool.html#ad782c35d603373734182289680d146c6">   62</a></span>    <a class="code hl_function" href="class_c_thread_pool.html#ad782c35d603373734182289680d146c6">CThreadPool</a>() : <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>(-100), m_isDestruct(false) {}</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> TasksProcessor();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    std::vector&lt;std::thread&gt; m_threads;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::queue&lt;std::function&lt;void()&gt;&gt; m_tasksQueue;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    std::mutex m_queueMutex;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    std::condition_variable m_condition;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">bool</span> m_isDestruct;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">// Dequeue one task to the queue</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">template</span>&lt;<span class="keyword">class </span>F, <span class="keyword">class </span>...Args&gt;</div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_c_thread_pool_1_1_c_thread_safe_feature.html#a365b3ff228f94b7b31315a2cd2ca68aa">   85</a></span><span class="keyword">auto</span> <a class="code hl_function" href="class_c_thread_pool_1_1_c_thread_safe_feature.html#a365b3ff228f94b7b31315a2cd2ca68aa">CThreadPool::CThreadSafeFeature::EnqueueTask</a>(F&amp;&amp; function, Args &amp;&amp; ...args) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// Get the return value type</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">using </span>ReturnType = <span class="keyword">decltype</span>(function(std::forward&lt;Args&gt;(args)...));</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">// Create the wrapper function</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// #NOTE : packaged_task can only supplement exception with the get function of future, </span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">//         so perform exception supplement processing before packaging</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">auto</span> wrapperFunction = [function = std::forward&lt;F&gt;(function),</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        ...args = std::forward&lt;Args&gt;(args)]() -&gt; ReturnType {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">return</span> function(args...);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="class_utl_1_1_error_1_1_c_fatal_error.html">Utl::Error::CFatalError</a>&amp; e) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="comment">// Error processing</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <a class="code hl_function" href="class_a_c_any_thread_singleton.html#a7321978d9a2f747a0e596d17c18a8b98">CApplicationError::GetAny</a>().<a class="code hl_function" href="class_c_application_error.html#a30549811c0832a650ee91a8739a5725b">Exit</a>(e.<a class="code hl_function" href="class_utl_1_1_error_1_1_c_fatal_error.html#a4020947333cca4c12e30fe40f8b225a0">WhatW</a>());</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordflow">throw</span> e;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    };</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="comment">// Make the packaged_task object</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">auto</span> task = std::make_shared&lt;std::packaged_task&lt;ReturnType()&gt;&gt;(wrapperFunction);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">// Get the future object from the packaged_task object</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    std::future&lt;ReturnType&gt; fet = task-&gt;get_future();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// Operation on the queue</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="comment">// Exclusion control for the queue </span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_queueMutex);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="comment">// Enqueue task</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_tasksQueue.emplace([task]() { (*task)(); });</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="comment">// wakes up one of the waiting threads</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_condition.notify_one();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment">// return the future object</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">return</span> fet;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>}</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#endif </span><span class="comment">// !__THREAD_POOL_H__</span></div>
+<div class="ttc" id="a_application_error_8h_html"><div class="ttname"><a href="_application_error_8h.html">ApplicationError.h</a></div><div class="ttdoc">This file handles processing when the application makes an error.</div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">File handling abstract singleton class.</div></div>
+<div class="ttc" id="a_utility_for_exception_8h_html"><div class="ttname"><a href="_utility_for_exception_8h.html">UtilityForException.h</a></div><div class="ttdoc">This file defines utility functions that are useful for exception.</div></div>
+<div class="ttc" id="aclass_a_c_any_thread_singleton_html_a7321978d9a2f747a0e596d17c18a8b98"><div class="ttname"><a href="class_a_c_any_thread_singleton.html#a7321978d9a2f747a0e596d17c18a8b98">ACAnyThreadSingleton&lt; CApplicationError &gt;::GetAny</a></div><div class="ttdeci">static CApplicationError &amp; GetAny()</div><div class="ttdoc">Get singleton instance for any thread</div><div class="ttdef"><b>Definition</b> Singleton.h:150</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html"><div class="ttname"><a href="class_a_c_inner_class.html">ACInnerClass</a></div><div class="ttdoc">Abstract inner class</div><div class="ttdef"><b>Definition</b> Singleton.h:23</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html_abbb5ecb30cbd08e599e20cc9f3532f6f"><div class="ttname"><a href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">ACInnerClass&lt; CThreadPool &gt;::m_owner</a></div><div class="ttdeci">CThreadPool * m_owner</div><div class="ttdoc">Pointer to owner of this class</div><div class="ttdef"><b>Definition</b> Singleton.h:45</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html"><div class="ttname"><a href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a></div><div class="ttdoc">Abstract singleton class for main thread only (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:111</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html"><div class="ttname"><a href="class_a_c_singleton_base.html">ACSingletonBase</a></div><div class="ttdoc">Abstract singleton base class (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:59</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html_a86122d51b9f611ffbc300eb790c3dabf"><div class="ttname"><a href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">ACSingletonBase::GetProtected</a></div><div class="ttdeci">static CUniquePtr&lt; Derived &gt; &amp; GetProtected()</div><div class="ttdoc">Get singleton instance</div><div class="ttdef"><b>Definition</b> Singleton.h:169</div></div>
+<div class="ttc" id="aclass_c_application_error_html_a30549811c0832a650ee91a8739a5725b"><div class="ttname"><a href="class_c_application_error.html#a30549811c0832a650ee91a8739a5725b">CApplicationError::Exit</a></div><div class="ttdeci">void Exit(const std::wstring &amp;exitMessage)</div><div class="ttdoc">Exit the application</div><div class="ttdef"><b>Definition</b> ApplicationError.cpp:5</div></div>
+<div class="ttc" id="aclass_c_thread_pool_1_1_c_thread_safe_feature_html"><div class="ttname"><a href="class_c_thread_pool_1_1_c_thread_safe_feature.html">CThreadPool::CThreadSafeFeature</a></div><div class="ttdoc">Feature for thread-safe</div><div class="ttdef"><b>Definition</b> ThreadPool.h:34</div></div>
+<div class="ttc" id="aclass_c_thread_pool_1_1_c_thread_safe_feature_html_a365b3ff228f94b7b31315a2cd2ca68aa"><div class="ttname"><a href="class_c_thread_pool_1_1_c_thread_safe_feature.html#a365b3ff228f94b7b31315a2cd2ca68aa">CThreadPool::CThreadSafeFeature::EnqueueTask</a></div><div class="ttdeci">auto EnqueueTask(F &amp;&amp;function, Args &amp;&amp;... args)</div><div class="ttdoc">Dequeue one task to the queue</div><div class="ttdef"><b>Definition</b> ThreadPool.h:85</div></div>
+<div class="ttc" id="aclass_c_thread_pool_html"><div class="ttname"><a href="class_c_thread_pool.html">CThreadPool</a></div><div class="ttdoc">This class is thread pool</div><div class="ttdef"><b>Definition</b> ThreadPool.h:17</div></div>
+<div class="ttc" id="aclass_c_thread_pool_html_a2c841434b5dedfd58266ec984546ff54"><div class="ttname"><a href="class_c_thread_pool.html#a2c841434b5dedfd58266ec984546ff54">CThreadPool::GetAny</a></div><div class="ttdeci">static CThreadSafeFeature &amp; GetAny()</div><div class="ttdoc">Get feature for thread-safe</div><div class="ttdef"><b>Definition</b> ThreadPool.h:53</div></div>
+<div class="ttc" id="aclass_c_thread_pool_html_acb6a395b0928bd2472801b0d9ac8b3c0"><div class="ttname"><a href="class_c_thread_pool.html#acb6a395b0928bd2472801b0d9ac8b3c0">CThreadPool::~CThreadPool</a></div><div class="ttdeci">~CThreadPool()</div><div class="ttdoc">Destructor</div><div class="ttdef"><b>Definition</b> ThreadPool.cpp:6</div></div>
+<div class="ttc" id="aclass_c_thread_pool_html_accef68ebc940ea70c6e1a084037f981b"><div class="ttname"><a href="class_c_thread_pool.html#accef68ebc940ea70c6e1a084037f981b">CThreadPool::Initialize</a></div><div class="ttdeci">void Initialize(UINT threadNum)</div><div class="ttdoc">Initialization process to start a thread</div><div class="ttdef"><b>Definition</b> ThreadPool.cpp:23</div></div>
+<div class="ttc" id="aclass_c_thread_pool_html_ad782c35d603373734182289680d146c6"><div class="ttname"><a href="class_c_thread_pool.html#ad782c35d603373734182289680d146c6">CThreadPool::CThreadPool</a></div><div class="ttdeci">CThreadPool()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> ThreadPool.h:62</div></div>
+<div class="ttc" id="aclass_utl_1_1_error_1_1_c_fatal_error_html"><div class="ttname"><a href="class_utl_1_1_error_1_1_c_fatal_error.html">Utl::Error::CFatalError</a></div><div class="ttdoc">Fatal exception class that must exit the application</div><div class="ttdef"><b>Definition</b> UtilityForException.h:15</div></div>
+<div class="ttc" id="aclass_utl_1_1_error_1_1_c_fatal_error_html_a4020947333cca4c12e30fe40f8b225a0"><div class="ttname"><a href="class_utl_1_1_error_1_1_c_fatal_error.html#a4020947333cca4c12e30fe40f8b225a0">Utl::Error::CFatalError::WhatW</a></div><div class="ttdeci">const std::wstring &amp; WhatW() const noexcept</div><div class="ttdoc">Get error details</div><div class="ttdef"><b>Definition</b> UtilityForException.h:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,1380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Mkpe::CSimulationBody クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_mkpe.html">Mkpe</a></li><li class="navelem"><a class="el" href="class_mkpe_1_1_c_simulation_body.html">CSimulationBody</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_mkpe_1_1_c_simulation_body-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Mkpe::CSimulationBody クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Rigid body class for computing  
+ <a href="class_mkpe_1_1_c_simulation_body.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_simulation_body_8h_source.html">SimulationBody.h</a>&gt;</code></p>
+<div class="dynheader">
+Mkpe::CSimulationBody の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body__inherit__graph.png" border="0" usemap="#a_mkpe_1_1_c_simulation_body_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_mkpe_1_1_c_simulation_body_inherit__map" id="a_mkpe_1_1_c_simulation_body_inherit__map">
+<area shape="rect" title="Rigid body class for computing" alt="" coords="20,80,182,107"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body_base.html" title="Rigid body class for computing" alt="" coords="5,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="104,48,104,80,98,80,98,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+Mkpe::CSimulationBody 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body__coll__graph.png" border="0" usemap="#a_mkpe_1_1_c_simulation_body_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mkpe_1_1_c_simulation_body_coll__map" id="a_mkpe_1_1_c_simulation_body_coll__map">
+<area shape="rect" title="Rigid body class for computing" alt="" coords="450,627,612,653"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body_base.html" title="Rigid body class for computing" alt="" coords="435,551,627,577"/>
+<area shape="poly" title=" " alt="" coords="534,592,534,626,528,626,528,592"/>
+<area shape="rect" href="class_c_rigid_body.html" title="Rigid body component" alt="" coords="226,300,316,327"/>
+<area shape="poly" title=" " alt="" coords="274,342,277,383,287,433,307,483,322,505,339,525,355,533,377,541,435,551,434,557,376,546,352,538,336,529,317,508,302,485,282,434,272,384,268,342"/>
+<area shape="rect" href="class_a_c_component.html" title="This is abstract class for component used in update processing" alt="" coords="218,191,324,217"/>
+<area shape="poly" title=" " alt="" coords="274,233,274,299,268,299,268,233"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="5,81,158,124"/>
+<area shape="poly" title=" " alt="" coords="135,129,248,188,245,192,133,134"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="17,5,146,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,84,81,79,81,79,48"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="181,89,369,116"/>
+<area shape="poly" title=" " alt="" coords="276,132,274,191,269,190,271,132"/>
+<area shape="rect" href="struct_vector.html" title=" " alt="" coords="339,300,461,327"/>
+<area shape="poly" title=" " alt="" coords="394,342,384,382,378,430,383,481,391,504,404,525,418,539,436,549,434,554,415,543,399,528,386,506,378,482,373,430,379,381,388,341"/>
+<area shape="rect" title=" " alt="" coords="554,89,593,116"/>
+<area shape="poly" title=" " alt="" coords="540,111,502,119,459,133,419,156,401,172,387,189,378,217,379,248,387,276,396,299,391,301,382,278,374,248,372,217,382,187,398,168,416,152,457,129,501,114,539,105"/>
+<area shape="rect" href="struct_vector.html" title="Colomn vector structure" alt="" coords="422,191,549,217"/>
+<area shape="poly" title=" " alt="" coords="554,129,498,192,494,189,550,126"/>
+<area shape="rect" href="struct_matrix.html" title=" " alt="" coords="594,300,729,327"/>
+<area shape="poly" title=" " alt="" coords="594,127,628,187,650,249,662,299,656,300,644,251,623,189,589,130"/>
+<area shape="rect" href="struct_matrix.html" title="Column&#45;major matrix" alt="" coords="711,191,903,217"/>
+<area shape="poly" title=" " alt="" coords="608,115,681,146,779,188,777,193,679,150,606,120"/>
+<area shape="poly" title=" " alt="" coords="468,231,412,301,408,298,464,228"/>
+<area shape="poly" title=" " alt="" coords="565,195,575,204,567,212,549,215,549,210,565,208,570,204,562,200"/>
+<area shape="poly" title=" " alt="" coords="669,342,672,382,671,431,660,482,650,506,636,528,620,543,601,553,599,548,617,538,631,525,645,504,655,481,666,430,667,382,664,342"/>
+<area shape="poly" title=" " alt="" coords="779,229,680,302,677,297,776,225"/>
+<area shape="poly" title=" " alt="" coords="919,196,929,204,921,212,904,215,903,209,919,207,924,204,916,200"/>
+<area shape="rect" href="struct_quaternion.html" title=" " alt="" coords="753,300,885,327"/>
+<area shape="poly" title=" " alt="" coords="826,342,830,383,828,433,816,484,804,508,787,529,761,543,722,553,627,563,627,558,721,548,759,538,784,525,799,505,811,483,823,433,825,383,821,342"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a24aa7daf7185b5893ad1ffbbb2f3565b" id="r_a24aa7daf7185b5893ad1ffbbb2f3565b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a24aa7daf7185b5893ad1ffbbb2f3565b">SolveVelocityAtContact</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;linearVelocity, const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;angularVelocity, float impulseMagnitude) override</td></tr>
+<tr class="memdesc:a24aa7daf7185b5893ad1ffbbb2f3565b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply velocity for Solving velocity at contact  <br /></td></tr>
+<tr class="separator:a24aa7daf7185b5893ad1ffbbb2f3565b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac219b6c4b9803bef83099bc4450c89" id="r_acac219b6c4b9803bef83099bc4450c89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#acac219b6c4b9803bef83099bc4450c89">SolvePenetrationAtContact</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;linearVelocity, const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;angularVelocity, float impulseMagnitude) override</td></tr>
+<tr class="memdesc:acac219b6c4b9803bef83099bc4450c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply velocity for Solving penetration at contact  <br /></td></tr>
+<tr class="separator:acac219b6c4b9803bef83099bc4450c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc2f83bff39348ad123f54396fe4601" id="r_a4dc2f83bff39348ad123f54396fe4601"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a4dc2f83bff39348ad123f54396fe4601">AddForce</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;force, <a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0ac">ForceMode</a> mode) override</td></tr>
+<tr class="memdesc:a4dc2f83bff39348ad123f54396fe4601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add force to linear velocity  <br /></td></tr>
+<tr class="separator:a4dc2f83bff39348ad123f54396fe4601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d81432e87725cce2ce8ad1a6480bfd4" id="r_a8d81432e87725cce2ce8ad1a6480bfd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a8d81432e87725cce2ce8ad1a6480bfd4">AddTorque</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;torque, <a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0ac">ForceMode</a> mode) override</td></tr>
+<tr class="memdesc:a8d81432e87725cce2ce8ad1a6480bfd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add torque to angular velocity  <br /></td></tr>
+<tr class="separator:a8d81432e87725cce2ce8ad1a6480bfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679a1e231db0ab0d48c3e9face6af66e" id="r_a679a1e231db0ab0d48c3e9face6af66e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a679a1e231db0ab0d48c3e9face6af66e">ClearVelocitiesEveryFrame</a> () override</td></tr>
+<tr class="memdesc:a679a1e231db0ab0d48c3e9face6af66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all velocities updated every frame  <br /></td></tr>
+<tr class="separator:a679a1e231db0ab0d48c3e9face6af66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e68b97cd224bc0b7ddfaba468c22926" id="r_a4e68b97cd224bc0b7ddfaba468c22926"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a4e68b97cd224bc0b7ddfaba468c22926">ClearVelocitiesPerSimulation</a> () override</td></tr>
+<tr class="memdesc:a4e68b97cd224bc0b7ddfaba468c22926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all velocities updated per physics simulation  <br /></td></tr>
+<tr class="separator:a4e68b97cd224bc0b7ddfaba468c22926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b3b61459d827a753f070381f0ff85f" id="r_a70b3b61459d827a753f070381f0ff85f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a70b3b61459d827a753f070381f0ff85f">ClearAllVelocities</a> () override</td></tr>
+<tr class="memdesc:a70b3b61459d827a753f070381f0ff85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all velocities  <br /></td></tr>
+<tr class="separator:a70b3b61459d827a753f070381f0ff85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08421a75b900002ae7eba42300c5ef58" id="r_a08421a75b900002ae7eba42300c5ef58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a08421a75b900002ae7eba42300c5ef58">ClearPseudoVelocities</a> () override</td></tr>
+<tr class="memdesc:a08421a75b900002ae7eba42300c5ef58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear pseudo velocities  <br /></td></tr>
+<tr class="separator:a08421a75b900002ae7eba42300c5ef58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa5450d405741a132511dce07fa6cbc" id="r_a2aa5450d405741a132511dce07fa6cbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a2aa5450d405741a132511dce07fa6cbc">MergeVelocities</a> () override</td></tr>
+<tr class="memdesc:a2aa5450d405741a132511dce07fa6cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge pseudo velocity and regular velocity  <br /></td></tr>
+<tr class="separator:a2aa5450d405741a132511dce07fa6cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a7abbcc35b3f8e4b2fba93b7633dd8" id="r_a69a7abbcc35b3f8e4b2fba93b7633dd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a69a7abbcc35b3f8e4b2fba93b7633dd8">DecayVelocity</a> () override</td></tr>
+<tr class="memdesc:a69a7abbcc35b3f8e4b2fba93b7633dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decay velocity  <br /></td></tr>
+<tr class="separator:a69a7abbcc35b3f8e4b2fba93b7633dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d77cb2958b0538380cdbcfb8da45d6" id="r_a91d77cb2958b0538380cdbcfb8da45d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a91d77cb2958b0538380cdbcfb8da45d6">UpdateTransform</a> () override</td></tr>
+<tr class="memdesc:a91d77cb2958b0538380cdbcfb8da45d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply velocity to transform  <br /></td></tr>
+<tr class="separator:a91d77cb2958b0538380cdbcfb8da45d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c59472378c856b0be072496fff25ada" id="r_a6c59472378c856b0be072496fff25ada"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a6c59472378c856b0be072496fff25ada">SetGravity</a> (float gravity) override</td></tr>
+<tr class="memdesc:a6c59472378c856b0be072496fff25ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set gravity  <br /></td></tr>
+<tr class="separator:a6c59472378c856b0be072496fff25ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263f50a330321e92b5281839164b9973" id="r_a263f50a330321e92b5281839164b9973"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a263f50a330321e92b5281839164b9973">ApplyGravity</a> () override</td></tr>
+<tr class="memdesc:a263f50a330321e92b5281839164b9973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply gravity to linear velocity  <br /></td></tr>
+<tr class="separator:a263f50a330321e92b5281839164b9973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd99b435199dfd8f8241169821de7e9" id="r_adbd99b435199dfd8f8241169821de7e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#adbd99b435199dfd8f8241169821de7e9">GetVelocityOfPointInObject</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;p) const override</td></tr>
+<tr class="memdesc:adbd99b435199dfd8f8241169821de7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the velocity of point p in the object  <br /></td></tr>
+<tr class="separator:adbd99b435199dfd8f8241169821de7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d70c86d2da4217d0bf940f0be05e38" id="r_ad3d70c86d2da4217d0bf940f0be05e38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#ad3d70c86d2da4217d0bf940f0be05e38">InitializeInertiaTensor</a> (<a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> *collider) override</td></tr>
+<tr class="memdesc:ad3d70c86d2da4217d0bf940f0be05e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize inertia tensor  <br /></td></tr>
+<tr class="separator:ad3d70c86d2da4217d0bf940f0be05e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d28969b8faaa591e76afbb3d5011df" id="r_a32d28969b8faaa591e76afbb3d5011df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a32d28969b8faaa591e76afbb3d5011df">CheckScalingRotation</a> (<a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> *collider) override</td></tr>
+<tr class="memdesc:a32d28969b8faaa591e76afbb3d5011df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing of any scaling or rotation changes  <br /></td></tr>
+<tr class="separator:a32d28969b8faaa591e76afbb3d5011df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4504aae83edd219763f02a2400828cbf" id="r_a4504aae83edd219763f02a2400828cbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a4504aae83edd219763f02a2400828cbf">ComputePseudoVelocityPerFrame</a> (float invTimeStep) override</td></tr>
+<tr class="memdesc:a4504aae83edd219763f02a2400828cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute pseudo velocity in current time per frame  <br /></td></tr>
+<tr class="separator:a4504aae83edd219763f02a2400828cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ff3f877653d618017f757a5db3b9950" id="r_a0ff3f877653d618017f757a5db3b9950"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a0ff3f877653d618017f757a5db3b9950">ComputePseudoVelocityPerSimulation</a> (float invTimeStep) override</td></tr>
+<tr class="memdesc:a0ff3f877653d618017f757a5db3b9950"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute pseudo velocity in current time per simulation  <br /></td></tr>
+<tr class="separator:a0ff3f877653d618017f757a5db3b9950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8398877918680d9cb794ecaf527c0c2" id="r_ae8398877918680d9cb794ecaf527c0c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#ae8398877918680d9cb794ecaf527c0c2">UpdatePrevTransform</a> () override</td></tr>
+<tr class="memdesc:ae8398877918680d9cb794ecaf527c0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update transform in previous time of physics simulation  <br /></td></tr>
+<tr class="separator:ae8398877918680d9cb794ecaf527c0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d7b023ef9e13e597672c88a8b2d233" id="r_a09d7b023ef9e13e597672c88a8b2d233"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a09d7b023ef9e13e597672c88a8b2d233">SetLinearDrag</a> (float drag) override</td></tr>
+<tr class="memdesc:a09d7b023ef9e13e597672c88a8b2d233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set aerodynamic drag for movement by force  <br /></td></tr>
+<tr class="separator:a09d7b023ef9e13e597672c88a8b2d233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7614ba94176f7f390177bf1eb17323" id="r_a4b7614ba94176f7f390177bf1eb17323"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a4b7614ba94176f7f390177bf1eb17323">SetAngularDrag</a> (float drag) override</td></tr>
+<tr class="memdesc:a4b7614ba94176f7f390177bf1eb17323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set aerodynamic drag for rotation by torque  <br /></td></tr>
+<tr class="separator:a4b7614ba94176f7f390177bf1eb17323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4099425db767f9570323d43ac878e50d" id="r_a4099425db767f9570323d43ac878e50d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a4099425db767f9570323d43ac878e50d">IsActive</a> () const override</td></tr>
+<tr class="memdesc:a4099425db767f9570323d43ac878e50d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this simulation body active?  <br /></td></tr>
+<tr class="separator:a4099425db767f9570323d43ac878e50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb5270137cfebea51dddaa62c2014b3" id="r_a6fb5270137cfebea51dddaa62c2014b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body.html#a6fb5270137cfebea51dddaa62c2014b3">CSimulationBodyBase</a> (<a class="el" href="class_c_rigid_body.html">CRigidBody</a> *rb)</td></tr>
+<tr class="memdesc:a6fb5270137cfebea51dddaa62c2014b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor is inherited  <br /></td></tr>
+<tr class="separator:a6fb5270137cfebea51dddaa62c2014b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_mkpe_1_1_c_simulation_body_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_mkpe_1_1_c_simulation_body_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_mkpe_1_1_c_simulation_body_base.html">Mkpe::CSimulationBodyBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a6fb5270137cfebea51dddaa62c2014b3 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_a6fb5270137cfebea51dddaa62c2014b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a6fb5270137cfebea51dddaa62c2014b3">CSimulationBodyBase</a> (<a class="el" href="class_c_rigid_body.html">CRigidBody</a> *rb)</td></tr>
+<tr class="memdesc:a6fb5270137cfebea51dddaa62c2014b3 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a6fb5270137cfebea51dddaa62c2014b3 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c97b3a33dc77425ec3c83d67450e4f inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_aa0c97b3a33dc77425ec3c83d67450e4f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#aa0c97b3a33dc77425ec3c83d67450e4f">GetLinearVelocity</a> () const</td></tr>
+<tr class="memdesc:aa0c97b3a33dc77425ec3c83d67450e4f inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear velocity  <br /></td></tr>
+<tr class="separator:aa0c97b3a33dc77425ec3c83d67450e4f inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0144ea1b0c10db90d8b3f89cdc6bdeaa inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_a0144ea1b0c10db90d8b3f89cdc6bdeaa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a0144ea1b0c10db90d8b3f89cdc6bdeaa">GetAngularVelocity</a> () const</td></tr>
+<tr class="memdesc:a0144ea1b0c10db90d8b3f89cdc6bdeaa inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the angular velocity  <br /></td></tr>
+<tr class="separator:a0144ea1b0c10db90d8b3f89cdc6bdeaa inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ba1848b07adf5e303150f2ad770390 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_a38ba1848b07adf5e303150f2ad770390"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a38ba1848b07adf5e303150f2ad770390">GetDeltaLinearVelocity</a> () const</td></tr>
+<tr class="memdesc:a38ba1848b07adf5e303150f2ad770390 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of change in linear velocity caused by contact  <br /></td></tr>
+<tr class="separator:a38ba1848b07adf5e303150f2ad770390 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951c8d7b8e9262fecab4adf328b9b4b8 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_a951c8d7b8e9262fecab4adf328b9b4b8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a951c8d7b8e9262fecab4adf328b9b4b8">GetDeltaAngularVelocity</a> () const</td></tr>
+<tr class="memdesc:a951c8d7b8e9262fecab4adf328b9b4b8 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of change in angular velocity caused by contact  <br /></td></tr>
+<tr class="separator:a951c8d7b8e9262fecab4adf328b9b4b8 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b07027c454277f0f246d111d694f5f5 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_a5b07027c454277f0f246d111d694f5f5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a5b07027c454277f0f246d111d694f5f5">GetPenetrationLinearVelocity</a> () const</td></tr>
+<tr class="memdesc:a5b07027c454277f0f246d111d694f5f5 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear velocity for solving penetration  <br /></td></tr>
+<tr class="separator:a5b07027c454277f0f246d111d694f5f5 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ddfe598cf1477009210afef0c92d6ac inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_a3ddfe598cf1477009210afef0c92d6ac"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a3ddfe598cf1477009210afef0c92d6ac">GetPenetrationAngularVelocity</a> () const</td></tr>
+<tr class="memdesc:a3ddfe598cf1477009210afef0c92d6ac inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Angular velocity for solving penetration  <br /></td></tr>
+<tr class="separator:a3ddfe598cf1477009210afef0c92d6ac inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28df890bfc38037388ff8fcfedd42a3 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_ab28df890bfc38037388ff8fcfedd42a3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#ab28df890bfc38037388ff8fcfedd42a3">GetTotalLinearVelocity</a> () const</td></tr>
+<tr class="memdesc:ab28df890bfc38037388ff8fcfedd42a3 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get total linear velocity  <br /></td></tr>
+<tr class="separator:ab28df890bfc38037388ff8fcfedd42a3 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4b72b670f7c7b87ff8443a38bb48ec inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_adf4b72b670f7c7b87ff8443a38bb48ec"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#adf4b72b670f7c7b87ff8443a38bb48ec">GetTotalAngularVelocity</a> () const</td></tr>
+<tr class="memdesc:adf4b72b670f7c7b87ff8443a38bb48ec inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get total angular velocity  <br /></td></tr>
+<tr class="separator:adf4b72b670f7c7b87ff8443a38bb48ec inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01605822592c1a02ce7d3e69d8cf7af inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_ae01605822592c1a02ce7d3e69d8cf7af"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#ae01605822592c1a02ce7d3e69d8cf7af">GetMoveAllowable</a> () const</td></tr>
+<tr class="memdesc:ae01605822592c1a02ce7d3e69d8cf7af inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get allowable vector for movement  <br /></td></tr>
+<tr class="separator:ae01605822592c1a02ce7d3e69d8cf7af inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e843c1a51eb367e69d690bb60fb2f5 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_a67e843c1a51eb367e69d690bb60fb2f5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a67e843c1a51eb367e69d690bb60fb2f5">GetRotateAllowable</a> () const</td></tr>
+<tr class="memdesc:a67e843c1a51eb367e69d690bb60fb2f5 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get allowable vector for rotation  <br /></td></tr>
+<tr class="separator:a67e843c1a51eb367e69d690bb60fb2f5 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e1e740efc4f280b3f5bc7eab419023 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base" id="r_ac4e1e740efc4f280b3f5bc7eab419023"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#ab7a1e3e49ca67f46e5b452307a6af900">Matrix3x3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#ac4e1e740efc4f280b3f5bc7eab419023">GetInvInertiaTensor</a> () const</td></tr>
+<tr class="memdesc:ac4e1e740efc4f280b3f5bc7eab419023 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse of the inertia tensor  <br /></td></tr>
+<tr class="separator:ac4e1e740efc4f280b3f5bc7eab419023 inherit pub_methods_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_mkpe_1_1_c_simulation_body_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_mkpe_1_1_c_simulation_body_base.html">Mkpe::CSimulationBodyBase</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a2595b54808d6e5aec7abf89d927a5f08 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a2595b54808d6e5aec7abf89d927a5f08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_rigid_body.html">CRigidBody</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a2595b54808d6e5aec7abf89d927a5f08">m_rb</a></td></tr>
+<tr class="memdesc:a2595b54808d6e5aec7abf89d927a5f08 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Own rigid body  <br /></td></tr>
+<tr class="separator:a2595b54808d6e5aec7abf89d927a5f08 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16037af9d9948082815890fb5e0a1727 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a16037af9d9948082815890fb5e0a1727"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a16037af9d9948082815890fb5e0a1727">m_totalLinearVelocity</a></td></tr>
+<tr class="memdesc:a16037af9d9948082815890fb5e0a1727 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear velocity that is the sum of pseudo-linear velocity and linear velocity  <br /></td></tr>
+<tr class="separator:a16037af9d9948082815890fb5e0a1727 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6091e8afaaa3c720c5cd79fdb6493a01 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a6091e8afaaa3c720c5cd79fdb6493a01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a6091e8afaaa3c720c5cd79fdb6493a01">m_totalAngularVelocity</a></td></tr>
+<tr class="memdesc:a6091e8afaaa3c720c5cd79fdb6493a01 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Angular velocity that is the sum of pseudo-angular velocity and angular velocity  <br /></td></tr>
+<tr class="separator:a6091e8afaaa3c720c5cd79fdb6493a01 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c3175247c7f8fda8896dd4b982d23c inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a24c3175247c7f8fda8896dd4b982d23c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a24c3175247c7f8fda8896dd4b982d23c">m_linearVelocity</a></td></tr>
+<tr class="memdesc:a24c3175247c7f8fda8896dd4b982d23c inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear velocity  <br /></td></tr>
+<tr class="separator:a24c3175247c7f8fda8896dd4b982d23c inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a501c0ed7f4551d12640736fe2318b93f inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a501c0ed7f4551d12640736fe2318b93f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a501c0ed7f4551d12640736fe2318b93f">m_angularVelocity</a></td></tr>
+<tr class="memdesc:a501c0ed7f4551d12640736fe2318b93f inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Angular velocity  <br /></td></tr>
+<tr class="separator:a501c0ed7f4551d12640736fe2318b93f inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9539c8996b03e4fffc940df26309607 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_ae9539c8996b03e4fffc940df26309607"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#ae9539c8996b03e4fffc940df26309607">m_deltaLinearVelocity</a></td></tr>
+<tr class="memdesc:ae9539c8996b03e4fffc940df26309607 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of change in linear velocity caused by contact  <br /></td></tr>
+<tr class="separator:ae9539c8996b03e4fffc940df26309607 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd510aa5109020cff13998b068ef57b9 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_acd510aa5109020cff13998b068ef57b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#acd510aa5109020cff13998b068ef57b9">m_deltaAngularVelocity</a></td></tr>
+<tr class="memdesc:acd510aa5109020cff13998b068ef57b9 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of change in angular velocity caused by contact  <br /></td></tr>
+<tr class="separator:acd510aa5109020cff13998b068ef57b9 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5bc605bd6b5330e642bb0e0cd0096b inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a5e5bc605bd6b5330e642bb0e0cd0096b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a5e5bc605bd6b5330e642bb0e0cd0096b">m_penetrationLinearVelocity</a></td></tr>
+<tr class="memdesc:a5e5bc605bd6b5330e642bb0e0cd0096b inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear velocity for solving penetration  <br /></td></tr>
+<tr class="separator:a5e5bc605bd6b5330e642bb0e0cd0096b inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae871570af408d507cfa0cafc3eef6ec5 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_ae871570af408d507cfa0cafc3eef6ec5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#ae871570af408d507cfa0cafc3eef6ec5">m_penetrationAngularVelocity</a></td></tr>
+<tr class="memdesc:ae871570af408d507cfa0cafc3eef6ec5 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Angular velocity for solving penetration  <br /></td></tr>
+<tr class="separator:ae871570af408d507cfa0cafc3eef6ec5 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a908a135bbdf76f0d9b507cf3bd279 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a31a908a135bbdf76f0d9b507cf3bd279"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a31a908a135bbdf76f0d9b507cf3bd279">m_pseudoLinearVelocityPerFrame</a></td></tr>
+<tr class="memdesc:a31a908a135bbdf76f0d9b507cf3bd279 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct coordinate movement converted to pseudo linear velocity for per frame  <br /></td></tr>
+<tr class="separator:a31a908a135bbdf76f0d9b507cf3bd279 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a567d74440eef33429e27f5cf2107976d inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a567d74440eef33429e27f5cf2107976d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a567d74440eef33429e27f5cf2107976d">m_pseudoAngularVelocityPerFrame</a></td></tr>
+<tr class="memdesc:a567d74440eef33429e27f5cf2107976d inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct coordinate movement converted to pseudo angular velocity for per frame  <br /></td></tr>
+<tr class="separator:a567d74440eef33429e27f5cf2107976d inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4b19f817d0ecfe029f4a959b72b47f inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a6e4b19f817d0ecfe029f4a959b72b47f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a6e4b19f817d0ecfe029f4a959b72b47f">m_pseudoLinearVelocityPerSimulation</a></td></tr>
+<tr class="memdesc:a6e4b19f817d0ecfe029f4a959b72b47f inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct coordinate movement converted to pseudo linear velocity for per simulation  <br /></td></tr>
+<tr class="separator:a6e4b19f817d0ecfe029f4a959b72b47f inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbfbd9f9df008151c021f6a984f60a0f inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_abbfbd9f9df008151c021f6a984f60a0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#abbfbd9f9df008151c021f6a984f60a0f">m_pseudoAngularVelocityPerSimulation</a></td></tr>
+<tr class="memdesc:abbfbd9f9df008151c021f6a984f60a0f inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct coordinate movement converted to pseudo angular velocity for per simulation  <br /></td></tr>
+<tr class="separator:abbfbd9f9df008151c021f6a984f60a0f inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae79c72b22c7d7ae4beb1520467dc58a2 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_ae79c72b22c7d7ae4beb1520467dc58a2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#ae79c72b22c7d7ae4beb1520467dc58a2">m_gravity</a></td></tr>
+<tr class="memdesc:ae79c72b22c7d7ae4beb1520467dc58a2 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gravity  <br /></td></tr>
+<tr class="separator:ae79c72b22c7d7ae4beb1520467dc58a2 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c7ab96c1ec62017f22f76ead93c136 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a19c7ab96c1ec62017f22f76ead93c136"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a19c7ab96c1ec62017f22f76ead93c136">m_linearDrag</a></td></tr>
+<tr class="memdesc:a19c7ab96c1ec62017f22f76ead93c136 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aerodynamic drag for movement by force  <br /></td></tr>
+<tr class="separator:a19c7ab96c1ec62017f22f76ead93c136 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa4247b0ebbf90742a75641c0f3e6db inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_aeaa4247b0ebbf90742a75641c0f3e6db"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#aeaa4247b0ebbf90742a75641c0f3e6db">m_angularDrag</a></td></tr>
+<tr class="memdesc:aeaa4247b0ebbf90742a75641c0f3e6db inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aerodynamic drag for rotation by torque  <br /></td></tr>
+<tr class="separator:aeaa4247b0ebbf90742a75641c0f3e6db inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab37d74fc74cd3313414251b44f8b4a15 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_ab37d74fc74cd3313414251b44f8b4a15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#ab7a1e3e49ca67f46e5b452307a6af900">Matrix3x3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#ab37d74fc74cd3313414251b44f8b4a15">m_invInertiaTensor</a></td></tr>
+<tr class="memdesc:ab37d74fc74cd3313414251b44f8b4a15 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse of the inertia tensor  <br /></td></tr>
+<tr class="separator:ab37d74fc74cd3313414251b44f8b4a15 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fed0ea9b89685e0aa33efd2b8efc904 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a8fed0ea9b89685e0aa33efd2b8efc904"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a8fed0ea9b89685e0aa33efd2b8efc904">m_invInertiaLocal</a></td></tr>
+<tr class="memdesc:a8fed0ea9b89685e0aa33efd2b8efc904 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local inverse of the inertia tensor. Abbreviated to 3-D vectors  <br /></td></tr>
+<tr class="separator:a8fed0ea9b89685e0aa33efd2b8efc904 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ceeccb16e1591269c89740a4a45d029 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a3ceeccb16e1591269c89740a4a45d029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a3ceeccb16e1591269c89740a4a45d029">m_prevPos</a></td></tr>
+<tr class="memdesc:a3ceeccb16e1591269c89740a4a45d029 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position in previous time of physics simulation  <br /></td></tr>
+<tr class="separator:a3ceeccb16e1591269c89740a4a45d029 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0c8e75a7459e412ba096505fd5eb50 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base" id="r_a6b0c8e75a7459e412ba096505fd5eb50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#a921972c08e164d124edfca2b19315d46">Quaternionf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a6b0c8e75a7459e412ba096505fd5eb50">m_prevRotation</a></td></tr>
+<tr class="memdesc:a6b0c8e75a7459e412ba096505fd5eb50 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation in previous time of physics simulation  <br /></td></tr>
+<tr class="separator:a6b0c8e75a7459e412ba096505fd5eb50 inherit pro_attribs_class_mkpe_1_1_c_simulation_body_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Rigid body class for computing </p>
+<p>This derived class is writable </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a4dc2f83bff39348ad123f54396fe4601" name="a4dc2f83bff39348ad123f54396fe4601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc2f83bff39348ad123f54396fe4601">&#9670;&#160;</a></span>AddForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::AddForce </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>force</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0ac">ForceMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add force to linear velocity </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">force</td><td>Force to be added </td></tr>
+    <tr><td class="paramname">mode</td><td>How to apply force </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#acd1b9b2a37db26bbbc63911f99a11a0f">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a4dc2f83bff39348ad123f54396fe4601_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a4dc2f83bff39348ad123f54396fe4601_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a4dc2f83bff39348ad123f54396fe4601_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a4dc2f83bff39348ad123f54396fe4601_cgraph">
+<area shape="rect" title="Add force to linear velocity" alt="" coords="5,5,167,48"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="215,5,382,48"/>
+<area shape="poly" title=" " alt="" coords="167,24,199,24,199,29,167,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8d81432e87725cce2ce8ad1a6480bfd4" name="a8d81432e87725cce2ce8ad1a6480bfd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d81432e87725cce2ce8ad1a6480bfd4">&#9670;&#160;</a></span>AddTorque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::AddTorque </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>torque</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0ac">ForceMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add torque to angular velocity </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">torque</td><td>Torque to be added </td></tr>
+    <tr><td class="paramname">mode</td><td>How to apply torque </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a89c9621a31f45d51c00a7ace0aad02b4">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a8d81432e87725cce2ce8ad1a6480bfd4_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a8d81432e87725cce2ce8ad1a6480bfd4_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a8d81432e87725cce2ce8ad1a6480bfd4_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a8d81432e87725cce2ce8ad1a6480bfd4_cgraph">
+<area shape="rect" title="Add torque to angular velocity" alt="" coords="5,5,167,48"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="215,5,382,48"/>
+<area shape="poly" title=" " alt="" coords="167,24,199,24,199,29,167,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a263f50a330321e92b5281839164b9973" name="a263f50a330321e92b5281839164b9973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a263f50a330321e92b5281839164b9973">&#9670;&#160;</a></span>ApplyGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::ApplyGravity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply gravity to linear velocity </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#ad8e3f913ee8b72533d7e02f8826e99f3">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a263f50a330321e92b5281839164b9973_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a263f50a330321e92b5281839164b9973_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a263f50a330321e92b5281839164b9973_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a263f50a330321e92b5281839164b9973_cgraph">
+<area shape="rect" title="Apply gravity to linear velocity" alt="" coords="5,27,167,69"/>
+<area shape="rect" href="class_c_app_clock.html#a99f40def33f8d074f23ebdee1f86f4f6" title="Get elapsed time from prev frame" alt="" coords="215,5,388,32"/>
+<area shape="poly" title=" " alt="" coords="167,34,199,30,199,35,167,40"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="218,56,385,99"/>
+<area shape="poly" title=" " alt="" coords="167,56,203,61,202,67,167,62"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a32d28969b8faaa591e76afbb3d5011df" name="a32d28969b8faaa591e76afbb3d5011df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d28969b8faaa591e76afbb3d5011df">&#9670;&#160;</a></span>CheckScalingRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::CheckScalingRotation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> *&#160;</td>
+          <td class="paramname"><em>collider</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing of any scaling or rotation changes </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collider</td><td>Collider associated with this simulation body </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#aab7cf3785448e99fb7fcf177fd4ee2ec">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a32d28969b8faaa591e76afbb3d5011df_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a32d28969b8faaa591e76afbb3d5011df_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a32d28969b8faaa591e76afbb3d5011df_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a32d28969b8faaa591e76afbb3d5011df_cgraph">
+<area shape="rect" title="Processing of any scaling or rotation changes" alt="" coords="5,200,167,243"/>
+<area shape="rect" href="class_mkpe_1_1_c_physics_world.html#a6a6687c5f56c3bdd61a242b0273d7eac" title="Check the transform has changed for rotation" alt="" coords="216,5,405,64"/>
+<area shape="poly" title=" " alt="" coords="100,198,146,138,178,104,213,74,219,70,222,74,216,78,181,108,150,141,104,201"/>
+<area shape="rect" href="class_mkpe_1_1_c_physics_world.html#af957e5a9fc1d64edba24a3a62c248c95" title="Check the transform has changed for scale" alt="" coords="216,88,405,147"/>
+<area shape="poly" title=" " alt="" coords="130,197,214,156,225,151,227,156,216,161,132,202"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a37203de6892ff3d41ae0c856eb6f073a" title="Generate a reduced version of the local inertia tensor" alt="" coords="223,171,398,213"/>
+<area shape="poly" title=" " alt="" coords="166,208,207,203,208,208,167,213"/>
+<area shape="rect" href="struct_quaternion.html#ac39577ffbd2bcc0c020eb106e2f6b2c8" title="Get rotation matrix from this quaternion" alt="" coords="236,237,385,264"/>
+<area shape="poly" title=" " alt="" coords="167,229,221,236,220,242,166,234"/>
+<area shape="rect" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091" title="Get transform of the object" alt="" coords="215,288,406,315"/>
+<area shape="poly" title=" " alt="" coords="135,241,216,273,238,281,236,286,214,279,133,246"/>
+<area shape="rect" href="struct_matrix.html#a25994128ee1d44e8f3c860080781b696" title="Get a transpose matrix" alt="" coords="248,339,373,365"/>
+<area shape="poly" title=" " alt="" coords="110,241,156,284,185,306,216,324,234,332,232,337,213,329,182,310,152,288,106,245"/>
+<area shape="rect" href="class_scene_phases_wrapper.html#a09269b5b31f1498e43954785313eb4a1" title="Check the change of transform for the phase this class has" alt="" coords="454,55,624,97"/>
+<area shape="poly" title=" " alt="" coords="406,49,439,55,438,61,405,54"/>
+<area shape="rect" href="class_c_game_object.html#ac5afcc331c12eff3ad992876ee67a887" title="Check bit strings to observe transform in the specified phase" alt="" coords="672,55,878,97"/>
+<area shape="poly" title=" " alt="" coords="625,73,657,73,657,79,625,79"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="926,33,1126,60"/>
+<area shape="poly" title=" " alt="" coords="878,61,910,58,910,63,878,67"/>
+<area shape="rect" href="struct_transform_observe_bits.html#a1a2e1ef327c11ce00d4521bfaaed0d6a" title="Check bit strings in the specified phase" alt="" coords="952,84,1100,127"/>
+<area shape="poly" title=" " alt="" coords="878,85,937,92,936,98,878,91"/>
+<area shape="poly" title=" " alt="" coords="984,35,976,25,981,15,998,9,1026,7,1056,9,1072,16,1070,21,1055,14,1026,12,999,14,985,19,982,24,988,31"/>
+<area shape="rect" href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef" title="Get current phase of the scene currently being processed" alt="" coords="1174,92,1386,119"/>
+<area shape="poly" title=" " alt="" coords="1101,103,1158,103,1158,108,1101,108"/>
+<area shape="poly" title=" " alt="" coords="405,98,438,91,439,97,406,103"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a70b3b61459d827a753f070381f0ff85f" name="a70b3b61459d827a753f070381f0ff85f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70b3b61459d827a753f070381f0ff85f">&#9670;&#160;</a></span>ClearAllVelocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::ClearAllVelocities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear all velocities </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a35003877464656dc39f7e23fbb912ca1">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a70b3b61459d827a753f070381f0ff85f_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a70b3b61459d827a753f070381f0ff85f_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a70b3b61459d827a753f070381f0ff85f_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a70b3b61459d827a753f070381f0ff85f_cgraph">
+<area shape="rect" title="Clear all velocities" alt="" coords="5,5,167,48"/>
+<area shape="rect" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997" title="Get vector with all 0 values" alt="" coords="215,5,337,48"/>
+<area shape="poly" title=" " alt="" coords="167,24,199,24,199,29,167,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a08421a75b900002ae7eba42300c5ef58" name="a08421a75b900002ae7eba42300c5ef58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08421a75b900002ae7eba42300c5ef58">&#9670;&#160;</a></span>ClearPseudoVelocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::ClearPseudoVelocities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear pseudo velocities </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a89a29fd75ff16df64198ee8e049447e8">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a08421a75b900002ae7eba42300c5ef58_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a08421a75b900002ae7eba42300c5ef58_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a08421a75b900002ae7eba42300c5ef58_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a08421a75b900002ae7eba42300c5ef58_cgraph">
+<area shape="rect" title="Clear pseudo velocities" alt="" coords="5,5,167,48"/>
+<area shape="rect" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997" title="Get vector with all 0 values" alt="" coords="215,5,337,48"/>
+<area shape="poly" title=" " alt="" coords="167,24,199,24,199,29,167,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a679a1e231db0ab0d48c3e9face6af66e" name="a679a1e231db0ab0d48c3e9face6af66e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679a1e231db0ab0d48c3e9face6af66e">&#9670;&#160;</a></span>ClearVelocitiesEveryFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::ClearVelocitiesEveryFrame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear all velocities updated every frame </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a4fcc56e2d05b9578390e6f3c0ec11f3c">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a679a1e231db0ab0d48c3e9face6af66e_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a679a1e231db0ab0d48c3e9face6af66e_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a679a1e231db0ab0d48c3e9face6af66e_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a679a1e231db0ab0d48c3e9face6af66e_cgraph">
+<area shape="rect" title="Clear all velocities updated every frame" alt="" coords="5,5,191,48"/>
+<area shape="rect" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997" title="Get vector with all 0 values" alt="" coords="239,5,361,48"/>
+<area shape="poly" title=" " alt="" coords="191,24,223,24,223,29,191,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4e68b97cd224bc0b7ddfaba468c22926" name="a4e68b97cd224bc0b7ddfaba468c22926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e68b97cd224bc0b7ddfaba468c22926">&#9670;&#160;</a></span>ClearVelocitiesPerSimulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::ClearVelocitiesPerSimulation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear all velocities updated per physics simulation </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#ac710c9d63eb5dcd704611885643dd967">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a4e68b97cd224bc0b7ddfaba468c22926_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a4e68b97cd224bc0b7ddfaba468c22926_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a4e68b97cd224bc0b7ddfaba468c22926_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a4e68b97cd224bc0b7ddfaba468c22926_cgraph">
+<area shape="rect" title="Clear all velocities updated per physics simulation" alt="" coords="5,5,203,48"/>
+<area shape="rect" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997" title="Get vector with all 0 values" alt="" coords="251,5,373,48"/>
+<area shape="poly" title=" " alt="" coords="203,24,235,24,235,29,203,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4504aae83edd219763f02a2400828cbf" name="a4504aae83edd219763f02a2400828cbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4504aae83edd219763f02a2400828cbf">&#9670;&#160;</a></span>ComputePseudoVelocityPerFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::ComputePseudoVelocityPerFrame </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>invTimeStep</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute pseudo velocity in current time per frame </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">invTimeStep</td><td>Inverse of lapsed time from previous time </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a08c21196190fda258997e757803494d7">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a4504aae83edd219763f02a2400828cbf_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a4504aae83edd219763f02a2400828cbf_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a4504aae83edd219763f02a2400828cbf_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a4504aae83edd219763f02a2400828cbf_cgraph">
+<area shape="rect" title="Compute pseudo velocity in current time per frame" alt="" coords="5,176,235,219"/>
+<area shape="rect" href="class_mkpe_1_1_c_physics_world.html#ab2bf4deb8cf77cf0ca695ebd20ff2e46" title="Check the transform has changed for position" alt="" coords="283,35,495,77"/>
+<area shape="poly" title=" " alt="" coords="147,174,207,130,281,87,294,81,297,86,284,92,210,135,150,178"/>
+<area shape="rect" href="class_mkpe_1_1_c_physics_world.html#a6a6687c5f56c3bdd61a242b0273d7eac" title="Check the transform has changed for rotation" alt="" coords="294,101,484,160"/>
+<area shape="poly" title=" " alt="" coords="208,173,278,155,280,160,210,178"/>
+<area shape="rect" href="struct_quaternion.html#ac004c13f3d3e2c8d1c8f913c37bdf826" title="Get angular velocity from this quaternion" alt="" coords="287,184,491,211"/>
+<area shape="poly" title=" " alt="" coords="235,195,271,195,271,200,235,200"/>
+<area shape="rect" href="struct_quaternion.html#a052a612863d42fdb78e601c8e388a805" title="Get a conjugate quaternion from this quaternion" alt="" coords="298,235,480,261"/>
+<area shape="poly" title=" " alt="" coords="235,216,300,229,299,234,234,222"/>
+<area shape="rect" href="class_c_game_object.html#aea0f114d3955d27ac3862204156339fe" title="Get the transform" alt="" coords="294,285,484,312"/>
+<area shape="poly" title=" " alt="" coords="163,217,219,244,284,271,307,278,306,283,282,276,217,249,160,221"/>
+<area shape="rect" href="class_scene_phases_wrapper.html#a09269b5b31f1498e43954785313eb4a1" title="Check the change of transform for the phase this class has" alt="" coords="543,51,713,93"/>
+<area shape="poly" title=" " alt="" coords="496,60,527,63,527,68,495,66"/>
+<area shape="rect" href="class_c_game_object.html#ac5afcc331c12eff3ad992876ee67a887" title="Check bit strings to observe transform in the specified phase" alt="" coords="761,51,967,93"/>
+<area shape="poly" title=" " alt="" coords="714,69,746,69,746,75,714,75"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="1015,29,1215,56"/>
+<area shape="poly" title=" " alt="" coords="967,57,999,54,999,59,967,63"/>
+<area shape="rect" href="struct_transform_observe_bits.html#a1a2e1ef327c11ce00d4521bfaaed0d6a" title="Check bit strings in the specified phase" alt="" coords="1041,80,1189,123"/>
+<area shape="poly" title=" " alt="" coords="967,81,1026,88,1025,94,967,87"/>
+<area shape="poly" title=" " alt="" coords="1073,31,1065,21,1070,11,1087,5,1115,3,1145,5,1161,12,1159,17,1144,10,1115,8,1088,10,1074,15,1071,20,1077,27"/>
+<area shape="rect" href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef" title="Get current phase of the scene currently being processed" alt="" coords="1263,88,1475,115"/>
+<area shape="poly" title=" " alt="" coords="1190,99,1247,99,1247,104,1190,104"/>
+<area shape="poly" title=" " alt="" coords="483,105,528,94,529,99,485,110"/>
+<area shape="rect" href="struct_quaternion.html#ad5008dba83ccdf61b2e66ac1bfb709f3" title="Constructor for identity matrix" alt="" coords="551,133,706,160"/>
+<area shape="poly" title=" " alt="" coords="468,232,494,220,508,209,517,196,526,183,541,170,552,164,554,169,545,174,530,186,521,199,512,212,496,225,470,237"/>
+<area shape="rect" href="struct_quaternion.html#a9515bccaa51d6b1dff86669d939f6886" title="Get the fourth element" alt="" coords="578,184,679,211"/>
+<area shape="poly" title=" " alt="" coords="455,231,562,209,563,214,456,237"/>
+<area shape="rect" href="struct_quaternion.html#a0deead6ea6ea56c2d299645aa167de1d" title="Get the first element" alt="" coords="579,235,678,261"/>
+<area shape="poly" title=" " alt="" coords="480,245,563,245,563,251,480,251"/>
+<area shape="rect" href="struct_quaternion.html#aa15b70b5c9535cd02d99839f95279d37" title="Get the second element" alt="" coords="579,285,678,312"/>
+<area shape="poly" title=" " alt="" coords="456,259,564,282,563,288,455,265"/>
+<area shape="rect" href="struct_quaternion.html#a45f22fce82ace15fc4f1b0e16ff93255" title="Get the third element" alt="" coords="579,336,678,363"/>
+<area shape="poly" title=" " alt="" coords="470,259,496,271,512,284,521,297,530,310,544,322,565,332,563,337,542,326,526,313,517,300,508,287,494,276,468,264"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0ff3f877653d618017f757a5db3b9950" name="a0ff3f877653d618017f757a5db3b9950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ff3f877653d618017f757a5db3b9950">&#9670;&#160;</a></span>ComputePseudoVelocityPerSimulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::ComputePseudoVelocityPerSimulation </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>invTimeStep</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute pseudo velocity in current time per simulation </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">invTimeStep</td><td>Inverse of lapsed time from previous time </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a39ce3ddf429926443eab194f47d3bab0">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a0ff3f877653d618017f757a5db3b9950_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a0ff3f877653d618017f757a5db3b9950_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a0ff3f877653d618017f757a5db3b9950_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a0ff3f877653d618017f757a5db3b9950_cgraph">
+<area shape="rect" title="Compute pseudo velocity in current time per simulation" alt="" coords="5,176,259,219"/>
+<area shape="rect" href="class_mkpe_1_1_c_physics_world.html#ab2bf4deb8cf77cf0ca695ebd20ff2e46" title="Check the transform has changed for position" alt="" coords="307,35,519,77"/>
+<area shape="poly" title=" " alt="" coords="162,173,226,130,305,87,320,81,322,86,308,92,229,135,165,178"/>
+<area shape="rect" href="class_mkpe_1_1_c_physics_world.html#a6a6687c5f56c3bdd61a242b0273d7eac" title="Check the transform has changed for rotation" alt="" coords="318,101,508,160"/>
+<area shape="poly" title=" " alt="" coords="224,173,302,154,304,159,225,178"/>
+<area shape="rect" href="struct_quaternion.html#ac004c13f3d3e2c8d1c8f913c37bdf826" title="Get angular velocity from this quaternion" alt="" coords="311,184,515,211"/>
+<area shape="poly" title=" " alt="" coords="259,195,295,195,295,200,259,200"/>
+<area shape="rect" href="struct_quaternion.html#a052a612863d42fdb78e601c8e388a805" title="Get a conjugate quaternion from this quaternion" alt="" coords="322,235,504,261"/>
+<area shape="poly" title=" " alt="" coords="254,217,320,229,319,234,253,222"/>
+<area shape="rect" href="class_c_game_object.html#aea0f114d3955d27ac3862204156339fe" title="Get the transform" alt="" coords="318,285,508,312"/>
+<area shape="poly" title=" " alt="" coords="178,217,239,244,308,271,333,278,331,284,306,276,237,249,176,222"/>
+<area shape="rect" href="class_scene_phases_wrapper.html#a09269b5b31f1498e43954785313eb4a1" title="Check the change of transform for the phase this class has" alt="" coords="567,51,737,93"/>
+<area shape="poly" title=" " alt="" coords="520,60,551,63,551,68,519,66"/>
+<area shape="rect" href="class_c_game_object.html#ac5afcc331c12eff3ad992876ee67a887" title="Check bit strings to observe transform in the specified phase" alt="" coords="785,51,991,93"/>
+<area shape="poly" title=" " alt="" coords="738,69,770,69,770,75,738,75"/>
+<area shape="rect" href="class_c_game_object.html#a0f4f0b3d0baec86af180a539fdcf65dc" title="Add a component to the array of the components" alt="" coords="1039,29,1239,56"/>
+<area shape="poly" title=" " alt="" coords="991,57,1023,54,1023,59,991,63"/>
+<area shape="rect" href="struct_transform_observe_bits.html#a1a2e1ef327c11ce00d4521bfaaed0d6a" title="Check bit strings in the specified phase" alt="" coords="1065,80,1213,123"/>
+<area shape="poly" title=" " alt="" coords="991,81,1050,88,1049,94,991,87"/>
+<area shape="poly" title=" " alt="" coords="1097,31,1089,21,1094,11,1111,5,1139,3,1169,5,1185,12,1183,17,1168,10,1139,8,1112,10,1098,15,1095,20,1101,27"/>
+<area shape="rect" href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef" title="Get current phase of the scene currently being processed" alt="" coords="1287,88,1499,115"/>
+<area shape="poly" title=" " alt="" coords="1214,99,1271,99,1271,104,1214,104"/>
+<area shape="poly" title=" " alt="" coords="507,105,552,94,553,99,509,110"/>
+<area shape="rect" href="struct_quaternion.html#ad5008dba83ccdf61b2e66ac1bfb709f3" title="Constructor for identity matrix" alt="" coords="575,133,730,160"/>
+<area shape="poly" title=" " alt="" coords="492,232,518,220,532,209,541,196,550,183,565,170,576,164,578,169,569,174,554,186,545,199,536,212,520,225,494,237"/>
+<area shape="rect" href="struct_quaternion.html#a9515bccaa51d6b1dff86669d939f6886" title="Get the fourth element" alt="" coords="602,184,703,211"/>
+<area shape="poly" title=" " alt="" coords="479,231,586,209,587,214,480,237"/>
+<area shape="rect" href="struct_quaternion.html#a0deead6ea6ea56c2d299645aa167de1d" title="Get the first element" alt="" coords="603,235,702,261"/>
+<area shape="poly" title=" " alt="" coords="504,245,587,245,587,251,504,251"/>
+<area shape="rect" href="struct_quaternion.html#aa15b70b5c9535cd02d99839f95279d37" title="Get the second element" alt="" coords="603,285,702,312"/>
+<area shape="poly" title=" " alt="" coords="480,259,588,282,587,288,479,265"/>
+<area shape="rect" href="struct_quaternion.html#a45f22fce82ace15fc4f1b0e16ff93255" title="Get the third element" alt="" coords="603,336,702,363"/>
+<area shape="poly" title=" " alt="" coords="494,259,520,271,536,284,545,297,554,310,568,322,589,332,587,337,566,326,550,313,541,300,532,287,518,276,492,264"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6fb5270137cfebea51dddaa62c2014b3" name="a6fb5270137cfebea51dddaa62c2014b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb5270137cfebea51dddaa62c2014b3">&#9670;&#160;</a></span>CSimulationBodyBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::CSimulationBodyBase::CSimulationBodyBase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_rigid_body.html">CRigidBody</a> *&#160;</td>
+          <td class="paramname"><em>rb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor is inherited </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a6fb5270137cfebea51dddaa62c2014b3_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a6fb5270137cfebea51dddaa62c2014b3_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a6fb5270137cfebea51dddaa62c2014b3_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a6fb5270137cfebea51dddaa62c2014b3_cgraph">
+<area shape="rect" title="Constructor is inherited" alt="" coords="5,5,167,48"/>
+<area shape="rect" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091" title="Get transform of the object" alt="" coords="215,13,406,40"/>
+<area shape="poly" title=" " alt="" coords="167,24,199,24,199,29,167,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a69a7abbcc35b3f8e4b2fba93b7633dd8" name="a69a7abbcc35b3f8e4b2fba93b7633dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69a7abbcc35b3f8e4b2fba93b7633dd8">&#9670;&#160;</a></span>DecayVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::DecayVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decay velocity </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a2b2c56144e87c86754921190e480c539">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a69a7abbcc35b3f8e4b2fba93b7633dd8_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a69a7abbcc35b3f8e4b2fba93b7633dd8_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a69a7abbcc35b3f8e4b2fba93b7633dd8_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a69a7abbcc35b3f8e4b2fba93b7633dd8_cgraph">
+<area shape="rect" title="Decay velocity" alt="" coords="5,27,167,69"/>
+<area shape="rect" href="namespace_utl.html#ab5e81dea424788482339039bbdd5d8bc" title="Clamp a value in min to max" alt="" coords="249,5,332,32"/>
+<area shape="poly" title=" " alt="" coords="167,34,233,24,234,29,167,39"/>
+<area shape="rect" href="class_mkpe_1_1_c_physics_world.html#a1fbf92e86492a875cfa9ec5511ca184f" title="Get current time step" alt="" coords="215,56,366,99"/>
+<area shape="poly" title=" " alt="" coords="167,57,200,62,199,67,167,62"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adbd99b435199dfd8f8241169821de7e9" name="adbd99b435199dfd8f8241169821de7e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd99b435199dfd8f8241169821de7e9">&#9670;&#160;</a></span>GetVelocityOfPointInObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Mkpe::CSimulationBody::GetVelocityOfPointInObject </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the velocity of point p in the object </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>The point at which you want to calculate the speed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Velocity of point p </dd></dl>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#acaa18f24000c13b1b6e31e807eb54ccc">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_adbd99b435199dfd8f8241169821de7e9_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_adbd99b435199dfd8f8241169821de7e9_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_adbd99b435199dfd8f8241169821de7e9_cgraph" id="aclass_mkpe_1_1_c_simulation_body_adbd99b435199dfd8f8241169821de7e9_cgraph">
+<area shape="rect" title="Calculate the velocity of point p in the object" alt="" coords="5,5,194,48"/>
+<area shape="rect" href="struct_vector.html#ae05ab43f4df8564f239e37a623545df3" title="Cross product for 2 dimensions" alt="" coords="242,13,343,40"/>
+<area shape="poly" title=" " alt="" coords="194,24,226,24,226,29,194,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad3d70c86d2da4217d0bf940f0be05e38" name="ad3d70c86d2da4217d0bf940f0be05e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d70c86d2da4217d0bf940f0be05e38">&#9670;&#160;</a></span>InitializeInertiaTensor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::InitializeInertiaTensor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> *&#160;</td>
+          <td class="paramname"><em>collider</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize inertia tensor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collider</td><td>Collider associated with this simulation body </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a8b6f1790879a6c73a6b106a9662a4d04">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_ad3d70c86d2da4217d0bf940f0be05e38_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_ad3d70c86d2da4217d0bf940f0be05e38_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_ad3d70c86d2da4217d0bf940f0be05e38_cgraph" id="aclass_mkpe_1_1_c_simulation_body_ad3d70c86d2da4217d0bf940f0be05e38_cgraph">
+<area shape="rect" title="Initialize inertia tensor" alt="" coords="5,89,167,132"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a37203de6892ff3d41ae0c856eb6f073a" title="Generate a reduced version of the local inertia tensor" alt="" coords="223,5,398,48"/>
+<area shape="poly" title=" " alt="" coords="140,86,214,58,231,51,233,56,216,62,142,91"/>
+<area shape="rect" href="struct_quaternion.html#ac39577ffbd2bcc0c020eb106e2f6b2c8" title="Get rotation matrix from this quaternion" alt="" coords="236,72,385,99"/>
+<area shape="poly" title=" " alt="" coords="166,99,220,93,221,98,167,104"/>
+<area shape="rect" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091" title="Get transform of the object" alt="" coords="215,123,406,149"/>
+<area shape="poly" title=" " alt="" coords="167,117,200,121,199,126,166,122"/>
+<area shape="rect" href="struct_matrix.html#a25994128ee1d44e8f3c860080781b696" title="Get a transpose matrix" alt="" coords="248,173,373,200"/>
+<area shape="poly" title=" " alt="" coords="139,130,216,159,239,166,238,171,214,164,137,135"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4099425db767f9570323d43ac878e50d" name="a4099425db767f9570323d43ac878e50d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4099425db767f9570323d43ac878e50d">&#9670;&#160;</a></span>IsActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Mkpe::CSimulationBody::IsActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this simulation body active? </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a5e23054e2b57f20ea807384787ada9a3">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a2aa5450d405741a132511dce07fa6cbc" name="a2aa5450d405741a132511dce07fa6cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aa5450d405741a132511dce07fa6cbc">&#9670;&#160;</a></span>MergeVelocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::MergeVelocities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Merge pseudo velocity and regular velocity </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#af114f6eef405a227715e8784d93bf185">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a4b7614ba94176f7f390177bf1eb17323" name="a4b7614ba94176f7f390177bf1eb17323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7614ba94176f7f390177bf1eb17323">&#9670;&#160;</a></span>SetAngularDrag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::SetAngularDrag </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>drag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set aerodynamic drag for rotation by torque </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#ab2f1f13833d1c9f3005bca8083cca94d">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a6c59472378c856b0be072496fff25ada" name="a6c59472378c856b0be072496fff25ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c59472378c856b0be072496fff25ada">&#9670;&#160;</a></span>SetGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::SetGravity </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>gravity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set gravity </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gravity</td><td>Gravity to be set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#a928d90740645854c1c4d3bf19284d10b">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a09d7b023ef9e13e597672c88a8b2d233" name="a09d7b023ef9e13e597672c88a8b2d233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09d7b023ef9e13e597672c88a8b2d233">&#9670;&#160;</a></span>SetLinearDrag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::SetLinearDrag </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>drag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set aerodynamic drag for movement by force </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#af674c14b97de2124c8d03ace4c5c3649">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="acac219b6c4b9803bef83099bc4450c89" name="acac219b6c4b9803bef83099bc4450c89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac219b6c4b9803bef83099bc4450c89">&#9670;&#160;</a></span>SolvePenetrationAtContact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::SolvePenetrationAtContact </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>linearVelocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>angularVelocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>impulseMagnitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply velocity for Solving penetration at contact </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">linearVelocity</td><td>Linear velocity to be applied </td></tr>
+    <tr><td class="paramname">angularVelocity</td><td>Angular velocity to be applied </td></tr>
+    <tr><td class="paramname">impulseMagnitude</td><td>Magnitude of impulse </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#add83fa56ddfc041dd5877b259f270f52">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a24aa7daf7185b5893ad1ffbbb2f3565b" name="a24aa7daf7185b5893ad1ffbbb2f3565b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24aa7daf7185b5893ad1ffbbb2f3565b">&#9670;&#160;</a></span>SolveVelocityAtContact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::SolveVelocityAtContact </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>linearVelocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>angularVelocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>impulseMagnitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply velocity for Solving velocity at contact </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">linearVelocity</td><td>Linear velocity to be applied </td></tr>
+    <tr><td class="paramname">angularVelocity</td><td>Angular velocity to be applied </td></tr>
+    <tr><td class="paramname">impulseMagnitude</td><td>Magnitude of impulse </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#af23cf747d0ae6987edc6073e8f52b3e4">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="ae8398877918680d9cb794ecaf527c0c2" name="ae8398877918680d9cb794ecaf527c0c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8398877918680d9cb794ecaf527c0c2">&#9670;&#160;</a></span>UpdatePrevTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::UpdatePrevTransform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update transform in previous time of physics simulation </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#af68700c31c1588b0cb684c120e8690e7">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_ae8398877918680d9cb794ecaf527c0c2_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_ae8398877918680d9cb794ecaf527c0c2_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_ae8398877918680d9cb794ecaf527c0c2_cgraph" id="aclass_mkpe_1_1_c_simulation_body_ae8398877918680d9cb794ecaf527c0c2_cgraph">
+<area shape="rect" title="Update transform in previous time of physics simulation" alt="" coords="5,5,167,48"/>
+<area shape="rect" href="class_c_game_object.html#aea0f114d3955d27ac3862204156339fe" title="Get the transform" alt="" coords="215,13,404,40"/>
+<area shape="poly" title=" " alt="" coords="167,24,199,24,199,29,167,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a91d77cb2958b0538380cdbcfb8da45d6" name="a91d77cb2958b0538380cdbcfb8da45d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d77cb2958b0538380cdbcfb8da45d6">&#9670;&#160;</a></span>UpdateTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CSimulationBody::UpdateTransform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apply velocity to transform </p>
+
+<p><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html#aa71d6fb08d32b714a04a8e8acfe0eb6f">Mkpe::CSimulationBodyBase</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_simulation_body_a91d77cb2958b0538380cdbcfb8da45d6_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_simulation_body_a91d77cb2958b0538380cdbcfb8da45d6_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_simulation_body_a91d77cb2958b0538380cdbcfb8da45d6_cgraph" id="aclass_mkpe_1_1_c_simulation_body_a91d77cb2958b0538380cdbcfb8da45d6_cgraph">
+<area shape="rect" title="Apply velocity to transform" alt="" coords="5,136,167,179"/>
+<area shape="rect" href="struct_vector.html#ac6645f7df485a2cd90507a989c785370" title="Get normalized this vector" alt="" coords="217,56,364,83"/>
+<area shape="poly" title=" " alt="" coords="127,133,214,92,230,86,232,91,216,97,130,138"/>
+<area shape="rect" href="struct_vector.html#a2a17b2b690d93fe77c6acce69e1fb17b" title="Calculate vector length" alt="" coords="414,5,520,32"/>
+<area shape="poly" title=" " alt="" coords="102,134,149,85,179,61,214,42,260,26,308,17,398,12,398,17,309,22,261,31,216,46,182,65,152,89,106,137"/>
+<area shape="rect" href="class_mkpe_1_1_c_physics_world.html#a1fbf92e86492a875cfa9ec5511ca184f" title="Get current time step" alt="" coords="215,107,366,149"/>
+<area shape="poly" title=" " alt="" coords="167,143,199,138,200,144,167,148"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="253,173,328,200"/>
+<area shape="poly" title=" " alt="" coords="167,166,238,177,238,182,167,172"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="253,224,328,251"/>
+<area shape="poly" title=" " alt="" coords="137,177,216,210,239,218,238,223,214,214,135,182"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="253,275,328,301"/>
+<area shape="poly" title=" " alt="" coords="110,177,157,219,216,260,239,271,237,276,213,265,153,223,107,181"/>
+<area shape="poly" title=" " alt="" coords="339,53,403,34,405,39,340,58"/>
+<area shape="rect" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997" title="Get vector with all 0 values" alt="" coords="421,56,513,83"/>
+<area shape="poly" title=" " alt="" coords="364,67,406,67,406,72,364,72"/>
+<area shape="rect" href="struct_vector.html#a1422d1d25bdd05ed068c786f9c45fcd3" title="Calculate vector length squared" alt="" coords="568,5,691,32"/>
+<area shape="poly" title=" " alt="" coords="521,16,553,16,553,21,521,21"/>
+<area shape="rect" href="struct_vector.html#a8ab815e67c75162daf574aac3c7597e0" title="Dot product" alt="" coords="739,5,826,32"/>
+<area shape="poly" title=" " alt="" coords="691,16,723,16,723,21,691,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_simulation_body_8h_source.html">SimulationBody.h</a></li>
+<li><a class="el" href="_simulation_body_8cpp.html">SimulationBody.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

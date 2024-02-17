@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CTextureResource クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="class_c_texture_resource-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CTextureResource クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class handles texture resource  
+ <a href="class_c_texture_resource.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_texture_resource_8h_source.html">TextureResource.h</a>&gt;</code></p>
+<div class="dynheader">
+CTextureResource の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_texture_resource__inherit__graph.png" border="0" usemap="#a_c_texture_resource_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_texture_resource_inherit__map" id="a_c_texture_resource_inherit__map">
+<area shape="rect" title="This class handles texture resource" alt="" coords="30,80,158,107"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html" title="This class handles resource optimized for GPU" alt="" coords="5,5,183,32"/>
+<area shape="poly" title=" " alt="" coords="97,48,97,80,91,80,91,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CTextureResource 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_texture_resource__coll__graph.png" border="0" usemap="#a_c_texture_resource_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_texture_resource_coll__map" id="a_c_texture_resource_coll__map">
+<area shape="rect" title="This class handles texture resource" alt="" coords="30,80,158,107"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html" title="This class handles resource optimized for GPU" alt="" coords="5,5,183,32"/>
+<area shape="poly" title=" " alt="" coords="97,48,97,80,91,80,91,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a64d154f33a526303e5503d998f2c7c20" id="r_a64d154f33a526303e5503d998f2c7c20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_resource.html#a64d154f33a526303e5503d998f2c7c20">CTextureResource</a> ()</td></tr>
+<tr class="memdesc:a64d154f33a526303e5503d998f2c7c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a64d154f33a526303e5503d998f2c7c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76c10ec0f2f42e1c2c97f62726a5f16" id="r_ad76c10ec0f2f42e1c2c97f62726a5f16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_resource.html#ad76c10ec0f2f42e1c2c97f62726a5f16">CTextureResource</a> (<a class="el" href="struct_tex_load_result.html">TexLoadResult</a> *loadResult)</td></tr>
+<tr class="memdesc:ad76c10ec0f2f42e1c2c97f62726a5f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for creating texture resource  <br /></td></tr>
+<tr class="separator:ad76c10ec0f2f42e1c2c97f62726a5f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e87e2247ac4d47facbefdc9c82906d2" id="r_a5e87e2247ac4d47facbefdc9c82906d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_resource.html#a5e87e2247ac4d47facbefdc9c82906d2">Create</a> (<a class="el" href="struct_tex_load_result.html">TexLoadResult</a> *loadResult)</td></tr>
+<tr class="memdesc:a5e87e2247ac4d47facbefdc9c82906d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create texture resource  <br /></td></tr>
+<tr class="separator:a5e87e2247ac4d47facbefdc9c82906d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2bb251ac995eb78932d0f7ab8ab0f1" id="r_add2bb251ac995eb78932d0f7ab8ab0f1"><td class="memItemLeft" align="right" valign="top">const DirectX::TexMetadata &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_resource.html#add2bb251ac995eb78932d0f7ab8ab0f1">GetMetaData</a> () const</td></tr>
+<tr class="memdesc:add2bb251ac995eb78932d0f7ab8ab0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get texture meta data  <br /></td></tr>
+<tr class="separator:add2bb251ac995eb78932d0f7ab8ab0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7722c33999aa5062913b08b99bd48cc6" id="r_a7722c33999aa5062913b08b99bd48cc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_resource.html#a7722c33999aa5062913b08b99bd48cc6">GetSRVPropertyHandle</a> ()</td></tr>
+<tr class="memdesc:a7722c33999aa5062913b08b99bd48cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get resouce state controller  <br /></td></tr>
+<tr class="separator:a7722c33999aa5062913b08b99bd48cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_gpu_optimized_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_gpu_optimized_resource')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_gpu_optimized_resource.html">ACGpuOptimizedResource</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a0903cd3359a2b2e5bfa36d12dd22b0f5 inherit pub_methods_class_a_c_gpu_optimized_resource" id="r_a0903cd3359a2b2e5bfa36d12dd22b0f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_gpu_optimized_resource.html#a0903cd3359a2b2e5bfa36d12dd22b0f5">ACGpuOptimizedResource</a> ()=default</td></tr>
+<tr class="memdesc:a0903cd3359a2b2e5bfa36d12dd22b0f5 inherit pub_methods_class_a_c_gpu_optimized_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a0903cd3359a2b2e5bfa36d12dd22b0f5 inherit pub_methods_class_a_c_gpu_optimized_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24374f40311d33cf728d9c017833117a inherit pub_methods_class_a_c_gpu_optimized_resource" id="r_a24374f40311d33cf728d9c017833117a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_gpu_optimized_resource.html#a24374f40311d33cf728d9c017833117a">~ACGpuOptimizedResource</a> ()=default</td></tr>
+<tr class="memdesc:a24374f40311d33cf728d9c017833117a inherit pub_methods_class_a_c_gpu_optimized_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a24374f40311d33cf728d9c017833117a inherit pub_methods_class_a_c_gpu_optimized_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae04fe918f49200f9c724efa6025bd0f6 inherit pub_methods_class_a_c_gpu_optimized_resource" id="r_ae04fe918f49200f9c724efa6025bd0f6"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_gpu_optimized_resource.html#ae04fe918f49200f9c724efa6025bd0f6">GetResource</a> ()</td></tr>
+<tr class="memdesc:ae04fe918f49200f9c724efa6025bd0f6 inherit pub_methods_class_a_c_gpu_optimized_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get texture resource  <br /></td></tr>
+<tr class="separator:ae04fe918f49200f9c724efa6025bd0f6 inherit pub_methods_class_a_c_gpu_optimized_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7c5b5cb50550b20471b4ea877506e147" id="r_a7c5b5cb50550b20471b4ea877506e147"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_resource.html#a7c5b5cb50550b20471b4ea877506e147">Load</a> (const std::wstring &amp;filePath, <a class="el" href="struct_tex_load_result.html">TexLoadResult</a> *result)</td></tr>
+<tr class="memdesc:a7c5b5cb50550b20471b4ea877506e147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load texture  <br /></td></tr>
+<tr class="separator:a7c5b5cb50550b20471b4ea877506e147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d22952ed0a15d5214124a7e1d9199f" id="r_a11d22952ed0a15d5214124a7e1d9199f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_resource.html#a11d22952ed0a15d5214124a7e1d9199f">Load</a> (const void *data, size_t size, const std::wstring &amp;filePath, <a class="el" href="struct_tex_load_result.html">TexLoadResult</a> *result)</td></tr>
+<tr class="memdesc:a11d22952ed0a15d5214124a7e1d9199f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load texture  <br /></td></tr>
+<tr class="separator:a11d22952ed0a15d5214124a7e1d9199f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a8efb72ceba5358bb71d88ffe88028c64" id="r_a8efb72ceba5358bb71d88ffe88028c64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_resource.html#a8efb72ceba5358bb71d88ffe88028c64">UpdateDataForResource</a> (D3D12_HEAP_PROPERTIES *heapProp, D3D12_RESOURCE_DESC *resDesc) override</td></tr>
+<tr class="memdesc:a8efb72ceba5358bb71d88ffe88028c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update heap properties and resource desc for resource  <br /></td></tr>
+<tr class="separator:a8efb72ceba5358bb71d88ffe88028c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac296b5ea826f7e9d7e7fa4b1cd9c66e8" id="r_ac296b5ea826f7e9d7e7fa4b1cd9c66e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_resource.html#ac296b5ea826f7e9d7e7fa4b1cd9c66e8">CopyRegion</a> (ID3D12GraphicsCommandList *cmdList, ID3D12Resource *srcResource) override</td></tr>
+<tr class="memdesc:ac296b5ea826f7e9d7e7fa4b1cd9c66e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set command to copy data  <br /></td></tr>
+<tr class="separator:ac296b5ea826f7e9d7e7fa4b1cd9c66e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_gpu_optimized_resource"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_gpu_optimized_resource')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_gpu_optimized_resource.html">ACGpuOptimizedResource</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:ad02294e127ffd215c75b81f09be6b89d inherit pro_methods_class_a_c_gpu_optimized_resource" id="r_ad02294e127ffd215c75b81f09be6b89d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_gpu_optimized_resource.html#ad02294e127ffd215c75b81f09be6b89d">CreateResource</a> (UINT64 byteSize, D3D12_RESOURCE_STATES resourceState, <a class="el" href="class_a_c_gpu_optimized_resource.html#ad1fa8b2e031c42b383f8d9ca153621a4">MappingFunction</a> mapFunc)</td></tr>
+<tr class="memdesc:ad02294e127ffd215c75b81f09be6b89d inherit pro_methods_class_a_c_gpu_optimized_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create resource  <br /></td></tr>
+<tr class="separator:ad02294e127ffd215c75b81f09be6b89d inherit pro_methods_class_a_c_gpu_optimized_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_types_class_a_c_gpu_optimized_resource"><td colspan="2" onclick="javascript:toggleInherit('pro_types_class_a_c_gpu_optimized_resource')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_gpu_optimized_resource.html">ACGpuOptimizedResource</a> に属する継承限定公開型</td></tr>
+<tr class="memitem:ad1fa8b2e031c42b383f8d9ca153621a4 inherit pro_types_class_a_c_gpu_optimized_resource" id="r_ad1fa8b2e031c42b383f8d9ca153621a4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_gpu_optimized_resource.html#ad1fa8b2e031c42b383f8d9ca153621a4">MappingFunction</a> = std::function&lt; void(UINT8 *)&gt;</td></tr>
+<tr class="memdesc:ad1fa8b2e031c42b383f8d9ca153621a4 inherit pro_types_class_a_c_gpu_optimized_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping function type  <br /></td></tr>
+<tr class="separator:ad1fa8b2e031c42b383f8d9ca153621a4 inherit pro_types_class_a_c_gpu_optimized_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_gpu_optimized_resource"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_gpu_optimized_resource')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_gpu_optimized_resource.html">ACGpuOptimizedResource</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a649d395779e88a8ad72f2bbad548c2b5 inherit pro_attribs_class_a_c_gpu_optimized_resource" id="r_a649d395779e88a8ad72f2bbad548c2b5"><td class="memItemLeft" align="right" valign="top">Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_gpu_optimized_resource.html#a649d395779e88a8ad72f2bbad548c2b5">m_resource</a></td></tr>
+<tr class="memdesc:a649d395779e88a8ad72f2bbad548c2b5 inherit pro_attribs_class_a_c_gpu_optimized_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture resource  <br /></td></tr>
+<tr class="separator:a649d395779e88a8ad72f2bbad548c2b5 inherit pro_attribs_class_a_c_gpu_optimized_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This class handles texture resource </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a64d154f33a526303e5503d998f2c7c20" name="a64d154f33a526303e5503d998f2c7c20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d154f33a526303e5503d998f2c7c20">&#9670;&#160;</a></span>CTextureResource() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTextureResource::CTextureResource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="ad76c10ec0f2f42e1c2c97f62726a5f16" name="ad76c10ec0f2f42e1c2c97f62726a5f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76c10ec0f2f42e1c2c97f62726a5f16">&#9670;&#160;</a></span>CTextureResource() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTextureResource::CTextureResource </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tex_load_result.html">TexLoadResult</a> *&#160;</td>
+          <td class="paramname"><em>loadResult</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor for creating texture resource </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loadResult</td><td>Load function results </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_texture_resource_ad76c10ec0f2f42e1c2c97f62726a5f16_cgraph.png" border="0" usemap="#aclass_c_texture_resource_ad76c10ec0f2f42e1c2c97f62726a5f16_cgraph" alt=""/></div>
+<map name="aclass_c_texture_resource_ad76c10ec0f2f42e1c2c97f62726a5f16_cgraph" id="aclass_c_texture_resource_ad76c10ec0f2f42e1c2c97f62726a5f16_cgraph">
+<area shape="rect" title="Constructor for creating texture resource" alt="" coords="5,234,194,277"/>
+<area shape="rect" href="class_c_texture_resource.html#a5e87e2247ac4d47facbefdc9c82906d2" title="Create texture resource" alt="" coords="242,242,416,269"/>
+<area shape="poly" title=" " alt="" coords="194,253,226,253,226,258,194,258"/>
+<area shape="rect" href="namespace_utl_1_1_dx.html#a4619dbb2bd87e245b78fc22ecb1cf42f" title="Convert &#39;DirectX::TEX_DIMENSION&#39; to &#39;D3D12_SRV_DIMENSION&#39;" alt="" coords="469,66,670,109"/>
+<area shape="poly" title=" " alt="" coords="338,240,387,182,423,148,463,119,471,114,474,118,465,123,426,152,391,186,342,244"/>
+<area shape="rect" href="class_c_descriptor_heap.html#aecbd2207fc5a4526ef13ca74eca53dc8" title="Create descriptor heap" alt="" coords="487,133,652,160"/>
+<area shape="poly" title=" " alt="" coords="349,240,400,208,463,176,500,162,502,167,465,181,403,213,352,244"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="757,125,903,152"/>
+<area shape="poly" title=" " alt="" coords="384,239,463,220,751,153,753,158,465,225,385,245"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#ad02294e127ffd215c75b81f09be6b89d" title="Create resource" alt="" coords="481,234,658,277"/>
+<area shape="poly" title=" " alt="" coords="416,253,466,253,466,258,416,258"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="464,301,675,328"/>
+<area shape="poly" title=" " alt="" coords="386,267,465,287,497,294,496,300,463,292,385,272"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325" title="DirectX device getter" alt="" coords="482,352,658,394"/>
+<area shape="poly" title=" " alt="" coords="350,267,401,302,465,337,479,344,477,348,463,342,398,306,347,272"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a553fe022564762ba24fe35296d41dd77" title="Make unique pointer" alt="" coords="497,418,642,461"/>
+<area shape="poly" title=" " alt="" coords="341,268,389,333,424,371,465,404,484,414,481,419,463,409,421,375,385,337,337,271"/>
+<area shape="poly" title=" " alt="" coords="653,141,741,138,742,144,653,147"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="1323,18,1531,45"/>
+<area shape="poly" title=" " alt="" coords="843,122,901,74,940,48,984,29,1028,18,1074,10,1167,3,1255,6,1332,13,1331,18,1255,11,1167,8,1075,15,1029,23,986,34,943,53,904,78,847,127"/>
+<area shape="poly" title=" " alt="" coords="640,231,674,214,688,201,697,188,706,174,722,162,741,152,743,157,725,166,710,178,701,191,692,204,677,218,643,236"/>
+<area shape="rect" href="class_c_command_manager.html#a2190493f7e13f1a69192b951e1326005" title="Execute registered commands" alt="" coords="723,242,937,285"/>
+<area shape="poly" title=" " alt="" coords="659,256,708,257,708,263,659,261"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="1339,316,1515,358"/>
+<area shape="poly" title=" " alt="" coords="655,275,677,287,692,301,701,315,710,328,725,340,799,380,865,408,927,425,987,432,1048,432,1114,425,1271,397,1323,383,1370,363,1372,368,1324,388,1273,402,1115,431,1049,438,987,438,926,430,864,413,797,385,722,345,706,332,697,318,688,304,674,291,653,280"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#a6000be26dd503b2a15417118b6592e50" title="Set command to copy data" alt="" coords="741,462,919,505"/>
+<area shape="poly" title=" " alt="" coords="660,274,677,287,692,307,700,327,703,366,705,404,712,423,725,442,736,452,733,456,721,446,707,425,700,405,697,366,695,328,688,310,673,291,657,278"/>
+<area shape="rect" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52" title="Get command list for graphics" alt="" coords="1018,345,1239,388"/>
+<area shape="poly" title=" " alt="" coords="647,275,724,295,868,323,1003,346,1002,351,867,328,723,300,646,280"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#ab8e1ac31d1670a26a8eb63627e651f45" title="Update heap properties and resource descriptor, for resource" alt="" coords="741,176,919,218"/>
+<area shape="poly" title=" " alt="" coords="658,233,726,218,727,223,660,238"/>
+<area shape="rect" href="class_c_command_manager.html#ae25a3521fd40b119016782297cb7ba78" title="Get feature for thread&#45;safe" alt="" coords="1033,44,1224,70"/>
+<area shape="poly" title=" " alt="" coords="920,240,935,229,948,211,955,193,957,155,959,117,967,98,983,80,1016,61,1019,66,986,84,972,101,965,118,962,155,960,194,953,213,939,232,924,244"/>
+<area shape="poly" title=" " alt="" coords="938,274,1324,322,1324,327,937,279"/>
+<area shape="rect" href="class_c_command_manager_1_1_c_thread_safe_feature.html#afeebd51547d4b4ca6569686bb91f42e5" title="Clear graphics command list and graphics command allocator, However, it is not associated with execut..." alt="" coords="985,161,1272,204"/>
+<area shape="poly" title=" " alt="" coords="900,239,984,213,1014,205,1015,211,985,218,901,244"/>
+<area shape="rect" href="class_c_command_manager.html#af6a8b626d58ef495a821ca64748e9d00" title="Executes registered graphics commands, but does not wait or clear, so it is only used in special situ..." alt="" coords="1009,94,1248,137"/>
+<area shape="poly" title=" " alt="" coords="917,240,935,228,951,209,958,188,965,167,983,147,993,140,996,145,986,151,970,170,963,190,956,211,938,232,920,244"/>
+<area shape="rect" href="class_c_command_manager_1_1_c_thread_safe_feature.html#abc72278becb39ddafee24cf26776b90c" title="Wait for the GPU to complete processing" alt="" coords="1031,228,1226,270"/>
+<area shape="poly" title=" " alt="" coords="937,256,1015,252,1015,257,937,261"/>
+<area shape="poly" title=" " alt="" coords="1224,46,1307,39,1308,45,1225,52"/>
+<area shape="poly" title=" " alt="" coords="1250,135,1274,147,1295,168,1329,209,1402,302,1398,305,1325,212,1291,172,1270,151,1247,140"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="1320,146,1534,189"/>
+<area shape="poly" title=" " alt="" coords="1249,134,1305,144,1304,149,1248,139"/>
+<area shape="poly" title=" " alt="" coords="1239,353,1323,345,1324,350,1239,358"/>
+<area shape="poly" title=" " alt="" coords="1168,342,1271,280,1385,196,1388,201,1273,285,1170,347"/>
+<area shape="poly" title=" " alt="" coords="657,298,674,287,686,273,693,258,697,226,701,194,708,177,722,162,741,149,744,154,725,166,712,180,706,195,702,227,698,259,691,275,677,291,660,303"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="741,529,919,572"/>
+<area shape="poly" title=" " alt="" coords="661,326,677,338,694,360,702,383,703,428,703,472,710,494,725,515,730,520,726,524,721,519,705,496,698,473,697,428,697,384,690,363,673,342,658,330"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ac296b5ea826f7e9d7e7fa4b1cd9c66e8" name="ac296b5ea826f7e9d7e7fa4b1cd9c66e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac296b5ea826f7e9d7e7fa4b1cd9c66e8">&#9670;&#160;</a></span>CopyRegion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CTextureResource::CopyRegion </td>
+          <td>(</td>
+          <td class="paramtype">ID3D12GraphicsCommandList *&#160;</td>
+          <td class="paramname"><em>cmdList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D12Resource *&#160;</td>
+          <td class="paramname"><em>srcResource</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set command to copy data </p>
+
+<p><a class="el" href="class_a_c_gpu_optimized_resource.html#a6000be26dd503b2a15417118b6592e50">ACGpuOptimizedResource</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a5e87e2247ac4d47facbefdc9c82906d2" name="a5e87e2247ac4d47facbefdc9c82906d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e87e2247ac4d47facbefdc9c82906d2">&#9670;&#160;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CTextureResource::Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tex_load_result.html">TexLoadResult</a> *&#160;</td>
+          <td class="paramname"><em>loadResult</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create texture resource </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loadResult</td><td>Load function results </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_texture_resource_a5e87e2247ac4d47facbefdc9c82906d2_cgraph.png" border="0" usemap="#aclass_c_texture_resource_a5e87e2247ac4d47facbefdc9c82906d2_cgraph" alt=""/></div>
+<map name="aclass_c_texture_resource_a5e87e2247ac4d47facbefdc9c82906d2_cgraph" id="aclass_c_texture_resource_a5e87e2247ac4d47facbefdc9c82906d2_cgraph">
+<area shape="rect" title="Create texture resource" alt="" coords="5,242,180,269"/>
+<area shape="rect" href="namespace_utl_1_1_dx.html#a4619dbb2bd87e245b78fc22ecb1cf42f" title="Convert &#39;DirectX::TEX_DIMENSION&#39; to &#39;D3D12_SRV_DIMENSION&#39;" alt="" coords="233,66,434,109"/>
+<area shape="poly" title=" " alt="" coords="102,240,151,182,186,148,226,119,235,114,238,118,229,123,190,152,155,186,106,244"/>
+<area shape="rect" href="class_c_descriptor_heap.html#aecbd2207fc5a4526ef13ca74eca53dc8" title="Create descriptor heap" alt="" coords="251,133,416,160"/>
+<area shape="poly" title=" " alt="" coords="113,240,164,208,227,176,263,162,265,167,229,181,166,213,116,244"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="521,125,667,152"/>
+<area shape="poly" title=" " alt="" coords="148,239,227,220,515,153,516,158,228,225,149,245"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#ad02294e127ffd215c75b81f09be6b89d" title="Create resource" alt="" coords="245,234,422,277"/>
+<area shape="poly" title=" " alt="" coords="180,253,229,253,229,258,180,258"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="228,301,439,328"/>
+<area shape="poly" title=" " alt="" coords="150,267,228,287,261,294,259,300,227,292,149,272"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325" title="DirectX device getter" alt="" coords="245,352,422,394"/>
+<area shape="poly" title=" " alt="" coords="114,267,165,302,229,337,243,344,241,348,226,342,162,306,111,272"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a553fe022564762ba24fe35296d41dd77" title="Make unique pointer" alt="" coords="261,418,406,461"/>
+<area shape="poly" title=" " alt="" coords="105,268,152,333,188,371,229,404,248,414,245,419,226,409,184,375,148,337,100,271"/>
+<area shape="poly" title=" " alt="" coords="416,141,505,138,505,144,417,147"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="1087,18,1295,45"/>
+<area shape="poly" title=" " alt="" coords="607,122,664,74,704,48,747,29,792,18,838,10,931,3,1019,6,1096,13,1095,18,1019,11,931,8,839,15,793,23,749,34,706,53,667,78,610,127"/>
+<area shape="poly" title=" " alt="" coords="404,231,437,214,452,201,460,188,470,174,486,162,504,152,507,157,488,166,474,178,465,191,456,204,441,218,407,236"/>
+<area shape="rect" href="class_c_command_manager.html#a2190493f7e13f1a69192b951e1326005" title="Execute registered commands" alt="" coords="487,242,700,285"/>
+<area shape="poly" title=" " alt="" coords="423,256,472,257,471,263,423,261"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="1103,316,1279,358"/>
+<area shape="poly" title=" " alt="" coords="419,275,441,287,456,301,465,315,474,328,488,340,563,380,629,408,691,425,751,432,812,432,878,425,1035,397,1086,383,1134,363,1136,368,1088,388,1036,402,879,431,812,438,750,438,690,430,627,413,560,385,486,345,470,332,460,318,452,304,437,291,416,280"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#a6000be26dd503b2a15417118b6592e50" title="Set command to copy data" alt="" coords="505,462,682,505"/>
+<area shape="poly" title=" " alt="" coords="424,274,441,287,456,307,464,327,466,366,468,404,475,423,489,442,500,452,496,456,485,446,471,425,463,405,461,366,458,328,451,310,437,291,421,278"/>
+<area shape="rect" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52" title="Get command list for graphics" alt="" coords="782,345,1002,388"/>
+<area shape="poly" title=" " alt="" coords="411,275,488,295,632,323,767,346,766,351,631,328,486,300,409,280"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#ab8e1ac31d1670a26a8eb63627e651f45" title="Update heap properties and resource descriptor, for resource" alt="" coords="505,176,682,218"/>
+<area shape="poly" title=" " alt="" coords="422,233,489,218,490,223,423,238"/>
+<area shape="rect" href="class_c_command_manager.html#ae25a3521fd40b119016782297cb7ba78" title="Get feature for thread&#45;safe" alt="" coords="796,44,988,70"/>
+<area shape="poly" title=" " alt="" coords="684,240,698,229,712,211,719,193,721,155,723,117,731,98,747,80,780,61,783,66,750,84,736,101,728,118,726,155,724,194,717,213,702,232,687,244"/>
+<area shape="poly" title=" " alt="" coords="701,274,1088,322,1087,327,701,279"/>
+<area shape="rect" href="class_c_command_manager_1_1_c_thread_safe_feature.html#afeebd51547d4b4ca6569686bb91f42e5" title="Clear graphics command list and graphics command allocator, However, it is not associated with execut..." alt="" coords="748,161,1036,204"/>
+<area shape="poly" title=" " alt="" coords="664,239,748,213,777,205,779,211,749,218,665,244"/>
+<area shape="rect" href="class_c_command_manager.html#af6a8b626d58ef495a821ca64748e9d00" title="Executes registered graphics commands, but does not wait or clear, so it is only used in special situ..." alt="" coords="772,94,1012,137"/>
+<area shape="poly" title=" " alt="" coords="681,240,699,228,715,209,721,188,729,167,747,147,757,140,760,145,750,151,733,170,726,190,719,211,702,232,684,244"/>
+<area shape="rect" href="class_c_command_manager_1_1_c_thread_safe_feature.html#abc72278becb39ddafee24cf26776b90c" title="Wait for the GPU to complete processing" alt="" coords="794,228,990,270"/>
+<area shape="poly" title=" " alt="" coords="701,256,779,252,779,257,701,261"/>
+<area shape="poly" title=" " alt="" coords="988,46,1071,39,1071,45,988,52"/>
+<area shape="poly" title=" " alt="" coords="1013,135,1037,147,1059,168,1093,209,1166,302,1162,305,1089,212,1055,172,1034,151,1011,140"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="1084,146,1298,189"/>
+<area shape="poly" title=" " alt="" coords="1013,134,1069,144,1068,149,1012,139"/>
+<area shape="poly" title=" " alt="" coords="1003,353,1087,345,1088,350,1003,358"/>
+<area shape="poly" title=" " alt="" coords="931,342,1034,280,1149,196,1152,201,1037,285,934,347"/>
+<area shape="poly" title=" " alt="" coords="420,298,437,287,450,273,457,258,460,226,464,194,472,177,485,162,505,149,508,154,489,166,476,180,469,195,466,227,462,259,454,275,441,291,423,303"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="505,529,683,572"/>
+<area shape="poly" title=" " alt="" coords="425,326,441,338,458,360,466,383,466,428,467,472,473,494,489,515,494,520,490,524,485,519,469,496,461,473,461,428,461,384,453,363,437,342,422,330"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_texture_resource_a5e87e2247ac4d47facbefdc9c82906d2_icgraph.png" border="0" usemap="#aclass_c_texture_resource_a5e87e2247ac4d47facbefdc9c82906d2_icgraph" alt=""/></div>
+<map name="aclass_c_texture_resource_a5e87e2247ac4d47facbefdc9c82906d2_icgraph" id="aclass_c_texture_resource_a5e87e2247ac4d47facbefdc9c82906d2_icgraph">
+<area shape="rect" title="Create texture resource" alt="" coords="242,13,416,40"/>
+<area shape="rect" href="class_c_texture_resource.html#ad76c10ec0f2f42e1c2c97f62726a5f16" title="Constructor for creating texture resource" alt="" coords="5,5,194,48"/>
+<area shape="poly" title=" " alt="" coords="226,29,194,29,194,24,226,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="add2bb251ac995eb78932d0f7ab8ab0f1" name="add2bb251ac995eb78932d0f7ab8ab0f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add2bb251ac995eb78932d0f7ab8ab0f1">&#9670;&#160;</a></span>GetMetaData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DirectX::TexMetadata &amp; CTextureResource::GetMetaData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get texture meta data </p>
+
+</div>
+</div>
+<a id="a7722c33999aa5062913b08b99bd48cc6" name="a7722c33999aa5062913b08b99bd48cc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7722c33999aa5062913b08b99bd48cc6">&#9670;&#160;</a></span>GetSRVPropertyHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a> CTextureResource::GetSRVPropertyHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get resouce state controller </p>
+
+</div>
+</div>
+<a id="a7c5b5cb50550b20471b4ea877506e147" name="a7c5b5cb50550b20471b4ea877506e147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c5b5cb50550b20471b4ea877506e147">&#9670;&#160;</a></span>Load() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CTextureResource::Load </td>
+          <td>(</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_tex_load_result.html">TexLoadResult</a> *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load texture </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>File path of texture to be loaded </td></tr>
+    <tr><td class="paramname">result</td><td>Return variable for loading result </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Successful loading? </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_texture_resource_a7c5b5cb50550b20471b4ea877506e147_icgraph.png" border="0" usemap="#aclass_c_texture_resource_a7c5b5cb50550b20471b4ea877506e147_icgraph" alt=""/></div>
+<map name="aclass_c_texture_resource_a7c5b5cb50550b20471b4ea877506e147_icgraph" id="aclass_c_texture_resource_a7c5b5cb50550b20471b4ea877506e147_icgraph">
+<area shape="rect" title="Load texture" alt="" coords="492,31,657,57"/>
+<area shape="rect" href="class_c_texture_registry.html#a4268fe1136a9472945e003cb3286bd89" title="Load texture" alt="" coords="276,5,433,32"/>
+<area shape="poly" title=" " alt="" coords="477,35,433,30,434,25,477,30"/>
+<area shape="rect" href="class_c_texture_registry.html#aa67050d232cf1dfb7cdb7607f48b2ed8" title="Load textures from pak file" alt="" coords="264,56,444,83"/>
+<area shape="poly" title=" " alt="" coords="477,58,445,62,444,56,477,53"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,56,216,83"/>
+<area shape="poly" title=" " alt="" coords="248,72,216,72,216,67,248,67"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="poly" title=" " alt="" coords="51,43,44,37,30,35,17,37,10,41,8,47,12,54,7,57,3,47,6,38,15,32,30,29,46,32,55,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11d22952ed0a15d5214124a7e1d9199f" name="a11d22952ed0a15d5214124a7e1d9199f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d22952ed0a15d5214124a7e1d9199f">&#9670;&#160;</a></span>Load() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CTextureResource::Load </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_tex_load_result.html">TexLoadResult</a> *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load texture </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Texture data to be loaded </td></tr>
+    <tr><td class="paramname">size</td><td>Size of texture data to be loaded </td></tr>
+    <tr><td class="paramname">filePath</td><td>Path of file be loaded </td></tr>
+    <tr><td class="paramname">result</td><td>Return variable for loading result </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Successful loading? </dd></dl>
+
+</div>
+</div>
+<a id="a8efb72ceba5358bb71d88ffe88028c64" name="a8efb72ceba5358bb71d88ffe88028c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8efb72ceba5358bb71d88ffe88028c64">&#9670;&#160;</a></span>UpdateDataForResource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CTextureResource::UpdateDataForResource </td>
+          <td>(</td>
+          <td class="paramtype">D3D12_HEAP_PROPERTIES *&#160;</td>
+          <td class="paramname"><em>heapProp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3D12_RESOURCE_DESC *&#160;</td>
+          <td class="paramname"><em>resDesc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update heap properties and resource desc for resource </p>
+
+<p><a class="el" href="class_a_c_gpu_optimized_resource.html#ab8e1ac31d1670a26a8eb63627e651f45">ACGpuOptimizedResource</a>を再実装しています。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_texture_resource_8h_source.html">TextureResource.h</a></li>
+<li><a class="el" href="_texture_resource_8cpp.html">TextureResource.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

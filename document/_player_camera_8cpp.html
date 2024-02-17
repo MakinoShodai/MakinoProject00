@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: PlayerCamera.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">PlayerCamera.cpp ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_player_camera_8h_source.html">PlayerCamera.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_scene_8h_source.html">Scene.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_player_prefab_8h_source.html">PlayerPrefab.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_input_system_8h_source.html">InputSystem.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_application_clock_8h_source.html">ApplicationClock.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+PlayerCamera.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_player_camera_8cpp__incl.png" border="0" usemap="#a_player_camera_8cpp" alt=""/></div>
+<map name="a_player_camera_8cpp" id="a_player_camera_8cpp">
+<area shape="rect" title=" " alt="" coords="1850,5,1978,32"/>
+<area shape="rect" href="_player_camera_8h.html" title="This file handles player camera component and prefab of player camera." alt="" coords="2514,155,2629,181"/>
+<area shape="poly" title=" " alt="" coords="1971,30,2500,148,2499,153,1970,35"/>
+<area shape="rect" href="_scene_8h.html" title="This file handles scene class." alt="" coords="1879,80,1949,107"/>
+<area shape="poly" title=" " alt="" coords="1917,33,1917,64,1911,64,1911,33"/>
+<area shape="rect" href="_player_prefab_8h.html" title="This file handles prefab of player." alt="" coords="2624,80,2730,107"/>
+<area shape="poly" title=" " alt="" coords="1979,23,2608,83,2608,88,1978,29"/>
+<area shape="rect" href="_input_system_8h.html" title="This file handles key input information." alt="" coords="767,304,872,331"/>
+<area shape="poly" title=" " alt="" coords="1849,23,1634,28,1495,35,1347,46,1202,63,1069,86,1011,101,960,117,917,136,884,157,858,186,840,221,830,257,824,289,819,288,825,256,835,219,853,183,880,153,914,131,958,112,1009,96,1068,81,1201,58,1346,41,1494,29,1634,22,1849,17"/>
+<area shape="rect" href="_application_clock_8h.html" title="This file manages the clock in the application." alt="" coords="459,80,588,107"/>
+<area shape="poly" title=" " alt="" coords="1849,26,604,91,603,85,1849,21"/>
+<area shape="rect" href="_component_8h.html" title="This file handles abstract class for component used in update processing." alt="" coords="2142,453,2241,480"/>
+<area shape="poly" title=" " alt="" coords="2579,181,2587,210,2594,248,2594,291,2589,312,2580,332,2556,355,2519,377,2447,408,2256,454,2255,449,2445,403,2516,372,2553,351,2576,329,2584,311,2588,291,2589,249,2582,211,2574,182"/>
+<area shape="rect" href="_game_object_8h.html" title="This file handles base class for game object." alt="" coords="2528,379,2633,405"/>
+<area shape="poly" title=" " alt="" coords="2596,180,2622,200,2643,228,2648,248,2648,275,2644,305,2636,332,2624,352,2609,370,2605,366,2620,349,2632,330,2639,304,2643,275,2642,249,2638,230,2618,204,2593,184"/>
+<area shape="rect" href="_camera_8h.html" title="This file handles camera component." alt="" coords="2489,304,2566,331"/>
+<area shape="poly" title=" " alt="" coords="2570,183,2538,290,2533,288,2565,181"/>
+<area shape="rect" href="_player_control_component_8h.html" title="This file handles component for moving the player by key input." alt="" coords="2307,229,2484,256"/>
+<area shape="poly" title=" " alt="" coords="2542,184,2441,225,2439,220,2540,179"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="2147,528,2236,555"/>
+<area shape="poly" title=" " alt="" coords="2194,481,2194,512,2189,512,2189,481"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="2009,528,2123,555"/>
+<area shape="poly" title=" " alt="" coords="2171,483,2102,522,2099,518,2168,478"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="2150,603,2233,629"/>
+<area shape="poly" title=" " alt="" coords="2194,555,2194,587,2189,587,2189,555"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="2004,603,2125,629"/>
+<area shape="poly" title=" " alt="" coords="2068,555,2068,587,2063,587,2063,555"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="2532,603,2632,629"/>
+<area shape="poly" title=" " alt="" coords="2124,550,2136,552,2517,604,2516,609,2135,557,2123,555"/>
+<area shape="poly" title=" " alt="" coords="2528,406,2256,456,2255,451,2527,401"/>
+<area shape="poly" title=" " alt="" coords="2541,408,2406,456,2348,482,2241,525,2239,520,2346,478,2404,451,2539,403"/>
+<area shape="poly" title=" " alt="" coords="2528,406,2443,426,2348,456,2323,469,2298,482,2216,509,2138,528,2137,523,2214,504,2296,478,2321,464,2346,451,2441,421,2527,401"/>
+<area shape="rect" href="_callback_system_8h.html" title="This file handles object&#39;s callback function system." alt="" coords="2417,453,2544,480"/>
+<area shape="poly" title=" " alt="" coords="2565,408,2512,446,2509,442,2562,404"/>
+<area shape="rect" href="_graphics_layer_8h.html" title="This file handles the layer function in the graphics processing." alt="" coords="389,528,506,555"/>
+<area shape="poly" title=" " alt="" coords="2528,405,2402,429,2341,443,2298,456,2276,470,2254,482,2210,492,2143,499,1956,513,1715,523,1444,531,903,540,521,542,521,537,903,534,1443,525,1715,518,1956,508,2143,494,2209,486,2252,478,2274,465,2296,451,2340,438,2401,424,2527,400"/>
+<area shape="rect" href="_graphics_component_8h.html" title="This file handles component for graphics." alt="" coords="468,453,619,480"/>
+<area shape="poly" title=" " alt="" coords="2528,398,2249,408,1797,418,1445,421,1093,429,886,439,642,456,634,457,634,451,642,451,886,434,1093,424,1445,415,1797,413,2249,403,2528,393"/>
+<area shape="rect" href="_scene_phase_8h.html" title="This file handles phase of the scene currently being processed." alt="" coords="2620,453,2726,480"/>
+<area shape="poly" title=" " alt="" coords="2598,404,2647,442,2643,446,2595,408"/>
+<area shape="rect" href="_update_mode_8h.html" title="This file handles update mode of scene." alt="" coords="2529,528,2635,555"/>
+<area shape="poly" title=" " alt="" coords="2583,406,2584,512,2579,512,2578,406"/>
+<area shape="poly" title=" " alt="" coords="2431,483,2252,528,2250,523,2430,478"/>
+<area shape="poly" title=" " alt="" coords="619,475,642,477,868,491,1059,495,1386,490,1544,489,1714,491,1905,502,2131,525,2131,530,1905,508,1713,497,1544,494,1386,496,1059,500,868,496,642,483,618,481"/>
+<area shape="poly" title=" " alt="" coords="619,475,642,477,1042,504,1434,521,1994,536,1994,542,1433,527,1042,509,642,483,618,480"/>
+<area shape="poly" title=" " alt="" coords="528,483,478,521,475,516,525,478"/>
+<area shape="rect" href="_int_key_generater_8h.html" title="This file handles class that generates keys of integer numeric type." alt="" coords="215,528,341,555"/>
+<area shape="poly" title=" " alt="" coords="498,483,340,526,338,521,496,478"/>
+<area shape="poly" title=" " alt="" coords="2674,481,2666,516,2650,556,2633,577,2614,595,2610,591,2629,574,2645,553,2661,515,2669,480"/>
+<area shape="poly" title=" " alt="" coords="2585,555,2585,587,2579,587,2579,555"/>
+<area shape="poly" title=" " alt="" coords="2515,333,2470,370,2409,408,2331,437,2257,456,2255,451,2329,432,2406,403,2467,365,2512,329"/>
+<area shape="poly" title=" " alt="" coords="2539,330,2565,365,2560,368,2534,333"/>
+<area shape="poly" title=" " alt="" coords="2396,257,2385,292,2366,332,2334,369,2299,401,2230,448,2227,443,2295,396,2331,365,2361,329,2380,290,2390,255"/>
+<area shape="rect" href="_rigid_body_8h.html" title="This file handles rigid body component." alt="" coords="2063,304,2154,331"/>
+<area shape="poly" title=" " alt="" coords="2346,259,2170,303,2169,298,2345,254"/>
+<area shape="poly" title=" " alt="" coords="2113,331,2121,365,2136,404,2167,441,2163,445,2132,407,2115,367,2108,332"/>
+<area shape="poly" title=" " alt="" coords="2155,323,2513,378,2512,383,2154,328"/>
+<area shape="rect" href="_collider3_d_8h.html" title="This file handles 3D abstract collider." alt="" coords="1795,379,1886,405"/>
+<area shape="poly" title=" " alt="" coords="2063,334,1902,377,1900,372,2062,328"/>
+<area shape="poly" title=" " alt="" coords="1887,400,2128,450,2126,455,1886,405"/>
+<area shape="poly" title=" " alt="" coords="1949,93,2111,98,2342,108,2577,126,2675,138,2748,152,2812,163,2869,171,2893,179,2912,192,2924,212,2929,241,2929,394,2924,423,2911,444,2891,457,2866,465,2805,472,2738,483,2604,512,2469,530,2346,539,2251,542,2251,537,2346,534,2468,524,2603,507,2738,477,2804,466,2865,459,2889,452,2907,440,2919,422,2923,393,2923,242,2919,214,2908,196,2891,184,2868,176,2811,168,2747,157,2674,143,2577,131,2342,113,2110,103,1949,98"/>
+<area shape="poly" title=" " alt="" coords="1949,93,2108,97,2327,106,2530,124,2602,137,2627,144,2642,153,2662,172,2676,192,2684,213,2687,235,2679,282,2658,332,2641,354,2620,372,2616,368,2637,351,2653,329,2674,280,2682,235,2679,215,2671,195,2658,176,2639,157,2625,149,2601,142,2529,130,2326,112,2108,102,1949,98"/>
+<area shape="poly" title=" " alt="" coords="1879,98,1223,114,807,132,632,144,501,157,431,164,362,167,297,170,238,178,188,192,167,203,149,217,135,235,124,257,118,284,115,316,115,393,118,415,126,436,139,454,155,471,192,499,231,519,229,524,190,503,151,475,135,457,122,438,113,417,110,394,110,316,112,283,119,256,130,233,145,214,164,199,186,187,237,172,296,165,362,162,431,159,500,152,632,139,806,127,1223,109,1879,93"/>
+<area shape="poly" title=" " alt="" coords="1949,93,2098,97,2308,108,2519,125,2607,138,2672,152,2727,164,2777,175,2797,183,2813,196,2824,215,2827,241,2827,319,2824,341,2816,362,2789,398,2753,427,2717,449,2715,444,2750,423,2785,395,2812,360,2819,340,2822,318,2822,242,2819,217,2809,200,2795,188,2775,180,2726,169,2671,157,2606,143,2518,131,2307,113,2097,103,1949,98"/>
+<area shape="rect" href="_camera_registry_8h.html" title="This file handles a camera registry." alt="" coords="2315,155,2441,181"/>
+<area shape="poly" title=" " alt="" coords="1950,98,2300,152,2299,157,1949,103"/>
+<area shape="rect" href="_graphics_layer_registry_8h.html" title="This file handles drawing components for each layer." alt="" coords="201,304,366,331"/>
+<area shape="poly" title=" " alt="" coords="1879,98,1477,114,1184,132,882,157,804,163,736,165,621,166,566,171,510,182,448,201,377,232,336,260,304,293,300,290,332,256,374,227,446,196,508,176,566,166,620,161,736,160,803,158,882,152,1183,126,1477,109,1879,93"/>
+<area shape="rect" href="_graphics_pipeline_state_8h.html" title="This file handles graphics pipeline states." alt="" coords="895,155,1056,181"/>
+<area shape="poly" title=" " alt="" coords="1879,100,1072,162,1071,157,1879,95"/>
+<area shape="rect" href="_dynamic_sb_registry_8h.html" title="This file handles the registry that manages all structured buffer allocators per object." alt="" coords="1583,155,1730,181"/>
+<area shape="poly" title=" " alt="" coords="1879,107,1717,153,1715,147,1878,102"/>
+<area shape="rect" href="_physics_world_8h.html" title="This file handles physics simulation environment class." alt="" coords="1857,155,1971,181"/>
+<area shape="poly" title=" " alt="" coords="1917,107,1917,139,1911,139,1911,107"/>
+<area shape="rect" href="_light_registry_8h.html" title="This file handles registry for lights." alt="" coords="2175,229,2283,256"/>
+<area shape="poly" title=" " alt="" coords="1942,105,2189,220,2187,225,1940,110"/>
+<area shape="rect" href="_render_pass_asset_8h.html" title="This file handles abstract class for rendering pass asset that scene uses." alt="" coords="5,528,143,555"/>
+<area shape="poly" title=" " alt="" coords="1879,98,1545,101,1020,110,507,128,319,141,253,149,209,157,156,169,109,180,91,188,77,200,68,218,65,242,65,393,68,457,73,512,68,513,62,458,59,393,59,241,63,216,73,197,88,184,107,175,154,164,208,152,252,143,318,136,507,122,1020,104,1544,95,1879,92"/>
+<area shape="poly" title=" " alt="" coords="2420,179,2460,198,2497,228,2516,258,2525,289,2520,290,2511,260,2493,231,2458,203,2418,184"/>
+<area shape="poly" title=" " alt="" coords="278,332,264,361,252,400,248,441,252,461,261,478,278,491,305,504,374,523,373,528,303,509,275,496,257,482,247,462,243,441,246,399,259,359,274,330"/>
+<area shape="poly" title=" " alt="" coords="306,329,435,403,508,443,506,448,433,408,303,333"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="678,379,764,405"/>
+<area shape="poly" title=" " alt="" coords="360,329,663,378,662,384,360,334"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="271,453,413,480"/>
+<area shape="poly" title=" " alt="" coords="285,331,284,365,292,404,304,424,318,441,314,444,299,427,288,406,279,366,279,331"/>
+<area shape="rect" href="_sprite_8h.html" title="This file handles sprite." alt="" coords="446,379,513,405"/>
+<area shape="poly" title=" " alt="" coords="318,329,432,371,430,376,317,334"/>
+<area shape="rect" href="_model_8h.html" title="This file handles model class." alt="" coords="536,379,604,405"/>
+<area shape="poly" title=" " alt="" coords="336,329,522,375,520,380,335,334"/>
+<area shape="rect" href="_shape_8h.html" title="This file handles graphics component for shape." alt="" coords="302,379,371,405"/>
+<area shape="poly" title=" " alt="" coords="295,330,321,365,316,368,290,333"/>
+<area shape="poly" title=" " alt="" coords="765,401,776,403,965,431,1113,448,1452,477,1641,490,1791,496,1941,504,2132,525,2131,530,1940,509,1791,501,1641,496,1451,483,1112,454,964,437,775,408,764,406"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="654,453,787,480"/>
+<area shape="poly" title=" " alt="" coords="723,406,723,438,718,438,718,406"/>
+<area shape="poly" title=" " alt="" coords="677,404,424,452,423,447,676,399"/>
+<area shape="poly" title=" " alt="" coords="492,404,524,440,520,443,488,408"/>
+<area shape="poly" title=" " alt="" coords="568,407,556,440,551,438,563,405"/>
+<area shape="poly" title=" " alt="" coords="373,403,494,445,492,450,371,408"/>
+<area shape="poly" title=" " alt="" coords="894,174,794,180,670,190,534,207,400,232,358,238,317,240,241,243,210,248,187,261,171,282,166,316,166,393,172,424,188,444,245,478,276,494,309,508,375,526,374,531,308,513,274,499,242,482,185,448,167,426,161,394,161,316,167,280,183,257,208,243,240,237,316,235,358,233,399,227,534,202,669,185,794,175,894,169"/>
+<area shape="poly" title=" " alt="" coords="894,175,763,181,614,193,487,209,444,220,421,231,409,248,406,260,410,270,420,280,457,301,507,328,539,341,567,346,594,354,606,363,618,377,623,397,615,416,600,433,581,447,578,443,596,429,611,413,617,397,613,380,602,367,591,359,566,351,537,346,505,333,455,305,417,284,406,273,401,260,405,245,418,227,442,215,486,204,613,187,762,176,894,170"/>
+<area shape="rect" href="_graphics_pipeline_elements_8h.html" title="This file handles elements of graphics pipeline state." alt="" coords="1213,304,1399,331"/>
+<area shape="poly" title=" " alt="" coords="1057,170,1102,176,1151,187,1200,203,1245,227,1275,256,1296,289,1292,292,1271,260,1242,231,1197,208,1149,192,1101,181,1056,175"/>
+<area shape="rect" href="_dynamic_cb_allocator_8h.html" title="This file handles class that allocates data for constant buffer per object." alt="" coords="900,229,1051,256"/>
+<area shape="poly" title=" " alt="" coords="978,182,978,214,973,214,973,182"/>
+<area shape="rect" href="_graphics_object_asset_8h.html" title="This file handles assets that manage what is needed for the drawing process." alt="" coords="1075,229,1231,256"/>
+<area shape="poly" title=" " alt="" coords="1007,179,1109,221,1107,226,1005,184"/>
+<area shape="rect" href="_descriptor_heap_8h.html" title="This file handles descriptor heap." alt="" coords="788,379,909,405"/>
+<area shape="poly" title=" " alt="" coords="946,184,915,203,902,216,891,231,883,256,885,278,889,302,886,331,869,367,864,364,881,330,884,302,880,279,878,255,886,228,898,212,912,199,943,180"/>
+<area shape="rect" href="_descriptor_heap_pool_8h.html" title="This file handles pool class that manages descriptor heap for graphics pipeline state." alt="" coords="628,229,776,256"/>
+<area shape="poly" title=" " alt="" coords="928,184,765,227,764,222,927,179"/>
+<area shape="rect" href="_swap_chain_8h.html" title="This file handles swap chain." alt="" coords="543,304,640,331"/>
+<area shape="poly" title=" " alt="" coords="895,183,721,210,651,223,618,232,608,244,601,258,595,289,589,288,596,256,604,241,615,227,649,217,720,204,894,178"/>
+<area shape="rect" href="_shader_8h.html" title="This file handles each shaders." alt="" coords="1307,229,1380,256"/>
+<area shape="poly" title=" " alt="" coords="1043,179,1288,227,1292,228,1291,233,1287,232,1042,185"/>
+<area shape="rect" href="_static_resource_8h.html" title="This file handles interface class of static resources that don&#39;t need to be updated on a per&#45;object b..." alt="" coords="432,229,553,256"/>
+<area shape="poly" title=" " alt="" coords="895,184,573,232,569,233,568,227,572,227,894,179"/>
+<area shape="poly" title=" " alt="" coords="705,256,713,330,718,363,713,364,707,331,700,257"/>
+<area shape="poly" title=" " alt="" coords="710,255,728,290,756,329,782,351,810,369,808,373,779,355,752,332,723,293,705,258"/>
+<area shape="poly" title=" " alt="" coords="684,259,625,298,622,293,681,254"/>
+<area shape="poly" title=" " alt="" coords="615,329,686,368,683,373,613,334"/>
+<area shape="poly" title=" " alt="" coords="637,329,790,371,788,377,635,334"/>
+<area shape="poly" title=" " alt="" coords="1377,254,1784,403,2138,520,2137,525,1782,408,1375,259"/>
+<area shape="poly" title=" " alt="" coords="1339,258,1322,292,1317,289,1334,255"/>
+<area shape="poly" title=" " alt="" coords="497,256,508,292,518,312,532,329,553,342,586,354,663,375,662,381,585,359,551,346,528,333,513,315,503,294,492,257"/>
+<area shape="poly" title=" " alt="" coords="511,254,564,293,561,297,508,259"/>
+<area shape="rect" href="_dynamic_sb_allocator_8h.html" title="This file handles class that allocates data for structured buffer per object." alt="" coords="1404,229,1555,256"/>
+<area shape="poly" title=" " alt="" coords="1627,184,1525,226,1523,221,1625,179"/>
+<area shape="poly" title=" " alt="" coords="1971,168,2094,173,2246,183,2393,201,2452,213,2496,227,2550,255,2587,286,2617,325,2648,377,2662,408,2670,437,2665,439,2657,409,2644,380,2613,328,2584,290,2547,260,2494,232,2451,218,2392,206,2246,189,2093,178,1971,173"/>
+<area shape="poly" title=" " alt="" coords="1971,167,2008,172,2047,182,2084,200,2113,228,2121,242,2123,258,2120,289,2115,289,2118,259,2116,244,2109,231,2081,204,2046,187,2007,177,1971,172"/>
+<area shape="poly" title=" " alt="" coords="1857,175,1791,181,1719,192,1657,208,1634,219,1619,231,1607,254,1610,276,1624,296,1648,315,1713,348,1781,372,1779,377,1711,353,1645,320,1620,300,1605,278,1602,253,1615,228,1631,214,1655,203,1718,187,1790,176,1857,170"/>
+<area shape="rect" href="_dynamic_b_v_tree_8h.html" title="This file handles dynamic bounding volume tree." alt="" coords="1778,229,1904,256"/>
+<area shape="poly" title=" " alt="" coords="1903,184,1866,220,1862,216,1899,180"/>
+<area shape="rect" href="_collider_wrapper_8h.html" title="This file handles wrapper class that exists in a 1:1 relationship with a collider." alt="" coords="1629,229,1754,256"/>
+<area shape="poly" title=" " alt="" coords="1876,184,1745,227,1744,222,1874,179"/>
+<area shape="rect" href="_constraint_solver_director_8h.html" title="This file create and resolve constraints for contact resolution." alt="" coords="1928,229,2100,256"/>
+<area shape="poly" title=" " alt="" coords="1933,180,1986,218,1983,222,1930,184"/>
+<area shape="poly" title=" " alt="" coords="1888,254,2049,297,2047,302,1887,259"/>
+<area shape="poly" title=" " alt="" coords="1843,257,1843,363,1838,363,1838,257"/>
+<area shape="poly" title=" " alt="" coords="1754,252,2048,303,2047,308,1753,257"/>
+<area shape="poly" title=" " alt="" coords="1706,255,1819,366,1816,370,1702,258"/>
+<area shape="rect" href="_point_light_8h.html" title="This file handles point light component." alt="" coords="2146,379,2237,405"/>
+<area shape="poly" title=" " alt="" coords="2228,257,2201,364,2196,363,2223,256"/>
+<area shape="rect" href="_directional_light_8h.html" title="This file handles component and object for directional light." alt="" coords="2229,304,2351,331"/>
+<area shape="poly" title=" " alt="" coords="2241,255,2272,290,2268,294,2237,258"/>
+<area shape="poly" title=" " alt="" coords="2194,406,2194,438,2189,438,2189,406"/>
+<area shape="poly" title=" " alt="" coords="2288,332,2273,367,2251,407,2218,444,2214,441,2246,404,2269,364,2283,330"/>
+<area shape="poly" title=" " alt="" coords="2342,329,2516,372,2514,377,2340,334"/>
+<area shape="poly" title=" " alt="" coords="143,547,203,552,390,559,621,563,1160,566,1704,574,1941,584,2135,600,2134,605,1940,589,1704,579,1160,571,621,568,390,564,203,557,143,553"/>
+<area shape="poly" title=" " alt="" coords="2731,96,2761,102,2793,113,2822,129,2846,153,2849,167,2846,182,2835,264,2823,298,2794,333,2762,357,2724,373,2686,384,2649,390,2648,385,2685,379,2723,368,2759,352,2791,329,2818,295,2830,263,2841,181,2844,167,2841,156,2819,134,2791,118,2760,107,2730,101"/>
+<area shape="poly" title=" " alt="" coords="861,329,1109,400,1278,442,1452,477,1602,500,1752,516,1994,534,1993,539,1752,521,1602,505,1451,483,1277,447,1107,405,859,334"/>
+<area shape="poly" title=" " alt="" coords="804,333,751,372,748,367,801,329"/>
+<area shape="poly" title=" " alt="" coords="506,109,474,135,440,171,427,191,419,212,416,233,422,255,441,286,466,311,496,332,529,349,599,372,662,384,661,389,597,377,527,354,493,337,463,315,437,289,417,257,411,234,413,211,422,189,436,168,470,131,503,105"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a573d7bcf7b1cefb04ebd1d27820d7a85" id="r_a573d7bcf7b1cefb04ebd1d27820d7a85"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_player_camera_8cpp.html#a573d7bcf7b1cefb04ebd1d27820d7a85">MIN_VERTICAL_RAD</a> = -70.0f * <a class="el" href="namespace_utl.html#af646af25e570909447702c246b573525">Utl::DEG_2_RAD</a></td></tr>
+<tr class="separator:a573d7bcf7b1cefb04ebd1d27820d7a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14e77e3e584523f9591191bf351b521" id="r_ae14e77e3e584523f9591191bf351b521"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_player_camera_8cpp.html#ae14e77e3e584523f9591191bf351b521">MAX_VERTICAL_RAD</a> = 85.0f * <a class="el" href="namespace_utl.html#af646af25e570909447702c246b573525">Utl::DEG_2_RAD</a></td></tr>
+<tr class="separator:ae14e77e3e584523f9591191bf351b521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dcc7022d6eb8a1cb8d442f96980e67d" id="r_a2dcc7022d6eb8a1cb8d442f96980e67d"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_player_camera_8cpp.html#a2dcc7022d6eb8a1cb8d442f96980e67d">FOCUS_OFFSET_Y</a> = 5.0f</td></tr>
+<tr class="separator:a2dcc7022d6eb8a1cb8d442f96980e67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58581823b708cf3666891df32756a9ef" id="r_a58581823b708cf3666891df32756a9ef"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_player_camera_8cpp.html#a58581823b708cf3666891df32756a9ef">FOCUS_LERP_SPEED</a> = 0.2f</td></tr>
+<tr class="separator:a58581823b708cf3666891df32756a9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a697aa7686812386521e68007fa387c73" id="r_a697aa7686812386521e68007fa387c73"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_player_camera_8cpp.html#a697aa7686812386521e68007fa387c73">MIN_FOCUS_DISTANCE</a> = 15.0f</td></tr>
+<tr class="separator:a697aa7686812386521e68007fa387c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac74bdfef1d360657710a84bb7bd83a4b" id="r_ac74bdfef1d360657710a84bb7bd83a4b"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_player_camera_8cpp.html#ac74bdfef1d360657710a84bb7bd83a4b">MAX_FOCUS_DISTANCE</a> = 30.0f</td></tr>
+<tr class="separator:ac74bdfef1d360657710a84bb7bd83a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e10f39aeffb82144673f7beeab5ee64" id="r_a6e10f39aeffb82144673f7beeab5ee64"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_player_camera_8cpp.html#a6e10f39aeffb82144673f7beeab5ee64">MIN_SPEED_HORIZONTAL_RAD_LERP</a> = 0.01f</td></tr>
+<tr class="separator:a6e10f39aeffb82144673f7beeab5ee64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c6126e06b105fd33f3ef0c1d7ad495" id="r_ac4c6126e06b105fd33f3ef0c1d7ad495"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_player_camera_8cpp.html#ac4c6126e06b105fd33f3ef0c1d7ad495">MAX_SPEED_HORIZONTAL_RAD_LERP</a> = 0.5f</td></tr>
+<tr class="separator:ac4c6126e06b105fd33f3ef0c1d7ad495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac9451608d80771a720ad2e0f0251cac" id="r_aac9451608d80771a720ad2e0f0251cac"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_utl_1_1_conversion_range_parameter.html">Utl::ConversionRangeParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_player_camera_8cpp.html#aac9451608d80771a720ad2e0f0251cac">CONVERT_RANGE_HORIZONTAL_RAD_LERP</a></td></tr>
+<tr class="separator:aac9451608d80771a720ad2e0f0251cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">変数詳解</h2>
+<a id="aac9451608d80771a720ad2e0f0251cac" name="aac9451608d80771a720ad2e0f0251cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9451608d80771a720ad2e0f0251cac">&#9670;&#160;</a></span>CONVERT_RANGE_HORIZONTAL_RAD_LERP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_utl_1_1_conversion_range_parameter.html">Utl::ConversionRangeParameter</a> CONVERT_RANGE_HORIZONTAL_RAD_LERP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= </div>
+<div class="line">    <a class="code hl_struct" href="struct_utl_1_1_conversion_range_parameter.html">Utl::ConversionRangeParameter</a>(3.0f, <a class="code hl_variable" href="_player_camera_8cpp.html#a697aa7686812386521e68007fa387c73">MIN_FOCUS_DISTANCE</a>, <a class="code hl_variable" href="_player_camera_8cpp.html#a6e10f39aeffb82144673f7beeab5ee64">MIN_SPEED_HORIZONTAL_RAD_LERP</a>, <a class="code hl_variable" href="_player_camera_8cpp.html#ac4c6126e06b105fd33f3ef0c1d7ad495">MAX_SPEED_HORIZONTAL_RAD_LERP</a>)</div>
+<div class="ttc" id="a_player_camera_8cpp_html_a697aa7686812386521e68007fa387c73"><div class="ttname"><a href="_player_camera_8cpp.html#a697aa7686812386521e68007fa387c73">MIN_FOCUS_DISTANCE</a></div><div class="ttdeci">const float MIN_FOCUS_DISTANCE</div><div class="ttdef"><b>Definition</b> PlayerCamera.cpp:16</div></div>
+<div class="ttc" id="a_player_camera_8cpp_html_a6e10f39aeffb82144673f7beeab5ee64"><div class="ttname"><a href="_player_camera_8cpp.html#a6e10f39aeffb82144673f7beeab5ee64">MIN_SPEED_HORIZONTAL_RAD_LERP</a></div><div class="ttdeci">const float MIN_SPEED_HORIZONTAL_RAD_LERP</div><div class="ttdef"><b>Definition</b> PlayerCamera.cpp:20</div></div>
+<div class="ttc" id="a_player_camera_8cpp_html_ac4c6126e06b105fd33f3ef0c1d7ad495"><div class="ttname"><a href="_player_camera_8cpp.html#ac4c6126e06b105fd33f3ef0c1d7ad495">MAX_SPEED_HORIZONTAL_RAD_LERP</a></div><div class="ttdeci">const float MAX_SPEED_HORIZONTAL_RAD_LERP</div><div class="ttdef"><b>Definition</b> PlayerCamera.cpp:22</div></div>
+<div class="ttc" id="astruct_utl_1_1_conversion_range_parameter_html"><div class="ttname"><a href="struct_utl_1_1_conversion_range_parameter.html">Utl::ConversionRangeParameter</a></div><div class="ttdoc">Helper structure for functions that convert values between input and output ranges</div><div class="ttdef"><b>Definition</b> Utility.h:58</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a58581823b708cf3666891df32756a9ef" name="a58581823b708cf3666891df32756a9ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58581823b708cf3666891df32756a9ef">&#9670;&#160;</a></span>FOCUS_LERP_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float FOCUS_LERP_SPEED = 0.2f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2dcc7022d6eb8a1cb8d442f96980e67d" name="a2dcc7022d6eb8a1cb8d442f96980e67d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dcc7022d6eb8a1cb8d442f96980e67d">&#9670;&#160;</a></span>FOCUS_OFFSET_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float FOCUS_OFFSET_Y = 5.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac74bdfef1d360657710a84bb7bd83a4b" name="ac74bdfef1d360657710a84bb7bd83a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac74bdfef1d360657710a84bb7bd83a4b">&#9670;&#160;</a></span>MAX_FOCUS_DISTANCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float MAX_FOCUS_DISTANCE = 30.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4c6126e06b105fd33f3ef0c1d7ad495" name="ac4c6126e06b105fd33f3ef0c1d7ad495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c6126e06b105fd33f3ef0c1d7ad495">&#9670;&#160;</a></span>MAX_SPEED_HORIZONTAL_RAD_LERP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float MAX_SPEED_HORIZONTAL_RAD_LERP = 0.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae14e77e3e584523f9591191bf351b521" name="ae14e77e3e584523f9591191bf351b521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae14e77e3e584523f9591191bf351b521">&#9670;&#160;</a></span>MAX_VERTICAL_RAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float MAX_VERTICAL_RAD = 85.0f * <a class="el" href="namespace_utl.html#af646af25e570909447702c246b573525">Utl::DEG_2_RAD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a697aa7686812386521e68007fa387c73" name="a697aa7686812386521e68007fa387c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a697aa7686812386521e68007fa387c73">&#9670;&#160;</a></span>MIN_FOCUS_DISTANCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float MIN_FOCUS_DISTANCE = 15.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e10f39aeffb82144673f7beeab5ee64" name="a6e10f39aeffb82144673f7beeab5ee64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e10f39aeffb82144673f7beeab5ee64">&#9670;&#160;</a></span>MIN_SPEED_HORIZONTAL_RAD_LERP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float MIN_SPEED_HORIZONTAL_RAD_LERP = 0.01f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a573d7bcf7b1cefb04ebd1d27820d7a85" name="a573d7bcf7b1cefb04ebd1d27820d7a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a573d7bcf7b1cefb04ebd1d27820d7a85">&#9670;&#160;</a></span>MIN_VERTICAL_RAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float MIN_VERTICAL_RAD = -70.0f * <a class="el" href="namespace_utl.html#af646af25e570909447702c246b573525">Utl::DEG_2_RAD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

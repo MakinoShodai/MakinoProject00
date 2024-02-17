@@ -1,0 +1,1034 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ACComponent クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="class_a_c_component-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">ACComponent クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is abstract class for component used in update processing  
+ <a href="class_a_c_component.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_component_8h_source.html">Component.h</a>&gt;</code></p>
+<div class="dynheader">
+ACComponent の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_component__inherit__graph.png" border="0" usemap="#a_a_c_component_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_a_c_component_inherit__map" id="a_a_c_component_inherit__map">
+<area shape="rect" title="This is abstract class for component used in update processing" alt="" coords="383,389,488,416"/>
+<area shape="rect" href="class_a_c_collider3_d.html" title="Collider abstract class in 3D coordinate space" alt="" coords="598,56,696,83"/>
+<area shape="poly" title=" " alt="" coords="435,374,440,315,454,239,467,199,484,160,507,124,535,93,564,75,597,68,598,73,566,80,538,97,511,127,489,163,472,201,460,240,445,316,440,374"/>
+<area shape="rect" href="class_c_auto_destroy_component.html" title="Component for automatically destroying objects when the Y&#45;coordinate falls under a certain coordinate" alt="" coords="563,107,731,133"/>
+<area shape="poly" title=" " alt="" coords="437,374,445,324,462,261,490,198,510,169,535,143,561,128,564,132,538,147,515,172,495,200,467,263,450,325,442,374"/>
+<area shape="rect" href="class_c_camera_component.html" title="Camera component" alt="" coords="576,157,718,184"/>
+<area shape="poly" title=" " alt="" coords="440,374,451,333,469,285,497,236,514,213,535,194,554,182,575,175,577,180,556,187,538,198,518,217,501,239,474,287,456,335,445,375"/>
+<area shape="rect" href="class_c_debug_camera_component.html" title="Component for debug camera" alt="" coords="558,208,736,235"/>
+<area shape="poly" title=" " alt="" coords="445,374,478,308,503,274,535,244,556,233,559,238,538,249,507,277,482,311,449,376"/>
+<area shape="rect" href="class_c_directional_light_component.html" title="Component for directional light" alt="" coords="554,259,740,285"/>
+<area shape="poly" title=" " alt="" coords="453,375,487,333,510,312,535,295,561,284,563,288,538,300,513,317,491,337,457,378"/>
+<area shape="rect" href="class_c_free_camera_control.html" title="Component for free camera movement" alt="" coords="576,309,718,336"/>
+<area shape="poly" title=" " alt="" coords="470,379,535,346,575,333,576,338,537,350,472,383"/>
+<area shape="rect" href="class_c_physics_sample_count_component.html" title="This component count for generated physics sample prefab" alt="" coords="536,360,758,387"/>
+<area shape="poly" title=" " alt="" coords="503,391,546,385,547,390,504,396"/>
+<area shape="rect" href="class_c_physics_sample_prefab_generate_component.html" title="This component regularly generates a physics sample prefab" alt="" coords="541,411,753,453"/>
+<area shape="poly" title=" " alt="" coords="504,409,541,415,540,420,503,415"/>
+<area shape="rect" href="class_c_piston_machine_component.html" title="Component for piston machine" alt="" coords="556,477,738,504"/>
+<area shape="poly" title=" " alt="" coords="468,423,501,444,537,463,571,474,570,479,535,468,498,449,466,428"/>
+<area shape="rect" href="class_c_player_anim_control_component.html" title="component for controlling animation of player" alt="" coords="545,528,749,555"/>
+<area shape="poly" title=" " alt="" coords="455,427,490,472,512,495,538,514,562,525,560,530,535,518,509,499,486,476,451,431"/>
+<area shape="rect" href="class_c_player_camera_control.html" title="Component for controlling player camera" alt="" coords="570,579,724,605"/>
+<area shape="poly" title=" " alt="" coords="449,430,462,462,481,498,506,534,538,564,571,580,569,585,535,569,502,538,476,501,457,464,444,432"/>
+<area shape="rect" href="class_c_player_control_component.html" title="Component for moving the player by key input" alt="" coords="560,629,734,656"/>
+<area shape="poly" title=" " alt="" coords="444,430,455,472,473,522,500,573,518,596,538,615,561,629,558,633,535,619,514,599,496,576,468,525,450,474,439,432"/>
+<area shape="rect" href="class_c_point_light_component.html" title="Component for point light" alt="" coords="570,680,724,707"/>
+<area shape="poly" title=" " alt="" coords="442,431,449,482,465,546,494,611,514,640,538,666,553,676,570,683,568,688,551,681,535,670,510,644,489,613,460,547,444,483,436,432"/>
+<area shape="rect" href="class_c_rigid_body.html" title="Rigid body component" alt="" coords="602,731,692,757"/>
+<area shape="poly" title=" " alt="" coords="440,432,444,492,459,569,471,609,488,649,510,685,538,717,552,727,568,734,603,741,601,746,567,739,550,731,535,721,506,688,483,651,466,611,453,570,439,492,434,432"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="183,381,335,424"/>
+<area shape="poly" title=" " alt="" coords="351,400,382,400,382,405,351,405"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="5,389,135,416"/>
+<area shape="poly" title=" " alt="" coords="150,400,182,400,182,405,150,405"/>
+<area shape="rect" href="class_c_box_collider3_d.html" title="3D Box collider component" alt="" coords="818,5,930,32"/>
+<area shape="poly" title=" " alt="" coords="711,53,817,29,818,34,712,58"/>
+<area shape="rect" href="class_c_capsule_collider3_d.html" title="3D Capsule collider component" alt="" coords="806,56,942,83"/>
+<area shape="poly" title=" " alt="" coords="712,67,805,67,805,72,712,72"/>
+<area shape="rect" href="class_c_sphere_collider3_d.html" title="3D Sphere collider component" alt="" coords="809,107,939,133"/>
+<area shape="poly" title=" " alt="" coords="712,81,811,103,810,109,711,86"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+ACComponent 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_component__coll__graph.png" border="0" usemap="#a_a_c_component_coll__map" alt="Collaboration graph"/></div>
+<map name="a_a_c_component_coll__map" id="a_a_c_component_coll__map">
+<area shape="rect" title="This is abstract class for component used in update processing" alt="" coords="173,188,278,215"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="5,81,158,124"/>
+<area shape="poly" title=" " alt="" coords="127,131,208,185,205,190,124,135"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="17,5,146,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,84,81,79,81,79,48"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="181,89,369,116"/>
+<area shape="poly" title=" " alt="" coords="264,131,234,189,229,187,259,129"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9b2b2d42737a1fe9bb397af5927ff322" id="r_a9b2b2d42737a1fe9bb397af5927ff322"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a9b2b2d42737a1fe9bb397af5927ff322">ACComponent</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner)</td></tr>
+<tr class="memdesc:a9b2b2d42737a1fe9bb397af5927ff322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a9b2b2d42737a1fe9bb397af5927ff322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f1dbaf0bb679d5f41f5541d39f80d9" id="r_a42f1dbaf0bb679d5f41f5541d39f80d9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a42f1dbaf0bb679d5f41f5541d39f80d9">Awake</a> ()</td></tr>
+<tr class="memdesc:a42f1dbaf0bb679d5f41f5541d39f80d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is added to an object  <br /></td></tr>
+<tr class="separator:a42f1dbaf0bb679d5f41f5541d39f80d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0601a998d4b46b7cf59edbfaa03683f" id="r_ae0601a998d4b46b7cf59edbfaa03683f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ae0601a998d4b46b7cf59edbfaa03683f">Start</a> ()</td></tr>
+<tr class="memdesc:ae0601a998d4b46b7cf59edbfaa03683f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing for the first update frame  <br /></td></tr>
+<tr class="separator:ae0601a998d4b46b7cf59edbfaa03683f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add7411781140bec2e38b0fe1d9bbb35a" id="r_add7411781140bec2e38b0fe1d9bbb35a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#add7411781140bec2e38b0fe1d9bbb35a">Update</a> ()</td></tr>
+<tr class="memdesc:add7411781140bec2e38b0fe1d9bbb35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update processing  <br /></td></tr>
+<tr class="separator:add7411781140bec2e38b0fe1d9bbb35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642abc9ed76961dd974d8934485e8055" id="r_a642abc9ed76961dd974d8934485e8055"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a642abc9ed76961dd974d8934485e8055">PrePhysicsUpdate</a> ()</td></tr>
+<tr class="memdesc:a642abc9ed76961dd974d8934485e8055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-update process for physics simulation  <br /></td></tr>
+<tr class="separator:a642abc9ed76961dd974d8934485e8055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88abe0db6e3b1ac90e738c5f1927fc91" id="r_a88abe0db6e3b1ac90e738c5f1927fc91"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a88abe0db6e3b1ac90e738c5f1927fc91">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:a88abe0db6e3b1ac90e738c5f1927fc91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process to be called at instance destruction  <br /></td></tr>
+<tr class="separator:a88abe0db6e3b1ac90e738c5f1927fc91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7ad72915aa2e6736bf55e39309d81e" id="r_a9f7ad72915aa2e6736bf55e39309d81e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a9f7ad72915aa2e6736bf55e39309d81e">OnEnable</a> ()</td></tr>
+<tr class="memdesc:a9f7ad72915aa2e6736bf55e39309d81e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is enabled  <br /></td></tr>
+<tr class="separator:a9f7ad72915aa2e6736bf55e39309d81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d54222d4b8efabdc66f145c3531da0" id="r_a02d54222d4b8efabdc66f145c3531da0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a02d54222d4b8efabdc66f145c3531da0">OnDisable</a> ()</td></tr>
+<tr class="memdesc:a02d54222d4b8efabdc66f145c3531da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is disabled  <br /></td></tr>
+<tr class="separator:a02d54222d4b8efabdc66f145c3531da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed0e5be88178643fba5329ab9b708a7" id="r_aaed0e5be88178643fba5329ab9b708a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#aaed0e5be88178643fba5329ab9b708a7">OnCollisionBegin</a> (const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;opponent)</td></tr>
+<tr class="memdesc:aaed0e5be88178643fba5329ab9b708a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when collision begins  <br /></td></tr>
+<tr class="separator:aaed0e5be88178643fba5329ab9b708a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ed1397839942770494c5ab8e96316b" id="r_a21ed1397839942770494c5ab8e96316b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a21ed1397839942770494c5ab8e96316b">OnCollisionHit</a> (const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;opponent)</td></tr>
+<tr class="memdesc:a21ed1397839942770494c5ab8e96316b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing during collision  <br /></td></tr>
+<tr class="separator:a21ed1397839942770494c5ab8e96316b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1e621bcb3400e0d38f73b758fc0def" id="r_a4f1e621bcb3400e0d38f73b758fc0def"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a4f1e621bcb3400e0d38f73b758fc0def">OnCollisionEnd</a> (const <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt; &amp;opponent)</td></tr>
+<tr class="memdesc:a4f1e621bcb3400e0d38f73b758fc0def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when collision ends  <br /></td></tr>
+<tr class="separator:a4f1e621bcb3400e0d38f73b758fc0def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d85ad6e45f8b12776d219d27e52210" id="r_ab7d85ad6e45f8b12776d219d27e52210"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ab7d85ad6e45f8b12776d219d27e52210">GetGameObject</a> ()</td></tr>
+<tr class="memdesc:ab7d85ad6e45f8b12776d219d27e52210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that this component has  <br /></td></tr>
+<tr class="separator:ab7d85ad6e45f8b12776d219d27e52210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f9b780e9c36420c4180c2de84f9733" id="r_ab8f9b780e9c36420c4180c2de84f9733"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ab8f9b780e9c36420c4180c2de84f9733">GetGameObject</a> () const</td></tr>
+<tr class="memdesc:ab8f9b780e9c36420c4180c2de84f9733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that this component has  <br /></td></tr>
+<tr class="separator:ab8f9b780e9c36420c4180c2de84f9733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c656cb09cfd57d43bd4ebdbd992091" id="r_a73c656cb09cfd57d43bd4ebdbd992091"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091">GetTransform</a> () const</td></tr>
+<tr class="memdesc:a73c656cb09cfd57d43bd4ebdbd992091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get transform of the object  <br /></td></tr>
+<tr class="separator:a73c656cb09cfd57d43bd4ebdbd992091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1677e72c01ba17b59662de344623cf18" id="r_a1677e72c01ba17b59662de344623cf18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18">GetScene</a> ()</td></tr>
+<tr class="memdesc:a1677e72c01ba17b59662de344623cf18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scene where this component exists <br  />
+  <br /></td></tr>
+<tr class="separator:a1677e72c01ba17b59662de344623cf18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1311a24d05c9ba046f11411fc300fa9c" id="r_a1311a24d05c9ba046f11411fc300fa9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1311a24d05c9ba046f11411fc300fa9c">GetScene</a> () const</td></tr>
+<tr class="memdesc:a1311a24d05c9ba046f11411fc300fa9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scene where this component exists <br  />
+  <br /></td></tr>
+<tr class="separator:a1311a24d05c9ba046f11411fc300fa9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7732e25a7799100e9b39be4f2ab1c4c0" id="r_a7732e25a7799100e9b39be4f2ab1c4c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_callback_system.html">CCallbackSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a7732e25a7799100e9b39be4f2ab1c4c0">GetCallbackSystem</a> ()</td></tr>
+<tr class="memdesc:a7732e25a7799100e9b39be4f2ab1c4c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the callback system that the gameobject has  <br /></td></tr>
+<tr class="separator:a7732e25a7799100e9b39be4f2ab1c4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9afe74cc73092c13a933bf7b82d8fa2" id="r_ac9afe74cc73092c13a933bf7b82d8fa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ac9afe74cc73092c13a933bf7b82d8fa2">SetIsActive</a> (bool isActive)</td></tr>
+<tr class="memdesc:ac9afe74cc73092c13a933bf7b82d8fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the active flag of this component  <br /></td></tr>
+<tr class="separator:ac9afe74cc73092c13a933bf7b82d8fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7205261ebda783caeedc9f1c210c2f4" id="r_ad7205261ebda783caeedc9f1c210c2f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ad7205261ebda783caeedc9f1c210c2f4">IsActiveSelf</a> () const</td></tr>
+<tr class="memdesc:ad7205261ebda783caeedc9f1c210c2f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component itself active?  <br /></td></tr>
+<tr class="separator:ad7205261ebda783caeedc9f1c210c2f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2aa36309aaee515ea36a1765c9b0f97" id="r_ad2aa36309aaee515ea36a1765c9b0f97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ad2aa36309aaee515ea36a1765c9b0f97">IsActiveOverall</a> () const</td></tr>
+<tr class="memdesc:ad2aa36309aaee515ea36a1765c9b0f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component itself and the game object that owns it active?  <br /></td></tr>
+<tr class="separator:ad2aa36309aaee515ea36a1765c9b0f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis&lt; ACComponent &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_ab2905432621e2737bc3f95cb9101a8e2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#ab2905432621e2737bc3f95cb9101a8e2">~ACWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="memdesc:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_aa549f0fbf364d84137496a7eed607bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_component.html">ACComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#aa549f0fbf364d84137496a7eed607bb5">WeakFromThis</a> ()</td></tr>
+<tr class="memdesc:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer from this class  <br /></td></tr>
+<tr class="separator:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_i_weak_ptr_from_this.html">IWeakPtrFromThis</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this" id="r_a5a3acc569a8076065b930bc52a87255c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_weak_ptr_from_this.html#a5a3acc569a8076065b930bc52a87255c">~IWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="separator:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a350f4f03d8f125df479f4bdd6603aa32" id="r_a350f4f03d8f125df479f4bdd6603aa32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">m_gameObj</a></td></tr>
+<tr class="memdesc:a350f4f03d8f125df479f4bdd6603aa32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game object that is the owner of this component  <br /></td></tr>
+<tr class="separator:a350f4f03d8f125df479f4bdd6603aa32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b75230266b37261b0078008cfacab2a" id="r_a1b75230266b37261b0078008cfacab2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1b75230266b37261b0078008cfacab2a">m_isActive</a></td></tr>
+<tr class="memdesc:a1b75230266b37261b0078008cfacab2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component active?  <br /></td></tr>
+<tr class="separator:a1b75230266b37261b0078008cfacab2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This is abstract class for component used in update processing </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a9b2b2d42737a1fe9bb397af5927ff322" name="a9b2b2d42737a1fe9bb397af5927ff322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2b2d42737a1fe9bb397af5927ff322">&#9670;&#160;</a></span>ACComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ACComponent::ACComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html">CGameObject</a> *&#160;</td>
+          <td class="paramname"><em>owner</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">owner</td><td>Game object that is the owner of this component </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a42f1dbaf0bb679d5f41f5541d39f80d9" name="a42f1dbaf0bb679d5f41f5541d39f80d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42f1dbaf0bb679d5f41f5541d39f80d9">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACComponent::Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing when this component is added to an object </p>
+
+<p><a class="el" href="class_a_c_collider3_d.html#ad2b275548b6f2185f5a1986af14b1707">ACCollider3D</a>, <a class="el" href="class_c_directional_light_component.html#a6932cd3fd362c7a3a4307565b9ad3d84">CDirectionalLightComponent</a>, <a class="el" href="class_c_point_light_component.html#a6c8c76575444498cb20809bc99e5fce2">CPointLightComponent</a>, <a class="el" href="class_c_rigid_body.html#aff76c36313cdffb15bbdb8bcf918c05a">CRigidBody</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a7732e25a7799100e9b39be4f2ab1c4c0" name="a7732e25a7799100e9b39be4f2ab1c4c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7732e25a7799100e9b39be4f2ab1c4c0">&#9670;&#160;</a></span>GetCallbackSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_callback_system.html">CCallbackSystem</a> * ACComponent::GetCallbackSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the callback system that the gameobject has </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_component_a7732e25a7799100e9b39be4f2ab1c4c0_icgraph.png" border="0" usemap="#aclass_a_c_component_a7732e25a7799100e9b39be4f2ab1c4c0_icgraph" alt=""/></div>
+<map name="aclass_a_c_component_a7732e25a7799100e9b39be4f2ab1c4c0_icgraph" id="aclass_a_c_component_a7732e25a7799100e9b39be4f2ab1c4c0_icgraph">
+<area shape="rect" title="Get the callback system that the gameobject has" alt="" coords="229,48,413,91"/>
+<area shape="rect" href="class_c_rigid_body.html#aff76c36313cdffb15bbdb8bcf918c05a" title="Awake processing" alt="" coords="25,5,161,32"/>
+<area shape="poly" title=" " alt="" coords="213,48,156,35,157,30,214,43"/>
+<area shape="rect" href="class_c_rigid_body.html#ae6c96bfddbcce724fc979deda6f185a4" title="Constructor" alt="" coords="10,56,176,83"/>
+<area shape="poly" title=" " alt="" coords="213,72,176,72,176,67,213,67"/>
+<area shape="rect" href="class_c_rigid_body.html#aaae104a70e5cab6749ff89ce9b450084" title="Set rigid body type" alt="" coords="5,107,181,133"/>
+<area shape="poly" title=" " alt="" coords="214,96,157,109,156,103,213,91"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab7d85ad6e45f8b12776d219d27e52210" name="ab7d85ad6e45f8b12776d219d27e52210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7d85ad6e45f8b12776d219d27e52210">&#9670;&#160;</a></span>GetGameObject() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt; ACComponent::GetGameObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get game object that this component has </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_component_ab7d85ad6e45f8b12776d219d27e52210_icgraph.png" border="0" usemap="#aclass_a_c_component_ab7d85ad6e45f8b12776d219d27e52210_icgraph" alt=""/></div>
+<map name="aclass_a_c_component_ab7d85ad6e45f8b12776d219d27e52210_icgraph" id="aclass_a_c_component_ab7d85ad6e45f8b12776d219d27e52210_icgraph">
+<area shape="rect" title="Get game object that this component has" alt="" coords="219,13,426,40"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a24b30ee1703ec1be07ea6d3561c97fc3" title="GJK(Gilbert&#45;Johnson&#45;Keerthi) collision algorithm" alt="" coords="5,5,171,48"/>
+<area shape="poly" title=" " alt="" coords="203,29,171,29,171,24,203,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab8f9b780e9c36420c4180c2de84f9733" name="ab8f9b780e9c36420c4180c2de84f9733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f9b780e9c36420c4180c2de84f9733">&#9670;&#160;</a></span>GetGameObject() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_game_object.html">CGameObject</a> &gt; ACComponent::GetGameObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get game object that this component has </p>
+
+</div>
+</div>
+<a id="a1677e72c01ba17b59662de344623cf18" name="a1677e72c01ba17b59662de344623cf18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1677e72c01ba17b59662de344623cf18">&#9670;&#160;</a></span>GetScene() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt; ACComponent::GetScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get scene where this component exists <br  />
+ </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_component_a1677e72c01ba17b59662de344623cf18_icgraph.png" border="0" usemap="#aclass_a_c_component_a1677e72c01ba17b59662de344623cf18_icgraph" alt=""/></div>
+<map name="aclass_a_c_component_a1677e72c01ba17b59662de344623cf18_icgraph" id="aclass_a_c_component_a1677e72c01ba17b59662de344623cf18_icgraph">
+<area shape="rect" title="Get scene where this component exists" alt="" coords="507,896,678,923"/>
+<area shape="rect" href="class_a_c_collider3_d.html#af039578b8e4159e4626febebd3a96056" title="Constructor" alt="" coords="11,5,194,32"/>
+<area shape="poly" title=" " alt="" coords="589,880,586,774,580,701,569,618,553,530,529,440,498,352,457,269,403,189,377,160,349,136,285,93,199,46,171,35,173,30,201,42,288,88,353,131,380,156,407,186,461,267,503,350,534,438,558,528,574,617,585,700,591,774,594,880"/>
+<area shape="rect" href="class_c_static_cb_dir_light_param.html#a22486d5d786dc04ff3d5391493c60c0f" title="Allocate data" alt="" coords="272,469,435,512"/>
+<area shape="poly" title=" " alt="" coords="587,881,579,809,559,714,542,663,520,613,492,567,457,526,433,510,436,505,461,522,496,564,525,611,547,661,564,713,584,808,593,880"/>
+<area shape="rect" href="class_a_c_collider3_d.html#ad2b275548b6f2185f5a1986af14b1707" title="Awake processing" alt="" coords="281,536,426,563"/>
+<area shape="poly" title=" " alt="" coords="586,881,576,818,554,735,537,692,516,649,489,610,457,577,442,567,425,560,427,555,445,562,461,573,493,607,520,647,542,689,559,733,581,816,591,880"/>
+<area shape="rect" href="class_c_directional_light_component.html#a6932cd3fd362c7a3a4307565b9ad3d84" title="Awake processing" alt="" coords="261,587,446,629"/>
+<area shape="poly" title=" " alt="" coords="583,882,568,831,543,767,507,700,484,670,457,643,441,632,444,628,461,639,488,667,511,697,548,764,573,829,588,881"/>
+<area shape="rect" href="class_c_point_light_component.html#a6c8c76575444498cb20809bc99e5fce2" title="Awake processing" alt="" coords="276,653,431,696"/>
+<area shape="poly" title=" " alt="" coords="578,883,560,844,534,798,499,750,457,710,429,694,432,690,461,706,503,747,538,795,565,842,583,881"/>
+<area shape="rect" href="class_c_light_v_p_calculator.html#ae6a4472d7b512277a57110629a5412dd" title="Calculate all light view projection matrices and return it" alt="" coords="286,720,421,763"/>
+<area shape="poly" title=" " alt="" coords="571,886,523,831,492,802,458,777,420,760,422,755,460,772,495,798,527,827,575,882"/>
+<area shape="rect" href="class_a_c_collider3_d.html#ac9c14cef93e0521810a59fb863f4e13c" title="Get this collider wrapper" alt="" coords="265,280,442,307"/>
+<area shape="poly" title=" " alt="" coords="589,881,584,787,567,653,550,579,527,504,496,431,457,364,442,347,424,332,386,310,389,305,427,328,446,343,461,361,501,429,532,502,555,577,572,652,590,787,594,881"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a92f32db9b754241a044949413877f9ab" title="Processing at destruction" alt="" coords="18,405,187,432"/>
+<area shape="poly" title=" " alt="" coords="585,881,570,779,543,642,526,574,506,513,483,464,457,433,422,411,382,397,341,389,298,387,217,393,150,407,149,402,216,388,298,381,341,384,384,391,424,406,461,429,487,461,511,511,531,572,549,641,575,778,590,880"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a88239cd448e608af230c96f371ca9aac" title="Start processing" alt="" coords="35,456,170,483"/>
+<area shape="poly" title=" " alt="" coords="585,881,569,784,542,655,524,591,504,534,482,488,457,459,437,450,408,444,332,442,247,449,170,460,170,455,247,444,332,437,408,439,438,445,461,455,486,485,509,532,529,589,547,654,574,783,590,880"/>
+<area shape="rect" href="class_a_c_collider3_d.html#adb51ed432035e399b4768d9b06da8db8" title="Get this collider wrapper" alt="" coords="265,787,442,813"/>
+<area shape="poly" title=" " alt="" coords="560,888,513,857,458,828,425,816,427,811,460,823,516,852,563,884"/>
+<area shape="rect" href="class_c_rigid_body.html#a10532b33bd766ec20ffba2032c60403a" title="Processing at destruction" alt="" coords="274,837,433,864"/>
+<area shape="poly" title=" " alt="" coords="522,894,458,879,412,867,413,862,460,873,523,889"/>
+<area shape="rect" href="class_c_point_light_component.html#a570f19b3372d8715c0ddf81b1f8ce9b7" title="Process at disable" alt="" coords="276,888,431,931"/>
+<area shape="poly" title=" " alt="" coords="491,912,431,912,431,907,491,907"/>
+<area shape="rect" href="class_c_point_light_component.html#a227f0ea977f189a11e85f9f135d0a460" title="Process at enable" alt="" coords="276,955,431,997"/>
+<area shape="poly" title=" " alt="" coords="528,930,432,957,430,952,526,925"/>
+<area shape="rect" href="class_c_rigid_body.html#aaae104a70e5cab6749ff89ce9b450084" title="Set rigid body type" alt="" coords="266,1021,441,1048"/>
+<area shape="poly" title=" " alt="" coords="568,936,520,975,460,1012,429,1023,427,1018,458,1007,517,970,564,931"/>
+<area shape="rect" href="class_c_directional_light_component.html#a1cc688d698e0c4f6e4af31980d26bff6" title="Starting process" alt="" coords="261,1072,446,1115"/>
+<area shape="poly" title=" " alt="" coords="577,938,529,1000,497,1033,460,1062,439,1074,436,1069,458,1058,493,1029,525,996,572,934"/>
+<area shape="rect" href="class_c_piston_machine_component.html#a1179a7d1d12fe2d9d99a5b4dbd5d15d8" title="Start processing" alt="" coords="262,1139,445,1181"/>
+<area shape="poly" title=" " alt="" coords="584,938,567,980,541,1031,505,1084,461,1129,442,1140,440,1136,457,1125,501,1080,536,1029,562,978,579,936"/>
+<area shape="rect" href="class_c_player_camera_control.html#ae0963721668fae2978a0b556ef5c7c06" title="Starting process" alt="" coords="277,1205,430,1248"/>
+<area shape="poly" title=" " alt="" coords="589,939,575,993,550,1062,513,1133,489,1166,461,1195,432,1213,429,1208,457,1191,485,1163,508,1130,545,1060,570,991,583,937"/>
+<area shape="rect" href="class_c_point_light_component.html#aad516930d60038250be77e23e4bd43f6" title="Starting process" alt="" coords="276,1272,431,1315"/>
+<area shape="poly" title=" " alt="" coords="591,938,581,1004,559,1091,542,1137,521,1182,494,1225,461,1262,432,1280,430,1276,457,1258,489,1221,516,1180,537,1135,554,1089,576,1003,586,938"/>
+<area shape="rect" href="class_c_rigid_body.html#a075d9d55b87e21f6156fec20702a3711" title="Start processing" alt="" coords="291,1339,416,1365"/>
+<area shape="poly" title=" " alt="" coords="594,938,589,1016,570,1121,553,1178,530,1233,500,1284,461,1329,440,1342,418,1350,416,1345,438,1337,457,1325,495,1281,525,1230,548,1176,565,1120,583,1015,589,938"/>
+<area shape="rect" href="class_c_player_control_component.html#ac60e570ba93b831af8a61f402f54d390" title="Updating process" alt="" coords="266,1389,441,1432"/>
+<area shape="poly" title=" " alt="" coords="595,939,591,1024,585,1080,574,1141,558,1205,534,1268,502,1327,461,1379,442,1393,439,1389,457,1375,498,1324,529,1266,552,1203,569,1140,580,1079,586,1023,589,938"/>
+<area shape="rect" href="class_c_debug_camera_component.html#af0ee5515dfa3df0921d98029177294eb" title="Update processing" alt="" coords="264,1456,443,1499"/>
+<area shape="poly" title=" " alt="" coords="591,939,575,1049,548,1201,530,1278,510,1348,487,1406,461,1446,445,1459,441,1455,457,1442,482,1403,505,1346,525,1276,543,1200,570,1048,585,938"/>
+<area shape="rect" href="class_c_physics_sample_prefab_generate_component.html#a0de02f7cfa5e95e5d20cf5ab97efce11" title="Update processing" alt="" coords="248,1523,459,1565"/>
+<area shape="poly" title=" " alt="" coords="591,938,578,1060,552,1232,535,1320,514,1400,489,1467,476,1493,461,1512,447,1524,444,1520,457,1509,471,1490,484,1464,509,1399,530,1319,547,1231,573,1060,586,937"/>
+<area shape="rect" href="class_c_auto_destroy_component.html#a7a98844d10d71b5f9809d727a258b899" title="Update processing" alt="" coords="269,1589,438,1632"/>
+<area shape="poly" title=" " alt="" coords="592,939,580,1074,556,1265,539,1363,517,1453,492,1528,477,1557,461,1579,439,1596,436,1592,457,1575,472,1554,487,1526,512,1452,534,1362,551,1264,575,1073,587,938"/>
+<area shape="poly" title=" " alt="" coords="329,269,288,216,245,151,232,120,226,93,218,70,198,46,180,35,183,30,201,42,222,67,231,92,237,118,250,148,293,213,333,266"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a4e8c0b529813902dbed5f36568bd1e43" title="Is the ID sent the same as my leaf node ID?" alt="" coords="10,339,195,381"/>
+<area shape="poly" title=" " alt="" coords="286,314,186,341,185,335,285,309"/>
+<area shape="rect" href="class_c_box_collider3_d.html#ab95001e7e3afb72103b17fa82a75d529" title="Generate a reduced version of the local inertia tensor" alt="" coords="16,56,189,99"/>
+<area shape="poly" title=" " alt="" coords="334,268,280,192,242,149,198,113,178,102,181,97,201,108,246,146,284,188,339,265"/>
+<area shape="rect" href="class_c_capsule_collider3_d.html#a017a846964e11458061c395b689a6f3a" title="Generate a reduced version of the local inertia tensor" alt="" coords="17,123,188,181"/>
+<area shape="poly" title=" " alt="" coords="320,273,264,235,198,196,175,184,178,179,201,191,267,231,323,269"/>
+<area shape="rect" href="class_c_sphere_collider3_d.html#ac281b98f0d2b0981620a0c294aead799" title="Generate a reduced version of the local inertia tensor" alt="" coords="5,205,200,248"/>
+<area shape="poly" title=" " alt="" coords="285,278,185,251,186,246,286,273"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a7b3a04765f6a5db384344fbd0ff6a05a" title="Get list class of the contact colliders for each categories" alt="" coords="16,272,189,315"/>
+<area shape="poly" title=" " alt="" coords="249,296,189,296,189,291,249,291"/>
+<area shape="poly" title=" " alt="" coords="321,318,201,396,169,407,167,402,198,391,318,313"/>
+<area shape="poly" title=" " alt="" coords="335,321,280,384,242,418,201,446,171,459,169,454,198,442,239,413,276,380,331,317"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1311a24d05c9ba046f11411fc300fa9c" name="a1311a24d05c9ba046f11411fc300fa9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1311a24d05c9ba046f11411fc300fa9c">&#9670;&#160;</a></span>GetScene() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_scene.html">CScene</a> &gt; ACComponent::GetScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get scene where this component exists <br  />
+ </p>
+
+</div>
+</div>
+<a id="a73c656cb09cfd57d43bd4ebdbd992091" name="a73c656cb09cfd57d43bd4ebdbd992091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c656cb09cfd57d43bd4ebdbd992091">&#9670;&#160;</a></span>GetTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_transformf.html">Transformf</a> &amp; ACComponent::GetTransform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get transform of the object </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_component_a73c656cb09cfd57d43bd4ebdbd992091_icgraph.png" border="0" usemap="#aclass_a_c_component_a73c656cb09cfd57d43bd4ebdbd992091_icgraph" alt=""/></div>
+<map name="aclass_a_c_component_a73c656cb09cfd57d43bd4ebdbd992091_icgraph" id="aclass_a_c_component_a73c656cb09cfd57d43bd4ebdbd992091_icgraph">
+<area shape="rect" title="Get transform of the object" alt="" coords="742,565,934,592"/>
+<area shape="rect" href="class_c_static_cb_dir_light_param.html#a22486d5d786dc04ff3d5391493c60c0f" title="Allocate data" alt="" coords="508,5,670,48"/>
+<area shape="poly" title=" " alt="" coords="834,550,830,458,824,397,812,330,794,261,769,192,736,127,692,69,669,50,672,46,696,65,740,124,774,190,799,259,817,329,829,397,836,458,840,549"/>
+<area shape="rect" href="class_c_camera_component.html#aa5a692a13628d280d1c95a82fbf2fd29" title="Apply the rotation of this gameobject to this look direction vector" alt="" coords="205,72,435,99"/>
+<area shape="poly" title=" " alt="" coords="830,550,812,450,782,317,763,251,741,191,718,143,693,113,675,103,650,95,586,85,510,81,435,82,435,77,510,76,586,80,651,90,677,98,696,109,722,141,746,189,768,249,787,316,817,449,835,549"/>
+<area shape="rect" href="class_c_light_v_p_calculator.html#ae6a4472d7b512277a57110629a5412dd" title="Calculate all light view projection matrices and return it" alt="" coords="253,248,387,291"/>
+<area shape="poly" title=" " alt="" coords="824,552,805,510,777,458,740,407,717,384,693,364,665,347,640,336,594,327,544,323,482,313,387,289,388,284,484,308,545,318,595,321,642,331,668,342,696,359,721,380,744,403,782,455,810,507,829,550"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body.html#a32d28969b8faaa591e76afbb3d5011df" title="Processing of any scaling or rotation changes" alt="" coords="508,189,669,232"/>
+<area shape="poly" title=" " alt="" coords="830,550,817,488,792,406,774,362,752,320,725,281,693,246,668,230,671,226,696,242,729,277,756,317,779,360,797,404,822,486,835,549"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body.html#a6fb5270137cfebea51dddaa62c2014b3" title="Constructor is inherited" alt="" coords="508,256,669,299"/>
+<area shape="poly" title=" " alt="" coords="826,551,809,502,781,440,742,376,719,346,693,319,665,302,668,297,696,315,723,342,747,372,786,437,814,500,831,550"/>
+<area shape="rect" href="class_c_camera_component.html#abfa4560e0c329083f80aaa8a7a6f553e" title="Generate a view matrix" alt="" coords="488,123,690,165"/>
+<area shape="poly" title=" " alt="" coords="832,550,823,476,801,376,783,323,759,271,729,222,693,179,678,168,681,164,696,175,734,219,764,269,788,321,806,375,828,475,838,550"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a97c4e77d7696e71cde0659336ef054cd" title="Get the center coordinates considering offset" alt="" coords="506,440,671,467"/>
+<area shape="poly" title=" " alt="" coords="808,557,757,518,693,481,662,470,663,465,695,476,760,513,811,553"/>
+<area shape="rect" href="class_c_capsule_collider3_d.html#a49cefde5cbc511d482705e3a8f937d91" title="Get height of capsule collider" alt="" coords="521,373,657,416"/>
+<area shape="poly" title=" " alt="" coords="816,554,765,492,731,459,693,430,656,413,658,408,696,426,734,455,769,488,821,551"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body.html#ad3d70c86d2da4217d0bf940f0be05e38" title="Initialize inertia tensor" alt="" coords="508,491,669,533"/>
+<area shape="poly" title=" " alt="" coords="770,563,669,536,671,531,771,558"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="493,557,684,600"/>
+<area shape="poly" title=" " alt="" coords="727,581,685,581,685,576,727,576"/>
+<area shape="rect" href="class_c_camera_component.html#ac7a5567d296aef6d7e1705257ae94161" title="Processing for the first update frame" alt="" coords="500,624,677,651"/>
+<area shape="poly" title=" " alt="" coords="764,599,649,626,648,621,763,593"/>
+<area shape="rect" href="class_c_piston_machine_component.html#a1179a7d1d12fe2d9d99a5b4dbd5d15d8" title="Start processing" alt="" coords="498,675,680,717"/>
+<area shape="poly" title=" " alt="" coords="805,603,755,634,695,665,666,677,664,672,693,660,752,630,803,598"/>
+<area shape="rect" href="class_c_player_control_component.html#ac60e570ba93b831af8a61f402f54d390" title="Updating process" alt="" coords="502,741,676,784"/>
+<area shape="poly" title=" " alt="" coords="821,607,769,669,734,703,696,732,673,743,671,739,693,727,731,698,765,665,816,603"/>
+<area shape="rect" href="class_c_debug_camera_component.html#af0ee5515dfa3df0921d98029177294eb" title="Update processing" alt="" coords="500,808,678,851"/>
+<area shape="poly" title=" " alt="" coords="829,607,809,649,781,700,743,753,696,798,677,810,674,805,693,794,739,749,776,697,804,646,824,605"/>
+<area shape="rect" href="class_c_physics_sample_prefab_generate_component.html#a0de02f7cfa5e95e5d20cf5ab97efce11" title="Update processing" alt="" coords="483,875,694,917"/>
+<area shape="poly" title=" " alt="" coords="833,608,817,662,790,731,750,803,725,836,696,865,679,876,676,872,693,861,721,832,746,800,785,729,812,660,828,606"/>
+<area shape="rect" href="class_c_auto_destroy_component.html#a7a98844d10d71b5f9809d727a258b899" title="Update processing" alt="" coords="505,941,673,984"/>
+<area shape="poly" title=" " alt="" coords="836,608,824,674,799,760,781,807,758,852,730,894,696,931,675,946,671,942,693,927,726,891,753,849,776,804,794,759,819,672,831,607"/>
+<area shape="rect" href="class_c_piston_machine_component.html#ae51fc446ace0b672e1b77bdc758aa74b" title="Update processing" alt="" coords="498,1008,680,1051"/>
+<area shape="poly" title=" " alt="" coords="838,608,830,685,808,789,790,845,766,901,735,952,696,998,681,1010,678,1005,692,994,730,949,761,898,785,843,803,788,824,684,833,607"/>
+<area shape="rect" href="class_c_player_camera_control.html#a9af9fa4514596f1f1d7902c1f5bcf810" title="Updating process" alt="" coords="512,1075,665,1117"/>
+<area shape="poly" title=" " alt="" coords="840,608,835,696,828,754,816,818,798,884,773,949,739,1010,696,1065,667,1084,664,1079,693,1061,735,1007,768,947,793,882,811,816,823,753,830,695,834,608"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a2e9380db3cf36af442f3c85fed83fdaf" title="Update the scaling offset of the center coordinates of the collider" alt="" coords="494,1141,684,1184"/>
+<area shape="poly" title=" " alt="" coords="836,608,818,721,789,878,770,957,748,1030,723,1090,696,1131,682,1143,679,1139,692,1128,719,1087,743,1028,764,956,784,877,813,720,830,607"/>
+<area shape="poly" title=" " alt="" coords="473,121,384,102,385,97,474,116"/>
+<area shape="poly" title=" " alt="" coords="499,173,484,180,415,215,356,250,353,245,412,210,482,175,497,169"/>
+<area shape="rect" href="class_c_camera_component.html#a416f1458b04bcd673fc5c68b5c1df927" title="Generate a view projection matrix" alt="" coords="219,123,421,165"/>
+<area shape="poly" title=" " alt="" coords="472,147,421,147,421,141,472,141"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#ab4fa4bb97bc39b0f1441ab20feb24f88" title="Allocate data for debugging collider shape" alt="" coords="243,373,397,416"/>
+<area shape="poly" title=" " alt="" coords="509,439,396,414,397,409,510,433"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a6df57f3b5f2ac6504cc0cc660f564ec3" title="Generate bounding volume" alt="" coords="217,440,423,483"/>
+<area shape="poly" title=" " alt="" coords="491,459,423,461,423,456,491,454"/>
+<area shape="poly" title=" " alt="" coords="505,397,397,397,397,392,505,392"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="263,565,377,592"/>
+<area shape="poly" title=" " alt="" coords="477,581,377,581,377,576,477,576"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="56,565,106,592"/>
+<area shape="poly" title=" " alt="" coords="247,581,106,581,106,576,247,576"/>
+<area shape="poly" title=" " alt="" coords="117,563,123,556,120,551,106,546,81,544,52,547,40,553,41,560,57,569,55,574,37,563,35,550,51,542,81,539,107,541,123,547,128,556,122,566"/>
+<area shape="rect" href="class_a_c_collider3_d.html#af039578b8e4159e4626febebd3a96056" title="Constructor" alt="" coords="228,1007,412,1033"/>
+<area shape="poly" title=" " alt="" coords="486,1135,481,1131,464,1110,457,1088,450,1067,433,1047,411,1035,413,1030,437,1043,455,1064,462,1086,469,1107,485,1127,489,1131"/>
+<area shape="rect" href="class_a_c_collider3_d.html#ad2b275548b6f2185f5a1986af14b1707" title="Awake processing" alt="" coords="247,1057,393,1084"/>
+<area shape="poly" title=" " alt="" coords="495,1138,482,1132,458,1114,434,1098,392,1085,394,1080,436,1094,461,1110,484,1127,497,1133"/>
+<area shape="rect" href="class_a_c_collider3_d.html#adaa50b7d2610e7004e9699e57ea568d3" title="Check if scaling and rotation updates are needed, update if necessary" alt="" coords="227,1108,413,1151"/>
+<area shape="poly" title=" " alt="" coords="478,1152,413,1144,414,1138,479,1146"/>
+<area shape="rect" href="class_a_c_collider3_d.html#aa636755cea54cf57a8583660cf0acd4a" title="Update required values according to scale and rotation without checks" alt="" coords="221,1175,419,1217"/>
+<area shape="poly" title=" " alt="" coords="479,1179,419,1186,419,1181,478,1174"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a08b4ee0cc419e72c4aa60241b37cb111" title="Set the offset of the center coordinates of the collider" alt="" coords="240,1241,400,1268"/>
+<area shape="poly" title=" " alt="" coords="531,1193,436,1232,394,1243,393,1238,434,1227,529,1188"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a88239cd448e608af230c96f371ca9aac" title="Start processing" alt="" coords="253,1292,387,1319"/>
+<area shape="poly" title=" " alt="" coords="556,1197,503,1242,470,1264,436,1282,388,1298,386,1293,434,1278,467,1259,499,1237,553,1193"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#ae5986e9ff5d47f5308696d6a9d0c3254" title="Rebuild the object with the current prefab name" alt="" coords="5,1175,157,1217"/>
+<area shape="poly" title=" " alt="" coords="206,1199,157,1199,157,1193,206,1193"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a3b2ef8a6ed90c46b9df6397db2293700" title="Set eular angle" alt="" coords="6,1241,156,1284"/>
+<area shape="poly" title=" " alt="" coords="228,1224,157,1244,156,1239,226,1219"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a9d5f14b467a4f3a1027f9eef7e8feead" title="Set scale" alt="" coords="6,1108,156,1151"/>
+<area shape="poly" title=" " alt="" coords="226,1173,156,1153,157,1148,228,1168"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad2aa36309aaee515ea36a1765c9b0f97" name="ad2aa36309aaee515ea36a1765c9b0f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2aa36309aaee515ea36a1765c9b0f97">&#9670;&#160;</a></span>IsActiveOverall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ACComponent::IsActiveOverall </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is this component itself and the game object that owns it active? </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_component_ad2aa36309aaee515ea36a1765c9b0f97_icgraph.png" border="0" usemap="#aclass_a_c_component_ad2aa36309aaee515ea36a1765c9b0f97_icgraph" alt=""/></div>
+<map name="aclass_a_c_component_ad2aa36309aaee515ea36a1765c9b0f97_icgraph" id="aclass_a_c_component_ad2aa36309aaee515ea36a1765c9b0f97_icgraph">
+<area shape="rect" title="Is this component itself and the game object that owns it active?" alt="" coords="213,31,410,57"/>
+<area shape="rect" href="class_c_rigid_body.html#a83e8eb50f4c574bfdc67c43b8e82c328" title="Add force to this rigid body" alt="" coords="8,5,162,32"/>
+<area shape="poly" title=" " alt="" coords="197,34,162,30,163,25,198,29"/>
+<area shape="rect" href="class_c_rigid_body.html#a26285a1bd56ce0dbb49a681da72d624a" title="Add torque to this rigid body" alt="" coords="5,56,165,83"/>
+<area shape="poly" title=" " alt="" coords="198,59,165,63,165,58,197,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad7205261ebda783caeedc9f1c210c2f4" name="ad7205261ebda783caeedc9f1c210c2f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7205261ebda783caeedc9f1c210c2f4">&#9670;&#160;</a></span>IsActiveSelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ACComponent::IsActiveSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this component itself active? </p>
+
+</div>
+</div>
+<a id="aaed0e5be88178643fba5329ab9b708a7" name="aaed0e5be88178643fba5329ab9b708a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed0e5be88178643fba5329ab9b708a7">&#9670;&#160;</a></span>OnCollisionBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACComponent::OnCollisionBegin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;&#160;</td>
+          <td class="paramname"><em>opponent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing when collision begins </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opponent</td><td>Information of a contacted collider </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4f1e621bcb3400e0d38f73b758fc0def" name="a4f1e621bcb3400e0d38f73b758fc0def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f1e621bcb3400e0d38f73b758fc0def">&#9670;&#160;</a></span>OnCollisionEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACComponent::OnCollisionEnd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>opponent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing when collision ends </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opponent</td><td>Weak pointer to a contacted collider </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a21ed1397839942770494c5ab8e96316b" name="a21ed1397839942770494c5ab8e96316b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ed1397839942770494c5ab8e96316b">&#9670;&#160;</a></span>OnCollisionHit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACComponent::OnCollisionHit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;&#160;</td>
+          <td class="paramname"><em>opponent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing during collision </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opponent</td><td>Information of a contacted collider </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a88abe0db6e3b1ac90e738c5f1927fc91" name="a88abe0db6e3b1ac90e738c5f1927fc91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88abe0db6e3b1ac90e738c5f1927fc91">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACComponent::OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Process to be called at instance destruction </p>
+
+<p><a class="el" href="class_c_camera_component.html#a312614c976b29c7272d6c7c71b65ce8f">CCameraComponent</a>, <a class="el" href="class_a_c_collider3_d.html#a92f32db9b754241a044949413877f9ab">ACCollider3D</a>, <a class="el" href="class_c_physics_sample_count_component.html#ab57e7706eaf440d55fd31ee35fdb034f">CPhysicsSampleCountComponent</a>, <a class="el" href="class_c_rigid_body.html#a10532b33bd766ec20ffba2032c60403a">CRigidBody</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a02d54222d4b8efabdc66f145c3531da0" name="a02d54222d4b8efabdc66f145c3531da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d54222d4b8efabdc66f145c3531da0">&#9670;&#160;</a></span>OnDisable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACComponent::OnDisable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing when this component is disabled </p>
+<p>Also called when the object is destroyed </p>
+
+<p><a class="el" href="class_c_free_camera_control.html#ac3da183e216d9ef17d05bccfded28930">CFreeCameraControl</a>, <a class="el" href="class_c_point_light_component.html#a570f19b3372d8715c0ddf81b1f8ce9b7">CPointLightComponent</a>, <a class="el" href="class_c_rigid_body.html#a76bd729c2f736a37107527ebed824592">CRigidBody</a>で再実装されています。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_component_a02d54222d4b8efabdc66f145c3531da0_icgraph.png" border="0" usemap="#aclass_a_c_component_a02d54222d4b8efabdc66f145c3531da0_icgraph" alt=""/></div>
+<map name="aclass_a_c_component_a02d54222d4b8efabdc66f145c3531da0_icgraph" id="aclass_a_c_component_a02d54222d4b8efabdc66f145c3531da0_icgraph">
+<area shape="rect" title="Processing when this component is disabled" alt="" coords="232,5,405,32"/>
+<area shape="rect" href="class_a_c_component.html#ac9afe74cc73092c13a933bf7b82d8fa2" title="Set the active flag of this component" alt="" coords="5,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="216,21,184,21,184,16,216,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9f7ad72915aa2e6736bf55e39309d81e" name="a9f7ad72915aa2e6736bf55e39309d81e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f7ad72915aa2e6736bf55e39309d81e">&#9670;&#160;</a></span>OnEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACComponent::OnEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing when this component is enabled </p>
+<p>Also called when the object is created </p>
+
+<p><a class="el" href="class_c_point_light_component.html#a227f0ea977f189a11e85f9f135d0a460">CPointLightComponent</a>で再実装されています。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_component_a9f7ad72915aa2e6736bf55e39309d81e_icgraph.png" border="0" usemap="#aclass_a_c_component_a9f7ad72915aa2e6736bf55e39309d81e_icgraph" alt=""/></div>
+<map name="aclass_a_c_component_a9f7ad72915aa2e6736bf55e39309d81e_icgraph" id="aclass_a_c_component_a9f7ad72915aa2e6736bf55e39309d81e_icgraph">
+<area shape="rect" title="Processing when this component is enabled" alt="" coords="232,5,402,32"/>
+<area shape="rect" href="class_a_c_component.html#ac9afe74cc73092c13a933bf7b82d8fa2" title="Set the active flag of this component" alt="" coords="5,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="216,21,184,21,184,16,216,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a642abc9ed76961dd974d8934485e8055" name="a642abc9ed76961dd974d8934485e8055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a642abc9ed76961dd974d8934485e8055">&#9670;&#160;</a></span>PrePhysicsUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACComponent::PrePhysicsUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pre-update process for physics simulation </p>
+
+</div>
+</div>
+<a id="ac9afe74cc73092c13a933bf7b82d8fa2" name="ac9afe74cc73092c13a933bf7b82d8fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9afe74cc73092c13a933bf7b82d8fa2">&#9670;&#160;</a></span>SetIsActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACComponent::SetIsActive </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isActive</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the active flag of this component </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_component_ac9afe74cc73092c13a933bf7b82d8fa2_cgraph.png" border="0" usemap="#aclass_a_c_component_ac9afe74cc73092c13a933bf7b82d8fa2_cgraph" alt=""/></div>
+<map name="aclass_a_c_component_ac9afe74cc73092c13a933bf7b82d8fa2_cgraph" id="aclass_a_c_component_ac9afe74cc73092c13a933bf7b82d8fa2_cgraph">
+<area shape="rect" title="Set the active flag of this component" alt="" coords="5,31,184,57"/>
+<area shape="rect" href="class_a_c_component.html#a02d54222d4b8efabdc66f145c3531da0" title="Processing when this component is disabled" alt="" coords="232,5,405,32"/>
+<area shape="poly" title=" " alt="" coords="184,31,216,28,216,33,184,37"/>
+<area shape="rect" href="class_a_c_component.html#a9f7ad72915aa2e6736bf55e39309d81e" title="Processing when this component is enabled" alt="" coords="233,56,404,83"/>
+<area shape="poly" title=" " alt="" coords="184,51,218,55,217,61,184,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae0601a998d4b46b7cf59edbfaa03683f" name="ae0601a998d4b46b7cf59edbfaa03683f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0601a998d4b46b7cf59edbfaa03683f">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACComponent::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing for the first update frame </p>
+
+<p><a class="el" href="class_c_directional_light_component.html#a1cc688d698e0c4f6e4af31980d26bff6">CDirectionalLightComponent</a>, <a class="el" href="class_c_player_control_component.html#ad630d146fab09462b188bd553cc8111c">CPlayerControlComponent</a>, <a class="el" href="class_c_camera_component.html#ac7a5567d296aef6d7e1705257ae94161">CCameraComponent</a>, <a class="el" href="class_c_debug_camera_component.html#ac963f66bfafed78f40a26f5f61b7fadb">CDebugCameraComponent</a>, <a class="el" href="class_c_physics_sample_prefab_generate_component.html#a67ee010e8fc6c8cfaed8a22899e16b61">CPhysicsSamplePrefabGenerateComponent</a>, <a class="el" href="class_c_free_camera_control.html#a958fe670ffbfad0322f3bce1ffc37d61">CFreeCameraControl</a>, <a class="el" href="class_c_piston_machine_component.html#a1179a7d1d12fe2d9d99a5b4dbd5d15d8">CPistonMachineComponent</a>, <a class="el" href="class_c_player_anim_control_component.html#af06b24b9b842e3b70c05158b0d980748">CPlayerAnimControlComponent</a>, <a class="el" href="class_c_player_camera_control.html#ae0963721668fae2978a0b556ef5c7c06">CPlayerCameraControl</a>, <a class="el" href="class_c_point_light_component.html#aad516930d60038250be77e23e4bd43f6">CPointLightComponent</a>, <a class="el" href="class_c_rigid_body.html#a075d9d55b87e21f6156fec20702a3711">CRigidBody</a>, <a class="el" href="class_a_c_collider3_d.html#a88239cd448e608af230c96f371ca9aac">ACCollider3D</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="add7411781140bec2e38b0fe1d9bbb35a" name="add7411781140bec2e38b0fe1d9bbb35a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add7411781140bec2e38b0fe1d9bbb35a">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACComponent::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update processing </p>
+
+<p><a class="el" href="class_c_player_control_component.html#ac60e570ba93b831af8a61f402f54d390">CPlayerControlComponent</a>, <a class="el" href="class_c_debug_camera_component.html#af0ee5515dfa3df0921d98029177294eb">CDebugCameraComponent</a>, <a class="el" href="class_c_physics_sample_prefab_generate_component.html#a0de02f7cfa5e95e5d20cf5ab97efce11">CPhysicsSamplePrefabGenerateComponent</a>, <a class="el" href="class_c_auto_destroy_component.html#a7a98844d10d71b5f9809d727a258b899">CAutoDestroyComponent</a>, <a class="el" href="class_c_free_camera_control.html#a1ae163aeb28d4cc839077f1c2c1685b9">CFreeCameraControl</a>, <a class="el" href="class_c_piston_machine_component.html#ae51fc446ace0b672e1b77bdc758aa74b">CPistonMachineComponent</a>, <a class="el" href="class_c_player_anim_control_component.html#ac4ce0e82364b55af98027871d5f6d727">CPlayerAnimControlComponent</a>, <a class="el" href="class_c_player_camera_control.html#a9af9fa4514596f1f1d7902c1f5bcf810">CPlayerCameraControl</a>, <a class="el" href="class_c_rigid_body.html#aa050e9de295fade523fa1d5efcb8aea0">CRigidBody</a>, <a class="el" href="class_a_c_collider3_d.html#a3fc9420ace54618403f4cbb88eddd7d0">ACCollider3D</a>で再実装されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a350f4f03d8f125df479f4bdd6603aa32" name="a350f4f03d8f125df479f4bdd6603aa32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350f4f03d8f125df479f4bdd6603aa32">&#9670;&#160;</a></span>m_gameObj</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt;<a class="el" href="class_c_game_object.html">CGameObject</a>&gt; ACComponent::m_gameObj</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Game object that is the owner of this component </p>
+
+</div>
+</div>
+<a id="a1b75230266b37261b0078008cfacab2a" name="a1b75230266b37261b0078008cfacab2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b75230266b37261b0078008cfacab2a">&#9670;&#160;</a></span>m_isActive</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ACComponent::m_isActive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this component active? </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_component_8h_source.html">Component.h</a></li>
+<li><a class="el" href="_component_8cpp.html">Component.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

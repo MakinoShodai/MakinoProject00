@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: AbstractSbAllocator.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">AbstractSbAllocator.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_abstract_sb_allocator_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __ABSTRACT_SB_ALLOCATOR_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __ABSTRACT_SB_ALLOCATOR_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_structured_buffer_resource_8h.html">StructuredBufferResource.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_descriptor_heap_8h.html">DescriptorHeap.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_swap_chain_8h.html">SwapChain.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_stable_handle_vector_8h.html">StableHandleVector.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_application_8h.html">Application.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StructBuffType&gt;</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_sb_data_per_component.html">   20</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_sb_data_per_component.html">SbDataPerComponent</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_sb_data_per_component.html#a0fc0b4dac315a4629d7935fa1460a461">   22</a></span>    <a class="code hl_class" href="class_c_structured_buffer_resource.html">CStructuredBufferResource&lt;StructBuffType&gt;</a> <a class="code hl_variable" href="struct_sb_data_per_component.html#a0fc0b4dac315a4629d7935fa1460a461">structuredBuffers</a>[<a class="code hl_variable" href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a>];</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_sb_data_per_component.html#a4b4e5028443856218d3680566e917099">   24</a></span>    <a class="code hl_class" href="class_c_descriptor_heap.html">CDescriptorHeap</a> <a class="code hl_variable" href="struct_sb_data_per_component.html#a4b4e5028443856218d3680566e917099">descriptorHeaps</a>[<a class="code hl_variable" href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a>];</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StructBuffType&gt;</div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_sb_data_per_mesh.html">   29</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_sb_data_per_mesh.html">SbDataPerMesh</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_sb_data_per_mesh.html#ad28e34218dcee1e022d96fa00221c349">   31</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">WeakStableHandle&lt;SbDataPerComponent&lt;StructBuffType&gt;</a>&gt; <a class="code hl_variable" href="struct_sb_data_per_mesh.html#ad28e34218dcee1e022d96fa00221c349">handle</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_sb_data_per_mesh.html#adb046d2bc9d2d1e5918eb331541ee82e">   33</a></span>    UINT <a class="code hl_variable" href="struct_sb_data_per_mesh.html#adb046d2bc9d2d1e5918eb331541ee82e">meshIndex</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_sb_data_per_mesh.html#af969c3ca140a861f88a43f66f52790b3">   35</a></span>    UINT <a class="code hl_variable" href="struct_sb_data_per_mesh.html#af969c3ca140a861f88a43f66f52790b3">elementNum</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_sb_data_per_mesh.html#abf8a1632a1e1d6e4ec72a4c90c887da1">   37</a></span>    UINT <a class="code hl_variable" href="struct_sb_data_per_mesh.html#abf8a1632a1e1d6e4ec72a4c90c887da1">offset</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_sb_data_per_mesh.html#aff9310e5d298c620490e121bf281791c">   39</a></span>    UINT <a class="code hl_variable" href="struct_sb_data_per_mesh.html#aff9310e5d298c620490e121bf281791c">lastUpdateFrame</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305">   43</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305">SbAllocatorKeyState</a> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_enumvalue" href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305ac30e98851cafc795dbe00917b7c4ccf8">NotExist</a>,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_enumvalue" href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305a90a0ffb1cc27df7493c875b893d923bb">NotCalculated</a>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_enumvalue" href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305a46057d774fc3b6bbcd90dcd1406bf889">Calculated</a>,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StructBuffType&gt;</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="};">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html">   57</a></span><span class="keyword">class </span><a class="code hl_class" href="class_a_c_sb_allocater.html">ACSbAllocater</a> {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">protected</span>:</div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#ae3f967f8a398db05f64e2cc68336b0e5">   64</a></span>    <a class="code hl_function" href="class_a_c_sb_allocater.html#ae3f967f8a398db05f64e2cc68336b0e5">ACSbAllocater</a>(std::string hlslBufferName) </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        : <a class="code hl_variable" href="class_a_c_sb_allocater.html#a42c697acdc3e7c8da2dc87cd4cfaed60">m_hlslBufferName</a>(<a class="code hl_namespace" href="namespacestd.html">std</a>::move(hlslBufferName)), m_currentFrameNumber(1)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {}</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a03859c574fa0fd7118bdffda4b63b945">   71</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_a_c_sb_allocater.html#a03859c574fa0fd7118bdffda4b63b945">~ACSbAllocater</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#aacb427a124b741faecf7f3b10b925b0d">   80</a></span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_a_c_sb_allocater.html#aacb427a124b741faecf7f3b10b925b0d">DirectDataCopy</a>(<a class="code hl_typedef" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a> key, <span class="keyword">const</span> StructBuffType* src);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a918e541856a067319097dbc5e1d3f585">   87</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_sb_allocater.html#a918e541856a067319097dbc5e1d3f585">CreatePerComponentBuffer</a>(UINT size, UINT viewNum);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a256ee912c30c65dcf1b83c52382a75d9">   96</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_sb_allocater.html#a256ee912c30c65dcf1b83c52382a75d9">CreatePerMeshData</a>(UINT meshIndex, <a class="code hl_typedef" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a> meshKey, UINT elementNum, UINT offset);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#ab359667633f415f985344e472a0f364e">  102</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_sb_allocater.html#ab359667633f415f985344e472a0f364e">Release</a>(<a class="code hl_typedef" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a> meshKey);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a9cd7db20edfce0c1f5e6e32da4e8c8ce">  107</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_sb_allocater.html#a9cd7db20edfce0c1f5e6e32da4e8c8ce">RefreshSbAllocator</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a09f5d81d3c016bf0df4f428406f32b71">  114</a></span>    <span class="keyword">inline</span> <a class="code hl_enumeration" href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305">SbAllocatorKeyState</a> <a class="code hl_function" href="class_a_c_sb_allocater.html#a09f5d81d3c016bf0df4f428406f32b71">CheckKey</a>(<a class="code hl_typedef" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a> key);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a84ddb90884268c4453622a5bd0913051">  117</a></span>    <span class="keyword">inline</span> <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_a_c_sb_allocater.html#a84ddb90884268c4453622a5bd0913051">GetCPUHandle</a>(<a class="code hl_typedef" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a> key);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a42c697acdc3e7c8da2dc87cd4cfaed60">  121</a></span>    <span class="keyword">const</span> std::string <a class="code hl_variable" href="class_a_c_sb_allocater.html#a42c697acdc3e7c8da2dc87cd4cfaed60">m_hlslBufferName</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_class" href="class_stable_handle_vector.html">StableHandleVector&lt;SbDataPerComponent&lt;StructBuffType&gt;</a>&gt; m_buffers;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    std::unordered_map&lt;MeshKey, SbDataPerMesh&lt;StructBuffType&gt;&gt; m_dataPerMesh;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    UINT m_currentFrameNumber;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>};</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">// Copy data directly</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StructBuffType&gt;</div>
+<div class="foldopen" id="foldopen00134" data-start="{" data-end="}">
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#aacb427a124b741faecf7f3b10b925b0d">  134</a></span><a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_a_c_sb_allocater.html#aacb427a124b741faecf7f3b10b925b0d">ACSbAllocater&lt;StructBuffType&gt;::DirectDataCopy</a>(<a class="code hl_typedef" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a> key, <span class="keyword">const</span> StructBuffType* src) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="comment">// Get next back buffer index</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    UINT bufferIndex = <a class="code hl_function" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95">CSwapChain::GetMain</a>().<a class="code hl_function" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de">GetNextBackBufferIndex</a>();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="comment">// If mesh data doesn&#39;t exist in the map, return null data</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keyword">auto</span> it = m_dataPerMesh.find(key);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordflow">if</span> (it == m_dataPerMesh.end()) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="class_utl_1_1_error_1_1_c_stop_drawing_scene_error.html">Utl::Error::CStopDrawingSceneError</a>(L<span class="stringliteral">&quot;Warning! Structured buffer data for a sent mesh doesn&#39;t exist map!\n&quot;</span>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="comment">// Perform map operation</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    m_buffers[*it-&gt;second.handle].structuredBuffers[bufferIndex].Map();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="comment">// Update data of the structured buffer</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    m_buffers[*it-&gt;second.handle].structuredBuffers[bufferIndex].DataCopy(src, it-&gt;second.elementNum, it-&gt;second.offset);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="comment">// Update last updated frame number</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    it-&gt;second.lastUpdateFrame = m_currentFrameNumber;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="comment">// Get specified CPU handle from descriptor heap</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordflow">return</span> m_buffers[*it-&gt;second.handle].descriptorHeaps[bufferIndex].GetCpuHandle(it-&gt;second.meshIndex);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
+</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">// Create a per graphics component structured buffer</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StructBuffType&gt;</div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="}">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a918e541856a067319097dbc5e1d3f585">  159</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_sb_allocater.html#a918e541856a067319097dbc5e1d3f585">ACSbAllocater&lt;StructBuffType&gt;::CreatePerComponentBuffer</a>(UINT size, UINT viewNum) {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    m_buffers.EmplaceBack();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keyword">auto</span>&amp; newBuffer = m_buffers[*m_buffers.BackHandle()];</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="comment">// Create structured buffers and descriptor heaps</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">for</span> (UINT i = 0; i &lt; <a class="code hl_variable" href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a>; ++i) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        newBuffer.structuredBuffers[i].Create(size);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        newBuffer.descriptorHeaps[i].Create(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV, D3D12_DESCRIPTOR_HEAP_FLAG_NONE, viewNum);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}</div>
+</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment">// Create a per mesh data</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StructBuffType&gt;</div>
+<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a256ee912c30c65dcf1b83c52382a75d9">  171</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_sb_allocater.html#a256ee912c30c65dcf1b83c52382a75d9">ACSbAllocater&lt;StructBuffType&gt;::CreatePerMeshData</a>(UINT meshIndex, <a class="code hl_typedef" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a> meshKey, UINT elementNum, UINT offset) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="comment">// Emplace data in the map</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_class" href="class_c_weak_ptr.html">WeakStableHandle&lt;SbDataPerComponent&lt;StructBuffType&gt;</a>&gt; handle = m_buffers.BackHandle();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    m_dataPerMesh.emplace(meshKey, <a class="code hl_struct" href="struct_sb_data_per_mesh.html">SbDataPerMesh&lt;StructBuffType&gt;</a>());</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="comment">// Copy needed data</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_struct" href="struct_sb_data_per_mesh.html">SbDataPerMesh&lt;StructBuffType&gt;</a>&amp; newData = m_dataPerMesh[meshKey];</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    newData.<a class="code hl_variable" href="struct_sb_data_per_mesh.html#adb046d2bc9d2d1e5918eb331541ee82e">meshIndex</a> = meshIndex;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    newData.<a class="code hl_variable" href="struct_sb_data_per_mesh.html#ad28e34218dcee1e022d96fa00221c349">handle</a> = handle;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    newData.<a class="code hl_variable" href="struct_sb_data_per_mesh.html#af969c3ca140a861f88a43f66f52790b3">elementNum</a> = elementNum;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    newData.<a class="code hl_variable" href="struct_sb_data_per_mesh.html#abf8a1632a1e1d6e4ec72a4c90c887da1">offset</a> = offset;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    newData.<a class="code hl_variable" href="struct_sb_data_per_mesh.html#aff9310e5d298c620490e121bf281791c">lastUpdateFrame</a> = m_currentFrameNumber - 1;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment">// Create shader resource view desc</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc = {};</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    srvDesc.Format = DXGI_FORMAT_UNKNOWN;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    srvDesc.ViewDimension = D3D12_SRV_DIMENSION_BUFFER;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    srvDesc.Buffer.FirstElement = offset;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    srvDesc.Buffer.NumElements = elementNum;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    srvDesc.Buffer.StructureByteStride = (UINT)<span class="keyword">sizeof</span>(StructBuffType);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    srvDesc.Buffer.Flags = D3D12_BUFFER_SRV_FLAG_NONE;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="comment">// Create shader resource views</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    ID3D12Device* device = <a class="code hl_function" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd">CApplication::GetAny</a>().<a class="code hl_function" href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325">GetDXDevice</a>();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <a class="code hl_struct" href="struct_sb_data_per_component.html">SbDataPerComponent&lt;StructBuffType&gt;</a>&amp; buffer = m_buffers[*handle];</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">for</span> (UINT i = 0; i &lt; <a class="code hl_variable" href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a>; ++i) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        device-&gt;CreateShaderResourceView(</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            buffer.<a class="code hl_variable" href="struct_sb_data_per_component.html#a0fc0b4dac315a4629d7935fa1460a461">structuredBuffers</a>[i].<a class="code hl_function" href="class_c_structured_buffer_resource.html#a8fc2ec03968c582fc421082b09fe3e2b">GetResource</a>(), &amp;srvDesc,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            buffer.<a class="code hl_variable" href="struct_sb_data_per_component.html#a4b4e5028443856218d3680566e917099">descriptorHeaps</a>[i].<a class="code hl_function" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d">GetCpuHandle</a>(meshIndex));</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>}</div>
+</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="comment">// Release buffer and per mesh data</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StructBuffType&gt;</div>
+<div class="foldopen" id="foldopen00206" data-start="{" data-end="}">
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#ab359667633f415f985344e472a0f364e">  206</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_sb_allocater.html#ab359667633f415f985344e472a0f364e">ACSbAllocater&lt;StructBuffType&gt;::Release</a>(<a class="code hl_typedef" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a> meshKey) {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keyword">auto</span> it = m_dataPerMesh.find(meshKey);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keywordflow">if</span> (it != m_dataPerMesh.end()) {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="comment">// Release per component data</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="keywordflow">if</span> (it-&gt;second.handle) {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            m_buffers.Erase(*it-&gt;second.handle);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="comment">// Release per mesh data</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        m_dataPerMesh.erase(it);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
+</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment">// Refresh process that must be called at the end of every frame</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StructBuffType&gt;</div>
+<div class="foldopen" id="foldopen00220" data-start="{" data-end="}">
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a9cd7db20edfce0c1f5e6e32da4e8c8ce">  220</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_sb_allocater.html#a9cd7db20edfce0c1f5e6e32da4e8c8ce">ACSbAllocater&lt;StructBuffType&gt;::RefreshSbAllocator</a>() {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="comment">// Advance the current frame number</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    m_currentFrameNumber++;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>}</div>
+</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">// Check for key state</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StructBuffType&gt;</div>
+<div class="foldopen" id="foldopen00227" data-start="{" data-end="}">
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a09f5d81d3c016bf0df4f428406f32b71">  227</a></span><span class="keyword">inline</span> <a class="code hl_enumeration" href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305">SbAllocatorKeyState</a> <a class="code hl_function" href="class_a_c_sb_allocater.html#a09f5d81d3c016bf0df4f428406f32b71">ACSbAllocater&lt;StructBuffType&gt;::CheckKey</a>(<a class="code hl_typedef" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a> key) {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="comment">// Check if the key exists in the map</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keyword">auto</span> it = m_dataPerMesh.find(key);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">if</span> (it == m_dataPerMesh.end()) {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305ac30e98851cafc795dbe00917b7c4ccf8">SbAllocatorKeyState::NotExist</a>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    }</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="comment">// Check if key&#39;s data has not been calculated</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (it-&gt;second.lastUpdateFrame != m_currentFrameNumber) {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305a90a0ffb1cc27df7493c875b893d923bb">SbAllocatorKeyState::NotCalculated</a>;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305a46057d774fc3b6bbcd90dcd1406bf889">SbAllocatorKeyState::Calculated</a>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>}</div>
+</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="comment">// Get CPU handle for each descriptor heap</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> StructBuffType&gt;</div>
+<div class="foldopen" id="foldopen00242" data-start="{" data-end="}">
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="class_a_c_sb_allocater.html#a84ddb90884268c4453622a5bd0913051">  242</a></span><span class="keyword">inline</span> <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_a_c_sb_allocater.html#a84ddb90884268c4453622a5bd0913051">ACSbAllocater&lt;StructBuffType&gt;::GetCPUHandle</a>(<a class="code hl_typedef" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a> key) {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <a class="code hl_struct" href="struct_sb_data_per_mesh.html">SbDataPerMesh&lt;StructBuffType&gt;</a>&amp; data = m_dataPerMesh[key];</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordflow">return</span> m_buffers[*data.<a class="code hl_variable" href="struct_sb_data_per_mesh.html#ad28e34218dcee1e022d96fa00221c349">handle</a>].descriptorHeaps[<a class="code hl_function" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95">CSwapChain::GetMain</a>().<a class="code hl_function" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de">GetNextBackBufferIndex</a>()].GetCpuHandle(data.<a class="code hl_variable" href="struct_sb_data_per_mesh.html#adb046d2bc9d2d1e5918eb331541ee82e">meshIndex</a>);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>}</div>
+</div>
+</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="preprocessor">#endif </span><span class="comment">// !__ABSTRACT_SB_ALLOCATOR_H__</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttc" id="a_abstract_sb_allocator_8h_html_a3601ca124f7e9a6bf50c08ee10e77305"><div class="ttname"><a href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305">SbAllocatorKeyState</a></div><div class="ttdeci">SbAllocatorKeyState</div><div class="ttdoc">Key state of ACSbAllocator</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:43</div></div>
+<div class="ttc" id="a_abstract_sb_allocator_8h_html_a3601ca124f7e9a6bf50c08ee10e77305a46057d774fc3b6bbcd90dcd1406bf889"><div class="ttname"><a href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305a46057d774fc3b6bbcd90dcd1406bf889">SbAllocatorKeyState::Calculated</a></div><div class="ttdeci">@ Calculated</div><div class="ttdoc">Already calculated</div></div>
+<div class="ttc" id="a_abstract_sb_allocator_8h_html_a3601ca124f7e9a6bf50c08ee10e77305a90a0ffb1cc27df7493c875b893d923bb"><div class="ttname"><a href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305a90a0ffb1cc27df7493c875b893d923bb">SbAllocatorKeyState::NotCalculated</a></div><div class="ttdeci">@ NotCalculated</div><div class="ttdoc">Not yet calculated</div></div>
+<div class="ttc" id="a_abstract_sb_allocator_8h_html_a3601ca124f7e9a6bf50c08ee10e77305ac30e98851cafc795dbe00917b7c4ccf8"><div class="ttname"><a href="_abstract_sb_allocator_8h.html#a3601ca124f7e9a6bf50c08ee10e77305ac30e98851cafc795dbe00917b7c4ccf8">SbAllocatorKeyState::NotExist</a></div><div class="ttdeci">@ NotExist</div><div class="ttdoc">Key doesn't exist</div></div>
+<div class="ttc" id="a_application_8h_html"><div class="ttname"><a href="_application_8h.html">Application.h</a></div><div class="ttdoc">This file handles application objects such as window and DirectX device.</div></div>
+<div class="ttc" id="a_descriptor_heap_8h_html"><div class="ttname"><a href="_descriptor_heap_8h.html">DescriptorHeap.h</a></div><div class="ttdoc">This file handles descriptor heap.</div></div>
+<div class="ttc" id="a_graphics_component_8h_html_adc273d5c200d86f6912ce9c4934e94c2"><div class="ttname"><a href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a></div><div class="ttdeci">IntKey MeshKey</div><div class="ttdoc">Key for mesh buffer</div><div class="ttdef"><b>Definition</b> GraphicsComponent.h:45</div></div>
+<div class="ttc" id="a_stable_handle_vector_8h_html"><div class="ttname"><a href="_stable_handle_vector_8h.html">StableHandleVector.h</a></div><div class="ttdoc">This file handles dynamic array capable of generating stable handles.</div></div>
+<div class="ttc" id="a_structured_buffer_resource_8h_html"><div class="ttname"><a href="_structured_buffer_resource_8h.html">StructuredBufferResource.h</a></div><div class="ttdoc">This file handles resouce of structured buffer.</div></div>
+<div class="ttc" id="a_swap_chain_8h_html"><div class="ttname"><a href="_swap_chain_8h.html">SwapChain.h</a></div><div class="ttdoc">This file handles swap chain.</div></div>
+<div class="ttc" id="a_swap_chain_8h_html_a597c5eff72beb59812955eabb8d454fd"><div class="ttname"><a href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a></div><div class="ttdeci">const UINT SCREEN_BUFFERING_NUM</div><div class="ttdoc">The number of main screen buffer</div><div class="ttdef"><b>Definition</b> SwapChain.h:19</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html_a89d07f64971fd623dd0a8a7179e17e95"><div class="ttname"><a href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95">ACMainThreadSingleton&lt; CSwapChain &gt;::GetMain</a></div><div class="ttdeci">static CSwapChain &amp; GetMain()</div><div class="ttdoc">Get singleton instance for main thread</div><div class="ttdef"><b>Definition</b> Singleton.h:120</div></div>
+<div class="ttc" id="aclass_a_c_sb_allocater_html"><div class="ttname"><a href="class_a_c_sb_allocater.html">ACSbAllocater</a></div><div class="ttdoc">This class allocates data for structured buffer</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:57</div></div>
+<div class="ttc" id="aclass_a_c_sb_allocater_html_a03859c574fa0fd7118bdffda4b63b945"><div class="ttname"><a href="class_a_c_sb_allocater.html#a03859c574fa0fd7118bdffda4b63b945">ACSbAllocater::~ACSbAllocater</a></div><div class="ttdeci">virtual ~ACSbAllocater()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_a_c_sb_allocater_html_a09f5d81d3c016bf0df4f428406f32b71"><div class="ttname"><a href="class_a_c_sb_allocater.html#a09f5d81d3c016bf0df4f428406f32b71">ACSbAllocater::CheckKey</a></div><div class="ttdeci">SbAllocatorKeyState CheckKey(MeshKey key)</div><div class="ttdoc">Check for key state</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:227</div></div>
+<div class="ttc" id="aclass_a_c_sb_allocater_html_a256ee912c30c65dcf1b83c52382a75d9"><div class="ttname"><a href="class_a_c_sb_allocater.html#a256ee912c30c65dcf1b83c52382a75d9">ACSbAllocater::CreatePerMeshData</a></div><div class="ttdeci">void CreatePerMeshData(UINT meshIndex, MeshKey meshKey, UINT elementNum, UINT offset)</div><div class="ttdoc">Create a per mesh data</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:171</div></div>
+<div class="ttc" id="aclass_a_c_sb_allocater_html_a42c697acdc3e7c8da2dc87cd4cfaed60"><div class="ttname"><a href="class_a_c_sb_allocater.html#a42c697acdc3e7c8da2dc87cd4cfaed60">ACSbAllocater::m_hlslBufferName</a></div><div class="ttdeci">const std::string m_hlslBufferName</div><div class="ttdoc">The name of cbuffer defined in hlsl</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:121</div></div>
+<div class="ttc" id="aclass_a_c_sb_allocater_html_a84ddb90884268c4453622a5bd0913051"><div class="ttname"><a href="class_a_c_sb_allocater.html#a84ddb90884268c4453622a5bd0913051">ACSbAllocater::GetCPUHandle</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE GetCPUHandle(MeshKey key)</div><div class="ttdoc">Get CPU handle for each descriptor heap</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:242</div></div>
+<div class="ttc" id="aclass_a_c_sb_allocater_html_a918e541856a067319097dbc5e1d3f585"><div class="ttname"><a href="class_a_c_sb_allocater.html#a918e541856a067319097dbc5e1d3f585">ACSbAllocater::CreatePerComponentBuffer</a></div><div class="ttdeci">void CreatePerComponentBuffer(UINT size, UINT viewNum)</div><div class="ttdoc">Create a per graphics component structured buffer</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:159</div></div>
+<div class="ttc" id="aclass_a_c_sb_allocater_html_a9cd7db20edfce0c1f5e6e32da4e8c8ce"><div class="ttname"><a href="class_a_c_sb_allocater.html#a9cd7db20edfce0c1f5e6e32da4e8c8ce">ACSbAllocater::RefreshSbAllocator</a></div><div class="ttdeci">void RefreshSbAllocator()</div><div class="ttdoc">Refresh process that must be called at the end of every frame</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:220</div></div>
+<div class="ttc" id="aclass_a_c_sb_allocater_html_aacb427a124b741faecf7f3b10b925b0d"><div class="ttname"><a href="class_a_c_sb_allocater.html#aacb427a124b741faecf7f3b10b925b0d">ACSbAllocater::DirectDataCopy</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE DirectDataCopy(MeshKey key, const StructBuffType *src)</div><div class="ttdoc">Copy data directly</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:134</div></div>
+<div class="ttc" id="aclass_a_c_sb_allocater_html_ab359667633f415f985344e472a0f364e"><div class="ttname"><a href="class_a_c_sb_allocater.html#ab359667633f415f985344e472a0f364e">ACSbAllocater::Release</a></div><div class="ttdeci">void Release(MeshKey meshKey)</div><div class="ttdoc">Release buffer and per mesh data</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:206</div></div>
+<div class="ttc" id="aclass_a_c_sb_allocater_html_ae3f967f8a398db05f64e2cc68336b0e5"><div class="ttname"><a href="class_a_c_sb_allocater.html#ae3f967f8a398db05f64e2cc68336b0e5">ACSbAllocater::ACSbAllocater</a></div><div class="ttdeci">ACSbAllocater(std::string hlslBufferName)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:64</div></div>
+<div class="ttc" id="aclass_c_application_1_1_c_thread_safe_feature_html_a5f0affd9adebb4920fc882bb6bc99325"><div class="ttname"><a href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325">CApplication::CThreadSafeFeature::GetDXDevice</a></div><div class="ttdeci">ID3D12Device * GetDXDevice()</div><div class="ttdoc">DirectX device getter</div><div class="ttdef"><b>Definition</b> Application.h:54</div></div>
+<div class="ttc" id="aclass_c_application_html_ab44d8126deac403ebe7264dc024541cd"><div class="ttname"><a href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd">CApplication::GetAny</a></div><div class="ttdeci">static CThreadSafeFeature &amp; GetAny()</div><div class="ttdoc">Get feature for thread-safe</div><div class="ttdef"><b>Definition</b> Application.h:66</div></div>
+<div class="ttc" id="aclass_c_descriptor_heap_html"><div class="ttname"><a href="class_c_descriptor_heap.html">CDescriptorHeap</a></div><div class="ttdoc">This class handles descriptor heap</div><div class="ttdef"><b>Definition</b> DescriptorHeap.h:16</div></div>
+<div class="ttc" id="aclass_c_descriptor_heap_html_a76bf98e5948e5061b193686704b6948d"><div class="ttname"><a href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d">CDescriptorHeap::GetCpuHandle</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE GetCpuHandle(size_t offset=0) const</div><div class="ttdoc">Get CPU handle for descriptor heap</div><div class="ttdef"><b>Definition</b> DescriptorHeap.h:54</div></div>
+<div class="ttc" id="aclass_c_structured_buffer_resource_html"><div class="ttname"><a href="class_c_structured_buffer_resource.html">CStructuredBufferResource</a></div><div class="ttdoc">Resource class for structured buffer</div><div class="ttdef"><b>Definition</b> StructuredBufferResource.h:21</div></div>
+<div class="ttc" id="aclass_c_structured_buffer_resource_html_a8fc2ec03968c582fc421082b09fe3e2b"><div class="ttname"><a href="class_c_structured_buffer_resource.html#a8fc2ec03968c582fc421082b09fe3e2b">CStructuredBufferResource::GetResource</a></div><div class="ttdeci">ID3D12Resource * GetResource()</div><div class="ttdoc">Get structured buffer resource</div><div class="ttdef"><b>Definition</b> StructuredBufferResource.h:66</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html_a3adcd8ff2ffa23e627ce094ecdd1b7de"><div class="ttname"><a href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de">CSwapChain::GetNextBackBufferIndex</a></div><div class="ttdeci">UINT GetNextBackBufferIndex()</div><div class="ttdoc">Get the index of the back buffer to be used for the next drawing</div><div class="ttdef"><b>Definition</b> SwapChain.h:100</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="aclass_stable_handle_vector_html"><div class="ttname"><a href="class_stable_handle_vector.html">StableHandleVector</a></div><div class="ttdoc">Dynamic array capable of generating stable handles</div><div class="ttdef"><b>Definition</b> StableHandleVector.h:63</div></div>
+<div class="ttc" id="aclass_utl_1_1_error_1_1_c_stop_drawing_scene_error_html"><div class="ttname"><a href="class_utl_1_1_error_1_1_c_stop_drawing_scene_error.html">Utl::Error::CStopDrawingSceneError</a></div><div class="ttdoc">Exception to stop drawing the scene</div><div class="ttdef"><b>Definition</b> UtilityForException.h:32</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> StableHandleVector.h:132</div></div>
+<div class="ttc" id="astruct_sb_data_per_component_html"><div class="ttname"><a href="struct_sb_data_per_component.html">SbDataPerComponent</a></div><div class="ttdoc">Per graphics component structured buffer data</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:20</div></div>
+<div class="ttc" id="astruct_sb_data_per_component_html_a0fc0b4dac315a4629d7935fa1460a461"><div class="ttname"><a href="struct_sb_data_per_component.html#a0fc0b4dac315a4629d7935fa1460a461">SbDataPerComponent::structuredBuffers</a></div><div class="ttdeci">CStructuredBufferResource&lt; StructBuffType &gt; structuredBuffers[SCREEN_BUFFERING_NUM]</div><div class="ttdoc">Structured buffers equal to the number of screen buffering</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:22</div></div>
+<div class="ttc" id="astruct_sb_data_per_component_html_a4b4e5028443856218d3680566e917099"><div class="ttname"><a href="struct_sb_data_per_component.html#a4b4e5028443856218d3680566e917099">SbDataPerComponent::descriptorHeaps</a></div><div class="ttdeci">CDescriptorHeap descriptorHeaps[SCREEN_BUFFERING_NUM]</div><div class="ttdoc">Descriptor heap equal to the number of screen buffering</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:24</div></div>
+<div class="ttc" id="astruct_sb_data_per_mesh_html"><div class="ttname"><a href="struct_sb_data_per_mesh.html">SbDataPerMesh</a></div><div class="ttdoc">Structured buffer data per mesh</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:29</div></div>
+<div class="ttc" id="astruct_sb_data_per_mesh_html_abf8a1632a1e1d6e4ec72a4c90c887da1"><div class="ttname"><a href="struct_sb_data_per_mesh.html#abf8a1632a1e1d6e4ec72a4c90c887da1">SbDataPerMesh::offset</a></div><div class="ttdeci">UINT offset</div><div class="ttdoc">The offset of buffer to be used</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:37</div></div>
+<div class="ttc" id="astruct_sb_data_per_mesh_html_ad28e34218dcee1e022d96fa00221c349"><div class="ttname"><a href="struct_sb_data_per_mesh.html#ad28e34218dcee1e022d96fa00221c349">SbDataPerMesh::handle</a></div><div class="ttdeci">WeakStableHandle&lt; SbDataPerComponent&lt; StructBuffType &gt; &gt; handle</div><div class="ttdoc">Handle for per graphics component structured buffer data</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:31</div></div>
+<div class="ttc" id="astruct_sb_data_per_mesh_html_adb046d2bc9d2d1e5918eb331541ee82e"><div class="ttname"><a href="struct_sb_data_per_mesh.html#adb046d2bc9d2d1e5918eb331541ee82e">SbDataPerMesh::meshIndex</a></div><div class="ttdeci">UINT meshIndex</div><div class="ttdoc">Index of mesh that graphics component has</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:33</div></div>
+<div class="ttc" id="astruct_sb_data_per_mesh_html_af969c3ca140a861f88a43f66f52790b3"><div class="ttname"><a href="struct_sb_data_per_mesh.html#af969c3ca140a861f88a43f66f52790b3">SbDataPerMesh::elementNum</a></div><div class="ttdeci">UINT elementNum</div><div class="ttdoc">The number of elements to be used</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:35</div></div>
+<div class="ttc" id="astruct_sb_data_per_mesh_html_aff9310e5d298c620490e121bf281791c"><div class="ttname"><a href="struct_sb_data_per_mesh.html#aff9310e5d298c620490e121bf281791c">SbDataPerMesh::lastUpdateFrame</a></div><div class="ttdeci">UINT lastUpdateFrame</div><div class="ttdoc">Last updated frame number</div><div class="ttdef"><b>Definition</b> AbstractSbAllocator.h:39</div></div>
+<div class="ttc" id="astruct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e_html"><div class="ttname"><a href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a></div><div class="ttdoc">D3D12_CPU_DESCRIPTOR_HANDLE interface</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

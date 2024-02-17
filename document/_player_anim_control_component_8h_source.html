@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: PlayerAnimControlComponent.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">PlayerAnimControlComponent.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_player_anim_control_component_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __PLAYER_ANIM_CONTROL_COMPONENT_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __PLAYER_ANIM_CONTROL_COMPONENT_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_component_8h.html">Component.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_player_control_component_8h.html">PlayerControlComponent.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_model_8h.html">Model.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_c_player_anim_control_component.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_player_anim_control_component.html">CPlayerAnimControlComponent</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_component.html">ACComponent</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">using </span><a class="code hl_function" href="class_a_c_component.html#a9b2b2d42737a1fe9bb397af5927ff322">ACComponent::ACComponent</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_player_anim_control_component.html#af06b24b9b842e3b70c05158b0d980748">Start</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_player_anim_control_component.html#ac4ce0e82364b55af98027871d5f6d727">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CSkeletalModel&gt;</a> m_model;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CPlayerControlComponent&gt;</a> m_playerControl;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_struct" href="struct_anim_i_d_with_loop.html">AnimIDWithLoop</a> m_idleAnim;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_struct" href="struct_anim_i_d_with_loop.html">AnimIDWithLoop</a> m_runAnim;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_struct" href="struct_anim_i_d_with_loop.html">AnimIDWithLoop</a> m_jumpAnim;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">// !__PLAYER_ANIM_CONTROL_COMPONENT_H__</span></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div><div class="ttdoc">This file handles abstract class for component used in update processing.</div></div>
+<div class="ttc" id="a_model_8h_html"><div class="ttname"><a href="_model_8h.html">Model.h</a></div><div class="ttdoc">This file handles model class.</div></div>
+<div class="ttc" id="a_player_control_component_8h_html"><div class="ttname"><a href="_player_control_component_8h.html">PlayerControlComponent.h</a></div><div class="ttdoc">This file handles component for moving the player by key input.</div></div>
+<div class="ttc" id="aclass_a_c_component_html"><div class="ttname"><a href="class_a_c_component.html">ACComponent</a></div><div class="ttdoc">This is abstract class for component used in update processing</div><div class="ttdef"><b>Definition</b> Component.h:23</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a9b2b2d42737a1fe9bb397af5927ff322"><div class="ttname"><a href="class_a_c_component.html#a9b2b2d42737a1fe9bb397af5927ff322">ACComponent::ACComponent</a></div><div class="ttdeci">ACComponent(CGameObject *owner)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> Component.cpp:6</div></div>
+<div class="ttc" id="aclass_c_player_anim_control_component_html"><div class="ttname"><a href="class_c_player_anim_control_component.html">CPlayerAnimControlComponent</a></div><div class="ttdoc">component for controlling animation of player</div><div class="ttdef"><b>Definition</b> PlayerAnimControlComponent.h:17</div></div>
+<div class="ttc" id="aclass_c_player_anim_control_component_html_ac4ce0e82364b55af98027871d5f6d727"><div class="ttname"><a href="class_c_player_anim_control_component.html#ac4ce0e82364b55af98027871d5f6d727">CPlayerAnimControlComponent::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">Updating process</div><div class="ttdef"><b>Definition</b> PlayerAnimControlComponent.cpp:18</div></div>
+<div class="ttc" id="aclass_c_player_anim_control_component_html_af06b24b9b842e3b70c05158b0d980748"><div class="ttname"><a href="class_c_player_anim_control_component.html#af06b24b9b842e3b70c05158b0d980748">CPlayerAnimControlComponent::Start</a></div><div class="ttdeci">void Start() override</div><div class="ttdoc">Starting process</div><div class="ttdef"><b>Definition</b> PlayerAnimControlComponent.cpp:6</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="astruct_anim_i_d_with_loop_html"><div class="ttname"><a href="struct_anim_i_d_with_loop.html">AnimIDWithLoop</a></div><div class="ttdoc">Structure wraps animation ID and loop flag</div><div class="ttdef"><b>Definition</b> LoadedModelInfo.h:346</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

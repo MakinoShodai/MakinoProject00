@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Shader.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">Shader.cpp ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_shader_8h_source.html">Shader.h</a>&quot;</code><br />
+<code>#include &lt;d3dcompiler.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_application_8h_source.html">Application.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utility_for_string_8h_source.html">UtilityForString.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utility_for_exception_8h_source.html">UtilityForException.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Shader.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_shader_8cpp__incl.png" border="0" usemap="#a_shader_8cpp" alt=""/></div>
+<map name="a_shader_8cpp" id="a_shader_8cpp">
+<area shape="rect" title=" " alt="" coords="648,5,735,32"/>
+<area shape="rect" href="_shader_8h.html" title="This file handles each shaders." alt="" coords="393,80,467,107"/>
+<area shape="poly" title=" " alt="" coords="648,35,482,80,480,75,646,30"/>
+<area shape="rect" href="_application_8h.html" title="This file handles application objects such as window and DirectX device." alt="" coords="201,155,297,181"/>
+<area shape="poly" title=" " alt="" coords="647,26,525,42,452,59,382,82,324,113,277,147,274,142,321,109,380,78,451,54,524,37,647,20"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="520,304,663,331"/>
+<area shape="poly" title=" " alt="" coords="694,33,687,98,680,140,669,182,641,243,611,292,606,290,636,240,663,180,675,139,682,97,688,32"/>
+<area shape="rect" title=" " alt="" coords="728,80,831,107"/>
+<area shape="poly" title=" " alt="" coords="708,30,754,68,751,72,705,35"/>
+<area shape="rect" href="_utility_for_string_8h.html" title="This file defines utility functions that handle strings." alt="" coords="855,80,973,107"/>
+<area shape="poly" title=" " alt="" coords="731,30,862,72,860,77,729,35"/>
+<area shape="poly" title=" " alt="" coords="399,110,296,151,294,146,397,105"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="305,304,395,331"/>
+<area shape="poly" title=" " alt="" coords="435,107,439,173,434,216,420,257,405,279,385,297,382,293,401,276,416,255,429,215,433,173,429,107"/>
+<area shape="rect" href="_graphics_pipeline_elements_8h.html" title="This file handles elements of graphics pipeline state." alt="" coords="468,155,653,181"/>
+<area shape="poly" title=" " alt="" coords="454,105,526,144,523,149,451,110"/>
+<area shape="rect" href="_utility_for_direct_x_8h.html" title="This file defines utility functions that are useful for DirectX." alt="" coords="281,229,406,256"/>
+<area shape="poly" title=" " alt="" coords="425,109,361,217,356,215,420,106"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="171,229,257,256"/>
+<area shape="poly" title=" " alt="" coords="245,183,229,216,224,214,240,181"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="9,304,123,331"/>
+<area shape="poly" title=" " alt="" coords="230,184,161,231,91,295,87,291,158,227,227,180"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="147,304,281,331"/>
+<area shape="poly" title=" " alt="" coords="217,257,217,288,211,288,211,257"/>
+<area shape="poly" title=" " alt="" coords="239,254,314,294,312,299,236,259"/>
+<area shape="poly" title=" " alt="" coords="258,251,269,253,506,298,505,303,268,259,257,256"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="291,379,374,405"/>
+<area shape="poly" title=" " alt="" coords="350,332,342,364,337,363,344,331"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="104,453,169,480"/>
+<area shape="poly" title=" " alt="" coords="299,408,185,450,183,445,298,403"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="45,528,157,555"/>
+<area shape="poly" title=" " alt="" coords="133,482,116,515,111,513,128,479"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="5,379,127,405"/>
+<area shape="poly" title=" " alt="" coords="69,331,69,363,63,363,63,331"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="151,379,251,405"/>
+<area shape="poly" title=" " alt="" coords="91,329,165,368,162,373,88,334"/>
+<area shape="poly" title=" " alt="" coords="80,404,116,440,112,444,76,408"/>
+<area shape="poly" title=" " alt="" coords="72,405,97,512,92,514,66,406"/>
+<area shape="poly" title=" " alt="" coords="347,256,350,288,345,289,342,257"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:af2fc6d9ae85d817b70d29ba9cbe3d854" id="r_af2fc6d9ae85d817b70d29ba9cbe3d854"><td class="memItemLeft" align="right" valign="top">const DXGI_FORMAT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#af2fc6d9ae85d817b70d29ba9cbe3d854">FORMATS</a> [][4]</td></tr>
+<tr class="separator:af2fc6d9ae85d817b70d29ba9cbe3d854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab77b24ac09a81f397f5839340b66af38" id="r_ab77b24ac09a81f397f5839340b66af38"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#ab77b24ac09a81f397f5839340b66af38">RESOURCE_SUFFIX_DYNAMIC</a> = &quot;_D&quot;</td></tr>
+<tr class="separator:ab77b24ac09a81f397f5839340b66af38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b69bd7f14eabedd3db3ae5613c5435e" id="r_a0b69bd7f14eabedd3db3ae5613c5435e"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_shader_8cpp.html#a0b69bd7f14eabedd3db3ae5613c5435e">RESOURCE_SUFFIX_STATIC</a> = &quot;_S&quot;</td></tr>
+<tr class="separator:a0b69bd7f14eabedd3db3ae5613c5435e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">変数詳解</h2>
+<a id="af2fc6d9ae85d817b70d29ba9cbe3d854" name="af2fc6d9ae85d817b70d29ba9cbe3d854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2fc6d9ae85d817b70d29ba9cbe3d854">&#9670;&#160;</a></span>FORMATS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DXGI_FORMAT FORMATS[][4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    { </div>
+<div class="line">        DXGI_FORMAT_R32_UINT,</div>
+<div class="line">        DXGI_FORMAT_R32G32_UINT,</div>
+<div class="line">        DXGI_FORMAT_R32G32B32_UINT,</div>
+<div class="line">        DXGI_FORMAT_R32G32B32A32_UINT,</div>
+<div class="line">    },</div>
+<div class="line">    { </div>
+<div class="line">        DXGI_FORMAT_R32_SINT,</div>
+<div class="line">        DXGI_FORMAT_R32G32_SINT,</div>
+<div class="line">        DXGI_FORMAT_R32G32B32_SINT,</div>
+<div class="line">        DXGI_FORMAT_R32G32B32A32_SINT,</div>
+<div class="line">    },</div>
+<div class="line">    { </div>
+<div class="line">        DXGI_FORMAT_R32_FLOAT,</div>
+<div class="line">        DXGI_FORMAT_R32G32_FLOAT,</div>
+<div class="line">        DXGI_FORMAT_R32G32B32_FLOAT,</div>
+<div class="line">        DXGI_FORMAT_R32G32B32A32_FLOAT,</div>
+<div class="line">    },</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab77b24ac09a81f397f5839340b66af38" name="ab77b24ac09a81f397f5839340b66af38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab77b24ac09a81f397f5839340b66af38">&#9670;&#160;</a></span>RESOURCE_SUFFIX_DYNAMIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* const RESOURCE_SUFFIX_DYNAMIC = &quot;_D&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b69bd7f14eabedd3db3ae5613c5435e" name="a0b69bd7f14eabedd3db3ae5613c5435e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b69bd7f14eabedd3db3ae5613c5435e">&#9670;&#160;</a></span>RESOURCE_SUFFIX_STATIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* const RESOURCE_SUFFIX_STATIC = &quot;_S&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

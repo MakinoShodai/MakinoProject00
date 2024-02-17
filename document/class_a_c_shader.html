@@ -1,0 +1,789 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ACShader クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="class_a_c_shader-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">ACShader クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Abstract class for shaders  
+ <a href="class_a_c_shader.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_shader_8h_source.html">Shader.h</a>&gt;</code></p>
+<div class="dynheader">
+ACShader の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_shader__inherit__graph.png" border="0" usemap="#a_a_c_shader_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_a_c_shader_inherit__map" id="a_a_c_shader_inherit__map">
+<area shape="rect" title="Abstract class for shaders" alt="" coords="79,5,160,32"/>
+<area shape="rect" href="class_c_pixel_shader.html" title="Pixel shader class" alt="" coords="5,80,106,107"/>
+<area shape="poly" title=" " alt="" coords="100,46,69,81,65,78,96,42"/>
+<area shape="rect" href="class_c_vertex_shader.html" title="Vertex shader class" alt="" coords="130,80,240,107"/>
+<area shape="poly" title=" " alt="" coords="143,42,176,78,172,81,139,45"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+ACShader 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_shader__coll__graph.png" border="0" usemap="#a_a_c_shader_coll__map" alt="Collaboration graph"/></div>
+<map name="a_a_c_shader_coll__map" id="a_a_c_shader_coll__map">
+<area shape="rect" title="Abstract class for shaders" alt="" coords="48,96,129,123"/>
+<area shape="rect" href="class_c_unique_ptr.html" title=" " alt="" coords="5,5,172,32"/>
+<area shape="poly" title=" " alt="" coords="91,48,91,95,86,95,86,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad9a144b52fc3afcdc1e48aea65eac15d" id="r_ad9a144b52fc3afcdc1e48aea65eac15d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#ad9a144b52fc3afcdc1e48aea65eac15d">ACShader</a> (<a class="el" href="namespace_utl_1_1_dx.html#ac14e0010589229586f96555cceea1a5d">Utl::Dx::ShaderType</a> type)</td></tr>
+<tr class="memdesc:ad9a144b52fc3afcdc1e48aea65eac15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:ad9a144b52fc3afcdc1e48aea65eac15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10546d3be3a805de1bad2305d935edcf" id="r_a10546d3be3a805de1bad2305d935edcf"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a10546d3be3a805de1bad2305d935edcf">~ACShader</a> ()</td></tr>
+<tr class="memdesc:a10546d3be3a805de1bad2305d935edcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a10546d3be3a805de1bad2305d935edcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22e95d3c6cadabc74dd39927d09c9b40" id="r_a22e95d3c6cadabc74dd39927d09c9b40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a22e95d3c6cadabc74dd39927d09c9b40">Load</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memdesc:a22e95d3c6cadabc74dd39927d09c9b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loading shader files  <br /></td></tr>
+<tr class="separator:a22e95d3c6cadabc74dd39927d09c9b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ec46118f39451889bddbd81f25dad3" id="r_ac0ec46118f39451889bddbd81f25dad3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#ac0ec46118f39451889bddbd81f25dad3">BindStaticDescriptorTable</a> (std::vector&lt; D3D12_ROOT_PARAMETER &gt; *descArray, std::vector&lt; D3D12_STATIC_SAMPLER_DESC &gt; *sampArray)</td></tr>
+<tr class="memdesc:ac0ec46118f39451889bddbd81f25dad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind descriptor range and sampler to descriptor table for static resources that don't need to be updated on a per-object basis  <br /></td></tr>
+<tr class="separator:ac0ec46118f39451889bddbd81f25dad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a805b28ea2d644bd0c71008e92735341c" id="r_a805b28ea2d644bd0c71008e92735341c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a805b28ea2d644bd0c71008e92735341c">BindDynamicDescriptorTable</a> (std::vector&lt; D3D12_ROOT_PARAMETER &gt; *descArray)</td></tr>
+<tr class="memdesc:a805b28ea2d644bd0c71008e92735341c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind descriptor range and sampler to descriptor table for dynamic resources that need to be updated on a per-object basis  <br /></td></tr>
+<tr class="separator:a805b28ea2d644bd0c71008e92735341c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9851f07f88fddd78c552b423a08ccea4" id="r_a9851f07f88fddd78c552b423a08ccea4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a9851f07f88fddd78c552b423a08ccea4">BindGPSO</a> (D3D12_GRAPHICS_PIPELINE_STATE_DESC *gpso)=0</td></tr>
+<tr class="memdesc:a9851f07f88fddd78c552b423a08ccea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind this shader to the graphics pipeline state  <br /></td></tr>
+<tr class="separator:a9851f07f88fddd78c552b423a08ccea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae618c3a8ce89ebd021fa51ce0271b0cf" id="r_ae618c3a8ce89ebd021fa51ce0271b0cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#ae618c3a8ce89ebd021fa51ce0271b0cf">SetSampler</a> (std::initializer_list&lt; <a class="el" href="struct_sampler_transmitter.html">SamplerTransmitter</a> &gt; settings)</td></tr>
+<tr class="memdesc:ae618c3a8ce89ebd021fa51ce0271b0cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sampler state  <br /></td></tr>
+<tr class="separator:ae618c3a8ce89ebd021fa51ce0271b0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40143c41b429430cbe9fcafb5a0757c6" id="r_a40143c41b429430cbe9fcafb5a0757c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_utl_1_1_dx.html#ac14e0010589229586f96555cceea1a5d">Utl::Dx::ShaderType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a40143c41b429430cbe9fcafb5a0757c6">GetShaderType</a> ()</td></tr>
+<tr class="memdesc:a40143c41b429430cbe9fcafb5a0757c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Shader type  <br /></td></tr>
+<tr class="separator:a40143c41b429430cbe9fcafb5a0757c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa88b09a6b4bf61ea6c6f78adb2a3a268" id="r_aa88b09a6b4bf61ea6c6f78adb2a3a268"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; std::string, <a class="el" href="struct_shader_resource_info.html">ShaderResourceInfo</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#aa88b09a6b4bf61ea6c6f78adb2a3a268">GetDescriptorNameToInfoDynamicMap</a> ()</td></tr>
+<tr class="memdesc:aa88b09a6b4bf61ea6c6f78adb2a3a268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get map to search information for shader resources (for dynamic resources)  <br /></td></tr>
+<tr class="separator:aa88b09a6b4bf61ea6c6f78adb2a3a268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2401c4dbda95102004ba8263b8eb17e" id="r_ac2401c4dbda95102004ba8263b8eb17e"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; std::string, <a class="el" href="struct_shader_resource_info.html">ShaderResourceInfo</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#ac2401c4dbda95102004ba8263b8eb17e">GetDescriptorNameToInfoStaticMap</a> ()</td></tr>
+<tr class="memdesc:ac2401c4dbda95102004ba8263b8eb17e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get map to search information for shader resources (for static resources)  <br /></td></tr>
+<tr class="separator:ac2401c4dbda95102004ba8263b8eb17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3dff83b5b5c3f43268fc6ddb631a8d6d" id="r_a3dff83b5b5c3f43268fc6ddb631a8d6d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a3dff83b5b5c3f43268fc6ddb631a8d6d">LoadDerived</a> (const Microsoft::WRL::ComPtr&lt; ID3D12ShaderReflection &gt; &amp;shaderReflection, const D3D12_SHADER_DESC &amp;shaderDesc)</td></tr>
+<tr class="memdesc:a3dff83b5b5c3f43268fc6ddb631a8d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing in derived classes at load time  <br /></td></tr>
+<tr class="separator:a3dff83b5b5c3f43268fc6ddb631a8d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a4e42bb59fda4dad6cd4333a5fc9d2e1c" id="r_a4e42bb59fda4dad6cd4333a5fc9d2e1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_utl_1_1_dx.html#ac14e0010589229586f96555cceea1a5d">Utl::Dx::ShaderType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a4e42bb59fda4dad6cd4333a5fc9d2e1c">m_shaderType</a></td></tr>
+<tr class="memdesc:a4e42bb59fda4dad6cd4333a5fc9d2e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shader type  <br /></td></tr>
+<tr class="separator:a4e42bb59fda4dad6cd4333a5fc9d2e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f4f463c1830b9bc5c555966a4f5110" id="r_a30f4f463c1830b9bc5c555966a4f5110"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="struct_shader_resource_info.html">ShaderResourceInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a30f4f463c1830b9bc5c555966a4f5110">m_dynamicNameToInfoMap</a></td></tr>
+<tr class="memdesc:a30f4f463c1830b9bc5c555966a4f5110"><td class="mdescLeft">&#160;</td><td class="mdescRight">map to search information for shader resources (for dynamic resources)  <br /></td></tr>
+<tr class="separator:a30f4f463c1830b9bc5c555966a4f5110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a5bcc6b38522dcefadc153e96acd43e" id="r_a7a5bcc6b38522dcefadc153e96acd43e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="struct_shader_resource_info.html">ShaderResourceInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a7a5bcc6b38522dcefadc153e96acd43e">m_staticNameToInfoMap</a></td></tr>
+<tr class="memdesc:a7a5bcc6b38522dcefadc153e96acd43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">map to search information for shader resources (for static resources)  <br /></td></tr>
+<tr class="separator:a7a5bcc6b38522dcefadc153e96acd43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04c25f76679ce8f550a18847a47baf80" id="r_a04c25f76679ce8f550a18847a47baf80"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D3D12_DESCRIPTOR_RANGE &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a04c25f76679ce8f550a18847a47baf80">m_dynamicDescriptorRanges</a></td></tr>
+<tr class="memdesc:a04c25f76679ce8f550a18847a47baf80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor ranges for dynamic resources  <br /></td></tr>
+<tr class="separator:a04c25f76679ce8f550a18847a47baf80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10f1c62bb63008978a6b702d64cadd0" id="r_af10f1c62bb63008978a6b702d64cadd0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D3D12_DESCRIPTOR_RANGE &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#af10f1c62bb63008978a6b702d64cadd0">m_staticDescriptorRanges</a></td></tr>
+<tr class="memdesc:af10f1c62bb63008978a6b702d64cadd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor ranges for static resources  <br /></td></tr>
+<tr class="separator:af10f1c62bb63008978a6b702d64cadd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f03f0dccc0b1358e572ef2b73723cef" id="r_a6f03f0dccc0b1358e572ef2b73723cef"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_sampler_info.html">SamplerInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a6f03f0dccc0b1358e572ef2b73723cef">m_samplers</a></td></tr>
+<tr class="memdesc:a6f03f0dccc0b1358e572ef2b73723cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sampler informations  <br /></td></tr>
+<tr class="separator:a6f03f0dccc0b1358e572ef2b73723cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12346124ad581a80be950ec5627728e6" id="r_a12346124ad581a80be950ec5627728e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_unique_ptr.html">CUniquePtr</a>&lt; std::byte[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#a12346124ad581a80be950ec5627728e6">m_csoData</a></td></tr>
+<tr class="memdesc:a12346124ad581a80be950ec5627728e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read cso data  <br /></td></tr>
+<tr class="separator:a12346124ad581a80be950ec5627728e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa949b574ab9a2f51f1462960ada1bbbd" id="r_aa949b574ab9a2f51f1462960ada1bbbd"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_shader.html#aa949b574ab9a2f51f1462960ada1bbbd">m_fileSize</a></td></tr>
+<tr class="memdesc:aa949b574ab9a2f51f1462960ada1bbbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">File size  <br /></td></tr>
+<tr class="separator:aa949b574ab9a2f51f1462960ada1bbbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Abstract class for shaders </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ad9a144b52fc3afcdc1e48aea65eac15d" name="ad9a144b52fc3afcdc1e48aea65eac15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9a144b52fc3afcdc1e48aea65eac15d">&#9670;&#160;</a></span>ACShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ACShader::ACShader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_utl_1_1_dx.html#ac14e0010589229586f96555cceea1a5d">Utl::Dx::ShaderType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="a10546d3be3a805de1bad2305d935edcf" name="a10546d3be3a805de1bad2305d935edcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10546d3be3a805de1bad2305d935edcf">&#9670;&#160;</a></span>~ACShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ACShader::~ACShader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a805b28ea2d644bd0c71008e92735341c" name="a805b28ea2d644bd0c71008e92735341c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a805b28ea2d644bd0c71008e92735341c">&#9670;&#160;</a></span>BindDynamicDescriptorTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACShader::BindDynamicDescriptorTable </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; D3D12_ROOT_PARAMETER &gt; *&#160;</td>
+          <td class="paramname"><em>descArray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bind descriptor range and sampler to descriptor table for dynamic resources that need to be updated on a per-object basis </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descArray</td><td>Dynamic array of descriptor table </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_shader_a805b28ea2d644bd0c71008e92735341c_cgraph.png" border="0" usemap="#aclass_a_c_shader_a805b28ea2d644bd0c71008e92735341c_cgraph" alt=""/></div>
+<map name="aclass_a_c_shader_a805b28ea2d644bd0c71008e92735341c_cgraph" id="aclass_a_c_shader_a805b28ea2d644bd0c71008e92735341c_cgraph">
+<area shape="rect" title="Bind descriptor range and sampler to descriptor table for dynamic resources that need to be updated o..." alt="" coords="5,5,230,48"/>
+<area shape="rect" href="namespace_utl_1_1_dx.html#a7564b8f82622b022af051c5bbd116905" title="Convert &#39;SHADER_TYPE&#39; to &#39;D3D12_SHADER_VISIBILITY&#39;" alt="" coords="278,5,466,48"/>
+<area shape="poly" title=" " alt="" coords="230,24,262,24,262,29,230,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9851f07f88fddd78c552b423a08ccea4" name="a9851f07f88fddd78c552b423a08ccea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9851f07f88fddd78c552b423a08ccea4">&#9670;&#160;</a></span>BindGPSO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACShader::BindGPSO </td>
+          <td>(</td>
+          <td class="paramtype">D3D12_GRAPHICS_PIPELINE_STATE_DESC *&#160;</td>
+          <td class="paramname"><em>gpso</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bind this shader to the graphics pipeline state </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gpso</td><td>Graphics pipe state to where you want to bind this shader </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_c_vertex_shader.html#a6cc97016f9718a4f73003f1d923d9dca">CVertexShader</a>, <a class="el" href="class_c_pixel_shader.html#ac1729b5d981ca2ea92c15e2867042987">CPixelShader</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="ac0ec46118f39451889bddbd81f25dad3" name="ac0ec46118f39451889bddbd81f25dad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ec46118f39451889bddbd81f25dad3">&#9670;&#160;</a></span>BindStaticDescriptorTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACShader::BindStaticDescriptorTable </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; D3D12_ROOT_PARAMETER &gt; *&#160;</td>
+          <td class="paramname"><em>descArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; D3D12_STATIC_SAMPLER_DESC &gt; *&#160;</td>
+          <td class="paramname"><em>sampArray</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bind descriptor range and sampler to descriptor table for static resources that don't need to be updated on a per-object basis </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descArray</td><td>Dynamic array of descriptor table for static resources </td></tr>
+    <tr><td class="paramname">sampArray</td><td>Dynamic array of sampler state </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_shader_ac0ec46118f39451889bddbd81f25dad3_cgraph.png" border="0" usemap="#aclass_a_c_shader_ac0ec46118f39451889bddbd81f25dad3_cgraph" alt=""/></div>
+<map name="aclass_a_c_shader_ac0ec46118f39451889bddbd81f25dad3_cgraph" id="aclass_a_c_shader_ac0ec46118f39451889bddbd81f25dad3_cgraph">
+<area shape="rect" title="Bind descriptor range and sampler to descriptor table for static resources that don&#39;t need to be upda..." alt="" coords="5,5,213,48"/>
+<area shape="rect" href="namespace_utl_1_1_dx.html#a7564b8f82622b022af051c5bbd116905" title="Convert &#39;SHADER_TYPE&#39; to &#39;D3D12_SHADER_VISIBILITY&#39;" alt="" coords="261,5,449,48"/>
+<area shape="poly" title=" " alt="" coords="213,24,245,24,245,29,213,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa88b09a6b4bf61ea6c6f78adb2a3a268" name="aa88b09a6b4bf61ea6c6f78adb2a3a268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa88b09a6b4bf61ea6c6f78adb2a3a268">&#9670;&#160;</a></span>GetDescriptorNameToInfoDynamicMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::unordered_map&lt; std::string, <a class="el" href="struct_shader_resource_info.html">ShaderResourceInfo</a> &gt; &amp; ACShader::GetDescriptorNameToInfoDynamicMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get map to search information for shader resources (for dynamic resources) </p>
+
+</div>
+</div>
+<a id="ac2401c4dbda95102004ba8263b8eb17e" name="ac2401c4dbda95102004ba8263b8eb17e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2401c4dbda95102004ba8263b8eb17e">&#9670;&#160;</a></span>GetDescriptorNameToInfoStaticMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::unordered_map&lt; std::string, <a class="el" href="struct_shader_resource_info.html">ShaderResourceInfo</a> &gt; &amp; ACShader::GetDescriptorNameToInfoStaticMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get map to search information for shader resources (for static resources) </p>
+
+</div>
+</div>
+<a id="a40143c41b429430cbe9fcafb5a0757c6" name="a40143c41b429430cbe9fcafb5a0757c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40143c41b429430cbe9fcafb5a0757c6">&#9670;&#160;</a></span>GetShaderType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_utl_1_1_dx.html#ac14e0010589229586f96555cceea1a5d">Utl::Dx::ShaderType</a> ACShader::GetShaderType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get Shader type </p>
+
+</div>
+</div>
+<a id="a22e95d3c6cadabc74dd39927d09c9b40" name="a22e95d3c6cadabc74dd39927d09c9b40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e95d3c6cadabc74dd39927d09c9b40">&#9670;&#160;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACShader::Load </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loading shader files </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>File path where the shader cso file is located </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_shader_a22e95d3c6cadabc74dd39927d09c9b40_cgraph.png" border="0" usemap="#aclass_a_c_shader_a22e95d3c6cadabc74dd39927d09c9b40_cgraph" alt=""/></div>
+<map name="aclass_a_c_shader_a22e95d3c6cadabc74dd39927d09c9b40_cgraph" id="aclass_a_c_shader_a22e95d3c6cadabc74dd39927d09c9b40_cgraph">
+<area shape="rect" title="Loading shader files" alt="" coords="5,81,122,108"/>
+<area shape="rect" href="class_c_unique_ptr.html#ae221025865772158391c36b66485ccb3" title="Get instance" alt="" coords="191,5,307,32"/>
+<area shape="poly" title=" " alt="" coords="90,78,169,42,186,35,188,40,171,46,92,83"/>
+<area shape="rect" href="class_a_c_shader.html#a3dff83b5b5c3f43268fc6ddb631a8d6d" title="Processing in derived classes at load time" alt="" coords="170,56,328,83"/>
+<area shape="poly" title=" " alt="" coords="122,84,154,80,155,85,122,89"/>
+<area shape="rect" href="class_c_unique_ptr.html#a214aca2b0021fdf82a55034e39f1a8f9" title="Make unique pointer" alt="" coords="185,107,313,133"/>
+<area shape="poly" title=" " alt="" coords="122,100,170,107,169,112,122,105"/>
+<area shape="rect" href="namespace_utl_1_1_str.html#ad72076fbe2405636f8945604a5d79dbc" title="Convert &#39;std::string&#39; to &#39;std::wstring&#39;" alt="" coords="171,157,327,184"/>
+<area shape="poly" title=" " alt="" coords="92,106,171,143,188,149,186,154,169,148,90,111"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_shader_a22e95d3c6cadabc74dd39927d09c9b40_icgraph.png" border="0" usemap="#aclass_a_c_shader_a22e95d3c6cadabc74dd39927d09c9b40_icgraph" alt=""/></div>
+<map name="aclass_a_c_shader_a22e95d3c6cadabc74dd39927d09c9b40_icgraph" id="aclass_a_c_shader_a22e95d3c6cadabc74dd39927d09c9b40_icgraph">
+<area shape="rect" title="Loading shader files" alt="" coords="259,31,375,57"/>
+<area shape="rect" href="class_c_pixel_shader.html#ab12d3e5b09e42a4019744a1645d36155" title="Conatructor that loads shader file" alt="" coords="14,5,202,32"/>
+<area shape="poly" title=" " alt="" coords="243,38,202,33,202,27,243,32"/>
+<area shape="rect" href="class_c_vertex_shader.html#ad6142258763bdd2df3951034d55ca7b9" title="Constructor that loads shader" alt="" coords="5,56,211,83"/>
+<area shape="poly" title=" " alt="" coords="243,56,211,59,211,54,243,50"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3dff83b5b5c3f43268fc6ddb631a8d6d" name="a3dff83b5b5c3f43268fc6ddb631a8d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dff83b5b5c3f43268fc6ddb631a8d6d">&#9670;&#160;</a></span>LoadDerived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACShader::LoadDerived </td>
+          <td>(</td>
+          <td class="paramtype">const Microsoft::WRL::ComPtr&lt; ID3D12ShaderReflection &gt; &amp;&#160;</td>
+          <td class="paramname"><em>shaderReflection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const D3D12_SHADER_DESC &amp;&#160;</td>
+          <td class="paramname"><em>shaderDesc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing in derived classes at load time </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shaderReflection</td><td>Loaded shader reflection </td></tr>
+    <tr><td class="paramname">shaderDesc</td><td>Loaded shader descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_c_vertex_shader.html#a63ed78734d371d277bf6c44608eb58d3">CVertexShader</a>で再実装されています。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_shader_a3dff83b5b5c3f43268fc6ddb631a8d6d_icgraph.png" border="0" usemap="#aclass_a_c_shader_a3dff83b5b5c3f43268fc6ddb631a8d6d_icgraph" alt=""/></div>
+<map name="aclass_a_c_shader_a3dff83b5b5c3f43268fc6ddb631a8d6d_icgraph" id="aclass_a_c_shader_a3dff83b5b5c3f43268fc6ddb631a8d6d_icgraph">
+<area shape="rect" title="Processing in derived classes at load time" alt="" coords="423,31,581,57"/>
+<area shape="rect" href="class_a_c_shader.html#a22e95d3c6cadabc74dd39927d09c9b40" title="Loading shader files" alt="" coords="259,31,375,57"/>
+<area shape="poly" title=" " alt="" coords="408,47,375,47,375,41,408,41"/>
+<area shape="rect" href="class_c_pixel_shader.html#ab12d3e5b09e42a4019744a1645d36155" title="Conatructor that loads shader file" alt="" coords="14,5,202,32"/>
+<area shape="poly" title=" " alt="" coords="243,38,202,33,202,27,243,32"/>
+<area shape="rect" href="class_c_vertex_shader.html#ad6142258763bdd2df3951034d55ca7b9" title="Constructor that loads shader" alt="" coords="5,56,211,83"/>
+<area shape="poly" title=" " alt="" coords="243,56,211,59,211,54,243,50"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae618c3a8ce89ebd021fa51ce0271b0cf" name="ae618c3a8ce89ebd021fa51ce0271b0cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae618c3a8ce89ebd021fa51ce0271b0cf">&#9670;&#160;</a></span>SetSampler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACShader::SetSampler </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="struct_sampler_transmitter.html">SamplerTransmitter</a> &gt;&#160;</td>
+          <td class="paramname"><em>settings</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set sampler state </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">settings</td><td>Specify sampler state settings to be used with argument name </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_shader_ae618c3a8ce89ebd021fa51ce0271b0cf_cgraph.png" border="0" usemap="#aclass_a_c_shader_ae618c3a8ce89ebd021fa51ce0271b0cf_cgraph" alt=""/></div>
+<map name="aclass_a_c_shader_ae618c3a8ce89ebd021fa51ce0271b0cf_cgraph" id="aclass_a_c_shader_ae618c3a8ce89ebd021fa51ce0271b0cf_cgraph">
+<area shape="rect" title="Set sampler state" alt="" coords="5,35,162,61"/>
+<area shape="rect" href="namespace_gpso.html#a099c0aa56494b9400698f29f23ea7eb2" title="Bind the specified sampler state" alt="" coords="221,5,387,32"/>
+<area shape="poly" title=" " alt="" coords="162,35,205,29,206,34,163,40"/>
+<area shape="rect" href="namespace_utl_1_1_dx.html#a7564b8f82622b022af051c5bbd116905" title="Convert &#39;SHADER_TYPE&#39; to &#39;D3D12_SHADER_VISIBILITY&#39;" alt="" coords="210,56,398,99"/>
+<area shape="poly" title=" " alt="" coords="163,56,195,60,194,65,162,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a12346124ad581a80be950ec5627728e6" name="a12346124ad581a80be950ec5627728e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12346124ad581a80be950ec5627728e6">&#9670;&#160;</a></span>m_csoData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_unique_ptr.html">CUniquePtr</a>&lt;std::byte[]&gt; ACShader::m_csoData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read cso data </p>
+
+</div>
+</div>
+<a id="a04c25f76679ce8f550a18847a47baf80" name="a04c25f76679ce8f550a18847a47baf80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c25f76679ce8f550a18847a47baf80">&#9670;&#160;</a></span>m_dynamicDescriptorRanges</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;D3D12_DESCRIPTOR_RANGE&gt; ACShader::m_dynamicDescriptorRanges</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Descriptor ranges for dynamic resources </p>
+
+</div>
+</div>
+<a id="a30f4f463c1830b9bc5c555966a4f5110" name="a30f4f463c1830b9bc5c555966a4f5110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30f4f463c1830b9bc5c555966a4f5110">&#9670;&#160;</a></span>m_dynamicNameToInfoMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="struct_shader_resource_info.html">ShaderResourceInfo</a>&gt; ACShader::m_dynamicNameToInfoMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>map to search information for shader resources (for dynamic resources) </p>
+
+</div>
+</div>
+<a id="aa949b574ab9a2f51f1462960ada1bbbd" name="aa949b574ab9a2f51f1462960ada1bbbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa949b574ab9a2f51f1462960ada1bbbd">&#9670;&#160;</a></span>m_fileSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ACShader::m_fileSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File size </p>
+
+</div>
+</div>
+<a id="a6f03f0dccc0b1358e572ef2b73723cef" name="a6f03f0dccc0b1358e572ef2b73723cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f03f0dccc0b1358e572ef2b73723cef">&#9670;&#160;</a></span>m_samplers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_sampler_info.html">SamplerInfo</a>&gt; ACShader::m_samplers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sampler informations </p>
+
+</div>
+</div>
+<a id="a4e42bb59fda4dad6cd4333a5fc9d2e1c" name="a4e42bb59fda4dad6cd4333a5fc9d2e1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e42bb59fda4dad6cd4333a5fc9d2e1c">&#9670;&#160;</a></span>m_shaderType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_utl_1_1_dx.html#ac14e0010589229586f96555cceea1a5d">Utl::Dx::ShaderType</a> ACShader::m_shaderType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shader type </p>
+
+</div>
+</div>
+<a id="af10f1c62bb63008978a6b702d64cadd0" name="af10f1c62bb63008978a6b702d64cadd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af10f1c62bb63008978a6b702d64cadd0">&#9670;&#160;</a></span>m_staticDescriptorRanges</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;D3D12_DESCRIPTOR_RANGE&gt; ACShader::m_staticDescriptorRanges</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Descriptor ranges for static resources </p>
+
+</div>
+</div>
+<a id="a7a5bcc6b38522dcefadc153e96acd43e" name="a7a5bcc6b38522dcefadc153e96acd43e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a5bcc6b38522dcefadc153e96acd43e">&#9670;&#160;</a></span>m_staticNameToInfoMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="struct_shader_resource_info.html">ShaderResourceInfo</a>&gt; ACShader::m_staticNameToInfoMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>map to search information for shader resources (for static resources) </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_shader_8h_source.html">Shader.h</a></li>
+<li><a class="el" href="_shader_8cpp.html">Shader.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

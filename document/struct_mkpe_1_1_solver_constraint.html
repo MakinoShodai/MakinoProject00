@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Mkpe::SolverConstraint 構造体</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_mkpe.html">Mkpe</a></li><li class="navelem"><a class="el" href="struct_mkpe_1_1_solver_constraint.html">SolverConstraint</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="struct_mkpe_1_1_solver_constraint-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Mkpe::SolverConstraint 構造体</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Constraint solver class  
+ <a href="struct_mkpe_1_1_solver_constraint.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_solver_constraint_8h_source.html">SolverConstraint.h</a>&gt;</code></p>
+<div class="dynheader">
+Mkpe::SolverConstraint 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_solver_constraint__coll__graph.png" border="0" usemap="#a_mkpe_1_1_solver_constraint_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mkpe_1_1_solver_constraint_coll__map" id="a_mkpe_1_1_solver_constraint_coll__map">
+<area shape="rect" title="Constraint solver class" alt="" coords="64,395,220,421"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="5,208,191,251"/>
+<area shape="poly" title=" " alt="" coords="109,265,141,394,136,395,104,266"/>
+<area shape="rect" href="struct_vector.html" title=" " alt="" coords="214,216,337,243"/>
+<area shape="poly" title=" " alt="" coords="267,258,239,314,220,344,197,373,167,396,164,392,193,369,216,341,235,311,262,256"/>
+<area shape="rect" title=" " alt="" coords="237,5,276,32"/>
+<area shape="poly" title=" " alt="" coords="255,48,251,96,251,128,261,176,273,215,268,217,256,178,245,128,245,96,250,47"/>
+<area shape="rect" href="struct_vector.html" title="Colomn vector structure" alt="" coords="286,99,412,125"/>
+<area shape="poly" title=" " alt="" coords="282,41,338,96,334,100,278,45"/>
+<area shape="poly" title=" " alt="" coords="335,140,286,217,281,214,330,137"/>
+<area shape="poly" title=" " alt="" coords="429,103,438,112,430,120,413,123,412,118,428,116,433,112,425,108"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a68be7563f08fc5b15fc881d9ed89d942" id="r_a68be7563f08fc5b15fc881d9ed89d942"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a68be7563f08fc5b15fc881d9ed89d942">SolverConstraint</a> (<a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> &gt; <a class="el" href="struct_mkpe_1_1_solver_constraint.html#ab290c65422c39d0ef0792a22be94cfcc">wrapperA</a>, <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> &gt; <a class="el" href="struct_mkpe_1_1_solver_constraint.html#adfb642b5e8ecf481d998fea6e2e50761">wrapperB</a>)</td></tr>
+<tr class="memdesc:a68be7563f08fc5b15fc881d9ed89d942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a68be7563f08fc5b15fc881d9ed89d942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea4de11e90e0a94823c9e2639e81d944" id="r_aea4de11e90e0a94823c9e2639e81d944"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#aea4de11e90e0a94823c9e2639e81d944">GetWrapperA</a> ()</td></tr>
+<tr class="memdesc:aea4de11e90e0a94823c9e2639e81d944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first collider wrapper  <br /></td></tr>
+<tr class="separator:aea4de11e90e0a94823c9e2639e81d944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaac4e50f69643bb82bedffaaa5786be" id="r_aaaac4e50f69643bb82bedffaaa5786be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#aaaac4e50f69643bb82bedffaaa5786be">GetWrapperB</a> ()</td></tr>
+<tr class="memdesc:aaaac4e50f69643bb82bedffaaa5786be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the second collider wrapper  <br /></td></tr>
+<tr class="separator:aaaac4e50f69643bb82bedffaaa5786be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:ab290c65422c39d0ef0792a22be94cfcc" id="r_ab290c65422c39d0ef0792a22be94cfcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#ab290c65422c39d0ef0792a22be94cfcc">wrapperA</a></td></tr>
+<tr class="memdesc:ab290c65422c39d0ef0792a22be94cfcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weak pointer to the first collider wrapper  <br /></td></tr>
+<tr class="separator:ab290c65422c39d0ef0792a22be94cfcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb642b5e8ecf481d998fea6e2e50761" id="r_adfb642b5e8ecf481d998fea6e2e50761"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#adfb642b5e8ecf481d998fea6e2e50761">wrapperB</a></td></tr>
+<tr class="memdesc:adfb642b5e8ecf481d998fea6e2e50761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weak pointer to the second collider wrapper  <br /></td></tr>
+<tr class="separator:adfb642b5e8ecf481d998fea6e2e50761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c3fed2bd762b017d22b6f6863150239" id="r_a2c3fed2bd762b017d22b6f6863150239"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a2c3fed2bd762b017d22b6f6863150239">linearNormalA</a></td></tr>
+<tr class="memdesc:a2c3fed2bd762b017d22b6f6863150239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal direction of linear velocity of the first collider  <br /></td></tr>
+<tr class="separator:a2c3fed2bd762b017d22b6f6863150239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78c82226fd8fcfd7d2d94a5863037130" id="r_a78c82226fd8fcfd7d2d94a5863037130"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a78c82226fd8fcfd7d2d94a5863037130">linearNormalB</a></td></tr>
+<tr class="memdesc:a78c82226fd8fcfd7d2d94a5863037130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal direction of linear velocity of the second collider  <br /></td></tr>
+<tr class="separator:a78c82226fd8fcfd7d2d94a5863037130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37bb9bc70f891e08e083631a46012ad1" id="r_a37bb9bc70f891e08e083631a46012ad1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a37bb9bc70f891e08e083631a46012ad1">torqueA</a></td></tr>
+<tr class="memdesc:a37bb9bc70f891e08e083631a46012ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Torque for the first collider  <br /></td></tr>
+<tr class="separator:a37bb9bc70f891e08e083631a46012ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ff912c8e55cb59f0d05ef1fd4bead1" id="r_a91ff912c8e55cb59f0d05ef1fd4bead1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a91ff912c8e55cb59f0d05ef1fd4bead1">torqueB</a></td></tr>
+<tr class="memdesc:a91ff912c8e55cb59f0d05ef1fd4bead1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Torque for the second collider  <br /></td></tr>
+<tr class="separator:a91ff912c8e55cb59f0d05ef1fd4bead1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b4d3743978f15a2d12235507c020c8" id="r_a89b4d3743978f15a2d12235507c020c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a89b4d3743978f15a2d12235507c020c8">angularAxisA</a></td></tr>
+<tr class="memdesc:a89b4d3743978f15a2d12235507c020c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis of rotation vector for the first collider  <br /></td></tr>
+<tr class="separator:a89b4d3743978f15a2d12235507c020c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174a58be8162d18b69f293a61ce1e319" id="r_a174a58be8162d18b69f293a61ce1e319"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a174a58be8162d18b69f293a61ce1e319">angularAxisB</a></td></tr>
+<tr class="memdesc:a174a58be8162d18b69f293a61ce1e319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis of rotation vector for the second collider  <br /></td></tr>
+<tr class="separator:a174a58be8162d18b69f293a61ce1e319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630d7857ce2a77d803f7d8de75947f59" id="r_a630d7857ce2a77d803f7d8de75947f59"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a630d7857ce2a77d803f7d8de75947f59">denomOfImpulse</a></td></tr>
+<tr class="memdesc:a630d7857ce2a77d803f7d8de75947f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Denominator of impulse  <br /></td></tr>
+<tr class="separator:a630d7857ce2a77d803f7d8de75947f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75e42f7bddbdfe87b23a63ff63861a8" id="r_ae75e42f7bddbdfe87b23a63ff63861a8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#ae75e42f7bddbdfe87b23a63ff63861a8">appliedImpulse</a></td></tr>
+<tr class="memdesc:ae75e42f7bddbdfe87b23a63ff63861a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total value of impact for contact solving  <br /></td></tr>
+<tr class="separator:ae75e42f7bddbdfe87b23a63ff63861a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a392b674c610a51af65ceaf026500e7" id="r_a7a392b674c610a51af65ceaf026500e7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a7a392b674c610a51af65ceaf026500e7">velocityImpulse</a></td></tr>
+<tr class="memdesc:a7a392b674c610a51af65ceaf026500e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Impulse required for velocity solving  <br /></td></tr>
+<tr class="separator:a7a392b674c610a51af65ceaf026500e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70f1e72f0f609cad4c5b2e7261623a9" id="r_af70f1e72f0f609cad4c5b2e7261623a9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#af70f1e72f0f609cad4c5b2e7261623a9">penetrationImpulse</a></td></tr>
+<tr class="memdesc:af70f1e72f0f609cad4c5b2e7261623a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Impulse required for penetration solving  <br /></td></tr>
+<tr class="separator:af70f1e72f0f609cad4c5b2e7261623a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44527ec580e510df769eb57b2c9d10f4" id="r_a44527ec580e510df769eb57b2c9d10f4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a44527ec580e510df769eb57b2c9d10f4">friction</a></td></tr>
+<tr class="memdesc:a44527ec580e510df769eb57b2c9d10f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friction  <br /></td></tr>
+<tr class="separator:a44527ec580e510df769eb57b2c9d10f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88f57ed6f3880735a12343530f79b6fb" id="r_a88f57ed6f3880735a12343530f79b6fb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a88f57ed6f3880735a12343530f79b6fb">lowerLimit</a></td></tr>
+<tr class="memdesc:a88f57ed6f3880735a12343530f79b6fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower limit of friction  <br /></td></tr>
+<tr class="separator:a88f57ed6f3880735a12343530f79b6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e1f684f418806ebd0a9df09227c588" id="r_a94e1f684f418806ebd0a9df09227c588"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a94e1f684f418806ebd0a9df09227c588">upperLimit</a></td></tr>
+<tr class="memdesc:a94e1f684f418806ebd0a9df09227c588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper limit of friction  <br /></td></tr>
+<tr class="separator:a94e1f684f418806ebd0a9df09227c588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c19f807e94657685426355a76b620c8" id="r_a7c19f807e94657685426355a76b620c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_solver_constraint.html#a7c19f807e94657685426355a76b620c8">synchroSolverIndex</a></td></tr>
+<tr class="memdesc:a7c19f807e94657685426355a76b620c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the constraint solver to be synchronized with this constraint solver  <br /></td></tr>
+<tr class="separator:a7c19f807e94657685426355a76b620c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Constraint solver class </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a68be7563f08fc5b15fc881d9ed89d942" name="a68be7563f08fc5b15fc881d9ed89d942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68be7563f08fc5b15fc881d9ed89d942">&#9670;&#160;</a></span>SolverConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::SolverConstraint::SolverConstraint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> &gt;&#160;</td>
+          <td class="paramname"><em>wrapperA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> &gt;&#160;</td>
+          <td class="paramname"><em>wrapperB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapperA</td><td>Weak pointer to the first collider wrapper </td></tr>
+    <tr><td class="paramname">wrapperB</td><td>Weak pointer to the second collider wrapper </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aea4de11e90e0a94823c9e2639e81d944" name="aea4de11e90e0a94823c9e2639e81d944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea4de11e90e0a94823c9e2639e81d944">&#9670;&#160;</a></span>GetWrapperA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> * Mkpe::SolverConstraint::GetWrapperA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the first collider wrapper </p>
+
+</div>
+</div>
+<a id="aaaac4e50f69643bb82bedffaaa5786be" name="aaaac4e50f69643bb82bedffaaa5786be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaac4e50f69643bb82bedffaaa5786be">&#9670;&#160;</a></span>GetWrapperB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> * Mkpe::SolverConstraint::GetWrapperB </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the second collider wrapper </p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a89b4d3743978f15a2d12235507c020c8" name="a89b4d3743978f15a2d12235507c020c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b4d3743978f15a2d12235507c020c8">&#9670;&#160;</a></span>angularAxisA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Mkpe::SolverConstraint::angularAxisA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Axis of rotation vector for the first collider </p>
+
+</div>
+</div>
+<a id="a174a58be8162d18b69f293a61ce1e319" name="a174a58be8162d18b69f293a61ce1e319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a174a58be8162d18b69f293a61ce1e319">&#9670;&#160;</a></span>angularAxisB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Mkpe::SolverConstraint::angularAxisB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Axis of rotation vector for the second collider </p>
+
+</div>
+</div>
+<a id="ae75e42f7bddbdfe87b23a63ff63861a8" name="ae75e42f7bddbdfe87b23a63ff63861a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75e42f7bddbdfe87b23a63ff63861a8">&#9670;&#160;</a></span>appliedImpulse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mkpe::SolverConstraint::appliedImpulse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Total value of impact for contact solving </p>
+
+</div>
+</div>
+<a id="a630d7857ce2a77d803f7d8de75947f59" name="a630d7857ce2a77d803f7d8de75947f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630d7857ce2a77d803f7d8de75947f59">&#9670;&#160;</a></span>denomOfImpulse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mkpe::SolverConstraint::denomOfImpulse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Denominator of impulse </p>
+
+</div>
+</div>
+<a id="a44527ec580e510df769eb57b2c9d10f4" name="a44527ec580e510df769eb57b2c9d10f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44527ec580e510df769eb57b2c9d10f4">&#9670;&#160;</a></span>friction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mkpe::SolverConstraint::friction</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Friction </p>
+
+</div>
+</div>
+<a id="a2c3fed2bd762b017d22b6f6863150239" name="a2c3fed2bd762b017d22b6f6863150239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c3fed2bd762b017d22b6f6863150239">&#9670;&#160;</a></span>linearNormalA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Mkpe::SolverConstraint::linearNormalA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Normal direction of linear velocity of the first collider </p>
+
+</div>
+</div>
+<a id="a78c82226fd8fcfd7d2d94a5863037130" name="a78c82226fd8fcfd7d2d94a5863037130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78c82226fd8fcfd7d2d94a5863037130">&#9670;&#160;</a></span>linearNormalB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Mkpe::SolverConstraint::linearNormalB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Normal direction of linear velocity of the second collider </p>
+
+</div>
+</div>
+<a id="a88f57ed6f3880735a12343530f79b6fb" name="a88f57ed6f3880735a12343530f79b6fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88f57ed6f3880735a12343530f79b6fb">&#9670;&#160;</a></span>lowerLimit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mkpe::SolverConstraint::lowerLimit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lower limit of friction </p>
+
+</div>
+</div>
+<a id="af70f1e72f0f609cad4c5b2e7261623a9" name="af70f1e72f0f609cad4c5b2e7261623a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af70f1e72f0f609cad4c5b2e7261623a9">&#9670;&#160;</a></span>penetrationImpulse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mkpe::SolverConstraint::penetrationImpulse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Impulse required for penetration solving </p>
+
+</div>
+</div>
+<a id="a7c19f807e94657685426355a76b620c8" name="a7c19f807e94657685426355a76b620c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c19f807e94657685426355a76b620c8">&#9670;&#160;</a></span>synchroSolverIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Mkpe::SolverConstraint::synchroSolverIndex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Index of the constraint solver to be synchronized with this constraint solver </p>
+
+</div>
+</div>
+<a id="a37bb9bc70f891e08e083631a46012ad1" name="a37bb9bc70f891e08e083631a46012ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37bb9bc70f891e08e083631a46012ad1">&#9670;&#160;</a></span>torqueA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Mkpe::SolverConstraint::torqueA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Torque for the first collider </p>
+
+</div>
+</div>
+<a id="a91ff912c8e55cb59f0d05ef1fd4bead1" name="a91ff912c8e55cb59f0d05ef1fd4bead1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ff912c8e55cb59f0d05ef1fd4bead1">&#9670;&#160;</a></span>torqueB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Mkpe::SolverConstraint::torqueB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Torque for the second collider </p>
+
+</div>
+</div>
+<a id="a94e1f684f418806ebd0a9df09227c588" name="a94e1f684f418806ebd0a9df09227c588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94e1f684f418806ebd0a9df09227c588">&#9670;&#160;</a></span>upperLimit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mkpe::SolverConstraint::upperLimit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Upper limit of friction </p>
+
+</div>
+</div>
+<a id="a7a392b674c610a51af65ceaf026500e7" name="a7a392b674c610a51af65ceaf026500e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a392b674c610a51af65ceaf026500e7">&#9670;&#160;</a></span>velocityImpulse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mkpe::SolverConstraint::velocityImpulse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Impulse required for velocity solving </p>
+
+</div>
+</div>
+<a id="ab290c65422c39d0ef0792a22be94cfcc" name="ab290c65422c39d0ef0792a22be94cfcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab290c65422c39d0ef0792a22be94cfcc">&#9670;&#160;</a></span>wrapperA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt;<a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>&gt; Mkpe::SolverConstraint::wrapperA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Weak pointer to the first collider wrapper </p>
+
+</div>
+</div>
+<a id="adfb642b5e8ecf481d998fea6e2e50761" name="adfb642b5e8ecf481d998fea6e2e50761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb642b5e8ecf481d998fea6e2e50761">&#9670;&#160;</a></span>wrapperB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt;<a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>&gt; Mkpe::SolverConstraint::wrapperB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Weak pointer to the second collider wrapper </p>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_solver_constraint_8h_source.html">SolverConstraint.h</a></li>
+<li><a class="el" href="_solver_constraint_8cpp.html">SolverConstraint.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

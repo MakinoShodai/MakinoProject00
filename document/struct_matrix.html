@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Matrix&lt; T, ROW, COLUMN &gt; 構造体テンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="#pro-static-attribs">静的限定公開変数類</a> &#124;
+<a href="struct_matrix-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Matrix&lt; T, ROW, COLUMN &gt; 構造体テンプレート</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Column-major matrix  
+ <a href="struct_matrix.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_math_structures_8h_source.html">MathStructures.h</a>&gt;</code></p>
+<div class="dynheader">
+Matrix&lt; T, ROW, COLUMN &gt; 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_matrix__coll__graph.png" border="0" usemap="#a_matrix_3_01_t_00_01_r_o_w_00_01_c_o_l_u_m_n_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="a_matrix_3_01_t_00_01_r_o_w_00_01_c_o_l_u_m_n_01_4_coll__map" id="a_matrix_3_01_t_00_01_r_o_w_00_01_c_o_l_u_m_n_01_4_coll__map">
+<area shape="rect" title="Column&#45;major matrix" alt="" coords="5,187,197,213"/>
+<area shape="rect" title=" " alt="" coords="82,5,120,32"/>
+<area shape="poly" title=" " alt="" coords="99,48,94,96,95,146,101,186,96,186,90,146,88,96,94,47"/>
+<area shape="rect" href="struct_matrix.html" title="Column&#45;major matrix" alt="" coords="129,96,321,123"/>
+<area shape="poly" title=" " alt="" coords="133,39,209,93,206,98,129,43"/>
+<area shape="poly" title=" " alt="" coords="197,134,120,188,117,184,193,130"/>
+<area shape="poly" title=" " alt="" coords="338,102,347,109,339,117,322,120,321,114,337,112,342,109,335,106"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a661bd64ba7b186ce682ad87e170baf3e" id="r_a661bd64ba7b186ce682ad87e170baf3e"><td class="memTemplParams" colspan="2">template&lt;Utl::Type::Traits::IsFloatingPoint... Args&gt; </td></tr>
+<tr class="memitem:a661bd64ba7b186ce682ad87e170baf3e"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_matrix.html#a661bd64ba7b186ce682ad87e170baf3e">Matrix</a> (Args... args)</td></tr>
+<tr class="memdesc:a661bd64ba7b186ce682ad87e170baf3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a661bd64ba7b186ce682ad87e170baf3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27777f6c7a9798a8384fdd5f8332eb68" id="r_a27777f6c7a9798a8384fdd5f8332eb68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_matrix.html#a27777f6c7a9798a8384fdd5f8332eb68">Matrix</a> (const <a class="el" href="struct_matrix.html">Matrix</a> &amp;copy)</td></tr>
+<tr class="memdesc:a27777f6c7a9798a8384fdd5f8332eb68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor  <br /></td></tr>
+<tr class="separator:a27777f6c7a9798a8384fdd5f8332eb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c65755cbb3d889fe29599f837a00e20" id="r_a4c65755cbb3d889fe29599f837a00e20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_matrix.html#a4c65755cbb3d889fe29599f837a00e20">operator=</a> (const <a class="el" href="struct_matrix.html">Matrix</a> &amp;copy)</td></tr>
+<tr class="memdesc:a4c65755cbb3d889fe29599f837a00e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy operator  <br /></td></tr>
+<tr class="separator:a4c65755cbb3d889fe29599f837a00e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25994128ee1d44e8f3c860080781b696" id="r_a25994128ee1d44e8f3c860080781b696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_matrix.html#a25994128ee1d44e8f3c860080781b696">Transpose</a> () const</td></tr>
+<tr class="memdesc:a25994128ee1d44e8f3c860080781b696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a transpose matrix  <br /></td></tr>
+<tr class="separator:a25994128ee1d44e8f3c860080781b696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5cd08e66c3a218b8b8a3b2fd37067a3" id="r_ae5cd08e66c3a218b8b8a3b2fd37067a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_matrix.html#ae5cd08e66c3a218b8b8a3b2fd37067a3">Inverse</a> ()</td></tr>
+<tr class="memdesc:ae5cd08e66c3a218b8b8a3b2fd37067a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a inverse matrix  <br /></td></tr>
+<tr class="separator:ae5cd08e66c3a218b8b8a3b2fd37067a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0a4064416ad1fd4ab92a72465fa13c" id="r_add0a4064416ad1fd4ab92a72465fa13c"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_matrix.html#add0a4064416ad1fd4ab92a72465fa13c">operator()</a> (uint8_t row, uint8_t column)</td></tr>
+<tr class="memdesc:add0a4064416ad1fd4ab92a72465fa13c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element access operator  <br /></td></tr>
+<tr class="separator:add0a4064416ad1fd4ab92a72465fa13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6563d7331799ff3f331c19e6004a4bd" id="r_af6563d7331799ff3f331c19e6004a4bd"><td class="memItemLeft" align="right" valign="top">const T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_matrix.html#af6563d7331799ff3f331c19e6004a4bd">operator()</a> (uint8_t row, uint8_t column) const</td></tr>
+<tr class="memdesc:af6563d7331799ff3f331c19e6004a4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element access operator  <br /></td></tr>
+<tr class="separator:af6563d7331799ff3f331c19e6004a4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c01170dff647e8707fbbf4f02db6c4" id="r_ab7c01170dff647e8707fbbf4f02db6c4"><td class="memTemplParams" colspan="2">template&lt;uint8_t OTHER_COLUMN&gt; </td></tr>
+<tr class="memitem:ab7c01170dff647e8707fbbf4f02db6c4"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, OTHER_COLUMN &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_matrix.html#ab7c01170dff647e8707fbbf4f02db6c4">operator*</a> (const <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, COLUMN, OTHER_COLUMN &gt; &amp;other) const</td></tr>
+<tr class="memdesc:ab7c01170dff647e8707fbbf4f02db6c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product with matrix  <br /></td></tr>
+<tr class="separator:ab7c01170dff647e8707fbbf4f02db6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16cba3f8b16a16fc09e751d304d2b776" id="r_a16cba3f8b16a16fc09e751d304d2b776"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_vector.html">Vector</a>&lt; T, ROW &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_matrix.html#a16cba3f8b16a16fc09e751d304d2b776">operator*</a> (const <a class="el" href="struct_vector.html">Vector</a>&lt; T, COLUMN &gt; &amp;vec) const</td></tr>
+<tr class="memdesc:a16cba3f8b16a16fc09e751d304d2b776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product with column vector  <br /></td></tr>
+<tr class="separator:a16cba3f8b16a16fc09e751d304d2b776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:adcb2c3951629727a388a9739969db1ab" id="r_adcb2c3951629727a388a9739969db1ab"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_matrix.html#adcb2c3951629727a388a9739969db1ab">Identity</a> ()</td></tr>
+<tr class="memdesc:adcb2c3951629727a388a9739969db1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a identity matrix  <br /></td></tr>
+<tr class="separator:adcb2c3951629727a388a9739969db1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a80e16fcd7698ab8dc3918d14da5c5fe5" id="r_a80e16fcd7698ab8dc3918d14da5c5fe5"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_matrix.html#a80e16fcd7698ab8dc3918d14da5c5fe5">vals</a> [ROW *COLUMN]</td></tr>
+<tr class="memdesc:a80e16fcd7698ab8dc3918d14da5c5fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_matrix.html" title="Column-major matrix">Matrix</a> Elements  <br /></td></tr>
+<tr class="separator:a80e16fcd7698ab8dc3918d14da5c5fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
+静的限定公開変数類</h2></td></tr>
+<tr class="memitem:a1adb2a6e9ebf711c596852548468ab26" id="r_a1adb2a6e9ebf711c596852548468ab26"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_matrix.html#a1adb2a6e9ebf711c596852548468ab26">IDENTITY</a> = Matrix::CreateFillIdentityMatrix()</td></tr>
+<tr class="memdesc:a1adb2a6e9ebf711c596852548468ab26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity matrices for each sizes  <br /></td></tr>
+<tr class="separator:a1adb2a6e9ebf711c596852548468ab26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt;<br />
+struct Matrix&lt; T, ROW, COLUMN &gt;</div><p>Column-major matrix </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a661bd64ba7b186ce682ad87e170baf3e" name="a661bd64ba7b186ce682ad87e170baf3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a661bd64ba7b186ce682ad87e170baf3e">&#9670;&#160;</a></span>Matrix() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+<div class="memtemplate">
+template&lt;Utl::Type::Traits::IsFloatingPoint... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;<a class="el" href="struct_matrix.html">::Matrix</a> </td>
+          <td>(</td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Initialization value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27777f6c7a9798a8384fdd5f8332eb68" name="a27777f6c7a9798a8384fdd5f8332eb68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27777f6c7a9798a8384fdd5f8332eb68">&#9670;&#160;</a></span>Matrix() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;<a class="el" href="struct_matrix.html">::Matrix</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt; &amp;&#160;</td>
+          <td class="paramname"><em>copy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="adcb2c3951629727a388a9739969db1ab" name="adcb2c3951629727a388a9739969db1ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb2c3951629727a388a9739969db1ab">&#9670;&#160;</a></span>Identity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="struct_matrix.html">Matrix</a> &amp; <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;::Identity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a identity matrix </p>
+
+</div>
+</div>
+<a id="ae5cd08e66c3a218b8b8a3b2fd37067a3" name="ae5cd08e66c3a218b8b8a3b2fd37067a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5cd08e66c3a218b8b8a3b2fd37067a3">&#9670;&#160;</a></span>Inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt; <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;::Inverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a inverse matrix </p>
+
+</div>
+</div>
+<a id="add0a4064416ad1fd4ab92a72465fa13c" name="add0a4064416ad1fd4ab92a72465fa13c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0a4064416ad1fd4ab92a72465fa13c">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Element access operator </p>
+
+</div>
+</div>
+<a id="af6563d7331799ff3f331c19e6004a4bd" name="af6563d7331799ff3f331c19e6004a4bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6563d7331799ff3f331c19e6004a4bd">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Element access operator </p>
+
+</div>
+</div>
+<a id="ab7c01170dff647e8707fbbf4f02db6c4" name="ab7c01170dff647e8707fbbf4f02db6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7c01170dff647e8707fbbf4f02db6c4">&#9670;&#160;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+<div class="memtemplate">
+template&lt;uint8_t OTHER_COLUMN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, OTHER_COLUMN &gt; <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, COLUMN, OTHER_COLUMN &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Product with matrix </p>
+
+</div>
+</div>
+<a id="a16cba3f8b16a16fc09e751d304d2b776" name="a16cba3f8b16a16fc09e751d304d2b776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16cba3f8b16a16fc09e751d304d2b776">&#9670;&#160;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_vector.html">Vector</a>&lt; T, ROW &gt; <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_vector.html">Vector</a>&lt; T, COLUMN &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Product with column vector </p>
+
+</div>
+</div>
+<a id="a4c65755cbb3d889fe29599f837a00e20" name="a4c65755cbb3d889fe29599f837a00e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c65755cbb3d889fe29599f837a00e20">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_matrix.html">Matrix</a> &amp; <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt; &amp;&#160;</td>
+          <td class="paramname"><em>copy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy operator </p>
+
+</div>
+</div>
+<a id="a25994128ee1d44e8f3c860080781b696" name="a25994128ee1d44e8f3c860080781b696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25994128ee1d44e8f3c860080781b696">&#9670;&#160;</a></span>Transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_matrix.html">Matrix</a> <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;::Transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a transpose matrix </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_matrix_a25994128ee1d44e8f3c860080781b696_icgraph.png" border="0" usemap="#astruct_matrix_a25994128ee1d44e8f3c860080781b696_icgraph" alt=""/></div>
+<map name="astruct_matrix_a25994128ee1d44e8f3c860080781b696_icgraph" id="astruct_matrix_a25994128ee1d44e8f3c860080781b696_icgraph">
+<area shape="rect" title="Get a transpose matrix" alt="" coords="219,80,344,107"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body.html#a32d28969b8faaa591e76afbb3d5011df" title="Processing of any scaling or rotation changes" alt="" coords="7,5,169,48"/>
+<area shape="poly" title=" " alt="" coords="225,77,151,51,153,46,226,72"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a24b30ee1703ec1be07ea6d3561c97fc3" title="GJK(Gilbert&#45;Johnson&#45;Keerthi) collision algorithm" alt="" coords="5,72,171,115"/>
+<area shape="poly" title=" " alt="" coords="203,96,171,96,171,91,203,91"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body.html#ad3d70c86d2da4217d0bf940f0be05e38" title="Initialize inertia tensor" alt="" coords="7,139,169,181"/>
+<area shape="poly" title=" " alt="" coords="226,115,153,141,151,136,225,110"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a1adb2a6e9ebf711c596852548468ab26" name="a1adb2a6e9ebf711c596852548468ab26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1adb2a6e9ebf711c596852548468ab26">&#9670;&#160;</a></span>IDENTITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt; <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;::IDENTITY = Matrix::CreateFillIdentityMatrix()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Identity matrices for each sizes </p>
+
+</div>
+</div>
+<a id="a80e16fcd7698ab8dc3918d14da5c5fe5" name="a80e16fcd7698ab8dc3918d14da5c5fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e16fcd7698ab8dc3918d14da5c5fe5">&#9670;&#160;</a></span>vals</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_utl_1_1_type_1_1_traits_1_1_is_floating_point.html">Utl::Type::Traits::IsFloatingPoint</a> T, uint8_t ROW, uint8_t COLUMN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="struct_matrix.html">Matrix</a>&lt; T, ROW, COLUMN &gt;::vals[ROW *COLUMN]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_matrix.html" title="Column-major matrix">Matrix</a> Elements </p>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_math_structures_8h_source.html">MathStructures.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

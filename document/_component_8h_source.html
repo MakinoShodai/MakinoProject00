@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Component.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Component.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_component_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __COMPONENT_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __COMPONENT_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_unique_ptr_8h.html">UniquePtr.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_math_8h.html">UtilityForMath.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Forward declarations</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span><a class="code hl_class" href="class_c_game_object.html">CGameObject</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span><a class="code hl_class" href="class_c_scene.html">CScene</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">class </span><a class="code hl_class" href="class_c_callback_system.html">CCallbackSystem</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span><a class="code hl_class" href="class_a_c_collider3_d.html">ACCollider3D</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">class </span><a class="code hl_class" href="class_c_contact_opponent.html">CContactOpponent</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_a_c_component.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="class_a_c_component.html">ACComponent</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis</a>&lt;ACComponent&gt; {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="class_a_c_component.html">ACComponent</a>(<a class="code hl_class" href="class_c_game_object.html">CGameObject</a>* owner);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_a_c_component.html#a42f1dbaf0bb679d5f41f5541d39f80d9">   34</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_component.html#a42f1dbaf0bb679d5f41f5541d39f80d9">Awake</a>() {}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_a_c_component.html#ae0601a998d4b46b7cf59edbfaa03683f">   39</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_component.html#ae0601a998d4b46b7cf59edbfaa03683f">Start</a>() {}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_a_c_component.html#add7411781140bec2e38b0fe1d9bbb35a">   44</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_component.html#add7411781140bec2e38b0fe1d9bbb35a">Update</a>() {}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_a_c_component.html#a642abc9ed76961dd974d8934485e8055">   49</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_component.html#a642abc9ed76961dd974d8934485e8055">PrePhysicsUpdate</a>() {}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_a_c_component.html#a88abe0db6e3b1ac90e738c5f1927fc91">   54</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_component.html#a88abe0db6e3b1ac90e738c5f1927fc91">OnDestroy</a>() {}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_a_c_component.html#a9f7ad72915aa2e6736bf55e39309d81e">   61</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_component.html#a9f7ad72915aa2e6736bf55e39309d81e">OnEnable</a>() {}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_a_c_component.html#a02d54222d4b8efabdc66f145c3531da0">   68</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_component.html#a02d54222d4b8efabdc66f145c3531da0">OnDisable</a>() {}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_a_c_component.html#aaed0e5be88178643fba5329ab9b708a7">   74</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_component.html#aaed0e5be88178643fba5329ab9b708a7">OnCollisionBegin</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_c_contact_opponent.html">CContactOpponent</a>&amp; opponent) {}</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_a_c_component.html#a21ed1397839942770494c5ab8e96316b">   80</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_component.html#a21ed1397839942770494c5ab8e96316b">OnCollisionHit</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_c_contact_opponent.html">CContactOpponent</a>&amp; opponent) {}</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_a_c_component.html#a4f1e621bcb3400e0d38f73b758fc0def">   86</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_component.html#a4f1e621bcb3400e0d38f73b758fc0def">OnCollisionEnd</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;ACCollider3D&gt;</a>&amp; opponent) {}</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_a_c_component.html#ab7d85ad6e45f8b12776d219d27e52210">   89</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CGameObject&gt;</a> <a class="code hl_function" href="class_a_c_component.html#ab7d85ad6e45f8b12776d219d27e52210">GetGameObject</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">m_gameObj</a>; }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_a_c_component.html#ab8f9b780e9c36420c4180c2de84f9733">   91</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CGameObject&gt;</a> <a class="code hl_function" href="class_a_c_component.html#ab8f9b780e9c36420c4180c2de84f9733">GetGameObject</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">m_gameObj</a>; }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_transformf.html">Transformf</a>&amp; <a class="code hl_function" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091">GetTransform</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CScene&gt;</a> <a class="code hl_function" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18">GetScene</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CScene&gt;</a> <a class="code hl_function" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18">GetScene</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_class" href="class_c_callback_system.html">CCallbackSystem</a>* <a class="code hl_function" href="class_a_c_component.html#a7732e25a7799100e9b39be4f2ab1c4c0">GetCallbackSystem</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_component.html#ac9afe74cc73092c13a933bf7b82d8fa2">SetIsActive</a>(<span class="keywordtype">bool</span> isActive);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_a_c_component.html#ad7205261ebda783caeedc9f1c210c2f4">  107</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_c_component.html#ad7205261ebda783caeedc9f1c210c2f4">IsActiveSelf</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_component.html#a1b75230266b37261b0078008cfacab2a">m_isActive</a>; }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_c_component.html#ad2aa36309aaee515ea36a1765c9b0f97">IsActiveOverall</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">  113</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CGameObject&gt;</a> <a class="code hl_variable" href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">m_gameObj</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_a_c_component.html#a1b75230266b37261b0078008cfacab2a">  115</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_a_c_component.html#a1b75230266b37261b0078008cfacab2a">m_isActive</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>};</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#endif </span><span class="comment">// !__COMPONENT_H__</span></div>
+<div class="ttc" id="a_unique_ptr_8h_html"><div class="ttname"><a href="_unique_ptr_8h.html">UniquePtr.h</a></div><div class="ttdoc">This file handles unique pointer that can generate weak reference pointer.</div></div>
+<div class="ttc" id="a_utility_for_math_8h_html"><div class="ttname"><a href="_utility_for_math_8h.html">UtilityForMath.h</a></div><div class="ttdoc">This file provides utility in handling mathematics.</div></div>
+<div class="ttc" id="aclass_a_c_collider3_d_html"><div class="ttname"><a href="class_a_c_collider3_d.html">ACCollider3D</a></div><div class="ttdoc">Collider abstract class in 3D coordinate space</div><div class="ttdef"><b>Definition</b> Collider3D.h:40</div></div>
+<div class="ttc" id="aclass_a_c_component_html"><div class="ttname"><a href="class_a_c_component.html">ACComponent</a></div><div class="ttdoc">This is abstract class for component used in update processing</div><div class="ttdef"><b>Definition</b> Component.h:23</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a02d54222d4b8efabdc66f145c3531da0"><div class="ttname"><a href="class_a_c_component.html#a02d54222d4b8efabdc66f145c3531da0">ACComponent::OnDisable</a></div><div class="ttdeci">virtual void OnDisable()</div><div class="ttdoc">Processing when this component is disabled</div><div class="ttdef"><b>Definition</b> Component.h:68</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a1677e72c01ba17b59662de344623cf18"><div class="ttname"><a href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18">ACComponent::GetScene</a></div><div class="ttdeci">CWeakPtr&lt; CScene &gt; GetScene()</div><div class="ttdoc">Get scene where this component exists</div><div class="ttdef"><b>Definition</b> Component.cpp:17</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a1b75230266b37261b0078008cfacab2a"><div class="ttname"><a href="class_a_c_component.html#a1b75230266b37261b0078008cfacab2a">ACComponent::m_isActive</a></div><div class="ttdeci">bool m_isActive</div><div class="ttdoc">Is this component active?</div><div class="ttdef"><b>Definition</b> Component.h:115</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a21ed1397839942770494c5ab8e96316b"><div class="ttname"><a href="class_a_c_component.html#a21ed1397839942770494c5ab8e96316b">ACComponent::OnCollisionHit</a></div><div class="ttdeci">virtual void OnCollisionHit(const CContactOpponent &amp;opponent)</div><div class="ttdoc">Processing during collision</div><div class="ttdef"><b>Definition</b> Component.h:80</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a350f4f03d8f125df479f4bdd6603aa32"><div class="ttname"><a href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">ACComponent::m_gameObj</a></div><div class="ttdeci">CWeakPtr&lt; CGameObject &gt; m_gameObj</div><div class="ttdoc">Game object that is the owner of this component</div><div class="ttdef"><b>Definition</b> Component.h:113</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a42f1dbaf0bb679d5f41f5541d39f80d9"><div class="ttname"><a href="class_a_c_component.html#a42f1dbaf0bb679d5f41f5541d39f80d9">ACComponent::Awake</a></div><div class="ttdeci">virtual void Awake()</div><div class="ttdoc">Processing when this component is added to an object</div><div class="ttdef"><b>Definition</b> Component.h:34</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a4f1e621bcb3400e0d38f73b758fc0def"><div class="ttname"><a href="class_a_c_component.html#a4f1e621bcb3400e0d38f73b758fc0def">ACComponent::OnCollisionEnd</a></div><div class="ttdeci">virtual void OnCollisionEnd(const CWeakPtr&lt; ACCollider3D &gt; &amp;opponent)</div><div class="ttdoc">Processing when collision ends</div><div class="ttdef"><b>Definition</b> Component.h:86</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a642abc9ed76961dd974d8934485e8055"><div class="ttname"><a href="class_a_c_component.html#a642abc9ed76961dd974d8934485e8055">ACComponent::PrePhysicsUpdate</a></div><div class="ttdeci">virtual void PrePhysicsUpdate()</div><div class="ttdoc">Pre-update process for physics simulation</div><div class="ttdef"><b>Definition</b> Component.h:49</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a73c656cb09cfd57d43bd4ebdbd992091"><div class="ttname"><a href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091">ACComponent::GetTransform</a></div><div class="ttdeci">const Transformf &amp; GetTransform() const</div><div class="ttdoc">Get transform of the object</div><div class="ttdef"><b>Definition</b> Component.cpp:12</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a7732e25a7799100e9b39be4f2ab1c4c0"><div class="ttname"><a href="class_a_c_component.html#a7732e25a7799100e9b39be4f2ab1c4c0">ACComponent::GetCallbackSystem</a></div><div class="ttdeci">CCallbackSystem * GetCallbackSystem()</div><div class="ttdoc">Get the callback system that the gameobject has</div><div class="ttdef"><b>Definition</b> Component.cpp:27</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a88abe0db6e3b1ac90e738c5f1927fc91"><div class="ttname"><a href="class_a_c_component.html#a88abe0db6e3b1ac90e738c5f1927fc91">ACComponent::OnDestroy</a></div><div class="ttdeci">virtual void OnDestroy()</div><div class="ttdoc">Process to be called at instance destruction</div><div class="ttdef"><b>Definition</b> Component.h:54</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a9f7ad72915aa2e6736bf55e39309d81e"><div class="ttname"><a href="class_a_c_component.html#a9f7ad72915aa2e6736bf55e39309d81e">ACComponent::OnEnable</a></div><div class="ttdeci">virtual void OnEnable()</div><div class="ttdoc">Processing when this component is enabled</div><div class="ttdef"><b>Definition</b> Component.h:61</div></div>
+<div class="ttc" id="aclass_a_c_component_html_aaed0e5be88178643fba5329ab9b708a7"><div class="ttname"><a href="class_a_c_component.html#aaed0e5be88178643fba5329ab9b708a7">ACComponent::OnCollisionBegin</a></div><div class="ttdeci">virtual void OnCollisionBegin(const CContactOpponent &amp;opponent)</div><div class="ttdoc">Processing when collision begins</div><div class="ttdef"><b>Definition</b> Component.h:74</div></div>
+<div class="ttc" id="aclass_a_c_component_html_ab7d85ad6e45f8b12776d219d27e52210"><div class="ttname"><a href="class_a_c_component.html#ab7d85ad6e45f8b12776d219d27e52210">ACComponent::GetGameObject</a></div><div class="ttdeci">CWeakPtr&lt; CGameObject &gt; GetGameObject()</div><div class="ttdoc">Get game object that this component has</div><div class="ttdef"><b>Definition</b> Component.h:89</div></div>
+<div class="ttc" id="aclass_a_c_component_html_ab8f9b780e9c36420c4180c2de84f9733"><div class="ttname"><a href="class_a_c_component.html#ab8f9b780e9c36420c4180c2de84f9733">ACComponent::GetGameObject</a></div><div class="ttdeci">CWeakPtr&lt; const CGameObject &gt; GetGameObject() const</div><div class="ttdoc">Get game object that this component has</div><div class="ttdef"><b>Definition</b> Component.h:91</div></div>
+<div class="ttc" id="aclass_a_c_component_html_ac9afe74cc73092c13a933bf7b82d8fa2"><div class="ttname"><a href="class_a_c_component.html#ac9afe74cc73092c13a933bf7b82d8fa2">ACComponent::SetIsActive</a></div><div class="ttdeci">void SetIsActive(bool isActive)</div><div class="ttdoc">Set the active flag of this component</div><div class="ttdef"><b>Definition</b> Component.cpp:32</div></div>
+<div class="ttc" id="aclass_a_c_component_html_ad2aa36309aaee515ea36a1765c9b0f97"><div class="ttname"><a href="class_a_c_component.html#ad2aa36309aaee515ea36a1765c9b0f97">ACComponent::IsActiveOverall</a></div><div class="ttdeci">bool IsActiveOverall() const</div><div class="ttdoc">Is this component itself and the game object that owns it active?</div><div class="ttdef"><b>Definition</b> Component.cpp:44</div></div>
+<div class="ttc" id="aclass_a_c_component_html_ad7205261ebda783caeedc9f1c210c2f4"><div class="ttname"><a href="class_a_c_component.html#ad7205261ebda783caeedc9f1c210c2f4">ACComponent::IsActiveSelf</a></div><div class="ttdeci">bool IsActiveSelf() const</div><div class="ttdoc">Is this component itself active?</div><div class="ttdef"><b>Definition</b> Component.h:107</div></div>
+<div class="ttc" id="aclass_a_c_component_html_add7411781140bec2e38b0fe1d9bbb35a"><div class="ttname"><a href="class_a_c_component.html#add7411781140bec2e38b0fe1d9bbb35a">ACComponent::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdoc">Update processing</div><div class="ttdef"><b>Definition</b> Component.h:44</div></div>
+<div class="ttc" id="aclass_a_c_component_html_ae0601a998d4b46b7cf59edbfaa03683f"><div class="ttname"><a href="class_a_c_component.html#ae0601a998d4b46b7cf59edbfaa03683f">ACComponent::Start</a></div><div class="ttdeci">virtual void Start()</div><div class="ttdoc">Processing for the first update frame</div><div class="ttdef"><b>Definition</b> Component.h:39</div></div>
+<div class="ttc" id="aclass_a_c_weak_ptr_from_this_html"><div class="ttname"><a href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis</a></div><div class="ttdoc">Class inheriting from this class can create WeakPtrs from its instance</div><div class="ttdef"><b>Definition</b> WeakPtr.h:184</div></div>
+<div class="ttc" id="aclass_c_callback_system_html"><div class="ttname"><a href="class_c_callback_system.html">CCallbackSystem</a></div><div class="ttdef"><b>Definition</b> CallbackSystem.h:22</div></div>
+<div class="ttc" id="aclass_c_contact_opponent_html"><div class="ttname"><a href="class_c_contact_opponent.html">CContactOpponent</a></div><div class="ttdoc">Information of contacted opponent by the collider</div><div class="ttdef"><b>Definition</b> ContactColliderList.h:73</div></div>
+<div class="ttc" id="aclass_c_game_object_html"><div class="ttname"><a href="class_c_game_object.html">CGameObject</a></div><div class="ttdoc">This is base class for game object</div><div class="ttdef"><b>Definition</b> GameObject.h:35</div></div>
+<div class="ttc" id="aclass_c_scene_html"><div class="ttname"><a href="class_c_scene.html">CScene</a></div><div class="ttdoc">Scene class</div><div class="ttdef"><b>Definition</b> Scene.h:25</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="astruct_transformf_html"><div class="ttname"><a href="struct_transformf.html">Transformf</a></div><div class="ttdoc">Transform that has position and scale, rotation</div><div class="ttdef"><b>Definition</b> UtilityForMath.h:35</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

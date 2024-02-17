@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: RefCount&lt; T &gt; 構造体テンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="struct_ref_count-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">RefCount&lt; T &gt; 構造体テンプレート</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Structure that handles references and its reference counts  
+ <a href="struct_ref_count.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_weak_ptr_8h_source.html">WeakPtr.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a7e7c9db5e8072e4ab6b9e19c1d5c14af" id="r_a7e7c9db5e8072e4ab6b9e19c1d5c14af"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ref_count.html#a7e7c9db5e8072e4ab6b9e19c1d5c14af">InstanceType</a> = std::remove_extent&lt; T &gt;::type</td></tr>
+<tr class="memdesc:a7e7c9db5e8072e4ab6b9e19c1d5c14af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correct instance type that is not array type  <br /></td></tr>
+<tr class="separator:a7e7c9db5e8072e4ab6b9e19c1d5c14af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac88e991c51f9bef28bb403243aa58368" id="r_ac88e991c51f9bef28bb403243aa58368"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ref_count.html#ac88e991c51f9bef28bb403243aa58368">RefCount</a> (<a class="el" href="struct_ref_count.html#a7e7c9db5e8072e4ab6b9e19c1d5c14af">InstanceType</a> *ptr)</td></tr>
+<tr class="memdesc:ac88e991c51f9bef28bb403243aa58368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:ac88e991c51f9bef28bb403243aa58368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae9b232627c4008414e963209c1aa19eb" id="r_ae9b232627c4008414e963209c1aa19eb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ref_count.html#ae9b232627c4008414e963209c1aa19eb">Increment</a> (<a class="el" href="struct_ref_count.html">RefCount</a> *refCount)</td></tr>
+<tr class="memdesc:ae9b232627c4008414e963209c1aa19eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the reference count  <br /></td></tr>
+<tr class="separator:ae9b232627c4008414e963209c1aa19eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf10524595360517d5f90e40db000ca" id="r_a3bf10524595360517d5f90e40db000ca"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ref_count.html#a3bf10524595360517d5f90e40db000ca">Decrement</a> (<a class="el" href="struct_ref_count.html">RefCount</a> *refCount)</td></tr>
+<tr class="memdesc:a3bf10524595360517d5f90e40db000ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement the reference count. If the reference count reaches zero, destroy it  <br /></td></tr>
+<tr class="separator:a3bf10524595360517d5f90e40db000ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd2255118deba2cf55c66b9e13e81aaf" id="r_afd2255118deba2cf55c66b9e13e81aaf"><td class="memTemplParams" colspan="2">template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;U, T&gt;</td></tr>
+<tr class="memitem:afd2255118deba2cf55c66b9e13e81aaf"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="struct_ref_count.html">RefCount</a>&lt; U &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_ref_count.html#afd2255118deba2cf55c66b9e13e81aaf">Cast</a> (<a class="el" href="struct_ref_count.html">RefCount</a>&lt; T &gt; *refCount)</td></tr>
+<tr class="memdesc:afd2255118deba2cf55c66b9e13e81aaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast RefCount&lt;T&gt;* to <a class="el" href="struct_ref_count.html" title="Structure that handles references and its reference counts">RefCount</a><u>* </u> <br /></td></tr>
+<tr class="separator:afd2255118deba2cf55c66b9e13e81aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a392a2988143fcafea8e69199e24f3296" id="r_a392a2988143fcafea8e69199e24f3296"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_ref_count.html#a7e7c9db5e8072e4ab6b9e19c1d5c14af">InstanceType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ref_count.html#a392a2988143fcafea8e69199e24f3296">m_ref</a></td></tr>
+<tr class="memdesc:a392a2988143fcafea8e69199e24f3296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to instance  <br /></td></tr>
+<tr class="separator:a392a2988143fcafea8e69199e24f3296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95be08f0947b6b4f81a90572be940be" id="r_ad95be08f0947b6b4f81a90572be940be"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ref_count.html#ad95be08f0947b6b4f81a90572be940be">m_refCount</a></td></tr>
+<tr class="memdesc:ad95be08f0947b6b4f81a90572be940be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counting of reference  <br /></td></tr>
+<tr class="separator:ad95be08f0947b6b4f81a90572be940be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+struct RefCount&lt; T &gt;</div><p>Structure that handles references and its reference counts </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Instance type </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">型定義メンバ詳解</h2>
+<a id="a7e7c9db5e8072e4ab6b9e19c1d5c14af" name="a7e7c9db5e8072e4ab6b9e19c1d5c14af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e7c9db5e8072e4ab6b9e19c1d5c14af">&#9670;&#160;</a></span>InstanceType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="struct_ref_count.html">RefCount</a>&lt; T &gt;::InstanceType =  std::remove_extent&lt;T&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correct instance type that is not array type </p>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="ac88e991c51f9bef28bb403243aa58368" name="ac88e991c51f9bef28bb403243aa58368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88e991c51f9bef28bb403243aa58368">&#9670;&#160;</a></span>RefCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_ref_count.html">RefCount</a>&lt; T &gt;<a class="el" href="struct_ref_count.html">::RefCount</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_ref_count.html#a7e7c9db5e8072e4ab6b9e19c1d5c14af">InstanceType</a> *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Pointer to instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="afd2255118deba2cf55c66b9e13e81aaf" name="afd2255118deba2cf55c66b9e13e81aaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd2255118deba2cf55c66b9e13e81aaf">&#9670;&#160;</a></span>Cast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;U, T&gt;</div>
+<div class="memtemplate">
+template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;U, T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_ref_count.html">RefCount</a>&lt; U &gt; * <a class="el" href="struct_ref_count.html">RefCount</a>&lt; T &gt;::Cast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_ref_count.html">RefCount</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>refCount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cast RefCount&lt;T&gt;* to <a class="el" href="struct_ref_count.html" title="Structure that handles references and its reference counts">RefCount</a><u>* </u></p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">refCount</td><td>Pointer to variable to be cast </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>If cast succeeds, return pointer, otherwise nullptr </dd></dl>
+
+</div>
+</div>
+<a id="a3bf10524595360517d5f90e40db000ca" name="a3bf10524595360517d5f90e40db000ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf10524595360517d5f90e40db000ca">&#9670;&#160;</a></span>Decrement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="struct_ref_count.html">RefCount</a>&lt; T &gt;::Decrement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_ref_count.html">RefCount</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>refCount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decrement the reference count. If the reference count reaches zero, destroy it </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">refCount</td><td>Pointer to variable to be decremented </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_ref_count_a3bf10524595360517d5f90e40db000ca_icgraph.png" border="0" usemap="#astruct_ref_count_a3bf10524595360517d5f90e40db000ca_icgraph" alt=""/></div>
+<map name="astruct_ref_count_a3bf10524595360517d5f90e40db000ca_icgraph" id="astruct_ref_count_a3bf10524595360517d5f90e40db000ca_icgraph">
+<area shape="rect" title="Decrement the reference count. If the reference count reaches zero, destroy it" alt="" coords="1239,157,1385,184"/>
+<area shape="rect" href="class_c_sync_shared_ptr.html#a390f562f259cd5acc397caf819bf5500" title="Release a reference to the instance in a way that doesn&#39;t destroy the instance if this variable is de..." alt="" coords="1018,56,1191,83"/>
+<area shape="poly" title=" " alt="" coords="1279,150,1238,123,1190,97,1160,86,1162,81,1192,92,1241,118,1282,146"/>
+<area shape="rect" href="class_c_weak_ptr.html#af4509b2637a96f43885c1561a2d788c4" title="Release weak reference ownership" alt="" coords="1037,107,1173,133"/>
+<area shape="poly" title=" " alt="" coords="1239,156,1162,137,1163,131,1240,150"/>
+<area shape="rect" href="class_c_shared_ptr.html#a863513de7dec8b931ea92bd844a1eaf6" title="Release a instance and set ownership of a new instance" alt="" coords="532,157,662,184"/>
+<area shape="poly" title=" " alt="" coords="1224,173,663,173,663,168,1224,168"/>
+<area shape="rect" href="class_c_sync_shared_ptr.html#a5a75372cb910691418ef13bd0966911a" title="Release a instance and set ownership of a new instance" alt="" coords="1025,208,1185,235"/>
+<area shape="poly" title=" " alt="" coords="1240,191,1163,210,1162,205,1239,186"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#ac4f98e01c644c1eae640216508917786" title="Release a instance and set ownership of a new instance" alt="" coords="1032,459,1177,501"/>
+<area shape="poly" title=" " alt="" coords="1295,199,1123,460,1118,457,1291,196"/>
+<area shape="rect" href="class_c_weak_ptr.html#af78983a79adc4c97750ee665c09d3920" title="Destructor" alt="" coords="776,107,933,133"/>
+<area shape="poly" title=" " alt="" coords="1021,123,933,123,933,117,1021,117"/>
+<area shape="rect" href="class_c_scene_registry.html#ad72346dc806d894e2ec6335f02250971" title="Initialize" alt="" coords="275,5,445,32"/>
+<area shape="poly" title=" " alt="" coords="573,147,522,96,489,69,454,46,427,35,430,30,457,42,492,65,525,92,576,144"/>
+<area shape="rect" href="class_c_shared_ptr.html#a7cce9fed05f678fd491807c464ec314c" title="Copy assignment operator" alt="" coords="284,56,435,83"/>
+<area shape="poly" title=" " alt="" coords="560,151,511,124,454,97,420,86,422,81,456,92,513,119,562,147"/>
+<area shape="rect" href="class_c_shared_ptr.html#a115da23d6fe21d2a6526c10144efb393" title=" " alt="" coords="284,107,435,133"/>
+<area shape="poly" title=" " alt="" coords="516,156,425,137,426,131,517,151"/>
+<area shape="rect" href="class_c_shared_ptr.html#a3ff297d46e02d024bd044e8c909b53a1" title="Move assignment operator" alt="" coords="284,157,435,184"/>
+<area shape="poly" title=" " alt="" coords="516,173,436,173,436,168,516,168"/>
+<area shape="rect" href="class_c_shared_ptr.html#a94c25f7cd2c705ccec6c84bc518b13cf" title=" " alt="" coords="284,208,435,235"/>
+<area shape="poly" title=" " alt="" coords="517,190,426,210,425,205,516,185"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="264,309,455,352"/>
+<area shape="poly" title=" " alt="" coords="576,198,524,248,492,276,457,300,434,311,431,306,454,295,488,271,521,245,572,194"/>
+<area shape="rect" href="class_c_shared_ptr.html#a838aa91fb8bf8b15d778663354bc3ed4" title="Destructor" alt="" coords="274,259,445,285"/>
+<area shape="poly" title=" " alt="" coords="562,195,513,222,456,249,422,261,420,256,454,244,511,218,560,190"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,317,216,344"/>
+<area shape="poly" title=" " alt="" coords="270,43,266,46,238,78,215,114,198,153,185,193,169,266,164,317,159,317,164,265,180,191,193,151,211,111,234,74,262,42,266,39"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,317,55,344"/>
+<area shape="poly" title=" " alt="" coords="87,333,55,333,55,328,87,328"/>
+<area shape="poly" title=" " alt="" coords="51,304,44,298,30,296,17,298,10,302,8,308,12,316,7,318,3,309,6,299,15,293,30,291,46,293,55,300"/>
+<area shape="poly" title=" " alt="" coords="248,333,216,333,216,328,248,328"/>
+<area shape="rect" href="class_c_sync_shared_ptr.html#a4829999ee0de9740f3ce7e9aa455f363" title="Destructor" alt="" coords="739,208,970,235"/>
+<area shape="poly" title=" " alt="" coords="1009,224,970,224,970,219,1009,219"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a336542556da41d6031bd53699f0aa0f9" title="Constructor" alt="" coords="775,259,934,301"/>
+<area shape="poly" title=" " alt="" coords="1082,447,1036,379,1004,345,969,316,932,298,935,293,971,311,1008,341,1040,376,1086,444"/>
+<area shape="rect" href="class_c_render_target_swap_chain.html#a8aab32d85edc6ba71dc89bf3924db85e" title="Create render target views" alt="" coords="768,325,941,368"/>
+<area shape="poly" title=" " alt="" coords="1067,451,1022,415,969,382,940,370,942,365,971,378,1025,411,1070,446"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a983ee92e3270df01224bf4d32650b376" title="Destroy prefab" alt="" coords="779,392,930,435"/>
+<area shape="poly" title=" " alt="" coords="1016,459,929,436,931,431,1018,454"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a59c80c5b89a37863b961a2390ca92d55" title="Move assignment operator" alt="" coords="782,459,927,501"/>
+<area shape="poly" title=" " alt="" coords="1016,483,928,483,928,477,1016,477"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#ad8b373ec2143aee17f9ac4f809a035c3" title=" " alt="" coords="782,525,927,568"/>
+<area shape="poly" title=" " alt="" coords="1018,506,928,530,927,525,1016,501"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#ae5986e9ff5d47f5308696d6a9d0c3254" title="Rebuild the object with the current prefab name" alt="" coords="779,592,930,635"/>
+<area shape="poly" title=" " alt="" coords="1070,514,1025,549,971,582,931,598,929,593,969,578,1022,545,1067,509"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a914ad8572c7e53d4cddb5ae4925d04cf" title="Set prefab" alt="" coords="779,659,930,701"/>
+<area shape="poly" title=" " alt="" coords="1086,516,1040,584,1008,619,971,649,931,668,929,663,969,644,1004,615,1036,581,1082,513"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#ad5fe8340da36f75e364d1a24c86f5917" title="Destructor" alt="" coords="774,725,935,768"/>
+<area shape="poly" title=" " alt="" coords="1095,517,1078,563,1052,616,1017,670,995,694,972,716,936,734,934,730,968,711,992,690,1012,666,1047,613,1073,560,1090,515"/>
+<area shape="rect" href="class_c_render_target_swap_chain.html#a6b0586abbd3b14f20b162c96889dcdb0" title="Create descriptor heap and render target views" alt="" coords="511,368,683,411"/>
+<area shape="poly" title=" " alt="" coords="753,366,684,378,683,372,753,361"/>
+<area shape="rect" href="class_c_swap_chain.html#a3d838db1a55450cb8bba97f1e67ddbb3" title="Draw and swap the back buffer" alt="" coords="503,317,691,344"/>
+<area shape="poly" title=" " alt="" coords="752,343,691,339,691,334,753,338"/>
+<area shape="rect" href="class_c_swap_chain.html#a59a1cd78508f27735564aa9fcf19d27a" title="Create a swap chain" alt="" coords="285,376,435,403"/>
+<area shape="poly" title=" " alt="" coords="495,392,435,392,435,387,495,387"/>
+<area shape="poly" title=" " alt="" coords="289,374,263,367,201,347,203,342,265,361,291,369"/>
+<area shape="poly" title=" " alt="" coords="488,333,456,333,456,328,488,328"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae9b232627c4008414e963209c1aa19eb" name="ae9b232627c4008414e963209c1aa19eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b232627c4008414e963209c1aa19eb">&#9670;&#160;</a></span>Increment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="struct_ref_count.html">RefCount</a>&lt; T &gt;::Increment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_ref_count.html">RefCount</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>refCount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Increment the reference count </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">refCount</td><td>Pointer to variable to be incremented </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_ref_count_ae9b232627c4008414e963209c1aa19eb_icgraph.png" border="0" usemap="#astruct_ref_count_ae9b232627c4008414e963209c1aa19eb_icgraph" alt=""/></div>
+<map name="astruct_ref_count_ae9b232627c4008414e963209c1aa19eb_icgraph" id="astruct_ref_count_ae9b232627c4008414e963209c1aa19eb_icgraph">
+<area shape="rect" title="Increment the reference count" alt="" coords="277,284,416,311"/>
+<area shape="rect" href="class_c_shared_ptr.html#acbaa33b89a988b4a5de433478e4d9f04" title="Copy constructor" alt="" coords="35,5,199,32"/>
+<area shape="poly" title=" " alt="" coords="338,270,326,220,305,160,273,98,252,70,227,46,198,30,200,26,230,42,256,67,277,95,310,158,331,219,343,268"/>
+<area shape="rect" href="class_c_shared_ptr.html#a6f1236ed59265a2f7b55efffad79a296" title="Copy constructor for cast" alt="" coords="35,56,199,83"/>
+<area shape="poly" title=" " alt="" coords="334,270,320,230,298,183,267,136,227,97,198,82,200,77,230,93,271,133,302,181,325,228,339,268"/>
+<area shape="rect" href="class_c_sync_shared_ptr.html#ac849b689320447dccc1c96be2d21cb7f" title="Copy constructor" alt="" coords="5,107,229,133"/>
+<area shape="poly" title=" " alt="" coords="329,271,289,208,261,175,227,148,204,136,207,132,230,143,264,171,294,205,334,268"/>
+<area shape="rect" href="class_c_sync_shared_ptr.html#a89d04e60d877bf050d170d16b04420b2" title="Copy constructor for cast" alt="" coords="5,157,229,184"/>
+<area shape="poly" title=" " alt="" coords="321,274,280,235,255,215,227,198,199,187,201,182,230,194,258,211,284,231,325,270"/>
+<area shape="rect" href="class_c_weak_ptr.html#a6dbd53ca6bb6d59956094d33aa1c691b" title="Copy constructor" alt="" coords="42,208,192,235"/>
+<area shape="poly" title=" " alt="" coords="302,279,228,249,187,238,188,233,230,244,304,275"/>
+<area shape="rect" href="class_c_weak_ptr.html#a5c631e73e439e5672bc95d6d72d6e6ae" title="Copy constructor for cast" alt="" coords="42,259,192,285"/>
+<area shape="poly" title=" " alt="" coords="261,291,192,283,193,278,262,285"/>
+<area shape="rect" href="class_c_weak_ptr.html#afcd366fd9c1853d2adc86c99dc222068" title="Constructor" alt="" coords="42,309,192,336"/>
+<area shape="poly" title=" " alt="" coords="262,309,193,317,192,312,261,304"/>
+<area shape="rect" href="class_c_shared_ptr.html#a7cce9fed05f678fd491807c464ec314c" title="Copy assignment operator" alt="" coords="41,360,193,387"/>
+<area shape="poly" title=" " alt="" coords="304,320,230,351,188,362,187,357,228,345,302,315"/>
+<area shape="rect" href="class_c_shared_ptr.html#a115da23d6fe21d2a6526c10144efb393" title=" " alt="" coords="41,411,193,437"/>
+<area shape="poly" title=" " alt="" coords="325,324,284,364,258,384,230,401,194,415,192,410,227,396,255,380,280,360,321,320"/>
+<area shape="rect" href="class_c_sync_shared_ptr.html#af68cddbf21afa71b98cbfd2fcfeba9fa" title="Copy assignment operator" alt="" coords="26,461,208,488"/>
+<area shape="poly" title=" " alt="" coords="334,326,294,390,264,424,230,452,207,463,204,458,227,447,261,420,289,387,329,323"/>
+<area shape="rect" href="class_c_sync_shared_ptr.html#ae394d321686492edd9d542d9b51728a7" title=" " alt="" coords="26,512,208,539"/>
+<area shape="poly" title=" " alt="" coords="339,327,325,366,302,414,271,462,230,502,209,514,207,509,227,498,267,459,298,411,320,364,334,325"/>
+<area shape="rect" href="class_c_weak_ptr.html#aa59a8d241a2c764b34a564718d96b963" title="Copy assignment operator" alt="" coords="45,563,189,589"/>
+<area shape="poly" title=" " alt="" coords="343,326,331,376,310,437,277,500,256,528,230,553,211,564,191,572,189,567,209,560,227,549,252,525,273,497,305,435,326,374,338,325"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a392a2988143fcafea8e69199e24f3296" name="a392a2988143fcafea8e69199e24f3296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a392a2988143fcafea8e69199e24f3296">&#9670;&#160;</a></span>m_ref</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_ref_count.html#a7e7c9db5e8072e4ab6b9e19c1d5c14af">InstanceType</a>* <a class="el" href="struct_ref_count.html">RefCount</a>&lt; T &gt;::m_ref</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reference to instance </p>
+
+</div>
+</div>
+<a id="ad95be08f0947b6b4f81a90572be940be" name="ad95be08f0947b6b4f81a90572be940be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95be08f0947b6b4f81a90572be940be">&#9670;&#160;</a></span>m_refCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT <a class="el" href="struct_ref_count.html">RefCount</a>&lt; T &gt;::m_refCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Counting of reference </p>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_weak_ptr_8h_source.html">WeakPtr.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

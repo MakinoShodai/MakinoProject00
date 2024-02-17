@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CallbackSystem.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">CallbackSystem.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_callback_system_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __CALLBACK_SYSTEM_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __CALLBACK_SYSTEM_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_unique_ptr_8h.html">UniquePtr.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Callback function type</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_callback_system_8h.html#a97bd95a71064083c1f93c3a9573c61d9">   15</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_callback_system_8h.html#a97bd95a71064083c1f93c3a9573c61d9">CallbackFunctionType</a> = std::function&lt;void()&gt;;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// Type of element for callback function and its invoking index</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="_callback_system_8h.html#ac41e1ba57f87731fb61aa4d3477e5837">   17</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_callback_system_8h.html#ac41e1ba57f87731fb61aa4d3477e5837">CallBackFunctionElement</a> = std::pair&lt;int, std::vector&lt;CallbackFunctionType&gt;&gt;;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// Type of map to find callback functions and their invoking index from name</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_callback_system_8h.html#adf72127a9f8c4bca618a92d601fa58e6">   19</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_callback_system_8h.html#adf72127a9f8c4bca618a92d601fa58e6">CallbackFunctionMap</a> = std::unordered_map&lt;std::string, CUniquePtr&lt;CallBackFunctionElement&gt;&gt;;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// Object&#39;s callback function system</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_c_callback_system.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_callback_system.html">CCallbackSystem</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="class_c_callback_system.html#a82c1910016214c226c77dd64c221a777">CCallbackSystem</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_c_callback_system.html#af9717405cb2149c80bb151771223cab4">   33</a></span>    <a class="code hl_function" href="class_c_callback_system.html#af9717405cb2149c80bb151771223cab4">~CCallbackSystem</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_callback_system.html#a125b66bae6476874c8e1c998f0d1c436">AddFunction</a>(<span class="keyword">const</span> std::string&amp; callbackName, <span class="keyword">const</span> <a class="code hl_typedef" href="_callback_system_8h.html#a97bd95a71064083c1f93c3a9573c61d9">CallbackFunctionType</a>&amp; callbackFunction);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_callback_system.html#a41c960f55deef6a7acd517de203db4b7">RemoveCurrentInvokeFunction</a>(<span class="keyword">const</span> std::string&amp; callbackName);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_callback_system.html#a6e5ef7bf770e9b388aa9e3b06bb26050">InvokeFunction</a>(<span class="keyword">const</span> std::string&amp; callbackName);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_typedef" href="_callback_system_8h.html#adf72127a9f8c4bca618a92d601fa58e6">CallbackFunctionMap</a> m_functions;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_typedef" href="_callback_system_8h.html#ac41e1ba57f87731fb61aa4d3477e5837">CallBackFunctionElement</a>* m_currentInvokeFunctionsGroup;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">// !__CALLBACK_SYSTEM_H__</span></div>
+<div class="ttc" id="a_callback_system_8h_html_a97bd95a71064083c1f93c3a9573c61d9"><div class="ttname"><a href="_callback_system_8h.html#a97bd95a71064083c1f93c3a9573c61d9">CallbackFunctionType</a></div><div class="ttdeci">std::function&lt; void()&gt; CallbackFunctionType</div><div class="ttdef"><b>Definition</b> CallbackSystem.h:15</div></div>
+<div class="ttc" id="a_callback_system_8h_html_ac41e1ba57f87731fb61aa4d3477e5837"><div class="ttname"><a href="_callback_system_8h.html#ac41e1ba57f87731fb61aa4d3477e5837">CallBackFunctionElement</a></div><div class="ttdeci">std::pair&lt; int, std::vector&lt; CallbackFunctionType &gt; &gt; CallBackFunctionElement</div><div class="ttdef"><b>Definition</b> CallbackSystem.h:17</div></div>
+<div class="ttc" id="a_callback_system_8h_html_adf72127a9f8c4bca618a92d601fa58e6"><div class="ttname"><a href="_callback_system_8h.html#adf72127a9f8c4bca618a92d601fa58e6">CallbackFunctionMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, CUniquePtr&lt; CallBackFunctionElement &gt; &gt; CallbackFunctionMap</div><div class="ttdef"><b>Definition</b> CallbackSystem.h:19</div></div>
+<div class="ttc" id="a_unique_ptr_8h_html"><div class="ttname"><a href="_unique_ptr_8h.html">UniquePtr.h</a></div><div class="ttdoc">This file handles unique pointer that can generate weak reference pointer.</div></div>
+<div class="ttc" id="aclass_c_callback_system_html"><div class="ttname"><a href="class_c_callback_system.html">CCallbackSystem</a></div><div class="ttdef"><b>Definition</b> CallbackSystem.h:22</div></div>
+<div class="ttc" id="aclass_c_callback_system_html_a125b66bae6476874c8e1c998f0d1c436"><div class="ttname"><a href="class_c_callback_system.html#a125b66bae6476874c8e1c998f0d1c436">CCallbackSystem::AddFunction</a></div><div class="ttdeci">void AddFunction(const std::string &amp;callbackName, const CallbackFunctionType &amp;callbackFunction)</div><div class="ttdoc">Add a callback function to the callback function group</div><div class="ttdef"><b>Definition</b> CallbackSystem.cpp:9</div></div>
+<div class="ttc" id="aclass_c_callback_system_html_a41c960f55deef6a7acd517de203db4b7"><div class="ttname"><a href="class_c_callback_system.html#a41c960f55deef6a7acd517de203db4b7">CCallbackSystem::RemoveCurrentInvokeFunction</a></div><div class="ttdeci">void RemoveCurrentInvokeFunction(const std::string &amp;callbackName)</div><div class="ttdoc">Remove the callback function that is currently being invoked</div><div class="ttdef"><b>Definition</b> CallbackSystem.cpp:21</div></div>
+<div class="ttc" id="aclass_c_callback_system_html_a6e5ef7bf770e9b388aa9e3b06bb26050"><div class="ttname"><a href="class_c_callback_system.html#a6e5ef7bf770e9b388aa9e3b06bb26050">CCallbackSystem::InvokeFunction</a></div><div class="ttdeci">bool InvokeFunction(const std::string &amp;callbackName)</div><div class="ttdoc">Invoke callback functions group</div><div class="ttdef"><b>Definition</b> CallbackSystem.cpp:40</div></div>
+<div class="ttc" id="aclass_c_callback_system_html_a82c1910016214c226c77dd64c221a777"><div class="ttname"><a href="class_c_callback_system.html#a82c1910016214c226c77dd64c221a777">CCallbackSystem::CCallbackSystem</a></div><div class="ttdeci">CCallbackSystem()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> CallbackSystem.cpp:4</div></div>
+<div class="ttc" id="aclass_c_callback_system_html_af9717405cb2149c80bb151771223cab4"><div class="ttname"><a href="class_c_callback_system.html#af9717405cb2149c80bb151771223cab4">CCallbackSystem::~CCallbackSystem</a></div><div class="ttdeci">~CCallbackSystem()=default</div><div class="ttdoc">Destructor</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

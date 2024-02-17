@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CMeshBuffer クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="class_c_mesh_buffer-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CMeshBuffer クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class handles, pointers to vertex and index buffers, needed to construct the mesh.  
+ <a href="class_c_mesh_buffer.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_mesh_buffer_8h_source.html">MeshBuffer.h</a>&gt;</code></p>
+<div class="dynheader">
+CMeshBuffer の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_mesh_buffer__inherit__graph.png" border="0" usemap="#a_c_mesh_buffer_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_mesh_buffer_inherit__map" id="a_c_mesh_buffer_inherit__map">
+<area shape="rect" title="This class handles, pointers to vertex and index buffers, needed to construct the mesh." alt="" coords="16,5,111,32"/>
+<area shape="rect" href="class_c_mesh_buffer_full.html" title="This class handles vertex and index buffers entities, needed to construct the mesh" alt="" coords="5,80,122,107"/>
+<area shape="poly" title=" " alt="" coords="66,48,66,80,61,80,61,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CMeshBuffer 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_mesh_buffer__coll__graph.png" border="0" usemap="#a_c_mesh_buffer_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_mesh_buffer_coll__map" id="a_c_mesh_buffer_coll__map">
+<area shape="rect" title="This class handles, pointers to vertex and index buffers, needed to construct the mesh." alt="" coords="188,96,284,123"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="5,5,227,32"/>
+<area shape="poly" title=" " alt="" coords="147,39,220,93,217,98,143,43"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="250,5,465,32"/>
+<area shape="poly" title=" " alt="" coords="330,43,255,98,252,93,326,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a06d4c4859183bacbc582020240222a7f" id="r_a06d4c4859183bacbc582020240222a7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_mesh_buffer.html#a06d4c4859183bacbc582020240222a7f">CMeshBuffer</a> ()</td></tr>
+<tr class="memdesc:a06d4c4859183bacbc582020240222a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a06d4c4859183bacbc582020240222a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2898d8dd16d750f9323f3dea3e482c66" id="r_a2898d8dd16d750f9323f3dea3e482c66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_mesh_buffer.html#a2898d8dd16d750f9323f3dea3e482c66">SetInfo</a> (<a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a> &gt; vertex, <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a> &gt; index, D3D_PRIMITIVE_TOPOLOGY topology)</td></tr>
+<tr class="memdesc:a2898d8dd16d750f9323f3dea3e482c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the information needed to construct the mesh  <br /></td></tr>
+<tr class="separator:a2898d8dd16d750f9323f3dea3e482c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a81042cdaeaaadf1c2ab8fd685dda3" id="r_a13a81042cdaeaaadf1c2ab8fd685dda3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_mesh_buffer.html#a13a81042cdaeaaadf1c2ab8fd685dda3">GetVertex</a> () const</td></tr>
+<tr class="memdesc:a13a81042cdaeaaadf1c2ab8fd685dda3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer to vertex buffer  <br /></td></tr>
+<tr class="separator:a13a81042cdaeaaadf1c2ab8fd685dda3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d0e2030e49e9fa59ec6400c24ee244c" id="r_a2d0e2030e49e9fa59ec6400c24ee244c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_mesh_buffer.html#a2d0e2030e49e9fa59ec6400c24ee244c">GetIndex</a> () const</td></tr>
+<tr class="memdesc:a2d0e2030e49e9fa59ec6400c24ee244c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer to index buffer  <br /></td></tr>
+<tr class="separator:a2d0e2030e49e9fa59ec6400c24ee244c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d6b8905dba12b2023a1e33e74db62c" id="r_a29d6b8905dba12b2023a1e33e74db62c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_mesh_buffer.html#a29d6b8905dba12b2023a1e33e74db62c">GetVertexWeakPtr</a> () const</td></tr>
+<tr class="memdesc:a29d6b8905dba12b2023a1e33e74db62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the weak pointer to vertex buffer  <br /></td></tr>
+<tr class="separator:a29d6b8905dba12b2023a1e33e74db62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9bff6ec4143452028b8b03c79608d14" id="r_ad9bff6ec4143452028b8b03c79608d14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_mesh_buffer.html#ad9bff6ec4143452028b8b03c79608d14">GetIndexWeakPtr</a> () const</td></tr>
+<tr class="memdesc:ad9bff6ec4143452028b8b03c79608d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the weak pointer to index buffer  <br /></td></tr>
+<tr class="separator:ad9bff6ec4143452028b8b03c79608d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd84119359127ba6d60d14b5cb5ecba" id="r_a9cd84119359127ba6d60d14b5cb5ecba"><td class="memItemLeft" align="right" valign="top">D3D_PRIMITIVE_TOPOLOGY&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_mesh_buffer.html#a9cd84119359127ba6d60d14b5cb5ecba">GetTopologyType</a> () const</td></tr>
+<tr class="memdesc:a9cd84119359127ba6d60d14b5cb5ecba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the topology type  <br /></td></tr>
+<tr class="separator:a9cd84119359127ba6d60d14b5cb5ecba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a2bc6a4fbc45df936381b100c42557d0b" id="r_a2bc6a4fbc45df936381b100c42557d0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_mesh_buffer.html#a2bc6a4fbc45df936381b100c42557d0b">m_vertexBuffer</a></td></tr>
+<tr class="memdesc:a2bc6a4fbc45df936381b100c42557d0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to vertex buffer  <br /></td></tr>
+<tr class="separator:a2bc6a4fbc45df936381b100c42557d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a170f9a6719346d2e99c221e119ac4044" id="r_a170f9a6719346d2e99c221e119ac4044"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_mesh_buffer.html#a170f9a6719346d2e99c221e119ac4044">m_indexBuffer</a></td></tr>
+<tr class="memdesc:a170f9a6719346d2e99c221e119ac4044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to index buffer  <br /></td></tr>
+<tr class="separator:a170f9a6719346d2e99c221e119ac4044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2872b7b60488eb0f17a2c5b1acd0c18f" id="r_a2872b7b60488eb0f17a2c5b1acd0c18f"><td class="memItemLeft" align="right" valign="top">D3D_PRIMITIVE_TOPOLOGY&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_mesh_buffer.html#a2872b7b60488eb0f17a2c5b1acd0c18f">m_topologyType</a></td></tr>
+<tr class="memdesc:a2872b7b60488eb0f17a2c5b1acd0c18f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Topology type  <br /></td></tr>
+<tr class="separator:a2872b7b60488eb0f17a2c5b1acd0c18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This class handles, pointers to vertex and index buffers, needed to construct the mesh. </p>
+<p>This mesh buffer has no vertex and index buffers entities </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a06d4c4859183bacbc582020240222a7f" name="a06d4c4859183bacbc582020240222a7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d4c4859183bacbc582020240222a7f">&#9670;&#160;</a></span>CMeshBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CMeshBuffer::CMeshBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a2d0e2030e49e9fa59ec6400c24ee244c" name="a2d0e2030e49e9fa59ec6400c24ee244c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d0e2030e49e9fa59ec6400c24ee244c">&#9670;&#160;</a></span>GetIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a> * CMeshBuffer::GetIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the pointer to index buffer </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_mesh_buffer_a2d0e2030e49e9fa59ec6400c24ee244c_cgraph.png" border="0" usemap="#aclass_c_mesh_buffer_a2d0e2030e49e9fa59ec6400c24ee244c_cgraph" alt=""/></div>
+<map name="aclass_c_mesh_buffer_a2d0e2030e49e9fa59ec6400c24ee244c_cgraph" id="aclass_c_mesh_buffer_a2d0e2030e49e9fa59ec6400c24ee244c_cgraph">
+<area shape="rect" title="Get the pointer to index buffer" alt="" coords="5,5,161,32"/>
+<area shape="rect" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219" title="Get instance. If the instance has already been destroyed, return nullptr" alt="" coords="209,5,319,32"/>
+<area shape="poly" title=" " alt="" coords="161,16,193,16,193,21,161,21"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_mesh_buffer_a2d0e2030e49e9fa59ec6400c24ee244c_icgraph.png" border="0" usemap="#aclass_c_mesh_buffer_a2d0e2030e49e9fa59ec6400c24ee244c_icgraph" alt=""/></div>
+<map name="aclass_c_mesh_buffer_a2d0e2030e49e9fa59ec6400c24ee244c_icgraph" id="aclass_c_mesh_buffer_a2d0e2030e49e9fa59ec6400c24ee244c_icgraph">
+<area shape="rect" title="Get the pointer to index buffer" alt="" coords="414,13,569,40"/>
+<area shape="rect" href="class_c_graphics_pipeline_state.html#abc3395de10313e13b40e56f7b07ec1ad" title="Set this graphics pipeline state to command list" alt="" coords="207,5,366,48"/>
+<area shape="poly" title=" " alt="" coords="399,29,366,29,366,24,399,24"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="5,5,159,48"/>
+<area shape="poly" title=" " alt="" coords="191,29,159,29,159,24,191,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad9bff6ec4143452028b8b03c79608d14" name="ad9bff6ec4143452028b8b03c79608d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9bff6ec4143452028b8b03c79608d14">&#9670;&#160;</a></span>GetIndexWeakPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a> &gt; CMeshBuffer::GetIndexWeakPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the weak pointer to index buffer </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_mesh_buffer_ad9bff6ec4143452028b8b03c79608d14_icgraph.png" border="0" usemap="#aclass_c_mesh_buffer_ad9bff6ec4143452028b8b03c79608d14_icgraph" alt=""/></div>
+<map name="aclass_c_mesh_buffer_ad9bff6ec4143452028b8b03c79608d14_icgraph" id="aclass_c_mesh_buffer_ad9bff6ec4143452028b8b03c79608d14_icgraph">
+<area shape="rect" title="Get the weak pointer to index buffer" alt="" coords="252,80,458,107"/>
+<area shape="rect" href="class_c_color_only_shape.html#aada7cecd529128f34a8d253507362215" title="Constructor" alt="" coords="5,5,204,48"/>
+<area shape="poly" title=" " alt="" coords="286,78,187,51,188,46,288,73"/>
+<area shape="rect" href="class_c_debug_collider_shape.html#abe7e81543dbd6d6177cc1de86cc60938" title="Constructor" alt="" coords="27,72,182,115"/>
+<area shape="poly" title=" " alt="" coords="236,96,183,96,183,91,236,91"/>
+<area shape="rect" href="class_c_tex_shape.html#af8ed1a66936a293ec274b3ab72780963" title="Constructor" alt="" coords="23,139,186,165"/>
+<area shape="poly" title=" " alt="" coords="281,113,165,141,164,136,279,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9cd84119359127ba6d60d14b5cb5ecba" name="a9cd84119359127ba6d60d14b5cb5ecba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cd84119359127ba6d60d14b5cb5ecba">&#9670;&#160;</a></span>GetTopologyType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3D_PRIMITIVE_TOPOLOGY CMeshBuffer::GetTopologyType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the topology type </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_mesh_buffer_a9cd84119359127ba6d60d14b5cb5ecba_icgraph.png" border="0" usemap="#aclass_c_mesh_buffer_a9cd84119359127ba6d60d14b5cb5ecba_icgraph" alt=""/></div>
+<map name="aclass_c_mesh_buffer_a9cd84119359127ba6d60d14b5cb5ecba_icgraph" id="aclass_c_mesh_buffer_a9cd84119359127ba6d60d14b5cb5ecba_icgraph">
+<area shape="rect" title="Get the topology type" alt="" coords="453,109,657,136"/>
+<area shape="rect" href="class_c_color_only_shape.html#aada7cecd529128f34a8d253507362215" title="Constructor" alt="" coords="207,5,405,48"/>
+<area shape="poly" title=" " alt="" coords="508,105,404,62,373,51,375,46,406,58,510,100"/>
+<area shape="rect" href="class_c_debug_collider_shape.html#abe7e81543dbd6d6177cc1de86cc60938" title="Constructor" alt="" coords="228,72,384,115"/>
+<area shape="poly" title=" " alt="" coords="437,111,384,105,384,100,438,106"/>
+<area shape="rect" href="class_c_tex_shape.html#af8ed1a66936a293ec274b3ab72780963" title="Constructor" alt="" coords="224,139,388,165"/>
+<area shape="poly" title=" " alt="" coords="438,139,388,145,388,140,437,134"/>
+<area shape="rect" href="class_c_graphics_pipeline_state.html#abc3395de10313e13b40e56f7b07ec1ad" title="Set this graphics pipeline state to command list" alt="" coords="226,189,386,232"/>
+<area shape="poly" title=" " alt="" coords="503,144,406,180,373,191,371,186,404,175,501,139"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="5,189,159,232"/>
+<area shape="poly" title=" " alt="" coords="211,213,159,213,159,208,211,208"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a13a81042cdaeaaadf1c2ab8fd685dda3" name="a13a81042cdaeaaadf1c2ab8fd685dda3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a81042cdaeaaadf1c2ab8fd685dda3">&#9670;&#160;</a></span>GetVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a> * CMeshBuffer::GetVertex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the pointer to vertex buffer </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_mesh_buffer_a13a81042cdaeaaadf1c2ab8fd685dda3_cgraph.png" border="0" usemap="#aclass_c_mesh_buffer_a13a81042cdaeaaadf1c2ab8fd685dda3_cgraph" alt=""/></div>
+<map name="aclass_c_mesh_buffer_a13a81042cdaeaaadf1c2ab8fd685dda3_cgraph" id="aclass_c_mesh_buffer_a13a81042cdaeaaadf1c2ab8fd685dda3_cgraph">
+<area shape="rect" title="Get the pointer to vertex buffer" alt="" coords="5,5,168,32"/>
+<area shape="rect" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219" title="Get instance. If the instance has already been destroyed, return nullptr" alt="" coords="216,5,326,32"/>
+<area shape="poly" title=" " alt="" coords="168,16,200,16,200,21,168,21"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_mesh_buffer_a13a81042cdaeaaadf1c2ab8fd685dda3_icgraph.png" border="0" usemap="#aclass_c_mesh_buffer_a13a81042cdaeaaadf1c2ab8fd685dda3_icgraph" alt=""/></div>
+<map name="aclass_c_mesh_buffer_a13a81042cdaeaaadf1c2ab8fd685dda3_icgraph" id="aclass_c_mesh_buffer_a13a81042cdaeaaadf1c2ab8fd685dda3_icgraph">
+<area shape="rect" title="Get the pointer to vertex buffer" alt="" coords="414,13,576,40"/>
+<area shape="rect" href="class_c_graphics_pipeline_state.html#abc3395de10313e13b40e56f7b07ec1ad" title="Set this graphics pipeline state to command list" alt="" coords="207,5,366,48"/>
+<area shape="poly" title=" " alt="" coords="398,29,366,29,366,24,398,24"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="5,5,159,48"/>
+<area shape="poly" title=" " alt="" coords="191,29,159,29,159,24,191,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a29d6b8905dba12b2023a1e33e74db62c" name="a29d6b8905dba12b2023a1e33e74db62c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d6b8905dba12b2023a1e33e74db62c">&#9670;&#160;</a></span>GetVertexWeakPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a> &gt; CMeshBuffer::GetVertexWeakPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the weak pointer to vertex buffer </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_mesh_buffer_a29d6b8905dba12b2023a1e33e74db62c_icgraph.png" border="0" usemap="#aclass_c_mesh_buffer_a29d6b8905dba12b2023a1e33e74db62c_icgraph" alt=""/></div>
+<map name="aclass_c_mesh_buffer_a29d6b8905dba12b2023a1e33e74db62c_icgraph" id="aclass_c_mesh_buffer_a29d6b8905dba12b2023a1e33e74db62c_icgraph">
+<area shape="rect" title="Get the weak pointer to vertex buffer" alt="" coords="252,80,465,107"/>
+<area shape="rect" href="class_c_color_only_shape.html#aada7cecd529128f34a8d253507362215" title="Constructor" alt="" coords="5,5,204,48"/>
+<area shape="poly" title=" " alt="" coords="289,78,188,51,189,46,290,73"/>
+<area shape="rect" href="class_c_debug_collider_shape.html#abe7e81543dbd6d6177cc1de86cc60938" title="Constructor" alt="" coords="27,72,182,115"/>
+<area shape="poly" title=" " alt="" coords="236,96,183,96,183,91,236,91"/>
+<area shape="rect" href="class_c_tex_shape.html#af8ed1a66936a293ec274b3ab72780963" title="Constructor" alt="" coords="23,139,186,165"/>
+<area shape="poly" title=" " alt="" coords="284,113,166,141,165,135,282,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2898d8dd16d750f9323f3dea3e482c66" name="a2898d8dd16d750f9323f3dea3e482c66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2898d8dd16d750f9323f3dea3e482c66">&#9670;&#160;</a></span>SetInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMeshBuffer::SetInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a> &gt;&#160;</td>
+          <td class="paramname"><em>vertex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a> &gt;&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3D_PRIMITIVE_TOPOLOGY&#160;</td>
+          <td class="paramname"><em>topology</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the information needed to construct the mesh </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertex</td><td>Weak pointer to vertex buffer </td></tr>
+    <tr><td class="paramname">index</td><td>Weak pointer to index buffer </td></tr>
+    <tr><td class="paramname">topology</td><td>Topology type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a170f9a6719346d2e99c221e119ac4044" name="a170f9a6719346d2e99c221e119ac4044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a170f9a6719346d2e99c221e119ac4044">&#9670;&#160;</a></span>m_indexBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt;const <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a>&gt; CMeshBuffer::m_indexBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to index buffer </p>
+
+</div>
+</div>
+<a id="a2872b7b60488eb0f17a2c5b1acd0c18f" name="a2872b7b60488eb0f17a2c5b1acd0c18f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2872b7b60488eb0f17a2c5b1acd0c18f">&#9670;&#160;</a></span>m_topologyType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3D_PRIMITIVE_TOPOLOGY CMeshBuffer::m_topologyType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Topology type </p>
+
+</div>
+</div>
+<a id="a2bc6a4fbc45df936381b100c42557d0b" name="a2bc6a4fbc45df936381b100c42557d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bc6a4fbc45df936381b100c42557d0b">&#9670;&#160;</a></span>m_vertexBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt;const <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a>&gt; CMeshBuffer::m_vertexBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to vertex buffer </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_mesh_buffer_8h_source.html">MeshBuffer.h</a></li>
+<li><a class="el" href="_mesh_buffer_8cpp.html">MeshBuffer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: InputSystem.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">InputSystem.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_input_system_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __INPUT_SYSTEM_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __INPUT_SYSTEM_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_math_8h.html">UtilityForMath.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_c_input_system.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_input_system.html">CInputSystem</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>&lt;CInputSystem&gt; {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">friend</span> <a class="code hl_class" href="class_a_c_singleton_base.html">ACSingletonBase</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_c_input_system.html#abf98e698d596d62850d81aef6f9bc468">   22</a></span>    <a class="code hl_function" href="class_c_input_system.html#abf98e698d596d62850d81aef6f9bc468">~CInputSystem</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_input_system.html#a711502a23eaa5547a7c02ae533b050b6">Update</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_input_system.html#a73578179edc49df32884c50f556e71dc">IsKey</a>(BYTE key);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_input_system.html#afc8149f2af9e767fcb87027d7a165a63">IsKeyDown</a>(BYTE key);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_input_system.html#a3ae4d8d3ea2d94da792739efeee90677">IsKeyUp</a>(BYTE key);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_input_system.html#a404fcf58936671163a9ab7968a9a7f54">IsKeyGenerateDir</a>(<a class="code hl_class" href="struct_vector.html">Vector2f</a>* dir, BYTE plusX = <span class="charliteral">&#39;D&#39;</span>, BYTE minusX = <span class="charliteral">&#39;A&#39;</span>, BYTE plusY = <span class="charliteral">&#39;W&#39;</span>, BYTE minusY = <span class="charliteral">&#39;S&#39;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_c_input_system.html#ac3badfce16432612b2c10c37cba7851c">   64</a></span>    POINT <a class="code hl_function" href="class_c_input_system.html#ac3badfce16432612b2c10c37cba7851c">GetDeltaCursorPos</a>() { <span class="keywordflow">return</span> m_deltaCursorPos; }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_c_input_system.html#aa06eeb8ab61d365ceb5115946de85102">   67</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_input_system.html#aa06eeb8ab61d365ceb5115946de85102">SetIsRepeatCursorInScreen</a>(<span class="keywordtype">bool</span> isRepeat) { m_isRepeatCursor = isRepeat; }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_function" href="class_c_input_system.html#a3f5f87b19a628e8b7fabf5590e8e3dbd">CInputSystem</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_input_system.html#a2c0e84de3ff18ba8b7df06b1ef5fe676">RepeatCursor</a>(<span class="keyword">const</span> RECT&amp; repeatRange, POINT* cursorPos);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    BYTE m_currentKeyStates[256];</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    BYTE m_prevKeyStates[256];</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    POINT m_deltaCursorPos;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    POINT m_prevCursorPos;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">bool</span> m_isRepeatCursor;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif </span><span class="comment">// !__INPUT_SYSTEM_H__</span></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">File handling abstract singleton class.</div></div>
+<div class="ttc" id="a_utility_for_math_8h_html"><div class="ttname"><a href="_utility_for_math_8h.html">UtilityForMath.h</a></div><div class="ttdoc">This file provides utility in handling mathematics.</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html"><div class="ttname"><a href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a></div><div class="ttdoc">Abstract singleton class for main thread only (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:111</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html"><div class="ttname"><a href="class_a_c_singleton_base.html">ACSingletonBase</a></div><div class="ttdoc">Abstract singleton base class (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:59</div></div>
+<div class="ttc" id="aclass_c_input_system_html"><div class="ttname"><a href="class_c_input_system.html">CInputSystem</a></div><div class="ttdoc">This class handles key input information</div><div class="ttdef"><b>Definition</b> InputSystem.h:16</div></div>
+<div class="ttc" id="aclass_c_input_system_html_a2c0e84de3ff18ba8b7df06b1ef5fe676"><div class="ttname"><a href="class_c_input_system.html#a2c0e84de3ff18ba8b7df06b1ef5fe676">CInputSystem::RepeatCursor</a></div><div class="ttdeci">void RepeatCursor(const RECT &amp;repeatRange, POINT *cursorPos)</div><div class="ttdoc">Correct cursor position to repeat within specified range</div><div class="ttdef"><b>Definition</b> InputSystem.cpp:82</div></div>
+<div class="ttc" id="aclass_c_input_system_html_a3ae4d8d3ea2d94da792739efeee90677"><div class="ttname"><a href="class_c_input_system.html#a3ae4d8d3ea2d94da792739efeee90677">CInputSystem::IsKeyUp</a></div><div class="ttdeci">bool IsKeyUp(BYTE key)</div><div class="ttdoc">Released the specified key on the current frame?</div><div class="ttdef"><b>Definition</b> InputSystem.cpp:44</div></div>
+<div class="ttc" id="aclass_c_input_system_html_a3f5f87b19a628e8b7fabf5590e8e3dbd"><div class="ttname"><a href="class_c_input_system.html#a3f5f87b19a628e8b7fabf5590e8e3dbd">CInputSystem::CInputSystem</a></div><div class="ttdeci">CInputSystem()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> InputSystem.cpp:69</div></div>
+<div class="ttc" id="aclass_c_input_system_html_a404fcf58936671163a9ab7968a9a7f54"><div class="ttname"><a href="class_c_input_system.html#a404fcf58936671163a9ab7968a9a7f54">CInputSystem::IsKeyGenerateDir</a></div><div class="ttdeci">bool IsKeyGenerateDir(Vector2f *dir, BYTE plusX='D', BYTE minusX='A', BYTE plusY='W', BYTE minusY='S')</div><div class="ttdoc">Generate direction vectors based on key input</div><div class="ttdef"><b>Definition</b> InputSystem.cpp:49</div></div>
+<div class="ttc" id="aclass_c_input_system_html_a711502a23eaa5547a7c02ae533b050b6"><div class="ttname"><a href="class_c_input_system.html#a711502a23eaa5547a7c02ae533b050b6">CInputSystem::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Update processing that must be called every frame</div><div class="ttdef"><b>Definition</b> InputSystem.cpp:5</div></div>
+<div class="ttc" id="aclass_c_input_system_html_a73578179edc49df32884c50f556e71dc"><div class="ttname"><a href="class_c_input_system.html#a73578179edc49df32884c50f556e71dc">CInputSystem::IsKey</a></div><div class="ttdeci">bool IsKey(BYTE key)</div><div class="ttdoc">Is the specified key currently pressed?</div><div class="ttdef"><b>Definition</b> InputSystem.cpp:34</div></div>
+<div class="ttc" id="aclass_c_input_system_html_aa06eeb8ab61d365ceb5115946de85102"><div class="ttname"><a href="class_c_input_system.html#aa06eeb8ab61d365ceb5115946de85102">CInputSystem::SetIsRepeatCursorInScreen</a></div><div class="ttdeci">void SetIsRepeatCursorInScreen(bool isRepeat)</div><div class="ttdoc">Set a flag that the cursor repeats in the screen</div><div class="ttdef"><b>Definition</b> InputSystem.h:67</div></div>
+<div class="ttc" id="aclass_c_input_system_html_abf98e698d596d62850d81aef6f9bc468"><div class="ttname"><a href="class_c_input_system.html#abf98e698d596d62850d81aef6f9bc468">CInputSystem::~CInputSystem</a></div><div class="ttdeci">~CInputSystem()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_input_system_html_ac3badfce16432612b2c10c37cba7851c"><div class="ttname"><a href="class_c_input_system.html#ac3badfce16432612b2c10c37cba7851c">CInputSystem::GetDeltaCursorPos</a></div><div class="ttdeci">POINT GetDeltaCursorPos()</div><div class="ttdoc">Get amount of change in cursor position from previous frame</div><div class="ttdef"><b>Definition</b> InputSystem.h:64</div></div>
+<div class="ttc" id="aclass_c_input_system_html_afc8149f2af9e767fcb87027d7a165a63"><div class="ttname"><a href="class_c_input_system.html#afc8149f2af9e767fcb87027d7a165a63">CInputSystem::IsKeyDown</a></div><div class="ttdeci">bool IsKeyDown(BYTE key)</div><div class="ttdoc">Starting to press the key specified for the current frame?</div><div class="ttdef"><b>Definition</b> InputSystem.cpp:39</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 2 &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

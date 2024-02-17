@@ -1,0 +1,667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Transformf 構造体</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="struct_transformf-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Transformf 構造体</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Transform that has position and scale, rotation  
+ <a href="struct_transformf.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_utility_for_math_8h_source.html">UtilityForMath.h</a>&gt;</code></p>
+<div class="dynheader">
+Transformf 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_transformf__coll__graph.png" border="0" usemap="#a_transformf_coll__map" alt="Collaboration graph"/></div>
+<map name="a_transformf_coll__map" id="a_transformf_coll__map">
+<area shape="rect" title="Transform that has position and scale, rotation" alt="" coords="102,315,183,341"/>
+<area shape="rect" href="struct_vector.html" title=" " alt="" coords="5,208,128,235"/>
+<area shape="poly" title=" " alt="" coords="86,245,136,313,131,316,82,248"/>
+<area shape="rect" title=" " alt="" coords="47,5,86,32"/>
+<area shape="poly" title=" " alt="" coords="65,48,60,96,62,159,67,207,62,208,56,159,55,96,60,47"/>
+<area shape="rect" href="struct_vector.html" title="Colomn vector structure" alt="" coords="95,99,222,125"/>
+<area shape="poly" title=" " alt="" coords="92,41,148,96,144,100,88,45"/>
+<area shape="poly" title=" " alt="" coords="140,139,79,209,75,206,136,136"/>
+<area shape="poly" title=" " alt="" coords="238,103,248,112,240,120,222,123,222,118,238,116,243,112,235,108"/>
+<area shape="rect" href="struct_quaternion.html" title=" " alt="" coords="152,208,285,235"/>
+<area shape="poly" title=" " alt="" coords="203,248,154,316,149,313,199,245"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a01fead0881802769480a37df6c088cd4" id="r_a01fead0881802769480a37df6c088cd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#a01fead0881802769480a37df6c088cd4">Transformf</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;<a class="el" href="struct_transformf.html#aacbb494dcdce102cd3663684597435fb">pos</a>=<a class="el" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997">Vector3f::Zero</a>(), const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;<a class="el" href="struct_transformf.html#a421e42336456d965c1632b96ce02dcf9">scale</a>=<a class="el" href="struct_vector.html#ae21e7072563fc077194b4964f2655ae5">Vector3f::Ones</a>(), const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;angle=<a class="el" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997">Vector3f::Zero</a>())</td></tr>
+<tr class="memdesc:a01fead0881802769480a37df6c088cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a01fead0881802769480a37df6c088cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053f5174715d0e443089b5dc6f6e0513" id="r_a053f5174715d0e443089b5dc6f6e0513"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#a053f5174715d0e443089b5dc6f6e0513">Transformf</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;<a class="el" href="struct_transformf.html#aacbb494dcdce102cd3663684597435fb">pos</a>, const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;<a class="el" href="struct_transformf.html#a421e42336456d965c1632b96ce02dcf9">scale</a>, const <a class="el" href="_utility_for_math_8h.html#a921972c08e164d124edfca2b19315d46">Quaternionf</a> &amp;rotate)</td></tr>
+<tr class="memdesc:a053f5174715d0e443089b5dc6f6e0513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a053f5174715d0e443089b5dc6f6e0513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af278507190bc6ef5f269e77ab2904fac" id="r_af278507190bc6ef5f269e77ab2904fac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#af278507190bc6ef5f269e77ab2904fac">ConvertWorld2Local</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;worldPos) const</td></tr>
+<tr class="memdesc:af278507190bc6ef5f269e77ab2904fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert position existing in world coordinate space to its own local coordinate space  <br /></td></tr>
+<tr class="separator:af278507190bc6ef5f269e77ab2904fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa2a92133ea8ec401f42f93e62bc2e7" id="r_aeaa2a92133ea8ec401f42f93e62bc2e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#aeaa2a92133ea8ec401f42f93e62bc2e7">ConvertLocal2World</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;localPos) const</td></tr>
+<tr class="memdesc:aeaa2a92133ea8ec401f42f93e62bc2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert position existing in its own local coordinate space to world coordinate space  <br /></td></tr>
+<tr class="separator:aeaa2a92133ea8ec401f42f93e62bc2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d2e022738cc48dcf81448e239fa948" id="r_ae5d2e022738cc48dcf81448e239fa948"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#ae5d2e022738cc48dcf81448e239fa948">GetForward</a> () const</td></tr>
+<tr class="memdesc:ae5d2e022738cc48dcf81448e239fa948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the forward vector of this transform  <br /></td></tr>
+<tr class="separator:ae5d2e022738cc48dcf81448e239fa948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca998408240b9c8e9dcede0f51e2c42" id="r_a6ca998408240b9c8e9dcede0f51e2c42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#a6ca998408240b9c8e9dcede0f51e2c42">GetBackward</a> () const</td></tr>
+<tr class="memdesc:a6ca998408240b9c8e9dcede0f51e2c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the backward vector of this transform  <br /></td></tr>
+<tr class="separator:a6ca998408240b9c8e9dcede0f51e2c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931e8249e16f2a3212b43a848c854a90" id="r_a931e8249e16f2a3212b43a848c854a90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#a931e8249e16f2a3212b43a848c854a90">GetRight</a> () const</td></tr>
+<tr class="memdesc:a931e8249e16f2a3212b43a848c854a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the right vector of this transform  <br /></td></tr>
+<tr class="separator:a931e8249e16f2a3212b43a848c854a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97e620a6d378969ce4442fc50fd8dd76" id="r_a97e620a6d378969ce4442fc50fd8dd76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#a97e620a6d378969ce4442fc50fd8dd76">GetLeft</a> () const</td></tr>
+<tr class="memdesc:a97e620a6d378969ce4442fc50fd8dd76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the left vector of this transform  <br /></td></tr>
+<tr class="separator:a97e620a6d378969ce4442fc50fd8dd76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ed788e1d9691e1acd428afbfd5fc10" id="r_a43ed788e1d9691e1acd428afbfd5fc10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#a43ed788e1d9691e1acd428afbfd5fc10">GetUp</a> () const</td></tr>
+<tr class="memdesc:a43ed788e1d9691e1acd428afbfd5fc10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the up vector of this transform  <br /></td></tr>
+<tr class="separator:a43ed788e1d9691e1acd428afbfd5fc10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50d136849786b0bdfd3e190ea75168d2" id="r_a50d136849786b0bdfd3e190ea75168d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#a50d136849786b0bdfd3e190ea75168d2">GetDown</a> () const</td></tr>
+<tr class="memdesc:a50d136849786b0bdfd3e190ea75168d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the down vector of this transform  <br /></td></tr>
+<tr class="separator:a50d136849786b0bdfd3e190ea75168d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b46970527510f5b9f0533b1defd85b2" id="r_a5b46970527510f5b9f0533b1defd85b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#a5b46970527510f5b9f0533b1defd85b2">Transformf</a> (const <a class="el" href="struct_transformf.html">Transformf</a> &amp;other)=default</td></tr>
+<tr class="memdesc:a5b46970527510f5b9f0533b1defd85b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor  <br /></td></tr>
+<tr class="separator:a5b46970527510f5b9f0533b1defd85b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad0777c91791580f62627644fa4613de" id="r_aad0777c91791580f62627644fa4613de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#aad0777c91791580f62627644fa4613de">operator=</a> (const <a class="el" href="struct_transformf.html">Transformf</a> &amp;other)=default</td></tr>
+<tr class="memdesc:aad0777c91791580f62627644fa4613de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator  <br /></td></tr>
+<tr class="separator:aad0777c91791580f62627644fa4613de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3cf1308c6ec8f7d176338620a61744a" id="r_af3cf1308c6ec8f7d176338620a61744a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#af3cf1308c6ec8f7d176338620a61744a">Transformf</a> (<a class="el" href="struct_transformf.html">Transformf</a> &amp;&amp;other)=default</td></tr>
+<tr class="memdesc:af3cf1308c6ec8f7d176338620a61744a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor  <br /></td></tr>
+<tr class="separator:af3cf1308c6ec8f7d176338620a61744a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d5d3fb8ef04224373adccd5405bd2c" id="r_a52d5d3fb8ef04224373adccd5405bd2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#a52d5d3fb8ef04224373adccd5405bd2c">operator=</a> (<a class="el" href="struct_transformf.html">Transformf</a> &amp;&amp;other)=default</td></tr>
+<tr class="memdesc:a52d5d3fb8ef04224373adccd5405bd2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator  <br /></td></tr>
+<tr class="separator:a52d5d3fb8ef04224373adccd5405bd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:aacbb494dcdce102cd3663684597435fb" id="r_aacbb494dcdce102cd3663684597435fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#aacbb494dcdce102cd3663684597435fb">pos</a></td></tr>
+<tr class="memdesc:aacbb494dcdce102cd3663684597435fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position  <br /></td></tr>
+<tr class="separator:aacbb494dcdce102cd3663684597435fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a421e42336456d965c1632b96ce02dcf9" id="r_a421e42336456d965c1632b96ce02dcf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#a421e42336456d965c1632b96ce02dcf9">scale</a></td></tr>
+<tr class="memdesc:a421e42336456d965c1632b96ce02dcf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale  <br /></td></tr>
+<tr class="separator:a421e42336456d965c1632b96ce02dcf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ae0972912b28b48ea93a653d562b17" id="r_ac0ae0972912b28b48ea93a653d562b17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#a921972c08e164d124edfca2b19315d46">Quaternionf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_transformf.html#ac0ae0972912b28b48ea93a653d562b17">rotation</a></td></tr>
+<tr class="memdesc:ac0ae0972912b28b48ea93a653d562b17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation  <br /></td></tr>
+<tr class="separator:ac0ae0972912b28b48ea93a653d562b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Transform that has position and scale, rotation </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a01fead0881802769480a37df6c088cd4" name="a01fead0881802769480a37df6c088cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01fead0881802769480a37df6c088cd4">&#9670;&#160;</a></span>Transformf() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transformf::Transformf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em> = <code><a class="el" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997">Vector3f::Zero</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>scale</em> = <code><a class="el" href="struct_vector.html#ae21e7072563fc077194b4964f2655ae5">Vector3f::Ones</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>angle</em> = <code><a class="el" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997">Vector3f::Zero</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Position </td></tr>
+    <tr><td class="paramname">scale</td><td>Scale </td></tr>
+    <tr><td class="paramname">angle</td><td>Eular angle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a053f5174715d0e443089b5dc6f6e0513" name="a053f5174715d0e443089b5dc6f6e0513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053f5174715d0e443089b5dc6f6e0513">&#9670;&#160;</a></span>Transformf() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transformf::Transformf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#a921972c08e164d124edfca2b19315d46">Quaternionf</a> &amp;&#160;</td>
+          <td class="paramname"><em>rotate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Position </td></tr>
+    <tr><td class="paramname">scale</td><td>Scale </td></tr>
+    <tr><td class="paramname">rotate</td><td><a class="el" href="struct_quaternion.html" title="Quaternion">Quaternion</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b46970527510f5b9f0533b1defd85b2" name="a5b46970527510f5b9f0533b1defd85b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b46970527510f5b9f0533b1defd85b2">&#9670;&#160;</a></span>Transformf() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transformf::Transformf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor </p>
+
+</div>
+</div>
+<a id="af3cf1308c6ec8f7d176338620a61744a" name="af3cf1308c6ec8f7d176338620a61744a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3cf1308c6ec8f7d176338620a61744a">&#9670;&#160;</a></span>Transformf() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transformf::Transformf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_transformf.html">Transformf</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aeaa2a92133ea8ec401f42f93e62bc2e7" name="aeaa2a92133ea8ec401f42f93e62bc2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa2a92133ea8ec401f42f93e62bc2e7">&#9670;&#160;</a></span>ConvertLocal2World()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Transformf::ConvertLocal2World </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>localPos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert position existing in its own local coordinate space to world coordinate space </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worldPos</td><td>position to be converted </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Converted position </dd></dl>
+
+</div>
+</div>
+<a id="af278507190bc6ef5f269e77ab2904fac" name="af278507190bc6ef5f269e77ab2904fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af278507190bc6ef5f269e77ab2904fac">&#9670;&#160;</a></span>ConvertWorld2Local()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Transformf::ConvertWorld2Local </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>worldPos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert position existing in world coordinate space to its own local coordinate space </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worldPos</td><td>position to be converted </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Converted position </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_transformf_af278507190bc6ef5f269e77ab2904fac_cgraph.png" border="0" usemap="#astruct_transformf_af278507190bc6ef5f269e77ab2904fac_cgraph" alt=""/></div>
+<map name="astruct_transformf_af278507190bc6ef5f269e77ab2904fac_cgraph" id="astruct_transformf_af278507190bc6ef5f269e77ab2904fac_cgraph">
+<area shape="rect" title="Convert position existing in world coordinate space to its own local coordinate space" alt="" coords="5,99,179,141"/>
+<area shape="rect" href="struct_quaternion.html#a052a612863d42fdb78e601c8e388a805" title="Get a conjugate quaternion from this quaternion" alt="" coords="227,107,408,133"/>
+<area shape="poly" title=" " alt="" coords="179,117,211,117,211,123,179,123"/>
+<area shape="rect" href="struct_quaternion.html#ad5008dba83ccdf61b2e66ac1bfb709f3" title="Constructor for identity matrix" alt="" coords="456,5,611,32"/>
+<area shape="poly" title=" " alt="" coords="340,104,391,73,455,42,471,35,473,40,457,46,394,78,342,108"/>
+<area shape="rect" href="struct_quaternion.html#a9515bccaa51d6b1dff86669d939f6886" title="Get the fourth element" alt="" coords="483,56,584,83"/>
+<area shape="poly" title=" " alt="" coords="377,103,467,82,468,87,378,109"/>
+<area shape="rect" href="struct_quaternion.html#a0deead6ea6ea56c2d299645aa167de1d" title="Get the first element" alt="" coords="484,107,583,133"/>
+<area shape="poly" title=" " alt="" coords="409,117,469,117,469,123,409,123"/>
+<area shape="rect" href="struct_quaternion.html#aa15b70b5c9535cd02d99839f95279d37" title="Get the second element" alt="" coords="484,157,583,184"/>
+<area shape="poly" title=" " alt="" coords="378,131,470,153,468,158,377,137"/>
+<area shape="rect" href="struct_quaternion.html#a45f22fce82ace15fc4f1b0e16ff93255" title="Get the third element" alt="" coords="484,208,583,235"/>
+<area shape="poly" title=" " alt="" coords="342,132,394,162,457,194,473,200,471,205,455,198,391,167,340,136"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6ca998408240b9c8e9dcede0f51e2c42" name="a6ca998408240b9c8e9dcede0f51e2c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca998408240b9c8e9dcede0f51e2c42">&#9670;&#160;</a></span>GetBackward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Transformf::GetBackward </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the backward vector of this transform </p>
+
+</div>
+</div>
+<a id="a50d136849786b0bdfd3e190ea75168d2" name="a50d136849786b0bdfd3e190ea75168d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50d136849786b0bdfd3e190ea75168d2">&#9670;&#160;</a></span>GetDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Transformf::GetDown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the down vector of this transform </p>
+
+</div>
+</div>
+<a id="ae5d2e022738cc48dcf81448e239fa948" name="ae5d2e022738cc48dcf81448e239fa948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d2e022738cc48dcf81448e239fa948">&#9670;&#160;</a></span>GetForward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Transformf::GetForward </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the forward vector of this transform </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_transformf_ae5d2e022738cc48dcf81448e239fa948_icgraph.png" border="0" usemap="#astruct_transformf_ae5d2e022738cc48dcf81448e239fa948_icgraph" alt=""/></div>
+<map name="astruct_transformf_ae5d2e022738cc48dcf81448e239fa948_icgraph" id="astruct_transformf_ae5d2e022738cc48dcf81448e239fa948_icgraph">
+<area shape="rect" title="Get the forward vector of this transform" alt="" coords="228,80,384,107"/>
+<area shape="rect" href="class_c_static_cb_dir_light_param.html#a22486d5d786dc04ff3d5391493c60c0f" title="Allocate data" alt="" coords="11,5,174,48"/>
+<area shape="poly" title=" " alt="" coords="245,77,162,51,164,46,247,72"/>
+<area shape="rect" href="class_c_light_v_p_calculator.html#ae6a4472d7b512277a57110629a5412dd" title="Calculate all light view projection matrices and return it" alt="" coords="25,72,160,115"/>
+<area shape="poly" title=" " alt="" coords="212,96,160,96,160,91,212,91"/>
+<area shape="rect" href="class_c_player_control_component.html#ac60e570ba93b831af8a61f402f54d390" title="Updating process" alt="" coords="5,139,180,181"/>
+<area shape="poly" title=" " alt="" coords="247,114,164,141,162,135,245,109"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a97e620a6d378969ce4442fc50fd8dd76" name="a97e620a6d378969ce4442fc50fd8dd76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e620a6d378969ce4442fc50fd8dd76">&#9670;&#160;</a></span>GetLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Transformf::GetLeft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the left vector of this transform </p>
+
+</div>
+</div>
+<a id="a931e8249e16f2a3212b43a848c854a90" name="a931e8249e16f2a3212b43a848c854a90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a931e8249e16f2a3212b43a848c854a90">&#9670;&#160;</a></span>GetRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Transformf::GetRight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the right vector of this transform </p>
+
+</div>
+</div>
+<a id="a43ed788e1d9691e1acd428afbfd5fc10" name="a43ed788e1d9691e1acd428afbfd5fc10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43ed788e1d9691e1acd428afbfd5fc10">&#9670;&#160;</a></span>GetUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Transformf::GetUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the up vector of this transform </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_transformf_a43ed788e1d9691e1acd428afbfd5fc10_icgraph.png" border="0" usemap="#astruct_transformf_a43ed788e1d9691e1acd428afbfd5fc10_icgraph" alt=""/></div>
+<map name="astruct_transformf_a43ed788e1d9691e1acd428afbfd5fc10_icgraph" id="astruct_transformf_a43ed788e1d9691e1acd428afbfd5fc10_icgraph">
+<area shape="rect" title="Get the up vector of this transform" alt="" coords="236,13,362,40"/>
+<area shape="rect" href="class_c_piston_machine_component.html#ae51fc446ace0b672e1b77bdc758aa74b" title="Update processing" alt="" coords="5,5,188,48"/>
+<area shape="poly" title=" " alt="" coords="220,29,188,29,188,24,220,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aad0777c91791580f62627644fa4613de" name="aad0777c91791580f62627644fa4613de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad0777c91791580f62627644fa4613de">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_transformf.html">Transformf</a> &amp; Transformf::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy assignment operator </p>
+
+</div>
+</div>
+<a id="a52d5d3fb8ef04224373adccd5405bd2c" name="a52d5d3fb8ef04224373adccd5405bd2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52d5d3fb8ef04224373adccd5405bd2c">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_transformf.html">Transformf</a> &amp; Transformf::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_transformf.html">Transformf</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment operator </p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aacbb494dcdce102cd3663684597435fb" name="aacbb494dcdce102cd3663684597435fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacbb494dcdce102cd3663684597435fb">&#9670;&#160;</a></span>pos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Transformf::pos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Position </p>
+
+</div>
+</div>
+<a id="ac0ae0972912b28b48ea93a653d562b17" name="ac0ae0972912b28b48ea93a653d562b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ae0972912b28b48ea93a653d562b17">&#9670;&#160;</a></span>rotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#a921972c08e164d124edfca2b19315d46">Quaternionf</a> Transformf::rotation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotation </p>
+
+</div>
+</div>
+<a id="a421e42336456d965c1632b96ce02dcf9" name="a421e42336456d965c1632b96ce02dcf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421e42336456d965c1632b96ce02dcf9">&#9670;&#160;</a></span>scale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Transformf::scale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Scale </p>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_utility_for_math_8h_source.html">UtilityForMath.h</a></li>
+<li><a class="el" href="_utility_for_math_8cpp.html">UtilityForMath.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

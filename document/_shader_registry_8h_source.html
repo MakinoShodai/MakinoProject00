@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ShaderRegistry.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ShaderRegistry.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_shader_registry_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __SHADER_REGISTRY_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __SHADER_REGISTRY_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_shader_8h.html">Shader.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656e">   16</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656e">VertexShaderType</a> : UINT {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea50ff0b2f929aa743c8414256f8a8bd49">Standard2DSprite</a> = 0,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eac240af9cfc704891dfdfe45a83be712c">Standard3DSprite</a>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea21ae25ee9814c82a72f3e97e71820906">Standard3D</a>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea8acb0b51bc5d86ee451b34b87d8d3648">Standard3DAnim</a>,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea38f3bc52310c8da5dd2d89906d5b3155">StandardRemovePos3D</a>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eadfe2810769bbeeabc8b2b1572e16de35">LightPosWorldPos3D</a>,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eaff0aabec00174dcb259df6aee5770a57">LightPosWorldPos3DAnim</a>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea4403b7e40f02f7ba56bf9f0f41479154">LightVP3D</a>,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eacd801c3cbf996975cdfd0368b994490e">LightVP3DAnim</a>,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea0b5ce210917c4f8835b8962de0aeeb76">LightVPOutUV3D</a>,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea6a061313d22e51e0f25b7cd4dc065233">Max</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9b">   42</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9b">PixelShaderType</a> : UINT {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba76ea39e8fe7f3c653b38595d626d3206">StandardTex</a> = 0,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba3b14ca83173819b48b37125d4dd44709">StandardColor</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9bacbfb594cdd0d31f8741401233ee41929">DepthWrite</a>,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba21e77d6a4ebb2044f6c52555833412b1">ShadingTex</a>,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9bae25d59bd32f462810db58390468f9695">ShadingColor</a>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea6a061313d22e51e0f25b7cd4dc065233">Max</a></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_shader_registry.html">   58</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_shader_registry.html">CShaderRegistry</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>&lt;CShaderRegistry&gt; {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_shader_registry.html#a3273bd1fe91a2694d70da9c751511d0b">   60</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_a_c_singleton_base.html">ACSingletonBase</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_c_shader_registry.html#a77a4927ac87619d576391d01edde3f3d">   65</a></span>    <a class="code hl_function" href="class_c_shader_registry.html#a77a4927ac87619d576391d01edde3f3d">~CShaderRegistry</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_shader_registry.html#aec02e4ed15a5f38d02549b9b3207204f">Initialize</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="};">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_c_shader_registry_1_1_c_thread_safe_feature.html">   73</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_c_shader_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;CShaderRegistry&gt; {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">using </span><a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;<a class="code hl_class" href="class_c_shader_registry.html">CShaderRegistry</a>&gt;<a class="code hl_class" href="class_a_c_inner_class.html">::ACInnerClass</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_c_shader_registry_1_1_c_thread_safe_feature.html#afc0141f681e27d955d18b1cf1b633da7">   79</a></span>        <a class="code hl_class" href="class_c_vertex_shader.html">CVertexShader</a>* <a class="code hl_function" href="class_c_shader_registry_1_1_c_thread_safe_feature.html#afc0141f681e27d955d18b1cf1b633da7">GetVS</a>(<a class="code hl_enumeration" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656e">VertexShaderType</a> vsType) { <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_vertexShaders[<span class="keyword">static_cast&lt;</span>UINT<span class="keyword">&gt;</span>(vsType)]; }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_c_shader_registry_1_1_c_thread_safe_feature.html#a099dbb9e12b98575e77ce16722869f37">   81</a></span>        <a class="code hl_class" href="class_c_pixel_shader.html">CPixelShader</a>* <a class="code hl_function" href="class_c_shader_registry_1_1_c_thread_safe_feature.html#a099dbb9e12b98575e77ce16722869f37">GetPS</a>(<a class="code hl_enumeration" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9b">PixelShaderType</a> psType) { <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_pixelShaders[<span class="keyword">static_cast&lt;</span>UINT<span class="keyword">&gt;</span>(psType)]; }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    };</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_c_shader_registry.html#aff1e63f1223a161ec2aec0509c0e8e79">   85</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="class_c_shader_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a>&amp; <a class="code hl_function" href="class_c_shader_registry.html#aff1e63f1223a161ec2aec0509c0e8e79">GetAny</a>() {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_c_shader_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> instance(<a class="code hl_function" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a>().Get());</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_c_shader_registry.html#a956b1b4ee4ed7a8c722e808a5137ebfc">   94</a></span>    <a class="code hl_function" href="class_c_shader_registry.html#a956b1b4ee4ed7a8c722e808a5137ebfc">CShaderRegistry</a>() : <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>(10) {}</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_class" href="class_c_vertex_shader.html">CVertexShader</a> m_vertexShaders[<span class="keyword">static_cast&lt;</span>UINT<span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea6a061313d22e51e0f25b7cd4dc065233">VertexShaderType::Max</a>)];</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_class" href="class_c_pixel_shader.html">CPixelShader</a> m_pixelShaders[<span class="keyword">static_cast&lt;</span>UINT<span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba6a061313d22e51e0f25b7cd4dc065233">PixelShaderType::Max</a>)];</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>};</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif </span><span class="comment">// !__SHADER_REGISTRY_H__</span></div>
+<div class="ttc" id="a_shader_8h_html"><div class="ttname"><a href="_shader_8h.html">Shader.h</a></div><div class="ttdoc">This file handles each shaders.</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656e"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656e">VertexShaderType</a></div><div class="ttdeci">VertexShaderType</div><div class="ttdoc">Type of vertex shaders</div><div class="ttdef"><b>Definition</b> ShaderRegistry.h:16</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656ea0b5ce210917c4f8835b8962de0aeeb76"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea0b5ce210917c4f8835b8962de0aeeb76">VertexShaderType::LightVPOutUV3D</a></div><div class="ttdeci">@ LightVPOutUV3D</div><div class="ttdoc">Light view projection matrix shader (output uv) for non-animated model</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656ea21ae25ee9814c82a72f3e97e71820906"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea21ae25ee9814c82a72f3e97e71820906">VertexShaderType::Standard3D</a></div><div class="ttdeci">@ Standard3D</div><div class="ttdoc">Standard shader for non-animated model</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656ea38f3bc52310c8da5dd2d89906d5b3155"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea38f3bc52310c8da5dd2d89906d5b3155">VertexShaderType::StandardRemovePos3D</a></div><div class="ttdeci">@ StandardRemovePos3D</div><div class="ttdoc">Standard remove a position from view for non-animated model</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656ea4403b7e40f02f7ba56bf9f0f41479154"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea4403b7e40f02f7ba56bf9f0f41479154">VertexShaderType::LightVP3D</a></div><div class="ttdeci">@ LightVP3D</div><div class="ttdoc">Light view projection matrix shader for non-animated model</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656ea50ff0b2f929aa743c8414256f8a8bd49"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea50ff0b2f929aa743c8414256f8a8bd49">VertexShaderType::Standard2DSprite</a></div><div class="ttdeci">@ Standard2DSprite</div><div class="ttdoc">Standard shader for 2D sprite</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656ea6a061313d22e51e0f25b7cd4dc065233"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea6a061313d22e51e0f25b7cd4dc065233">VertexShaderType::Max</a></div><div class="ttdeci">@ Max</div><div class="ttdoc">Max</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656ea8acb0b51bc5d86ee451b34b87d8d3648"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656ea8acb0b51bc5d86ee451b34b87d8d3648">VertexShaderType::Standard3DAnim</a></div><div class="ttdeci">@ Standard3DAnim</div><div class="ttdoc">Standard shader for skeltal model</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656eac240af9cfc704891dfdfe45a83be712c"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eac240af9cfc704891dfdfe45a83be712c">VertexShaderType::Standard3DSprite</a></div><div class="ttdeci">@ Standard3DSprite</div><div class="ttdoc">Standard shader for 3D sprite</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656eacd801c3cbf996975cdfd0368b994490e"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eacd801c3cbf996975cdfd0368b994490e">VertexShaderType::LightVP3DAnim</a></div><div class="ttdeci">@ LightVP3DAnim</div><div class="ttdoc">Light view projection matrix shader for skeletal model</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656eadfe2810769bbeeabc8b2b1572e16de35"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eadfe2810769bbeeabc8b2b1572e16de35">VertexShaderType::LightPosWorldPos3D</a></div><div class="ttdeci">@ LightPosWorldPos3D</div><div class="ttdoc">Light position and world position shader for non-animated model</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a24df3b40883460a32960f4b36d91656eaff0aabec00174dcb259df6aee5770a57"><div class="ttname"><a href="_shader_registry_8h.html#a24df3b40883460a32960f4b36d91656eaff0aabec00174dcb259df6aee5770a57">VertexShaderType::LightPosWorldPos3DAnim</a></div><div class="ttdeci">@ LightPosWorldPos3DAnim</div><div class="ttdoc">Light position and world position shader for skeletal model</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a69ccfadfce2364b92e404ec4cdd80c9b"><div class="ttname"><a href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9b">PixelShaderType</a></div><div class="ttdeci">PixelShaderType</div><div class="ttdoc">Type of pixel shaders</div><div class="ttdef"><b>Definition</b> ShaderRegistry.h:42</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a69ccfadfce2364b92e404ec4cdd80c9ba21e77d6a4ebb2044f6c52555833412b1"><div class="ttname"><a href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba21e77d6a4ebb2044f6c52555833412b1">PixelShaderType::ShadingTex</a></div><div class="ttdeci">@ ShadingTex</div><div class="ttdoc">Shading for using texture</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a69ccfadfce2364b92e404ec4cdd80c9ba3b14ca83173819b48b37125d4dd44709"><div class="ttname"><a href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba3b14ca83173819b48b37125d4dd44709">PixelShaderType::StandardColor</a></div><div class="ttdeci">@ StandardColor</div><div class="ttdoc">Standard shader for color only</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a69ccfadfce2364b92e404ec4cdd80c9ba6a061313d22e51e0f25b7cd4dc065233"><div class="ttname"><a href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba6a061313d22e51e0f25b7cd4dc065233">PixelShaderType::Max</a></div><div class="ttdeci">@ Max</div><div class="ttdoc">Max</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a69ccfadfce2364b92e404ec4cdd80c9ba76ea39e8fe7f3c653b38595d626d3206"><div class="ttname"><a href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9ba76ea39e8fe7f3c653b38595d626d3206">PixelShaderType::StandardTex</a></div><div class="ttdeci">@ StandardTex</div><div class="ttdoc">Standard shader for texture mesh</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a69ccfadfce2364b92e404ec4cdd80c9bacbfb594cdd0d31f8741401233ee41929"><div class="ttname"><a href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9bacbfb594cdd0d31f8741401233ee41929">PixelShaderType::DepthWrite</a></div><div class="ttdeci">@ DepthWrite</div><div class="ttdoc">Writing depth shader</div></div>
+<div class="ttc" id="a_shader_registry_8h_html_a69ccfadfce2364b92e404ec4cdd80c9bae25d59bd32f462810db58390468f9695"><div class="ttname"><a href="_shader_registry_8h.html#a69ccfadfce2364b92e404ec4cdd80c9bae25d59bd32f462810db58390468f9695">PixelShaderType::ShadingColor</a></div><div class="ttdeci">@ ShadingColor</div><div class="ttdoc">Shading for color only</div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">File handling abstract singleton class.</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html"><div class="ttname"><a href="class_a_c_inner_class.html">ACInnerClass</a></div><div class="ttdoc">Abstract inner class</div><div class="ttdef"><b>Definition</b> Singleton.h:23</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html_abbb5ecb30cbd08e599e20cc9f3532f6f"><div class="ttname"><a href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">ACInnerClass&lt; CShaderRegistry &gt;::m_owner</a></div><div class="ttdeci">CShaderRegistry * m_owner</div><div class="ttdoc">Pointer to owner of this class</div><div class="ttdef"><b>Definition</b> Singleton.h:45</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html"><div class="ttname"><a href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a></div><div class="ttdoc">Abstract singleton class for main thread only (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:111</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html"><div class="ttname"><a href="class_a_c_singleton_base.html">ACSingletonBase</a></div><div class="ttdoc">Abstract singleton base class (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:59</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html_a86122d51b9f611ffbc300eb790c3dabf"><div class="ttname"><a href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">ACSingletonBase::GetProtected</a></div><div class="ttdeci">static CUniquePtr&lt; Derived &gt; &amp; GetProtected()</div><div class="ttdoc">Get singleton instance</div><div class="ttdef"><b>Definition</b> Singleton.h:169</div></div>
+<div class="ttc" id="aclass_c_pixel_shader_html"><div class="ttname"><a href="class_c_pixel_shader.html">CPixelShader</a></div><div class="ttdoc">Pixel shader class</div><div class="ttdef"><b>Definition</b> Shader.h:191</div></div>
+<div class="ttc" id="aclass_c_shader_registry_1_1_c_thread_safe_feature_html"><div class="ttname"><a href="class_c_shader_registry_1_1_c_thread_safe_feature.html">CShaderRegistry::CThreadSafeFeature</a></div><div class="ttdoc">Feature for thread-safe</div><div class="ttdef"><b>Definition</b> ShaderRegistry.h:73</div></div>
+<div class="ttc" id="aclass_c_shader_registry_1_1_c_thread_safe_feature_html_a099dbb9e12b98575e77ce16722869f37"><div class="ttname"><a href="class_c_shader_registry_1_1_c_thread_safe_feature.html#a099dbb9e12b98575e77ce16722869f37">CShaderRegistry::CThreadSafeFeature::GetPS</a></div><div class="ttdeci">CPixelShader * GetPS(PixelShaderType psType)</div><div class="ttdoc">Get a pointer to a pixel shader</div><div class="ttdef"><b>Definition</b> ShaderRegistry.h:81</div></div>
+<div class="ttc" id="aclass_c_shader_registry_1_1_c_thread_safe_feature_html_afc0141f681e27d955d18b1cf1b633da7"><div class="ttname"><a href="class_c_shader_registry_1_1_c_thread_safe_feature.html#afc0141f681e27d955d18b1cf1b633da7">CShaderRegistry::CThreadSafeFeature::GetVS</a></div><div class="ttdeci">CVertexShader * GetVS(VertexShaderType vsType)</div><div class="ttdoc">Get a pointer to a vertex shader</div><div class="ttdef"><b>Definition</b> ShaderRegistry.h:79</div></div>
+<div class="ttc" id="aclass_c_shader_registry_html"><div class="ttname"><a href="class_c_shader_registry.html">CShaderRegistry</a></div><div class="ttdoc">Registry class manages all shaders</div><div class="ttdef"><b>Definition</b> ShaderRegistry.h:58</div></div>
+<div class="ttc" id="aclass_c_shader_registry_html_a77a4927ac87619d576391d01edde3f3d"><div class="ttname"><a href="class_c_shader_registry.html#a77a4927ac87619d576391d01edde3f3d">CShaderRegistry::~CShaderRegistry</a></div><div class="ttdeci">~CShaderRegistry() override=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_shader_registry_html_a956b1b4ee4ed7a8c722e808a5137ebfc"><div class="ttname"><a href="class_c_shader_registry.html#a956b1b4ee4ed7a8c722e808a5137ebfc">CShaderRegistry::CShaderRegistry</a></div><div class="ttdeci">CShaderRegistry()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> ShaderRegistry.h:94</div></div>
+<div class="ttc" id="aclass_c_shader_registry_html_aec02e4ed15a5f38d02549b9b3207204f"><div class="ttname"><a href="class_c_shader_registry.html#aec02e4ed15a5f38d02549b9b3207204f">CShaderRegistry::Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdoc">Initialize</div><div class="ttdef"><b>Definition</b> ShaderRegistry.cpp:4</div></div>
+<div class="ttc" id="aclass_c_shader_registry_html_aff1e63f1223a161ec2aec0509c0e8e79"><div class="ttname"><a href="class_c_shader_registry.html#aff1e63f1223a161ec2aec0509c0e8e79">CShaderRegistry::GetAny</a></div><div class="ttdeci">static CThreadSafeFeature &amp; GetAny()</div><div class="ttdoc">Get feature for thread-safe</div><div class="ttdef"><b>Definition</b> ShaderRegistry.h:85</div></div>
+<div class="ttc" id="aclass_c_vertex_shader_html"><div class="ttname"><a href="class_c_vertex_shader.html">CVertexShader</a></div><div class="ttdoc">Vertex shader class</div><div class="ttdef"><b>Definition</b> Shader.h:154</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

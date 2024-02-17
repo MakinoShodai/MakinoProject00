@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: SwapChain.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">SwapChain.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file handles swap chain.  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_singleton_8h_source.html">Singleton.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_descriptor_heap_8h_source.html">DescriptorHeap.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utility_for_direct_x_8h_source.html">UtilityForDirectX.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utility_for_async_8h_source.html">UtilityForAsync.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_render_target_8h_source.html">RenderTarget.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+SwapChain.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_swap_chain_8h__incl.png" border="0" usemap="#a_swap_chain_8h" alt=""/></div>
+<map name="a_swap_chain_8h" id="a_swap_chain_8h">
+<area shape="rect" title="This file handles swap chain." alt="" coords="289,5,387,32"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="195,379,281,405"/>
+<area shape="poly" title=" " alt="" coords="289,28,258,34,225,45,194,60,166,82,151,101,143,120,140,167,140,244,147,281,165,314,188,343,212,367,208,370,184,347,161,317,142,282,135,244,135,167,138,118,146,99,163,78,191,56,223,40,257,29,288,22"/>
+<area shape="rect" href="_descriptor_heap_8h.html" title="This file handles descriptor heap." alt="" coords="448,229,569,256"/>
+<area shape="poly" title=" " alt="" coords="388,24,456,41,491,57,523,78,549,101,566,124,573,151,567,182,555,203,539,221,535,217,551,200,562,180,568,151,562,126,545,104,520,82,489,62,454,46,386,29"/>
+<area shape="rect" href="_utility_for_direct_x_8h.html" title="This file defines utility functions that are useful for DirectX." alt="" coords="311,304,437,331"/>
+<area shape="poly" title=" " alt="" coords="342,32,373,288,368,289,337,33"/>
+<area shape="rect" href="_utility_for_async_8h.html" title="This file defines utility functions that are useful for asynchronous." alt="" coords="177,80,299,107"/>
+<area shape="poly" title=" " alt="" coords="322,35,269,73,266,68,319,30"/>
+<area shape="rect" href="_render_target_8h.html" title="This file handles render targets." alt="" coords="401,80,510,107"/>
+<area shape="poly" title=" " alt="" coords="360,30,423,69,421,74,357,35"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="171,453,305,480"/>
+<area shape="poly" title=" " alt="" coords="241,406,241,438,235,438,235,406"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="329,453,419,480"/>
+<area shape="poly" title=" " alt="" coords="263,404,338,443,335,448,260,408"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="5,453,148,480"/>
+<area shape="poly" title=" " alt="" coords="211,408,120,449,117,444,209,403"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="332,528,416,555"/>
+<area shape="poly" title=" " alt="" coords="377,481,377,512,371,512,371,481"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="521,603,587,629"/>
+<area shape="poly" title=" " alt="" coords="406,553,509,594,507,599,404,558"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="532,677,645,704"/>
+<area shape="poly" title=" " alt="" coords="562,629,578,662,574,664,557,631"/>
+<area shape="poly" title=" " alt="" coords="486,259,412,299,410,294,484,254"/>
+<area shape="rect" href="_application_8h.html" title="This file handles application objects such as window and DirectX device." alt="" coords="460,304,557,331"/>
+<area shape="poly" title=" " alt="" coords="511,257,511,288,506,288,506,257"/>
+<area shape="poly" title=" " alt="" coords="377,331,377,438,371,438,371,331"/>
+<area shape="poly" title=" " alt="" coords="462,334,297,378,295,373,461,329"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="452,453,565,480"/>
+<area shape="poly" title=" " alt="" coords="511,331,511,438,506,438,506,331"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="564,528,685,555"/>
+<area shape="poly" title=" " alt="" coords="530,478,593,517,590,522,527,483"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="440,528,540,555"/>
+<area shape="poly" title=" " alt="" coords="508,481,499,513,494,512,503,480"/>
+<area shape="poly" title=" " alt="" coords="614,557,578,593,575,590,610,553"/>
+<area shape="poly" title=" " alt="" coords="624,556,598,663,593,662,619,555"/>
+<area shape="rect" href="_application_error_8h.html" title="This file handles processing when the application makes an error." alt="" coords="176,229,300,256"/>
+<area shape="poly" title=" " alt="" coords="241,107,241,214,235,214,235,107"/>
+<area shape="poly" title=" " alt="" coords="241,257,241,363,235,363,235,257"/>
+<area shape="poly" title=" " alt="" coords="490,105,521,124,536,137,547,154,551,171,549,188,532,219,527,216,544,186,546,171,542,156,532,141,518,128,487,110"/>
+<area shape="poly" title=" " alt="" coords="447,109,431,130,416,156,393,227,380,289,375,288,388,225,411,154,426,127,442,106"/>
+<area shape="rect" href="_depth_stencil_8h.html" title="This file handles depth stencil." alt="" coords="426,155,532,181"/>
+<area shape="poly" title=" " alt="" coords="462,106,473,139,468,141,457,108"/>
+<area shape="poly" title=" " alt="" coords="487,181,500,214,495,216,482,183"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_swap_chain_8h__dep__incl.png" border="0" usemap="#a_swap_chain_8hdep" alt=""/></div>
+<map name="a_swap_chain_8hdep" id="a_swap_chain_8hdep">
+<area shape="rect" title="This file handles swap chain." alt="" coords="3156,5,3253,32"/>
+<area shape="rect" href="_abstract_cb_allocator_8h.html" title="This file allocates data for Constant buffer view." alt="" coords="937,80,1085,107"/>
+<area shape="poly" title=" " alt="" coords="3140,25,1086,92,1086,87,3140,19"/>
+<area shape="rect" href="_application_main_8cpp.html" title=" " alt="" coords="1713,304,1851,331"/>
+<area shape="poly" title=" " alt="" coords="3140,23,2831,28,2406,38,2021,56,1893,68,1853,75,1834,82,1812,106,1797,135,1787,166,1781,199,1779,260,1782,303,1777,304,1773,260,1776,198,1782,165,1792,133,1808,103,1831,78,1852,70,1892,63,2020,50,2406,33,2831,22,3140,18"/>
+<area shape="rect" href="_graphics_pipeline_state_8h.html" title="This file handles graphics pipeline states." alt="" coords="1816,229,1977,256"/>
+<area shape="poly" title=" " alt="" coords="3140,22,2954,24,2828,30,2686,41,2535,58,2378,82,2222,115,2071,157,2045,169,2020,184,1924,231,1922,226,2018,179,2043,164,2069,152,2220,110,2377,77,2534,53,2686,36,2827,25,2954,19,3140,16"/>
+<area shape="rect" href="_abstract_sb_allocator_8h.html" title="This file handles abstract class that manages structured buffer allocater." alt="" coords="4270,80,4419,107"/>
+<area shape="poly" title=" " alt="" coords="3269,21,4270,85,4270,90,3268,27"/>
+<area shape="rect" href="_command_manager_8h.html" title="This file handles command lists, command allocators, and command queue." alt="" coords="3134,155,3275,181"/>
+<area shape="poly" title=" " alt="" coords="3207,48,3207,154,3202,154,3202,48"/>
+<area shape="rect" href="_imgui_helper_8cpp.html" title=" " alt="" coords="3759,229,3874,256"/>
+<area shape="poly" title=" " alt="" coords="3237,39,3353,108,3428,146,3507,179,3554,192,3621,206,3759,230,3758,235,3620,211,3553,197,3505,184,3426,151,3350,112,3234,43"/>
+<area shape="rect" href="_scene_file_system_8cpp.html" title=" " alt="" coords="3898,229,4047,256"/>
+<area shape="poly" title=" " alt="" coords="3247,36,3437,119,3584,179,3712,201,3898,228,3897,233,3712,206,3582,184,3435,124,3245,41"/>
+<area shape="rect" href="_swap_chain_8cpp.html" title=" " alt="" coords="4071,229,4183,256"/>
+<area shape="poly" title=" " alt="" coords="3269,33,4075,226,4074,231,3267,38"/>
+<area shape="rect" href="_utility_for_exception_8cpp.html" title=" " alt="" coords="4206,229,4363,256"/>
+<area shape="poly" title=" " alt="" coords="3269,29,3521,77,4227,226,4226,231,3520,83,3268,34"/>
+<area shape="rect" href="_descriptor_heap_pool_8h.html" title="This file handles pool class that manages descriptor heap for graphics pipeline state." alt="" coords="2081,155,2229,181"/>
+<area shape="poly" title=" " alt="" coords="3141,32,2230,159,2229,154,3140,26"/>
+<area shape="rect" href="_static_resource_8h.html" title="This file handles interface class of static resources that don&#39;t need to be updated on a per&#45;object b..." alt="" coords="1844,80,1965,107"/>
+<area shape="poly" title=" " alt="" coords="3140,25,2676,44,2354,61,2026,83,1966,88,1965,83,2025,77,2354,56,2676,39,3140,20"/>
+<area shape="rect" href="_dynamic_cb_allocator_8h.html" title="This file handles class that allocates data for constant buffer per object." alt="" coords="560,155,710,181"/>
+<area shape="poly" title=" " alt="" coords="931,113,701,157,700,151,930,108"/>
+<area shape="rect" href="_static_cb_allocator_8h.html" title="This file handles abstract class of static constant buffer that don&#39;t need to be updated on a per&#45;obj..." alt="" coords="944,155,1078,181"/>
+<area shape="poly" title=" " alt="" coords="1014,122,1014,154,1008,154,1008,122"/>
+<area shape="rect" href="_dynamic_cb_color_8h.html" title="This file handles the CB allocater for the color parameter." alt="" coords="570,229,700,256"/>
+<area shape="poly" title=" " alt="" coords="638,197,638,229,632,229,632,197"/>
+<area shape="rect" href="_dynamic_cb_material_8h.html" title="This file handles dynamic CB allocator class for material." alt="" coords="401,229,546,256"/>
+<area shape="poly" title=" " alt="" coords="594,190,503,231,501,226,592,186"/>
+<area shape="rect" href="_dynamic_cb_registry_8h.html" title="This file handles the registry that manages all constant buffer allocators per object." alt="" coords="1399,229,1546,256"/>
+<area shape="poly" title=" " alt="" coords="726,174,1399,232,1398,238,726,180"/>
+<area shape="rect" href="_dynamic_cb_tex_coord_param_8h.html" title="This file handles the CB allocater for the texture coordinate parameter." alt="" coords="184,229,377,256"/>
+<area shape="poly" title=" " alt="" coords="558,188,343,231,342,226,557,182"/>
+<area shape="rect" href="_dynamic_cb_world_mat_8h.html" title="This file handles the CB allocater for the world matrix." alt="" coords="5,229,161,256"/>
+<area shape="poly" title=" " alt="" coords="545,184,173,232,161,233,161,228,172,227,544,178"/>
+<area shape="poly" title=" " alt="" coords="725,171,1167,192,1753,227,1815,231,1815,237,1752,232,1167,197,725,176"/>
+<area shape="rect" href="_scene_registry_8cpp.html" title=" " alt="" coords="1124,304,1255,331"/>
+<area shape="poly" title=" " alt="" coords="716,252,1124,305,1123,310,715,257"/>
+<area shape="poly" title=" " alt="" coords="1409,263,1240,306,1239,301,1408,258"/>
+<area shape="poly" title=" " alt="" coords="1542,257,1728,301,1727,306,1541,263"/>
+<area shape="rect" href="_graphics_pipeline_state_8cpp.html" title=" " alt="" coords="2097,379,2272,405"/>
+<area shape="poly" title=" " alt="" coords="1505,262,1566,297,1640,328,1727,346,1850,361,2097,382,2096,388,1849,366,1727,351,1638,333,1563,302,1502,267"/>
+<area shape="poly" title=" " alt="" coords="392,254,813,288,1124,309,1124,314,813,293,392,259"/>
+<area shape="poly" title=" " alt="" coords="176,254,657,285,1124,310,1123,315,657,291,176,259"/>
+<area shape="poly" title=" " alt="" coords="1865,267,1803,306,1800,301,1862,262"/>
+<area shape="poly" title=" " alt="" coords="1899,271,1906,302,1913,316,1922,329,1950,345,1993,358,2097,378,2096,383,1992,364,1948,350,1919,333,1908,319,1901,303,1894,272"/>
+<area shape="rect" href="_graphics_component_8cpp.html" title=" " alt="" coords="2374,379,2539,405"/>
+<area shape="poly" title=" " alt="" coords="1911,268,1934,301,1949,316,1965,328,2025,343,2133,358,2374,381,2374,387,2133,363,2024,348,1963,333,1945,320,1930,304,1907,271"/>
+<area shape="rect" href="_graphics_object_asset_8cpp.html" title=" " alt="" coords="1977,304,2147,331"/>
+<area shape="poly" title=" " alt="" coords="1940,260,2034,301,2032,306,1938,265"/>
+<area shape="rect" href="_layered_g_p_s_o_wrapper_8h.html" title="This file handles class that wraps GPSO with common layers and different settings for each component ..." alt="" coords="1371,304,1536,331"/>
+<area shape="poly" title=" " alt="" coords="1804,262,1532,306,1531,301,1804,256"/>
+<area shape="rect" href="_scene_8h.html" title="This file handles scene class." alt="" coords="3810,304,3879,331"/>
+<area shape="poly" title=" " alt="" coords="1993,245,2192,253,3810,312,3809,317,2192,259,1992,251"/>
+<area shape="rect" href="_layered_g_p_s_o_wrapper_8cpp.html" title=" " alt="" coords="1729,379,1909,405"/>
+<area shape="poly" title=" " alt="" coords="1533,332,1756,375,1755,381,1532,337"/>
+<area shape="rect" href="_shadow_g_p_s_o_wrapper_8h.html" title="This file handles GPSO wrapper classes for shadowing." alt="" coords="1262,379,1427,405"/>
+<area shape="poly" title=" " alt="" coords="1423,342,1365,380,1362,376,1420,337"/>
+<area shape="rect" href="_standard_g_p_s_o_wrapper_8h.html" title="This file handles GPSO wrap class for standard layer." alt="" coords="1451,379,1622,405"/>
+<area shape="poly" title=" " alt="" coords="1481,339,1524,376,1520,380,1478,343"/>
+<area shape="poly" title=" " alt="" coords="3795,333,3791,333,3575,357,3391,370,3229,376,3078,376,2764,372,2580,373,2362,381,2272,387,2272,381,2362,376,2579,368,2764,366,3078,370,3229,370,3391,365,3574,352,3791,328,3794,328"/>
+<area shape="poly" title=" " alt="" coords="3795,333,3791,333,3678,345,3528,355,3168,372,2539,392,2539,386,3168,367,3528,350,3677,340,3791,328,3794,328"/>
+<area shape="rect" href="_application_clock_8cpp.html" title=" " alt="" coords="3977,379,4120,405"/>
+<area shape="poly" title=" " alt="" coords="3895,334,4014,376,4012,381,3893,339"/>
+<area shape="rect" href="_camera_8cpp.html" title=" " alt="" coords="3732,379,3823,405"/>
+<area shape="poly" title=" " alt="" coords="3824,344,3791,380,3787,376,3821,340"/>
+<area shape="rect" href="_collider3_d_8cpp.html" title=" " alt="" coords="3848,379,3953,405"/>
+<area shape="poly" title=" " alt="" coords="3865,341,3893,377,3889,380,3861,345"/>
+<area shape="rect" href="_scene_8cpp.html" title=" " alt="" coords="3624,379,3707,405"/>
+<area shape="poly" title=" " alt="" coords="3800,339,3698,381,3696,376,3798,334"/>
+<area shape="rect" href="_static_cb_dir_light_param_8h.html" title="This file handles static CB allocater class for parameter of directional light." alt="" coords="752,304,916,331"/>
+<area shape="poly" title=" " alt="" coords="930,181,830,200,790,214,765,231,760,240,760,249,771,269,790,286,812,301,809,306,787,291,766,272,755,250,755,239,761,228,787,209,829,195,929,176"/>
+<area shape="rect" href="_static_cb_light_v_p_mat_8h.html" title="This file handles the static CB allocater of the light&#39;s view projection matrix." alt="" coords="1124,229,1274,256"/>
+<area shape="poly" title=" " alt="" coords="1059,185,1167,226,1165,231,1057,190"/>
+<area shape="rect" href="_static_cb_orthographic_mat_8h.html" title="This file handles the static CB of the orthographic projection matrix." alt="" coords="922,229,1100,256"/>
+<area shape="poly" title=" " alt="" coords="1014,197,1014,229,1008,229,1008,197"/>
+<area shape="rect" href="_static_cb_v_p_mat_8h.html" title="This file handles the static CB allocater of the camera&#39;s view projection matrix." alt="" coords="775,229,898,256"/>
+<area shape="poly" title=" " alt="" coords="968,190,868,231,866,226,966,185"/>
+<area shape="poly" title=" " alt="" coords="1120,262,898,306,897,301,1119,257"/>
+<area shape="poly" title=" " alt="" coords="913,257,1128,301,1127,306,912,262"/>
+<area shape="rect" href="_dynamic_sb_allocator_8h.html" title="This file handles class that allocates data for structured buffer per object." alt="" coords="4385,155,4536,181"/>
+<area shape="poly" title=" " alt="" coords="4379,113,4441,152,4439,156,4376,118"/>
+<area shape="rect" href="_dynamic_sb_anim_mat_8h.html" title="This file handles the SB allocater for animation matrices." alt="" coords="4558,229,4709,256"/>
+<area shape="poly" title=" " alt="" coords="4505,185,4604,226,4602,231,4503,190"/>
+<area shape="rect" href="_dynamic_sb_registry_8h.html" title="This file handles the registry that manages all structured buffer allocators per object." alt="" coords="4387,229,4534,256"/>
+<area shape="poly" title=" " alt="" coords="4463,197,4463,229,4458,229,4458,197"/>
+<area shape="poly" title=" " alt="" coords="4372,259,3923,293,3358,327,2362,381,2272,387,2272,382,2362,376,3357,321,3923,288,4371,254"/>
+<area shape="poly" title=" " alt="" coords="4372,259,3879,315,3879,310,4371,254"/>
+<area shape="poly" title=" " alt="" coords="3118,173,2729,177,2189,187,1681,205,1496,217,1388,232,1361,243,1335,258,1222,306,1220,301,1332,254,1359,239,1386,227,1496,212,1681,200,2189,182,2729,172,3118,167"/>
+<area shape="poly" title=" " alt="" coords="3118,171,3011,174,2880,183,2736,202,2595,232,2566,245,2537,259,2441,269,2249,285,1851,314,1851,308,2249,279,2441,264,2536,253,2564,240,2593,227,2735,196,2879,178,3011,169,3118,166"/>
+<area shape="poly" title=" " alt="" coords="3119,174,3028,179,2920,189,2804,206,2689,232,2660,244,2632,258,2530,299,2425,333,2329,360,2242,381,2241,376,2327,355,2424,328,2528,294,2630,254,2658,239,2688,227,2803,201,2919,183,3028,173,3118,168"/>
+<area shape="poly" title=" " alt="" coords="3118,177,2857,197,2726,213,2632,232,2608,244,2584,258,2540,274,2504,282,2469,290,2426,306,2404,320,2381,333,2290,353,2164,369,1909,388,1909,383,2164,363,2290,348,2379,328,2401,316,2423,302,2467,285,2503,277,2538,269,2582,254,2605,240,2630,227,2725,207,2856,192,3118,171"/>
+<area shape="poly" title=" " alt="" coords="3291,174,3540,199,3647,214,3681,221,3698,227,3710,246,3714,266,3714,288,3709,310,3693,350,3676,380,3672,377,3688,348,3704,308,3708,287,3709,267,3705,248,3695,231,3680,226,3646,219,3540,205,3290,180"/>
+<area shape="rect" href="_command_manager_8cpp.html" title=" " alt="" coords="2700,229,2855,256"/>
+<area shape="poly" title=" " alt="" coords="3119,186,2853,231,2852,226,3118,181"/>
+<area shape="rect" href="_depth_stencil_8cpp.html" title=" " alt="" coords="2879,229,2999,256"/>
+<area shape="poly" title=" " alt="" coords="3145,188,2986,231,2985,226,3143,183"/>
+<area shape="rect" href="_descriptor_heap_pool_8cpp.html" title=" " alt="" coords="2362,229,2524,256"/>
+<area shape="poly" title=" " alt="" coords="3118,179,2861,201,2543,232,2525,234,2524,229,2543,227,2860,196,3118,174"/>
+<area shape="rect" href="_gpu_optimized_resource_8cpp.html" title=" " alt="" coords="3023,229,3207,256"/>
+<area shape="poly" title=" " alt="" coords="3179,194,3132,231,3129,227,3175,189"/>
+<area shape="poly" title=" " alt="" coords="3291,175,3496,197,3741,227,3759,229,3758,235,3740,232,3496,202,3290,180"/>
+<area shape="rect" href="_render_target_8cpp.html" title=" " alt="" coords="3231,229,3354,256"/>
+<area shape="poly" title=" " alt="" coords="3233,189,3279,227,3275,231,3230,194"/>
+<area shape="poly" title=" " alt="" coords="3291,173,3557,194,3886,227,3898,228,3897,233,3885,232,3556,200,3291,178"/>
+<area shape="poly" title=" " alt="" coords="3291,170,3628,188,3843,204,4059,227,4071,228,4070,234,4059,232,3842,209,3628,193,3291,175"/>
+<area shape="rect" href="_texture_resource_8cpp.html" title=" " alt="" coords="3378,229,3522,256"/>
+<area shape="poly" title=" " alt="" coords="3262,184,3407,226,3406,231,3261,189"/>
+<area shape="rect" href="_utility_for_direct_x_8cpp.html" title=" " alt="" coords="3545,229,3685,256"/>
+<area shape="poly" title=" " alt="" coords="3291,182,3545,226,3544,232,3290,187"/>
+<area shape="poly" title=" " alt="" coords="3290,170,3682,189,3937,205,4195,227,4206,228,4206,233,4195,232,3937,210,3682,194,3290,175"/>
+<area shape="poly" title=" " alt="" coords="2066,180,2019,184,1916,189,1827,189,1677,184,1605,185,1528,191,1443,206,1344,232,1280,264,1211,306,1208,301,1278,259,1342,227,1442,201,1528,186,1604,180,1677,179,1827,184,1916,184,2019,179,2066,175"/>
+<area shape="poly" title=" " alt="" coords="2123,192,2062,225,1991,258,1911,286,1837,306,1836,301,1909,281,1989,254,2060,220,2120,187"/>
+<area shape="poly" title=" " alt="" coords="2154,197,2151,229,2151,256,2165,315,2183,377,2178,379,2160,316,2146,256,2146,229,2149,196"/>
+<area shape="poly" title=" " alt="" coords="2096,188,1942,231,1941,226,2095,183"/>
+<area shape="poly" title=" " alt="" coords="2162,195,2174,226,2194,254,2217,270,2240,278,2283,281,2330,283,2355,289,2382,302,2404,319,2424,340,2451,377,2447,380,2420,343,2401,323,2379,306,2353,294,2329,288,2283,287,2238,283,2215,275,2190,258,2169,229,2157,197"/>
+<area shape="poly" title=" " alt="" coords="2131,194,2100,231,2080,270,2068,304,2063,303,2075,268,2095,228,2127,190"/>
+<area shape="poly" title=" " alt="" coords="2221,183,2393,226,2392,231,2219,188"/>
+<area shape="rect" href="_static_sb_allocator_8h.html" title="This file handles abstract class for static structured buffer allocator." alt="" coords="2204,229,2338,256"/>
+<area shape="poly" title=" " alt="" coords="2190,188,2252,226,2249,231,2187,192"/>
+<area shape="rect" href="_static_sb_point_lights_8h.html" title="This file handles structured buffer allocator for point lights." alt="" coords="2221,304,2369,331"/>
+<area shape="poly" title=" " alt="" coords="2283,270,2293,303,2288,304,2277,272"/>
+<area shape="poly" title=" " alt="" coords="1883,120,1871,137,1862,155,1860,175,1866,194,1887,227,1882,230,1861,197,1855,176,1856,154,1866,134,1879,117"/>
+<area shape="poly" title=" " alt="" coords="1829,103,1078,164,1078,159,1828,98"/>
+<area shape="poly" title=" " alt="" coords="1981,97,2053,104,2129,115,2197,131,2223,141,2242,153,2257,170,2266,191,2273,229,2268,230,2261,193,2252,173,2239,157,2221,146,2195,136,2128,120,2052,109,1980,102"/>
+<area shape="rect" href="_static_resource_registry_8h.html" title="This file handles the registry that manages all static resources." alt="" coords="1570,229,1740,256"/>
+<area shape="poly" title=" " alt="" coords="1871,117,1678,231,1675,227,1869,113"/>
+<area shape="rect" href="_static_srv_allocator_8h.html" title="This file handles class for allocating static resource SRV." alt="" coords="1871,155,2007,181"/>
+<area shape="poly" title=" " alt="" coords="1919,120,1935,153,1931,155,1915,122"/>
+<area shape="poly" title=" " alt="" coords="1559,262,1256,308,1255,303,1558,256"/>
+<area shape="poly" title=" " alt="" coords="1691,262,1761,301,1758,306,1689,266"/>
+<area shape="poly" title=" " alt="" coords="1650,272,1648,302,1651,316,1658,329,1679,339,1718,349,1834,365,1972,377,2096,384,2096,390,1971,382,1833,371,1717,355,1677,344,1655,333,1646,318,1642,302,1644,271"/>
+<area shape="poly" title=" " alt="" coords="1664,270,1677,302,1688,317,1701,328,1784,338,1979,348,2573,366,3624,387,3624,393,2572,371,1979,353,1783,343,1699,333,1684,320,1673,305,1659,272"/>
+</map>
+</div>
+</div>
+<p><a href="_swap_chain_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_render_target_swap_chain.html">CRenderTargetSwapChain</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class handles render target for swap chain  <a href="class_c_render_target_swap_chain.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_swap_chain.html">CSwapChain</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap chain  <a href="class_c_swap_chain.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_swap_chain_1_1_c_thread_safe_feature.html">CSwapChain::CThreadSafeFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feature for thread-safe  <a href="class_c_swap_chain_1_1_c_thread_safe_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a597c5eff72beb59812955eabb8d454fd" id="r_a597c5eff72beb59812955eabb8d454fd"><td class="memItemLeft" align="right" valign="top">const UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a> = 2</td></tr>
+<tr class="memdesc:a597c5eff72beb59812955eabb8d454fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of main screen buffer <br  />
+  <br /></td></tr>
+<tr class="separator:a597c5eff72beb59812955eabb8d454fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This file handles swap chain. </p>
+<dl class="section author"><dt>著者</dt><dd>Shodai Makino </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2023/11/15 </dd></dl>
+</div><h2 class="groupheader">変数詳解</h2>
+<a id="a597c5eff72beb59812955eabb8d454fd" name="a597c5eff72beb59812955eabb8d454fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a597c5eff72beb59812955eabb8d454fd">&#9670;&#160;</a></span>SCREEN_BUFFERING_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const UINT SCREEN_BUFFERING_NUM = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of main screen buffer <br  />
+ </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

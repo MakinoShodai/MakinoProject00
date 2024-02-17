@@ -1,0 +1,567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjectName: ACSingleton&lt; Derived &gt; クラステンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ProjectName
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="class_a_c_singleton-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">ACSingleton&lt; Derived &gt; クラステンプレート</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Abstract singleton class (CRTP Pattern)  
+ <a href="class_a_c_singleton.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_singleton_8h_source.html">Singleton.h</a>&gt;</code></p>
+<div class="dynheader">
+ACSingleton&lt; Derived &gt; の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_singleton__inherit__graph.png" border="0" usemap="#a_a_c_singleton_3_01_derived_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_a_c_singleton_3_01_derived_01_4_inherit__map" id="a_a_c_singleton_3_01_derived_01_4_inherit__map">
+<area shape="rect" title="Abstract singleton class (CRTP Pattern)" alt="" coords="23,80,182,107"/>
+<area shape="rect" href="class_a_c_static_resource.html" title="Abstract class of static resource that do not need to be updated on a per&#45;object basis" alt="" coords="5,155,200,181"/>
+<area shape="poly" title=" " alt="" coords="105,122,105,154,100,154,100,122"/>
+<area shape="rect" href="class_a_c_release_singleton.html" title="This class is used to control the order and release instance" alt="" coords="32,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="105,48,105,80,100,80,100,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+ACSingleton&lt; Derived &gt; 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_singleton__coll__graph.png" border="0" usemap="#a_a_c_singleton_3_01_derived_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="a_a_c_singleton_3_01_derived_01_4_coll__map" id="a_a_c_singleton_3_01_derived_01_4_coll__map">
+<area shape="rect" title="Abstract singleton class (CRTP Pattern)" alt="" coords="5,80,165,107"/>
+<area shape="rect" href="class_a_c_release_singleton.html" title="This class is used to control the order and release instance" alt="" coords="15,5,155,32"/>
+<area shape="poly" title=" " alt="" coords="88,48,88,80,82,80,82,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a30264cc1912b2f0022f8540d956e41ff" id="r_a30264cc1912b2f0022f8540d956e41ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton.html#a30264cc1912b2f0022f8540d956e41ff">ACSingleton</a> (const <a class="el" href="class_a_c_singleton.html">ACSingleton</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a30264cc1912b2f0022f8540d956e41ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy constructor  <br /></td></tr>
+<tr class="separator:a30264cc1912b2f0022f8540d956e41ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf30eee17126b234cef9c3cb1353f2fb" id="r_abf30eee17126b234cef9c3cb1353f2fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_singleton.html">ACSingleton</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton.html#abf30eee17126b234cef9c3cb1353f2fb">operator=</a> (const <a class="el" href="class_a_c_singleton.html">ACSingleton</a> &amp;)=delete</td></tr>
+<tr class="memdesc:abf30eee17126b234cef9c3cb1353f2fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy assignment operator  <br /></td></tr>
+<tr class="separator:abf30eee17126b234cef9c3cb1353f2fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f2009c1cad2f0f2c036e2f2078e1123" id="r_a0f2009c1cad2f0f2c036e2f2078e1123"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton.html#a0f2009c1cad2f0f2c036e2f2078e1123">ACSingleton</a> (<a class="el" href="class_a_c_singleton.html">ACSingleton</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a0f2009c1cad2f0f2c036e2f2078e1123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move constructor  <br /></td></tr>
+<tr class="separator:a0f2009c1cad2f0f2c036e2f2078e1123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ee736c8926eb7e6273be0fcd4f8b4f" id="r_a89ee736c8926eb7e6273be0fcd4f8b4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_singleton.html">ACSingleton</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton.html#a89ee736c8926eb7e6273be0fcd4f8b4f">operator=</a> (<a class="el" href="class_a_c_singleton.html">ACSingleton</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a89ee736c8926eb7e6273be0fcd4f8b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move assignment constructor  <br /></td></tr>
+<tr class="separator:a89ee736c8926eb7e6273be0fcd4f8b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7168baa7e098cd01e9a69ab28432521c" id="r_a7168baa7e098cd01e9a69ab28432521c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton.html#a7168baa7e098cd01e9a69ab28432521c">DestroyInstance</a> () override final</td></tr>
+<tr class="memdesc:a7168baa7e098cd01e9a69ab28432521c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard instance  <br /></td></tr>
+<tr class="separator:a7168baa7e098cd01e9a69ab28432521c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a355bd3105e9ca4a74c4c4d8f43d3be0e" id="r_a355bd3105e9ca4a74c4c4d8f43d3be0e"><td class="memItemLeft" align="right" valign="top">static Derived &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton.html#a355bd3105e9ca4a74c4c4d8f43d3be0e">Get</a> ()</td></tr>
+<tr class="memdesc:a355bd3105e9ca4a74c4c4d8f43d3be0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get singleton instance  <br /></td></tr>
+<tr class="separator:a355bd3105e9ca4a74c4c4d8f43d3be0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50076222e77f81826a6d7e20f99eecf5" id="r_a50076222e77f81826a6d7e20f99eecf5"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton.html#a50076222e77f81826a6d7e20f99eecf5">IsInstance</a> ()</td></tr>
+<tr class="memdesc:a50076222e77f81826a6d7e20f99eecf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the instance exists  <br /></td></tr>
+<tr class="separator:a50076222e77f81826a6d7e20f99eecf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton" id="r_a0d6986b9ad7df98f29aa3b24c3c75030"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#a0d6986b9ad7df98f29aa3b24c3c75030">AllRelease</a> ()</td></tr>
+<tr class="memdesc:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release all instance  <br /></td></tr>
+<tr class="separator:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a5164d36ed233772836e57ea68c19ff0b" id="r_a5164d36ed233772836e57ea68c19ff0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton.html#a5164d36ed233772836e57ea68c19ff0b">ACSingleton</a> (int priority)</td></tr>
+<tr class="memdesc:a5164d36ed233772836e57ea68c19ff0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a5164d36ed233772836e57ea68c19ff0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4bf0f206d009e9b5f5a800fb53d289" id="r_adf4bf0f206d009e9b5f5a800fb53d289"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton.html#adf4bf0f206d009e9b5f5a800fb53d289">~ACSingleton</a> () override</td></tr>
+<tr class="memdesc:adf4bf0f206d009e9b5f5a800fb53d289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:adf4bf0f206d009e9b5f5a800fb53d289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679ef1b33de32957dcb13f3b39064029" id="r_a679ef1b33de32957dcb13f3b39064029"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton.html#a679ef1b33de32957dcb13f3b39064029">OnCreate</a> ()</td></tr>
+<tr class="memdesc:a679ef1b33de32957dcb13f3b39064029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process to be called at instance creation  <br /></td></tr>
+<tr class="separator:a679ef1b33de32957dcb13f3b39064029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f8462017794027e490e46f44889413a" id="r_a5f8462017794027e490e46f44889413a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton.html#a5f8462017794027e490e46f44889413a">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:a5f8462017794027e490e46f44889413a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process to be called at instance destruction  <br /></td></tr>
+<tr class="separator:a5f8462017794027e490e46f44889413a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton" id="r_aecd0a93d3e8f23cbb8d11de90d0153b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#aecd0a93d3e8f23cbb8d11de90d0153b8">ACReleaseSingleton</a> ()=default</td></tr>
+<tr class="memdesc:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton" id="r_a12315284fb54b24483dd1f9812988c8d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#a12315284fb54b24483dd1f9812988c8d">~ACReleaseSingleton</a> ()</td></tr>
+<tr class="memdesc:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_static_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承静的限定公開メンバ関数</td></tr>
+<tr class="memitem:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton" id="r_abcb065418ac7352ba6390d676a72cc52"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#abcb065418ac7352ba6390d676a72cc52">AddInstanceToArray</a> (int priority, <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> *instance)</td></tr>
+<tr class="memdesc:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the created instance to the array  <br /></td></tr>
+<tr class="separator:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton" id="r_ae432066358bb5bc8e42db6ae2e9f29aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#ae432066358bb5bc8e42db6ae2e9f29aa">RemoveInstanceToArray</a> (<a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> *instance)</td></tr>
+<tr class="memdesc:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the instance in the array  <br /></td></tr>
+<tr class="separator:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class Derived&gt;<br />
+class ACSingleton&lt; Derived &gt;</div><p>Abstract singleton class (CRTP Pattern) </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Derived</td><td>Derived classes that inherit from this abstract class themselves</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The following must be done in the derived class.</p><ol type="1">
+<li>Declare this abstract class as friend.</li>
+<li>Declare destructor in public.</li>
+<li>Declare constructor in protected(or private). </li>
+</ol>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a30264cc1912b2f0022f8540d956e41ff" name="a30264cc1912b2f0022f8540d956e41ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30264cc1912b2f0022f8540d956e41ff">&#9670;&#160;</a></span>ACSingleton() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt;<a class="el" href="class_a_c_singleton.html">::ACSingleton</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disallow the copy constructor </p>
+
+</div>
+</div>
+<a id="a0f2009c1cad2f0f2c036e2f2078e1123" name="a0f2009c1cad2f0f2c036e2f2078e1123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f2009c1cad2f0f2c036e2f2078e1123">&#9670;&#160;</a></span>ACSingleton() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt;<a class="el" href="class_a_c_singleton.html">::ACSingleton</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disallow the move constructor </p>
+
+</div>
+</div>
+<a id="a5164d36ed233772836e57ea68c19ff0b" name="a5164d36ed233772836e57ea68c19ff0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5164d36ed233772836e57ea68c19ff0b">&#9670;&#160;</a></span>ACSingleton() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt;<a class="el" href="class_a_c_singleton.html">::ACSingleton</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_singleton_a5164d36ed233772836e57ea68c19ff0b_cgraph.png" border="0" usemap="#aclass_a_c_singleton_a5164d36ed233772836e57ea68c19ff0b_cgraph" alt=""/></div>
+<map name="aclass_a_c_singleton_a5164d36ed233772836e57ea68c19ff0b_cgraph" id="aclass_a_c_singleton_a5164d36ed233772836e57ea68c19ff0b_cgraph">
+<area shape="rect" title="Constructor" alt="" coords="5,13,179,40"/>
+<area shape="rect" href="class_a_c_release_singleton.html#abcb065418ac7352ba6390d676a72cc52" title="Add the created instance to the array" alt="" coords="227,5,373,48"/>
+<area shape="poly" title=" " alt="" coords="179,24,211,24,211,29,179,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adf4bf0f206d009e9b5f5a800fb53d289" name="adf4bf0f206d009e9b5f5a800fb53d289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4bf0f206d009e9b5f5a800fb53d289">&#9670;&#160;</a></span>~ACSingleton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt;::~<a class="el" href="class_a_c_singleton.html">ACSingleton</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+<p>; </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_singleton_adf4bf0f206d009e9b5f5a800fb53d289_cgraph.png" border="0" usemap="#aclass_a_c_singleton_adf4bf0f206d009e9b5f5a800fb53d289_cgraph" alt=""/></div>
+<map name="aclass_a_c_singleton_adf4bf0f206d009e9b5f5a800fb53d289_cgraph" id="aclass_a_c_singleton_adf4bf0f206d009e9b5f5a800fb53d289_cgraph">
+<area shape="rect" title="Destructor" alt="" coords="5,13,187,40"/>
+<area shape="rect" href="class_a_c_release_singleton.html#ae432066358bb5bc8e42db6ae2e9f29aa" title="Remove the instance in the array" alt="" coords="235,5,404,48"/>
+<area shape="poly" title=" " alt="" coords="187,24,219,24,219,29,187,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a7168baa7e098cd01e9a69ab28432521c" name="a7168baa7e098cd01e9a69ab28432521c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7168baa7e098cd01e9a69ab28432521c">&#9670;&#160;</a></span>DestroyInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt;::DestroyInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Discard instance </p>
+
+<p><a class="el" href="class_a_c_release_singleton.html#a428084dc7be609a3181f1412bc05d0b0">ACReleaseSingleton</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a355bd3105e9ca4a74c4c4d8f43d3be0e" name="a355bd3105e9ca4a74c4c4d8f43d3be0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a355bd3105e9ca4a74c4c4d8f43d3be0e">&#9670;&#160;</a></span>Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Derived &amp; <a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt;::Get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get singleton instance </p>
+<dl class="section return"><dt>戻り値</dt><dd>Instance </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_singleton_a355bd3105e9ca4a74c4c4d8f43d3be0e_cgraph.png" border="0" usemap="#aclass_a_c_singleton_a355bd3105e9ca4a74c4c4d8f43d3be0e_cgraph" alt=""/></div>
+<map name="aclass_a_c_singleton_a355bd3105e9ca4a74c4c4d8f43d3be0e_cgraph" id="aclass_a_c_singleton_a355bd3105e9ca4a74c4c4d8f43d3be0e_cgraph">
+<area shape="rect" title="Get singleton instance" alt="" coords="5,5,128,32"/>
+<area shape="rect" href="class_a_c_singleton.html#a679ef1b33de32957dcb13f3b39064029" title="Process to be called at instance creation" alt="" coords="176,5,332,32"/>
+<area shape="poly" title=" " alt="" coords="128,16,160,16,160,21,128,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a50076222e77f81826a6d7e20f99eecf5" name="a50076222e77f81826a6d7e20f99eecf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50076222e77f81826a6d7e20f99eecf5">&#9670;&#160;</a></span>IsInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const bool <a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt;::IsInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the instance exists </p>
+<dl class="section return"><dt>戻り値</dt><dd>Result </dd></dl>
+
+</div>
+</div>
+<a id="a679ef1b33de32957dcb13f3b39064029" name="a679ef1b33de32957dcb13f3b39064029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679ef1b33de32957dcb13f3b39064029">&#9670;&#160;</a></span>OnCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt;::OnCreate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Process to be called at instance creation </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_singleton_a679ef1b33de32957dcb13f3b39064029_icgraph.png" border="0" usemap="#aclass_a_c_singleton_a679ef1b33de32957dcb13f3b39064029_icgraph" alt=""/></div>
+<map name="aclass_a_c_singleton_a679ef1b33de32957dcb13f3b39064029_icgraph" id="aclass_a_c_singleton_a679ef1b33de32957dcb13f3b39064029_icgraph">
+<area shape="rect" title="Process to be called at instance creation" alt="" coords="176,5,332,32"/>
+<area shape="rect" href="class_a_c_singleton.html#a355bd3105e9ca4a74c4c4d8f43d3be0e" title="Get singleton instance" alt="" coords="5,5,128,32"/>
+<area shape="poly" title=" " alt="" coords="160,21,128,21,128,16,160,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5f8462017794027e490e46f44889413a" name="a5f8462017794027e490e46f44889413a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f8462017794027e490e46f44889413a">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt;::OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Process to be called at instance destruction </p>
+
+<p><a class="el" href="class_c_application.html#a2fc2c1400c58b5f6dda10d38156754cc">CApplication</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a89ee736c8926eb7e6273be0fcd4f8b4f" name="a89ee736c8926eb7e6273be0fcd4f8b4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89ee736c8926eb7e6273be0fcd4f8b4f">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_singleton.html">ACSingleton</a> &amp; <a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disallow the move assignment constructor </p>
+
+</div>
+</div>
+<a id="abf30eee17126b234cef9c3cb1353f2fb" name="abf30eee17126b234cef9c3cb1353f2fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf30eee17126b234cef9c3cb1353f2fb">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_singleton.html">ACSingleton</a> &amp; <a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_a_c_singleton.html">ACSingleton</a>&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disallow the copy assignment operator </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_singleton_8h_source.html">Singleton.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

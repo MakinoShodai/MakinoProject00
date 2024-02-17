@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CLayeredGPSOWrapper クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_layered_g_p_s_o_wrapper-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CLayeredGPSOWrapper クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class wraps GPSO with common layers and different settings for each component type  
+ <a href="class_c_layered_g_p_s_o_wrapper.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_layered_g_p_s_o_wrapper_8h_source.html">LayeredGPSOWrapper.h</a>&gt;</code></p>
+<div class="dynheader">
+CLayeredGPSOWrapper の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_layered_g_p_s_o_wrapper__inherit__graph.png" border="0" usemap="#a_c_layered_g_p_s_o_wrapper_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_layered_g_p_s_o_wrapper_inherit__map" id="a_c_layered_g_p_s_o_wrapper_inherit__map">
+<area shape="rect" title="This class wraps GPSO with common layers and different settings for each component type" alt="" coords="5,157,169,184"/>
+<area shape="rect" href="class_a_c_layered_g_p_s_o_wrapper_prefab.html" title="Abstract class for prefab of CLayeredGPSOWrapper" alt="" coords="217,157,426,184"/>
+<area shape="poly" title=" " alt="" coords="184,168,216,168,216,173,184,173"/>
+<area shape="rect" href="class_a_c_standard_g_p_s_o_wrapper.html" title="GPSO wrap abstract class for standard drawing" alt="" coords="500,56,678,83"/>
+<area shape="poly" title=" " alt="" coords="358,147,411,119,473,92,512,81,514,86,475,97,414,123,360,152"/>
+<area shape="rect" href="class_c_grass_shading_g_p_s_o_wrapper.html" title="GPSO wrapper class for grass shading" alt="" coords="489,107,688,133"/>
+<area shape="poly" title=" " alt="" coords="410,151,514,131,515,137,411,156"/>
+<area shape="rect" href="class_c_grass_write_shadow_g_p_s_o_wrapper.html" title="GPSO wrapper class for grass writing depth" alt="" coords="474,157,703,184"/>
+<area shape="poly" title=" " alt="" coords="442,168,474,168,474,173,442,173"/>
+<area shape="rect" href="class_c_shading_g_p_s_o_wrapper.html" title="GPSO wrapper class for shading" alt="" coords="507,208,671,235"/>
+<area shape="poly" title=" " alt="" coords="411,185,515,205,514,210,410,190"/>
+<area shape="rect" href="class_c_write_shadow_g_p_s_o_wrapper.html" title="GPSO wrapper class for writing depth" alt="" coords="492,259,686,285"/>
+<area shape="poly" title=" " alt="" coords="360,190,414,218,475,244,514,256,512,261,473,249,411,223,358,195"/>
+<area shape="rect" href="class_c_standard_g_p_s_o_wrapper.html" title="GPSO wrap class for standard layer" alt="" coords="787,5,956,32"/>
+<area shape="poly" title=" " alt="" coords="682,50,793,30,794,35,683,55"/>
+<area shape="rect" href="class_c_transparent_g_p_s_o_wrapper.html" title="GPSO wrap class for transparent layer" alt="" coords="779,56,964,83"/>
+<area shape="poly" title=" " alt="" coords="693,67,778,67,778,72,693,72"/>
+<area shape="rect" href="class_c_transparent_no_culling_g_p_s_o_wrapper.html" title="GPSO wrap class for transparent and no culling layer" alt="" coords="751,107,992,133"/>
+<area shape="poly" title=" " alt="" coords="683,83,794,103,793,109,682,89"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa9d1c552ae4fba5d8b1653e6d607f84d" id="r_aa9d1c552ae4fba5d8b1653e6d607f84d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_layered_g_p_s_o_wrapper.html#aa9d1c552ae4fba5d8b1653e6d607f84d">CLayeredGPSOWrapper</a> ()</td></tr>
+<tr class="memdesc:aa9d1c552ae4fba5d8b1653e6d607f84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:aa9d1c552ae4fba5d8b1653e6d607f84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2908128ebd69ea6a0bbd58fb1b621414" id="r_a2908128ebd69ea6a0bbd58fb1b621414"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_layered_g_p_s_o_wrapper.html#a2908128ebd69ea6a0bbd58fb1b621414">~CLayeredGPSOWrapper</a> ()=default</td></tr>
+<tr class="memdesc:a2908128ebd69ea6a0bbd58fb1b621414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a2908128ebd69ea6a0bbd58fb1b621414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c39ed9b17926bc66c2795f4d86968ad" id="r_a7c39ed9b17926bc66c2795f4d86968ad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_layered_g_p_s_o_wrapper.html#a7c39ed9b17926bc66c2795f4d86968ad">Create</a> (<a class="el" href="class_c_scene.html">CScene</a> *scene, const std::wstring gpsoName, const <a class="el" href="struct_layered_g_p_s_o_setting.html">LayeredGPSOSetting</a> &amp;setting, std::initializer_list&lt; <a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> &gt; useLayers)</td></tr>
+<tr class="memdesc:a7c39ed9b17926bc66c2795f4d86968ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create graphics pipeline states  <br /></td></tr>
+<tr class="separator:a7c39ed9b17926bc66c2795f4d86968ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7ad0865d69fa17988fe17da8e4c7134" id="r_af7ad0865d69fa17988fe17da8e4c7134"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_layered_g_p_s_o_wrapper.html#af7ad0865d69fa17988fe17da8e4c7134">SetCommand</a> ()</td></tr>
+<tr class="memdesc:af7ad0865d69fa17988fe17da8e4c7134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call 'SetCommand' function from GPSOs wrapped this class  <br /></td></tr>
+<tr class="separator:af7ad0865d69fa17988fe17da8e4c7134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae33186dbfb7b34695d4a9ae8557b1161" id="r_ae33186dbfb7b34695d4a9ae8557b1161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_layered_g_p_s_o_wrapper.html#ae33186dbfb7b34695d4a9ae8557b1161">EndFrameProcess</a> ()</td></tr>
+<tr class="memdesc:ae33186dbfb7b34695d4a9ae8557b1161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call 'EndFrameProcess' function from GPSOs wrapped this class  <br /></td></tr>
+<tr class="separator:ae33186dbfb7b34695d4a9ae8557b1161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This class wraps GPSO with common layers and different settings for each component type </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="aa9d1c552ae4fba5d8b1653e6d607f84d" name="aa9d1c552ae4fba5d8b1653e6d607f84d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d1c552ae4fba5d8b1653e6d607f84d">&#9670;&#160;</a></span>CLayeredGPSOWrapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLayeredGPSOWrapper::CLayeredGPSOWrapper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="a2908128ebd69ea6a0bbd58fb1b621414" name="a2908128ebd69ea6a0bbd58fb1b621414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2908128ebd69ea6a0bbd58fb1b621414">&#9670;&#160;</a></span>~CLayeredGPSOWrapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLayeredGPSOWrapper::~CLayeredGPSOWrapper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a7c39ed9b17926bc66c2795f4d86968ad" name="a7c39ed9b17926bc66c2795f4d86968ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c39ed9b17926bc66c2795f4d86968ad">&#9670;&#160;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CLayeredGPSOWrapper::Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_scene.html">CScene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::wstring&#160;</td>
+          <td class="paramname"><em>gpsoName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_layered_g_p_s_o_setting.html">LayeredGPSOSetting</a> &amp;&#160;</td>
+          <td class="paramname"><em>setting</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> &gt;&#160;</td>
+          <td class="paramname"><em>useLayers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create graphics pipeline states </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td>Scene that has this graphics pipeline states </td></tr>
+    <tr><td class="paramname">gpsoName</td><td>The name of this gpso wrapper. Used for debugging </td></tr>
+    <tr><td class="paramname">setting</td><td>Graphics pipeline state setting </td></tr>
+    <tr><td class="paramname">useLayer</td><td>Layers handled by this GPSO (Draw in the order passed) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_a_c_layered_g_p_s_o_wrapper_prefab.html#a6f232fb049a82daee12ac6f63751cb3a">ACLayeredGPSOWrapperPrefab</a>で再実装されています。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_layered_g_p_s_o_wrapper_a7c39ed9b17926bc66c2795f4d86968ad_icgraph.png" border="0" usemap="#aclass_c_layered_g_p_s_o_wrapper_a7c39ed9b17926bc66c2795f4d86968ad_icgraph" alt=""/></div>
+<map name="aclass_c_layered_g_p_s_o_wrapper_a7c39ed9b17926bc66c2795f4d86968ad_icgraph" id="aclass_c_layered_g_p_s_o_wrapper_a7c39ed9b17926bc66c2795f4d86968ad_icgraph">
+<area shape="rect" title="Create graphics pipeline states" alt="" coords="772,131,936,173"/>
+<area shape="rect" href="class_c_write_shadow_g_p_s_o_wrapper.html#a8c459b33866eb117f6cf3f011ff137d2" title="Prefab function" alt="" coords="230,5,424,48"/>
+<area shape="poly" title=" " alt="" coords="820,121,777,84,751,68,723,54,647,33,568,22,492,18,424,20,424,15,492,13,569,16,649,28,725,50,754,63,780,80,824,117"/>
+<area shape="rect" href="class_c_shading_g_p_s_o_wrapper.html#a006de9e79b5b914ba3db0c27018a564b" title="Prefab function" alt="" coords="528,64,692,107"/>
+<area shape="poly" title=" " alt="" coords="758,129,690,110,691,105,759,123"/>
+<area shape="rect" href="class_c_grass_write_shadow_g_p_s_o_wrapper.html#a12ec67c7f32f363ebfcadfb6a065edc9" title="Prefab function" alt="" coords="495,131,724,173"/>
+<area shape="poly" title=" " alt="" coords="757,155,725,155,725,149,757,149"/>
+<area shape="rect" href="class_c_grass_shading_g_p_s_o_wrapper.html#ad37004db0825811143d5adcda0658b5d" title="Prefab function" alt="" coords="510,197,709,240"/>
+<area shape="poly" title=" " alt="" coords="759,181,691,199,690,194,758,175"/>
+<area shape="rect" href="class_a_c_standard_g_p_s_o_wrapper.html#a0e3f688a53e1e5351ebb328cb5f2ceb4" title="Prefab helper function" alt="" coords="521,277,699,320"/>
+<area shape="poly" title=" " alt="" coords="819,186,776,221,726,254,674,279,671,275,723,250,773,216,816,181"/>
+<area shape="rect" href="class_c_standard_render_pass.html#a9c6b08c098524379f6d3877a4a06c228" title="Start processing" alt="" coords="5,165,159,208"/>
+<area shape="poly" title=" " alt="" coords="231,57,208,69,176,92,147,118,102,167,98,163,143,114,173,88,205,64,229,52"/>
+<area shape="poly" title=" " alt="" coords="513,102,368,125,207,156,159,168,158,162,206,151,367,120,512,96"/>
+<area shape="poly" title=" " alt="" coords="479,163,159,184,159,179,479,158"/>
+<area shape="poly" title=" " alt="" coords="494,214,159,194,159,189,494,209"/>
+<area shape="rect" href="class_c_standard_g_p_s_o_wrapper.html#a99a1b62d10fddcb8646a4f8305c87bb4" title="Prefab function" alt="" coords="242,224,412,267"/>
+<area shape="poly" title=" " alt="" coords="505,282,412,264,413,259,506,276"/>
+<area shape="rect" href="class_c_transparent_g_p_s_o_wrapper.html#abf51f8b428b01311da8feeb0ab76983a" title="Prefab function" alt="" coords="234,291,420,333"/>
+<area shape="poly" title=" " alt="" coords="505,306,420,310,420,305,505,301"/>
+<area shape="rect" href="class_c_transparent_no_culling_g_p_s_o_wrapper.html#a71c088c6c0c5f284e058b1112af6928a" title="Prefab function" alt="" coords="207,357,447,400"/>
+<area shape="poly" title=" " alt="" coords="519,327,448,348,408,359,406,354,446,343,518,322"/>
+<area shape="poly" title=" " alt="" coords="227,224,159,208,160,202,228,219"/>
+<area shape="poly" title=" " alt="" coords="219,287,205,281,150,247,105,211,109,207,153,242,208,276,221,282"/>
+<area shape="poly" title=" " alt="" coords="213,352,205,347,167,315,135,278,92,210,96,207,139,275,171,312,208,343,216,348"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae33186dbfb7b34695d4a9ae8557b1161" name="ae33186dbfb7b34695d4a9ae8557b1161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae33186dbfb7b34695d4a9ae8557b1161">&#9670;&#160;</a></span>EndFrameProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CLayeredGPSOWrapper::EndFrameProcess </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Call 'EndFrameProcess' function from GPSOs wrapped this class </p>
+
+</div>
+</div>
+<a id="af7ad0865d69fa17988fe17da8e4c7134" name="af7ad0865d69fa17988fe17da8e4c7134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7ad0865d69fa17988fe17da8e4c7134">&#9670;&#160;</a></span>SetCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CLayeredGPSOWrapper::SetCommand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Call 'SetCommand' function from GPSOs wrapped this class </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_layered_g_p_s_o_wrapper_af7ad0865d69fa17988fe17da8e4c7134_cgraph.png" border="0" usemap="#aclass_c_layered_g_p_s_o_wrapper_af7ad0865d69fa17988fe17da8e4c7134_cgraph" alt=""/></div>
+<map name="aclass_c_layered_g_p_s_o_wrapper_af7ad0865d69fa17988fe17da8e4c7134_cgraph" id="aclass_c_layered_g_p_s_o_wrapper_af7ad0865d69fa17988fe17da8e4c7134_cgraph">
+<area shape="rect" title="Call &#39;SetCommand&#39; function from GPSOs wrapped this class" alt="" coords="5,35,169,77"/>
+<area shape="rect" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52" title="Get command list for graphics" alt="" coords="217,64,437,107"/>
+<area shape="poly" title=" " alt="" coords="170,63,202,67,201,73,169,69"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="504,5,680,48"/>
+<area shape="poly" title=" " alt="" coords="169,49,489,30,489,35,169,54"/>
+<area shape="poly" title=" " alt="" coords="426,61,488,47,489,52,427,66"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="485,72,699,115"/>
+<area shape="poly" title=" " alt="" coords="438,86,469,87,469,92,438,91"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_layered_g_p_s_o_wrapper_af7ad0865d69fa17988fe17da8e4c7134_icgraph.png" border="0" usemap="#aclass_c_layered_g_p_s_o_wrapper_af7ad0865d69fa17988fe17da8e4c7134_icgraph" alt=""/></div>
+<map name="aclass_c_layered_g_p_s_o_wrapper_af7ad0865d69fa17988fe17da8e4c7134_icgraph" id="aclass_c_layered_g_p_s_o_wrapper_af7ad0865d69fa17988fe17da8e4c7134_icgraph">
+<area shape="rect" title="Call &#39;SetCommand&#39; function from GPSOs wrapped this class" alt="" coords="207,5,370,48"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="5,5,159,48"/>
+<area shape="poly" title=" " alt="" coords="191,29,159,29,159,24,191,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_layered_g_p_s_o_wrapper_8h_source.html">LayeredGPSOWrapper.h</a></li>
+<li><a class="el" href="_layered_g_p_s_o_wrapper_8cpp.html">LayeredGPSOWrapper.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

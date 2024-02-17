@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Mkpe::Dbvt::Node 構造体</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_mkpe.html">Mkpe</a></li><li class="navelem"><a class="el" href="namespace_mkpe_1_1_dbvt.html">Dbvt</a></li><li class="navelem"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="struct_mkpe_1_1_dbvt_1_1_node-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Mkpe::Dbvt::Node 構造体</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html" title="Node structure">Node</a> structure  
+ <a href="struct_mkpe_1_1_dbvt_1_1_node.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_b_v_node_8h_source.html">BVNode.h</a>&gt;</code></p>
+<div class="dynheader">
+Mkpe::Dbvt::Node 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_dbvt_1_1_node__coll__graph.png" border="0" usemap="#a_mkpe_1_1_dbvt_1_1_node_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mkpe_1_1_dbvt_1_1_node_coll__map" id="a_mkpe_1_1_dbvt_1_1_node_coll__map">
+<area shape="rect" title="Node structure" alt="" coords="914,72,1038,99"/>
+<area shape="poly" title=" " alt="" coords="953,55,961,48,976,45,990,48,998,54,1001,63,997,73,992,71,995,63,994,57,988,53,976,51,963,53,957,59"/>
+<area shape="rect" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html" title="Internal node data" alt="" coords="1159,72,1322,99"/>
+<area shape="poly" title=" " alt="" coords="1054,83,1158,83,1158,88,1054,88"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="640,5,801,48"/>
+<area shape="poly" title=" " alt="" coords="816,44,890,61,920,69,919,74,889,67,815,50"/>
+<area shape="rect" href="struct_mkpe_1_1_bounding_volume.html" title="Bounding volume using AABB" alt="" coords="641,72,800,99"/>
+<area shape="poly" title=" " alt="" coords="816,83,913,83,913,88,816,88"/>
+<area shape="rect" href="struct_vector.html" title=" " alt="" coords="365,69,487,96"/>
+<area shape="poly" title=" " alt="" coords="502,81,640,82,640,87,502,86"/>
+<area shape="rect" title=" " alt="" coords="5,87,44,113"/>
+<area shape="poly" title=" " alt="" coords="58,87,117,75,183,70,250,69,364,74,364,79,250,74,184,75,118,80,59,92"/>
+<area shape="rect" href="struct_vector.html" title="Colomn vector structure" alt="" coords="118,145,244,172"/>
+<area shape="poly" title=" " alt="" coords="59,110,144,142,142,147,57,115"/>
+<area shape="poly" title=" " alt="" coords="235,137,332,105,371,94,373,99,334,111,237,142"/>
+<area shape="poly" title=" " alt="" coords="162,128,168,121,181,119,193,121,200,127,202,136,199,146,194,144,197,136,196,130,191,126,181,124,171,126,165,132"/>
+<area shape="rect" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html" title="Leaf node data" alt="" coords="648,124,793,151"/>
+<area shape="poly" title=" " alt="" coords="808,120,889,104,921,97,922,102,890,109,809,125"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="333,120,518,163"/>
+<area shape="poly" title=" " alt="" coords="534,137,647,136,647,141,534,143"/>
+<area shape="poly" title=" " alt="" coords="1167,105,1135,109,1099,112,1062,109,1023,102,1024,97,1062,104,1099,107,1135,104,1167,99"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1923a17c92c3a88c011bce124dd22f3b" id="r_a1923a17c92c3a88c011bce124dd22f3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#a1923a17c92c3a88c011bce124dd22f3b">Node</a> (<a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> &gt; wrapper, const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;<a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#a499250ff6b61d555620998bff936a699">bv</a>, <a class="el" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a> id)</td></tr>
+<tr class="memdesc:a1923a17c92c3a88c011bce124dd22f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for leaf node  <br /></td></tr>
+<tr class="separator:a1923a17c92c3a88c011bce124dd22f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dbbf3f8a27581f819000eda44965b10" id="r_a1dbbf3f8a27581f819000eda44965b10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#a1dbbf3f8a27581f819000eda44965b10">Node</a> (<a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a> *child1, <a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a> *child2, const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;<a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#a499250ff6b61d555620998bff936a699">bv</a>)</td></tr>
+<tr class="memdesc:a1dbbf3f8a27581f819000eda44965b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constcuctor for internal node  <br /></td></tr>
+<tr class="separator:a1dbbf3f8a27581f819000eda44965b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741f89f97ae7012317701c8a0fdc887a" id="r_a741f89f97ae7012317701c8a0fdc887a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#a741f89f97ae7012317701c8a0fdc887a">~Node</a> ()</td></tr>
+<tr class="memdesc:a741f89f97ae7012317701c8a0fdc887a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a741f89f97ae7012317701c8a0fdc887a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fe1520619e163534eb039b07c55a312" id="r_a2fe1520619e163534eb039b07c55a312"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#a2fe1520619e163534eb039b07c55a312">IsLeafNode</a> () const</td></tr>
+<tr class="memdesc:a2fe1520619e163534eb039b07c55a312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this leaf node?  <br /></td></tr>
+<tr class="separator:a2fe1520619e163534eb039b07c55a312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a06876bb47c8a1b35143e05fc3d148203" id="r_a06876bb47c8a1b35143e05fc3d148203"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_stable_handle_vector_8h.html#a7de582bb76d446033c9722437b4c5b9a">WeakStableHandle</a>&lt; <a class="el" href="class_c_unique_ptr.html">CUniquePtr</a>&lt; <a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#a06876bb47c8a1b35143e05fc3d148203">thisHandle</a></td></tr>
+<tr class="memdesc:a06876bb47c8a1b35143e05fc3d148203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weak pointer to handle for this node  <br /></td></tr>
+<tr class="separator:a06876bb47c8a1b35143e05fc3d148203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba354c02f6c7f9952ffb25ab847b39d" id="r_adba354c02f6c7f9952ffb25ab847b39d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#adba354c02f6c7f9952ffb25ab847b39d">nodeID</a></td></tr>
+<tr class="memdesc:adba354c02f6c7f9952ffb25ab847b39d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html" title="Node structure">Node</a> ID. internal node ID is 0  <br /></td></tr>
+<tr class="separator:adba354c02f6c7f9952ffb25ab847b39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499250ff6b61d555620998bff936a699" id="r_a499250ff6b61d555620998bff936a699"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#a499250ff6b61d555620998bff936a699">bv</a></td></tr>
+<tr class="memdesc:a499250ff6b61d555620998bff936a699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounding volume  <br /></td></tr>
+<tr class="separator:a499250ff6b61d555620998bff936a699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f61bc6973d895962d886c7231bb885" id="r_a93f61bc6973d895962d886c7231bb885"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#a93f61bc6973d895962d886c7231bb885">parentNode</a></td></tr>
+<tr class="memdesc:a93f61bc6973d895962d886c7231bb885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the parent node  <br /></td></tr>
+<tr class="separator:a93f61bc6973d895962d886c7231bb885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14f6ae50d5ca3abb734343b0f1255662" id="r_a14f6ae50d5ca3abb734343b0f1255662"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5b4d65ea1886c86adeae8a7c6dd373" id="r_a2c5b4d65ea1886c86adeae8a7c6dd373"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html">LeafData</a>&#160;&#160;&#160;<a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#acc99dda263e98282978ab88692c16327">leafData</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a2c5b4d65ea1886c86adeae8a7c6dd373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leaf node data  <a href="struct_mkpe_1_1_dbvt_1_1_node.html#acc99dda263e98282978ab88692c16327">[詳解]</a><br /></td></tr>
+<tr class="separator:a2c5b4d65ea1886c86adeae8a7c6dd373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2438a39d7a4182217d09a0b62351e125" id="r_a2438a39d7a4182217d09a0b62351e125"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html">InternalData</a>&#160;&#160;&#160;<a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html#a42b1126944075d9709965de7069a540d">internalData</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a2438a39d7a4182217d09a0b62351e125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal node data  <a href="struct_mkpe_1_1_dbvt_1_1_node.html#a42b1126944075d9709965de7069a540d">[詳解]</a><br /></td></tr>
+<tr class="separator:a2438a39d7a4182217d09a0b62351e125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14f6ae50d5ca3abb734343b0f1255662" id="r_a14f6ae50d5ca3abb734343b0f1255662"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a14f6ae50d5ca3abb734343b0f1255662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html" title="Node structure">Node</a> structure </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a1923a17c92c3a88c011bce124dd22f3b" name="a1923a17c92c3a88c011bce124dd22f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1923a17c92c3a88c011bce124dd22f3b">&#9670;&#160;</a></span>Node() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::Dbvt::Node::Node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> &gt;&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>bv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for leaf node </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Weak pointer to own collider wrapper </td></tr>
+    <tr><td class="paramname">bv</td><td>Bounding volume </td></tr>
+    <tr><td class="paramname">id</td><td><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html" title="Node structure">Node</a> ID. internal node ID is 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1dbbf3f8a27581f819000eda44965b10" name="a1dbbf3f8a27581f819000eda44965b10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dbbf3f8a27581f819000eda44965b10">&#9670;&#160;</a></span>Node() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::Dbvt::Node::Node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>child1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>child2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>bv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constcuctor for internal node </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child1</td><td>Pointer to the first child node </td></tr>
+    <tr><td class="paramname">child2</td><td>Pointer to the second child node </td></tr>
+    <tr><td class="paramname">bv</td><td>Bounding volume </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a741f89f97ae7012317701c8a0fdc887a" name="a741f89f97ae7012317701c8a0fdc887a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a741f89f97ae7012317701c8a0fdc887a">&#9670;&#160;</a></span>~Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::Dbvt::Node::~Node </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_dbvt_1_1_node_a741f89f97ae7012317701c8a0fdc887a_cgraph.png" border="0" usemap="#astruct_mkpe_1_1_dbvt_1_1_node_a741f89f97ae7012317701c8a0fdc887a_cgraph" alt=""/></div>
+<map name="astruct_mkpe_1_1_dbvt_1_1_node_a741f89f97ae7012317701c8a0fdc887a_cgraph" id="astruct_mkpe_1_1_dbvt_1_1_node_a741f89f97ae7012317701c8a0fdc887a_cgraph">
+<area shape="rect" title="Destructor" alt="" coords="5,64,176,91"/>
+<area shape="rect" href="struct_mkpe_1_1_dbvt_1_1_node.html#a2fe1520619e163534eb039b07c55a312" title="Is this leaf node?" alt="" coords="224,5,420,32"/>
+<area shape="poly" title=" " alt="" coords="145,61,251,34,252,39,147,66"/>
+<area shape="rect" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a79cf99983a7ad8065d8149d1cb40abca" title="Destructor" alt="" coords="240,56,404,99"/>
+<area shape="poly" title=" " alt="" coords="176,75,225,75,225,80,176,80"/>
+<area shape="rect" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#aeb6294e4dc55bb5b8bd9e7d2238e1243" title="Destructor" alt="" coords="249,123,395,165"/>
+<area shape="poly" title=" " alt="" coords="141,89,235,116,234,121,139,94"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a2fe1520619e163534eb039b07c55a312" name="a2fe1520619e163534eb039b07c55a312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fe1520619e163534eb039b07c55a312">&#9670;&#160;</a></span>IsLeafNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Mkpe::Dbvt::Node::IsLeafNode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this leaf node? </p>
+<dl class="section return"><dt>戻り値</dt><dd>returns true if this node is a leaf node </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_dbvt_1_1_node_a2fe1520619e163534eb039b07c55a312_icgraph.png" border="0" usemap="#astruct_mkpe_1_1_dbvt_1_1_node_a2fe1520619e163534eb039b07c55a312_icgraph" alt=""/></div>
+<map name="astruct_mkpe_1_1_dbvt_1_1_node_a2fe1520619e163534eb039b07c55a312_icgraph" id="astruct_mkpe_1_1_dbvt_1_1_node_a2fe1520619e163534eb039b07c55a312_icgraph">
+<area shape="rect" title="Is this leaf node?" alt="" coords="467,113,663,140"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#a430c89612234b80b5f0c6522bc23993a" title="Perform collision detection at node and node, creating potentially colliding pairs." alt="" coords="222,5,419,48"/>
+<area shape="poly" title=" " alt="" coords="521,109,418,62,388,51,389,46,420,58,523,104"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#a182cb6f12a20cbcc4ea37093a780bf55" title="Reinsert a leaf node that already exists in the tree" alt="" coords="222,72,419,115"/>
+<area shape="poly" title=" " alt="" coords="451,114,419,109,420,104,452,109"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#a56d5f880af83163ffca67b654843f3b0" title="Remove a leaf node from the tree" alt="" coords="222,139,419,181"/>
+<area shape="poly" title=" " alt="" coords="452,145,420,149,419,144,451,140"/>
+<area shape="rect" href="struct_mkpe_1_1_dbvt_1_1_node.html#a741f89f97ae7012317701c8a0fdc887a" title="Destructor" alt="" coords="235,205,406,232"/>
+<area shape="poly" title=" " alt="" coords="525,150,475,173,420,196,383,207,381,202,418,191,473,168,523,145"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a92f32db9b754241a044949413877f9ab" title="Processing at destruction" alt="" coords="5,147,174,173"/>
+<area shape="poly" title=" " alt="" coords="206,163,174,163,174,157,206,157"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a14f6ae50d5ca3abb734343b0f1255662" name="a14f6ae50d5ca3abb734343b0f1255662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14f6ae50d5ca3abb734343b0f1255662">&#9670;&#160;</a></span>[union]</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union  { ... }  <a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Mkpe::Dbvt::Node</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a499250ff6b61d555620998bff936a699" name="a499250ff6b61d555620998bff936a699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a499250ff6b61d555620998bff936a699">&#9670;&#160;</a></span>bv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> Mkpe::Dbvt::Node::bv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bounding volume </p>
+
+</div>
+</div>
+<a id="a42b1126944075d9709965de7069a540d" name="a42b1126944075d9709965de7069a540d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b1126944075d9709965de7069a540d">&#9670;&#160;</a></span>internalData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html">InternalData</a> Mkpe::Dbvt::Node::internalData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Internal node data </p>
+
+</div>
+</div>
+<a id="acc99dda263e98282978ab88692c16327" name="acc99dda263e98282978ab88692c16327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc99dda263e98282978ab88692c16327">&#9670;&#160;</a></span>leafData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html">LeafData</a> Mkpe::Dbvt::Node::leafData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Leaf node data </p>
+
+</div>
+</div>
+<a id="adba354c02f6c7f9952ffb25ab847b39d" name="adba354c02f6c7f9952ffb25ab847b39d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba354c02f6c7f9952ffb25ab847b39d">&#9670;&#160;</a></span>nodeID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a> Mkpe::Dbvt::Node::nodeID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html" title="Node structure">Node</a> ID. internal node ID is 0 </p>
+
+</div>
+</div>
+<a id="a93f61bc6973d895962d886c7231bb885" name="a93f61bc6973d895962d886c7231bb885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f61bc6973d895962d886c7231bb885">&#9670;&#160;</a></span>parentNode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* Mkpe::Dbvt::Node::parentNode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pointer to the parent node </p>
+
+</div>
+</div>
+<a id="a06876bb47c8a1b35143e05fc3d148203" name="a06876bb47c8a1b35143e05fc3d148203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06876bb47c8a1b35143e05fc3d148203">&#9670;&#160;</a></span>thisHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_stable_handle_vector_8h.html#a7de582bb76d446033c9722437b4c5b9a">WeakStableHandle</a>&lt;<a class="el" href="class_c_unique_ptr.html">CUniquePtr</a>&lt;<a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>&gt; &gt; Mkpe::Dbvt::Node::thisHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Weak pointer to handle for this node </p>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_b_v_node_8h_source.html">BVNode.h</a></li>
+<li><a class="el" href="_b_v_node_8cpp.html">BVNode.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
