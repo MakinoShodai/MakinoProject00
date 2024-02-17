@@ -1,0 +1,47 @@
+<map id="CLightVPCalculator::Calculate" name="CLightVPCalculator::Calculate">
+<area shape="rect" id="Node000001" title="Calculate all light view projection matrices and return it" alt="" coords="5,520,140,563"/>
+<area shape="rect" id="Node000002" href="$class_c_camera_component.html#af5be76b0277d839421be8594f9a604cb" title="Generate a projection matrix" alt="" coords="188,5,390,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,519,87,423,110,287,144,155,163,102,186,65,196,55,200,59,190,68,168,104,149,156,116,289,92,424,79,520"/>
+<area shape="rect" id="Node000003" href="$class_c_camera_component.html#abfa4560e0c329083f80aaa8a7a6f553e" title="Generate a view matrix" alt="" coords="188,263,390,305"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="80,519,119,438,149,389,186,345,228,311,232,316,190,349,154,392,124,440,85,521"/>
+<area shape="rect" id="Node000004" href="$class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091" title="Get transform of the object" alt="" coords="438,123,629,149"/>
+<area shape="poly" id="edge17_Node000001_Node000004" title=" " alt="" coords="73,519,82,465,102,393,116,354,135,316,158,280,186,249,239,209,300,179,362,159,422,145,423,151,364,164,302,184,242,213,189,253,162,283,140,319,121,356,107,394,88,466,79,520"/>
+<area shape="rect" id="Node000007" href="$struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="684,173,759,200"/>
+<area shape="poly" id="edge24_Node000001_Node000007" title=" " alt="" coords="71,519,77,454,93,364,107,316,127,268,153,223,186,183,238,137,289,103,340,80,391,68,445,65,502,71,563,86,630,108,670,131,701,160,698,164,667,135,628,113,562,91,501,77,445,70,392,73,341,85,292,108,241,141,190,187,157,226,132,270,112,317,98,365,82,455,77,520"/>
+<area shape="rect" id="Node000008" href="$struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="684,363,759,389"/>
+<area shape="poly" id="edge25_Node000001_Node000008" title=" " alt="" coords="139,523,187,513,255,504,314,502,414,503,462,502,511,495,566,481,628,456,667,430,698,400,702,403,671,434,631,461,568,486,512,501,462,507,414,508,314,507,255,510,188,519,140,528"/>
+<area shape="rect" id="Node000009" href="$struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="684,287,759,313"/>
+<area shape="poly" id="edge26_Node000001_Node000009" title=" " alt="" coords="119,517,187,489,254,468,311,453,411,433,509,409,564,390,628,362,662,342,691,321,694,325,664,347,631,366,566,395,510,414,412,438,312,458,255,473,189,495,121,522"/>
+<area shape="rect" id="Node000010" href="$class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219" title="Get instance. If the instance has already been destroyed, return nullptr" alt="" coords="234,528,344,555"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="140,539,218,539,218,544,140,544"/>
+<area shape="rect" id="Node000011" href="$class_c_camera_component.html#a77d31f86bc9b672c413689d7e9e8c196" title="Get the far clipping value" alt="" coords="194,579,384,605"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="141,554,214,572,213,577,140,560"/>
+<area shape="rect" id="Node000012" href="$struct_transformf.html#ae5d2e022738cc48dcf81448e239fa948" title="Get the forward vector of this transform" alt="" coords="211,629,367,656"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="102,561,142,589,189,615,206,622,204,627,187,620,139,594,99,565"/>
+<area shape="rect" id="Node000013" href="$class_c_camera_component.html#aeece690b4a3d380df9e05701242dfdf5" title="Get the near clipping value" alt="" coords="190,680,388,707"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="90,562,130,615,158,642,189,666,200,671,197,676,186,670,154,646,126,618,85,565"/>
+<area shape="rect" id="Node000014" href="$class_a_c_component.html#a1677e72c01ba17b59662de344623cf18" title="Get scene where this component exists" alt="" coords="203,731,375,757"/>
+<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="84,562,99,596,121,638,151,681,189,717,197,721,194,726,186,721,147,684,117,641,94,599,79,564"/>
+<area shape="rect" id="Node000015" href="$struct_vector.html#ae21e7072563fc077194b4964f2655ae5" title="Get vector with all 1 values" alt="" coords="228,781,350,824"/>
+<area shape="poly" id="edge18_Node000001_Node000015" title=" " alt="" coords="81,563,94,606,115,661,147,718,167,744,189,767,215,783,212,788,186,771,163,748,142,721,110,663,89,607,76,564"/>
+<area shape="rect" id="Node000016" href="$namespace_utl_1_1_math.html#aec28320d2835ef7e9ad5b76bef2de696" title="Convert DirectX::XMFLOAT3 to Vector3f" alt="" coords="217,848,361,875"/>
+<area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="78,563,86,618,105,691,119,730,138,768,161,804,189,834,204,844,201,848,186,838,157,807,133,771,114,733,100,693,81,619,73,564"/>
+<area shape="rect" id="Node000017" href="$namespace_utl_1_1_math.html#a72391c207799a33f0ace9cc497ef1346" title="Convert Vector3f to DirectX::XMVECTOR" alt="" coords="450,325,617,352"/>
+<area shape="poly" id="edge20_Node000001_Node000017" title=" " alt="" coords="86,518,127,468,155,441,186,419,247,390,312,369,376,354,434,344,435,350,377,359,313,374,249,395,189,424,158,445,131,471,90,521"/>
+<area shape="rect" id="Node000018" href="$struct_vector.html#a3cef2702aed5a001b5862be56eb81997" title="Get vector with all 0 values" alt="" coords="228,899,350,941"/>
+<area shape="poly" id="edge27_Node000001_Node000018" title=" " alt="" coords="77,563,83,625,100,712,114,758,134,804,158,847,189,885,215,902,212,906,186,889,154,850,129,806,109,760,95,713,78,626,72,563"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="314,260,379,207,437,166,466,153,468,157,439,170,382,211,318,264"/>
+<area shape="rect" id="Node000005" href="$namespace_utl_1_1_math.html#a0253ec4cae086cc618dacf75d66e3256" title="Are the two 3 dimensional vectors almost the same value?" alt="" coords="447,224,620,251"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="390,262,445,251,446,257,391,267"/>
+<area shape="poly" id="edge9_Node000003_Node000007" title=" " alt="" coords="325,260,377,233,437,209,499,196,561,188,669,183,669,188,561,193,500,201,439,215,379,237,327,264"/>
+<area shape="poly" id="edge10_Node000003_Node000008" title=" " alt="" coords="322,304,375,335,406,350,439,361,499,374,561,379,669,378,669,383,561,384,499,379,437,367,404,355,373,340,319,308"/>
+<area shape="poly" id="edge11_Node000003_Node000009" title=" " alt="" coords="391,285,669,295,669,301,390,290"/>
+<area shape="rect" id="Node000006" href="$namespace_utl.html#ae262045064e2482bc0c092fba1f45a21" title="Check if two values are equal" alt="" coords="677,224,766,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="621,235,662,235,662,240,621,240"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="585,221,669,198,670,203,587,226"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="555,249,691,351,688,355,552,253"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="577,249,671,280,669,286,575,254"/>
+<area shape="poly" id="edge21_Node000017_Node000007" title=" " alt="" coords="552,323,627,261,651,235,676,210,680,207,683,211,679,214,655,239,631,265,555,327"/>
+<area shape="poly" id="edge22_Node000017_Node000008" title=" " alt="" coords="604,350,670,363,669,368,603,355"/>
+<area shape="poly" id="edge23_Node000017_Node000009" title=" " alt="" coords="601,322,669,308,670,313,602,327"/>
+</map>

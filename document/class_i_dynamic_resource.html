@@ -1,0 +1,1265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: IDynamicResource クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="class_i_dynamic_resource-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">IDynamicResource クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Interface for dynamic resource that need to be allocated per object  
+ <a href="class_i_dynamic_resource.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_dynamic_resource_8h_source.html">DynamicResource.h</a>&gt;</code></p>
+<div class="dynheader">
+IDynamicResource の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource__inherit__graph.png" border="0" usemap="#a_i_dynamic_resource_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_i_dynamic_resource_inherit__map" id="a_i_dynamic_resource_inherit__map">
+<area shape="rect" title="Interface for dynamic resource that need to be allocated per object" alt="" coords="5,180,136,207"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title=" " alt="" coords="184,5,393,48"/>
+<area shape="poly" title=" " alt="" coords="85,165,125,111,152,82,182,58,203,46,206,51,185,62,155,86,129,114,90,168"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title=" " alt="" coords="184,72,393,115"/>
+<area shape="poly" title=" " alt="" coords="103,169,183,124,211,113,213,118,185,129,106,173"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title=" " alt="" coords="184,139,393,181"/>
+<area shape="poly" title=" " alt="" coords="151,178,183,173,184,179,151,184"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title=" " alt="" coords="184,205,393,248"/>
+<area shape="poly" title=" " alt="" coords="151,203,184,208,183,213,151,208"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title="This class allocates data for constant buffer view per object" alt="" coords="184,272,393,315"/>
+<area shape="poly" title=" " alt="" coords="106,213,185,258,213,269,211,274,183,262,103,218"/>
+<area shape="rect" href="class_i_dynamic_sb_allocator.html" title="Interface for structured buffer allocator that need to be allocated per object" alt="" coords="217,413,360,440"/>
+<area shape="poly" title=" " alt="" coords="94,217,186,325,274,411,270,415,182,328,90,221"/>
+<area shape="rect" href="class_c_dynamic_cb_material.html" title="CB allocator class for material" alt="" coords="474,80,617,107"/>
+<area shape="poly" title=" " alt="" coords="409,91,473,91,473,96,409,96"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator.html" title=" " alt="" coords="467,139,624,181"/>
+<area shape="poly" title=" " alt="" coords="385,262,391,258,407,242,415,226,423,208,439,191,465,177,468,181,443,195,427,211,419,228,411,245,395,262,388,266"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator.html" title=" " alt="" coords="467,205,624,248"/>
+<area shape="poly" title=" " alt="" coords="387,265,466,244,467,250,389,270"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator.html" title=" " alt="" coords="459,272,633,315"/>
+<area shape="poly" title=" " alt="" coords="409,291,458,291,458,296,409,296"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator.html" title="This class allocates data for constant buffer view per object" alt="" coords="467,339,624,381"/>
+<area shape="poly" title=" " alt="" coords="389,317,467,337,466,342,387,322"/>
+<area shape="rect" href="class_c_dynamic_cb_color.html" title="CB allocator class that handles color" alt="" coords="730,147,857,173"/>
+<area shape="poly" title=" " alt="" coords="640,157,729,157,729,163,640,163"/>
+<area shape="rect" href="class_c_dynamic_cb_tex_coord_param.html" title="CB allocator class that handles color" alt="" coords="698,213,889,240"/>
+<area shape="poly" title=" " alt="" coords="640,224,698,224,698,229,640,229"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html" title="CB allocator class that handles world matrix" alt="" coords="717,280,870,307"/>
+<area shape="poly" title=" " alt="" coords="648,291,716,291,716,296,648,296"/>
+<area shape="rect" href="class_a_c_dynamic_sb_allocator_per_mesh.html" title=" " alt="" coords="441,405,650,448"/>
+<area shape="poly" title=" " alt="" coords="375,424,440,424,440,429,375,429"/>
+<area shape="rect" href="class_a_c_dynamic_sb_allocator_per_mesh.html" title="Structured buffer allocator class that need to be allocated per object" alt="" coords="441,472,650,515"/>
+<area shape="poly" title=" " alt="" coords="358,442,461,469,460,474,357,447"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html" title="Structured buffer allocator class that handles animation matrices" alt="" coords="719,413,868,440"/>
+<area shape="poly" title=" " alt="" coords="666,424,718,424,718,429,666,429"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae0abeeb37ffdd74332e140ea4b2f79a2" id="r_ae0abeeb37ffdd74332e140ea4b2f79a2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#ae0abeeb37ffdd74332e140ea4b2f79a2">~IDynamicResource</a> ()=default</td></tr>
+<tr class="memdesc:ae0abeeb37ffdd74332e140ea4b2f79a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ae0abeeb37ffdd74332e140ea4b2f79a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce55bcbaa3f36a12a47b4ba81b1cdca" id="r_a8ce55bcbaa3f36a12a47b4ba81b1cdca"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a8ce55bcbaa3f36a12a47b4ba81b1cdca">GetAllocatedDataHandle</a> (<a class="el" href="class_c_basic_model.html">CBasicModel</a> *model, UINT meshIndex)=0</td></tr>
+<tr class="memdesc:a8ce55bcbaa3f36a12a47b4ba81b1cdca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle of allocated data in constant buffer  <br /></td></tr>
+<tr class="separator:a8ce55bcbaa3f36a12a47b4ba81b1cdca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aa14dffebbf6d9acbb6769bad918138" id="r_a5aa14dffebbf6d9acbb6769bad918138"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a5aa14dffebbf6d9acbb6769bad918138">GetAllocatedDataHandle</a> (<a class="el" href="class_c_skeletal_model.html">CSkeletalModel</a> *model, UINT meshIndex)=0</td></tr>
+<tr class="memdesc:a5aa14dffebbf6d9acbb6769bad918138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle of allocated data in constant buffer  <br /></td></tr>
+<tr class="separator:a5aa14dffebbf6d9acbb6769bad918138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7441d1e6af98d0d23f6bb5374fc47283" id="r_a7441d1e6af98d0d23f6bb5374fc47283"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a7441d1e6af98d0d23f6bb5374fc47283">GetAllocatedDataHandle</a> (<a class="el" href="class_c_sprite_u_i.html">CSpriteUI</a> *sprite, UINT meshIndex)=0</td></tr>
+<tr class="memdesc:a7441d1e6af98d0d23f6bb5374fc47283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle of allocated data in constant buffer  <br /></td></tr>
+<tr class="separator:a7441d1e6af98d0d23f6bb5374fc47283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57925fae231df445619215d8239e4c6" id="r_ac57925fae231df445619215d8239e4c6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#ac57925fae231df445619215d8239e4c6">GetAllocatedDataHandle</a> (<a class="el" href="class_c_sprite3_d.html">CSprite3D</a> *sprite, UINT meshIndex)=0</td></tr>
+<tr class="memdesc:ac57925fae231df445619215d8239e4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle of allocated data in constant buffer  <br /></td></tr>
+<tr class="separator:ac57925fae231df445619215d8239e4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc1914cc5d529737769d9a2342ca8d1" id="r_a1dc1914cc5d529737769d9a2342ca8d1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a1dc1914cc5d529737769d9a2342ca8d1">GetAllocatedDataHandle</a> (<a class="el" href="class_c_billboard.html">CBillboard</a> *sprite, UINT meshIndex)=0</td></tr>
+<tr class="memdesc:a1dc1914cc5d529737769d9a2342ca8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle of allocated data in constant buffer  <br /></td></tr>
+<tr class="separator:a1dc1914cc5d529737769d9a2342ca8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc32547fb1b68fee82b010d209b04b9" id="r_a1fc32547fb1b68fee82b010d209b04b9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a1fc32547fb1b68fee82b010d209b04b9">GetAllocatedDataHandle</a> (<a class="el" href="class_c_tex_shape.html">CTexShape</a> *shape, UINT meshIndex)=0</td></tr>
+<tr class="memdesc:a1fc32547fb1b68fee82b010d209b04b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle of allocated data in constant buffer  <br /></td></tr>
+<tr class="separator:a1fc32547fb1b68fee82b010d209b04b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea07eeecdb02db87dfccead7e2d2dc4f" id="r_aea07eeecdb02db87dfccead7e2d2dc4f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#aea07eeecdb02db87dfccead7e2d2dc4f">GetAllocatedDataHandle</a> (<a class="el" href="class_c_color_only_shape.html">CColorOnlyShape</a> *shape, UINT meshIndex)=0</td></tr>
+<tr class="memdesc:aea07eeecdb02db87dfccead7e2d2dc4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle of allocated data in constant buffer  <br /></td></tr>
+<tr class="separator:aea07eeecdb02db87dfccead7e2d2dc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb819a7ad383d3e018a871aa6c64f9cb" id="r_abb819a7ad383d3e018a871aa6c64f9cb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#abb819a7ad383d3e018a871aa6c64f9cb">GetAllocatedDataHandle</a> (<a class="el" href="class_c_debug_collider_shape.html">CDebugColliderShape</a> *shape, UINT meshIndex)=0</td></tr>
+<tr class="memdesc:abb819a7ad383d3e018a871aa6c64f9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle of allocated data in constant buffer  <br /></td></tr>
+<tr class="separator:abb819a7ad383d3e018a871aa6c64f9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c1878616dc83b70c3492db15fc3173" id="r_a67c1878616dc83b70c3492db15fc3173"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a67c1878616dc83b70c3492db15fc3173">Refresh</a> ()=0</td></tr>
+<tr class="memdesc:a67c1878616dc83b70c3492db15fc3173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh process that must be called at the end of every frame  <br /></td></tr>
+<tr class="separator:a67c1878616dc83b70c3492db15fc3173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a662fc9f40dd0b382f1c27cf7ef1cc3" id="r_a5a662fc9f40dd0b382f1c27cf7ef1cc3"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a5a662fc9f40dd0b382f1c27cf7ef1cc3">GetName</a> ()=0</td></tr>
+<tr class="memdesc:a5a662fc9f40dd0b382f1c27cf7ef1cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of cbuffer defined in hlsl  <br /></td></tr>
+<tr class="separator:a5a662fc9f40dd0b382f1c27cf7ef1cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a90d18da6d0fe3f8b05ef0b4c360016c3" id="r_a90d18da6d0fe3f8b05ef0b4c360016c3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a90d18da6d0fe3f8b05ef0b4c360016c3">AllocateData</a> (<a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *graphics, UINT meshIndex)=0</td></tr>
+<tr class="memdesc:a90d18da6d0fe3f8b05ef0b4c360016c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for a mesh held by sent graphics component in the constant buffer  <br /></td></tr>
+<tr class="separator:a90d18da6d0fe3f8b05ef0b4c360016c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae424f5fa79b9bd093889c4a137d2446d" id="r_ae424f5fa79b9bd093889c4a137d2446d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#ae424f5fa79b9bd093889c4a137d2446d">AllocateData</a> (<a class="el" href="class_a_c_model.html">ACModel</a> *model, UINT meshIndex)</td></tr>
+<tr class="memdesc:ae424f5fa79b9bd093889c4a137d2446d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for a mesh held by sent abstract model class in the constant buffer  <br /></td></tr>
+<tr class="separator:ae424f5fa79b9bd093889c4a137d2446d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dec27a37d8777e231642929530003ea" id="r_a0dec27a37d8777e231642929530003ea"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a0dec27a37d8777e231642929530003ea">AllocateData</a> (<a class="el" href="class_c_basic_model.html">CBasicModel</a> *model, UINT meshIndex)</td></tr>
+<tr class="memdesc:a0dec27a37d8777e231642929530003ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for a mesh held by sent non-animated model in the constant buffer  <br /></td></tr>
+<tr class="separator:a0dec27a37d8777e231642929530003ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b3642b5ca53c4c8a272d23c4447ec6" id="r_aa1b3642b5ca53c4c8a272d23c4447ec6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#aa1b3642b5ca53c4c8a272d23c4447ec6">AllocateData</a> (<a class="el" href="class_c_skeletal_model.html">CSkeletalModel</a> *model, UINT meshIndex)</td></tr>
+<tr class="memdesc:aa1b3642b5ca53c4c8a272d23c4447ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for a mesh held by sent skeletal model in the constant buffer  <br /></td></tr>
+<tr class="separator:aa1b3642b5ca53c4c8a272d23c4447ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d19bbbeca8bd52fc3d3c7000448c3e" id="r_aa6d19bbbeca8bd52fc3d3c7000448c3e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#aa6d19bbbeca8bd52fc3d3c7000448c3e">AllocateData</a> (<a class="el" href="class_a_c_sprite.html">ACSprite</a> *sprite, UINT meshIndex)</td></tr>
+<tr class="memdesc:aa6d19bbbeca8bd52fc3d3c7000448c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for a mesh held by sent abstract sprite class in the constant buffer  <br /></td></tr>
+<tr class="separator:aa6d19bbbeca8bd52fc3d3c7000448c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00cc8dc8f3691d8927330b4feb0e6863" id="r_a00cc8dc8f3691d8927330b4feb0e6863"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a00cc8dc8f3691d8927330b4feb0e6863">AllocateData</a> (<a class="el" href="class_c_sprite_u_i.html">CSpriteUI</a> *sprite, UINT meshIndex)</td></tr>
+<tr class="memdesc:a00cc8dc8f3691d8927330b4feb0e6863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for a mesh held by sent sprite UI in the constant buffer  <br /></td></tr>
+<tr class="separator:a00cc8dc8f3691d8927330b4feb0e6863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94fbed1fe9dcd20aecacef0a8dd6f37e" id="r_a94fbed1fe9dcd20aecacef0a8dd6f37e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a94fbed1fe9dcd20aecacef0a8dd6f37e">AllocateData</a> (<a class="el" href="class_c_sprite3_d.html">CSprite3D</a> *sprite, UINT meshIndex)</td></tr>
+<tr class="memdesc:a94fbed1fe9dcd20aecacef0a8dd6f37e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for a mesh held by sent sprite 3D in the constant buffer  <br /></td></tr>
+<tr class="separator:a94fbed1fe9dcd20aecacef0a8dd6f37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9cf668d4021ce54277240ae400f47e3" id="r_ae9cf668d4021ce54277240ae400f47e3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#ae9cf668d4021ce54277240ae400f47e3">AllocateData</a> (<a class="el" href="class_c_billboard.html">CBillboard</a> *sprite, UINT meshIndex)</td></tr>
+<tr class="memdesc:ae9cf668d4021ce54277240ae400f47e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for a mesh held by sent billboard in the constant buffer  <br /></td></tr>
+<tr class="separator:ae9cf668d4021ce54277240ae400f47e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f1b69f47ec6061cd1066422740b3da" id="r_a29f1b69f47ec6061cd1066422740b3da"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a29f1b69f47ec6061cd1066422740b3da">AllocateData</a> (<a class="el" href="class_c_tex_shape.html">CTexShape</a> *shape, UINT meshIndex)</td></tr>
+<tr class="memdesc:a29f1b69f47ec6061cd1066422740b3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for a mesh held by sent texture shape in the constant buffer  <br /></td></tr>
+<tr class="separator:a29f1b69f47ec6061cd1066422740b3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4a3aa1ce3ba59c83565efdd7e6cbc3" id="r_a4f4a3aa1ce3ba59c83565efdd7e6cbc3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#a4f4a3aa1ce3ba59c83565efdd7e6cbc3">AllocateData</a> (<a class="el" href="class_c_color_only_shape.html">CColorOnlyShape</a> *shape, UINT meshIndex)</td></tr>
+<tr class="memdesc:a4f4a3aa1ce3ba59c83565efdd7e6cbc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for a mesh held by sent color only shape in the constant buffer  <br /></td></tr>
+<tr class="separator:a4f4a3aa1ce3ba59c83565efdd7e6cbc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af43f1fd115ade078a225bd52d53367e5" id="r_af43f1fd115ade078a225bd52d53367e5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dynamic_resource.html#af43f1fd115ade078a225bd52d53367e5">AllocateData</a> (<a class="el" href="class_c_debug_collider_shape.html">CDebugColliderShape</a> *shape, UINT meshIndex)</td></tr>
+<tr class="memdesc:af43f1fd115ade078a225bd52d53367e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for a mesh held by sent color only shape in the constant buffer  <br /></td></tr>
+<tr class="separator:af43f1fd115ade078a225bd52d53367e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Interface for dynamic resource that need to be allocated per object </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ae0abeeb37ffdd74332e140ea4b2f79a2" name="ae0abeeb37ffdd74332e140ea4b2f79a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0abeeb37ffdd74332e140ea4b2f79a2">&#9670;&#160;</a></span>~IDynamicResource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual IDynamicResource::~IDynamicResource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a90d18da6d0fe3f8b05ef0b4c360016c3" name="a90d18da6d0fe3f8b05ef0b4c360016c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90d18da6d0fe3f8b05ef0b4c360016c3">&#9670;&#160;</a></span>AllocateData() <span class="overload">[1/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *&#160;</td>
+          <td class="paramname"><em>graphics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for a mesh held by sent graphics component in the constant buffer </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>component that wants to calculate data </td></tr>
+    <tr><td class="paramname">meshIndex</td><td>Index of mesh held by graphics component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>The handle of allocated data in the constant buffer </dd></dl>
+
+<p><a class="el" href="class_c_dynamic_cb_material.html#a518fb78082eab6ae600c475c0f42da12">CDynamicCbMaterial</a>, <a class="el" href="class_c_dynamic_sb_anim_mat.html#a1194dd93aa74074f89be44b2b063c862">CDynamicSbAnimMat</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae6a0ec1537efb9abe5378ade0347cc71">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae6a0ec1537efb9abe5378ade0347cc71">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae6a0ec1537efb9abe5378ade0347cc71">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae6a0ec1537efb9abe5378ade0347cc71">ACDynamicCbAllocator&lt; Vector4f &gt;</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="ae424f5fa79b9bd093889c4a137d2446d" name="ae424f5fa79b9bd093889c4a137d2446d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae424f5fa79b9bd093889c4a137d2446d">&#9670;&#160;</a></span>AllocateData() <span class="overload">[2/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_model.html">ACModel</a> *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for a mesh held by sent abstract model class in the constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator.html#ae48d591c55805d81bc915dce2f9fc7b7">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae48d591c55805d81bc915dce2f9fc7b7">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae48d591c55805d81bc915dce2f9fc7b7">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae48d591c55805d81bc915dce2f9fc7b7">ACDynamicCbAllocator&lt; Vector4f &gt;</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_ae424f5fa79b9bd093889c4a137d2446d_cgraph.png" border="0" usemap="#aclass_i_dynamic_resource_ae424f5fa79b9bd093889c4a137d2446d_cgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_ae424f5fa79b9bd093889c4a137d2446d_cgraph" id="aclass_i_dynamic_resource_ae424f5fa79b9bd093889c4a137d2446d_cgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent abstract model class in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="76,30,69,21,74,11,88,5,112,3,137,5,150,12,148,16,135,10,111,8,89,10,77,15,74,20,80,27"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_ae424f5fa79b9bd093889c4a137d2446d_icgraph.png" border="0" usemap="#aclass_i_dynamic_resource_ae424f5fa79b9bd093889c4a137d2446d_icgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_ae424f5fa79b9bd093889c4a137d2446d_icgraph" id="aclass_i_dynamic_resource_ae424f5fa79b9bd093889c4a137d2446d_icgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent abstract model class in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="148,16,135,10,111,8,89,10,77,15,74,20,80,27,76,30,69,21,74,11,88,5,112,3,137,5,150,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa6d19bbbeca8bd52fc3d3c7000448c3e" name="aa6d19bbbeca8bd52fc3d3c7000448c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6d19bbbeca8bd52fc3d3c7000448c3e">&#9670;&#160;</a></span>AllocateData() <span class="overload">[3/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_sprite.html">ACSprite</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for a mesh held by sent abstract sprite class in the constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator.html#a31a5109d71a9f8942c405cb15fc4baef">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a31a5109d71a9f8942c405cb15fc4baef">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a31a5109d71a9f8942c405cb15fc4baef">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a31a5109d71a9f8942c405cb15fc4baef">ACDynamicCbAllocator&lt; Vector4f &gt;</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_aa6d19bbbeca8bd52fc3d3c7000448c3e_cgraph.png" border="0" usemap="#aclass_i_dynamic_resource_aa6d19bbbeca8bd52fc3d3c7000448c3e_cgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_aa6d19bbbeca8bd52fc3d3c7000448c3e_cgraph" id="aclass_i_dynamic_resource_aa6d19bbbeca8bd52fc3d3c7000448c3e_cgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent abstract sprite class in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="76,30,69,21,74,11,88,5,112,3,137,5,150,12,148,16,135,10,111,8,89,10,77,15,74,20,80,27"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_aa6d19bbbeca8bd52fc3d3c7000448c3e_icgraph.png" border="0" usemap="#aclass_i_dynamic_resource_aa6d19bbbeca8bd52fc3d3c7000448c3e_icgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_aa6d19bbbeca8bd52fc3d3c7000448c3e_icgraph" id="aclass_i_dynamic_resource_aa6d19bbbeca8bd52fc3d3c7000448c3e_icgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent abstract sprite class in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="148,16,135,10,111,8,89,10,77,15,74,20,80,27,76,30,69,21,74,11,88,5,112,3,137,5,150,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0dec27a37d8777e231642929530003ea" name="a0dec27a37d8777e231642929530003ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dec27a37d8777e231642929530003ea">&#9670;&#160;</a></span>AllocateData() <span class="overload">[4/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_basic_model.html">CBasicModel</a> *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for a mesh held by sent non-animated model in the constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator.html#affe22708291f706ade7c0f74ffad4cba">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#affe22708291f706ade7c0f74ffad4cba">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#affe22708291f706ade7c0f74ffad4cba">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#affe22708291f706ade7c0f74ffad4cba">ACDynamicCbAllocator&lt; Vector4f &gt;</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_a0dec27a37d8777e231642929530003ea_cgraph.png" border="0" usemap="#aclass_i_dynamic_resource_a0dec27a37d8777e231642929530003ea_cgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_a0dec27a37d8777e231642929530003ea_cgraph" id="aclass_i_dynamic_resource_a0dec27a37d8777e231642929530003ea_cgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent non&#45;animated model in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="76,30,69,21,74,11,88,5,112,3,137,5,150,12,148,16,135,10,111,8,89,10,77,15,74,20,80,27"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_a0dec27a37d8777e231642929530003ea_icgraph.png" border="0" usemap="#aclass_i_dynamic_resource_a0dec27a37d8777e231642929530003ea_icgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_a0dec27a37d8777e231642929530003ea_icgraph" id="aclass_i_dynamic_resource_a0dec27a37d8777e231642929530003ea_icgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent non&#45;animated model in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="148,16,135,10,111,8,89,10,77,15,74,20,80,27,76,30,69,21,74,11,88,5,112,3,137,5,150,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae9cf668d4021ce54277240ae400f47e3" name="ae9cf668d4021ce54277240ae400f47e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9cf668d4021ce54277240ae400f47e3">&#9670;&#160;</a></span>AllocateData() <span class="overload">[5/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_billboard.html">CBillboard</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for a mesh held by sent billboard in the constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator.html#a7da10368e1f7ae8a817a49d55e48a4e1">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a7da10368e1f7ae8a817a49d55e48a4e1">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a7da10368e1f7ae8a817a49d55e48a4e1">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a7da10368e1f7ae8a817a49d55e48a4e1">ACDynamicCbAllocator&lt; Vector4f &gt;</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_ae9cf668d4021ce54277240ae400f47e3_cgraph.png" border="0" usemap="#aclass_i_dynamic_resource_ae9cf668d4021ce54277240ae400f47e3_cgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_ae9cf668d4021ce54277240ae400f47e3_cgraph" id="aclass_i_dynamic_resource_ae9cf668d4021ce54277240ae400f47e3_cgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent billboard in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="76,30,69,21,74,11,88,5,112,3,137,5,150,12,148,16,135,10,111,8,89,10,77,15,74,20,80,27"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_ae9cf668d4021ce54277240ae400f47e3_icgraph.png" border="0" usemap="#aclass_i_dynamic_resource_ae9cf668d4021ce54277240ae400f47e3_icgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_ae9cf668d4021ce54277240ae400f47e3_icgraph" id="aclass_i_dynamic_resource_ae9cf668d4021ce54277240ae400f47e3_icgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent billboard in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="148,16,135,10,111,8,89,10,77,15,74,20,80,27,76,30,69,21,74,11,88,5,112,3,137,5,150,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4f4a3aa1ce3ba59c83565efdd7e6cbc3" name="a4f4a3aa1ce3ba59c83565efdd7e6cbc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f4a3aa1ce3ba59c83565efdd7e6cbc3">&#9670;&#160;</a></span>AllocateData() <span class="overload">[6/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_color_only_shape.html">CColorOnlyShape</a> *&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for a mesh held by sent color only shape in the constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator.html#a34ef87a2e29ba8fb5b032114d1998f22">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a34ef87a2e29ba8fb5b032114d1998f22">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a34ef87a2e29ba8fb5b032114d1998f22">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a34ef87a2e29ba8fb5b032114d1998f22">ACDynamicCbAllocator&lt; Vector4f &gt;</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_a4f4a3aa1ce3ba59c83565efdd7e6cbc3_cgraph.png" border="0" usemap="#aclass_i_dynamic_resource_a4f4a3aa1ce3ba59c83565efdd7e6cbc3_cgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_a4f4a3aa1ce3ba59c83565efdd7e6cbc3_cgraph" id="aclass_i_dynamic_resource_a4f4a3aa1ce3ba59c83565efdd7e6cbc3_cgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent color only shape in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="76,30,69,21,74,11,88,5,112,3,137,5,150,12,148,16,135,10,111,8,89,10,77,15,74,20,80,27"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_a4f4a3aa1ce3ba59c83565efdd7e6cbc3_icgraph.png" border="0" usemap="#aclass_i_dynamic_resource_a4f4a3aa1ce3ba59c83565efdd7e6cbc3_icgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_a4f4a3aa1ce3ba59c83565efdd7e6cbc3_icgraph" id="aclass_i_dynamic_resource_a4f4a3aa1ce3ba59c83565efdd7e6cbc3_icgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent color only shape in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="148,16,135,10,111,8,89,10,77,15,74,20,80,27,76,30,69,21,74,11,88,5,112,3,137,5,150,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af43f1fd115ade078a225bd52d53367e5" name="af43f1fd115ade078a225bd52d53367e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af43f1fd115ade078a225bd52d53367e5">&#9670;&#160;</a></span>AllocateData() <span class="overload">[7/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_debug_collider_shape.html">CDebugColliderShape</a> *&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for a mesh held by sent color only shape in the constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator.html#aa626c0caab3a49b4dc11a53229fc7788">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#aa626c0caab3a49b4dc11a53229fc7788">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#aa626c0caab3a49b4dc11a53229fc7788">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#aa626c0caab3a49b4dc11a53229fc7788">ACDynamicCbAllocator&lt; Vector4f &gt;</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_af43f1fd115ade078a225bd52d53367e5_cgraph.png" border="0" usemap="#aclass_i_dynamic_resource_af43f1fd115ade078a225bd52d53367e5_cgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_af43f1fd115ade078a225bd52d53367e5_cgraph" id="aclass_i_dynamic_resource_af43f1fd115ade078a225bd52d53367e5_cgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent color only shape in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="76,30,69,21,74,11,88,5,112,3,137,5,150,12,148,16,135,10,111,8,89,10,77,15,74,20,80,27"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_af43f1fd115ade078a225bd52d53367e5_icgraph.png" border="0" usemap="#aclass_i_dynamic_resource_af43f1fd115ade078a225bd52d53367e5_icgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_af43f1fd115ade078a225bd52d53367e5_icgraph" id="aclass_i_dynamic_resource_af43f1fd115ade078a225bd52d53367e5_icgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent color only shape in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="148,16,135,10,111,8,89,10,77,15,74,20,80,27,76,30,69,21,74,11,88,5,112,3,137,5,150,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa1b3642b5ca53c4c8a272d23c4447ec6" name="aa1b3642b5ca53c4c8a272d23c4447ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b3642b5ca53c4c8a272d23c4447ec6">&#9670;&#160;</a></span>AllocateData() <span class="overload">[8/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_skeletal_model.html">CSkeletalModel</a> *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for a mesh held by sent skeletal model in the constant buffer </p>
+
+<p><a class="el" href="class_c_dynamic_sb_anim_mat.html#a8124cae7f185f361950dffa4202adbf7">CDynamicSbAnimMat</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a1efb926aaff5fd84cb3bdf4b42649e1c">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a1efb926aaff5fd84cb3bdf4b42649e1c">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a1efb926aaff5fd84cb3bdf4b42649e1c">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a1efb926aaff5fd84cb3bdf4b42649e1c">ACDynamicCbAllocator&lt; Vector4f &gt;</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_aa1b3642b5ca53c4c8a272d23c4447ec6_cgraph.png" border="0" usemap="#aclass_i_dynamic_resource_aa1b3642b5ca53c4c8a272d23c4447ec6_cgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_aa1b3642b5ca53c4c8a272d23c4447ec6_cgraph" id="aclass_i_dynamic_resource_aa1b3642b5ca53c4c8a272d23c4447ec6_cgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent skeletal model in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="76,30,69,21,74,11,88,5,112,3,137,5,150,12,148,16,135,10,111,8,89,10,77,15,74,20,80,27"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_aa1b3642b5ca53c4c8a272d23c4447ec6_icgraph.png" border="0" usemap="#aclass_i_dynamic_resource_aa1b3642b5ca53c4c8a272d23c4447ec6_icgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_aa1b3642b5ca53c4c8a272d23c4447ec6_icgraph" id="aclass_i_dynamic_resource_aa1b3642b5ca53c4c8a272d23c4447ec6_icgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent skeletal model in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="148,16,135,10,111,8,89,10,77,15,74,20,80,27,76,30,69,21,74,11,88,5,112,3,137,5,150,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a94fbed1fe9dcd20aecacef0a8dd6f37e" name="a94fbed1fe9dcd20aecacef0a8dd6f37e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94fbed1fe9dcd20aecacef0a8dd6f37e">&#9670;&#160;</a></span>AllocateData() <span class="overload">[9/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_sprite3_d.html">CSprite3D</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for a mesh held by sent sprite 3D in the constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator.html#af29b8dc3d3d4e0b1666078156f45ea38">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#af29b8dc3d3d4e0b1666078156f45ea38">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#af29b8dc3d3d4e0b1666078156f45ea38">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#af29b8dc3d3d4e0b1666078156f45ea38">ACDynamicCbAllocator&lt; Vector4f &gt;</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_a94fbed1fe9dcd20aecacef0a8dd6f37e_cgraph.png" border="0" usemap="#aclass_i_dynamic_resource_a94fbed1fe9dcd20aecacef0a8dd6f37e_cgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_a94fbed1fe9dcd20aecacef0a8dd6f37e_cgraph" id="aclass_i_dynamic_resource_a94fbed1fe9dcd20aecacef0a8dd6f37e_cgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent sprite 3D in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="76,30,69,21,74,11,88,5,112,3,137,5,150,12,148,16,135,10,111,8,89,10,77,15,74,20,80,27"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_a94fbed1fe9dcd20aecacef0a8dd6f37e_icgraph.png" border="0" usemap="#aclass_i_dynamic_resource_a94fbed1fe9dcd20aecacef0a8dd6f37e_icgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_a94fbed1fe9dcd20aecacef0a8dd6f37e_icgraph" id="aclass_i_dynamic_resource_a94fbed1fe9dcd20aecacef0a8dd6f37e_icgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent sprite 3D in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="148,16,135,10,111,8,89,10,77,15,74,20,80,27,76,30,69,21,74,11,88,5,112,3,137,5,150,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a00cc8dc8f3691d8927330b4feb0e6863" name="a00cc8dc8f3691d8927330b4feb0e6863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00cc8dc8f3691d8927330b4feb0e6863">&#9670;&#160;</a></span>AllocateData() <span class="overload">[10/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_sprite_u_i.html">CSpriteUI</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for a mesh held by sent sprite UI in the constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator.html#a1134a8d11902e176424654865531d53a">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a1134a8d11902e176424654865531d53a">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a1134a8d11902e176424654865531d53a">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a1134a8d11902e176424654865531d53a">ACDynamicCbAllocator&lt; Vector4f &gt;</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_a00cc8dc8f3691d8927330b4feb0e6863_cgraph.png" border="0" usemap="#aclass_i_dynamic_resource_a00cc8dc8f3691d8927330b4feb0e6863_cgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_a00cc8dc8f3691d8927330b4feb0e6863_cgraph" id="aclass_i_dynamic_resource_a00cc8dc8f3691d8927330b4feb0e6863_cgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent sprite UI in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="76,30,69,21,74,11,88,5,112,3,137,5,150,12,148,16,135,10,111,8,89,10,77,15,74,20,80,27"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_a00cc8dc8f3691d8927330b4feb0e6863_icgraph.png" border="0" usemap="#aclass_i_dynamic_resource_a00cc8dc8f3691d8927330b4feb0e6863_icgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_a00cc8dc8f3691d8927330b4feb0e6863_icgraph" id="aclass_i_dynamic_resource_a00cc8dc8f3691d8927330b4feb0e6863_icgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent sprite UI in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="148,16,135,10,111,8,89,10,77,15,74,20,80,27,76,30,69,21,74,11,88,5,112,3,137,5,150,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a29f1b69f47ec6061cd1066422740b3da" name="a29f1b69f47ec6061cd1066422740b3da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f1b69f47ec6061cd1066422740b3da">&#9670;&#160;</a></span>AllocateData() <span class="overload">[11/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_tex_shape.html">CTexShape</a> *&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for a mesh held by sent texture shape in the constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator.html#ae2531a74d426c45b1c47ff6046e1ec46">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae2531a74d426c45b1c47ff6046e1ec46">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae2531a74d426c45b1c47ff6046e1ec46">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae2531a74d426c45b1c47ff6046e1ec46">ACDynamicCbAllocator&lt; Vector4f &gt;</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_a29f1b69f47ec6061cd1066422740b3da_cgraph.png" border="0" usemap="#aclass_i_dynamic_resource_a29f1b69f47ec6061cd1066422740b3da_cgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_a29f1b69f47ec6061cd1066422740b3da_cgraph" id="aclass_i_dynamic_resource_a29f1b69f47ec6061cd1066422740b3da_cgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent texture shape in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="76,30,69,21,74,11,88,5,112,3,137,5,150,12,148,16,135,10,111,8,89,10,77,15,74,20,80,27"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_a29f1b69f47ec6061cd1066422740b3da_icgraph.png" border="0" usemap="#aclass_i_dynamic_resource_a29f1b69f47ec6061cd1066422740b3da_icgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_a29f1b69f47ec6061cd1066422740b3da_icgraph" id="aclass_i_dynamic_resource_a29f1b69f47ec6061cd1066422740b3da_icgraph">
+<area shape="rect" title="Allocate data calculated for a mesh held by sent texture shape in the constant buffer" alt="" coords="5,29,218,56"/>
+<area shape="poly" title=" " alt="" coords="148,16,135,10,111,8,89,10,77,15,74,20,80,27,76,30,69,21,74,11,88,5,112,3,137,5,150,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8ce55bcbaa3f36a12a47b4ba81b1cdca" name="a8ce55bcbaa3f36a12a47b4ba81b1cdca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce55bcbaa3f36a12a47b4ba81b1cdca">&#9670;&#160;</a></span>GetAllocatedDataHandle() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::GetAllocatedDataHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_basic_model.html">CBasicModel</a> *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get handle of allocated data in constant buffer </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">model</td><td>Model that wants to allocate data in the constant buffer </td></tr>
+    <tr><td class="paramname">meshIndex</td><td>Index of mesh held by model </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>The handle that the model allocates data in the constant buffer </dd></dl>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a2f12d4f229a484fcd9950deadbce4816">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a2f12d4f229a484fcd9950deadbce4816">ACDynamicCbAllocatorPerMesh&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a2f12d4f229a484fcd9950deadbce4816">ACDynamicCbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a2f12d4f229a484fcd9950deadbce4816">ACDynamicCbAllocatorPerMesh&lt; MaterialInHlsl &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a2f12d4f229a484fcd9950deadbce4816">ACDynamicCbAllocatorPerMesh&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a7d3e88169cb1fed073a46aceba4980f3">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a7d3e88169cb1fed073a46aceba4980f3">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a7d3e88169cb1fed073a46aceba4980f3">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a7d3e88169cb1fed073a46aceba4980f3">ACDynamicCbAllocator&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#ae776f91e917446f86bf161f98dc81038">ACDynamicSbAllocatorPerMesh&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#ae776f91e917446f86bf161f98dc81038">ACDynamicSbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a1dc1914cc5d529737769d9a2342ca8d1" name="a1dc1914cc5d529737769d9a2342ca8d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc1914cc5d529737769d9a2342ca8d1">&#9670;&#160;</a></span>GetAllocatedDataHandle() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::GetAllocatedDataHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_billboard.html">CBillboard</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get handle of allocated data in constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a1a9f12669a165573e9ebc81b01be0ac0">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a1a9f12669a165573e9ebc81b01be0ac0">ACDynamicCbAllocatorPerMesh&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a1a9f12669a165573e9ebc81b01be0ac0">ACDynamicCbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a1a9f12669a165573e9ebc81b01be0ac0">ACDynamicCbAllocatorPerMesh&lt; MaterialInHlsl &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a1a9f12669a165573e9ebc81b01be0ac0">ACDynamicCbAllocatorPerMesh&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae397348c4f3f301c3cf0f4691d1b805a">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae397348c4f3f301c3cf0f4691d1b805a">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae397348c4f3f301c3cf0f4691d1b805a">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ae397348c4f3f301c3cf0f4691d1b805a">ACDynamicCbAllocator&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#ac61cb9471210a0030f46308d7217d47b">ACDynamicSbAllocatorPerMesh&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#ac61cb9471210a0030f46308d7217d47b">ACDynamicSbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="aea07eeecdb02db87dfccead7e2d2dc4f" name="aea07eeecdb02db87dfccead7e2d2dc4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea07eeecdb02db87dfccead7e2d2dc4f">&#9670;&#160;</a></span>GetAllocatedDataHandle() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::GetAllocatedDataHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_color_only_shape.html">CColorOnlyShape</a> *&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get handle of allocated data in constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a88d3382c40b66ba57523ddec9005b867">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a88d3382c40b66ba57523ddec9005b867">ACDynamicCbAllocatorPerMesh&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a88d3382c40b66ba57523ddec9005b867">ACDynamicCbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a88d3382c40b66ba57523ddec9005b867">ACDynamicCbAllocatorPerMesh&lt; MaterialInHlsl &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a88d3382c40b66ba57523ddec9005b867">ACDynamicCbAllocatorPerMesh&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#afa05ee3cd5b9df6a8564f8d3649bf945">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#afa05ee3cd5b9df6a8564f8d3649bf945">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#afa05ee3cd5b9df6a8564f8d3649bf945">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#afa05ee3cd5b9df6a8564f8d3649bf945">ACDynamicCbAllocator&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a07b649b6503ae5e76721c1bc2dc275ff">ACDynamicSbAllocatorPerMesh&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a07b649b6503ae5e76721c1bc2dc275ff">ACDynamicSbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="abb819a7ad383d3e018a871aa6c64f9cb" name="abb819a7ad383d3e018a871aa6c64f9cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb819a7ad383d3e018a871aa6c64f9cb">&#9670;&#160;</a></span>GetAllocatedDataHandle() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::GetAllocatedDataHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_debug_collider_shape.html">CDebugColliderShape</a> *&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get handle of allocated data in constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7f7f6f18a481e2fd686bb3c46d448f3a">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7f7f6f18a481e2fd686bb3c46d448f3a">ACDynamicCbAllocatorPerMesh&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7f7f6f18a481e2fd686bb3c46d448f3a">ACDynamicCbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7f7f6f18a481e2fd686bb3c46d448f3a">ACDynamicCbAllocatorPerMesh&lt; MaterialInHlsl &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7f7f6f18a481e2fd686bb3c46d448f3a">ACDynamicCbAllocatorPerMesh&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#aa6bdf3ce36d883ef4c082489b4b5e99a">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#aa6bdf3ce36d883ef4c082489b4b5e99a">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#aa6bdf3ce36d883ef4c082489b4b5e99a">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#aa6bdf3ce36d883ef4c082489b4b5e99a">ACDynamicCbAllocator&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#ad5608fecd198dce8077652f7cb28f475">ACDynamicSbAllocatorPerMesh&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#ad5608fecd198dce8077652f7cb28f475">ACDynamicSbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a5aa14dffebbf6d9acbb6769bad918138" name="a5aa14dffebbf6d9acbb6769bad918138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa14dffebbf6d9acbb6769bad918138">&#9670;&#160;</a></span>GetAllocatedDataHandle() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::GetAllocatedDataHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_skeletal_model.html">CSkeletalModel</a> *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get handle of allocated data in constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#ae3ed8785f420897d3a9edd424814a548">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#ae3ed8785f420897d3a9edd424814a548">ACDynamicCbAllocatorPerMesh&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#ae3ed8785f420897d3a9edd424814a548">ACDynamicCbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#ae3ed8785f420897d3a9edd424814a548">ACDynamicCbAllocatorPerMesh&lt; MaterialInHlsl &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#ae3ed8785f420897d3a9edd424814a548">ACDynamicCbAllocatorPerMesh&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#afa0eb573d58f8c1277106e4ed3d1ed30">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#afa0eb573d58f8c1277106e4ed3d1ed30">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#afa0eb573d58f8c1277106e4ed3d1ed30">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#afa0eb573d58f8c1277106e4ed3d1ed30">ACDynamicCbAllocator&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a209c01f563de4f77310cd21c7d7b0d15">ACDynamicSbAllocatorPerMesh&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a209c01f563de4f77310cd21c7d7b0d15">ACDynamicSbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="ac57925fae231df445619215d8239e4c6" name="ac57925fae231df445619215d8239e4c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57925fae231df445619215d8239e4c6">&#9670;&#160;</a></span>GetAllocatedDataHandle() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::GetAllocatedDataHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_sprite3_d.html">CSprite3D</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get handle of allocated data in constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a0df1314c871040560a8d6d08059f4552">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a0df1314c871040560a8d6d08059f4552">ACDynamicCbAllocatorPerMesh&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a0df1314c871040560a8d6d08059f4552">ACDynamicCbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a0df1314c871040560a8d6d08059f4552">ACDynamicCbAllocatorPerMesh&lt; MaterialInHlsl &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a0df1314c871040560a8d6d08059f4552">ACDynamicCbAllocatorPerMesh&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a07b2f38d8299d2b755a407d573fc1ca8">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a07b2f38d8299d2b755a407d573fc1ca8">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a07b2f38d8299d2b755a407d573fc1ca8">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a07b2f38d8299d2b755a407d573fc1ca8">ACDynamicCbAllocator&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#af67aaa4a2bf24e3af6fd934c988f8eae">ACDynamicSbAllocatorPerMesh&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#af67aaa4a2bf24e3af6fd934c988f8eae">ACDynamicSbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a7441d1e6af98d0d23f6bb5374fc47283" name="a7441d1e6af98d0d23f6bb5374fc47283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7441d1e6af98d0d23f6bb5374fc47283">&#9670;&#160;</a></span>GetAllocatedDataHandle() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::GetAllocatedDataHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_sprite_u_i.html">CSpriteUI</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get handle of allocated data in constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a5acf59b529e3c13b8695cc6609228165">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a5acf59b529e3c13b8695cc6609228165">ACDynamicCbAllocatorPerMesh&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a5acf59b529e3c13b8695cc6609228165">ACDynamicCbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a5acf59b529e3c13b8695cc6609228165">ACDynamicCbAllocatorPerMesh&lt; MaterialInHlsl &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a5acf59b529e3c13b8695cc6609228165">ACDynamicCbAllocatorPerMesh&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a1a5ae998905754c9927c70271c9314ca">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a1a5ae998905754c9927c70271c9314ca">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a1a5ae998905754c9927c70271c9314ca">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#a1a5ae998905754c9927c70271c9314ca">ACDynamicCbAllocator&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a0bd61347fdf527a43fd391b7d8a12844">ACDynamicSbAllocatorPerMesh&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a0bd61347fdf527a43fd391b7d8a12844">ACDynamicSbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a1fc32547fb1b68fee82b010d209b04b9" name="a1fc32547fb1b68fee82b010d209b04b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc32547fb1b68fee82b010d209b04b9">&#9670;&#160;</a></span>GetAllocatedDataHandle() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IDynamicResource::GetAllocatedDataHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_tex_shape.html">CTexShape</a> *&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get handle of allocated data in constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a6b82fd5125d86a69c7029f03bcb7c571">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a6b82fd5125d86a69c7029f03bcb7c571">ACDynamicCbAllocatorPerMesh&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a6b82fd5125d86a69c7029f03bcb7c571">ACDynamicCbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a6b82fd5125d86a69c7029f03bcb7c571">ACDynamicCbAllocatorPerMesh&lt; MaterialInHlsl &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a6b82fd5125d86a69c7029f03bcb7c571">ACDynamicCbAllocatorPerMesh&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ac36a0bd3ba4379d0f30204d1f1f9b8f4">ACDynamicCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ac36a0bd3ba4379d0f30204d1f1f9b8f4">ACDynamicCbAllocator&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ac36a0bd3ba4379d0f30204d1f1f9b8f4">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator.html#ac36a0bd3ba4379d0f30204d1f1f9b8f4">ACDynamicCbAllocator&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#ae733bb3a98629f960a3dd32d456a7c83">ACDynamicSbAllocatorPerMesh&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#ae733bb3a98629f960a3dd32d456a7c83">ACDynamicSbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a5a662fc9f40dd0b382f1c27cf7ef1cc3" name="a5a662fc9f40dd0b382f1c27cf7ef1cc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a662fc9f40dd0b382f1c27cf7ef1cc3">&#9670;&#160;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::string &amp; IDynamicResource::GetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the name of cbuffer defined in hlsl </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a9df6085ca025f9ccbc5ef1e17891ee2f">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a9df6085ca025f9ccbc5ef1e17891ee2f">ACDynamicCbAllocatorPerMesh&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a9df6085ca025f9ccbc5ef1e17891ee2f">ACDynamicCbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a9df6085ca025f9ccbc5ef1e17891ee2f">ACDynamicCbAllocatorPerMesh&lt; MaterialInHlsl &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a9df6085ca025f9ccbc5ef1e17891ee2f">ACDynamicCbAllocatorPerMesh&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a18e2c0806c6f45a28eb75df86f521b5c">ACDynamicSbAllocatorPerMesh&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a18e2c0806c6f45a28eb75df86f521b5c">ACDynamicSbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>で実装されています。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_dynamic_resource_a5a662fc9f40dd0b382f1c27cf7ef1cc3_icgraph.png" border="0" usemap="#aclass_i_dynamic_resource_a5a662fc9f40dd0b382f1c27cf7ef1cc3_icgraph" alt=""/></div>
+<map name="aclass_i_dynamic_resource_a5a662fc9f40dd0b382f1c27cf7ef1cc3_icgraph" id="aclass_i_dynamic_resource_a5a662fc9f40dd0b382f1c27cf7ef1cc3_icgraph">
+<area shape="rect" title="Get the name of cbuffer defined in hlsl" alt="" coords="201,47,394,73"/>
+<area shape="rect" href="class_c_dynamic_cb_registry.html#aa88e666a5318451a3abe046e4b2f4eb4" title=" " alt="" coords="5,5,153,48"/>
+<area shape="poly" title=" " alt="" coords="190,46,153,41,154,35,191,41"/>
+<area shape="rect" href="class_c_dynamic_sb_registry.html#a8f782593125c33a81e6d73529cf86308" title=" " alt="" coords="5,72,153,115"/>
+<area shape="poly" title=" " alt="" coords="191,79,154,85,153,79,190,74"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a67c1878616dc83b70c3492db15fc3173" name="a67c1878616dc83b70c3492db15fc3173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c1878616dc83b70c3492db15fc3173">&#9670;&#160;</a></span>Refresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IDynamicResource::Refresh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Refresh process that must be called at the end of every frame </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7e6a65998bfe85cc305fbaf0879b059d">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7e6a65998bfe85cc305fbaf0879b059d">ACDynamicCbAllocatorPerMesh&lt; Colorf &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7e6a65998bfe85cc305fbaf0879b059d">ACDynamicCbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7e6a65998bfe85cc305fbaf0879b059d">ACDynamicCbAllocatorPerMesh&lt; MaterialInHlsl &gt;</a>, <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7e6a65998bfe85cc305fbaf0879b059d">ACDynamicCbAllocatorPerMesh&lt; Vector4f &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a361341a356a823d0d7210e4af0d3e76c">ACDynamicSbAllocatorPerMesh&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a361341a356a823d0d7210e4af0d3e76c">ACDynamicSbAllocatorPerMesh&lt; DirectX::XMFLOAT4X4 &gt;</a>で実装されています。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_dynamic_resource_8h_source.html">DynamicResource.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ACRegistrarForGameObject クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-static-methods">静的限定公開メンバ関数</a> &#124;
+<a href="class_a_c_registrar_for_game_object-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">ACRegistrarForGameObject クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Class for registering game objects to map  
+ <a href="class_a_c_registrar_for_game_object.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_game_object_8h_source.html">GameObject.h</a>&gt;</code></p>
+<div class="dynheader">
+ACRegistrarForGameObject の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_registrar_for_game_object__inherit__graph.png" border="0" usemap="#a_a_c_registrar_for_game_object_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_a_c_registrar_for_game_object_inherit__map" id="a_a_c_registrar_for_game_object_inherit__map">
+<area shape="rect" title="Class for registering game objects to map" alt="" coords="25,5,209,32"/>
+<area shape="rect" href="class_c_registrar_game_object_prefab.html" title="Class for registering game object prefab to map" alt="" coords="5,80,229,107"/>
+<area shape="poly" title=" " alt="" coords="120,48,120,80,114,80,114,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a01d1d4f83e65b474c875a9e096345d50" id="r_a01d1d4f83e65b474c875a9e096345d50"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_registrar_for_game_object.html#a01d1d4f83e65b474c875a9e096345d50">ClassMap</a> = std::map&lt; std::string, std::function&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> *(<a class="el" href="class_c_scene.html">CScene</a> *, const <a class="el" href="struct_transformf.html">Transformf</a> &amp;)&gt; &gt;</td></tr>
+<tr class="memdesc:a01d1d4f83e65b474c875a9e096345d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of map associating class names with the function that created it  <br /></td></tr>
+<tr class="separator:a01d1d4f83e65b474c875a9e096345d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:af7d843035a96039ec830e75c3aca6dab" id="r_af7d843035a96039ec830e75c3aca6dab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_registrar_for_game_object.html#af7d843035a96039ec830e75c3aca6dab">ACRegistrarForGameObject</a> ()=default</td></tr>
+<tr class="memdesc:af7d843035a96039ec830e75c3aca6dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:af7d843035a96039ec830e75c3aca6dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c2369f53396d19f786d89d4961f4c4" id="r_ac4c2369f53396d19f786d89d4961f4c4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_registrar_for_game_object.html#ac4c2369f53396d19f786d89d4961f4c4">~ACRegistrarForGameObject</a> ()=default</td></tr>
+<tr class="memdesc:ac4c2369f53396d19f786d89d4961f4c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ac4c2369f53396d19f786d89d4961f4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7bd57ee6f210561bbd100b80c4383d36" id="r_a7bd57ee6f210561bbd100b80c4383d36"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_game_object.html">CGameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_registrar_for_game_object.html#a7bd57ee6f210561bbd100b80c4383d36">CreateGameObject</a> (const std::string &amp;className, <a class="el" href="class_c_scene.html">CScene</a> *scene, const <a class="el" href="struct_transformf.html">Transformf</a> &amp;transform)</td></tr>
+<tr class="memdesc:a7bd57ee6f210561bbd100b80c4383d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create game object  <br /></td></tr>
+<tr class="separator:a7bd57ee6f210561bbd100b80c4383d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64238865b45af73c4f262af97d8ddd4c" id="r_a64238865b45af73c4f262af97d8ddd4c"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_a_c_registrar_for_game_object.html#a01d1d4f83e65b474c875a9e096345d50">ClassMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_registrar_for_game_object.html#a64238865b45af73c4f262af97d8ddd4c">GetClassMap</a> ()</td></tr>
+<tr class="memdesc:a64238865b45af73c4f262af97d8ddd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get map associating class names with the function that created it  <br /></td></tr>
+<tr class="separator:a64238865b45af73c4f262af97d8ddd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+静的限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:aaafb927eb499249f46d5ccf0fef67b92" id="r_aaafb927eb499249f46d5ccf0fef67b92"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_a_c_registrar_for_game_object.html#a01d1d4f83e65b474c875a9e096345d50">ClassMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_registrar_for_game_object.html#aaafb927eb499249f46d5ccf0fef67b92">GetClassMapProtected</a> ()</td></tr>
+<tr class="memdesc:aaafb927eb499249f46d5ccf0fef67b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get map associating class names with the function that created it  <br /></td></tr>
+<tr class="separator:aaafb927eb499249f46d5ccf0fef67b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Class for registering game objects to map </p>
+</div><h2 class="groupheader">型定義メンバ詳解</h2>
+<a id="a01d1d4f83e65b474c875a9e096345d50" name="a01d1d4f83e65b474c875a9e096345d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d1d4f83e65b474c875a9e096345d50">&#9670;&#160;</a></span>ClassMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_a_c_registrar_for_game_object.html#a01d1d4f83e65b474c875a9e096345d50">ACRegistrarForGameObject::ClassMap</a> =  std::map&lt;std::string, std::function&lt;<a class="el" href="class_c_game_object.html">CGameObject</a>* (<a class="el" href="class_c_scene.html">CScene</a>*, const <a class="el" href="struct_transformf.html">Transformf</a>&amp;)&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of map associating class names with the function that created it </p>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="af7d843035a96039ec830e75c3aca6dab" name="af7d843035a96039ec830e75c3aca6dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d843035a96039ec830e75c3aca6dab">&#9670;&#160;</a></span>ACRegistrarForGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ACRegistrarForGameObject::ACRegistrarForGameObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="ac4c2369f53396d19f786d89d4961f4c4" name="ac4c2369f53396d19f786d89d4961f4c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c2369f53396d19f786d89d4961f4c4">&#9670;&#160;</a></span>~ACRegistrarForGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ACRegistrarForGameObject::~ACRegistrarForGameObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a7bd57ee6f210561bbd100b80c4383d36" name="a7bd57ee6f210561bbd100b80c4383d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bd57ee6f210561bbd100b80c4383d36">&#9670;&#160;</a></span>CreateGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_object.html">CGameObject</a> * ACRegistrarForGameObject::CreateGameObject </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>className</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_scene.html">CScene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td>
+          <td class="paramname"><em>transform</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create game object </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">className</td><td>Name of class to be created </td></tr>
+    <tr><td class="paramname">ownerScene</td><td>Scene that is the owner of this game object </td></tr>
+    <tr><td class="paramname">transform</td><td>Transform of this game object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Returns a pointer to the class if it is successfully created, nullptr if not. </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_registrar_for_game_object_a7bd57ee6f210561bbd100b80c4383d36_cgraph.png" border="0" usemap="#aclass_a_c_registrar_for_game_object_a7bd57ee6f210561bbd100b80c4383d36_cgraph" alt=""/></div>
+<map name="aclass_a_c_registrar_for_game_object_a7bd57ee6f210561bbd100b80c4383d36_cgraph" id="aclass_a_c_registrar_for_game_object_a7bd57ee6f210561bbd100b80c4383d36_cgraph">
+<area shape="rect" title="Create game object" alt="" coords="5,5,189,48"/>
+<area shape="rect" href="class_a_c_registrar_for_game_object.html#aaafb927eb499249f46d5ccf0fef67b92" title="Get map associating class names with the function that created it" alt="" coords="237,5,420,48"/>
+<area shape="poly" title=" " alt="" coords="189,24,221,24,221,29,189,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_registrar_for_game_object_a7bd57ee6f210561bbd100b80c4383d36_icgraph.png" border="0" usemap="#aclass_a_c_registrar_for_game_object_a7bd57ee6f210561bbd100b80c4383d36_icgraph" alt=""/></div>
+<map name="aclass_a_c_registrar_for_game_object_a7bd57ee6f210561bbd100b80c4383d36_icgraph" id="aclass_a_c_registrar_for_game_object_a7bd57ee6f210561bbd100b80c4383d36_icgraph">
+<area shape="rect" title="Create game object" alt="" coords="240,93,423,136"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a336542556da41d6031bd53699f0aa0f9" title="Constructor" alt="" coords="19,5,178,48"/>
+<area shape="poly" title=" " alt="" coords="260,90,191,62,160,51,162,46,193,58,262,85"/>
+<area shape="rect" href="class_c_scene.html#af75c0227650637ad222e3b76f98acca6" title="Create a game object" alt="" coords="5,72,192,99"/>
+<area shape="poly" title=" " alt="" coords="224,104,192,100,192,94,224,99"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#ae5986e9ff5d47f5308696d6a9d0c3254" title="Rebuild the object with the current prefab name" alt="" coords="23,123,174,165"/>
+<area shape="poly" title=" " alt="" coords="224,131,175,137,174,132,224,126"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a914ad8572c7e53d4cddb5ae4925d04cf" title="Set prefab" alt="" coords="23,189,174,232"/>
+<area shape="poly" title=" " alt="" coords="272,145,193,180,163,191,161,186,191,175,269,140"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a64238865b45af73c4f262af97d8ddd4c" name="a64238865b45af73c4f262af97d8ddd4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64238865b45af73c4f262af97d8ddd4c">&#9670;&#160;</a></span>GetClassMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_a_c_registrar_for_game_object.html#a01d1d4f83e65b474c875a9e096345d50">ClassMap</a> &amp; ACRegistrarForGameObject::GetClassMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get map associating class names with the function that created it </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_registrar_for_game_object_a64238865b45af73c4f262af97d8ddd4c_cgraph.png" border="0" usemap="#aclass_a_c_registrar_for_game_object_a64238865b45af73c4f262af97d8ddd4c_cgraph" alt=""/></div>
+<map name="aclass_a_c_registrar_for_game_object_a64238865b45af73c4f262af97d8ddd4c_cgraph" id="aclass_a_c_registrar_for_game_object_a64238865b45af73c4f262af97d8ddd4c_cgraph">
+<area shape="rect" title="Get map associating class names with the function that created it" alt="" coords="5,5,189,48"/>
+<area shape="rect" href="class_a_c_registrar_for_game_object.html#aaafb927eb499249f46d5ccf0fef67b92" title="Get map associating class names with the function that created it" alt="" coords="237,5,420,48"/>
+<area shape="poly" title=" " alt="" coords="189,24,221,24,221,29,189,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaafb927eb499249f46d5ccf0fef67b92" name="aaafb927eb499249f46d5ccf0fef67b92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaafb927eb499249f46d5ccf0fef67b92">&#9670;&#160;</a></span>GetClassMapProtected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_a_c_registrar_for_game_object.html#a01d1d4f83e65b474c875a9e096345d50">ClassMap</a> &amp; ACRegistrarForGameObject::GetClassMapProtected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get map associating class names with the function that created it </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_registrar_for_game_object_aaafb927eb499249f46d5ccf0fef67b92_icgraph.png" border="0" usemap="#aclass_a_c_registrar_for_game_object_aaafb927eb499249f46d5ccf0fef67b92_icgraph" alt=""/></div>
+<map name="aclass_a_c_registrar_for_game_object_aaafb927eb499249f46d5ccf0fef67b92_icgraph" id="aclass_a_c_registrar_for_game_object_aaafb927eb499249f46d5ccf0fef67b92_icgraph">
+<area shape="rect" title="Get map associating class names with the function that created it" alt="" coords="488,160,671,203"/>
+<area shape="rect" href="class_a_c_registrar_for_game_object.html#a7bd57ee6f210561bbd100b80c4383d36" title="Create game object" alt="" coords="248,93,432,136"/>
+<area shape="poly" title=" " alt="" coords="486,158,419,139,420,134,487,153"/>
+<area shape="rect" href="class_c_registrar_game_object_prefab.html#a918dd689aa0a4e82ebeb4cd52b76befb" title="Constructor" alt="" coords="240,160,440,203"/>
+<area shape="poly" title=" " alt="" coords="473,184,440,184,440,179,473,179"/>
+<area shape="rect" href="class_a_c_registrar_for_game_object.html#a64238865b45af73c4f262af97d8ddd4c" title="Get map associating class names with the function that created it" alt="" coords="248,227,432,269"/>
+<area shape="poly" title=" " alt="" coords="487,210,420,229,419,223,486,205"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a336542556da41d6031bd53699f0aa0f9" title="Constructor" alt="" coords="19,5,178,48"/>
+<area shape="poly" title=" " alt="" coords="265,90,191,63,160,51,162,46,193,57,267,85"/>
+<area shape="rect" href="class_c_scene.html#af75c0227650637ad222e3b76f98acca6" title="Create a game object" alt="" coords="5,72,192,99"/>
+<area shape="poly" title=" " alt="" coords="232,104,192,99,192,94,233,99"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#ae5986e9ff5d47f5308696d6a9d0c3254" title="Rebuild the object with the current prefab name" alt="" coords="23,123,174,165"/>
+<area shape="poly" title=" " alt="" coords="233,130,175,137,174,132,232,125"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a914ad8572c7e53d4cddb5ae4925d04cf" title="Set prefab" alt="" coords="23,189,174,232"/>
+<area shape="poly" title=" " alt="" coords="254,145,241,150,217,165,193,180,166,191,164,186,190,175,214,160,238,146,252,140"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_game_object_8h_source.html">GameObject.h</a></li>
+<li><a class="el" href="_game_object_8cpp.html">GameObject.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

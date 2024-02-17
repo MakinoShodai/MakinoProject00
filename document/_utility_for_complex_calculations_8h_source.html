@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: UtilityForComplexCalculations.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">UtilityForComplexCalculations.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_utility_for_complex_calculations_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __UTILITY_FOR_COMPLEX_CALCULATIONS_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __UTILITY_FOR_COMPLEX_CALCULATIONS_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_math_8h.html">UtilityForMath.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_utl.html">Utl</a> {</div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="namespace_utl_1_1_calc.html">    7</a></span>    <span class="keyword">namespace </span>Calc {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordtype">float</span> <a class="code hl_function" href="namespace_utl_1_1_calc.html#a9c4a1af80ee310c19c2a9489c1b6aa31">CalculateDistancePlanePoint</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; plane, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; planeNormal, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; point);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">float</span> <a class="code hl_function" href="namespace_utl_1_1_calc.html#abe64f43f19d3ba655f82a92b275a09d4">CalculateDistanceSegments</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; vCenterA2B, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; dirA, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; dirB, <span class="keywordtype">float</span> halfLengthA, <span class="keywordtype">float</span> halfLengthB,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <a class="code hl_class" href="struct_vector.html">Vector3f</a>* offsetA, <a class="code hl_class" href="struct_vector.html">Vector3f</a>* offsetB, <a class="code hl_class" href="struct_vector.html">Vector3f</a>* vTieClosestPoint);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_function" href="namespace_utl_1_1_calc.html#aba86652ed5e9310fe915f3c67ddba7b6">ClosestTriangle2Point</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; point, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; a, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; b, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; c, <a class="code hl_class" href="struct_vector.html">Barycentric3f</a>* result = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_utl_1_1_calc.html#af7d17bf4d1ef6313732c9dce6d7f7972">IsPointInRectangleXZ</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; point, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; a, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; b, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; c, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; d);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_utl_1_1_calc.html#abd5536637be43be645fd112e091b919b">CalclateIntersectSegmentsXZ</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; s1, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; v1, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; s2, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; v2, <a class="code hl_class" href="struct_vector.html">Vector3f</a>* out1, <a class="code hl_class" href="struct_vector.html">Vector3f</a>* out2, <span class="keywordtype">bool</span>* isOut2);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_utl_1_1_calc.html#a98d1444692474294b2108535cf2cd22f">CalculateIntersectLineInfiniteCylinder</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; L, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; V, </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; cylinder1, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; cylinder2, <span class="keywordtype">float</span> radius, </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <a class="code hl_class" href="struct_vector.html">Vector3f</a>* penetStart, <a class="code hl_class" href="struct_vector.html">Vector3f</a>* penetEnd);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_utl_1_1_calc.html#ad36ee9cbb94d8d8856fe67db3b82edda">CalculateBoxVertex8</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; center, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; sizeHalf, <span class="keyword">const</span> <a class="code hl_class" href="struct_matrix.html">Matrix3x3f</a>&amp; rotateMat, <a class="code hl_class" href="struct_vector.html">Vector3f</a>* vertexArray);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_utl_1_1_calc.html#a59dad53ac48a07528368899d4aac9bce">SortRectangleVertexCentroidXZ</a>(<a class="code hl_class" href="struct_vector.html">Vector3f</a>* vertexArray);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    } <span class="comment">// namespace Calc</span></div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>} <span class="comment">// namespace Utl</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif </span><span class="comment">// !__UTILITY_FOR_COMPLEX_CALCULATIONS_H__</span></div>
+<div class="ttc" id="a_utility_for_math_8h_html"><div class="ttname"><a href="_utility_for_math_8h.html">UtilityForMath.h</a></div><div class="ttdoc">This file provides utility in handling mathematics.</div></div>
+<div class="ttc" id="anamespace_utl_1_1_calc_html_a59dad53ac48a07528368899d4aac9bce"><div class="ttname"><a href="namespace_utl_1_1_calc.html#a59dad53ac48a07528368899d4aac9bce">Utl::Calc::SortRectangleVertexCentroidXZ</a></div><div class="ttdeci">void SortRectangleVertexCentroidXZ(Vector3f *vertexArray)</div><div class="ttdoc">Sort the vertices of a square by the angle from the centroid in the XZ plane</div><div class="ttdef"><b>Definition</b> UtilityForComplexCalculations.cpp:513</div></div>
+<div class="ttc" id="anamespace_utl_1_1_calc_html_a98d1444692474294b2108535cf2cd22f"><div class="ttname"><a href="namespace_utl_1_1_calc.html#a98d1444692474294b2108535cf2cd22f">Utl::Calc::CalculateIntersectLineInfiniteCylinder</a></div><div class="ttdeci">bool CalculateIntersectLineInfiniteCylinder(const Vector3f &amp;L, const Vector3f &amp;V, const Vector3f &amp;cylinder1, const Vector3f &amp;cylinder2, float radius, Vector3f *penetStart, Vector3f *penetEnd)</div><div class="ttdoc">Calculate the intersection of a straight line and an infinite cylinder</div><div class="ttdef"><b>Definition</b> UtilityForComplexCalculations.cpp:351</div></div>
+<div class="ttc" id="anamespace_utl_1_1_calc_html_a9c4a1af80ee310c19c2a9489c1b6aa31"><div class="ttname"><a href="namespace_utl_1_1_calc.html#a9c4a1af80ee310c19c2a9489c1b6aa31">Utl::Calc::CalculateDistancePlanePoint</a></div><div class="ttdeci">float CalculateDistancePlanePoint(const Vector3f &amp;plane, const Vector3f &amp;planeNormal, const Vector3f &amp;point)</div><div class="ttdoc">Calculate the shortest distance between a plane and a point</div><div class="ttdef"><b>Definition</b> UtilityForComplexCalculations.cpp:4</div></div>
+<div class="ttc" id="anamespace_utl_1_1_calc_html_aba86652ed5e9310fe915f3c67ddba7b6"><div class="ttname"><a href="namespace_utl_1_1_calc.html#aba86652ed5e9310fe915f3c67ddba7b6">Utl::Calc::ClosestTriangle2Point</a></div><div class="ttdeci">Vector3f ClosestTriangle2Point(const Vector3f &amp;point, const Vector3f &amp;a, const Vector3f &amp;b, const Vector3f &amp;c, Barycentric3f *result=nullptr)</div><div class="ttdoc">Calculate the coordinate on the triangle closest to the point</div><div class="ttdef"><b>Definition</b> UtilityForComplexCalculations.cpp:111</div></div>
+<div class="ttc" id="anamespace_utl_1_1_calc_html_abd5536637be43be645fd112e091b919b"><div class="ttname"><a href="namespace_utl_1_1_calc.html#abd5536637be43be645fd112e091b919b">Utl::Calc::CalclateIntersectSegmentsXZ</a></div><div class="ttdeci">bool CalclateIntersectSegmentsXZ(const Vector3f &amp;s1, const Vector3f &amp;v1, const Vector3f &amp;s2, const Vector3f &amp;v2, Vector3f *out1, Vector3f *out2, bool *isOut2)</div><div class="ttdoc">Calculate the intersection of line segments in the 2-dimensional coordinate space of the XZ plane</div><div class="ttdef"><b>Definition</b> UtilityForComplexCalculations.cpp:290</div></div>
+<div class="ttc" id="anamespace_utl_1_1_calc_html_abe64f43f19d3ba655f82a92b275a09d4"><div class="ttname"><a href="namespace_utl_1_1_calc.html#abe64f43f19d3ba655f82a92b275a09d4">Utl::Calc::CalculateDistanceSegments</a></div><div class="ttdeci">float CalculateDistanceSegments(const Vector3f &amp;vCenterA2B, const Vector3f &amp;dirA, const Vector3f &amp;dirB, float halfLengthA, float halfLengthB, Vector3f *offsetA, Vector3f *offsetB, Vector3f *vTieClosestPoint)</div><div class="ttdoc">Calculate the shortest distance between line segments</div><div class="ttdef"><b>Definition</b> UtilityForComplexCalculations.cpp:13</div></div>
+<div class="ttc" id="anamespace_utl_1_1_calc_html_ad36ee9cbb94d8d8856fe67db3b82edda"><div class="ttname"><a href="namespace_utl_1_1_calc.html#ad36ee9cbb94d8d8856fe67db3b82edda">Utl::Calc::CalculateBoxVertex8</a></div><div class="ttdeci">void CalculateBoxVertex8(const Vector3f &amp;center, const Vector3f &amp;sizeHalf, const Matrix3x3f &amp;rotateMat, Vector3f *vertexArray)</div><div class="ttdoc">Calculate the 8 vertex coordinates that the box has</div><div class="ttdef"><b>Definition</b> UtilityForComplexCalculations.cpp:495</div></div>
+<div class="ttc" id="anamespace_utl_1_1_calc_html_af7d17bf4d1ef6313732c9dce6d7f7972"><div class="ttname"><a href="namespace_utl_1_1_calc.html#af7d17bf4d1ef6313732c9dce6d7f7972">Utl::Calc::IsPointInRectangleXZ</a></div><div class="ttdeci">bool IsPointInRectangleXZ(const Vector3f &amp;point, const Vector3f &amp;a, const Vector3f &amp;b, const Vector3f &amp;c, const Vector3f &amp;d)</div><div class="ttdoc">Is the point contained within a rectangle in 2-dimensional coordinate space in the XZ plane?</div><div class="ttdef"><b>Definition</b> UtilityForComplexCalculations.cpp:278</div></div>
+<div class="ttc" id="anamespace_utl_html"><div class="ttname"><a href="namespace_utl.html">Utl</a></div><div class="ttdef"><b>Definition</b> Utility.h:24</div></div>
+<div class="ttc" id="astruct_matrix_html"><div class="ttname"><a href="struct_matrix.html">Matrix&lt; float, 3, 3 &gt;</a></div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 3 &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

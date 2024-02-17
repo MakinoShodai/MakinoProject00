@@ -1,0 +1,577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Mkpe::BoundingVolume 構造体</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_mkpe.html">Mkpe</a></li><li class="navelem"><a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="struct_mkpe_1_1_bounding_volume-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Mkpe::BoundingVolume 構造体</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Bounding volume using AABB  
+ <a href="struct_mkpe_1_1_bounding_volume.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_bouding_volume_8h_source.html">BoudingVolume.h</a>&gt;</code></p>
+<div class="dynheader">
+Mkpe::BoundingVolume 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_bounding_volume__coll__graph.png" border="0" usemap="#a_mkpe_1_1_bounding_volume_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mkpe_1_1_bounding_volume_coll__map" id="a_mkpe_1_1_bounding_volume_coll__map">
+<area shape="rect" title="Bounding volume using AABB" alt="" coords="5,315,165,341"/>
+<area shape="rect" href="struct_vector.html" title=" " alt="" coords="24,208,146,235"/>
+<area shape="poly" title=" " alt="" coords="88,250,88,314,82,314,82,250"/>
+<area shape="rect" title=" " alt="" coords="66,5,104,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,79,96,80,159,86,207,80,208,75,159,74,96,78,47"/>
+<area shape="rect" href="struct_vector.html" title="Colomn vector structure" alt="" coords="114,99,240,125"/>
+<area shape="poly" title=" " alt="" coords="110,41,166,96,162,100,107,45"/>
+<area shape="poly" title=" " alt="" coords="158,139,98,209,94,206,154,136"/>
+<area shape="poly" title=" " alt="" coords="257,103,267,112,259,120,241,123,240,118,256,116,262,112,254,108"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a150f8b51279f24b9e12216c8ed304c7d" id="r_a150f8b51279f24b9e12216c8ed304c7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_bounding_volume.html#a150f8b51279f24b9e12216c8ed304c7d">BoundingVolume</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;<a class="el" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>=<a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>(0.0f, 0.0f, 0.0f), const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;<a class="el" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>=<a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>(0.0f, 0.0f, 0.0f))</td></tr>
+<tr class="memdesc:a150f8b51279f24b9e12216c8ed304c7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a150f8b51279f24b9e12216c8ed304c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefbf34c2081e2c9318f60ea8b0ebfdbe" id="r_aefbf34c2081e2c9318f60ea8b0ebfdbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_bounding_volume.html#aefbf34c2081e2c9318f60ea8b0ebfdbe">BoundingVolume</a> (const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;a, const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;b)</td></tr>
+<tr class="memdesc:aefbf34c2081e2c9318f60ea8b0ebfdbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that creates a bounding volume that contains two bounding volumes  <br /></td></tr>
+<tr class="separator:aefbf34c2081e2c9318f60ea8b0ebfdbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63db4ac6e6cdc8a8d3b5253c0306124a" id="r_a63db4ac6e6cdc8a8d3b5253c0306124a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_bounding_volume.html#a63db4ac6e6cdc8a8d3b5253c0306124a">BoundingVolume</a> (const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;a, const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;b, const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;c)</td></tr>
+<tr class="memdesc:a63db4ac6e6cdc8a8d3b5253c0306124a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that creates a bounding volume that contains three bounding volumes  <br /></td></tr>
+<tr class="separator:a63db4ac6e6cdc8a8d3b5253c0306124a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc6aea51e5382745477a20ffa8c662fc" id="r_afc6aea51e5382745477a20ffa8c662fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_bounding_volume.html#afc6aea51e5382745477a20ffa8c662fc">BoundingVolume</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;pos, const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;localBV)</td></tr>
+<tr class="memdesc:afc6aea51e5382745477a20ffa8c662fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that moves a bounding volume defined in local coordinate space to world coordinate space  <br /></td></tr>
+<tr class="separator:afc6aea51e5382745477a20ffa8c662fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c1644baebb8b6bcaddb8ba245a2fac" id="r_a34c1644baebb8b6bcaddb8ba245a2fac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_bounding_volume.html#a34c1644baebb8b6bcaddb8ba245a2fac">Expand</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;expand)</td></tr>
+<tr class="memdesc:a34c1644baebb8b6bcaddb8ba245a2fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand the bounding volume by a specified amount in each axis  <br /></td></tr>
+<tr class="separator:a34c1644baebb8b6bcaddb8ba245a2fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad361c9719f360d91df93a240bc4d5648" id="r_ad361c9719f360d91df93a240bc4d5648"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_bounding_volume.html#ad361c9719f360d91df93a240bc4d5648">GetCost</a> () const</td></tr>
+<tr class="memdesc:ad361c9719f360d91df93a240bc4d5648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get const of bounding volume  <br /></td></tr>
+<tr class="separator:ad361c9719f360d91df93a240bc4d5648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a940322f03c213864da85342295d854f7" id="r_a940322f03c213864da85342295d854f7"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_bounding_volume.html#a940322f03c213864da85342295d854f7">GetProximity</a> (const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;target) const</td></tr>
+<tr class="memdesc:a940322f03c213864da85342295d854f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get proximity to target bounding volume  <br /></td></tr>
+<tr class="separator:a940322f03c213864da85342295d854f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc140232be2a54f55ac9fd42a0c2712" id="r_afbc140232be2a54f55ac9fd42a0c2712"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_bounding_volume.html#afbc140232be2a54f55ac9fd42a0c2712">IsContain</a> (const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;target) const</td></tr>
+<tr class="memdesc:afbc140232be2a54f55ac9fd42a0c2712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this BV contains the subject BV?  <br /></td></tr>
+<tr class="separator:afbc140232be2a54f55ac9fd42a0c2712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad46c89c40573e14f50d46d18b32a93" id="r_aaad46c89c40573e14f50d46d18b32a93"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_bounding_volume.html#aaad46c89c40573e14f50d46d18b32a93">IsIntersect</a> (const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;target) const</td></tr>
+<tr class="memdesc:aaad46c89c40573e14f50d46d18b32a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this BV in contact with the subject BV?  <br /></td></tr>
+<tr class="separator:aaad46c89c40573e14f50d46d18b32a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:ae31c1a7b8e407e13cd4a8fad31673d05" id="r_ae31c1a7b8e407e13cd4a8fad31673d05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a></td></tr>
+<tr class="memdesc:ae31c1a7b8e407e13cd4a8fad31673d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum coordinates of AABB  <br /></td></tr>
+<tr class="separator:ae31c1a7b8e407e13cd4a8fad31673d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3969ab4e9899efe6f175db5f1c38d01a" id="r_a3969ab4e9899efe6f175db5f1c38d01a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a></td></tr>
+<tr class="memdesc:a3969ab4e9899efe6f175db5f1c38d01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum coordinates of AABB  <br /></td></tr>
+<tr class="separator:a3969ab4e9899efe6f175db5f1c38d01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Bounding volume using AABB </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a150f8b51279f24b9e12216c8ed304c7d" name="a150f8b51279f24b9e12216c8ed304c7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a150f8b51279f24b9e12216c8ed304c7d">&#9670;&#160;</a></span>BoundingVolume() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::BoundingVolume::BoundingVolume </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>minAABB</em> = <code><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>(0.0f,&#160;0.0f,&#160;0.0f)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>maxAABB</em> = <code><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>(0.0f,&#160;0.0f,&#160;0.0f)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minAABB</td><td>Minimum coordinates of AABB </td></tr>
+    <tr><td class="paramname">maxAABB</td><td>Maximum coordinates of AABB </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aefbf34c2081e2c9318f60ea8b0ebfdbe" name="aefbf34c2081e2c9318f60ea8b0ebfdbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefbf34c2081e2c9318f60ea8b0ebfdbe">&#9670;&#160;</a></span>BoundingVolume() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::BoundingVolume::BoundingVolume </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor that creates a bounding volume that contains two bounding volumes </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>First bounding volume </td></tr>
+    <tr><td class="paramname">b</td><td>Second bounding volume </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_bounding_volume_aefbf34c2081e2c9318f60ea8b0ebfdbe_cgraph.png" border="0" usemap="#astruct_mkpe_1_1_bounding_volume_aefbf34c2081e2c9318f60ea8b0ebfdbe_cgraph" alt=""/></div>
+<map name="astruct_mkpe_1_1_bounding_volume_aefbf34c2081e2c9318f60ea8b0ebfdbe_cgraph" id="astruct_mkpe_1_1_bounding_volume_aefbf34c2081e2c9318f60ea8b0ebfdbe_cgraph">
+<area shape="rect" title="Constructor that creates a bounding volume that contains two bounding volumes" alt="" coords="5,48,165,91"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="213,5,287,32"/>
+<area shape="poly" title=" " alt="" coords="156,45,197,32,198,37,157,50"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="213,56,287,83"/>
+<area shape="poly" title=" " alt="" coords="165,67,197,67,197,72,165,72"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="213,107,287,133"/>
+<area shape="poly" title=" " alt="" coords="157,89,198,102,197,107,156,94"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a63db4ac6e6cdc8a8d3b5253c0306124a" name="a63db4ac6e6cdc8a8d3b5253c0306124a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63db4ac6e6cdc8a8d3b5253c0306124a">&#9670;&#160;</a></span>BoundingVolume() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::BoundingVolume::BoundingVolume </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor that creates a bounding volume that contains three bounding volumes </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>First bounding volume </td></tr>
+    <tr><td class="paramname">b</td><td>Second bounding volume </td></tr>
+    <tr><td class="paramname">c</td><td>Third bounding volume </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afc6aea51e5382745477a20ffa8c662fc" name="afc6aea51e5382745477a20ffa8c662fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6aea51e5382745477a20ffa8c662fc">&#9670;&#160;</a></span>BoundingVolume() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::BoundingVolume::BoundingVolume </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>localBV</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor that moves a bounding volume defined in local coordinate space to world coordinate space </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Coordinates in world coordinate space </td></tr>
+    <tr><td class="paramname">localBV</td><td>Bounding volume defined in local coordinate space </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a34c1644baebb8b6bcaddb8ba245a2fac" name="a34c1644baebb8b6bcaddb8ba245a2fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34c1644baebb8b6bcaddb8ba245a2fac">&#9670;&#160;</a></span>Expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::BoundingVolume::Expand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>expand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expand the bounding volume by a specified amount in each axis </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expand</td><td>How much to spread on each axis </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_bounding_volume_a34c1644baebb8b6bcaddb8ba245a2fac_icgraph.png" border="0" usemap="#astruct_mkpe_1_1_bounding_volume_a34c1644baebb8b6bcaddb8ba245a2fac_icgraph" alt=""/></div>
+<map name="astruct_mkpe_1_1_bounding_volume_a34c1644baebb8b6bcaddb8ba245a2fac_icgraph" id="astruct_mkpe_1_1_bounding_volume_a34c1644baebb8b6bcaddb8ba245a2fac_icgraph">
+<area shape="rect" title="Expand the bounding volume by a specified amount in each axis" alt="" coords="251,5,410,48"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#ad502b2b251a8139e4c4d73968c7992a1" title="Add a new leaf node to the tree" alt="" coords="5,5,203,48"/>
+<area shape="poly" title=" " alt="" coords="235,29,203,29,203,24,235,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad361c9719f360d91df93a240bc4d5648" name="ad361c9719f360d91df93a240bc4d5648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad361c9719f360d91df93a240bc4d5648">&#9670;&#160;</a></span>GetCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Mkpe::BoundingVolume::GetCost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get const of bounding volume </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_bounding_volume_ad361c9719f360d91df93a240bc4d5648_cgraph.png" border="0" usemap="#astruct_mkpe_1_1_bounding_volume_ad361c9719f360d91df93a240bc4d5648_cgraph" alt=""/></div>
+<map name="astruct_mkpe_1_1_bounding_volume_ad361c9719f360d91df93a240bc4d5648_cgraph" id="astruct_mkpe_1_1_bounding_volume_ad361c9719f360d91df93a240bc4d5648_cgraph">
+<area shape="rect" title="Get const of bounding volume" alt="" coords="5,5,165,48"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="213,13,287,40"/>
+<area shape="poly" title=" " alt="" coords="165,24,197,24,197,29,165,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a940322f03c213864da85342295d854f7" name="a940322f03c213864da85342295d854f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a940322f03c213864da85342295d854f7">&#9670;&#160;</a></span>GetProximity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Mkpe::BoundingVolume::GetProximity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get proximity to target bounding volume </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_bounding_volume_a940322f03c213864da85342295d854f7_cgraph.png" border="0" usemap="#astruct_mkpe_1_1_bounding_volume_a940322f03c213864da85342295d854f7_cgraph" alt=""/></div>
+<map name="astruct_mkpe_1_1_bounding_volume_a940322f03c213864da85342295d854f7_cgraph" id="astruct_mkpe_1_1_bounding_volume_a940322f03c213864da85342295d854f7_cgraph">
+<area shape="rect" title="Get proximity to target bounding volume" alt="" coords="5,48,165,91"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="213,5,287,32"/>
+<area shape="poly" title=" " alt="" coords="156,45,197,32,198,37,157,50"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="213,56,287,83"/>
+<area shape="poly" title=" " alt="" coords="165,67,197,67,197,72,165,72"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="213,107,287,133"/>
+<area shape="poly" title=" " alt="" coords="157,89,198,102,197,107,156,94"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afbc140232be2a54f55ac9fd42a0c2712" name="afbc140232be2a54f55ac9fd42a0c2712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbc140232be2a54f55ac9fd42a0c2712">&#9670;&#160;</a></span>IsContain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool Mkpe::BoundingVolume::IsContain </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this BV contains the subject BV? </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>Target bounding volume </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Return true if contained </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_bounding_volume_afbc140232be2a54f55ac9fd42a0c2712_cgraph.png" border="0" usemap="#astruct_mkpe_1_1_bounding_volume_afbc140232be2a54f55ac9fd42a0c2712_cgraph" alt=""/></div>
+<map name="astruct_mkpe_1_1_bounding_volume_afbc140232be2a54f55ac9fd42a0c2712_cgraph" id="astruct_mkpe_1_1_bounding_volume_afbc140232be2a54f55ac9fd42a0c2712_cgraph">
+<area shape="rect" title="Is this BV contains the subject BV?" alt="" coords="5,48,165,91"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="213,5,287,32"/>
+<area shape="poly" title=" " alt="" coords="156,45,197,32,198,37,157,50"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="213,56,287,83"/>
+<area shape="poly" title=" " alt="" coords="165,67,197,67,197,72,165,72"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="213,107,287,133"/>
+<area shape="poly" title=" " alt="" coords="157,89,198,102,197,107,156,94"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaad46c89c40573e14f50d46d18b32a93" name="aaad46c89c40573e14f50d46d18b32a93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad46c89c40573e14f50d46d18b32a93">&#9670;&#160;</a></span>IsIntersect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool Mkpe::BoundingVolume::IsIntersect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this BV in contact with the subject BV? </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>Target bounding volume </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Return true if contacted </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_bounding_volume_aaad46c89c40573e14f50d46d18b32a93_cgraph.png" border="0" usemap="#astruct_mkpe_1_1_bounding_volume_aaad46c89c40573e14f50d46d18b32a93_cgraph" alt=""/></div>
+<map name="astruct_mkpe_1_1_bounding_volume_aaad46c89c40573e14f50d46d18b32a93_cgraph" id="astruct_mkpe_1_1_bounding_volume_aaad46c89c40573e14f50d46d18b32a93_cgraph">
+<area shape="rect" title="Is this BV in contact with the subject BV?" alt="" coords="5,48,165,91"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="213,5,287,32"/>
+<area shape="poly" title=" " alt="" coords="156,45,197,32,198,37,157,50"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="213,56,287,83"/>
+<area shape="poly" title=" " alt="" coords="165,67,197,67,197,72,165,72"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="213,107,287,133"/>
+<area shape="poly" title=" " alt="" coords="157,89,198,102,197,107,156,94"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_mkpe_1_1_bounding_volume_aaad46c89c40573e14f50d46d18b32a93_icgraph.png" border="0" usemap="#astruct_mkpe_1_1_bounding_volume_aaad46c89c40573e14f50d46d18b32a93_icgraph" alt=""/></div>
+<map name="astruct_mkpe_1_1_bounding_volume_aaad46c89c40573e14f50d46d18b32a93_icgraph" id="astruct_mkpe_1_1_bounding_volume_aaad46c89c40573e14f50d46d18b32a93_icgraph">
+<area shape="rect" title="Is this BV in contact with the subject BV?" alt="" coords="251,39,410,81"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_manager.html#a3444ac2ec21651e428cd4a1ef2e24544" title="Merge the pairs from the current physics simulation, with the pairs from the previous physics simulat..." alt="" coords="15,5,193,48"/>
+<area shape="poly" title=" " alt="" coords="235,49,193,42,194,37,236,43"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#a430c89612234b80b5f0c6522bc23993a" title="Perform collision detection at node and node, creating potentially colliding pairs." alt="" coords="5,72,203,115"/>
+<area shape="poly" title=" " alt="" coords="236,77,203,81,203,76,235,71"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a3969ab4e9899efe6f175db5f1c38d01a" name="a3969ab4e9899efe6f175db5f1c38d01a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3969ab4e9899efe6f175db5f1c38d01a">&#9670;&#160;</a></span>maxAABB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Mkpe::BoundingVolume::maxAABB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum coordinates of AABB </p>
+
+</div>
+</div>
+<a id="ae31c1a7b8e407e13cd4a8fad31673d05" name="ae31c1a7b8e407e13cd4a8fad31673d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae31c1a7b8e407e13cd4a8fad31673d05">&#9670;&#160;</a></span>minAABB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Mkpe::BoundingVolume::minAABB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimum coordinates of AABB </p>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_bouding_volume_8h_source.html">BoudingVolume.h</a></li>
+<li><a class="el" href="_bouding_volume_8cpp.html">BoudingVolume.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

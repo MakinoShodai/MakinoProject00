@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: AssetCrypter 名前空間</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">AssetCrypter 名前空間</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:ae3a67f3c0fb2004abc6513c271f19149" id="r_ae3a67f3c0fb2004abc6513c271f19149"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_asset_crypter.html#ae3a67f3c0fb2004abc6513c271f19149">LoadFunctionType</a> = std::function&lt; bool(const void *data, size_t size, const std::wstring &amp;fileName)&gt;</td></tr>
+<tr class="memdesc:ae3a67f3c0fb2004abc6513c271f19149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function type for loading assets with decrypted data  <br /></td></tr>
+<tr class="separator:ae3a67f3c0fb2004abc6513c271f19149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a5ec9f24e16a098447b31275a17cebe87" id="r_a5ec9f24e16a098447b31275a17cebe87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_asset_crypter.html#a5ec9f24e16a098447b31275a17cebe87">LoadPakFile</a> (const std::wstring &amp;filePath, <a class="el" href="namespace_asset_crypter.html#ae3a67f3c0fb2004abc6513c271f19149">LoadFunctionType</a> function)</td></tr>
+<tr class="memdesc:a5ec9f24e16a098447b31275a17cebe87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load .pak file  <br /></td></tr>
+<tr class="separator:a5ec9f24e16a098447b31275a17cebe87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c95f168bdbf0c5a475d83dcbae1172" id="r_ae9c95f168bdbf0c5a475d83dcbae1172"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_asset_crypter.html#ae9c95f168bdbf0c5a475d83dcbae1172">CreatePakFile</a> (const std::wstring &amp;pakFileName, std::initializer_list&lt; std::string &gt; extensions, const std::string &amp;dirPathAfterAssets=&quot;&quot;)</td></tr>
+<tr class="memdesc:ae9c95f168bdbf0c5a475d83dcbae1172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create .pak file  <br /></td></tr>
+<tr class="separator:ae9c95f168bdbf0c5a475d83dcbae1172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="ae3a67f3c0fb2004abc6513c271f19149" name="ae3a67f3c0fb2004abc6513c271f19149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a67f3c0fb2004abc6513c271f19149">&#9670;&#160;</a></span>LoadFunctionType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespace_asset_crypter.html#ae3a67f3c0fb2004abc6513c271f19149">AssetCrypter::LoadFunctionType</a> = typedef std::function&lt;bool(const void* data, size_t size, const std::wstring&amp; fileName)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function type for loading assets with decrypted data </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ae9c95f168bdbf0c5a475d83dcbae1172" name="ae9c95f168bdbf0c5a475d83dcbae1172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c95f168bdbf0c5a475d83dcbae1172">&#9670;&#160;</a></span>CreatePakFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AssetCrypter::CreatePakFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>pakFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::initializer_list&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>extensions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dirPathAfterAssets</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create .pak file </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pakFileName</td><td>Name of .pak file to be created. Please specify the name without the extension </td></tr>
+    <tr><td class="paramname">extensions</td><td>Extensions to make .pak file </td></tr>
+    <tr><td class="paramname">dirPathAfterAssets</td><td>Directory path after "AssetsPlain/" </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_asset_crypter_ae9c95f168bdbf0c5a475d83dcbae1172_cgraph.png" border="0" usemap="#anamespace_asset_crypter_ae9c95f168bdbf0c5a475d83dcbae1172_cgraph" alt=""/></div>
+<map name="anamespace_asset_crypter_ae9c95f168bdbf0c5a475d83dcbae1172_cgraph" id="anamespace_asset_crypter_ae9c95f168bdbf0c5a475d83dcbae1172_cgraph">
+<area shape="rect" title="Create .pak file" alt="" coords="5,5,193,32"/>
+<area shape="rect" href="_asset_crypter_8cpp.html#a00ee476619043432ac449e90496a0575" title=" " alt="" coords="241,5,334,32"/>
+<area shape="poly" title=" " alt="" coords="193,16,225,16,225,21,193,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5ec9f24e16a098447b31275a17cebe87" name="a5ec9f24e16a098447b31275a17cebe87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec9f24e16a098447b31275a17cebe87">&#9670;&#160;</a></span>LoadPakFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AssetCrypter::LoadPakFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_asset_crypter.html#ae3a67f3c0fb2004abc6513c271f19149">LoadFunctionType</a>&#160;</td>
+          <td class="paramname"><em>function</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load .pak file </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>Path of .pak file. Please specify the name without the extension </td></tr>
+    <tr><td class="paramname">function</td><td>Function for loading assets with decrypted data </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_asset_crypter_a5ec9f24e16a098447b31275a17cebe87_cgraph.png" border="0" usemap="#anamespace_asset_crypter_a5ec9f24e16a098447b31275a17cebe87_cgraph" alt=""/></div>
+<map name="anamespace_asset_crypter_a5ec9f24e16a098447b31275a17cebe87_cgraph" id="anamespace_asset_crypter_a5ec9f24e16a098447b31275a17cebe87_cgraph">
+<area shape="rect" title="Load .pak file" alt="" coords="5,31,183,57"/>
+<area shape="rect" href="_asset_crypter_8cpp.html#ab25d96b750ccf4cbaf9af5fd78c44f89" title=" " alt="" coords="262,5,356,32"/>
+<area shape="poly" title=" " alt="" coords="183,31,247,23,248,29,183,36"/>
+<area shape="rect" href="namespace_utl_1_1_str.html#ad72076fbe2405636f8945604a5d79dbc" title="Convert &#39;std::string&#39; to &#39;std::wstring&#39;" alt="" coords="231,56,387,83"/>
+<area shape="poly" title=" " alt="" coords="183,52,215,56,215,61,183,57"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_asset_crypter_a5ec9f24e16a098447b31275a17cebe87_icgraph.png" border="0" usemap="#anamespace_asset_crypter_a5ec9f24e16a098447b31275a17cebe87_icgraph" alt=""/></div>
+<map name="anamespace_asset_crypter_a5ec9f24e16a098447b31275a17cebe87_icgraph" id="anamespace_asset_crypter_a5ec9f24e16a098447b31275a17cebe87_icgraph">
+<area shape="rect" title="Load .pak file" alt="" coords="519,56,697,83"/>
+<area shape="rect" href="class_c_model_registry.html#a0d2076dd4798482cf355afaee9c25870" title="Load animations from pak file" alt="" coords="267,5,469,32"/>
+<area shape="poly" title=" " alt="" coords="526,55,434,35,435,30,527,50"/>
+<area shape="rect" href="class_c_model_registry.html#a959d88479440944f780a8b06fd3d8de9" title="Load models from pak file" alt="" coords="264,56,471,83"/>
+<area shape="poly" title=" " alt="" coords="504,72,472,72,472,67,504,67"/>
+<area shape="rect" href="class_c_texture_registry.html#aa67050d232cf1dfb7cdb7607f48b2ed8" title="Load textures from pak file" alt="" coords="278,107,458,133"/>
+<area shape="poly" title=" " alt="" coords="527,89,435,109,434,103,526,84"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,56,216,83"/>
+<area shape="poly" title=" " alt="" coords="296,39,217,58,216,53,294,34"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="poly" title=" " alt="" coords="51,43,44,37,30,35,17,37,10,41,8,47,12,54,7,57,3,47,6,38,15,32,30,29,46,32,55,39"/>
+<area shape="poly" title=" " alt="" coords="248,72,216,72,216,67,248,67"/>
+<area shape="poly" title=" " alt="" coords="294,105,216,86,217,81,296,100"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

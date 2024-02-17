@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ImguiHelper.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">ImguiHelper.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file handles helper class for imgui.  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_singleton_8h_source.html">Singleton.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_descriptor_heap_8h_source.html">DescriptorHeap.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_shared_ptr_8h_source.html">SharedPtr.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+ImguiHelper.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_imgui_helper_8h__incl.png" border="0" usemap="#a_imgui_helper_8h" alt=""/></div>
+<map name="a_imgui_helper_8h" id="a_imgui_helper_8h">
+<area shape="rect" title="This file handles helper class for imgui." alt="" coords="296,5,396,32"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="195,229,281,256"/>
+<area shape="poly" title=" " alt="" coords="326,35,298,54,266,82,236,116,215,156,212,170,214,186,224,215,219,217,209,187,207,170,210,154,232,113,262,78,295,50,323,30"/>
+<area shape="rect" href="_descriptor_heap_8h.html" title="This file handles descriptor heap." alt="" coords="285,80,407,107"/>
+<area shape="poly" title=" " alt="" coords="349,33,349,64,343,64,343,33"/>
+<area shape="rect" href="_shared_ptr_8h.html" title="This file handles self&#45;made shared pointer." alt="" coords="462,229,552,256"/>
+<area shape="poly" title=" " alt="" coords="366,30,425,79,457,114,484,153,497,184,505,213,500,215,492,186,479,156,453,117,421,83,362,35"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="171,304,305,331"/>
+<area shape="poly" title=" " alt="" coords="241,257,241,288,235,288,235,257"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="329,304,419,331"/>
+<area shape="poly" title=" " alt="" coords="263,254,338,294,335,299,260,259"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="5,304,148,331"/>
+<area shape="poly" title=" " alt="" coords="211,259,120,300,117,295,209,254"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="358,379,441,405"/>
+<area shape="poly" title=" " alt="" coords="381,330,392,363,387,365,376,332"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="423,453,488,480"/>
+<area shape="poly" title=" " alt="" coords="411,404,438,439,434,443,407,408"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="434,528,546,555"/>
+<area shape="poly" title=" " alt="" coords="464,479,480,513,475,515,459,482"/>
+<area shape="rect" href="_utility_for_direct_x_8h.html" title="This file defines utility functions that are useful for DirectX." alt="" coords="345,155,470,181"/>
+<area shape="poly" title=" " alt="" coords="359,105,389,141,385,145,354,109"/>
+<area shape="rect" href="_application_8h.html" title="This file handles application objects such as window and DirectX device." alt="" coords="224,155,321,181"/>
+<area shape="poly" title=" " alt="" coords="335,109,298,145,294,142,331,105"/>
+<area shape="poly" title=" " alt="" coords="407,182,383,289,377,288,402,181"/>
+<area shape="poly" title=" " alt="" coords="269,183,253,216,248,214,264,181"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="495,304,608,331"/>
+<area shape="poly" title=" " alt="" coords="298,179,515,294,513,299,295,184"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="465,379,587,405"/>
+<area shape="poly" title=" " alt="" coords="549,332,538,365,533,363,544,330"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="610,379,711,405"/>
+<area shape="poly" title=" " alt="" coords="572,329,630,368,628,372,569,333"/>
+<area shape="poly" title=" " alt="" coords="515,408,480,444,476,440,512,404"/>
+<area shape="poly" title=" " alt="" coords="525,406,499,514,494,512,520,405"/>
+<area shape="poly" title=" " alt="" coords="500,258,419,368,415,365,496,255"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_imgui_helper_8h__dep__incl.png" border="0" usemap="#a_imgui_helper_8hdep" alt=""/></div>
+<map name="a_imgui_helper_8hdep" id="a_imgui_helper_8hdep">
+<area shape="rect" title="This file handles helper class for imgui." alt="" coords="351,5,451,32"/>
+<area shape="rect" href="_application_clock_8cpp.html" title=" " alt="" coords="5,155,149,181"/>
+<area shape="poly" title=" " alt="" coords="361,41,106,157,103,152,359,36"/>
+<area shape="rect" href="_application_main_8cpp.html" title=" " alt="" coords="173,155,312,181"/>
+<area shape="poly" title=" " alt="" coords="378,45,258,156,254,152,374,41"/>
+<area shape="rect" href="_imgui_helper_8cpp.html" title=" " alt="" coords="656,80,770,107"/>
+<area shape="poly" title=" " alt="" coords="467,33,659,77,658,82,466,38"/>
+<area shape="rect" href="_scene_registry_8cpp.html" title=" " alt="" coords="335,155,467,181"/>
+<area shape="poly" title=" " alt="" coords="404,48,404,154,398,154,398,48"/>
+<area shape="rect" href="_scene_registry_8h.html" title="This file handles registry class that manages all scene." alt="" coords="514,80,632,107"/>
+<area shape="poly" title=" " alt="" coords="446,36,544,77,542,82,444,41"/>
+<area shape="poly" title=" " alt="" coords="499,108,149,159,149,154,499,103"/>
+<area shape="poly" title=" " alt="" coords="501,113,301,157,300,151,500,108"/>
+<area shape="poly" title=" " alt="" coords="530,115,432,156,430,152,528,111"/>
+<area shape="rect" href="_collider3_d_8cpp.html" title=" " alt="" coords="914,155,1019,181"/>
+<area shape="poly" title=" " alt="" coords="648,106,901,152,914,154,913,160,901,157,647,111"/>
+<area shape="rect" href="_directional_light_8cpp.html" title=" " alt="" coords="1043,155,1178,181"/>
+<area shape="poly" title=" " alt="" coords="647,104,841,129,1032,152,1043,154,1042,159,1031,157,840,134,646,110"/>
+<area shape="rect" href="_game_object_8cpp.html" title=" " alt="" coords="1203,155,1322,181"/>
+<area shape="poly" title=" " alt="" coords="648,104,801,120,920,128,1040,136,1191,152,1203,154,1202,159,1190,157,1039,141,920,134,800,126,647,110"/>
+<area shape="rect" href="_graphics_component_8cpp.html" title=" " alt="" coords="491,155,655,181"/>
+<area shape="poly" title=" " alt="" coords="576,122,576,154,570,154,570,122"/>
+<area shape="rect" href="_model_8cpp.html" title=" " alt="" coords="679,155,760,181"/>
+<area shape="poly" title=" " alt="" coords="613,111,695,152,693,156,611,116"/>
+<area shape="rect" href="_point_light_8cpp.html" title=" " alt="" coords="785,155,889,181"/>
+<area shape="poly" title=" " alt="" coords="634,109,791,151,790,157,632,114"/>
+</map>
+</div>
+</div>
+<p><a href="_imgui_helper_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_imgui_helper.html">CImguiHelper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class for imgui  <a href="class_c_imgui_helper.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_imgui_helper_1_1_c_thread_safe_feature.html">CImguiHelper::CThreadSafeFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feature for thread-safe  <a href="class_c_imgui_helper_1_1_c_thread_safe_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:afb39491040e15242495cf90ed5561468" id="r_afb39491040e15242495cf90ed5561468"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_imgui_helper_8h.html#afb39491040e15242495cf90ed5561468">ImguiWindowFunction</a> = std::function&lt; bool()&gt;</td></tr>
+<tr class="memdesc:afb39491040e15242495cf90ed5561468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for ImGui window  <br /></td></tr>
+<tr class="separator:afb39491040e15242495cf90ed5561468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a064de7ecd07860cc6c3597c5d70a9d34" id="r_a064de7ecd07860cc6c3597c5d70a9d34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_imgui_helper_8h.html#a064de7ecd07860cc6c3597c5d70a9d34">ProhibitedNonNumericCallback</a> (ImGuiInputTextCallbackData *data)</td></tr>
+<tr class="memdesc:a064de7ecd07860cc6c3597c5d70a9d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function to monitor prohibited non numeric characters  <br /></td></tr>
+<tr class="separator:a064de7ecd07860cc6c3597c5d70a9d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This file handles helper class for imgui. </p>
+<dl class="section author"><dt>著者</dt><dd>Shodai Makino </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2024/1/25 </dd></dl>
+</div><h2 class="groupheader">型定義詳解</h2>
+<a id="afb39491040e15242495cf90ed5561468" name="afb39491040e15242495cf90ed5561468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb39491040e15242495cf90ed5561468">&#9670;&#160;</a></span>ImguiWindowFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="_imgui_helper_8h.html#afb39491040e15242495cf90ed5561468">ImguiWindowFunction</a> =  std::function&lt;bool()&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for ImGui window </p>
+<dl class="section return"><dt>戻り値</dt><dd>Returns false if this function is erased, true otherwise </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a064de7ecd07860cc6c3597c5d70a9d34" name="a064de7ecd07860cc6c3597c5d70a9d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064de7ecd07860cc6c3597c5d70a9d34">&#9670;&#160;</a></span>ProhibitedNonNumericCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProhibitedNonNumericCallback </td>
+          <td>(</td>
+          <td class="paramtype">ImGuiInputTextCallbackData *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback function to monitor prohibited non numeric characters </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

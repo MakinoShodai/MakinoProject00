@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: IndexBuffer.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">IndexBuffer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_index_buffer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __INDEX_BUFFER_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __INDEX_BUFFER_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_gpu_optimized_resource_8h.html">GpuOptimizedResource.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> TIndex&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="_index_buffer_8h.html#a7435b1fe140b827cea60c9beb9ed5dc4">   16</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_index_buffer_8h.html#a7435b1fe140b827cea60c9beb9ed5dc4">IsIndexTypeUINT</a> = std::disjunction&lt;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    std::is_same&lt;TIndex, uint8_t&gt;,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    std::is_same&lt;TIndex, uint16_t&gt;,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::is_same&lt;TIndex, uint32_t&gt;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>&gt;;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_c_index_buffer.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_index_buffer.html">CIndexBuffer</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_gpu_optimized_resource.html">ACGpuOptimizedResource</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_c_index_buffer.html#a0a0b5175958e5ebe30cbb291b3533beb">   28</a></span>    <a class="code hl_function" href="class_c_index_buffer.html#a0a0b5175958e5ebe30cbb291b3533beb">CIndexBuffer</a>() : <a class="code hl_class" href="class_a_c_gpu_optimized_resource.html">ACGpuOptimizedResource</a>(), m_ibView(), m_numIndices(0), m_bytesPerIndex(0){}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TIndex&gt;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">requires</span> <a class="code hl_typedef" href="_index_buffer_8h.html#a7435b1fe140b827cea60c9beb9ed5dc4">IsIndexTypeUINT&lt;TIndex&gt;::value</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_c_index_buffer.html#a1da8cdfad63417296440cfb0b6d01dae">   39</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_index_buffer.html#a1da8cdfad63417296440cfb0b6d01dae">Create</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* indicesData, UINT numIndices);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_index_buffer.html#a21ee287ea2a9c1d7e3f56502dc457228">   42</a></span>    <span class="keyword">const</span> D3D12_INDEX_BUFFER_VIEW* <a class="code hl_function" href="class_c_index_buffer.html#a21ee287ea2a9c1d7e3f56502dc457228">GetView</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> &amp;m_ibView; }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_c_index_buffer.html#a2a48ff0562e1b7ad8d09f4ca727d68bd">   44</a></span>    <span class="keyword">const</span> UINT <a class="code hl_function" href="class_c_index_buffer.html#a2a48ff0562e1b7ad8d09f4ca727d68bd">GetNumIndices</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_numIndices; }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_index_buffer.html#ab7e3c99db0df20b969274f05a262943b">UpdateDataForResource</a>(D3D12_HEAP_PROPERTIES* heapProp, D3D12_RESOURCE_DESC* resDesc) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_index_buffer.html#a81d0f04c91242af92a3f1993dfa38d61">CopyRegion</a>(ID3D12GraphicsCommandList* cmdList, ID3D12Resource* srcResource) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TIndex&gt;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">requires</span> <a class="code hl_typedef" href="_index_buffer_8h.html#a7435b1fe140b827cea60c9beb9ed5dc4">IsIndexTypeUINT&lt;TIndex&gt;::value</a></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_c_index_buffer.html#a04be714da6d95aa0713aa5407482c23d">   64</a></span>    DXGI_FORMAT <a class="code hl_function" href="class_c_index_buffer.html#a04be714da6d95aa0713aa5407482c23d">GetIndexFormat</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    D3D12_INDEX_BUFFER_VIEW m_ibView;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    UINT m_numIndices;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    UINT m_bytesPerIndex;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">// Create index buffer</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> TIndex&gt;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">requires</span> <a class="code hl_typedef" href="_index_buffer_8h.html#a7435b1fe140b827cea60c9beb9ed5dc4">IsIndexTypeUINT&lt;TIndex&gt;::value</a></div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_c_index_buffer.html#a1da8cdfad63417296440cfb0b6d01dae">   78</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_index_buffer.html#a1da8cdfad63417296440cfb0b6d01dae">CIndexBuffer::Create</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* indicesData, UINT numIndices) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// Copy index information</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    m_numIndices = numIndices;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    m_bytesPerIndex = <span class="keyword">sizeof</span>(TIndex);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// Calculate bytes of all indices</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    UINT64 bytesAllIndices = <span class="keyword">static_cast&lt;</span>UINT64<span class="keyword">&gt;</span>(m_numIndices) * m_bytesPerIndex;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// Define mapping function</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">auto</span> mappingFunc = [&amp;](UINT8* mappedBuffer) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        memcpy(mappedBuffer, indicesData, bytesAllIndices);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    };</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">// Create resource</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_function" href="class_a_c_gpu_optimized_resource.html#ad02294e127ffd215c75b81f09be6b89d">CreateResource</a>(bytesAllIndices, D3D12_RESOURCE_STATE_INDEX_BUFFER, mappingFunc);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// Create index buffer view</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    m_ibView.BufferLocation = <a class="code hl_variable" href="class_a_c_gpu_optimized_resource.html#a649d395779e88a8ad72f2bbad548c2b5">m_resource</a>-&gt;GetGPUVirtualAddress();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    m_ibView.Format = GetIndexFormat&lt;TIndex&gt;();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    m_ibView.SizeInBytes = (UINT)bytesAllIndices;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">// Return DXGI_FORMAT based on the type of index</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> TIndex&gt;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">requires</span> <a class="code hl_typedef" href="_index_buffer_8h.html#a7435b1fe140b827cea60c9beb9ed5dc4">IsIndexTypeUINT&lt;TIndex&gt;::value</a></div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_c_index_buffer.html#a04be714da6d95aa0713aa5407482c23d">  103</a></span>DXGI_FORMAT <a class="code hl_function" href="class_c_index_buffer.html#a04be714da6d95aa0713aa5407482c23d">CIndexBuffer::GetIndexFormat</a>() {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="comment">// 8</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;TIndex, uint8_t&gt;) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">return</span> DXGI_FORMAT_R8_UINT;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// 16</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;TIndex, uint16_t&gt;) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> DXGI_FORMAT_R16_UINT;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="comment">// 32</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;TIndex, uint32_t&gt;) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">return</span> DXGI_FORMAT_R32_UINT;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="comment">// Exception</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keyword">static_assert</span>(<a class="code hl_typedef" href="_index_buffer_8h.html#a7435b1fe140b827cea60c9beb9ed5dc4">IsIndexTypeUINT&lt;TIndex&gt;::value</a>, <span class="stringliteral">&quot;Invalid index type&quot;</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> DXGI_FORMAT_UNKNOWN;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif </span><span class="comment">// !__IDNEX_BUFFER_H__</span></div>
+<div class="ttc" id="a_gpu_optimized_resource_8h_html"><div class="ttname"><a href="_gpu_optimized_resource_8h.html">GpuOptimizedResource.h</a></div></div>
+<div class="ttc" id="a_index_buffer_8h_html_a7435b1fe140b827cea60c9beb9ed5dc4"><div class="ttname"><a href="_index_buffer_8h.html#a7435b1fe140b827cea60c9beb9ed5dc4">IsIndexTypeUINT</a></div><div class="ttdeci">std::disjunction&lt; std::is_same&lt; TIndex, uint8_t &gt;, std::is_same&lt; TIndex, uint16_t &gt;, std::is_same&lt; TIndex, uint32_t &gt; &gt; IsIndexTypeUINT</div><div class="ttdoc">Is index type UINT?</div><div class="ttdef"><b>Definition</b> IndexBuffer.h:20</div></div>
+<div class="ttc" id="aclass_a_c_gpu_optimized_resource_html"><div class="ttname"><a href="class_a_c_gpu_optimized_resource.html">ACGpuOptimizedResource</a></div><div class="ttdoc">This class handles resource optimized for GPU</div><div class="ttdef"><b>Definition</b> GpuOptimizedResource.h:13</div></div>
+<div class="ttc" id="aclass_a_c_gpu_optimized_resource_html_a649d395779e88a8ad72f2bbad548c2b5"><div class="ttname"><a href="class_a_c_gpu_optimized_resource.html#a649d395779e88a8ad72f2bbad548c2b5">ACGpuOptimizedResource::m_resource</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt; m_resource</div><div class="ttdoc">Texture resource</div><div class="ttdef"><b>Definition</b> GpuOptimizedResource.h:62</div></div>
+<div class="ttc" id="aclass_a_c_gpu_optimized_resource_html_ad02294e127ffd215c75b81f09be6b89d"><div class="ttname"><a href="class_a_c_gpu_optimized_resource.html#ad02294e127ffd215c75b81f09be6b89d">ACGpuOptimizedResource::CreateResource</a></div><div class="ttdeci">void CreateResource(UINT64 byteSize, D3D12_RESOURCE_STATES resourceState, MappingFunction mapFunc)</div><div class="ttdoc">Create resource</div><div class="ttdef"><b>Definition</b> GpuOptimizedResource.cpp:8</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html"><div class="ttname"><a href="class_c_index_buffer.html">CIndexBuffer</a></div><div class="ttdoc">This class handles index buffer</div><div class="ttdef"><b>Definition</b> IndexBuffer.h:23</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html_a04be714da6d95aa0713aa5407482c23d"><div class="ttname"><a href="class_c_index_buffer.html#a04be714da6d95aa0713aa5407482c23d">CIndexBuffer::GetIndexFormat</a></div><div class="ttdeci">::value DXGI_FORMAT GetIndexFormat()</div><div class="ttdoc">Return DXGI_FORMAT based on the type of index</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html_a0a0b5175958e5ebe30cbb291b3533beb"><div class="ttname"><a href="class_c_index_buffer.html#a0a0b5175958e5ebe30cbb291b3533beb">CIndexBuffer::CIndexBuffer</a></div><div class="ttdeci">CIndexBuffer()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> IndexBuffer.h:28</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html_a1da8cdfad63417296440cfb0b6d01dae"><div class="ttname"><a href="class_c_index_buffer.html#a1da8cdfad63417296440cfb0b6d01dae">CIndexBuffer::Create</a></div><div class="ttdeci">::value void Create(const void *indicesData, UINT numIndices)</div><div class="ttdoc">Create index buffer</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html_a21ee287ea2a9c1d7e3f56502dc457228"><div class="ttname"><a href="class_c_index_buffer.html#a21ee287ea2a9c1d7e3f56502dc457228">CIndexBuffer::GetView</a></div><div class="ttdeci">const D3D12_INDEX_BUFFER_VIEW * GetView() const</div><div class="ttdoc">Get index buffer view</div><div class="ttdef"><b>Definition</b> IndexBuffer.h:42</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html_a2a48ff0562e1b7ad8d09f4ca727d68bd"><div class="ttname"><a href="class_c_index_buffer.html#a2a48ff0562e1b7ad8d09f4ca727d68bd">CIndexBuffer::GetNumIndices</a></div><div class="ttdeci">const UINT GetNumIndices() const</div><div class="ttdoc">Get the number of indices</div><div class="ttdef"><b>Definition</b> IndexBuffer.h:44</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html_a81d0f04c91242af92a3f1993dfa38d61"><div class="ttname"><a href="class_c_index_buffer.html#a81d0f04c91242af92a3f1993dfa38d61">CIndexBuffer::CopyRegion</a></div><div class="ttdeci">void CopyRegion(ID3D12GraphicsCommandList *cmdList, ID3D12Resource *srcResource) override</div><div class="ttdoc">Set command to copy data</div><div class="ttdef"><b>Definition</b> IndexBuffer.cpp:10</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html_ab7e3c99db0df20b969274f05a262943b"><div class="ttname"><a href="class_c_index_buffer.html#ab7e3c99db0df20b969274f05a262943b">CIndexBuffer::UpdateDataForResource</a></div><div class="ttdeci">void UpdateDataForResource(D3D12_HEAP_PROPERTIES *heapProp, D3D12_RESOURCE_DESC *resDesc) override</div><div class="ttdoc">Update heap properties and resource descriptor, for resource</div><div class="ttdef"><b>Definition</b> IndexBuffer.cpp:4</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

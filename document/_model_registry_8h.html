@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ModelRegistry.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">ModelRegistry.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file handles registry class that manages all loaded models.  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_singleton_8h_source.html">Singleton.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_loaded_model_info_8h_source.html">LoadedModelInfo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utility_for_exception_8h_source.html">UtilityForException.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+ModelRegistry.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_model_registry_8h__incl.png" border="0" usemap="#a_model_registry_8h" alt=""/></div>
+<map name="a_model_registry_8h" id="a_model_registry_8h">
+<area shape="rect" title="This file handles registry class that manages all loaded models." alt="" coords="937,5,1052,32"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="870,528,957,555"/>
+<area shape="poly" title=" " alt="" coords="997,33,997,167,997,394,991,430,977,464,958,494,938,518,934,515,953,491,972,462,986,428,992,393,992,167,992,33"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="974,603,1117,629"/>
+<area shape="poly" title=" " alt="" coords="1005,31,1032,88,1043,127,1048,167,1048,468,1048,587,1043,587,1043,468,1043,167,1038,128,1027,90,1000,34"/>
+<area shape="rect" href="_loaded_model_info_8h.html" title="This file handles mesh information of loaded model." alt="" coords="290,80,419,107"/>
+<area shape="poly" title=" " alt="" coords="937,29,435,86,434,80,936,24"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="817,603,951,629"/>
+<area shape="poly" title=" " alt="" coords="911,556,897,589,892,587,906,554"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="383,603,473,629"/>
+<area shape="poly" title=" " alt="" coords="870,552,488,608,488,603,869,546"/>
+<area shape="poly" title=" " alt="" coords="938,553,1011,593,1008,597,935,558"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="386,677,470,704"/>
+<area shape="poly" title=" " alt="" coords="431,630,431,662,425,662,425,630"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="575,752,641,779"/>
+<area shape="poly" title=" " alt="" coords="460,702,563,743,561,748,458,707"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="587,827,699,853"/>
+<area shape="poly" title=" " alt="" coords="616,778,633,811,628,814,612,780"/>
+<area shape="poly" title=" " alt="" coords="290,97,203,104,156,113,110,126,70,144,37,169,16,201,10,220,8,241,8,468,10,488,17,502,27,514,40,522,114,552,180,577,248,593,313,604,368,609,368,614,312,609,247,598,178,582,112,557,37,527,23,518,12,505,5,489,3,468,3,241,5,219,11,199,34,166,67,140,109,121,154,107,202,99,289,92"/>
+<area shape="rect" href="_texture_8h.html" title="This file handles textures." alt="" coords="508,155,583,181"/>
+<area shape="poly" title=" " alt="" coords="389,105,499,146,497,151,387,110"/>
+<area shape="rect" href="_utility_for_direct_x_8h.html" title="This file defines utility functions that are useful for DirectX." alt="" coords="393,453,519,480"/>
+<area shape="poly" title=" " alt="" coords="357,107,357,241,357,318,364,355,382,389,406,418,430,441,426,445,402,422,378,392,359,357,352,319,352,241,352,107"/>
+<area shape="rect" href="_mesh_buffer_8h.html" title="This file handles vertex and index buffers needed to construct the mesh." alt="" coords="158,229,255,256"/>
+<area shape="poly" title=" " alt="" coords="344,109,232,220,228,216,340,105"/>
+<area shape="poly" title=" " alt="" coords="538,183,502,235,482,269,465,305,455,341,451,379,450,409,453,438,448,438,445,410,445,379,449,340,460,303,477,266,497,232,533,180"/>
+<area shape="rect" href="_render_target_8h.html" title="This file handles render targets." alt="" coords="549,229,659,256"/>
+<area shape="poly" title=" " alt="" coords="558,180,586,215,582,219,553,184"/>
+<area shape="rect" href="_texture_registry_8h.html" title="This file handles all texture resources together in the registry." alt="" coords="781,229,904,256"/>
+<area shape="poly" title=" " alt="" coords="584,176,776,223,775,228,583,181"/>
+<area shape="poly" title=" " alt="" coords="456,481,436,588,431,587,451,480"/>
+<area shape="poly" title=" " alt="" coords="555,259,516,277,498,290,484,306,467,338,458,373,455,408,456,438,450,438,450,408,453,372,462,336,479,302,495,286,513,272,553,254"/>
+<area shape="rect" href="_descriptor_heap_8h.html" title="This file handles descriptor heap." alt="" coords="605,379,726,405"/>
+<area shape="poly" title=" " alt="" coords="614,255,638,303,660,363,655,364,634,305,609,258"/>
+<area shape="rect" href="_depth_stencil_8h.html" title="This file handles depth stencil." alt="" coords="699,304,805,331"/>
+<area shape="poly" title=" " alt="" coords="631,254,714,294,711,299,629,259"/>
+<area shape="poly" title=" " alt="" coords="630,408,508,450,506,445,628,403"/>
+<area shape="rect" href="_application_8h.html" title="This file handles application objects such as window and DirectX device." alt="" coords="628,453,724,480"/>
+<area shape="poly" title=" " alt="" coords="670,405,675,438,669,438,665,406"/>
+<area shape="poly" title=" " alt="" coords="718,478,858,520,856,526,717,483"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="619,603,733,629"/>
+<area shape="poly" title=" " alt="" coords="679,481,679,587,673,587,673,481"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="618,677,739,704"/>
+<area shape="poly" title=" " alt="" coords="679,630,680,662,675,662,674,630"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="494,677,594,704"/>
+<area shape="poly" title=" " alt="" coords="654,632,581,672,579,667,652,628"/>
+<area shape="poly" title=" " alt="" coords="668,706,633,743,629,739,664,703"/>
+<area shape="poly" title=" " alt="" coords="678,705,652,812,647,811,673,704"/>
+<area shape="poly" title=" " alt="" coords="739,333,693,371,690,367,735,329"/>
+<area shape="poly" title=" " alt="" coords="851,256,869,303,897,419,912,512,907,513,891,420,864,305,846,258"/>
+<area shape="poly" title=" " alt="" coords="849,256,854,291,853,312,846,332,825,363,802,381,738,408,687,427,634,442,535,460,534,455,632,436,685,422,736,403,799,376,822,359,842,329,848,311,849,291,844,257"/>
+<area shape="poly" title=" " alt="" coords="845,257,839,293,832,314,819,332,783,360,742,378,740,373,781,356,815,329,827,312,834,292,840,256"/>
+<area shape="rect" href="_texture_resource_8h.html" title="This file handles texture resources." alt="" coords="494,304,624,331"/>
+<area shape="poly" title=" " alt="" coords="794,259,624,302,623,297,793,254"/>
+<area shape="poly" title=" " alt="" coords="552,333,476,442,471,439,548,330"/>
+<area shape="poly" title=" " alt="" coords="579,329,636,367,633,372,576,333"/>
+<area shape="rect" href="_gpu_optimized_resource_8h.html" title=" " alt="" coords="147,379,317,405"/>
+<area shape="poly" title=" " alt="" coords="502,334,305,377,304,372,501,329"/>
+<area shape="poly" title=" " alt="" coords="159,259,119,277,100,290,83,306,69,326,62,344,59,391,59,468,61,479,67,490,91,512,128,532,173,551,276,581,369,601,367,606,274,586,172,556,126,537,88,516,63,494,56,481,53,468,53,391,56,343,64,324,79,302,96,286,116,273,157,254"/>
+<area shape="rect" href="_vertex_buffer_8h.html" title="This file handles vertex buffer." alt="" coords="94,304,197,331"/>
+<area shape="poly" title=" " alt="" coords="198,258,168,294,164,290,194,255"/>
+<area shape="rect" href="_index_buffer_8h.html" title="This file handles index buffer." alt="" coords="221,304,318,331"/>
+<area shape="poly" title=" " alt="" coords="220,255,251,290,247,294,216,258"/>
+<area shape="poly" title=" " alt="" coords="162,329,207,367,204,371,159,333"/>
+<area shape="poly" title=" " alt="" coords="265,332,248,366,243,364,260,330"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_model_registry_8h__dep__incl.png" border="0" usemap="#a_model_registry_8hdep" alt=""/></div>
+<map name="a_model_registry_8hdep" id="a_model_registry_8hdep">
+<area shape="rect" title="This file handles registry class that manages all loaded models." alt="" coords="372,5,487,32"/>
+<area shape="rect" href="_application_main_8cpp.html" title=" " alt="" coords="5,80,144,107"/>
+<area shape="poly" title=" " alt="" coords="357,37,137,82,136,77,356,32"/>
+<area shape="rect" href="_model_8cpp.html" title=" " alt="" coords="167,80,249,107"/>
+<area shape="poly" title=" " alt="" coords="377,40,248,82,246,77,375,35"/>
+<area shape="rect" href="_model_load_setting_8cpp.html" title=" " alt="" coords="273,80,423,107"/>
+<area shape="poly" title=" " alt="" coords="406,44,364,82,360,78,402,41"/>
+<area shape="rect" href="_model_registry_8cpp.html" title=" " alt="" coords="447,80,577,107"/>
+<area shape="poly" title=" " alt="" coords="457,40,499,78,496,82,453,45"/>
+<area shape="rect" href="_player_anim_control_component_8cpp.html" title=" " alt="" coords="600,80,821,107"/>
+<area shape="poly" title=" " alt="" coords="493,34,662,77,660,82,492,39"/>
+<area shape="rect" href="_scene_registry_8cpp.html" title=" " alt="" coords="845,80,976,107"/>
+<area shape="poly" title=" " alt="" coords="503,28,834,77,845,79,844,84,833,83,502,33"/>
+</map>
+</div>
+</div>
+<p><a href="_model_registry_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_for_make_anim_to_anim_data.html">ForMakeAnimToAnimData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data to make animation to animation interpolation  <a href="struct_for_make_anim_to_anim_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model_registry.html">CModelRegistry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class manages all loaded models  <a href="class_c_model_registry.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model_registry_1_1_c_thread_safe_feature.html">CModelRegistry::CThreadSafeFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feature for thread-safe  <a href="class_c_model_registry_1_1_c_thread_safe_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:aafd022319061dcdb4a298ac808163fd3" id="r_aafd022319061dcdb4a298ac808163fd3"><td class="memItemLeft" align="right" valign="top">const std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_model_registry_8h.html#aafd022319061dcdb4a298ac808163fd3">MODELASSET_DIR</a> = L&quot;Model/&quot;</td></tr>
+<tr class="memdesc:aafd022319061dcdb4a298ac808163fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directory of model  <br /></td></tr>
+<tr class="separator:aafd022319061dcdb4a298ac808163fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a484233ddfb68780679b57fdcd8ee3534" id="r_a484233ddfb68780679b57fdcd8ee3534"><td class="memItemLeft" align="right" valign="top">const std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_model_registry_8h.html#a484233ddfb68780679b57fdcd8ee3534">ANIMASSET_DIR</a> = L&quot;Anim/&quot;</td></tr>
+<tr class="memdesc:a484233ddfb68780679b57fdcd8ee3534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directory of animation  <br /></td></tr>
+<tr class="separator:a484233ddfb68780679b57fdcd8ee3534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This file handles registry class that manages all loaded models. </p>
+<dl class="section author"><dt>著者</dt><dd>Shodai Makino </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2023/12/27 </dd></dl>
+</div><h2 class="groupheader">変数詳解</h2>
+<a id="a484233ddfb68780679b57fdcd8ee3534" name="a484233ddfb68780679b57fdcd8ee3534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a484233ddfb68780679b57fdcd8ee3534">&#9670;&#160;</a></span>ANIMASSET_DIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::wstring ANIMASSET_DIR = L&quot;Anim/&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Directory of animation </p>
+
+</div>
+</div>
+<a id="aafd022319061dcdb4a298ac808163fd3" name="aafd022319061dcdb4a298ac808163fd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafd022319061dcdb4a298ac808163fd3">&#9670;&#160;</a></span>MODELASSET_DIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::wstring MODELASSET_DIR = L&quot;Model/&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Directory of model </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

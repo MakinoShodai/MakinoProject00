@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: TextureRegistry.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">TextureRegistry.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_texture_registry_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __TEXTURE_REGISTRY_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __TEXTURE_REGISTRY_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_texture_resource_8h.html">TextureResource.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_descriptor_heap_8h.html">DescriptorHeap.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_direct_x_8h.html">UtilityForDirectX.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_c_texture_registry.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_texture_registry.html">CTextureRegistry</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>&lt;CTextureRegistry&gt; {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_c_texture_registry.html#a3273bd1fe91a2694d70da9c751511d0b">   20</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_a_c_singleton_base.html">ACSingletonBase</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_c_texture_registry.html#a851cbb8bcdb1af2a041b7f23ef3542df">   25</a></span>    <a class="code hl_function" href="class_c_texture_registry.html#a851cbb8bcdb1af2a041b7f23ef3542df">~CTextureRegistry</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_texture_registry.html#a4268fe1136a9472945e003cb3286bd89">Load</a>(<span class="keyword">const</span> std::wstring&amp; filePath);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_texture_registry.html#aa67050d232cf1dfb7cdb7607f48b2ed8">LoadPak</a>(<span class="keyword">const</span> std::wstring&amp; filePath);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_texture_registry_1_1_c_thread_safe_feature.html">   42</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_c_texture_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;CTextureRegistry&gt; {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">using </span><a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;<a class="code hl_class" href="class_c_texture_registry.html">CTextureRegistry</a>&gt;<a class="code hl_class" href="class_a_c_inner_class.html">::ACInnerClass</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_c_texture_registry_1_1_c_thread_safe_feature.html#ae9d67d7e2f6dd6d0abbc6d245d4b6f12">   52</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_texture_registry_1_1_c_thread_safe_feature.html#ae9d67d7e2f6dd6d0abbc6d245d4b6f12">IsContains</a>(<span class="keyword">const</span> std::wstring&amp; filePath) { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_nameToHandleMap.contains(filePath); }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_class" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a> <a class="code hl_function" href="class_c_texture_registry_1_1_c_thread_safe_feature.html#a679654b56b2b561b3b1e9cf2038e9241">GetSRVPropertyHandle</a>(<span class="keyword">const</span> std::wstring&amp; filePath);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    };</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_c_texture_registry.html#a487741c58dfa5650b944701e87cd1f2f">   65</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="class_c_texture_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a>&amp; <a class="code hl_function" href="class_c_texture_registry.html#a487741c58dfa5650b944701e87cd1f2f">GetAny</a>() {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_c_texture_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> instance(<a class="code hl_function" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a>().Get());</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_c_texture_registry.html#ad8553de07024940236e6bf4115e4407c">   74</a></span>    <a class="code hl_function" href="class_c_texture_registry.html#ad8553de07024940236e6bf4115e4407c">CTextureRegistry</a>() : <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>(-5) {}</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    std::unordered_map&lt;std::wstring, CTextureResource&gt; m_nameToHandleMap;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif </span><span class="comment">// !__TEXTURE_REGISTRY_H__</span></div>
+<div class="ttc" id="a_descriptor_heap_8h_html"><div class="ttname"><a href="_descriptor_heap_8h.html">DescriptorHeap.h</a></div><div class="ttdoc">This file handles descriptor heap.</div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">File handling abstract singleton class.</div></div>
+<div class="ttc" id="a_texture_resource_8h_html"><div class="ttname"><a href="_texture_resource_8h.html">TextureResource.h</a></div><div class="ttdoc">This file handles texture resources.</div></div>
+<div class="ttc" id="a_utility_for_direct_x_8h_html"><div class="ttname"><a href="_utility_for_direct_x_8h.html">UtilityForDirectX.h</a></div><div class="ttdoc">This file defines utility functions that are useful for DirectX.</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html"><div class="ttname"><a href="class_a_c_inner_class.html">ACInnerClass</a></div><div class="ttdoc">Abstract inner class</div><div class="ttdef"><b>Definition</b> Singleton.h:23</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html_abbb5ecb30cbd08e599e20cc9f3532f6f"><div class="ttname"><a href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">ACInnerClass&lt; CTextureRegistry &gt;::m_owner</a></div><div class="ttdeci">CTextureRegistry * m_owner</div><div class="ttdoc">Pointer to owner of this class</div><div class="ttdef"><b>Definition</b> Singleton.h:45</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html"><div class="ttname"><a href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a></div><div class="ttdoc">Abstract singleton class for main thread only (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:111</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html"><div class="ttname"><a href="class_a_c_singleton_base.html">ACSingletonBase</a></div><div class="ttdoc">Abstract singleton base class (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:59</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html_a86122d51b9f611ffbc300eb790c3dabf"><div class="ttname"><a href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">ACSingletonBase::GetProtected</a></div><div class="ttdeci">static CUniquePtr&lt; Derived &gt; &amp; GetProtected()</div><div class="ttdoc">Get singleton instance</div><div class="ttdef"><b>Definition</b> Singleton.h:169</div></div>
+<div class="ttc" id="aclass_c_texture_registry_1_1_c_thread_safe_feature_html"><div class="ttname"><a href="class_c_texture_registry_1_1_c_thread_safe_feature.html">CTextureRegistry::CThreadSafeFeature</a></div><div class="ttdoc">Feature for thread-safe</div><div class="ttdef"><b>Definition</b> TextureRegistry.h:42</div></div>
+<div class="ttc" id="aclass_c_texture_registry_1_1_c_thread_safe_feature_html_a679654b56b2b561b3b1e9cf2038e9241"><div class="ttname"><a href="class_c_texture_registry_1_1_c_thread_safe_feature.html#a679654b56b2b561b3b1e9cf2038e9241">CTextureRegistry::CThreadSafeFeature::GetSRVPropertyHandle</a></div><div class="ttdeci">Utl::Dx::SRVPropertyHandle GetSRVPropertyHandle(const std::wstring &amp;filePath)</div><div class="ttdoc">Get a handle for SRV property of the loaded texture</div><div class="ttdef"><b>Definition</b> TextureRegistry.cpp:46</div></div>
+<div class="ttc" id="aclass_c_texture_registry_1_1_c_thread_safe_feature_html_ae9d67d7e2f6dd6d0abbc6d245d4b6f12"><div class="ttname"><a href="class_c_texture_registry_1_1_c_thread_safe_feature.html#ae9d67d7e2f6dd6d0abbc6d245d4b6f12">CTextureRegistry::CThreadSafeFeature::IsContains</a></div><div class="ttdeci">bool IsContains(const std::wstring &amp;filePath)</div><div class="ttdoc">Does the registry contain textures for the specified file path?</div><div class="ttdef"><b>Definition</b> TextureRegistry.h:52</div></div>
+<div class="ttc" id="aclass_c_texture_registry_html"><div class="ttname"><a href="class_c_texture_registry.html">CTextureRegistry</a></div><div class="ttdoc">Registry for all textures</div><div class="ttdef"><b>Definition</b> TextureRegistry.h:18</div></div>
+<div class="ttc" id="aclass_c_texture_registry_html_a4268fe1136a9472945e003cb3286bd89"><div class="ttname"><a href="class_c_texture_registry.html#a4268fe1136a9472945e003cb3286bd89">CTextureRegistry::Load</a></div><div class="ttdeci">bool Load(const std::wstring &amp;filePath)</div><div class="ttdoc">Load texture</div><div class="ttdef"><b>Definition</b> TextureRegistry.cpp:6</div></div>
+<div class="ttc" id="aclass_c_texture_registry_html_a487741c58dfa5650b944701e87cd1f2f"><div class="ttname"><a href="class_c_texture_registry.html#a487741c58dfa5650b944701e87cd1f2f">CTextureRegistry::GetAny</a></div><div class="ttdeci">static CThreadSafeFeature &amp; GetAny()</div><div class="ttdoc">Get feature for thread-safe</div><div class="ttdef"><b>Definition</b> TextureRegistry.h:65</div></div>
+<div class="ttc" id="aclass_c_texture_registry_html_a851cbb8bcdb1af2a041b7f23ef3542df"><div class="ttname"><a href="class_c_texture_registry.html#a851cbb8bcdb1af2a041b7f23ef3542df">CTextureRegistry::~CTextureRegistry</a></div><div class="ttdeci">~CTextureRegistry() override=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_texture_registry_html_aa67050d232cf1dfb7cdb7607f48b2ed8"><div class="ttname"><a href="class_c_texture_registry.html#aa67050d232cf1dfb7cdb7607f48b2ed8">CTextureRegistry::LoadPak</a></div><div class="ttdeci">bool LoadPak(const std::wstring &amp;filePath)</div><div class="ttdoc">Load textures from pak file</div><div class="ttdef"><b>Definition</b> TextureRegistry.cpp:23</div></div>
+<div class="ttc" id="aclass_c_texture_registry_html_ad8553de07024940236e6bf4115e4407c"><div class="ttname"><a href="class_c_texture_registry.html#ad8553de07024940236e6bf4115e4407c">CTextureRegistry::CTextureRegistry</a></div><div class="ttdeci">CTextureRegistry()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> TextureRegistry.h:74</div></div>
+<div class="ttc" id="aclass_utl_1_1_dx_1_1_s_r_v_property_handle_html"><div class="ttname"><a href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a></div><div class="ttdoc">Handle class for a SRVProperty that can only be created from within the SRVProperty</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:271</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

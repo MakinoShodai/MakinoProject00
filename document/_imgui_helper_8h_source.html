@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ImguiHelper.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ImguiHelper.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_imgui_helper_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __IMGUI_HELPER_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __IMGUI_HELPER_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_descriptor_heap_8h.html">DescriptorHeap.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_shared_ptr_8h.html">SharedPtr.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">int</span> <a class="code hl_function" href="_imgui_helper_8h.html#a064de7ecd07860cc6c3597c5d70a9d34">ProhibitedNonNumericCallback</a>(ImGuiInputTextCallbackData* data);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_imgui_helper_8h.html#afb39491040e15242495cf90ed5561468">   23</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_imgui_helper_8h.html#afb39491040e15242495cf90ed5561468">ImguiWindowFunction</a> = std::function&lt;bool()&gt;;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_c_imgui_helper.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_imgui_helper.html">CImguiHelper</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>&lt;CImguiHelper&gt; {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_c_imgui_helper.html#a3273bd1fe91a2694d70da9c751511d0b">   28</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_a_c_singleton_base.html">ACSingletonBase</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_c_imgui_helper.html#a99a6f06e9a8f66b71cab2c4112d54120">   34</a></span>    <a class="code hl_function" href="class_c_imgui_helper.html#a99a6f06e9a8f66b71cab2c4112d54120">~CImguiHelper</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_imgui_helper.html#ac58a9ce2fb4b199cb2c02fc0a251da83">Initialize</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_imgui_helper.html#a56b8f268d4d9f3e211b44b800a4269bc">Draw</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_c_imgui_helper_1_1_c_thread_safe_feature.html">   47</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_c_imgui_helper_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;CImguiHelper&gt; {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">using </span><a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;<a class="code hl_class" href="class_c_imgui_helper.html">CImguiHelper</a>&gt;<a class="code hl_class" href="class_a_c_inner_class.html">::ACInnerClass</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_imgui_helper_1_1_c_thread_safe_feature.html#a87c78263b4251e3c45ffe2d32ab21283">AddWindowFunction</a>(<a class="code hl_class" href="class_c_sync_shared_ptr.html">CSyncSharedPtr&lt;ImguiWindowFunction&gt;</a> function);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_imgui_helper_1_1_c_thread_safe_feature.html#a87c78263b4251e3c45ffe2d32ab21283">AddWindowFunction</a>(<a class="code hl_typedef" href="_imgui_helper_8h.html#afb39491040e15242495cf90ed5561468">ImguiWindowFunction</a> function);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    };</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_c_imgui_helper.html#ac75c1f8d4eb00682ec5d8a2a34fb4258">   72</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="class_c_imgui_helper_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a>&amp; <a class="code hl_function" href="class_c_imgui_helper.html#ac75c1f8d4eb00682ec5d8a2a34fb4258">GetAny</a>() {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_c_imgui_helper_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> instance(<a class="code hl_function" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a>().Get());</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_c_imgui_helper.html#a61ce301a99aa8a082bb478f053049c4e">   81</a></span>    <a class="code hl_function" href="class_c_imgui_helper.html#a61ce301a99aa8a082bb478f053049c4e">CImguiHelper</a>() : <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>(1000) {}</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_imgui_helper.html#a1b40ed918c5ad284766d22ae58be7074">OnDestroy</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_class" href="class_c_descriptor_heap.html">CDescriptorHeap</a> m_descriptorHeap;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    std::vector&lt;CSyncSharedPtr&lt;ImguiWindowFunction&gt;&gt; m_windowInstance;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    std::vector&lt;CSyncSharedPtr&lt;ImguiWindowFunction&gt;&gt; m_windowInstanceToCreate;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    std::mutex m_mutexToCreate;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>};</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#endif </span><span class="comment">// !__IMGUI_HELPER_H__</span></div>
+<div class="ttc" id="a_descriptor_heap_8h_html"><div class="ttname"><a href="_descriptor_heap_8h.html">DescriptorHeap.h</a></div><div class="ttdoc">This file handles descriptor heap.</div></div>
+<div class="ttc" id="a_imgui_helper_8h_html_a064de7ecd07860cc6c3597c5d70a9d34"><div class="ttname"><a href="_imgui_helper_8h.html#a064de7ecd07860cc6c3597c5d70a9d34">ProhibitedNonNumericCallback</a></div><div class="ttdeci">int ProhibitedNonNumericCallback(ImGuiInputTextCallbackData *data)</div><div class="ttdoc">Callback function to monitor prohibited non numeric characters</div><div class="ttdef"><b>Definition</b> ImguiHelper.cpp:100</div></div>
+<div class="ttc" id="a_imgui_helper_8h_html_afb39491040e15242495cf90ed5561468"><div class="ttname"><a href="_imgui_helper_8h.html#afb39491040e15242495cf90ed5561468">ImguiWindowFunction</a></div><div class="ttdeci">std::function&lt; bool()&gt; ImguiWindowFunction</div><div class="ttdoc">Function for ImGui window</div><div class="ttdef"><b>Definition</b> ImguiHelper.h:23</div></div>
+<div class="ttc" id="a_shared_ptr_8h_html"><div class="ttname"><a href="_shared_ptr_8h.html">SharedPtr.h</a></div><div class="ttdoc">This file handles self-made shared pointer.</div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">File handling abstract singleton class.</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html"><div class="ttname"><a href="class_a_c_inner_class.html">ACInnerClass</a></div><div class="ttdoc">Abstract inner class</div><div class="ttdef"><b>Definition</b> Singleton.h:23</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html"><div class="ttname"><a href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a></div><div class="ttdoc">Abstract singleton class for main thread only (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:111</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html"><div class="ttname"><a href="class_a_c_singleton_base.html">ACSingletonBase</a></div><div class="ttdoc">Abstract singleton base class (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:59</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html_a86122d51b9f611ffbc300eb790c3dabf"><div class="ttname"><a href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">ACSingletonBase::GetProtected</a></div><div class="ttdeci">static CUniquePtr&lt; Derived &gt; &amp; GetProtected()</div><div class="ttdoc">Get singleton instance</div><div class="ttdef"><b>Definition</b> Singleton.h:169</div></div>
+<div class="ttc" id="aclass_c_descriptor_heap_html"><div class="ttname"><a href="class_c_descriptor_heap.html">CDescriptorHeap</a></div><div class="ttdoc">This class handles descriptor heap</div><div class="ttdef"><b>Definition</b> DescriptorHeap.h:16</div></div>
+<div class="ttc" id="aclass_c_imgui_helper_1_1_c_thread_safe_feature_html"><div class="ttname"><a href="class_c_imgui_helper_1_1_c_thread_safe_feature.html">CImguiHelper::CThreadSafeFeature</a></div><div class="ttdoc">Feature for thread-safe</div><div class="ttdef"><b>Definition</b> ImguiHelper.h:47</div></div>
+<div class="ttc" id="aclass_c_imgui_helper_1_1_c_thread_safe_feature_html_a87c78263b4251e3c45ffe2d32ab21283"><div class="ttname"><a href="class_c_imgui_helper_1_1_c_thread_safe_feature.html#a87c78263b4251e3c45ffe2d32ab21283">CImguiHelper::CThreadSafeFeature::AddWindowFunction</a></div><div class="ttdeci">void AddWindowFunction(CSyncSharedPtr&lt; ImguiWindowFunction &gt; function)</div><div class="ttdoc">Add window function</div><div class="ttdef"><b>Definition</b> ImguiHelper.cpp:74</div></div>
+<div class="ttc" id="aclass_c_imgui_helper_html"><div class="ttname"><a href="class_c_imgui_helper.html">CImguiHelper</a></div><div class="ttdoc">Helper class for imgui</div><div class="ttdef"><b>Definition</b> ImguiHelper.h:26</div></div>
+<div class="ttc" id="aclass_c_imgui_helper_html_a1b40ed918c5ad284766d22ae58be7074"><div class="ttname"><a href="class_c_imgui_helper.html#a1b40ed918c5ad284766d22ae58be7074">CImguiHelper::OnDestroy</a></div><div class="ttdeci">void OnDestroy() override</div><div class="ttdoc">Process to be called at instance destruction</div><div class="ttdef"><b>Definition</b> ImguiHelper.cpp:93</div></div>
+<div class="ttc" id="aclass_c_imgui_helper_html_a56b8f268d4d9f3e211b44b800a4269bc"><div class="ttname"><a href="class_c_imgui_helper.html#a56b8f268d4d9f3e211b44b800a4269bc">CImguiHelper::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdoc">Drawing process</div><div class="ttdef"><b>Definition</b> ImguiHelper.cpp:31</div></div>
+<div class="ttc" id="aclass_c_imgui_helper_html_a61ce301a99aa8a082bb478f053049c4e"><div class="ttname"><a href="class_c_imgui_helper.html#a61ce301a99aa8a082bb478f053049c4e">CImguiHelper::CImguiHelper</a></div><div class="ttdeci">CImguiHelper()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> ImguiHelper.h:81</div></div>
+<div class="ttc" id="aclass_c_imgui_helper_html_a99a6f06e9a8f66b71cab2c4112d54120"><div class="ttname"><a href="class_c_imgui_helper.html#a99a6f06e9a8f66b71cab2c4112d54120">CImguiHelper::~CImguiHelper</a></div><div class="ttdeci">~CImguiHelper()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_imgui_helper_html_ac58a9ce2fb4b199cb2c02fc0a251da83"><div class="ttname"><a href="class_c_imgui_helper.html#ac58a9ce2fb4b199cb2c02fc0a251da83">CImguiHelper::Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdoc">Initialize</div><div class="ttdef"><b>Definition</b> ImguiHelper.cpp:6</div></div>
+<div class="ttc" id="aclass_c_imgui_helper_html_ac75c1f8d4eb00682ec5d8a2a34fb4258"><div class="ttname"><a href="class_c_imgui_helper.html#ac75c1f8d4eb00682ec5d8a2a34fb4258">CImguiHelper::GetAny</a></div><div class="ttdeci">static CThreadSafeFeature &amp; GetAny()</div><div class="ttdoc">Get feature for thread-safe</div><div class="ttdef"><b>Definition</b> ImguiHelper.h:72</div></div>
+<div class="ttc" id="aclass_c_sync_shared_ptr_html"><div class="ttname"><a href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a></div><div class="ttdoc">Smart pointer that destroys the instance if this variable is destroyed, regardless of the number of s...</div><div class="ttdef"><b>Definition</b> SharedPtr.h:313</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

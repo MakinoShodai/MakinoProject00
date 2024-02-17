@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CDynamicModelController クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_dynamic_model_controller-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CDynamicModelController クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Controller class for animated models  
+ <a href="class_c_dynamic_model_controller.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_loaded_model_info_8h_source.html">LoadedModelInfo.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:abf0ca88059460c27e385bb605abf934f" id="r_abf0ca88059460c27e385bb605abf934f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#abf0ca88059460c27e385bb605abf934f">CDynamicModelController</a> (const <a class="el" href="class_c_static_model_data.html">CStaticModelData</a> &amp;modelData)</td></tr>
+<tr class="memdesc:abf0ca88059460c27e385bb605abf934f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:abf0ca88059460c27e385bb605abf934f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab774add53abff4603391249485af4168" id="r_ab774add53abff4603391249485af4168"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#ab774add53abff4603391249485af4168">StepAnim</a> (float timeStep)</td></tr>
+<tr class="memdesc:ab774add53abff4603391249485af4168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance the time of animation  <br /></td></tr>
+<tr class="separator:ab774add53abff4603391249485af4168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b89fc80db3144dee4d095010657559" id="r_a53b89fc80db3144dee4d095010657559"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#a53b89fc80db3144dee4d095010657559">Play</a> (<a class="el" href="namespace_model_info.html#a02d8c9b299d0474644fbd9de0940343b">ModelInfo::AnimID</a> animID, bool isLoop)</td></tr>
+<tr class="memdesc:a53b89fc80db3144dee4d095010657559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play animation  <br /></td></tr>
+<tr class="separator:a53b89fc80db3144dee4d095010657559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e777e5e26131148861d83c98622026" id="r_a43e777e5e26131148861d83c98622026"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#a43e777e5e26131148861d83c98622026">Play</a> (<a class="el" href="struct_anim_i_d_with_loop.html">AnimIDWithLoop</a> idWithLoop)</td></tr>
+<tr class="memdesc:a43e777e5e26131148861d83c98622026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play animation  <br /></td></tr>
+<tr class="separator:a43e777e5e26131148861d83c98622026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8420458017097e6a9b236337893b3b1d" id="r_a8420458017097e6a9b236337893b3b1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#a8420458017097e6a9b236337893b3b1d">PlayBlend</a> (<a class="el" href="namespace_model_info.html#a02d8c9b299d0474644fbd9de0940343b">ModelInfo::AnimID</a> animID, bool isLoop, float blendTime)</td></tr>
+<tr class="memdesc:a8420458017097e6a9b236337893b3b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play blend animation  <br /></td></tr>
+<tr class="separator:a8420458017097e6a9b236337893b3b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4861d12a73debacd9de9705cdb03dcf7" id="r_a4861d12a73debacd9de9705cdb03dcf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#a4861d12a73debacd9de9705cdb03dcf7">BindPose</a> ()</td></tr>
+<tr class="memdesc:a4861d12a73debacd9de9705cdb03dcf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the animation mode is bind pose  <br /></td></tr>
+<tr class="separator:a4861d12a73debacd9de9705cdb03dcf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af543692fe749b5dd8e18aaff027092" id="r_a4af543692fe749b5dd8e18aaff027092"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#a4af543692fe749b5dd8e18aaff027092">IsBindPose</a> ()</td></tr>
+<tr class="memdesc:a4af543692fe749b5dd8e18aaff027092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this model currently in a bind pose?  <br /></td></tr>
+<tr class="separator:a4af543692fe749b5dd8e18aaff027092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4066ed64a126ee131ff57c403b544096" id="r_a4066ed64a126ee131ff57c403b544096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#a4066ed64a126ee131ff57c403b544096">SetAnimPlayRate</a> (float playRate=1.0f)</td></tr>
+<tr class="memdesc:a4066ed64a126ee131ff57c403b544096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set playrate of overall animation  <br /></td></tr>
+<tr class="separator:a4066ed64a126ee131ff57c403b544096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a73be84d4d9539fbed79c6b9e7fc5df" id="r_a5a73be84d4d9539fbed79c6b9e7fc5df"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#a5a73be84d4d9539fbed79c6b9e7fc5df">GetLoadedAnimNum</a> () const</td></tr>
+<tr class="memdesc:a5a73be84d4d9539fbed79c6b9e7fc5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of loaded animation  <br /></td></tr>
+<tr class="separator:a5a73be84d4d9539fbed79c6b9e7fc5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a261889a8092faa2eb4d66a82969a64a1" id="r_a261889a8092faa2eb4d66a82969a64a1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_static_model_data.html">CStaticModelData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#a261889a8092faa2eb4d66a82969a64a1">GetStaticData</a> () const</td></tr>
+<tr class="memdesc:a261889a8092faa2eb4d66a82969a64a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get static data of this model  <br /></td></tr>
+<tr class="separator:a261889a8092faa2eb4d66a82969a64a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa640bf1b640fcaf957feedd7e94a7f6a" id="r_aa640bf1b640fcaf957feedd7e94a7f6a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_model_info_1_1_per_instance_data.html">ModelInfo::PerInstanceData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#aa640bf1b640fcaf957feedd7e94a7f6a">GetDynamicData</a> () const</td></tr>
+<tr class="memdesc:aa640bf1b640fcaf957feedd7e94a7f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get dynamic data of this model  <br /></td></tr>
+<tr class="separator:aa640bf1b640fcaf957feedd7e94a7f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f9244783499431de3c2b4ea36cb90c" id="r_a81f9244783499431de3c2b4ea36cb90c"><td class="memItemLeft" align="right" valign="top">const UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#a81f9244783499431de3c2b4ea36cb90c">GetOpacityMeshBoneNum</a> (UINT meshIndex) const</td></tr>
+<tr class="memdesc:a81f9244783499431de3c2b4ea36cb90c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of bones that the opacity mesh has  <br /></td></tr>
+<tr class="separator:a81f9244783499431de3c2b4ea36cb90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff3a0cd68bdc0c3aae56b276339298b" id="r_a8ff3a0cd68bdc0c3aae56b276339298b"><td class="memItemLeft" align="right" valign="top">const UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_model_controller.html#a8ff3a0cd68bdc0c3aae56b276339298b">GetTransparentMeshBoneNum</a> (UINT meshIndex) const</td></tr>
+<tr class="memdesc:a8ff3a0cd68bdc0c3aae56b276339298b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of bones that the transparent mesh has  <br /></td></tr>
+<tr class="separator:a8ff3a0cd68bdc0c3aae56b276339298b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Controller class for animated models </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="abf0ca88059460c27e385bb605abf934f" name="abf0ca88059460c27e385bb605abf934f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0ca88059460c27e385bb605abf934f">&#9670;&#160;</a></span>CDynamicModelController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDynamicModelController::CDynamicModelController </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_static_model_data.html">CStaticModelData</a> &amp;&#160;</td>
+          <td class="paramname"><em>modelData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">modelData</td><td>Static data of model to be used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a4861d12a73debacd9de9705cdb03dcf7" name="a4861d12a73debacd9de9705cdb03dcf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4861d12a73debacd9de9705cdb03dcf7">&#9670;&#160;</a></span>BindPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDynamicModelController::BindPose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the animation mode is bind pose </p>
+
+</div>
+</div>
+<a id="aa640bf1b640fcaf957feedd7e94a7f6a" name="aa640bf1b640fcaf957feedd7e94a7f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa640bf1b640fcaf957feedd7e94a7f6a">&#9670;&#160;</a></span>GetDynamicData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_model_info_1_1_per_instance_data.html">ModelInfo::PerInstanceData</a> * CDynamicModelController::GetDynamicData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get dynamic data of this model </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_aa640bf1b640fcaf957feedd7e94a7f6a_icgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_aa640bf1b640fcaf957feedd7e94a7f6a_icgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_aa640bf1b640fcaf957feedd7e94a7f6a_icgraph" id="aclass_c_dynamic_model_controller_aa640bf1b640fcaf957feedd7e94a7f6a_icgraph">
+<area shape="rect" title="Get dynamic data of this model" alt="" coords="480,5,651,48"/>
+<area shape="rect" href="class_c_skeletal_model.html#ac2baaaef14f03b46b5d02f04227d7e61" title="Get bone matrices" alt="" coords="211,13,432,40"/>
+<area shape="poly" title=" " alt="" coords="464,29,432,29,432,24,464,24"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a8124cae7f185f361950dffa4202adbf7" title="Allocate data for model" alt="" coords="5,5,163,48"/>
+<area shape="poly" title=" " alt="" coords="195,29,163,29,163,24,195,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5a73be84d4d9539fbed79c6b9e7fc5df" name="a5a73be84d4d9539fbed79c6b9e7fc5df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a73be84d4d9539fbed79c6b9e7fc5df">&#9670;&#160;</a></span>GetLoadedAnimNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT CDynamicModelController::GetLoadedAnimNum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of loaded animation </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a5a73be84d4d9539fbed79c6b9e7fc5df_cgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a5a73be84d4d9539fbed79c6b9e7fc5df_cgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a5a73be84d4d9539fbed79c6b9e7fc5df_cgraph" id="aclass_c_dynamic_model_controller_a5a73be84d4d9539fbed79c6b9e7fc5df_cgraph">
+<area shape="rect" title="Get the number of loaded animation" alt="" coords="5,5,177,48"/>
+<area shape="rect" href="class_c_static_model_data.html#a038f4e6de5452d698a979d7858f254ce" title="Get the number of animations that this model has" alt="" coords="225,13,465,40"/>
+<area shape="poly" title=" " alt="" coords="177,24,209,24,209,29,177,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a81f9244783499431de3c2b4ea36cb90c" name="a81f9244783499431de3c2b4ea36cb90c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f9244783499431de3c2b4ea36cb90c">&#9670;&#160;</a></span>GetOpacityMeshBoneNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const UINT CDynamicModelController::GetOpacityMeshBoneNum </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of bones that the opacity mesh has </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a81f9244783499431de3c2b4ea36cb90c_cgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a81f9244783499431de3c2b4ea36cb90c_cgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a81f9244783499431de3c2b4ea36cb90c_cgraph" id="aclass_c_dynamic_model_controller_a81f9244783499431de3c2b4ea36cb90c_cgraph">
+<area shape="rect" title="Get the number of bones that the opacity mesh has" alt="" coords="5,5,190,48"/>
+<area shape="rect" href="class_c_static_model_data.html#a974fcae622406d9ad1ef39e094906c2b" title="Get a mesh that has opacity texture" alt="" coords="238,13,470,40"/>
+<area shape="poly" title=" " alt="" coords="190,24,222,24,222,29,190,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a81f9244783499431de3c2b4ea36cb90c_icgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a81f9244783499431de3c2b4ea36cb90c_icgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a81f9244783499431de3c2b4ea36cb90c_icgraph" id="aclass_c_dynamic_model_controller_a81f9244783499431de3c2b4ea36cb90c_icgraph">
+<area shape="rect" title="Get the number of bones that the opacity mesh has" alt="" coords="489,39,673,81"/>
+<area shape="rect" href="class_c_skeletal_model.html#ac2baaaef14f03b46b5d02f04227d7e61" title="Get bone matrices" alt="" coords="215,17,437,44"/>
+<area shape="poly" title=" " alt="" coords="473,50,436,46,437,41,474,45"/>
+<area shape="rect" href="class_c_skeletal_model.html#a2150ada4a6598098c71fe513c4dd21f2" title="Get the number of bones that mesh has" alt="" coords="211,72,441,99"/>
+<area shape="poly" title=" " alt="" coords="474,73,442,77,441,71,473,68"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a8124cae7f185f361950dffa4202adbf7" title="Allocate data for model" alt="" coords="5,5,163,48"/>
+<area shape="poly" title=" " alt="" coords="200,31,163,31,163,25,200,26"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a166a7be93cfea8497df2cc7698254de5" title="Create buffer for model" alt="" coords="5,72,163,115"/>
+<area shape="poly" title=" " alt="" coords="195,92,163,93,163,88,195,87"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a261889a8092faa2eb4d66a82969a64a1" name="a261889a8092faa2eb4d66a82969a64a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a261889a8092faa2eb4d66a82969a64a1">&#9670;&#160;</a></span>GetStaticData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_c_static_model_data.html">CStaticModelData</a> * CDynamicModelController::GetStaticData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get static data of this model </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a261889a8092faa2eb4d66a82969a64a1_icgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a261889a8092faa2eb4d66a82969a64a1_icgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a261889a8092faa2eb4d66a82969a64a1_icgraph" id="aclass_c_dynamic_model_controller_a261889a8092faa2eb4d66a82969a64a1_icgraph">
+<area shape="rect" title="Get static data of this model" alt="" coords="499,39,670,81"/>
+<area shape="rect" href="class_c_skeletal_model.html#ac2baaaef14f03b46b5d02f04227d7e61" title="Get bone matrices" alt="" coords="230,17,451,44"/>
+<area shape="poly" title=" " alt="" coords="483,50,451,47,452,41,484,45"/>
+<area shape="rect" href="class_c_skeletal_model.html#abd687bd7dcbd90bebcb7ee71d4b8ba9e" title="Get static data per model" alt="" coords="239,72,442,99"/>
+<area shape="poly" title=" " alt="" coords="484,73,442,77,442,72,483,68"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a8124cae7f185f361950dffa4202adbf7" title="Allocate data for model" alt="" coords="15,5,172,48"/>
+<area shape="poly" title=" " alt="" coords="214,31,173,31,173,25,214,26"/>
+<area shape="rect" href="class_c_skeletal_model.html#a395eeab5a0b4af93475f010a411f26f3" title="Constructor" alt="" coords="5,72,182,115"/>
+<area shape="poly" title=" " alt="" coords="224,92,182,93,182,88,224,86"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8ff3a0cd68bdc0c3aae56b276339298b" name="a8ff3a0cd68bdc0c3aae56b276339298b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ff3a0cd68bdc0c3aae56b276339298b">&#9670;&#160;</a></span>GetTransparentMeshBoneNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const UINT CDynamicModelController::GetTransparentMeshBoneNum </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of bones that the transparent mesh has </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a8ff3a0cd68bdc0c3aae56b276339298b_cgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a8ff3a0cd68bdc0c3aae56b276339298b_cgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a8ff3a0cd68bdc0c3aae56b276339298b_cgraph" id="aclass_c_dynamic_model_controller_a8ff3a0cd68bdc0c3aae56b276339298b_cgraph">
+<area shape="rect" title="Get the number of bones that the transparent mesh has" alt="" coords="5,5,213,48"/>
+<area shape="rect" href="class_c_static_model_data.html#a92ced1a35a7e0ceabc9f42030e95bfd4" title="Get a mesh that has transparent texture" alt="" coords="261,13,516,40"/>
+<area shape="poly" title=" " alt="" coords="213,24,245,24,245,29,213,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a8ff3a0cd68bdc0c3aae56b276339298b_icgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a8ff3a0cd68bdc0c3aae56b276339298b_icgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a8ff3a0cd68bdc0c3aae56b276339298b_icgraph" id="aclass_c_dynamic_model_controller_a8ff3a0cd68bdc0c3aae56b276339298b_icgraph">
+<area shape="rect" title="Get the number of bones that the transparent mesh has" alt="" coords="489,39,696,81"/>
+<area shape="rect" href="class_c_skeletal_model.html#ac2baaaef14f03b46b5d02f04227d7e61" title="Get bone matrices" alt="" coords="215,17,437,44"/>
+<area shape="poly" title=" " alt="" coords="473,50,436,45,437,40,473,44"/>
+<area shape="rect" href="class_c_skeletal_model.html#a2150ada4a6598098c71fe513c4dd21f2" title="Get the number of bones that mesh has" alt="" coords="211,72,441,99"/>
+<area shape="poly" title=" " alt="" coords="473,74,442,77,441,72,473,69"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a8124cae7f185f361950dffa4202adbf7" title="Allocate data for model" alt="" coords="5,5,163,48"/>
+<area shape="poly" title=" " alt="" coords="200,31,163,31,163,25,200,26"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a166a7be93cfea8497df2cc7698254de5" title="Create buffer for model" alt="" coords="5,72,163,115"/>
+<area shape="poly" title=" " alt="" coords="195,92,163,93,163,88,195,87"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4af543692fe749b5dd8e18aaff027092" name="a4af543692fe749b5dd8e18aaff027092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af543692fe749b5dd8e18aaff027092">&#9670;&#160;</a></span>IsBindPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDynamicModelController::IsBindPose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this model currently in a bind pose? </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a4af543692fe749b5dd8e18aaff027092_icgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a4af543692fe749b5dd8e18aaff027092_icgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a4af543692fe749b5dd8e18aaff027092_icgraph" id="aclass_c_dynamic_model_controller_a4af543692fe749b5dd8e18aaff027092_icgraph">
+<area shape="rect" title="Is this model currently in a bind pose?" alt="" coords="480,5,651,48"/>
+<area shape="rect" href="class_c_skeletal_model.html#ac2baaaef14f03b46b5d02f04227d7e61" title="Get bone matrices" alt="" coords="211,13,432,40"/>
+<area shape="poly" title=" " alt="" coords="464,29,432,29,432,24,464,24"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a8124cae7f185f361950dffa4202adbf7" title="Allocate data for model" alt="" coords="5,5,163,48"/>
+<area shape="poly" title=" " alt="" coords="195,29,163,29,163,24,195,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a43e777e5e26131148861d83c98622026" name="a43e777e5e26131148861d83c98622026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e777e5e26131148861d83c98622026">&#9670;&#160;</a></span>Play() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDynamicModelController::Play </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_anim_i_d_with_loop.html">AnimIDWithLoop</a>&#160;</td>
+          <td class="paramname"><em>idWithLoop</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Play animation </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idWithLoop</td><td>ID and loop flag </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a43e777e5e26131148861d83c98622026_cgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a43e777e5e26131148861d83c98622026_cgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a43e777e5e26131148861d83c98622026_cgraph" id="aclass_c_dynamic_model_controller_a43e777e5e26131148861d83c98622026_cgraph">
+<area shape="rect" title="Play animation" alt="" coords="5,29,177,72"/>
+<area shape="poly" title=" " alt="" coords="58,29,57,19,62,10,74,5,91,3,110,5,121,11,118,16,108,10,91,8,75,10,66,14,62,20,63,28"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a43e777e5e26131148861d83c98622026_icgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a43e777e5e26131148861d83c98622026_icgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a43e777e5e26131148861d83c98622026_icgraph" id="aclass_c_dynamic_model_controller_a43e777e5e26131148861d83c98622026_icgraph">
+<area shape="rect" title="Play animation" alt="" coords="5,29,177,72"/>
+<area shape="poly" title=" " alt="" coords="118,16,108,10,91,8,75,10,66,14,62,20,63,28,58,29,57,19,62,10,74,5,91,3,110,5,121,11"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a53b89fc80db3144dee4d095010657559" name="a53b89fc80db3144dee4d095010657559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b89fc80db3144dee4d095010657559">&#9670;&#160;</a></span>Play() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDynamicModelController::Play </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_model_info.html#a02d8c9b299d0474644fbd9de0940343b">ModelInfo::AnimID</a>&#160;</td>
+          <td class="paramname"><em>animID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isLoop</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Play animation </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animID</td><td>ID of animation to be played </td></tr>
+    <tr><td class="paramname">isLoop</td><td>Does it play on a loop? </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a53b89fc80db3144dee4d095010657559_cgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a53b89fc80db3144dee4d095010657559_cgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a53b89fc80db3144dee4d095010657559_cgraph" id="aclass_c_dynamic_model_controller_a53b89fc80db3144dee4d095010657559_cgraph">
+<area shape="rect" title="Play animation" alt="" coords="5,107,177,149"/>
+<area shape="rect" href="class_c_static_model_data.html#a36971f32580d275d7f7ba01a46246d75" title="Get an animation of this model" alt="" coords="238,5,452,32"/>
+<area shape="poly" title=" " alt="" coords="119,104,166,72,224,42,244,34,246,39,226,46,169,76,122,108"/>
+<area shape="rect" href="class_c_static_model_data.html#a038f4e6de5452d698a979d7858f254ce" title="Get the number of animations that this model has" alt="" coords="225,56,465,83"/>
+<area shape="poly" title=" " alt="" coords="177,104,224,92,261,84,262,89,225,97,178,109"/>
+<area shape="rect" href="struct_model_info_1_1_per_instance_data.html#a79201f566c4dcf6a076f1876823c3eab" title="Get ID of the currently main animation" alt="" coords="255,107,435,149"/>
+<area shape="poly" title=" " alt="" coords="177,125,239,125,239,131,177,131"/>
+<area shape="rect" href="class_c_static_model_data.html#a75e8dcb44c878405c28950b966e5a6cf" title="Get the interpolation time (seconds) if animation interpolation setting is not set" alt="" coords="241,173,449,216"/>
+<area shape="poly" title=" " alt="" coords="176,147,247,166,245,171,174,152"/>
+<area shape="rect" href="namespace_utl.html#ac7bd30f0e57ed421e2db52acf38e8a33" title="Check if the value of Float is equal to 0" alt="" coords="290,240,400,267"/>
+<area shape="poly" title=" " alt="" coords="116,148,164,188,194,208,226,226,276,242,274,247,224,230,191,213,161,192,113,152"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a53b89fc80db3144dee4d095010657559_icgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a53b89fc80db3144dee4d095010657559_icgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a53b89fc80db3144dee4d095010657559_icgraph" id="aclass_c_dynamic_model_controller_a53b89fc80db3144dee4d095010657559_icgraph">
+<area shape="rect" title="Play animation" alt="" coords="258,39,429,81"/>
+<area shape="rect" href="class_c_dynamic_model_controller.html#a8420458017097e6a9b236337893b3b1d" title="Play blend animation" alt="" coords="22,5,193,48"/>
+<area shape="poly" title=" " alt="" coords="242,48,193,41,194,36,243,43"/>
+<area shape="rect" href="class_c_player_anim_control_component.html#ac4ce0e82364b55af98027871d5f6d727" title="Updating process" alt="" coords="5,72,210,115"/>
+<area shape="poly" title=" " alt="" coords="243,77,211,81,210,76,242,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8420458017097e6a9b236337893b3b1d" name="a8420458017097e6a9b236337893b3b1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8420458017097e6a9b236337893b3b1d">&#9670;&#160;</a></span>PlayBlend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDynamicModelController::PlayBlend </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_model_info.html#a02d8c9b299d0474644fbd9de0940343b">ModelInfo::AnimID</a>&#160;</td>
+          <td class="paramname"><em>animID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isLoop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>blendTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Play blend animation </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animID</td><td>ID of animation to be played </td></tr>
+    <tr><td class="paramname">isLoop</td><td>Does it play on a loop? </td></tr>
+    <tr><td class="paramname">blendTime</td><td>Time required for blending </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_model_controller_a8420458017097e6a9b236337893b3b1d_cgraph.png" border="0" usemap="#aclass_c_dynamic_model_controller_a8420458017097e6a9b236337893b3b1d_cgraph" alt=""/></div>
+<map name="aclass_c_dynamic_model_controller_a8420458017097e6a9b236337893b3b1d_cgraph" id="aclass_c_dynamic_model_controller_a8420458017097e6a9b236337893b3b1d_cgraph">
+<area shape="rect" title="Play blend animation" alt="" coords="5,52,177,95"/>
+<area shape="rect" href="class_c_static_model_data.html#a038f4e6de5452d698a979d7858f254ce" title="Get the number of animations that this model has" alt="" coords="444,5,684,32"/>
+<area shape="poly" title=" " alt="" coords="177,61,428,32,429,37,177,66"/>
+<area shape="rect" href="class_c_dynamic_model_controller.html#a53b89fc80db3144dee4d095010657559" title="Play animation" alt="" coords="225,81,396,124"/>
+<area shape="poly" title=" " alt="" coords="177,82,209,86,209,92,176,87"/>
+<area shape="poly" title=" " alt="" coords="354,78,443,41,471,34,472,39,445,47,356,83"/>
+<area shape="rect" href="class_c_static_model_data.html#a36971f32580d275d7f7ba01a46246d75" title="Get an animation of this model" alt="" coords="458,56,671,83"/>
+<area shape="poly" title=" " alt="" coords="396,89,442,83,443,88,397,94"/>
+<area shape="rect" href="struct_model_info_1_1_per_instance_data.html#a79201f566c4dcf6a076f1876823c3eab" title="Get ID of the currently main animation" alt="" coords="474,107,654,149"/>
+<area shape="poly" title=" " alt="" coords="397,109,459,115,458,120,396,114"/>
+<area shape="rect" href="class_c_static_model_data.html#a75e8dcb44c878405c28950b966e5a6cf" title="Get the interpolation time (seconds) if animation interpolation setting is not set" alt="" coords="461,173,668,216"/>
+<area shape="poly" title=" " alt="" coords="357,122,445,159,465,166,463,171,443,164,355,127"/>
+<area shape="rect" href="namespace_utl.html#ac7bd30f0e57ed421e2db52acf38e8a33" title="Check if the value of Float is equal to 0" alt="" coords="510,240,619,267"/>
+<area shape="poly" title=" " alt="" coords="330,123,378,175,410,203,445,226,495,243,494,248,443,230,407,207,374,179,326,126"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4066ed64a126ee131ff57c403b544096" name="a4066ed64a126ee131ff57c403b544096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4066ed64a126ee131ff57c403b544096">&#9670;&#160;</a></span>SetAnimPlayRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDynamicModelController::SetAnimPlayRate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>playRate</em> = <code>1.0f</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set playrate of overall animation </p>
+
+</div>
+</div>
+<a id="ab774add53abff4603391249485af4168" name="ab774add53abff4603391249485af4168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab774add53abff4603391249485af4168">&#9670;&#160;</a></span>StepAnim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDynamicModelController::StepAnim </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeStep</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Advance the time of animation </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeStep</td><td>Time step to be advanced </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_loaded_model_info_8h_source.html">LoadedModelInfo.h</a></li>
+<li><a class="el" href="_loaded_model_info_8cpp.html">LoadedModelInfo.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

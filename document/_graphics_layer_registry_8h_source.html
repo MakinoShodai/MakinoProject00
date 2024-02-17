@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: GraphicsLayerRegistry.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">GraphicsLayerRegistry.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_graphics_layer_registry_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __GRAPHICS_LAYER_REGISTRY_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __GRAPHICS_LAYER_REGISTRY_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_graphics_layer_8h.html">GraphicsLayer.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_exception_8h.html">UtilityForException.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_graphics_component_8h.html">GraphicsComponent.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_sprite_8h.html">Sprite.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="_model_8h.html">Model.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="_shape_8h.html">Shape.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_graphics_layer_registry_8h.html#a62f00afa16c2ab1f10d469b073f34ab5">   21</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_graphics_layer_registry_8h.html#a62f00afa16c2ab1f10d469b073f34ab5">GraphicsComponentVectorVariantPtr</a> = std::variant&lt;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::vector&lt;CSpriteUI*&gt;*,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::vector&lt;CSprite3D*&gt;*,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::vector&lt;CBillboard*&gt;*,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::vector&lt;CBasicModel*&gt;*,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::vector&lt;CSkeletalModel*&gt;*,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::vector&lt;CTexShape*&gt;*,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    std::vector&lt;CColorOnlyShape*&gt;*,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    std::vector&lt;CDebugColliderShape*&gt;*</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>&gt;;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="_graphics_layer_registry_8h.html#ab037a1d9cb0b985186cecba355840f11">   33</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_graphics_layer_registry_8h.html#ab037a1d9cb0b985186cecba355840f11">ConstGraphicsComponentVectorVariantPtr</a> = <a class="code hl_struct" href="struct_utl_1_1_type_1_1_conv_1_1_const_variant.html">Utl::Type::Conv::ConstVariant&lt;GraphicsComponentVectorVariantPtr&gt;::type</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_check_graphics_component_vector_variant_ptr.html">   37</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_check_graphics_component_vector_variant_ptr.html">CheckGraphicsComponentVectorVariantPtr</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_check_graphics_component_vector_variant_ptr.html#ac1714c72e4ea07407cf8365d73dd33ac">   38</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="struct_check_graphics_component_vector_variant_ptr.html#ac1714c72e4ea07407cf8365d73dd33ac">VecValueType</a> = <span class="keyword">typename</span> std::remove_pointer_t&lt;T&gt;::value_type;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_check_graphics_component_vector_variant_ptr.html#a9c9bb08043030eb1f8256ac1e4c84f11">   39</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_check_graphics_component_vector_variant_ptr.html#a9c9bb08043030eb1f8256ac1e4c84f11">value</a> =</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        std::is_base_of_v&lt;ACGraphicsComponent, std::remove_pointer_t&lt;VecValueType&gt;&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        &amp;&amp; std::is_pointer_v&lt;T&gt;&amp;&amp; std::is_pointer_v&lt;VecValueType&gt;;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// Check internal types of GraphicsComponentVectorVariantPtr</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">static_assert</span>(Utl::Type::Traits::CheckVariantTypes&lt;GraphicsComponentVectorVariantPtr, CheckGraphicsComponentVectorVariantPtr&gt;(),</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    L<span class="stringliteral">&quot;All types in GraphicsComponentVectorVariantPtr must be std::vector&lt;&gt;* of pointer type to ACGraphicsComponent&#39;s derived classes&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="};">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_each_graphics_component_vector.html">   49</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_each_graphics_component_vector.html">EachGraphicsComponentVector</a> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_each_graphics_component_vector.html#a285ac0278946c59c3a97d289b003b0ca">   51</a></span>    std::vector&lt;CSpriteUI*&gt; <a class="code hl_variable" href="struct_each_graphics_component_vector.html#a285ac0278946c59c3a97d289b003b0ca">spriteUIs</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="struct_each_graphics_component_vector.html#a03511cb84eea468b19cbd70a4532fb3d">   53</a></span>    std::vector&lt;CSprite3D*&gt; <a class="code hl_variable" href="struct_each_graphics_component_vector.html#a03511cb84eea468b19cbd70a4532fb3d">sprite3Ds</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_each_graphics_component_vector.html#a66550166710240853b621de68665790a">   55</a></span>    std::vector&lt;CBillboard*&gt; <a class="code hl_variable" href="struct_each_graphics_component_vector.html#a66550166710240853b621de68665790a">billboards</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="struct_each_graphics_component_vector.html#a90f11a6695d3cd9217651d3ef8760d02">   57</a></span>    std::vector&lt;CBasicModel*&gt; <a class="code hl_variable" href="struct_each_graphics_component_vector.html#a90f11a6695d3cd9217651d3ef8760d02">basicModels</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="struct_each_graphics_component_vector.html#a53f7f5e3c198f70e8a91312ad54f3144">   59</a></span>    std::vector&lt;CSkeletalModel*&gt; <a class="code hl_variable" href="struct_each_graphics_component_vector.html#a53f7f5e3c198f70e8a91312ad54f3144">skeletalModels</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="struct_each_graphics_component_vector.html#a08d9cebfc95a0c908c72d45a6a0ddf35">   61</a></span>    std::vector&lt;CTexShape*&gt; <a class="code hl_variable" href="struct_each_graphics_component_vector.html#a08d9cebfc95a0c908c72d45a6a0ddf35">texShapes</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="struct_each_graphics_component_vector.html#a7621c8d0f09571e3b004707ef84dc587">   63</a></span>    std::vector&lt;CColorOnlyShape*&gt; <a class="code hl_variable" href="struct_each_graphics_component_vector.html#a7621c8d0f09571e3b004707ef84dc587">colorShapes</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_each_graphics_component_vector.html#a07a7f672e7cd65ca72911d95e1c62485">   65</a></span>    std::vector&lt;CDebugColliderShape*&gt; <a class="code hl_variable" href="struct_each_graphics_component_vector.html#a07a7f672e7cd65ca72911d95e1c62485">colliderShapes</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="struct_each_graphics_component_vector.html#aecd7bb2c3c02f8519b740f31c77596da">   72</a></span>    <span class="keyword">inline</span> <a class="code hl_typedef" href="_graphics_layer_registry_8h.html#a62f00afa16c2ab1f10d469b073f34ab5">GraphicsComponentVectorVariantPtr</a> <a class="code hl_function" href="struct_each_graphics_component_vector.html#aecd7bb2c3c02f8519b740f31c77596da">GetTypeArrayPtr</a>(<a class="code hl_enumeration" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a> type) { <span class="keywordflow">return</span> InnerGetTypeArrayPtr(<span class="keyword">this</span>, type); }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="struct_each_graphics_component_vector.html#a02d130e6ba71a432036ef56c2468674e">   79</a></span>    <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_typedef" href="_graphics_layer_registry_8h.html#ab037a1d9cb0b985186cecba355840f11">ConstGraphicsComponentVectorVariantPtr</a> <a class="code hl_function" href="struct_each_graphics_component_vector.html#a02d130e6ba71a432036ef56c2468674e">GetTypeArrayConstPtr</a>(<a class="code hl_enumeration" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a> type)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> InnerGetTypeArrayPtr(<span class="keyword">this</span>, type); }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_each_graphics_component_vector.html#a6de08c527adc7d5016b20df3d6ec9012">CheckEmpty</a>(<a class="code hl_enumeration" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a> type) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">static</span> <span class="keyword">auto</span> InnerGetTypeArrayPtr(T* instance, <a class="code hl_enumeration" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a> type) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">using </span>VariantPtrType = std::conditional_t&lt;std::is_const_v&lt;T&gt;, <a class="code hl_typedef" href="_graphics_layer_registry_8h.html#ab037a1d9cb0b985186cecba355840f11">ConstGraphicsComponentVectorVariantPtr</a>, <a class="code hl_typedef" href="_graphics_layer_registry_8h.html#a62f00afa16c2ab1f10d469b073f34ab5">GraphicsComponentVectorVariantPtr</a>&gt;;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">switch</span> (type) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13a9cf0b152bb4b7a55451d53f658b78679">GraphicsComponentType::SpriteUI</a>:</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>VariantPtrType<span class="keyword">&gt;</span>(&amp;instance-&gt;spriteUIs);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13a3104068b97389c6456501b38fdd9cefb">GraphicsComponentType::Sprite3D</a>:</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>VariantPtrType<span class="keyword">&gt;</span>(&amp;instance-&gt;sprite3Ds);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13acf9f62d4906d63087d71916c1c94c058">GraphicsComponentType::Billboard</a>:</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>VariantPtrType<span class="keyword">&gt;</span>(&amp;instance-&gt;billboards);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13a92ec244dea8fa6b7d23bb4bbca78b827">GraphicsComponentType::BasicModel</a>:</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>VariantPtrType<span class="keyword">&gt;</span>(&amp;instance-&gt;basicModels);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13ad5445ffc311da8d937cbc9855e7adb31">GraphicsComponentType::SkeletalModel</a>:</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>VariantPtrType<span class="keyword">&gt;</span>(&amp;instance-&gt;skeletalModels);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13a88ec500389d2e951c6cd1c542103ba64">GraphicsComponentType::TexShape</a>:</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>VariantPtrType<span class="keyword">&gt;</span>(&amp;instance-&gt;texShapes);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13ab3aa430f34d24223c89b644bb2f4123e">GraphicsComponentType::ColorShape</a>:</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>VariantPtrType<span class="keyword">&gt;</span>(&amp;instance-&gt;colorShapes);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13a23d8bd2aee303fd2a08d1850999d4cf9">GraphicsComponentType::DebugColliderShape</a>:</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>VariantPtrType<span class="keyword">&gt;</span>(&amp;instance-&gt;colliderShapes);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="class_utl_1_1_error_1_1_c_fatal_error.html">Utl::Error::CFatalError</a>(L<span class="stringliteral">&quot;Dynamic array corresponding to the specified type doesn&#39;t exist&quot;</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>};</div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="};">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_c_graphics_layer_registry.html">  123</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_graphics_layer_registry.html">CGraphicsLayerRegistry</a> {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_c_graphics_layer_registry.html#ad57110da02ea135c7c16d6eabc776a75">  128</a></span>    <a class="code hl_function" href="class_c_graphics_layer_registry.html#ad57110da02ea135c7c16d6eabc776a75">CGraphicsLayerRegistry</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_c_graphics_layer_registry.html#a7e2292c2e0b645cfc94d0302f945b0e6">  133</a></span>    <a class="code hl_function" href="class_c_graphics_layer_registry.html#a7e2292c2e0b645cfc94d0302f945b0e6">~CGraphicsLayerRegistry</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_layer_registry.html#ae71fd8d6d5d2e40e424feabeb5146050">Register</a>(<a class="code hl_class" href="class_a_c_graphics_component.html">ACGraphicsComponent</a>* component);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_layer_registry.html#a728fef001b692ad089ea9b33c0733aba">Exclude</a>(<a class="code hl_class" href="class_a_c_graphics_component.html">ACGraphicsComponent</a>* component);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_graphics_layer_registry.html#a0d0d2ff963285a03ce1a4c2fa9ed9599">CheckExists</a>(<span class="keyword">const</span> std::vector&lt;GraphicsLayer&gt;&amp; layers, <span class="keyword">const</span> std::vector&lt;GraphicsComponentType&gt;&amp; types);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="class_c_graphics_layer_registry.html#a6de289f0ded0b832a559739d628928f1">  156</a></span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_each_graphics_component_vector.html">EachGraphicsComponentVector</a>&amp; <a class="code hl_function" href="class_c_graphics_layer_registry.html#a6de289f0ded0b832a559739d628928f1">GetLayerComponents</a>(<a class="code hl_enumeration" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer) { <span class="keywordflow">return</span> m_layerComponents[(<a class="code hl_typedef" href="_graphics_layer_8h.html#ad82bb2a574a88ce525f2924cb8957785">GraphicsLayerUINT</a>)layer]; }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_struct" href="struct_each_graphics_component_vector.html">EachGraphicsComponentVector</a> m_layerComponents[(<a class="code hl_typedef" href="_graphics_layer_8h.html#ad82bb2a574a88ce525f2924cb8957785">GraphicsLayerUINT</a>)<a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa6a061313d22e51e0f25b7cd4dc065233">GraphicsLayer::Max</a>];</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>};</div>
+</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">#endif </span><span class="comment">// !__GRAPHICS_LAYER_REGISTRY_H__</span></div>
+<div class="ttc" id="a_graphics_component_8h_html"><div class="ttname"><a href="_graphics_component_8h.html">GraphicsComponent.h</a></div><div class="ttdoc">This file handles component for graphics.</div></div>
+<div class="ttc" id="a_graphics_component_8h_html_aa60a96503a2d2b84e2e2b7c430a32b13"><div class="ttname"><a href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a></div><div class="ttdeci">GraphicsComponentType</div><div class="ttdoc">Type of graphics component</div><div class="ttdef"><b>Definition</b> GraphicsComponent.h:25</div></div>
+<div class="ttc" id="a_graphics_component_8h_html_aa60a96503a2d2b84e2e2b7c430a32b13a23d8bd2aee303fd2a08d1850999d4cf9"><div class="ttname"><a href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13a23d8bd2aee303fd2a08d1850999d4cf9">GraphicsComponentType::DebugColliderShape</a></div><div class="ttdeci">@ DebugColliderShape</div><div class="ttdoc">Shape for debugging collider</div></div>
+<div class="ttc" id="a_graphics_component_8h_html_aa60a96503a2d2b84e2e2b7c430a32b13a3104068b97389c6456501b38fdd9cefb"><div class="ttname"><a href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13a3104068b97389c6456501b38fdd9cefb">GraphicsComponentType::Sprite3D</a></div><div class="ttdeci">@ Sprite3D</div><div class="ttdoc">Sprite for 3D</div></div>
+<div class="ttc" id="a_graphics_component_8h_html_aa60a96503a2d2b84e2e2b7c430a32b13a88ec500389d2e951c6cd1c542103ba64"><div class="ttname"><a href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13a88ec500389d2e951c6cd1c542103ba64">GraphicsComponentType::TexShape</a></div><div class="ttdeci">@ TexShape</div><div class="ttdoc">Texture shape</div></div>
+<div class="ttc" id="a_graphics_component_8h_html_aa60a96503a2d2b84e2e2b7c430a32b13a92ec244dea8fa6b7d23bb4bbca78b827"><div class="ttname"><a href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13a92ec244dea8fa6b7d23bb4bbca78b827">GraphicsComponentType::BasicModel</a></div><div class="ttdeci">@ BasicModel</div><div class="ttdoc">Non-animated model</div></div>
+<div class="ttc" id="a_graphics_component_8h_html_aa60a96503a2d2b84e2e2b7c430a32b13a9cf0b152bb4b7a55451d53f658b78679"><div class="ttname"><a href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13a9cf0b152bb4b7a55451d53f658b78679">GraphicsComponentType::SpriteUI</a></div><div class="ttdeci">@ SpriteUI</div><div class="ttdoc">Sprite for UI</div></div>
+<div class="ttc" id="a_graphics_component_8h_html_aa60a96503a2d2b84e2e2b7c430a32b13ab3aa430f34d24223c89b644bb2f4123e"><div class="ttname"><a href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13ab3aa430f34d24223c89b644bb2f4123e">GraphicsComponentType::ColorShape</a></div><div class="ttdeci">@ ColorShape</div><div class="ttdoc">Color only shape</div></div>
+<div class="ttc" id="a_graphics_component_8h_html_aa60a96503a2d2b84e2e2b7c430a32b13acf9f62d4906d63087d71916c1c94c058"><div class="ttname"><a href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13acf9f62d4906d63087d71916c1c94c058">GraphicsComponentType::Billboard</a></div><div class="ttdeci">@ Billboard</div><div class="ttdoc">Billboard</div></div>
+<div class="ttc" id="a_graphics_component_8h_html_aa60a96503a2d2b84e2e2b7c430a32b13ad5445ffc311da8d937cbc9855e7adb31"><div class="ttname"><a href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13ad5445ffc311da8d937cbc9855e7adb31">GraphicsComponentType::SkeletalModel</a></div><div class="ttdeci">@ SkeletalModel</div><div class="ttdoc">Skeltal model</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html"><div class="ttname"><a href="_graphics_layer_8h.html">GraphicsLayer.h</a></div><div class="ttdoc">This file handles the layer function in the graphics processing.</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdf"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a></div><div class="ttdeci">GraphicsLayer</div><div class="ttdoc">Graphics layer type</div><div class="ttdef"><b>Definition</b> GraphicsLayer.h:16</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdfa6a061313d22e51e0f25b7cd4dc065233"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa6a061313d22e51e0f25b7cd4dc065233">GraphicsLayer::Max</a></div><div class="ttdeci">@ Max</div><div class="ttdoc">The maximum number of layer</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_ad82bb2a574a88ce525f2924cb8957785"><div class="ttname"><a href="_graphics_layer_8h.html#ad82bb2a574a88ce525f2924cb8957785">GraphicsLayerUINT</a></div><div class="ttdeci">UINT32 GraphicsLayerUINT</div><div class="ttdoc">Internal type of the graphics layer enumeration type</div><div class="ttdef"><b>Definition</b> GraphicsLayer.h:13</div></div>
+<div class="ttc" id="a_graphics_layer_registry_8h_html_a62f00afa16c2ab1f10d469b073f34ab5"><div class="ttname"><a href="_graphics_layer_registry_8h.html#a62f00afa16c2ab1f10d469b073f34ab5">GraphicsComponentVectorVariantPtr</a></div><div class="ttdeci">std::variant&lt; std::vector&lt; CSpriteUI * &gt; *, std::vector&lt; CSprite3D * &gt; *, std::vector&lt; CBillboard * &gt; *, std::vector&lt; CBasicModel * &gt; *, std::vector&lt; CSkeletalModel * &gt; *, std::vector&lt; CTexShape * &gt; *, std::vector&lt; CColorOnlyShape * &gt; *, std::vector&lt; CDebugColliderShape * &gt; * &gt; GraphicsComponentVectorVariantPtr</div><div class="ttdoc">Variant class for pointer to dynamic array of graphics components</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:30</div></div>
+<div class="ttc" id="a_graphics_layer_registry_8h_html_ab037a1d9cb0b985186cecba355840f11"><div class="ttname"><a href="_graphics_layer_registry_8h.html#ab037a1d9cb0b985186cecba355840f11">ConstGraphicsComponentVectorVariantPtr</a></div><div class="ttdeci">Utl::Type::Conv::ConstVariant&lt; GraphicsComponentVectorVariantPtr &gt;::type ConstGraphicsComponentVectorVariantPtr</div><div class="ttdoc">Variant class for const pointer to dynamic array of graphics components</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:33</div></div>
+<div class="ttc" id="a_model_8h_html"><div class="ttname"><a href="_model_8h.html">Model.h</a></div><div class="ttdoc">This file handles model class.</div></div>
+<div class="ttc" id="a_shape_8h_html"><div class="ttname"><a href="_shape_8h.html">Shape.h</a></div><div class="ttdoc">This file handles graphics component for shape.</div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">File handling abstract singleton class.</div></div>
+<div class="ttc" id="a_sprite_8h_html"><div class="ttname"><a href="_sprite_8h.html">Sprite.h</a></div><div class="ttdoc">This file handles sprite.</div></div>
+<div class="ttc" id="a_utility_for_exception_8h_html"><div class="ttname"><a href="_utility_for_exception_8h.html">UtilityForException.h</a></div><div class="ttdoc">This file defines utility functions that are useful for exception.</div></div>
+<div class="ttc" id="aclass_a_c_graphics_component_html"><div class="ttname"><a href="class_a_c_graphics_component.html">ACGraphicsComponent</a></div><div class="ttdoc">Abstract class of component of graphics</div><div class="ttdef"><b>Definition</b> GraphicsComponent.h:78</div></div>
+<div class="ttc" id="aclass_c_graphics_layer_registry_html"><div class="ttname"><a href="class_c_graphics_layer_registry.html">CGraphicsLayerRegistry</a></div><div class="ttdoc">This class handles drawing components for each layer</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:123</div></div>
+<div class="ttc" id="aclass_c_graphics_layer_registry_html_a0d0d2ff963285a03ce1a4c2fa9ed9599"><div class="ttname"><a href="class_c_graphics_layer_registry.html#a0d0d2ff963285a03ce1a4c2fa9ed9599">CGraphicsLayerRegistry::CheckExists</a></div><div class="ttdeci">bool CheckExists(const std::vector&lt; GraphicsLayer &gt; &amp;layers, const std::vector&lt; GraphicsComponentType &gt; &amp;types)</div><div class="ttdoc">Check if the graphics components to be drawn exists</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.cpp:59</div></div>
+<div class="ttc" id="aclass_c_graphics_layer_registry_html_a6de289f0ded0b832a559739d628928f1"><div class="ttname"><a href="class_c_graphics_layer_registry.html#a6de289f0ded0b832a559739d628928f1">CGraphicsLayerRegistry::GetLayerComponents</a></div><div class="ttdeci">const EachGraphicsComponentVector &amp; GetLayerComponents(GraphicsLayer layer)</div><div class="ttdoc">Get all components belonging to a layer</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:156</div></div>
+<div class="ttc" id="aclass_c_graphics_layer_registry_html_a728fef001b692ad089ea9b33c0733aba"><div class="ttname"><a href="class_c_graphics_layer_registry.html#a728fef001b692ad089ea9b33c0733aba">CGraphicsLayerRegistry::Exclude</a></div><div class="ttdeci">void Exclude(ACGraphicsComponent *component)</div><div class="ttdoc">Exclude graphcis component from the registry</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.cpp:39</div></div>
+<div class="ttc" id="aclass_c_graphics_layer_registry_html_a7e2292c2e0b645cfc94d0302f945b0e6"><div class="ttname"><a href="class_c_graphics_layer_registry.html#a7e2292c2e0b645cfc94d0302f945b0e6">CGraphicsLayerRegistry::~CGraphicsLayerRegistry</a></div><div class="ttdeci">~CGraphicsLayerRegistry()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_graphics_layer_registry_html_ad57110da02ea135c7c16d6eabc776a75"><div class="ttname"><a href="class_c_graphics_layer_registry.html#ad57110da02ea135c7c16d6eabc776a75">CGraphicsLayerRegistry::CGraphicsLayerRegistry</a></div><div class="ttdeci">CGraphicsLayerRegistry()=default</div><div class="ttdoc">Constructor</div></div>
+<div class="ttc" id="aclass_c_graphics_layer_registry_html_ae71fd8d6d5d2e40e424feabeb5146050"><div class="ttname"><a href="class_c_graphics_layer_registry.html#ae71fd8d6d5d2e40e424feabeb5146050">CGraphicsLayerRegistry::Register</a></div><div class="ttdeci">void Register(ACGraphicsComponent *component)</div><div class="ttdoc">Register graphics component in the registry</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.cpp:28</div></div>
+<div class="ttc" id="aclass_utl_1_1_error_1_1_c_fatal_error_html"><div class="ttname"><a href="class_utl_1_1_error_1_1_c_fatal_error.html">Utl::Error::CFatalError</a></div><div class="ttdoc">Fatal exception class that must exit the application</div><div class="ttdef"><b>Definition</b> UtilityForException.h:15</div></div>
+<div class="ttc" id="astruct_check_graphics_component_vector_variant_ptr_html"><div class="ttname"><a href="struct_check_graphics_component_vector_variant_ptr.html">CheckGraphicsComponentVectorVariantPtr</a></div><div class="ttdoc">Evaluation expression for 'GraphicsComponentVectorVariantPtr'</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:37</div></div>
+<div class="ttc" id="astruct_check_graphics_component_vector_variant_ptr_html_a9c9bb08043030eb1f8256ac1e4c84f11"><div class="ttname"><a href="struct_check_graphics_component_vector_variant_ptr.html#a9c9bb08043030eb1f8256ac1e4c84f11">CheckGraphicsComponentVectorVariantPtr::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:39</div></div>
+<div class="ttc" id="astruct_check_graphics_component_vector_variant_ptr_html_ac1714c72e4ea07407cf8365d73dd33ac"><div class="ttname"><a href="struct_check_graphics_component_vector_variant_ptr.html#ac1714c72e4ea07407cf8365d73dd33ac">CheckGraphicsComponentVectorVariantPtr::VecValueType</a></div><div class="ttdeci">typename std::remove_pointer_t&lt; T &gt;::value_type VecValueType</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:38</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html"><div class="ttname"><a href="struct_each_graphics_component_vector.html">EachGraphicsComponentVector</a></div><div class="ttdoc">Each vector of graphics components</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:49</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html_a02d130e6ba71a432036ef56c2468674e"><div class="ttname"><a href="struct_each_graphics_component_vector.html#a02d130e6ba71a432036ef56c2468674e">EachGraphicsComponentVector::GetTypeArrayConstPtr</a></div><div class="ttdeci">const ConstGraphicsComponentVectorVariantPtr GetTypeArrayConstPtr(GraphicsComponentType type) const</div><div class="ttdoc">Get dynamic array corresponding to the specified type</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:79</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html_a03511cb84eea468b19cbd70a4532fb3d"><div class="ttname"><a href="struct_each_graphics_component_vector.html#a03511cb84eea468b19cbd70a4532fb3d">EachGraphicsComponentVector::sprite3Ds</a></div><div class="ttdeci">std::vector&lt; CSprite3D * &gt; sprite3Ds</div><div class="ttdoc">Dynamic array for CSprite3D</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:53</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html_a07a7f672e7cd65ca72911d95e1c62485"><div class="ttname"><a href="struct_each_graphics_component_vector.html#a07a7f672e7cd65ca72911d95e1c62485">EachGraphicsComponentVector::colliderShapes</a></div><div class="ttdeci">std::vector&lt; CDebugColliderShape * &gt; colliderShapes</div><div class="ttdoc">Dynamic array for CDebugColliderShape</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:65</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html_a08d9cebfc95a0c908c72d45a6a0ddf35"><div class="ttname"><a href="struct_each_graphics_component_vector.html#a08d9cebfc95a0c908c72d45a6a0ddf35">EachGraphicsComponentVector::texShapes</a></div><div class="ttdeci">std::vector&lt; CTexShape * &gt; texShapes</div><div class="ttdoc">Dynamic array for CTexShape</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:61</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html_a285ac0278946c59c3a97d289b003b0ca"><div class="ttname"><a href="struct_each_graphics_component_vector.html#a285ac0278946c59c3a97d289b003b0ca">EachGraphicsComponentVector::spriteUIs</a></div><div class="ttdeci">std::vector&lt; CSpriteUI * &gt; spriteUIs</div><div class="ttdoc">Dynamic array for CSpriteUI</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:51</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html_a53f7f5e3c198f70e8a91312ad54f3144"><div class="ttname"><a href="struct_each_graphics_component_vector.html#a53f7f5e3c198f70e8a91312ad54f3144">EachGraphicsComponentVector::skeletalModels</a></div><div class="ttdeci">std::vector&lt; CSkeletalModel * &gt; skeletalModels</div><div class="ttdoc">Dynamic array for CSkeletalModel</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:59</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html_a66550166710240853b621de68665790a"><div class="ttname"><a href="struct_each_graphics_component_vector.html#a66550166710240853b621de68665790a">EachGraphicsComponentVector::billboards</a></div><div class="ttdeci">std::vector&lt; CBillboard * &gt; billboards</div><div class="ttdoc">Dynamic array for CBillboard</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:55</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html_a6de08c527adc7d5016b20df3d6ec9012"><div class="ttname"><a href="struct_each_graphics_component_vector.html#a6de08c527adc7d5016b20df3d6ec9012">EachGraphicsComponentVector::CheckEmpty</a></div><div class="ttdeci">bool CheckEmpty(GraphicsComponentType type) const</div><div class="ttdoc">Check if the array of the specified type is empty</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.cpp:4</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html_a7621c8d0f09571e3b004707ef84dc587"><div class="ttname"><a href="struct_each_graphics_component_vector.html#a7621c8d0f09571e3b004707ef84dc587">EachGraphicsComponentVector::colorShapes</a></div><div class="ttdeci">std::vector&lt; CColorOnlyShape * &gt; colorShapes</div><div class="ttdoc">Dynamic array for CColorOnlyShape</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:63</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html_a90f11a6695d3cd9217651d3ef8760d02"><div class="ttname"><a href="struct_each_graphics_component_vector.html#a90f11a6695d3cd9217651d3ef8760d02">EachGraphicsComponentVector::basicModels</a></div><div class="ttdeci">std::vector&lt; CBasicModel * &gt; basicModels</div><div class="ttdoc">Dynamic array for CBasicModel</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:57</div></div>
+<div class="ttc" id="astruct_each_graphics_component_vector_html_aecd7bb2c3c02f8519b740f31c77596da"><div class="ttname"><a href="struct_each_graphics_component_vector.html#aecd7bb2c3c02f8519b740f31c77596da">EachGraphicsComponentVector::GetTypeArrayPtr</a></div><div class="ttdeci">GraphicsComponentVectorVariantPtr GetTypeArrayPtr(GraphicsComponentType type)</div><div class="ttdoc">Get dynamic array corresponding to the specified type</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:72</div></div>
+<div class="ttc" id="astruct_utl_1_1_type_1_1_conv_1_1_const_variant_html"><div class="ttname"><a href="struct_utl_1_1_type_1_1_conv_1_1_const_variant.html">Utl::Type::Conv::ConstVariant</a></div><div class="ttdoc">Helper structure to apply const to all types of std::variant</div><div class="ttdef"><b>Definition</b> UtilityForType.h:140</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

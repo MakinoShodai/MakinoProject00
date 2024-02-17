@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: StaticCbOrthographicMat.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">StaticCbOrthographicMat.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_static_cb_orthographic_mat_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __STATIC_CB_ORTHOGRAPHIC_MAT_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __STATIC_CB_ORTHOGRAPHIC_MAT_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_static_cb_allocator_8h.html">StaticCbAllocator.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_render_target_8h.html">RenderTarget.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_camera_registry_8h.html">CameraRegistry.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_c_static_cb_orthographic_mat.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_static_cb_orthographic_mat.html">CStaticCbOrthographicMat</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_static_cb_allocator.html">ACStaticCbAllocator</a>&lt;DirectX::XMFLOAT4X4&gt; {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_c_static_cb_orthographic_mat.html#a943e85dfed5da8f32575a0a4ec1e40d1">   20</a></span>    <a class="code hl_function" href="class_c_static_cb_orthographic_mat.html#a943e85dfed5da8f32575a0a4ec1e40d1">CStaticCbOrthographicMat</a>() : <a class="code hl_class" href="class_a_c_static_cb_allocator.html">ACStaticCbAllocator</a>(<span class="stringliteral">&quot;OrthographicProjMat&quot;</span>, 5), m_prevRenderTarget(nullptr) {}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_static_cb_orthographic_mat.html#a5ebe85f42a833955d10f75cc2d5728fd">AllocateData</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_static_cb_orthographic_mat.html#ae4754fff0be57c04b1f781f1055efa00">IsAdvanceNextAllocate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_c_static_cb_orthographic_mat.html#aeba507a7f6dec9dc1ea844e768fd0e06">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_static_cb_orthographic_mat.html#aeba507a7f6dec9dc1ea844e768fd0e06">RefreshDerived</a>()<span class="keyword"> override </span>{ m_prevRenderTarget = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="class_a_c_render_target.html">ACRenderTarget</a>* m_prevRenderTarget;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_c_static_cb_orthographic_view_proj_mat.html">   38</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_static_cb_orthographic_view_proj_mat.html">CStaticCbOrthographicViewProjMat</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_static_cb_allocator.html">ACStaticCbAllocator</a>&lt;DirectX::XMFLOAT4X4&gt; {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_c_static_cb_orthographic_view_proj_mat.html#a42c742951a9373a6e9d6dfdf81b2d631">   41</a></span>    <a class="code hl_function" href="class_c_static_cb_orthographic_view_proj_mat.html#a42c742951a9373a6e9d6dfdf81b2d631">CStaticCbOrthographicViewProjMat</a>() : <a class="code hl_class" href="class_a_c_static_cb_allocator.html">ACStaticCbAllocator</a>(<span class="stringliteral">&quot;OrthographicViewProjMat&quot;</span>, 5), m_prevRenderTarget(nullptr) {}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_static_cb_orthographic_view_proj_mat.html#a3fd3cab63b43cb83333f86a68fc1f8e0">Start</a>(<a class="code hl_class" href="class_c_scene.html">CScene</a>* scene) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_static_cb_orthographic_view_proj_mat.html#a359c2368c9f058bbd9988274b7b861a7">AllocateData</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_static_cb_orthographic_view_proj_mat.html#a35888649f0e7fb3ae99ec3a5d7eb2edd">IsAdvanceNextAllocate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_static_cb_orthographic_view_proj_mat.html#a396fe9a06bbbf2e862c95f975306ab61">   54</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_static_cb_orthographic_view_proj_mat.html#a396fe9a06bbbf2e862c95f975306ab61">RefreshDerived</a>()<span class="keyword"> override </span>{ m_prevRenderTarget = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_class" href="class_a_c_render_target.html">ACRenderTarget</a>* m_prevRenderTarget;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CCameraRegistry&gt;</a> m_cameraRegistry;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">// !__STATIC_CB_ORTHOGRAPHIC_MAT_H__</span></div>
+<div class="ttc" id="a_camera_registry_8h_html"><div class="ttname"><a href="_camera_registry_8h.html">CameraRegistry.h</a></div><div class="ttdoc">This file handles a camera registry.</div></div>
+<div class="ttc" id="a_render_target_8h_html"><div class="ttname"><a href="_render_target_8h.html">RenderTarget.h</a></div><div class="ttdoc">This file handles render targets.</div></div>
+<div class="ttc" id="a_static_cb_allocator_8h_html"><div class="ttname"><a href="_static_cb_allocator_8h.html">StaticCbAllocator.h</a></div><div class="ttdoc">This file handles abstract class of static constant buffer that don't need to be updated on a per-obj...</div></div>
+<div class="ttc" id="aclass_a_c_render_target_html"><div class="ttname"><a href="class_a_c_render_target.html">ACRenderTarget</a></div><div class="ttdoc">This class handles render target</div><div class="ttdef"><b>Definition</b> RenderTarget.h:17</div></div>
+<div class="ttc" id="aclass_a_c_static_cb_allocator_html"><div class="ttname"><a href="class_a_c_static_cb_allocator.html">ACStaticCbAllocator</a></div><div class="ttdoc">This class allocates data for constant buffer view that don't need to be updated on a per-object basi...</div><div class="ttdef"><b>Definition</b> StaticCbAllocator.h:20</div></div>
+<div class="ttc" id="aclass_c_scene_html"><div class="ttname"><a href="class_c_scene.html">CScene</a></div><div class="ttdoc">Scene class</div><div class="ttdef"><b>Definition</b> Scene.h:25</div></div>
+<div class="ttc" id="aclass_c_static_cb_orthographic_mat_html"><div class="ttname"><a href="class_c_static_cb_orthographic_mat.html">CStaticCbOrthographicMat</a></div><div class="ttdoc">Static CB class that handles orthographic projection matrix</div><div class="ttdef"><b>Definition</b> StaticCbOrthographicMat.h:17</div></div>
+<div class="ttc" id="aclass_c_static_cb_orthographic_mat_html_a5ebe85f42a833955d10f75cc2d5728fd"><div class="ttname"><a href="class_c_static_cb_orthographic_mat.html#a5ebe85f42a833955d10f75cc2d5728fd">CStaticCbOrthographicMat::AllocateData</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData() override</div><div class="ttdoc">Allocate data</div><div class="ttdef"><b>Definition</b> StaticCbOrthographicMat.cpp:5</div></div>
+<div class="ttc" id="aclass_c_static_cb_orthographic_mat_html_a943e85dfed5da8f32575a0a4ec1e40d1"><div class="ttname"><a href="class_c_static_cb_orthographic_mat.html#a943e85dfed5da8f32575a0a4ec1e40d1">CStaticCbOrthographicMat::CStaticCbOrthographicMat</a></div><div class="ttdeci">CStaticCbOrthographicMat()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> StaticCbOrthographicMat.h:20</div></div>
+<div class="ttc" id="aclass_c_static_cb_orthographic_mat_html_ae4754fff0be57c04b1f781f1055efa00"><div class="ttname"><a href="class_c_static_cb_orthographic_mat.html#ae4754fff0be57c04b1f781f1055efa00">CStaticCbOrthographicMat::IsAdvanceNextAllocate</a></div><div class="ttdeci">bool IsAdvanceNextAllocate() override</div><div class="ttdoc">Advance to the next data assignment?</div><div class="ttdef"><b>Definition</b> StaticCbOrthographicMat.cpp:29</div></div>
+<div class="ttc" id="aclass_c_static_cb_orthographic_mat_html_aeba507a7f6dec9dc1ea844e768fd0e06"><div class="ttname"><a href="class_c_static_cb_orthographic_mat.html#aeba507a7f6dec9dc1ea844e768fd0e06">CStaticCbOrthographicMat::RefreshDerived</a></div><div class="ttdeci">void RefreshDerived() override</div><div class="ttdoc">Refresh process that must be called at the end of every frame in derived class</div><div class="ttdef"><b>Definition</b> StaticCbOrthographicMat.h:30</div></div>
+<div class="ttc" id="aclass_c_static_cb_orthographic_view_proj_mat_html"><div class="ttname"><a href="class_c_static_cb_orthographic_view_proj_mat.html">CStaticCbOrthographicViewProjMat</a></div><div class="ttdoc">Static CB class that handles orthographic view projection matrix</div><div class="ttdef"><b>Definition</b> StaticCbOrthographicMat.h:38</div></div>
+<div class="ttc" id="aclass_c_static_cb_orthographic_view_proj_mat_html_a35888649f0e7fb3ae99ec3a5d7eb2edd"><div class="ttname"><a href="class_c_static_cb_orthographic_view_proj_mat.html#a35888649f0e7fb3ae99ec3a5d7eb2edd">CStaticCbOrthographicViewProjMat::IsAdvanceNextAllocate</a></div><div class="ttdeci">bool IsAdvanceNextAllocate() override</div><div class="ttdoc">Advance to the next data assignment?</div><div class="ttdef"><b>Definition</b> StaticCbOrthographicMat.cpp:86</div></div>
+<div class="ttc" id="aclass_c_static_cb_orthographic_view_proj_mat_html_a359c2368c9f058bbd9988274b7b861a7"><div class="ttname"><a href="class_c_static_cb_orthographic_view_proj_mat.html#a359c2368c9f058bbd9988274b7b861a7">CStaticCbOrthographicViewProjMat::AllocateData</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData() override</div><div class="ttdoc">Allocate data</div><div class="ttdef"><b>Definition</b> StaticCbOrthographicMat.cpp:49</div></div>
+<div class="ttc" id="aclass_c_static_cb_orthographic_view_proj_mat_html_a396fe9a06bbbf2e862c95f975306ab61"><div class="ttname"><a href="class_c_static_cb_orthographic_view_proj_mat.html#a396fe9a06bbbf2e862c95f975306ab61">CStaticCbOrthographicViewProjMat::RefreshDerived</a></div><div class="ttdeci">void RefreshDerived() override</div><div class="ttdoc">Refresh process that must be called at the end of every frame in derived class</div><div class="ttdef"><b>Definition</b> StaticCbOrthographicMat.h:54</div></div>
+<div class="ttc" id="aclass_c_static_cb_orthographic_view_proj_mat_html_a3fd3cab63b43cb83333f86a68fc1f8e0"><div class="ttname"><a href="class_c_static_cb_orthographic_view_proj_mat.html#a3fd3cab63b43cb83333f86a68fc1f8e0">CStaticCbOrthographicViewProjMat::Start</a></div><div class="ttdeci">void Start(CScene *scene) override</div><div class="ttdoc">Scene start processing</div><div class="ttdef"><b>Definition</b> StaticCbOrthographicMat.cpp:44</div></div>
+<div class="ttc" id="aclass_c_static_cb_orthographic_view_proj_mat_html_a42c742951a9373a6e9d6dfdf81b2d631"><div class="ttname"><a href="class_c_static_cb_orthographic_view_proj_mat.html#a42c742951a9373a6e9d6dfdf81b2d631">CStaticCbOrthographicViewProjMat::CStaticCbOrthographicViewProjMat</a></div><div class="ttdeci">CStaticCbOrthographicViewProjMat()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> StaticCbOrthographicMat.h:41</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="astruct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e_html"><div class="ttname"><a href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a></div><div class="ttdoc">D3D12_CPU_DESCRIPTOR_HANDLE interface</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

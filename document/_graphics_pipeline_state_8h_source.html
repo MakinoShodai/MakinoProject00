@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: GraphicsPipelineState.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">GraphicsPipelineState.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_graphics_pipeline_state_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __GRAPHICS_PIPELINE_STATE_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __GRAPHICS_PIPELINE_STATE_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_graphics_pipeline_elements_8h.html">GraphicsPipelineElements.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_graphics_component_8h.html">GraphicsComponent.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_dynamic_cb_allocator_8h.html">DynamicCbAllocator.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_graphics_layer_8h.html">GraphicsLayer.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_graphics_object_asset_8h.html">GraphicsObjectAsset.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="_descriptor_heap_8h.html">DescriptorHeap.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="_descriptor_heap_pool_8h.html">DescriptorHeapPool.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="_shader_8h.html">Shader.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="_static_resource_8h.html">StaticResource.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="_swap_chain_8h.html">SwapChain.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// Forward declaration</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">class </span><a class="code hl_class" href="class_c_scene.html">CScene</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_c_graphics_pipeline_state.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_function" href="class_c_graphics_pipeline_state.html#afc720bf435766c03581c184f0bc0375b">CGraphicsPipelineState</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_function" href="class_c_graphics_pipeline_state.html#a253028e29d9d2a2f7852250d04d35760">~CGraphicsPipelineState</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_pipeline_state.html#ae6e8f7fdae3438349ae87e5ba7e77513">Create</a>(<a class="code hl_class" href="class_c_scene.html">CScene</a>* scene, <span class="keyword">const</span> std::wstring gpsoName, <span class="keyword">const</span> <a class="code hl_struct" href="struct_gpso_1_1_g_p_s_o_setting.html">Gpso::GPSOSetting</a>&amp; setting, std::initializer_list&lt;GraphicsLayer&gt; useLayers, std::initializer_list&lt;GraphicsComponentType&gt; useTypes);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_pipeline_state.html#ae6e8f7fdae3438349ae87e5ba7e77513">Create</a>(<a class="code hl_class" href="class_c_scene.html">CScene</a>* scene, <span class="keyword">const</span> std::wstring gpsoName, <span class="keyword">const</span> <a class="code hl_struct" href="struct_gpso_1_1_g_p_s_o_setting.html">Gpso::GPSOSetting</a>&amp; setting, std::initializer_list&lt;GraphicsLayer&gt; useLayers, std::vector&lt;GraphicsComponentType&gt; useTypes);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_pipeline_state.html#abc3395de10313e13b40e56f7b07ec1ad">SetCommand</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_c_graphics_pipeline_state.html#a0ba11683319fa2b61af536b744a8cd7a">   69</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_graphics_pipeline_state.html#a0ba11683319fa2b61af536b744a8cd7a">GetDynamicResourceOffset</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_utl_1_1_dx_1_1_shader_string.html">Utl::Dx::ShaderString</a>&amp; resName)<span class="keyword"> const </span>{ <span class="keyword">auto</span> it = m_dynamicResNameToOffset.find(resName); <span class="keywordflow">return</span> (it != m_dynamicResNameToOffset.end()) ? (int)it-&gt;second : -1; }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_pipeline_state.html#a9361d73043f9ef461d09294ae1b8bc12">AddGraphicsObjectAsset</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CGraphicsObjectAsset&gt;</a> asset);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_pipeline_state.html#af5d77383f36a18761a90b9c593f1638a">EndFrameProcess</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> SetCommandForComponent(<span class="keyword">const</span> std::vector&lt;T*&gt;&amp; componentsArray, ID3D12Device* device, ID3D12GraphicsCommandList* cmdList, <a class="code hl_class" href="class_c_descriptor_heap_pool.html">CDescriptorHeapPool</a>* pool);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">void</span> BindShaderInfo(<a class="code hl_class" href="class_a_c_shader.html">ACShader</a>* shader, D3D12_GRAPHICS_PIPELINE_STATE_DESC* gpipeline, </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        std::vector&lt;D3D12_ROOT_PARAMETER&gt;* rootParams, std::vector&lt;D3D12_STATIC_SAMPLER_DESC&gt;* samplers);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">void</span> BindShaderInfoDynamic(<a class="code hl_class" href="class_a_c_shader.html">ACShader</a>* shader, D3D12_GRAPHICS_PIPELINE_STATE_DESC* gpipeline,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        std::vector&lt;D3D12_ROOT_PARAMETER&gt;* rootParams);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">void</span> UpdateStaticResources();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">void</span> CheckRegionOverflow();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CScene&gt;</a> m_scene;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    Microsoft::WRL::ComPtr&lt;ID3D12PipelineState&gt; m_gpso;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    Microsoft::WRL::ComPtr&lt;ID3D12RootSignature&gt; m_rootSignature;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    D3D12_RESOURCE_STATES m_dsvState;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    std::unordered_map&lt;Utl::Dx::ShaderString, UINT, Utl::Dx::ShaderStringHash&gt; m_dynamicResNameToOffset;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    std::vector&lt;std::pair&lt;IDynamicResource*, UINT&gt;&gt; m_dynamicAllocators;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    std::vector&lt;UINT&gt; m_dynamicRootDescriptorTableOffset;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    UINT m_totalDynamicDescRangeNum;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    UINT m_totalDynamicTextureNum;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    std::vector&lt;std::pair&lt;IStaticResource*, UINT&gt;&gt; m_staticResources;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    std::vector&lt;UINT&gt; m_staticRootDescriptorTableOffset;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    UINT m_totalStaticDescRangeNum;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    std::vector&lt;CWeakPtr&lt;CGraphicsObjectAsset&gt;&gt; m_externalGraphicsObjectAssets;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    std::vector&lt;GraphicsLayer&gt; m_useLayers;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    std::vector&lt;GraphicsComponentType&gt; m_useComponentTypes;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">#ifdef _DEBUG</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    std::wstring m_gpsoName;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#endif </span><span class="comment">// _DEBUG</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>};</div>
+</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">// Set sent graphics components to command list</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keywordtype">void</span> CGraphicsPipelineState::SetCommandForComponent(<span class="keyword">const</span> std::vector&lt;T*&gt;&amp; componentsArray, ID3D12Device* device, ID3D12GraphicsCommandList* cmdList, <a class="code hl_class" href="class_c_descriptor_heap_pool.html">CDescriptorHeapPool</a>* pool) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">for</span> (T* component : componentsArray) {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">if</span> (!component-&gt;IsActiveOverall() || !component-&gt;IsDrawCondition()) { <span class="keywordflow">continue</span>; }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="comment">// Draw on all meshes the component has</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        UINT meshNum = component-&gt;GetMeshNum();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordflow">for</span> (UINT meshIndex = 0; meshIndex &lt; meshNum; ++meshIndex) {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            <span class="comment">// Get the mesh&#39;s vertex buffer and index buffer </span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <span class="keyword">const</span> <a class="code hl_class" href="class_c_mesh_buffer.html">CMeshBuffer</a>* meshBuff = component-&gt;GetMeshBuffer(meshIndex);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <span class="keyword">const</span> <a class="code hl_class" href="class_c_vertex_buffer.html">CVertexBuffer</a>* vertBuff = meshBuff-&gt;<a class="code hl_function" href="class_c_mesh_buffer.html#a13a81042cdaeaaadf1c2ab8fd685dda3">GetVertex</a>();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <span class="keyword">const</span> <a class="code hl_class" href="class_c_index_buffer.html">CIndexBuffer</a>* indexBuff = meshBuff-&gt;<a class="code hl_function" href="class_c_mesh_buffer.html#a2d0e2030e49e9fa59ec6400c24ee244c">GetIndex</a>();</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <span class="comment">// If can&#39;t find either of them, output a message</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <span class="keywordflow">if</span> (vertBuff == <span class="keyword">nullptr</span> || indexBuff == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                OutputDebugString(L<span class="stringliteral">&quot;Warning! No vertex or index buffer is allocated for the graphics component\n&quot;</span>);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            <span class="comment">// Checks if the descriptor heap region overflows, and if so, advances to the next descriptor heap</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            CheckRegionOverflow();</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="comment">// Create constant buffer views, that need to be updated on a per-object basis, for component</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cbv : m_dynamicAllocators) {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                device-&gt;CopyDescriptorsSimple(1,</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                    pool-&gt;<a class="code hl_function" href="class_c_descriptor_heap_pool.html#a94be553cb145046459e138d08f98ead9">GetCPUHandle</a>(cbv.second),</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                    cbv.first-&gt;GetAllocatedDataHandle(component, meshIndex), D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <span class="comment">// Create dynamic textures for component</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            <span class="keywordflow">if</span> (m_totalDynamicTextureNum &gt; 0) {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                <span class="comment">// Ask for textures assignment information to be built</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                <span class="keywordtype">bool</span> isAllAllocate = component-&gt;AskToAllocateTextures(meshIndex, *<span class="keyword">this</span>, m_totalDynamicTextureNum);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                <span class="comment">// If the necessary texture for this GPSO is not found, output a message</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                <span class="keywordflow">if</span> (!isAllAllocate) {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                    <span class="keywordflow">throw</span> <a class="code hl_class" href="class_utl_1_1_error_1_1_c_stop_drawing_scene_error.html">Utl::Error::CStopDrawingSceneError</a>(L<span class="stringliteral">&quot;Warning! The necessary texture for this GPSO is not found\n&quot;</span>);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            }</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <span class="comment">// Draw object</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                <span class="comment">// Associate descriptor heap with root parameter</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                UINT staticTableSize = (UINT)m_staticRootDescriptorTableOffset.size();</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                UINT tableSize = (UINT)m_dynamicRootDescriptorTableOffset.size();</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                <span class="keywordflow">for</span> (UINT i = 0; i &lt; tableSize; ++i) {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                    cmdList-&gt;SetGraphicsRootDescriptorTable(staticTableSize + i,</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                        pool-&gt;<a class="code hl_function" href="class_c_descriptor_heap_pool.html#a8e4f47141f8dd2146922c80146236e19">GetGPUHandle</a>(m_dynamicRootDescriptorTableOffset[i]));</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                <span class="comment">// Set vertex buffer view</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                cmdList-&gt;IASetVertexBuffers(0, 1, vertBuff-&gt;<a class="code hl_function" href="class_c_vertex_buffer.html#a92e7f7da3a62260ba1ac107deea4ab0c">GetView</a>());</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                <span class="comment">// Set index buffer view</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                cmdList-&gt;IASetIndexBuffer(indexBuff-&gt;<a class="code hl_function" href="class_c_index_buffer.html#a21ee287ea2a9c1d7e3f56502dc457228">GetView</a>());</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                <span class="comment">// Set primitive topology</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                cmdList-&gt;IASetPrimitiveTopology(meshBuff-&gt;<a class="code hl_function" href="class_c_mesh_buffer.html#a9cd84119359127ba6d60d14b5cb5ecba">GetTopologyType</a>());</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                <span class="comment">// Draw</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                cmdList-&gt;DrawIndexedInstanced(</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                    indexBuff-&gt;<a class="code hl_function" href="class_c_index_buffer.html#a2a48ff0562e1b7ad8d09f4ca727d68bd">GetNumIndices</a>(), <span class="comment">// The number of indices</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                    1, <span class="comment">// The number of instance</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                    0, <span class="comment">// Index offset</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                    0, <span class="comment">// Vertex offset</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                    0  <span class="comment">// Instance offset</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                );</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="comment">// Determine the use of the region based on the number of dynamic resources per object</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            pool-&gt;DetermineUseRegion(m_totalDynamicDescRangeNum);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>}</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">#endif </span><span class="comment">// !__GRAPHICS_PIPELINE_STATE_H__</span></div>
+<div class="ttc" id="a_descriptor_heap_8h_html"><div class="ttname"><a href="_descriptor_heap_8h.html">DescriptorHeap.h</a></div><div class="ttdoc">This file handles descriptor heap.</div></div>
+<div class="ttc" id="a_descriptor_heap_pool_8h_html"><div class="ttname"><a href="_descriptor_heap_pool_8h.html">DescriptorHeapPool.h</a></div><div class="ttdoc">This file handles pool class that manages descriptor heap for graphics pipeline state.</div></div>
+<div class="ttc" id="a_dynamic_cb_allocator_8h_html"><div class="ttname"><a href="_dynamic_cb_allocator_8h.html">DynamicCbAllocator.h</a></div><div class="ttdoc">This file handles class that allocates data for constant buffer per object.</div></div>
+<div class="ttc" id="a_graphics_component_8h_html"><div class="ttname"><a href="_graphics_component_8h.html">GraphicsComponent.h</a></div><div class="ttdoc">This file handles component for graphics.</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html"><div class="ttname"><a href="_graphics_layer_8h.html">GraphicsLayer.h</a></div><div class="ttdoc">This file handles the layer function in the graphics processing.</div></div>
+<div class="ttc" id="a_graphics_object_asset_8h_html"><div class="ttname"><a href="_graphics_object_asset_8h.html">GraphicsObjectAsset.h</a></div><div class="ttdoc">This file handles assets that manage what is needed for the drawing process.</div></div>
+<div class="ttc" id="a_graphics_pipeline_elements_8h_html"><div class="ttname"><a href="_graphics_pipeline_elements_8h.html">GraphicsPipelineElements.h</a></div><div class="ttdoc">This file handles elements of graphics pipeline state.</div></div>
+<div class="ttc" id="a_shader_8h_html"><div class="ttname"><a href="_shader_8h.html">Shader.h</a></div><div class="ttdoc">This file handles each shaders.</div></div>
+<div class="ttc" id="a_static_resource_8h_html"><div class="ttname"><a href="_static_resource_8h.html">StaticResource.h</a></div><div class="ttdoc">This file handles interface class of static resources that don't need to be updated on a per-object b...</div></div>
+<div class="ttc" id="a_swap_chain_8h_html"><div class="ttname"><a href="_swap_chain_8h.html">SwapChain.h</a></div><div class="ttdoc">This file handles swap chain.</div></div>
+<div class="ttc" id="aclass_a_c_shader_html"><div class="ttname"><a href="class_a_c_shader.html">ACShader</a></div><div class="ttdoc">Abstract class for shaders</div><div class="ttdef"><b>Definition</b> Shader.h:58</div></div>
+<div class="ttc" id="aclass_c_descriptor_heap_pool_html"><div class="ttname"><a href="class_c_descriptor_heap_pool.html">CDescriptorHeapPool</a></div><div class="ttdoc">Pool class that manages descriptor heap for graphics pipeline state</div><div class="ttdef"><b>Definition</b> DescriptorHeapPool.h:20</div></div>
+<div class="ttc" id="aclass_c_descriptor_heap_pool_html_a8e4f47141f8dd2146922c80146236e19"><div class="ttname"><a href="class_c_descriptor_heap_pool.html#a8e4f47141f8dd2146922c80146236e19">CDescriptorHeapPool::GetGPUHandle</a></div><div class="ttdeci">Utl::Dx::GPU_DESCRIPTOR_HANDLE GetGPUHandle(UINT offset)</div><div class="ttdoc">Get GPU handle for descriptor heap</div><div class="ttdef"><b>Definition</b> DescriptorHeapPool.h:63</div></div>
+<div class="ttc" id="aclass_c_descriptor_heap_pool_html_a94be553cb145046459e138d08f98ead9"><div class="ttname"><a href="class_c_descriptor_heap_pool.html#a94be553cb145046459e138d08f98ead9">CDescriptorHeapPool::GetCPUHandle</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE GetCPUHandle(UINT offset)</div><div class="ttdoc">Get CPU handle for descriptor heap</div><div class="ttdef"><b>Definition</b> DescriptorHeapPool.h:53</div></div>
+<div class="ttc" id="aclass_c_graphics_pipeline_state_html"><div class="ttname"><a href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a></div><div class="ttdoc">This class handles graphics pipeline state</div><div class="ttdef"><b>Definition</b> GraphicsPipelineState.h:27</div></div>
+<div class="ttc" id="aclass_c_graphics_pipeline_state_html_a0ba11683319fa2b61af536b744a8cd7a"><div class="ttname"><a href="class_c_graphics_pipeline_state.html#a0ba11683319fa2b61af536b744a8cd7a">CGraphicsPipelineState::GetDynamicResourceOffset</a></div><div class="ttdeci">int GetDynamicResourceOffset(const Utl::Dx::ShaderString &amp;resName) const</div><div class="ttdoc">Get the offset of a dynamic resource</div><div class="ttdef"><b>Definition</b> GraphicsPipelineState.h:69</div></div>
+<div class="ttc" id="aclass_c_graphics_pipeline_state_html_a253028e29d9d2a2f7852250d04d35760"><div class="ttname"><a href="class_c_graphics_pipeline_state.html#a253028e29d9d2a2f7852250d04d35760">CGraphicsPipelineState::~CGraphicsPipelineState</a></div><div class="ttdeci">~CGraphicsPipelineState()</div><div class="ttdoc">Destructor</div><div class="ttdef"><b>Definition</b> GraphicsPipelineState.cpp:25</div></div>
+<div class="ttc" id="aclass_c_graphics_pipeline_state_html_a9361d73043f9ef461d09294ae1b8bc12"><div class="ttname"><a href="class_c_graphics_pipeline_state.html#a9361d73043f9ef461d09294ae1b8bc12">CGraphicsPipelineState::AddGraphicsObjectAsset</a></div><div class="ttdeci">void AddGraphicsObjectAsset(CWeakPtr&lt; CGraphicsObjectAsset &gt; asset)</div><div class="ttdoc">Add asset for graphics object</div><div class="ttdef"><b>Definition</b> GraphicsPipelineState.cpp:301</div></div>
+<div class="ttc" id="aclass_c_graphics_pipeline_state_html_abc3395de10313e13b40e56f7b07ec1ad"><div class="ttname"><a href="class_c_graphics_pipeline_state.html#abc3395de10313e13b40e56f7b07ec1ad">CGraphicsPipelineState::SetCommand</a></div><div class="ttdeci">void SetCommand()</div><div class="ttdoc">Set this graphics pipeline state to command list</div><div class="ttdef"><b>Definition</b> GraphicsPipelineState.cpp:158</div></div>
+<div class="ttc" id="aclass_c_graphics_pipeline_state_html_ae6e8f7fdae3438349ae87e5ba7e77513"><div class="ttname"><a href="class_c_graphics_pipeline_state.html#ae6e8f7fdae3438349ae87e5ba7e77513">CGraphicsPipelineState::Create</a></div><div class="ttdeci">void Create(CScene *scene, const std::wstring gpsoName, const Gpso::GPSOSetting &amp;setting, std::initializer_list&lt; GraphicsLayer &gt; useLayers, std::initializer_list&lt; GraphicsComponentType &gt; useTypes)</div><div class="ttdoc">Create graphics pipeline state</div><div class="ttdef"><b>Definition</b> GraphicsPipelineState.cpp:29</div></div>
+<div class="ttc" id="aclass_c_graphics_pipeline_state_html_af5d77383f36a18761a90b9c593f1638a"><div class="ttname"><a href="class_c_graphics_pipeline_state.html#af5d77383f36a18761a90b9c593f1638a">CGraphicsPipelineState::EndFrameProcess</a></div><div class="ttdeci">void EndFrameProcess()</div><div class="ttdoc">Processing at end of a frame</div><div class="ttdef"><b>Definition</b> GraphicsPipelineState.cpp:306</div></div>
+<div class="ttc" id="aclass_c_graphics_pipeline_state_html_afc720bf435766c03581c184f0bc0375b"><div class="ttname"><a href="class_c_graphics_pipeline_state.html#afc720bf435766c03581c184f0bc0375b">CGraphicsPipelineState::CGraphicsPipelineState</a></div><div class="ttdeci">CGraphicsPipelineState()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> GraphicsPipelineState.cpp:13</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html"><div class="ttname"><a href="class_c_index_buffer.html">CIndexBuffer</a></div><div class="ttdoc">This class handles index buffer</div><div class="ttdef"><b>Definition</b> IndexBuffer.h:23</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html_a21ee287ea2a9c1d7e3f56502dc457228"><div class="ttname"><a href="class_c_index_buffer.html#a21ee287ea2a9c1d7e3f56502dc457228">CIndexBuffer::GetView</a></div><div class="ttdeci">const D3D12_INDEX_BUFFER_VIEW * GetView() const</div><div class="ttdoc">Get index buffer view</div><div class="ttdef"><b>Definition</b> IndexBuffer.h:42</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html_a2a48ff0562e1b7ad8d09f4ca727d68bd"><div class="ttname"><a href="class_c_index_buffer.html#a2a48ff0562e1b7ad8d09f4ca727d68bd">CIndexBuffer::GetNumIndices</a></div><div class="ttdeci">const UINT GetNumIndices() const</div><div class="ttdoc">Get the number of indices</div><div class="ttdef"><b>Definition</b> IndexBuffer.h:44</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html"><div class="ttname"><a href="class_c_mesh_buffer.html">CMeshBuffer</a></div><div class="ttdoc">This class handles, pointers to vertex and index buffers, needed to construct the mesh.</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:21</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a13a81042cdaeaaadf1c2ab8fd685dda3"><div class="ttname"><a href="class_c_mesh_buffer.html#a13a81042cdaeaaadf1c2ab8fd685dda3">CMeshBuffer::GetVertex</a></div><div class="ttdeci">const CVertexBuffer * GetVertex() const</div><div class="ttdoc">Get the pointer to vertex buffer</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:37</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a2d0e2030e49e9fa59ec6400c24ee244c"><div class="ttname"><a href="class_c_mesh_buffer.html#a2d0e2030e49e9fa59ec6400c24ee244c">CMeshBuffer::GetIndex</a></div><div class="ttdeci">const CIndexBuffer * GetIndex() const</div><div class="ttdoc">Get the pointer to index buffer</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:39</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a9cd84119359127ba6d60d14b5cb5ecba"><div class="ttname"><a href="class_c_mesh_buffer.html#a9cd84119359127ba6d60d14b5cb5ecba">CMeshBuffer::GetTopologyType</a></div><div class="ttdeci">D3D_PRIMITIVE_TOPOLOGY GetTopologyType() const</div><div class="ttdoc">Get the topology type</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:45</div></div>
+<div class="ttc" id="aclass_c_scene_html"><div class="ttname"><a href="class_c_scene.html">CScene</a></div><div class="ttdoc">Scene class</div><div class="ttdef"><b>Definition</b> Scene.h:25</div></div>
+<div class="ttc" id="aclass_c_vertex_buffer_html"><div class="ttname"><a href="class_c_vertex_buffer.html">CVertexBuffer</a></div><div class="ttdoc">Vertex buffer class</div><div class="ttdef"><b>Definition</b> VertexBuffer.h:15</div></div>
+<div class="ttc" id="aclass_c_vertex_buffer_html_a92e7f7da3a62260ba1ac107deea4ab0c"><div class="ttname"><a href="class_c_vertex_buffer.html#a92e7f7da3a62260ba1ac107deea4ab0c">CVertexBuffer::GetView</a></div><div class="ttdeci">const D3D12_VERTEX_BUFFER_VIEW * GetView() const</div><div class="ttdoc">Get vertex buffer view</div><div class="ttdef"><b>Definition</b> VertexBuffer.h:33</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="aclass_utl_1_1_dx_1_1_shader_string_html"><div class="ttname"><a href="class_utl_1_1_dx_1_1_shader_string.html">Utl::Dx::ShaderString</a></div><div class="ttdoc">Class with an attribute added to the string indicating which shader</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:187</div></div>
+<div class="ttc" id="aclass_utl_1_1_error_1_1_c_stop_drawing_scene_error_html"><div class="ttname"><a href="class_utl_1_1_error_1_1_c_stop_drawing_scene_error.html">Utl::Error::CStopDrawingSceneError</a></div><div class="ttdoc">Exception to stop drawing the scene</div><div class="ttdef"><b>Definition</b> UtilityForException.h:32</div></div>
+<div class="ttc" id="astruct_gpso_1_1_g_p_s_o_setting_html"><div class="ttname"><a href="struct_gpso_1_1_g_p_s_o_setting.html">Gpso::GPSOSetting</a></div><div class="ttdoc">Necessary settings to create a graphics pipeline state object</div><div class="ttdef"><b>Definition</b> GraphicsPipelineElements.h:159</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

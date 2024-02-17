@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: IStaticResource クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="class_i_static_resource-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">IStaticResource クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>interface for static resource that do not need to be updated on a per-object basis  
+ <a href="class_i_static_resource.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_static_resource_8h_source.html">StaticResource.h</a>&gt;</code></p>
+<div class="dynheader">
+IStaticResource の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_static_resource__inherit__graph.png" border="0" usemap="#a_i_static_resource_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_i_static_resource_inherit__map" id="a_i_static_resource_inherit__map">
+<area shape="rect" title="interface for static resource that do not need to be updated on a per&#45;object basis" alt="" coords="5,307,119,333"/>
+<area shape="rect" href="class_a_c_static_cb_allocator.html" title=" " alt="" coords="184,63,324,105"/>
+<area shape="poly" title=" " alt="" coords="80,292,165,180,230,104,234,108,169,183,84,296"/>
+<area shape="rect" href="class_a_c_static_cb_allocator.html" title=" " alt="" coords="167,193,341,236"/>
+<area shape="poly" title=" " alt="" coords="94,295,165,251,199,234,202,239,168,256,97,300"/>
+<area shape="rect" href="class_a_c_static_sb_allocator.html" title=" " alt="" coords="184,265,324,308"/>
+<area shape="poly" title=" " alt="" coords="134,305,183,296,184,302,135,310"/>
+<area shape="rect" href="class_a_c_static_cb_allocator.html" title="This class allocates data for constant buffer view that don&#39;t need to be updated on a per&#45;object basi..." alt="" coords="184,332,324,375"/>
+<area shape="poly" title=" " alt="" coords="135,330,184,338,183,344,134,335"/>
+<area shape="rect" href="class_a_c_static_s_r_v_allocator.html" title="Class for allocating static resource SRV" alt="" coords="178,399,330,425"/>
+<area shape="poly" title=" " alt="" coords="95,340,129,363,168,384,198,396,196,401,166,389,126,368,92,345"/>
+<area shape="rect" href="class_a_c_static_sb_allocator.html" title="This class allocates data for structured buffer view that don&#39;t need to be updated on a per&#45;object ba..." alt="" coords="184,449,324,492"/>
+<area shape="poly" title=" " alt="" coords="83,345,119,390,143,414,168,435,187,446,185,451,165,440,139,418,115,394,79,348"/>
+<area shape="rect" href="class_c_static_cb_dir_light_param.html" title="Static CB allocater class for parameter of directional light" alt="" coords="399,5,561,32"/>
+<area shape="poly" title=" " alt="" coords="338,56,388,41,428,30,430,35,390,47,340,61"/>
+<area shape="rect" href="class_c_static_cb_light_v_p.html" title="Static CB allocater class that handles light view projection matrix" alt="" coords="417,56,543,83"/>
+<area shape="poly" title=" " alt="" coords="282,180,329,134,357,112,388,92,415,80,418,85,390,97,360,116,332,138,286,183"/>
+<area shape="rect" href="class_c_static_cb_orthographic_mat.html" title="Static CB class that handles orthographic projection matrix" alt="" coords="392,107,568,133"/>
+<area shape="poly" title=" " alt="" coords="305,183,388,143,422,131,424,136,390,148,307,188"/>
+<area shape="rect" href="class_c_static_cb_orthographic_view_proj_mat.html" title="Static CB class that handles orthographic view projection matrix" alt="" coords="389,157,571,200"/>
+<area shape="poly" title=" " alt="" coords="356,196,388,191,389,196,357,201"/>
+<area shape="rect" href="class_c_static_cb_remove_pos_v_p.html" title="Static CB allocater class that handles remove a position view projection matrix" alt="" coords="397,224,564,251"/>
+<area shape="poly" title=" " alt="" coords="357,222,396,226,396,232,357,228"/>
+<area shape="rect" href="class_c_static_cb_v_p.html" title="Static CB allocater class that handles view projection matrix" alt="" coords="431,275,529,301"/>
+<area shape="poly" title=" " alt="" coords="328,239,390,260,431,273,430,278,388,265,327,244"/>
+<area shape="rect" href="class_c_static_sb_point_lights.html" title="Static CB class that handles orthographic projection matrix" alt="" coords="408,325,553,352"/>
+<area shape="poly" title=" " alt="" coords="340,304,419,322,418,327,338,309"/>
+<area shape="rect" href="class_c_static_srv_shadow_map1.html" title="allocator class of SRV static resource for shadow map 1" alt="" coords="400,376,560,403"/>
+<area shape="poly" title=" " alt="" coords="344,400,399,395,400,400,345,406"/>
+<area shape="rect" href="class_c_static_srv_shadow_map2.html" title="allocator class of SRV static resource for shadow map 2" alt="" coords="400,427,560,453"/>
+<area shape="poly" title=" " alt="" coords="345,421,400,427,399,433,344,426"/>
+<area shape="rect" href="class_c_static_srv_shadow_map3.html" title="allocator class of SRV static resource for shadow map 3" alt="" coords="400,477,560,504"/>
+<area shape="poly" title=" " alt="" coords="325,428,342,435,366,449,390,463,422,474,420,479,388,468,364,454,340,440,323,433"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a35854e6c040ccaae74c5b8b6ad7cdc42" id="r_a35854e6c040ccaae74c5b8b6ad7cdc42"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_static_resource.html#a35854e6c040ccaae74c5b8b6ad7cdc42">~IStaticResource</a> ()=default</td></tr>
+<tr class="memdesc:a35854e6c040ccaae74c5b8b6ad7cdc42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a35854e6c040ccaae74c5b8b6ad7cdc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f57d9b1cc8b9f86f8a0678d15347038" id="r_a9f57d9b1cc8b9f86f8a0678d15347038"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_static_resource.html#a9f57d9b1cc8b9f86f8a0678d15347038">GetAllocatedDataHandle</a> ()=0</td></tr>
+<tr class="memdesc:a9f57d9b1cc8b9f86f8a0678d15347038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle of allocated data in resource  <br /></td></tr>
+<tr class="separator:a9f57d9b1cc8b9f86f8a0678d15347038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d03ef8d705244337b0f53c1d8ccb89" id="r_aa6d03ef8d705244337b0f53c1d8ccb89"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_static_resource.html#aa6d03ef8d705244337b0f53c1d8ccb89">Refresh</a> ()=0</td></tr>
+<tr class="memdesc:aa6d03ef8d705244337b0f53c1d8ccb89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh process that must be called at the end of every frame  <br /></td></tr>
+<tr class="separator:aa6d03ef8d705244337b0f53c1d8ccb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b277fef316d0102077e04edb9a82635" id="r_a1b277fef316d0102077e04edb9a82635"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_static_resource.html#a1b277fef316d0102077e04edb9a82635">Start</a> (<a class="el" href="class_c_scene.html">CScene</a> *scene)</td></tr>
+<tr class="memdesc:a1b277fef316d0102077e04edb9a82635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing at scene start  <br /></td></tr>
+<tr class="separator:a1b277fef316d0102077e04edb9a82635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7074ddd7b2f6b8048917f043ce3ac22c" id="r_a7074ddd7b2f6b8048917f043ce3ac22c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_static_resource.html#a7074ddd7b2f6b8048917f043ce3ac22c">Update</a> (<a class="el" href="class_c_scene.html">CScene</a> *scene)</td></tr>
+<tr class="memdesc:a7074ddd7b2f6b8048917f043ce3ac22c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update process in scene  <br /></td></tr>
+<tr class="separator:a7074ddd7b2f6b8048917f043ce3ac22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7b715e518ca372ec1de1fc1a1b8b22c" id="r_ae7b715e518ca372ec1de1fc1a1b8b22c"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_static_resource.html#ae7b715e518ca372ec1de1fc1a1b8b22c">GetName</a> ()=0</td></tr>
+<tr class="memdesc:ae7b715e518ca372ec1de1fc1a1b8b22c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of resource defined in hlsl  <br /></td></tr>
+<tr class="separator:ae7b715e518ca372ec1de1fc1a1b8b22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a85777d15c459b46a9374bcf83a7c428b" id="r_a85777d15c459b46a9374bcf83a7c428b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_static_resource.html#a85777d15c459b46a9374bcf83a7c428b">AllocateData</a> ()=0</td></tr>
+<tr class="memdesc:a85777d15c459b46a9374bcf83a7c428b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate and return data  <br /></td></tr>
+<tr class="separator:a85777d15c459b46a9374bcf83a7c428b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>interface for static resource that do not need to be updated on a per-object basis </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a35854e6c040ccaae74c5b8b6ad7cdc42" name="a35854e6c040ccaae74c5b8b6ad7cdc42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35854e6c040ccaae74c5b8b6ad7cdc42">&#9670;&#160;</a></span>~IStaticResource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual IStaticResource::~IStaticResource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a85777d15c459b46a9374bcf83a7c428b" name="a85777d15c459b46a9374bcf83a7c428b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85777d15c459b46a9374bcf83a7c428b">&#9670;&#160;</a></span>AllocateData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IStaticResource::AllocateData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate and return data </p>
+<dl class="section return"><dt>戻り値</dt><dd>Allocated data </dd></dl>
+
+<p><a class="el" href="class_c_static_cb_dir_light_param.html#a22486d5d786dc04ff3d5391493c60c0f">CStaticCbDirLightParam</a>, <a class="el" href="class_c_static_cb_light_v_p.html#a6d113cd6233bd55c9759ced1920c4347">CStaticCbLightVP</a>, <a class="el" href="class_c_static_cb_orthographic_mat.html#a5ebe85f42a833955d10f75cc2d5728fd">CStaticCbOrthographicMat</a>, <a class="el" href="class_c_static_cb_orthographic_view_proj_mat.html#a359c2368c9f058bbd9988274b7b861a7">CStaticCbOrthographicViewProjMat</a>, <a class="el" href="class_c_static_cb_v_p.html#a369c4249f4852c7bbd7ea59ad3bb59dd">CStaticCbVP</a>, <a class="el" href="class_c_static_cb_remove_pos_v_p.html#aa1fa2ac54d1744972a5b4fa3756dfe84">CStaticCbRemovePosVP</a>, <a class="el" href="class_c_static_sb_point_lights.html#a909bd820382ff8a43c0c049098074c9c">CStaticSbPointLights</a>, <a class="el" href="class_a_c_static_s_r_v_allocator.html#a23d7b3c75c2b7da45610fd3dc86456c3">ACStaticSRVAllocator</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a9f57d9b1cc8b9f86f8a0678d15347038" name="a9f57d9b1cc8b9f86f8a0678d15347038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f57d9b1cc8b9f86f8a0678d15347038">&#9670;&#160;</a></span>GetAllocatedDataHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> IStaticResource::GetAllocatedDataHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get handle of allocated data in resource </p>
+<dl class="section return"><dt>戻り値</dt><dd>Resource CPU handle </dd></dl>
+
+<p><a class="el" href="class_a_c_static_cb_allocator.html#a3ea38317d1f8cf266c7450f6c7b95fd7">ACStaticCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_static_cb_allocator.html#a3ea38317d1f8cf266c7450f6c7b95fd7">ACStaticCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_static_cb_allocator.html#a3ea38317d1f8cf266c7450f6c7b95fd7">ACStaticCbAllocator&lt; DirLightParam &gt;</a>, <a class="el" href="class_a_c_static_sb_allocator.html#a1c94a7db2268f9cb5a631d06e20bcd32">ACStaticSbAllocator&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_static_sb_allocator.html#a1c94a7db2268f9cb5a631d06e20bcd32">ACStaticSbAllocator&lt; PointLightInHlsl &gt;</a>, <a class="el" href="class_a_c_static_s_r_v_allocator.html#a6968baf3998e66412134ccc9bbf8bdaf">ACStaticSRVAllocator</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="ae7b715e518ca372ec1de1fc1a1b8b22c" name="ae7b715e518ca372ec1de1fc1a1b8b22c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b715e518ca372ec1de1fc1a1b8b22c">&#9670;&#160;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::string &amp; IStaticResource::GetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the name of resource defined in hlsl </p>
+
+<p><a class="el" href="class_a_c_static_s_r_v_allocator.html#a406f14dab7686f99c046c3a92ef01965">ACStaticSRVAllocator</a>, <a class="el" href="class_a_c_static_cb_allocator.html#acf73562e6ab486b5c1c02bdc85783280">ACStaticCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_static_cb_allocator.html#acf73562e6ab486b5c1c02bdc85783280">ACStaticCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_static_cb_allocator.html#acf73562e6ab486b5c1c02bdc85783280">ACStaticCbAllocator&lt; DirLightParam &gt;</a>, <a class="el" href="class_a_c_static_sb_allocator.html#a16961b1fec57c63ce1a5b2061e680482">ACStaticSbAllocator&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_static_sb_allocator.html#a16961b1fec57c63ce1a5b2061e680482">ACStaticSbAllocator&lt; PointLightInHlsl &gt;</a>で実装されています。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_static_resource_ae7b715e518ca372ec1de1fc1a1b8b22c_icgraph.png" border="0" usemap="#aclass_i_static_resource_ae7b715e518ca372ec1de1fc1a1b8b22c_icgraph" alt=""/></div>
+<map name="aclass_i_static_resource_ae7b715e518ca372ec1de1fc1a1b8b22c_icgraph" id="aclass_i_static_resource_ae7b715e518ca372ec1de1fc1a1b8b22c_icgraph">
+<area shape="rect" title="Get the name of resource defined in hlsl" alt="" coords="221,13,397,40"/>
+<area shape="rect" href="class_c_static_resource_registry.html#a0fa94f6a89a69840f1d37c6456945d2c" title=" " alt="" coords="5,5,173,48"/>
+<area shape="poly" title=" " alt="" coords="205,29,173,29,173,24,205,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa6d03ef8d705244337b0f53c1d8ccb89" name="aa6d03ef8d705244337b0f53c1d8ccb89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6d03ef8d705244337b0f53c1d8ccb89">&#9670;&#160;</a></span>Refresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IStaticResource::Refresh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Refresh process that must be called at the end of every frame </p>
+
+<p><a class="el" href="class_a_c_static_cb_allocator.html#a96a4bf5b3d8894a8e1c78d3ba6a2406d">ACStaticCbAllocator&lt; ConstBuffType &gt;</a>, <a class="el" href="class_a_c_static_cb_allocator.html#a96a4bf5b3d8894a8e1c78d3ba6a2406d">ACStaticCbAllocator&lt; DirectX::XMFLOAT4X4 &gt;</a>, <a class="el" href="class_a_c_static_cb_allocator.html#a96a4bf5b3d8894a8e1c78d3ba6a2406d">ACStaticCbAllocator&lt; DirLightParam &gt;</a>, <a class="el" href="class_a_c_static_sb_allocator.html#a4510059a650325cf2f6466150954db1f">ACStaticSbAllocator&lt; StructBuffType &gt;</a>, <a class="el" href="class_a_c_static_sb_allocator.html#a4510059a650325cf2f6466150954db1f">ACStaticSbAllocator&lt; PointLightInHlsl &gt;</a>, <a class="el" href="class_a_c_static_s_r_v_allocator.html#ab299e86862ffa7ba5ae6e87efd489d15">ACStaticSRVAllocator</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a1b277fef316d0102077e04edb9a82635" name="a1b277fef316d0102077e04edb9a82635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b277fef316d0102077e04edb9a82635">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IStaticResource::Start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_scene.html">CScene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing at scene start </p>
+
+<p><a class="el" href="class_c_static_cb_dir_light_param.html#a32fc8aab1f089b1dcc8e6d00df3d1aec">CStaticCbDirLightParam</a>, <a class="el" href="class_c_static_cb_light_v_p.html#a65e0ad15861b1ec11a43194a4a8b02a0">CStaticCbLightVP</a>, <a class="el" href="class_c_static_cb_orthographic_view_proj_mat.html#a3fd3cab63b43cb83333f86a68fc1f8e0">CStaticCbOrthographicViewProjMat</a>, <a class="el" href="class_c_static_cb_v_p.html#a6ea56c7d7291815e6cc6ee37e2ea27c1">CStaticCbVP</a>, <a class="el" href="class_c_static_cb_remove_pos_v_p.html#a46329a5be0c329c9c31b06af0a1aa483">CStaticCbRemovePosVP</a>, <a class="el" href="class_c_static_sb_point_lights.html#a1ca159685c4108922ff00434405e05dc">CStaticSbPointLights</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a7074ddd7b2f6b8048917f043ce3ac22c" name="a7074ddd7b2f6b8048917f043ce3ac22c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7074ddd7b2f6b8048917f043ce3ac22c">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IStaticResource::Update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_scene.html">CScene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update process in scene </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_static_resource_8h_source.html">StaticResource.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

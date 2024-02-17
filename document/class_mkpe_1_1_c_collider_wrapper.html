@@ -1,0 +1,1248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Mkpe::CColliderWrapper クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_mkpe.html">Mkpe</a></li><li class="navelem"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_mkpe_1_1_c_collider_wrapper-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Mkpe::CColliderWrapper クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Wrapper class that exists in a 1:1 relationship with a collider  
+ <a href="class_mkpe_1_1_c_collider_wrapper.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_collider_wrapper_8h_source.html">ColliderWrapper.h</a>&gt;</code></p>
+<div class="dynheader">
+Mkpe::CColliderWrapper の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper__inherit__graph.png" border="0" usemap="#a_mkpe_1_1_c_collider_wrapper_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_mkpe_1_1_c_collider_wrapper_inherit__map" id="a_mkpe_1_1_c_collider_wrapper_inherit__map">
+<area shape="rect" title="Wrapper class that exists in a 1:1 relationship with a collider" alt="" coords="5,171,168,197"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="10,80,163,123"/>
+<area shape="poly" title=" " alt="" coords="89,139,89,170,84,170,84,139"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="22,5,151,32"/>
+<area shape="poly" title=" " alt="" coords="89,48,89,80,84,80,84,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+Mkpe::CColliderWrapper 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper__coll__graph.png" border="0" usemap="#a_mkpe_1_1_c_collider_wrapper_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mkpe_1_1_c_collider_wrapper_coll__map" id="a_mkpe_1_1_c_collider_wrapper_coll__map">
+<area shape="rect" title="Wrapper class that exists in a 1:1 relationship with a collider" alt="" coords="5,171,168,197"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="10,80,163,123"/>
+<area shape="poly" title=" " alt="" coords="89,139,89,170,84,170,84,139"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="22,5,151,32"/>
+<area shape="poly" title=" " alt="" coords="89,48,89,80,84,80,84,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a38b1a1a1e21731c5712f086e11845f8c" id="r_a38b1a1a1e21731c5712f086e11845f8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a38b1a1a1e21731c5712f086e11845f8c">CColliderWrapper</a> (<a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt; collider)</td></tr>
+<tr class="memdesc:a38b1a1a1e21731c5712f086e11845f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a38b1a1a1e21731c5712f086e11845f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a911a5d18c6a134a80313c8551756caf5" id="r_a911a5d18c6a134a80313c8551756caf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a911a5d18c6a134a80313c8551756caf5">~CColliderWrapper</a> ()</td></tr>
+<tr class="memdesc:a911a5d18c6a134a80313c8551756caf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a911a5d18c6a134a80313c8551756caf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a61cd3d301b749a740d6a085998c9af" id="r_a3a61cd3d301b749a740d6a085998c9af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a3a61cd3d301b749a740d6a085998c9af">AddContactedOpponent</a> (const <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt; &amp;opponent, const <a class="el" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">Mkpe::Dbvt::BVOverlapPair</a> *pairInfo)</td></tr>
+<tr class="memdesc:a3a61cd3d301b749a740d6a085998c9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add information of a contacted opponent by this collider  <br /></td></tr>
+<tr class="separator:a3a61cd3d301b749a740d6a085998c9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae403fa21adcbc0d63593ee9bbc73af1f" id="r_ae403fa21adcbc0d63593ee9bbc73af1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#ae403fa21adcbc0d63593ee9bbc73af1f">RebuildContactLists</a> ()</td></tr>
+<tr class="memdesc:ae403fa21adcbc0d63593ee9bbc73af1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuild the lists of the contact colliders for each categories  <br /></td></tr>
+<tr class="separator:ae403fa21adcbc0d63593ee9bbc73af1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717a036accb1811218e2df259f058fa1" id="r_a717a036accb1811218e2df259f058fa1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a717a036accb1811218e2df259f058fa1">ClearContactLists</a> ()</td></tr>
+<tr class="memdesc:a717a036accb1811218e2df259f058fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear lists of the contact colliders  <br /></td></tr>
+<tr class="separator:a717a036accb1811218e2df259f058fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17add70b1beb5c0f7e30fa025e342eba" id="r_a17add70b1beb5c0f7e30fa025e342eba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a17add70b1beb5c0f7e30fa025e342eba">IsStatic</a> () const</td></tr>
+<tr class="memdesc:a17add70b1beb5c0f7e30fa025e342eba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this object static?  <br /></td></tr>
+<tr class="separator:a17add70b1beb5c0f7e30fa025e342eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b77f245afd5429a84da3cad8ed5646b" id="r_a6b77f245afd5429a84da3cad8ed5646b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_rigid_body_material.html">RigidBodyMaterial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a6b77f245afd5429a84da3cad8ed5646b">GetMaterial</a> () const</td></tr>
+<tr class="memdesc:a6b77f245afd5429a84da3cad8ed5646b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rigid body material  <br /></td></tr>
+<tr class="separator:a6b77f245afd5429a84da3cad8ed5646b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64637912b2e91d52615272bd228fcab0" id="r_a64637912b2e91d52615272bd228fcab0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a64637912b2e91d52615272bd228fcab0">GetPos</a> ()</td></tr>
+<tr class="memdesc:a64637912b2e91d52615272bd228fcab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the center coordinates considering offset  <br /></td></tr>
+<tr class="separator:a64637912b2e91d52615272bd228fcab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada8ce25d990c6a2abf17f1d5da312bf2" id="r_ada8ce25d990c6a2abf17f1d5da312bf2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#a921972c08e164d124edfca2b19315d46">Quaternionf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#ada8ce25d990c6a2abf17f1d5da312bf2">GetRotation</a> ()</td></tr>
+<tr class="memdesc:ada8ce25d990c6a2abf17f1d5da312bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rotation of the collider  <br /></td></tr>
+<tr class="separator:ada8ce25d990c6a2abf17f1d5da312bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5df2a61bdf99d8419aefe09b14669843" id="r_a5df2a61bdf99d8419aefe09b14669843"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a5df2a61bdf99d8419aefe09b14669843">GetScale</a> ()</td></tr>
+<tr class="memdesc:a5df2a61bdf99d8419aefe09b14669843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the scale of the collider  <br /></td></tr>
+<tr class="separator:a5df2a61bdf99d8419aefe09b14669843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02075f1f6989c667bcccb8d818c9e56" id="r_aa02075f1f6989c667bcccb8d818c9e56"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#aa02075f1f6989c667bcccb8d818c9e56">GetInvMass</a> () const</td></tr>
+<tr class="memdesc:aa02075f1f6989c667bcccb8d818c9e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the inverse mass of rigid body  <br /></td></tr>
+<tr class="separator:aa02075f1f6989c667bcccb8d818c9e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a787d517f30fca145bef0a97b2ddf6b0e" id="r_a787d517f30fca145bef0a97b2ddf6b0e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a787d517f30fca145bef0a97b2ddf6b0e">GetMass</a> () const</td></tr>
+<tr class="memdesc:a787d517f30fca145bef0a97b2ddf6b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mass of rigid body  <br /></td></tr>
+<tr class="separator:a787d517f30fca145bef0a97b2ddf6b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3cf7cdcaeaf3aed97b4098bc4e43901" id="r_ad3cf7cdcaeaf3aed97b4098bc4e43901"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#ad3cf7cdcaeaf3aed97b4098bc4e43901">GetMaxRotateScalar</a> ()</td></tr>
+<tr class="memdesc:ad3cf7cdcaeaf3aed97b4098bc4e43901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum extent to which a vertex of collider is shifted by rotation  <br /></td></tr>
+<tr class="separator:ad3cf7cdcaeaf3aed97b4098bc4e43901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e7599fa8a803c815434ac56ccb1b59" id="r_a88e7599fa8a803c815434ac56ccb1b59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a88e7599fa8a803c815434ac56ccb1b59">InitializeInertiaTensor</a> ()</td></tr>
+<tr class="memdesc:a88e7599fa8a803c815434ac56ccb1b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize inertia tensor  <br /></td></tr>
+<tr class="separator:a88e7599fa8a803c815434ac56ccb1b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f682576315d451376d5afce34e3235" id="r_a33f682576315d451376d5afce34e3235"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a33f682576315d451376d5afce34e3235">CheckScalingRotation</a> ()</td></tr>
+<tr class="memdesc:a33f682576315d451376d5afce34e3235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing of any scaling or rotation changes  <br /></td></tr>
+<tr class="separator:a33f682576315d451376d5afce34e3235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc611c4866a2c1fa6f8842ddfb826c2d" id="r_adc611c4866a2c1fa6f8842ddfb826c2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#adc611c4866a2c1fa6f8842ddfb826c2d">GetSimulationBody</a> ()</td></tr>
+<tr class="memdesc:adc611c4866a2c1fa6f8842ddfb826c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the simulation body related to this wrapper  <br /></td></tr>
+<tr class="separator:adc611c4866a2c1fa6f8842ddfb826c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8717ab1d0e161c6f4c18366c8c5da8c4" id="r_a8717ab1d0e161c6f4c18366c8c5da8c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a8717ab1d0e161c6f4c18366c8c5da8c4">SetRigidBody</a> (<a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_rigid_body.html">CRigidBody</a> &gt; rb)</td></tr>
+<tr class="memdesc:a8717ab1d0e161c6f4c18366c8c5da8c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rigid body to be related to this wrapper  <br /></td></tr>
+<tr class="separator:a8717ab1d0e161c6f4c18366c8c5da8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c02028df7d23526435da5b78b3ed09e" id="r_a9c02028df7d23526435da5b78b3ed09e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a9c02028df7d23526435da5b78b3ed09e">SetSimulationBody</a> (<a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_mkpe_1_1_c_simulation_body.html">CSimulationBody</a> &gt; simulationBody)</td></tr>
+<tr class="memdesc:a9c02028df7d23526435da5b78b3ed09e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set simulation body to be related to this wrapper  <br /></td></tr>
+<tr class="separator:a9c02028df7d23526435da5b78b3ed09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa0bfe8d7b3e6bc150b3f396375f776d" id="r_afa0bfe8d7b3e6bc150b3f396375f776d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#afa0bfe8d7b3e6bc150b3f396375f776d">GetCollider</a> ()</td></tr>
+<tr class="memdesc:afa0bfe8d7b3e6bc150b3f396375f776d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the collider related to this wrapper  <br /></td></tr>
+<tr class="separator:afa0bfe8d7b3e6bc150b3f396375f776d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569943668d47bc891d19cde26534d788" id="r_a569943668d47bc891d19cde26534d788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a569943668d47bc891d19cde26534d788">SetTreeType</a> (<a class="el" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aa">Dbvt::TREETYPE</a> type)</td></tr>
+<tr class="memdesc:a569943668d47bc891d19cde26534d788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the tree type of this wrapper  <br /></td></tr>
+<tr class="separator:a569943668d47bc891d19cde26534d788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c9d7db84e7576e67a79a4d519c62e75" id="r_a9c9d7db84e7576e67a79a4d519c62e75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aa">Dbvt::TREETYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a9c9d7db84e7576e67a79a4d519c62e75">GetTreeType</a> ()</td></tr>
+<tr class="memdesc:a9c9d7db84e7576e67a79a4d519c62e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tree type of this wrapper  <br /></td></tr>
+<tr class="separator:a9c9d7db84e7576e67a79a4d519c62e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9714f08a35029241b00c789728c5fe48" id="r_a9714f08a35029241b00c789728c5fe48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a9714f08a35029241b00c789728c5fe48">SetNode</a> (<a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Dbvt::Node</a> *node)</td></tr>
+<tr class="memdesc:a9714f08a35029241b00c789728c5fe48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set node with this wrapper in the tree  <br /></td></tr>
+<tr class="separator:a9714f08a35029241b00c789728c5fe48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab07a2c4008717f3ebf9d29096879e0dc" id="r_ab07a2c4008717f3ebf9d29096879e0dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Dbvt::Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#ab07a2c4008717f3ebf9d29096879e0dc">GetNode</a> () const</td></tr>
+<tr class="memdesc:ab07a2c4008717f3ebf9d29096879e0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get node with this wrapper in the tree  <br /></td></tr>
+<tr class="separator:ab07a2c4008717f3ebf9d29096879e0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a943ea74ea78c41b9b4f09b9f08750a55" id="r_a943ea74ea78c41b9b4f09b9f08750a55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a943ea74ea78c41b9b4f09b9f08750a55">CheckMyLeafNodeID</a> (<a class="el" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">Mkpe::Dbvt::NodeID</a> id) const</td></tr>
+<tr class="memdesc:a943ea74ea78c41b9b4f09b9f08750a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the ID sent the same as my leaf node ID?  <br /></td></tr>
+<tr class="separator:a943ea74ea78c41b9b4f09b9f08750a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2935c6a939ac66b0db3bd441721eb0a7" id="r_a2935c6a939ac66b0db3bd441721eb0a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a2935c6a939ac66b0db3bd441721eb0a7">IsActive</a> () const</td></tr>
+<tr class="memdesc:a2935c6a939ac66b0db3bd441721eb0a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this collider and the gameobject that has this collider active?  <br /></td></tr>
+<tr class="separator:a2935c6a939ac66b0db3bd441721eb0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d30566848914b994704b4b1ee85fcad" id="r_a4d30566848914b994704b4b1ee85fcad"><td class="memItemLeft" align="right" valign="top">const CContactColliderList &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html#a4d30566848914b994704b4b1ee85fcad">GetContactColliderList</a> () const</td></tr>
+<tr class="memdesc:a4d30566848914b994704b4b1ee85fcad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list class of the contact colliders for each category  <br /></td></tr>
+<tr class="separator:a4d30566848914b994704b4b1ee85fcad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis&lt; CColliderWrapper &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_ab2905432621e2737bc3f95cb9101a8e2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#ab2905432621e2737bc3f95cb9101a8e2">~ACWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="memdesc:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_aa549f0fbf364d84137496a7eed607bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; CColliderWrapper &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#aa549f0fbf364d84137496a7eed607bb5">WeakFromThis</a> ()</td></tr>
+<tr class="memdesc:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer from this class  <br /></td></tr>
+<tr class="separator:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_i_weak_ptr_from_this.html">IWeakPtrFromThis</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this" id="r_a5a3acc569a8076065b930bc52a87255c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_weak_ptr_from_this.html#a5a3acc569a8076065b930bc52a87255c">~IWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="separator:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Wrapper class that exists in a 1:1 relationship with a collider </p>
+<p>Relates a collider to its rigid body. Accessible only from inside the physics engine </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a38b1a1a1e21731c5712f086e11845f8c" name="a38b1a1a1e21731c5712f086e11845f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38b1a1a1e21731c5712f086e11845f8c">&#9670;&#160;</a></span>CColliderWrapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::CColliderWrapper::CColliderWrapper </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt;&#160;</td>
+          <td class="paramname"><em>collider</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collider</td><td>Weak pointer to collider to be related to this wrapper </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a911a5d18c6a134a80313c8551756caf5" name="a911a5d18c6a134a80313c8551756caf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a911a5d18c6a134a80313c8551756caf5">&#9670;&#160;</a></span>~CColliderWrapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::CColliderWrapper::~CColliderWrapper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a3a61cd3d301b749a740d6a085998c9af" name="a3a61cd3d301b749a740d6a085998c9af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a61cd3d301b749a740d6a085998c9af">&#9670;&#160;</a></span>AddContactedOpponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CColliderWrapper::AddContactedOpponent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>opponent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">Mkpe::Dbvt::BVOverlapPair</a> *&#160;</td>
+          <td class="paramname"><em>pairInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add information of a contacted opponent by this collider </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opponent</td><td>Collider of the contacted opponent </td></tr>
+    <tr><td class="paramname">pairInfo</td><td>Pair information with the contacted opponent </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a3a61cd3d301b749a740d6a085998c9af_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a3a61cd3d301b749a740d6a085998c9af_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a3a61cd3d301b749a740d6a085998c9af_cgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a3a61cd3d301b749a740d6a085998c9af_cgraph">
+<area shape="rect" title="Add information of a contacted opponent by this collider" alt="" coords="5,5,173,48"/>
+<area shape="rect" href="class_mkpe_1_1_c_collider_wrapper.html#a17add70b1beb5c0f7e30fa025e342eba" title="Is this object static?" alt="" coords="221,5,383,48"/>
+<area shape="poly" title=" " alt="" coords="173,24,205,24,205,29,173,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a3a61cd3d301b749a740d6a085998c9af_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a3a61cd3d301b749a740d6a085998c9af_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a3a61cd3d301b749a740d6a085998c9af_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a3a61cd3d301b749a740d6a085998c9af_icgraph">
+<area shape="rect" title="Add information of a contacted opponent by this collider" alt="" coords="658,172,826,215"/>
+<area shape="rect" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a65baf47db869aaacf6c1673a9c49d5ee" title="Returns the results of checking whether two colliders can overlap after approval each other as a cont..." alt="" coords="432,172,610,215"/>
+<area shape="poly" title=" " alt="" coords="643,196,611,196,611,191,643,191"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#adcb6d3ec9ad81a29dd83ed1c0708c99f" title="Box and box collision algorithm" alt="" coords="219,5,384,48"/>
+<area shape="poly" title=" " alt="" coords="491,162,443,112,382,62,362,51,365,46,386,58,447,108,495,159"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a6a1f0a675bd7c0d9e406b949e56fdca0" title="Box and capsule collision algorithm" alt="" coords="219,72,384,115"/>
+<area shape="poly" title=" " alt="" coords="463,167,383,129,357,118,359,113,385,124,465,162"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#ab3d0a8af18386388fe141fbef4837274" title="Box and sphere collision algorithm" alt="" coords="219,139,384,181"/>
+<area shape="poly" title=" " alt="" coords="416,180,384,175,385,170,417,175"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a24b30ee1703ec1be07ea6d3561c97fc3" title="GJK(Gilbert&#45;Johnson&#45;Keerthi) collision algorithm" alt="" coords="219,205,384,248"/>
+<area shape="poly" title=" " alt="" coords="417,212,385,217,384,211,416,207"/>
+<area shape="rect" href="_collision_algorithm_capsule_capsule_8cpp.html#ae69eeb8e5b6192fb1dc61e2eb7ff99c4" title=" " alt="" coords="219,272,384,299"/>
+<area shape="poly" title=" " alt="" coords="467,225,385,262,353,274,351,269,383,258,465,220"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a4dd6904acd848a82175d0fd6f9eaa545" title="Sphere and sphere collision algorithm" alt="" coords="219,323,384,365"/>
+<area shape="poly" title=" " alt="" coords="490,228,443,271,385,313,364,324,361,320,383,308,439,267,486,224"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a274048851bc6723f057afed02fbc9846" title="Capsule and capsule collision algorithm" alt="" coords="5,231,171,273"/>
+<area shape="poly" title=" " alt="" coords="203,273,171,268,172,262,204,267"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#acd6a6ee1d4353a1f282ef3eb51d2b030" title="Capsule and sphere collision algorithm" alt="" coords="5,297,171,340"/>
+<area shape="poly" title=" " alt="" coords="204,303,172,308,171,303,203,298"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a943ea74ea78c41b9b4f09b9f08750a55" name="a943ea74ea78c41b9b4f09b9f08750a55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943ea74ea78c41b9b4f09b9f08750a55">&#9670;&#160;</a></span>CheckMyLeafNodeID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Mkpe::CColliderWrapper::CheckMyLeafNodeID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">Mkpe::Dbvt::NodeID</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is the ID sent the same as my leaf node ID? </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a943ea74ea78c41b9b4f09b9f08750a55_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a943ea74ea78c41b9b4f09b9f08750a55_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a943ea74ea78c41b9b4f09b9f08750a55_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a943ea74ea78c41b9b4f09b9f08750a55_icgraph">
+<area shape="rect" title="Is the ID sent the same as my leaf node ID?" alt="" coords="239,5,401,48"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a4e8c0b529813902dbed5f36568bd1e43" title="Is the ID sent the same as my leaf node ID?" alt="" coords="5,5,191,48"/>
+<area shape="poly" title=" " alt="" coords="223,29,191,29,191,24,223,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a33f682576315d451376d5afce34e3235" name="a33f682576315d451376d5afce34e3235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f682576315d451376d5afce34e3235">&#9670;&#160;</a></span>CheckScalingRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CColliderWrapper::CheckScalingRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing of any scaling or rotation changes </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a33f682576315d451376d5afce34e3235_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a33f682576315d451376d5afce34e3235_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a33f682576315d451376d5afce34e3235_cgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a33f682576315d451376d5afce34e3235_cgraph">
+<area shape="rect" title="Processing of any scaling or rotation changes" alt="" coords="5,64,168,107"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body_base.html#aab7cf3785448e99fb7fcf177fd4ee2ec" title="Processing of any scaling or rotation changes" alt="" coords="216,5,407,48"/>
+<area shape="poly" title=" " alt="" coords="167,62,212,50,213,55,169,67"/>
+<area shape="rect" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219" title="Get instance. If the instance has already been destroyed, return nullptr" alt="" coords="256,72,367,99"/>
+<area shape="poly" title=" " alt="" coords="168,83,241,83,241,88,168,88"/>
+<area shape="rect" href="class_mkpe_1_1_c_collider_wrapper.html#adc611c4866a2c1fa6f8842ddfb826c2d" title="Get the simulation body related to this wrapper" alt="" coords="230,123,393,165"/>
+<area shape="poly" title=" " alt="" coords="169,104,215,116,214,121,167,109"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a717a036accb1811218e2df259f058fa1" name="a717a036accb1811218e2df259f058fa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717a036accb1811218e2df259f058fa1">&#9670;&#160;</a></span>ClearContactLists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CColliderWrapper::ClearContactLists </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear lists of the contact colliders </p>
+
+</div>
+</div>
+<a id="afa0bfe8d7b3e6bc150b3f396375f776d" name="afa0bfe8d7b3e6bc150b3f396375f776d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa0bfe8d7b3e6bc150b3f396375f776d">&#9670;&#160;</a></span>GetCollider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt; Mkpe::CColliderWrapper::GetCollider </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the collider related to this wrapper </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_afa0bfe8d7b3e6bc150b3f396375f776d_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_afa0bfe8d7b3e6bc150b3f396375f776d_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_afa0bfe8d7b3e6bc150b3f396375f776d_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_afa0bfe8d7b3e6bc150b3f396375f776d_icgraph">
+<area shape="rect" title="Get the collider related to this wrapper" alt="" coords="677,285,840,328"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#ad502b2b251a8139e4c4d73968c7992a1" title="Add a new leaf node to the tree" alt="" coords="432,5,629,48"/>
+<area shape="poly" title=" " alt="" coords="744,271,727,226,703,172,670,117,628,69,601,51,603,46,631,65,674,114,708,169,732,224,749,269"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#adcb6d3ec9ad81a29dd83ed1c0708c99f" title="Box and box collision algorithm" alt="" coords="219,123,384,165"/>
+<area shape="poly" title=" " alt="" coords="709,279,628,238,501,195,384,164,385,159,503,190,630,234,711,275"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a6a1f0a675bd7c0d9e406b949e56fdca0" title="Box and capsule collision algorithm" alt="" coords="219,189,384,232"/>
+<area shape="poly" title=" " alt="" coords="662,284,629,276,384,227,385,222,630,271,663,279"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#ab3d0a8af18386388fe141fbef4837274" title="Box and sphere collision algorithm" alt="" coords="219,256,384,299"/>
+<area shape="poly" title=" " alt="" coords="662,303,384,285,385,280,662,298"/>
+<area shape="rect" href="class_mkpe_1_1_c_collision_algorithm.html#a00b11c6b8c719cf70b0b2bf66f8f8d23" title="Broad phase collision algorithm" alt="" coords="444,557,618,600"/>
+<area shape="poly" title=" " alt="" coords="748,343,731,388,706,440,673,494,631,541,603,559,600,555,628,537,669,490,702,438,727,386,743,342"/>
+<area shape="rect" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a65baf47db869aaacf6c1673a9c49d5ee" title="Returns the results of checking whether two colliders can overlap after approval each other as a cont..." alt="" coords="442,315,620,357"/>
+<area shape="poly" title=" " alt="" coords="663,322,621,327,620,322,662,316"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a24b30ee1703ec1be07ea6d3561c97fc3" title="GJK(Gilbert&#45;Johnson&#45;Keerthi) collision algorithm" alt="" coords="219,373,384,416"/>
+<area shape="poly" title=" " alt="" coords="710,338,672,357,630,372,567,386,502,394,384,399,384,394,501,389,566,380,629,367,670,352,708,333"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a274048851bc6723f057afed02fbc9846" title="Capsule and capsule collision algorithm" alt="" coords="5,252,171,295"/>
+<area shape="poly" title=" " alt="" coords="728,275,683,231,628,189,564,155,511,136,456,124,384,113,299,97,263,98,220,113,198,126,178,142,144,180,118,220,101,253,96,251,114,217,140,177,175,138,195,122,218,108,262,93,299,92,384,108,457,119,513,131,566,151,631,184,687,226,731,271"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#acd6a6ee1d4353a1f282ef3eb51d2b030" title="Capsule and sphere collision algorithm" alt="" coords="5,377,171,420"/>
+<area shape="poly" title=" " alt="" coords="740,343,696,403,665,434,631,458,597,475,566,486,512,495,455,495,384,497,300,508,263,508,218,497,185,483,155,463,108,423,111,418,158,459,188,478,220,492,264,503,300,503,384,492,455,490,512,490,565,481,595,470,628,454,662,430,692,400,736,340"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a4dd6904acd848a82175d0fd6f9eaa545" title="Sphere and sphere collision algorithm" alt="" coords="219,440,384,483"/>
+<area shape="poly" title=" " alt="" coords="725,340,682,374,630,404,568,426,503,442,385,459,384,454,502,437,567,421,628,399,679,370,722,336"/>
+<area shape="poly" title=" " alt="" coords="503,304,452,241,419,209,382,180,363,168,366,164,386,175,422,205,456,238,508,300"/>
+<area shape="poly" title=" " alt="" coords="484,308,436,277,383,246,359,235,361,230,385,242,439,272,487,303"/>
+<area shape="poly" title=" " alt="" coords="430,313,384,301,385,296,431,308"/>
+<area shape="poly" title=" " alt="" coords="431,364,385,376,384,371,430,359"/>
+<area shape="rect" href="_collision_algorithm_capsule_capsule_8cpp.html#ae69eeb8e5b6192fb1dc61e2eb7ff99c4" title=" " alt="" coords="219,323,384,349"/>
+<area shape="poly" title=" " alt="" coords="426,339,384,339,384,333,426,333"/>
+<area shape="poly" title=" " alt="" coords="487,369,439,400,385,430,361,442,359,437,383,426,436,395,484,364"/>
+<area shape="poly" title=" " alt="" coords="238,320,163,298,164,293,239,315"/>
+<area shape="poly" title=" " alt="" coords="239,357,164,379,163,374,238,352"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4d30566848914b994704b4b1ee85fcad" name="a4d30566848914b994704b4b1ee85fcad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d30566848914b994704b4b1ee85fcad">&#9670;&#160;</a></span>GetContactColliderList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const CContactColliderList &amp; Mkpe::CColliderWrapper::GetContactColliderList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get list class of the contact colliders for each category </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a4d30566848914b994704b4b1ee85fcad_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a4d30566848914b994704b4b1ee85fcad_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a4d30566848914b994704b4b1ee85fcad_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a4d30566848914b994704b4b1ee85fcad_icgraph">
+<area shape="rect" title="Get list class of the contact colliders for each category" alt="" coords="226,5,388,48"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a7b3a04765f6a5db384344fbd0ff6a05a" title="Get list class of the contact colliders for each categories" alt="" coords="5,5,178,48"/>
+<area shape="poly" title=" " alt="" coords="210,29,178,29,178,24,210,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa02075f1f6989c667bcccb8d818c9e56" name="aa02075f1f6989c667bcccb8d818c9e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02075f1f6989c667bcccb8d818c9e56">&#9670;&#160;</a></span>GetInvMass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mkpe::CColliderWrapper::GetInvMass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the inverse mass of rigid body </p>
+
+</div>
+</div>
+<a id="a787d517f30fca145bef0a97b2ddf6b0e" name="a787d517f30fca145bef0a97b2ddf6b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a787d517f30fca145bef0a97b2ddf6b0e">&#9670;&#160;</a></span>GetMass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mkpe::CColliderWrapper::GetMass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the mass of rigid body </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a787d517f30fca145bef0a97b2ddf6b0e_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a787d517f30fca145bef0a97b2ddf6b0e_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a787d517f30fca145bef0a97b2ddf6b0e_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a787d517f30fca145bef0a97b2ddf6b0e_icgraph">
+<area shape="rect" title="Get the mass of rigid body" alt="" coords="248,80,410,123"/>
+<area shape="rect" href="class_c_box_collider3_d.html#ab95001e7e3afb72103b17fa82a75d529" title="Generate a reduced version of the local inertia tensor" alt="" coords="16,5,189,48"/>
+<area shape="poly" title=" " alt="" coords="246,77,169,51,170,46,248,72"/>
+<area shape="rect" href="class_c_capsule_collider3_d.html#a017a846964e11458061c395b689a6f3a" title="Generate a reduced version of the local inertia tensor" alt="" coords="17,72,188,131"/>
+<area shape="poly" title=" " alt="" coords="232,104,189,104,189,99,232,99"/>
+<area shape="rect" href="class_c_sphere_collider3_d.html#ac281b98f0d2b0981620a0c294aead799" title="Generate a reduced version of the local inertia tensor" alt="" coords="5,155,200,197"/>
+<area shape="poly" title=" " alt="" coords="248,131,170,157,169,152,246,126"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6b77f245afd5429a84da3cad8ed5646b" name="a6b77f245afd5429a84da3cad8ed5646b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b77f245afd5429a84da3cad8ed5646b">&#9670;&#160;</a></span>GetMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_rigid_body_material.html">RigidBodyMaterial</a> &amp; Mkpe::CColliderWrapper::GetMaterial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the rigid body material </p>
+
+</div>
+</div>
+<a id="ad3cf7cdcaeaf3aed97b4098bc4e43901" name="ad3cf7cdcaeaf3aed97b4098bc4e43901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3cf7cdcaeaf3aed97b4098bc4e43901">&#9670;&#160;</a></span>GetMaxRotateScalar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mkpe::CColliderWrapper::GetMaxRotateScalar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the maximum extent to which a vertex of collider is shifted by rotation </p>
+
+</div>
+</div>
+<a id="ab07a2c4008717f3ebf9d29096879e0dc" name="ab07a2c4008717f3ebf9d29096879e0dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab07a2c4008717f3ebf9d29096879e0dc">&#9670;&#160;</a></span>GetNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Dbvt::Node</a> * Mkpe::CColliderWrapper::GetNode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get node with this wrapper in the tree </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_ab07a2c4008717f3ebf9d29096879e0dc_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_ab07a2c4008717f3ebf9d29096879e0dc_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_ab07a2c4008717f3ebf9d29096879e0dc_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_ab07a2c4008717f3ebf9d29096879e0dc_icgraph">
+<area shape="rect" title="Get node with this wrapper in the tree" alt="" coords="467,39,629,81"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#a182cb6f12a20cbcc4ea37093a780bf55" title="Reinsert a leaf node that already exists in the tree" alt="" coords="222,5,419,48"/>
+<area shape="poly" title=" " alt="" coords="451,49,419,44,420,39,452,43"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#a56d5f880af83163ffca67b654843f3b0" title="Remove a leaf node from the tree" alt="" coords="222,72,419,115"/>
+<area shape="poly" title=" " alt="" coords="452,77,420,81,419,76,451,71"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a92f32db9b754241a044949413877f9ab" title="Processing at destruction" alt="" coords="5,80,174,107"/>
+<area shape="poly" title=" " alt="" coords="206,96,174,96,174,91,206,91"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a64637912b2e91d52615272bd228fcab0" name="a64637912b2e91d52615272bd228fcab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64637912b2e91d52615272bd228fcab0">&#9670;&#160;</a></span>GetPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> Mkpe::CColliderWrapper::GetPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the center coordinates considering offset </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a64637912b2e91d52615272bd228fcab0_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a64637912b2e91d52615272bd228fcab0_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a64637912b2e91d52615272bd228fcab0_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a64637912b2e91d52615272bd228fcab0_icgraph">
+<area shape="rect" title="Get the center coordinates considering offset" alt="" coords="219,205,381,248"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#adcb6d3ec9ad81a29dd83ed1c0708c99f" title="Box and box collision algorithm" alt="" coords="5,5,171,48"/>
+<area shape="poly" title=" " alt="" coords="277,193,232,127,203,93,169,62,151,51,154,46,172,58,207,89,237,124,281,190"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a6a1f0a675bd7c0d9e406b949e56fdca0" title="Box and capsule collision algorithm" alt="" coords="5,72,171,115"/>
+<area shape="poly" title=" " alt="" coords="262,197,219,162,169,129,147,118,150,113,172,124,222,158,265,193"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#ab3d0a8af18386388fe141fbef4837274" title="Box and sphere collision algorithm" alt="" coords="5,139,171,181"/>
+<area shape="poly" title=" " alt="" coords="215,203,158,185,159,179,217,198"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a274048851bc6723f057afed02fbc9846" title="Capsule and capsule collision algorithm" alt="" coords="5,205,171,248"/>
+<area shape="poly" title=" " alt="" coords="203,229,171,229,171,224,203,224"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#acd6a6ee1d4353a1f282ef3eb51d2b030" title="Capsule and sphere collision algorithm" alt="" coords="5,272,171,315"/>
+<area shape="poly" title=" " alt="" coords="217,256,159,274,158,269,215,251"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a24b30ee1703ec1be07ea6d3561c97fc3" title="GJK(Gilbert&#45;Johnson&#45;Keerthi) collision algorithm" alt="" coords="5,339,171,381"/>
+<area shape="poly" title=" " alt="" coords="265,260,222,295,172,329,150,340,147,336,169,324,219,291,262,256"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a4dd6904acd848a82175d0fd6f9eaa545" title="Sphere and sphere collision algorithm" alt="" coords="5,405,171,448"/>
+<area shape="poly" title=" " alt="" coords="281,263,237,329,207,365,172,395,154,407,151,403,169,391,203,361,232,326,277,260"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ada8ce25d990c6a2abf17f1d5da312bf2" name="ada8ce25d990c6a2abf17f1d5da312bf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada8ce25d990c6a2abf17f1d5da312bf2">&#9670;&#160;</a></span>GetRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_utility_for_math_8h.html#a921972c08e164d124edfca2b19315d46">Quaternionf</a> &amp; Mkpe::CColliderWrapper::GetRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the rotation of the collider </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_ada8ce25d990c6a2abf17f1d5da312bf2_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_ada8ce25d990c6a2abf17f1d5da312bf2_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_ada8ce25d990c6a2abf17f1d5da312bf2_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_ada8ce25d990c6a2abf17f1d5da312bf2_icgraph">
+<area shape="rect" title="Get the rotation of the collider" alt="" coords="219,172,381,215"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#adcb6d3ec9ad81a29dd83ed1c0708c99f" title="Box and box collision algorithm" alt="" coords="5,5,171,48"/>
+<area shape="poly" title=" " alt="" coords="271,162,226,111,199,85,169,62,149,51,152,46,172,58,202,81,230,107,275,158"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a6a1f0a675bd7c0d9e406b949e56fdca0" title="Box and capsule collision algorithm" alt="" coords="5,72,171,115"/>
+<area shape="poly" title=" " alt="" coords="245,167,170,129,144,118,146,113,172,124,247,162"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#ab3d0a8af18386388fe141fbef4837274" title="Box and sphere collision algorithm" alt="" coords="5,139,171,181"/>
+<area shape="poly" title=" " alt="" coords="203,181,171,176,172,170,204,176"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a274048851bc6723f057afed02fbc9846" title="Capsule and capsule collision algorithm" alt="" coords="5,205,171,248"/>
+<area shape="poly" title=" " alt="" coords="204,211,172,216,171,211,203,206"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#acd6a6ee1d4353a1f282ef3eb51d2b030" title="Capsule and sphere collision algorithm" alt="" coords="5,272,171,315"/>
+<area shape="poly" title=" " alt="" coords="247,225,172,262,146,274,144,269,170,258,245,220"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a24b30ee1703ec1be07ea6d3561c97fc3" title="GJK(Gilbert&#45;Johnson&#45;Keerthi) collision algorithm" alt="" coords="5,339,171,381"/>
+<area shape="poly" title=" " alt="" coords="275,229,230,279,202,306,172,329,152,340,149,336,169,324,199,301,226,275,271,225"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5df2a61bdf99d8419aefe09b14669843" name="a5df2a61bdf99d8419aefe09b14669843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5df2a61bdf99d8419aefe09b14669843">&#9670;&#160;</a></span>GetScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp; Mkpe::CColliderWrapper::GetScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the scale of the collider </p>
+
+</div>
+</div>
+<a id="adc611c4866a2c1fa6f8842ddfb826c2d" name="adc611c4866a2c1fa6f8842ddfb826c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc611c4866a2c1fa6f8842ddfb826c2d">&#9670;&#160;</a></span>GetSimulationBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a> * Mkpe::CColliderWrapper::GetSimulationBody </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the simulation body related to this wrapper </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_adc611c4866a2c1fa6f8842ddfb826c2d_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_adc611c4866a2c1fa6f8842ddfb826c2d_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_adc611c4866a2c1fa6f8842ddfb826c2d_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_adc611c4866a2c1fa6f8842ddfb826c2d_icgraph">
+<area shape="rect" title="Get the simulation body related to this wrapper" alt="" coords="447,39,609,81"/>
+<area shape="rect" href="class_mkpe_1_1_c_collider_wrapper.html#a33f682576315d451376d5afce34e3235" title="Processing of any scaling or rotation changes" alt="" coords="237,5,399,48"/>
+<area shape="poly" title=" " alt="" coords="431,47,399,42,400,37,432,42"/>
+<area shape="rect" href="class_mkpe_1_1_c_collider_wrapper.html#a88e7599fa8a803c815434ac56ccb1b59" title="Initialize inertia tensor" alt="" coords="237,72,399,115"/>
+<area shape="poly" title=" " alt="" coords="432,78,400,83,399,78,431,73"/>
+<area shape="rect" href="class_a_c_collider3_d.html#af039578b8e4159e4626febebd3a96056" title="Constructor" alt="" coords="5,80,189,107"/>
+<area shape="poly" title=" " alt="" coords="221,96,189,96,189,91,221,91"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9c9d7db84e7576e67a79a4d519c62e75" name="a9c9d7db84e7576e67a79a4d519c62e75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c9d7db84e7576e67a79a4d519c62e75">&#9670;&#160;</a></span>GetTreeType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aa">Dbvt::TREETYPE</a> Mkpe::CColliderWrapper::GetTreeType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the tree type of this wrapper </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a9c9d7db84e7576e67a79a4d519c62e75_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a9c9d7db84e7576e67a79a4d519c62e75_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a9c9d7db84e7576e67a79a4d519c62e75_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a9c9d7db84e7576e67a79a4d519c62e75_icgraph">
+<area shape="rect" title="Get the tree type of this wrapper" alt="" coords="467,5,629,48"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#a56d5f880af83163ffca67b654843f3b0" title="Remove a leaf node from the tree" alt="" coords="222,5,419,48"/>
+<area shape="poly" title=" " alt="" coords="452,29,420,29,420,24,452,24"/>
+<area shape="rect" href="class_a_c_collider3_d.html#a92f32db9b754241a044949413877f9ab" title="Processing at destruction" alt="" coords="5,13,174,40"/>
+<area shape="poly" title=" " alt="" coords="206,29,174,29,174,24,206,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a88e7599fa8a803c815434ac56ccb1b59" name="a88e7599fa8a803c815434ac56ccb1b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e7599fa8a803c815434ac56ccb1b59">&#9670;&#160;</a></span>InitializeInertiaTensor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CColliderWrapper::InitializeInertiaTensor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize inertia tensor </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a88e7599fa8a803c815434ac56ccb1b59_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a88e7599fa8a803c815434ac56ccb1b59_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a88e7599fa8a803c815434ac56ccb1b59_cgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a88e7599fa8a803c815434ac56ccb1b59_cgraph">
+<area shape="rect" title="Initialize inertia tensor" alt="" coords="5,56,168,99"/>
+<area shape="rect" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219" title="Get instance. If the instance has already been destroyed, return nullptr" alt="" coords="256,5,367,32"/>
+<area shape="poly" title=" " alt="" coords="167,54,242,34,243,39,169,59"/>
+<area shape="rect" href="class_mkpe_1_1_c_collider_wrapper.html#adc611c4866a2c1fa6f8842ddfb826c2d" title="Get the simulation body related to this wrapper" alt="" coords="230,56,393,99"/>
+<area shape="poly" title=" " alt="" coords="168,75,214,75,214,80,168,80"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body_base.html#a8b6f1790879a6c73a6b106a9662a4d04" title="Initialize inertia tensor" alt="" coords="216,123,407,165"/>
+<area shape="poly" title=" " alt="" coords="161,97,223,115,221,120,160,102"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a88e7599fa8a803c815434ac56ccb1b59_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a88e7599fa8a803c815434ac56ccb1b59_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a88e7599fa8a803c815434ac56ccb1b59_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a88e7599fa8a803c815434ac56ccb1b59_icgraph">
+<area shape="rect" title="Initialize inertia tensor" alt="" coords="237,5,399,48"/>
+<area shape="rect" href="class_a_c_collider3_d.html#af039578b8e4159e4626febebd3a96056" title="Constructor" alt="" coords="5,13,189,40"/>
+<area shape="poly" title=" " alt="" coords="221,29,189,29,189,24,221,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2935c6a939ac66b0db3bd441721eb0a7" name="a2935c6a939ac66b0db3bd441721eb0a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2935c6a939ac66b0db3bd441721eb0a7">&#9670;&#160;</a></span>IsActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Mkpe::CColliderWrapper::IsActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this collider and the gameobject that has this collider active? </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a2935c6a939ac66b0db3bd441721eb0a7_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a2935c6a939ac66b0db3bd441721eb0a7_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a2935c6a939ac66b0db3bd441721eb0a7_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a2935c6a939ac66b0db3bd441721eb0a7_icgraph">
+<area shape="rect" title="Is this collider and the gameobject that has this collider active?" alt="" coords="228,5,390,48"/>
+<area shape="rect" href="class_mkpe_1_1_c_collision_algorithm.html#a00b11c6b8c719cf70b0b2bf66f8f8d23" title="Broad phase collision algorithm" alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="212,29,180,29,180,24,212,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a17add70b1beb5c0f7e30fa025e342eba" name="a17add70b1beb5c0f7e30fa025e342eba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17add70b1beb5c0f7e30fa025e342eba">&#9670;&#160;</a></span>IsStatic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Mkpe::CColliderWrapper::IsStatic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this object static? </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a17add70b1beb5c0f7e30fa025e342eba_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a17add70b1beb5c0f7e30fa025e342eba_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a17add70b1beb5c0f7e30fa025e342eba_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a17add70b1beb5c0f7e30fa025e342eba_icgraph">
+<area shape="rect" title="Is this object static?" alt="" coords="904,231,1066,273"/>
+<area shape="rect" href="class_mkpe_1_1_c_collider_wrapper.html#a3a61cd3d301b749a740d6a085998c9af" title="Add information of a contacted opponent by this collider" alt="" coords="673,143,841,185"/>
+<area shape="poly" title=" " alt="" coords="912,227,813,188,815,183,914,222"/>
+<area shape="rect" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html#a65baf47db869aaacf6c1673a9c49d5ee" title="Returns the results of checking whether two colliders can overlap after approval each other as a cont..." alt="" coords="432,172,610,215"/>
+<area shape="poly" title=" " alt="" coords="888,243,611,207,611,202,889,237"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#ad502b2b251a8139e4c4d73968c7992a1" title="Add a new leaf node to the tree" alt="" coords="658,260,856,303"/>
+<area shape="poly" title=" " alt="" coords="889,267,857,271,856,266,888,262"/>
+<area shape="rect" href="class_mkpe_1_1_c_collision_algorithm.html#a00b11c6b8c719cf70b0b2bf66f8f8d23" title="Broad phase collision algorithm" alt="" coords="670,327,844,369"/>
+<area shape="poly" title=" " alt="" coords="930,283,857,317,827,329,825,324,855,312,928,278"/>
+<area shape="poly" title=" " alt="" coords="658,179,611,185,610,180,658,174"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#adcb6d3ec9ad81a29dd83ed1c0708c99f" title="Box and box collision algorithm" alt="" coords="219,5,384,48"/>
+<area shape="poly" title=" " alt="" coords="491,162,443,112,382,62,362,51,365,46,386,58,447,108,495,159"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a6a1f0a675bd7c0d9e406b949e56fdca0" title="Box and capsule collision algorithm" alt="" coords="219,72,384,115"/>
+<area shape="poly" title=" " alt="" coords="463,167,383,129,357,118,359,113,385,124,465,162"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#ab3d0a8af18386388fe141fbef4837274" title="Box and sphere collision algorithm" alt="" coords="219,139,384,181"/>
+<area shape="poly" title=" " alt="" coords="416,180,384,175,385,170,417,175"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a24b30ee1703ec1be07ea6d3561c97fc3" title="GJK(Gilbert&#45;Johnson&#45;Keerthi) collision algorithm" alt="" coords="219,205,384,248"/>
+<area shape="poly" title=" " alt="" coords="417,212,385,217,384,211,416,207"/>
+<area shape="rect" href="_collision_algorithm_capsule_capsule_8cpp.html#ae69eeb8e5b6192fb1dc61e2eb7ff99c4" title=" " alt="" coords="219,272,384,299"/>
+<area shape="poly" title=" " alt="" coords="467,225,385,262,353,274,351,269,383,258,465,220"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a4dd6904acd848a82175d0fd6f9eaa545" title="Sphere and sphere collision algorithm" alt="" coords="219,323,384,365"/>
+<area shape="poly" title=" " alt="" coords="490,228,443,271,385,313,364,324,361,320,383,308,439,267,486,224"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a274048851bc6723f057afed02fbc9846" title="Capsule and capsule collision algorithm" alt="" coords="5,231,171,273"/>
+<area shape="poly" title=" " alt="" coords="203,273,171,268,172,262,204,267"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#acd6a6ee1d4353a1f282ef3eb51d2b030" title="Capsule and sphere collision algorithm" alt="" coords="5,297,171,340"/>
+<area shape="poly" title=" " alt="" coords="204,303,172,308,171,303,203,298"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae403fa21adcbc0d63593ee9bbc73af1f" name="ae403fa21adcbc0d63593ee9bbc73af1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae403fa21adcbc0d63593ee9bbc73af1f">&#9670;&#160;</a></span>RebuildContactLists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CColliderWrapper::RebuildContactLists </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rebuild the lists of the contact colliders for each categories </p>
+
+</div>
+</div>
+<a id="a9714f08a35029241b00c789728c5fe48" name="a9714f08a35029241b00c789728c5fe48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9714f08a35029241b00c789728c5fe48">&#9670;&#160;</a></span>SetNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CColliderWrapper::SetNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_mkpe_1_1_dbvt_1_1_node.html">Dbvt::Node</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set node with this wrapper in the tree </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a9714f08a35029241b00c789728c5fe48_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a9714f08a35029241b00c789728c5fe48_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a9714f08a35029241b00c789728c5fe48_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a9714f08a35029241b00c789728c5fe48_icgraph">
+<area shape="rect" title="Set node with this wrapper in the tree" alt="" coords="251,5,413,48"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#ad502b2b251a8139e4c4d73968c7992a1" title="Add a new leaf node to the tree" alt="" coords="5,5,203,48"/>
+<area shape="poly" title=" " alt="" coords="235,29,203,29,203,24,235,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8717ab1d0e161c6f4c18366c8c5da8c4" name="a8717ab1d0e161c6f4c18366c8c5da8c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8717ab1d0e161c6f4c18366c8c5da8c4">&#9670;&#160;</a></span>SetRigidBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CColliderWrapper::SetRigidBody </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_rigid_body.html">CRigidBody</a> &gt;&#160;</td>
+          <td class="paramname"><em>rb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set rigid body to be related to this wrapper </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a8717ab1d0e161c6f4c18366c8c5da8c4_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a8717ab1d0e161c6f4c18366c8c5da8c4_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a8717ab1d0e161c6f4c18366c8c5da8c4_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a8717ab1d0e161c6f4c18366c8c5da8c4_icgraph">
+<area shape="rect" title="Set rigid body to be related to this wrapper" alt="" coords="457,5,619,48"/>
+<area shape="rect" href="class_c_rigid_body.html#a027e27aa76af9882ef0679e6332c6ce7" title="Bind this collider to wrapper" alt="" coords="237,13,409,40"/>
+<area shape="poly" title=" " alt="" coords="441,29,410,29,410,24,441,24"/>
+<area shape="rect" href="class_a_c_collider3_d.html#af039578b8e4159e4626febebd3a96056" title="Constructor" alt="" coords="5,13,189,40"/>
+<area shape="poly" title=" " alt="" coords="221,29,189,29,189,24,221,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9c02028df7d23526435da5b78b3ed09e" name="a9c02028df7d23526435da5b78b3ed09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c02028df7d23526435da5b78b3ed09e">&#9670;&#160;</a></span>SetSimulationBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CColliderWrapper::SetSimulationBody </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_mkpe_1_1_c_simulation_body.html">CSimulationBody</a> &gt;&#160;</td>
+          <td class="paramname"><em>simulationBody</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set simulation body to be related to this wrapper </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a9c02028df7d23526435da5b78b3ed09e_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a9c02028df7d23526435da5b78b3ed09e_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a9c02028df7d23526435da5b78b3ed09e_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a9c02028df7d23526435da5b78b3ed09e_icgraph">
+<area shape="rect" title="Set simulation body to be related to this wrapper" alt="" coords="457,5,619,48"/>
+<area shape="rect" href="class_c_rigid_body.html#a027e27aa76af9882ef0679e6332c6ce7" title="Bind this collider to wrapper" alt="" coords="237,13,409,40"/>
+<area shape="poly" title=" " alt="" coords="441,29,410,29,410,24,441,24"/>
+<area shape="rect" href="class_a_c_collider3_d.html#af039578b8e4159e4626febebd3a96056" title="Constructor" alt="" coords="5,13,189,40"/>
+<area shape="poly" title=" " alt="" coords="221,29,189,29,189,24,221,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a569943668d47bc891d19cde26534d788" name="a569943668d47bc891d19cde26534d788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569943668d47bc891d19cde26534d788">&#9670;&#160;</a></span>SetTreeType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CColliderWrapper::SetTreeType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aa">Dbvt::TREETYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the tree type of this wrapper </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_collider_wrapper_a569943668d47bc891d19cde26534d788_icgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_collider_wrapper_a569943668d47bc891d19cde26534d788_icgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_collider_wrapper_a569943668d47bc891d19cde26534d788_icgraph" id="aclass_mkpe_1_1_c_collider_wrapper_a569943668d47bc891d19cde26534d788_icgraph">
+<area shape="rect" title="Set the tree type of this wrapper" alt="" coords="251,5,413,48"/>
+<area shape="rect" href="class_mkpe_1_1_dbvt_1_1_c_dynamic_b_v_tree.html#ad502b2b251a8139e4c4d73968c7992a1" title="Add a new leaf node to the tree" alt="" coords="5,5,203,48"/>
+<area shape="poly" title=" " alt="" coords="235,29,203,29,203,24,235,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_collider_wrapper_8h_source.html">ColliderWrapper.h</a></li>
+<li><a class="el" href="_collider_wrapper_8cpp.html">ColliderWrapper.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

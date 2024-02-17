@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: AssetCrypter.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">AssetCrypter.cpp ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_asset_crypter_8h_source.html">AssetCrypter.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utility_for_string_8h_source.html">UtilityForString.h</a>&quot;</code><br />
+<code>#include &quot;CryptoKey.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utility_for_exception_8h_source.html">UtilityForException.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+AssetCrypter.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_asset_crypter_8cpp__incl.png" border="0" usemap="#a_asset_crypter_8cpp" alt=""/></div>
+<map name="a_asset_crypter_8cpp" id="a_asset_crypter_8cpp">
+<area shape="rect" title=" " alt="" coords="200,5,322,32"/>
+<area shape="rect" href="_asset_crypter_8h.html" title="This file handles asset encryption and decryption functions." alt="" coords="5,80,114,107"/>
+<area shape="poly" title=" " alt="" coords="227,35,110,77,108,72,225,30"/>
+<area shape="rect" href="_utility_for_string_8h.html" title="This file defines utility functions that handle strings." alt="" coords="138,80,256,107"/>
+<area shape="poly" title=" " alt="" coords="252,34,220,70,216,66,248,31"/>
+<area shape="rect" title=" " alt="" coords="280,80,373,107"/>
+<area shape="poly" title=" " alt="" coords="274,31,307,67,303,70,270,34"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="396,80,539,107"/>
+<area shape="poly" title=" " alt="" coords="298,30,418,72,416,77,296,35"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_file_info.html">FileInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a00ee476619043432ac449e90496a0575" id="r_a00ee476619043432ac449e90496a0575"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_asset_crypter_8cpp.html#a00ee476619043432ac449e90496a0575">EncryptData</a> (std::vector&lt; unsigned char &gt; &amp;plainData, std::vector&lt; unsigned char &gt; &amp;outputData)</td></tr>
+<tr class="separator:a00ee476619043432ac449e90496a0575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab25d96b750ccf4cbaf9af5fd78c44f89" id="r_ab25d96b750ccf4cbaf9af5fd78c44f89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_asset_crypter_8cpp.html#ab25d96b750ccf4cbaf9af5fd78c44f89">DecryptData</a> (std::vector&lt; unsigned char &gt; &amp;encryptedData, std::vector&lt; unsigned char &gt; &amp;outputData)</td></tr>
+<tr class="separator:ab25d96b750ccf4cbaf9af5fd78c44f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a8bcd46a106d63db4da1091df3b0a730d" id="r_a8bcd46a106d63db4da1091df3b0a730d"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_asset_crypter_8cpp.html#a8bcd46a106d63db4da1091df3b0a730d">IDENTIFYING_BINARY</a> = '&quot;'</td></tr>
+<tr class="separator:a8bcd46a106d63db4da1091df3b0a730d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b58cd4dee3f164864a2758cdc97f839" id="r_a7b58cd4dee3f164864a2758cdc97f839"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_asset_crypter_8cpp.html#a7b58cd4dee3f164864a2758cdc97f839">PLAINTEXT_ASSETS_DIR</a> = &quot;AssetsPlain/&quot;</td></tr>
+<tr class="separator:a7b58cd4dee3f164864a2758cdc97f839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d63ade1ac9f0414a36be78e26810898" id="r_a4d63ade1ac9f0414a36be78e26810898"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_asset_crypter_8cpp.html#a4d63ade1ac9f0414a36be78e26810898">MAX_NUM_ASSET_PER_FILE</a> = 10</td></tr>
+<tr class="separator:a4d63ade1ac9f0414a36be78e26810898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ab25d96b750ccf4cbaf9af5fd78c44f89" name="ab25d96b750ccf4cbaf9af5fd78c44f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab25d96b750ccf4cbaf9af5fd78c44f89">&#9670;&#160;</a></span>DecryptData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DecryptData </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; unsigned char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>encryptedData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; unsigned char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>outputData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_asset_crypter_8cpp_ab25d96b750ccf4cbaf9af5fd78c44f89_icgraph.png" border="0" usemap="#a_asset_crypter_8cpp_ab25d96b750ccf4cbaf9af5fd78c44f89_icgraph" alt=""/></div>
+<map name="a_asset_crypter_8cpp_ab25d96b750ccf4cbaf9af5fd78c44f89_icgraph" id="a_asset_crypter_8cpp_ab25d96b750ccf4cbaf9af5fd78c44f89_icgraph">
+<area shape="rect" title=" " alt="" coords="745,56,838,83"/>
+<area shape="rect" href="namespace_asset_crypter.html#a5ec9f24e16a098447b31275a17cebe87" title="Load .pak file" alt="" coords="519,56,697,83"/>
+<area shape="poly" title=" " alt="" coords="729,72,697,72,697,67,729,67"/>
+<area shape="rect" href="class_c_model_registry.html#a0d2076dd4798482cf355afaee9c25870" title="Load animations from pak file" alt="" coords="267,5,469,32"/>
+<area shape="poly" title=" " alt="" coords="526,55,434,35,435,30,527,50"/>
+<area shape="rect" href="class_c_model_registry.html#a959d88479440944f780a8b06fd3d8de9" title="Load models from pak file" alt="" coords="264,56,471,83"/>
+<area shape="poly" title=" " alt="" coords="504,72,472,72,472,67,504,67"/>
+<area shape="rect" href="class_c_texture_registry.html#aa67050d232cf1dfb7cdb7607f48b2ed8" title="Load textures from pak file" alt="" coords="278,107,458,133"/>
+<area shape="poly" title=" " alt="" coords="527,89,435,109,434,103,526,84"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,56,216,83"/>
+<area shape="poly" title=" " alt="" coords="296,39,217,58,216,53,294,34"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="poly" title=" " alt="" coords="51,43,44,37,30,35,17,37,10,41,8,47,12,54,7,57,3,47,6,38,15,32,30,29,46,32,55,39"/>
+<area shape="poly" title=" " alt="" coords="248,72,216,72,216,67,248,67"/>
+<area shape="poly" title=" " alt="" coords="294,105,216,86,217,81,296,100"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a00ee476619043432ac449e90496a0575" name="a00ee476619043432ac449e90496a0575"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ee476619043432ac449e90496a0575">&#9670;&#160;</a></span>EncryptData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EncryptData </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; unsigned char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plainData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; unsigned char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>outputData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_asset_crypter_8cpp_a00ee476619043432ac449e90496a0575_icgraph.png" border="0" usemap="#a_asset_crypter_8cpp_a00ee476619043432ac449e90496a0575_icgraph" alt=""/></div>
+<map name="a_asset_crypter_8cpp_a00ee476619043432ac449e90496a0575_icgraph" id="a_asset_crypter_8cpp_a00ee476619043432ac449e90496a0575_icgraph">
+<area shape="rect" title=" " alt="" coords="241,5,334,32"/>
+<area shape="rect" href="namespace_asset_crypter.html#ae9c95f168bdbf0c5a475d83dcbae1172" title="Create .pak file" alt="" coords="5,5,193,32"/>
+<area shape="poly" title=" " alt="" coords="225,21,193,21,193,16,225,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a8bcd46a106d63db4da1091df3b0a730d" name="a8bcd46a106d63db4da1091df3b0a730d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bcd46a106d63db4da1091df3b0a730d">&#9670;&#160;</a></span>IDENTIFYING_BINARY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char IDENTIFYING_BINARY = '&quot;'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d63ade1ac9f0414a36be78e26810898" name="a4d63ade1ac9f0414a36be78e26810898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d63ade1ac9f0414a36be78e26810898">&#9670;&#160;</a></span>MAX_NUM_ASSET_PER_FILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MAX_NUM_ASSET_PER_FILE = 10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b58cd4dee3f164864a2758cdc97f839" name="a7b58cd4dee3f164864a2758cdc97f839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b58cd4dee3f164864a2758cdc97f839">&#9670;&#160;</a></span>PLAINTEXT_ASSETS_DIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* const PLAINTEXT_ASSETS_DIR = &quot;AssetsPlain/&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

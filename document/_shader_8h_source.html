@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Shader.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Shader.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_shader_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __SHADER_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __SHADER_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_application_8h.html">Application.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_graphics_pipeline_elements_8h.html">GraphicsPipelineElements.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_direct_x_8h.html">UtilityForDirectX.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_unique_ptr_8h.html">UniquePtr.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_sampler_transmitter.html">   18</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_sampler_transmitter.html">SamplerTransmitter</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_sampler_transmitter.html#a89e4d112f28ecbbd5200ee0a7e08b309">   20</a></span>    <a class="code hl_struct" href="struct_gpso_1_1_sampler_state_setting.html">Gpso::SamplerStateSetting</a> <a class="code hl_variable" href="struct_sampler_transmitter.html#a89e4d112f28ecbbd5200ee0a7e08b309">setting</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_sampler_transmitter.html#a23320992c3c1054923d55cf29e738fd0">   22</a></span>    std::string <a class="code hl_variable" href="struct_sampler_transmitter.html#a23320992c3c1054923d55cf29e738fd0">name</a>;</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_sampler_transmitter.html#a05648d53e3a1082d92daf43129320956">   28</a></span>    <a class="code hl_function" href="struct_sampler_transmitter.html#a05648d53e3a1082d92daf43129320956">SamplerTransmitter</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_gpso_1_1_sampler_state_setting.html">Gpso::SamplerStateSetting</a>&amp; <a class="code hl_variable" href="struct_sampler_transmitter.html#a89e4d112f28ecbbd5200ee0a7e08b309">setting</a>, <span class="keyword">const</span> std::string&amp; <a class="code hl_variable" href="struct_sampler_transmitter.html#a23320992c3c1054923d55cf29e738fd0">name</a>) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        this-&gt;setting = <a class="code hl_variable" href="struct_sampler_transmitter.html#a89e4d112f28ecbbd5200ee0a7e08b309">setting</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        this-&gt;name = <a class="code hl_variable" href="struct_sampler_transmitter.html#a23320992c3c1054923d55cf29e738fd0">name</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_sampler_info.html">   35</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_sampler_info.html">SamplerInfo</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_sampler_info.html#a841e2657113e0f5aaba6e8bbeb21a3f2">   37</a></span>    D3D12_STATIC_SAMPLER_DESC <a class="code hl_variable" href="struct_sampler_info.html#a841e2657113e0f5aaba6e8bbeb21a3f2">sampler</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_sampler_info.html#a9a816e9d4a43fcc3eb66b827e0d52388">   39</a></span>    UINT <a class="code hl_variable" href="struct_sampler_info.html#a9a816e9d4a43fcc3eb66b827e0d52388">slotNum</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_sampler_info.html#ac79ba793d8fdb30ccf5fd3b513342cb7">   41</a></span>    UINT <a class="code hl_variable" href="struct_sampler_info.html#ac79ba793d8fdb30ccf5fd3b513342cb7">spaceNum</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_sampler_info.html#af51324c704aafbf07de98795119c22d7">   43</a></span>    std::string <a class="code hl_variable" href="struct_sampler_info.html#af51324c704aafbf07de98795119c22d7">name</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct_shader_resource_info.html">   47</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_shader_resource_info.html">ShaderResourceInfo</a> {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_shader_resource_info.html#a3499346f4df29922984e6f4d9647758a">   49</a></span>    _D3D_SHADER_INPUT_TYPE <a class="code hl_variable" href="struct_shader_resource_info.html#a3499346f4df29922984e6f4d9647758a">type</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_shader_resource_info.html#a290e9f719b99c7bde084b5a09e8878f7">   51</a></span>    UINT <a class="code hl_variable" href="struct_shader_resource_info.html#a290e9f719b99c7bde084b5a09e8878f7">index</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="struct_shader_resource_info.html#afcc5ae5d4527cec9d87b3cd7695fb68a">   54</a></span>    <a class="code hl_function" href="struct_shader_resource_info.html#afcc5ae5d4527cec9d87b3cd7695fb68a">ShaderResourceInfo</a>(_D3D_SHADER_INPUT_TYPE <a class="code hl_variable" href="struct_shader_resource_info.html#a3499346f4df29922984e6f4d9647758a">type</a>, UINT <a class="code hl_variable" href="struct_shader_resource_info.html#a290e9f719b99c7bde084b5a09e8878f7">index</a>) : <a class="code hl_variable" href="struct_shader_resource_info.html#a3499346f4df29922984e6f4d9647758a">type</a>(<a class="code hl_variable" href="struct_shader_resource_info.html#a3499346f4df29922984e6f4d9647758a">type</a>), <a class="code hl_variable" href="struct_shader_resource_info.html#a290e9f719b99c7bde084b5a09e8878f7">index</a>(<a class="code hl_variable" href="struct_shader_resource_info.html#a290e9f719b99c7bde084b5a09e8878f7">index</a>) {}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_a_c_shader.html">   58</a></span><span class="keyword">class </span><a class="code hl_class" href="class_a_c_shader.html">ACShader</a> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#ad9a144b52fc3afcdc1e48aea65eac15d">   63</a></span>    <a class="code hl_function" href="class_a_c_shader.html#ad9a144b52fc3afcdc1e48aea65eac15d">ACShader</a>(<a class="code hl_enumeration" href="namespace_utl_1_1_dx.html#ac14e0010589229586f96555cceea1a5d">Utl::Dx::ShaderType</a> type) : <a class="code hl_variable" href="class_a_c_shader.html#aa949b574ab9a2f51f1462960ada1bbbd">m_fileSize</a>(0), <a class="code hl_variable" href="class_a_c_shader.html#a4e42bb59fda4dad6cd4333a5fc9d2e1c">m_shaderType</a>(type) { }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#a10546d3be3a805de1bad2305d935edcf">   68</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_a_c_shader.html#a10546d3be3a805de1bad2305d935edcf">~ACShader</a>() {}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_shader.html#a22e95d3c6cadabc74dd39927d09c9b40">Load</a>(<span class="keyword">const</span> std::string&amp; filePath);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_shader.html#ac0ec46118f39451889bddbd81f25dad3">BindStaticDescriptorTable</a>(std::vector&lt;D3D12_ROOT_PARAMETER&gt;* descArray, std::vector&lt;D3D12_STATIC_SAMPLER_DESC&gt;* sampArray);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_shader.html#a805b28ea2d644bd0c71008e92735341c">BindDynamicDescriptorTable</a>(std::vector&lt;D3D12_ROOT_PARAMETER&gt;* descArray);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#a9851f07f88fddd78c552b423a08ccea4">   93</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_shader.html#a9851f07f88fddd78c552b423a08ccea4">BindGPSO</a>(D3D12_GRAPHICS_PIPELINE_STATE_DESC* gpso) = 0;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_shader.html#ae618c3a8ce89ebd021fa51ce0271b0cf">SetSampler</a>(std::initializer_list&lt;SamplerTransmitter&gt; settings);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#a40143c41b429430cbe9fcafb5a0757c6">  102</a></span>    <a class="code hl_enumeration" href="namespace_utl_1_1_dx.html#ac14e0010589229586f96555cceea1a5d">Utl::Dx::ShaderType</a> <a class="code hl_function" href="class_a_c_shader.html#a40143c41b429430cbe9fcafb5a0757c6">GetShaderType</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_shader.html#a4e42bb59fda4dad6cd4333a5fc9d2e1c">m_shaderType</a>; }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#aa88b09a6b4bf61ea6c6f78adb2a3a268">  104</a></span>    <span class="keyword">const</span> std::unordered_map&lt;std::string, ShaderResourceInfo&gt;&amp; <a class="code hl_function" href="class_a_c_shader.html#aa88b09a6b4bf61ea6c6f78adb2a3a268">GetDescriptorNameToInfoDynamicMap</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_shader.html#a30f4f463c1830b9bc5c555966a4f5110">m_dynamicNameToInfoMap</a>; }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#ac2401c4dbda95102004ba8263b8eb17e">  106</a></span>    <span class="keyword">const</span> std::unordered_map&lt;std::string, ShaderResourceInfo&gt;&amp; <a class="code hl_function" href="class_a_c_shader.html#ac2401c4dbda95102004ba8263b8eb17e">GetDescriptorNameToInfoStaticMap</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_shader.html#a7a5bcc6b38522dcefadc153e96acd43e">m_staticNameToInfoMap</a>; }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#a3dff83b5b5c3f43268fc6ddb631a8d6d">  114</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_shader.html#a3dff83b5b5c3f43268fc6ddb631a8d6d">LoadDerived</a>(<span class="keyword">const</span> Microsoft::WRL::ComPtr&lt;ID3D12ShaderReflection&gt;&amp; shaderReflection, <span class="keyword">const</span> D3D12_SHADER_DESC&amp; shaderDesc) {}</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">void</span> AddDescriptorRange(<span class="keyword">const</span> D3D12_SHADER_INPUT_BIND_DESC&amp; bindDesc, D3D12_DESCRIPTOR_RANGE_TYPE rangeType);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">bool</span> CheckAndRemoveSuffix(std::string* str, <span class="keyword">const</span> std::string&amp; suffix);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#a4e42bb59fda4dad6cd4333a5fc9d2e1c">  136</a></span>    <a class="code hl_enumeration" href="namespace_utl_1_1_dx.html#ac14e0010589229586f96555cceea1a5d">Utl::Dx::ShaderType</a> <a class="code hl_variable" href="class_a_c_shader.html#a4e42bb59fda4dad6cd4333a5fc9d2e1c">m_shaderType</a>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#a30f4f463c1830b9bc5c555966a4f5110">  138</a></span>    std::unordered_map&lt;std::string, ShaderResourceInfo&gt; <a class="code hl_variable" href="class_a_c_shader.html#a30f4f463c1830b9bc5c555966a4f5110">m_dynamicNameToInfoMap</a>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#a7a5bcc6b38522dcefadc153e96acd43e">  140</a></span>    std::unordered_map&lt;std::string, ShaderResourceInfo&gt; <a class="code hl_variable" href="class_a_c_shader.html#a7a5bcc6b38522dcefadc153e96acd43e">m_staticNameToInfoMap</a>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#a04c25f76679ce8f550a18847a47baf80">  142</a></span>    std::vector&lt;D3D12_DESCRIPTOR_RANGE&gt; <a class="code hl_variable" href="class_a_c_shader.html#a04c25f76679ce8f550a18847a47baf80">m_dynamicDescriptorRanges</a>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#af10f1c62bb63008978a6b702d64cadd0">  144</a></span>    std::vector&lt;D3D12_DESCRIPTOR_RANGE&gt; <a class="code hl_variable" href="class_a_c_shader.html#af10f1c62bb63008978a6b702d64cadd0">m_staticDescriptorRanges</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#a6f03f0dccc0b1358e572ef2b73723cef">  146</a></span>    std::vector&lt;SamplerInfo&gt; <a class="code hl_variable" href="class_a_c_shader.html#a6f03f0dccc0b1358e572ef2b73723cef">m_samplers</a>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#a12346124ad581a80be950ec5627728e6">  148</a></span>    <a class="code hl_class" href="class_c_unique_ptr.html">CUniquePtr&lt;std::byte[]&gt;</a> <a class="code hl_variable" href="class_a_c_shader.html#a12346124ad581a80be950ec5627728e6">m_csoData</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="class_a_c_shader.html#aa949b574ab9a2f51f1462960ada1bbbd">  150</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="class_a_c_shader.html#aa949b574ab9a2f51f1462960ada1bbbd">m_fileSize</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>};</div>
+</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="foldopen" id="foldopen00154" data-start="{" data-end="};">
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="class_c_vertex_shader.html">  154</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_vertex_shader.html">CVertexShader</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_shader.html">ACShader</a> {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="class_c_vertex_shader.html#a5dfb5056e422081d8a671f04ea6eebf3">  159</a></span>    <a class="code hl_function" href="class_c_vertex_shader.html#a5dfb5056e422081d8a671f04ea6eebf3">CVertexShader</a>() : <a class="code hl_class" href="class_a_c_shader.html">ACShader</a>(<a class="code hl_namespace" href="namespace_utl.html">Utl</a>::Dx::ShaderType::Vertex) {}</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="class_c_vertex_shader.html#ad6142258763bdd2df3951034d55ca7b9">  164</a></span>    <a class="code hl_function" href="class_c_vertex_shader.html#ad6142258763bdd2df3951034d55ca7b9">CVertexShader</a>(<span class="keyword">const</span> std::string&amp; filePath) : <a class="code hl_class" href="class_a_c_shader.html">ACShader</a>(<a class="code hl_namespace" href="namespace_utl.html">Utl</a>::Dx::ShaderType::Vertex) { <a class="code hl_function" href="class_a_c_shader.html#a22e95d3c6cadabc74dd39927d09c9b40">Load</a>(filePath); }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_function" href="class_c_vertex_shader.html#afc89aa3404bdb9768acee8a1884e0ba0">~CVertexShader</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_vertex_shader.html#a6cc97016f9718a4f73003f1d923d9dca">BindGPSO</a>(D3D12_GRAPHICS_PIPELINE_STATE_DESC* gpso) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_vertex_shader.html#a63ed78734d371d277bf6c44608eb58d3">LoadDerived</a>(<span class="keyword">const</span> Microsoft::WRL::ComPtr&lt;ID3D12ShaderReflection&gt;&amp; shaderReflection, <span class="keyword">const</span> D3D12_SHADER_DESC&amp; shaderDesc) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="class_c_vertex_shader.html#a443fbf8f90b9aa351e01821040dcb76b">  187</a></span>    <a class="code hl_class" href="class_c_array_smart_ptr.html">CArrayUniquePtr&lt;D3D12_INPUT_ELEMENT_DESC&gt;</a> <a class="code hl_variable" href="class_c_vertex_shader.html#a443fbf8f90b9aa351e01821040dcb76b">m_inputLayout</a>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>};</div>
+</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="foldopen" id="foldopen00191" data-start="{" data-end="};">
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="class_c_pixel_shader.html">  191</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_pixel_shader.html">CPixelShader</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_shader.html">ACShader</a> {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="class_c_pixel_shader.html#a7d5d5e7da49270b9189670d3db2f1e20">  196</a></span>    <a class="code hl_function" href="class_c_pixel_shader.html#a7d5d5e7da49270b9189670d3db2f1e20">CPixelShader</a>() : <a class="code hl_class" href="class_a_c_shader.html">ACShader</a>(<a class="code hl_namespace" href="namespace_utl.html">Utl</a>::Dx::ShaderType::Pixel) {}</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="class_c_pixel_shader.html#ab12d3e5b09e42a4019744a1645d36155">  201</a></span>    <a class="code hl_function" href="class_c_pixel_shader.html#ab12d3e5b09e42a4019744a1645d36155">CPixelShader</a>(<span class="keyword">const</span> std::string&amp; filePath) : <a class="code hl_class" href="class_a_c_shader.html">ACShader</a>(<a class="code hl_namespace" href="namespace_utl.html">Utl</a>::Dx::ShaderType::Pixel) { <a class="code hl_function" href="class_a_c_shader.html#a22e95d3c6cadabc74dd39927d09c9b40">Load</a>(filePath); }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_pixel_shader.html#ac1729b5d981ca2ea92c15e2867042987">BindGPSO</a>(D3D12_GRAPHICS_PIPELINE_STATE_DESC* gpso) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>};</div>
+</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">#endif </span><span class="comment">// !__SHADER_H__</span></div>
+<div class="ttc" id="a_application_8h_html"><div class="ttname"><a href="_application_8h.html">Application.h</a></div><div class="ttdoc">This file handles application objects such as window and DirectX device.</div></div>
+<div class="ttc" id="a_graphics_pipeline_elements_8h_html"><div class="ttname"><a href="_graphics_pipeline_elements_8h.html">GraphicsPipelineElements.h</a></div><div class="ttdoc">This file handles elements of graphics pipeline state.</div></div>
+<div class="ttc" id="a_unique_ptr_8h_html"><div class="ttname"><a href="_unique_ptr_8h.html">UniquePtr.h</a></div><div class="ttdoc">This file handles unique pointer that can generate weak reference pointer.</div></div>
+<div class="ttc" id="a_utility_for_direct_x_8h_html"><div class="ttname"><a href="_utility_for_direct_x_8h.html">UtilityForDirectX.h</a></div><div class="ttdoc">This file defines utility functions that are useful for DirectX.</div></div>
+<div class="ttc" id="aclass_a_c_shader_html"><div class="ttname"><a href="class_a_c_shader.html">ACShader</a></div><div class="ttdoc">Abstract class for shaders</div><div class="ttdef"><b>Definition</b> Shader.h:58</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a04c25f76679ce8f550a18847a47baf80"><div class="ttname"><a href="class_a_c_shader.html#a04c25f76679ce8f550a18847a47baf80">ACShader::m_dynamicDescriptorRanges</a></div><div class="ttdeci">std::vector&lt; D3D12_DESCRIPTOR_RANGE &gt; m_dynamicDescriptorRanges</div><div class="ttdoc">Descriptor ranges for dynamic resources</div><div class="ttdef"><b>Definition</b> Shader.h:142</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a10546d3be3a805de1bad2305d935edcf"><div class="ttname"><a href="class_a_c_shader.html#a10546d3be3a805de1bad2305d935edcf">ACShader::~ACShader</a></div><div class="ttdeci">virtual ~ACShader()</div><div class="ttdoc">Destructor</div><div class="ttdef"><b>Definition</b> Shader.h:68</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a12346124ad581a80be950ec5627728e6"><div class="ttname"><a href="class_a_c_shader.html#a12346124ad581a80be950ec5627728e6">ACShader::m_csoData</a></div><div class="ttdeci">CUniquePtr&lt; std::byte[]&gt; m_csoData</div><div class="ttdoc">Read cso data</div><div class="ttdef"><b>Definition</b> Shader.h:148</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a22e95d3c6cadabc74dd39927d09c9b40"><div class="ttname"><a href="class_a_c_shader.html#a22e95d3c6cadabc74dd39927d09c9b40">ACShader::Load</a></div><div class="ttdeci">void Load(const std::string &amp;filePath)</div><div class="ttdoc">Loading shader files</div><div class="ttdef"><b>Definition</b> Shader.cpp:38</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a30f4f463c1830b9bc5c555966a4f5110"><div class="ttname"><a href="class_a_c_shader.html#a30f4f463c1830b9bc5c555966a4f5110">ACShader::m_dynamicNameToInfoMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, ShaderResourceInfo &gt; m_dynamicNameToInfoMap</div><div class="ttdoc">map to search information for shader resources (for dynamic resources)</div><div class="ttdef"><b>Definition</b> Shader.h:138</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a3dff83b5b5c3f43268fc6ddb631a8d6d"><div class="ttname"><a href="class_a_c_shader.html#a3dff83b5b5c3f43268fc6ddb631a8d6d">ACShader::LoadDerived</a></div><div class="ttdeci">virtual void LoadDerived(const Microsoft::WRL::ComPtr&lt; ID3D12ShaderReflection &gt; &amp;shaderReflection, const D3D12_SHADER_DESC &amp;shaderDesc)</div><div class="ttdoc">Processing in derived classes at load time</div><div class="ttdef"><b>Definition</b> Shader.h:114</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a40143c41b429430cbe9fcafb5a0757c6"><div class="ttname"><a href="class_a_c_shader.html#a40143c41b429430cbe9fcafb5a0757c6">ACShader::GetShaderType</a></div><div class="ttdeci">Utl::Dx::ShaderType GetShaderType()</div><div class="ttdoc">Get Shader type</div><div class="ttdef"><b>Definition</b> Shader.h:102</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a4e42bb59fda4dad6cd4333a5fc9d2e1c"><div class="ttname"><a href="class_a_c_shader.html#a4e42bb59fda4dad6cd4333a5fc9d2e1c">ACShader::m_shaderType</a></div><div class="ttdeci">Utl::Dx::ShaderType m_shaderType</div><div class="ttdoc">Shader type</div><div class="ttdef"><b>Definition</b> Shader.h:136</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a6f03f0dccc0b1358e572ef2b73723cef"><div class="ttname"><a href="class_a_c_shader.html#a6f03f0dccc0b1358e572ef2b73723cef">ACShader::m_samplers</a></div><div class="ttdeci">std::vector&lt; SamplerInfo &gt; m_samplers</div><div class="ttdoc">Sampler informations</div><div class="ttdef"><b>Definition</b> Shader.h:146</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a7a5bcc6b38522dcefadc153e96acd43e"><div class="ttname"><a href="class_a_c_shader.html#a7a5bcc6b38522dcefadc153e96acd43e">ACShader::m_staticNameToInfoMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, ShaderResourceInfo &gt; m_staticNameToInfoMap</div><div class="ttdoc">map to search information for shader resources (for static resources)</div><div class="ttdef"><b>Definition</b> Shader.h:140</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a805b28ea2d644bd0c71008e92735341c"><div class="ttname"><a href="class_a_c_shader.html#a805b28ea2d644bd0c71008e92735341c">ACShader::BindDynamicDescriptorTable</a></div><div class="ttdeci">void BindDynamicDescriptorTable(std::vector&lt; D3D12_ROOT_PARAMETER &gt; *descArray)</div><div class="ttdoc">Bind descriptor range and sampler to descriptor table for dynamic resources that need to be updated o...</div><div class="ttdef"><b>Definition</b> Shader.cpp:130</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_a9851f07f88fddd78c552b423a08ccea4"><div class="ttname"><a href="class_a_c_shader.html#a9851f07f88fddd78c552b423a08ccea4">ACShader::BindGPSO</a></div><div class="ttdeci">virtual void BindGPSO(D3D12_GRAPHICS_PIPELINE_STATE_DESC *gpso)=0</div><div class="ttdoc">Bind this shader to the graphics pipeline state</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_aa88b09a6b4bf61ea6c6f78adb2a3a268"><div class="ttname"><a href="class_a_c_shader.html#aa88b09a6b4bf61ea6c6f78adb2a3a268">ACShader::GetDescriptorNameToInfoDynamicMap</a></div><div class="ttdeci">const std::unordered_map&lt; std::string, ShaderResourceInfo &gt; &amp; GetDescriptorNameToInfoDynamicMap()</div><div class="ttdoc">Get map to search information for shader resources (for dynamic resources)</div><div class="ttdef"><b>Definition</b> Shader.h:104</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_aa949b574ab9a2f51f1462960ada1bbbd"><div class="ttname"><a href="class_a_c_shader.html#aa949b574ab9a2f51f1462960ada1bbbd">ACShader::m_fileSize</a></div><div class="ttdeci">size_t m_fileSize</div><div class="ttdoc">File size</div><div class="ttdef"><b>Definition</b> Shader.h:150</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_ac0ec46118f39451889bddbd81f25dad3"><div class="ttname"><a href="class_a_c_shader.html#ac0ec46118f39451889bddbd81f25dad3">ACShader::BindStaticDescriptorTable</a></div><div class="ttdeci">void BindStaticDescriptorTable(std::vector&lt; D3D12_ROOT_PARAMETER &gt; *descArray, std::vector&lt; D3D12_STATIC_SAMPLER_DESC &gt; *sampArray)</div><div class="ttdoc">Bind descriptor range and sampler to descriptor table for static resources that don't need to be upda...</div><div class="ttdef"><b>Definition</b> Shader.cpp:110</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_ac2401c4dbda95102004ba8263b8eb17e"><div class="ttname"><a href="class_a_c_shader.html#ac2401c4dbda95102004ba8263b8eb17e">ACShader::GetDescriptorNameToInfoStaticMap</a></div><div class="ttdeci">const std::unordered_map&lt; std::string, ShaderResourceInfo &gt; &amp; GetDescriptorNameToInfoStaticMap()</div><div class="ttdoc">Get map to search information for shader resources (for static resources)</div><div class="ttdef"><b>Definition</b> Shader.h:106</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_ad9a144b52fc3afcdc1e48aea65eac15d"><div class="ttname"><a href="class_a_c_shader.html#ad9a144b52fc3afcdc1e48aea65eac15d">ACShader::ACShader</a></div><div class="ttdeci">ACShader(Utl::Dx::ShaderType type)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> Shader.h:63</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_ae618c3a8ce89ebd021fa51ce0271b0cf"><div class="ttname"><a href="class_a_c_shader.html#ae618c3a8ce89ebd021fa51ce0271b0cf">ACShader::SetSampler</a></div><div class="ttdeci">void SetSampler(std::initializer_list&lt; SamplerTransmitter &gt; settings)</div><div class="ttdoc">Set sampler state</div><div class="ttdef"><b>Definition</b> Shader.cpp:143</div></div>
+<div class="ttc" id="aclass_a_c_shader_html_af10f1c62bb63008978a6b702d64cadd0"><div class="ttname"><a href="class_a_c_shader.html#af10f1c62bb63008978a6b702d64cadd0">ACShader::m_staticDescriptorRanges</a></div><div class="ttdeci">std::vector&lt; D3D12_DESCRIPTOR_RANGE &gt; m_staticDescriptorRanges</div><div class="ttdoc">Descriptor ranges for static resources</div><div class="ttdef"><b>Definition</b> Shader.h:144</div></div>
+<div class="ttc" id="aclass_c_array_smart_ptr_html"><div class="ttname"><a href="class_c_array_smart_ptr.html">CArraySmartPtr</a></div><div class="ttdoc">Class that wraps a smart pointer of array type. Internally has the size of an array</div><div class="ttdef"><b>Definition</b> WeakPtr.h:294</div></div>
+<div class="ttc" id="aclass_c_pixel_shader_html"><div class="ttname"><a href="class_c_pixel_shader.html">CPixelShader</a></div><div class="ttdoc">Pixel shader class</div><div class="ttdef"><b>Definition</b> Shader.h:191</div></div>
+<div class="ttc" id="aclass_c_pixel_shader_html_a7d5d5e7da49270b9189670d3db2f1e20"><div class="ttname"><a href="class_c_pixel_shader.html#a7d5d5e7da49270b9189670d3db2f1e20">CPixelShader::CPixelShader</a></div><div class="ttdeci">CPixelShader()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> Shader.h:196</div></div>
+<div class="ttc" id="aclass_c_pixel_shader_html_ab12d3e5b09e42a4019744a1645d36155"><div class="ttname"><a href="class_c_pixel_shader.html#ab12d3e5b09e42a4019744a1645d36155">CPixelShader::CPixelShader</a></div><div class="ttdeci">CPixelShader(const std::string &amp;filePath)</div><div class="ttdoc">Conatructor that loads shader file</div><div class="ttdef"><b>Definition</b> Shader.h:201</div></div>
+<div class="ttc" id="aclass_c_pixel_shader_html_ac1729b5d981ca2ea92c15e2867042987"><div class="ttname"><a href="class_c_pixel_shader.html#ac1729b5d981ca2ea92c15e2867042987">CPixelShader::BindGPSO</a></div><div class="ttdeci">void BindGPSO(D3D12_GRAPHICS_PIPELINE_STATE_DESC *gpso) override</div><div class="ttdoc">Bind this shader to the graphics pipeline state</div><div class="ttdef"><b>Definition</b> Shader.cpp:284</div></div>
+<div class="ttc" id="aclass_c_unique_ptr_html"><div class="ttname"><a href="class_c_unique_ptr.html">CUniquePtr</a></div><div class="ttdoc">Unique pointer that can't generate weak reference pointer</div><div class="ttdef"><b>Definition</b> UniquePtr.h:250</div></div>
+<div class="ttc" id="aclass_c_vertex_shader_html"><div class="ttname"><a href="class_c_vertex_shader.html">CVertexShader</a></div><div class="ttdoc">Vertex shader class</div><div class="ttdef"><b>Definition</b> Shader.h:154</div></div>
+<div class="ttc" id="aclass_c_vertex_shader_html_a443fbf8f90b9aa351e01821040dcb76b"><div class="ttname"><a href="class_c_vertex_shader.html#a443fbf8f90b9aa351e01821040dcb76b">CVertexShader::m_inputLayout</a></div><div class="ttdeci">CArrayUniquePtr&lt; D3D12_INPUT_ELEMENT_DESC &gt; m_inputLayout</div><div class="ttdoc">Input layout</div><div class="ttdef"><b>Definition</b> Shader.h:187</div></div>
+<div class="ttc" id="aclass_c_vertex_shader_html_a5dfb5056e422081d8a671f04ea6eebf3"><div class="ttname"><a href="class_c_vertex_shader.html#a5dfb5056e422081d8a671f04ea6eebf3">CVertexShader::CVertexShader</a></div><div class="ttdeci">CVertexShader()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> Shader.h:159</div></div>
+<div class="ttc" id="aclass_c_vertex_shader_html_a63ed78734d371d277bf6c44608eb58d3"><div class="ttname"><a href="class_c_vertex_shader.html#a63ed78734d371d277bf6c44608eb58d3">CVertexShader::LoadDerived</a></div><div class="ttdeci">void LoadDerived(const Microsoft::WRL::ComPtr&lt; ID3D12ShaderReflection &gt; &amp;shaderReflection, const D3D12_SHADER_DESC &amp;shaderDesc) override</div><div class="ttdoc">Unique Processing in vertex shader at load time</div><div class="ttdef"><b>Definition</b> Shader.cpp:242</div></div>
+<div class="ttc" id="aclass_c_vertex_shader_html_a6cc97016f9718a4f73003f1d923d9dca"><div class="ttname"><a href="class_c_vertex_shader.html#a6cc97016f9718a4f73003f1d923d9dca">CVertexShader::BindGPSO</a></div><div class="ttdeci">void BindGPSO(D3D12_GRAPHICS_PIPELINE_STATE_DESC *gpso) override</div><div class="ttdoc">Bind this shader to the graphics pipe line state</div><div class="ttdef"><b>Definition</b> Shader.cpp:231</div></div>
+<div class="ttc" id="aclass_c_vertex_shader_html_ad6142258763bdd2df3951034d55ca7b9"><div class="ttname"><a href="class_c_vertex_shader.html#ad6142258763bdd2df3951034d55ca7b9">CVertexShader::CVertexShader</a></div><div class="ttdeci">CVertexShader(const std::string &amp;filePath)</div><div class="ttdoc">Constructor that loads shader</div><div class="ttdef"><b>Definition</b> Shader.h:164</div></div>
+<div class="ttc" id="aclass_c_vertex_shader_html_afc89aa3404bdb9768acee8a1884e0ba0"><div class="ttname"><a href="class_c_vertex_shader.html#afc89aa3404bdb9768acee8a1884e0ba0">CVertexShader::~CVertexShader</a></div><div class="ttdeci">~CVertexShader() override</div><div class="ttdoc">Destructor</div><div class="ttdef"><b>Definition</b> Shader.cpp:222</div></div>
+<div class="ttc" id="anamespace_utl_1_1_dx_html_ac14e0010589229586f96555cceea1a5d"><div class="ttname"><a href="namespace_utl_1_1_dx.html#ac14e0010589229586f96555cceea1a5d">Utl::Dx::ShaderType</a></div><div class="ttdeci">ShaderType</div><div class="ttdoc">Shader type</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:60</div></div>
+<div class="ttc" id="anamespace_utl_html"><div class="ttname"><a href="namespace_utl.html">Utl</a></div><div class="ttdef"><b>Definition</b> Utility.h:24</div></div>
+<div class="ttc" id="astruct_gpso_1_1_sampler_state_setting_html"><div class="ttname"><a href="struct_gpso_1_1_sampler_state_setting.html">Gpso::SamplerStateSetting</a></div><div class="ttdoc">Sampler state setting</div><div class="ttdef"><b>Definition</b> GraphicsPipelineElements.h:26</div></div>
+<div class="ttc" id="astruct_sampler_info_html"><div class="ttname"><a href="struct_sampler_info.html">SamplerInfo</a></div><div class="ttdoc">Sampler information</div><div class="ttdef"><b>Definition</b> Shader.h:35</div></div>
+<div class="ttc" id="astruct_sampler_info_html_a841e2657113e0f5aaba6e8bbeb21a3f2"><div class="ttname"><a href="struct_sampler_info.html#a841e2657113e0f5aaba6e8bbeb21a3f2">SamplerInfo::sampler</a></div><div class="ttdeci">D3D12_STATIC_SAMPLER_DESC sampler</div><div class="ttdoc">Sampler descriptor</div><div class="ttdef"><b>Definition</b> Shader.h:37</div></div>
+<div class="ttc" id="astruct_sampler_info_html_a9a816e9d4a43fcc3eb66b827e0d52388"><div class="ttname"><a href="struct_sampler_info.html#a9a816e9d4a43fcc3eb66b827e0d52388">SamplerInfo::slotNum</a></div><div class="ttdeci">UINT slotNum</div><div class="ttdoc">Register number</div><div class="ttdef"><b>Definition</b> Shader.h:39</div></div>
+<div class="ttc" id="astruct_sampler_info_html_ac79ba793d8fdb30ccf5fd3b513342cb7"><div class="ttname"><a href="struct_sampler_info.html#ac79ba793d8fdb30ccf5fd3b513342cb7">SamplerInfo::spaceNum</a></div><div class="ttdeci">UINT spaceNum</div><div class="ttdoc">Space number</div><div class="ttdef"><b>Definition</b> Shader.h:41</div></div>
+<div class="ttc" id="astruct_sampler_info_html_af51324c704aafbf07de98795119c22d7"><div class="ttname"><a href="struct_sampler_info.html#af51324c704aafbf07de98795119c22d7">SamplerInfo::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Variable name in hlsl</div><div class="ttdef"><b>Definition</b> Shader.h:43</div></div>
+<div class="ttc" id="astruct_sampler_transmitter_html"><div class="ttname"><a href="struct_sampler_transmitter.html">SamplerTransmitter</a></div><div class="ttdoc">To send sampler state to shader</div><div class="ttdef"><b>Definition</b> Shader.h:18</div></div>
+<div class="ttc" id="astruct_sampler_transmitter_html_a05648d53e3a1082d92daf43129320956"><div class="ttname"><a href="struct_sampler_transmitter.html#a05648d53e3a1082d92daf43129320956">SamplerTransmitter::SamplerTransmitter</a></div><div class="ttdeci">SamplerTransmitter(const Gpso::SamplerStateSetting &amp;setting, const std::string &amp;name)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> Shader.h:28</div></div>
+<div class="ttc" id="astruct_sampler_transmitter_html_a23320992c3c1054923d55cf29e738fd0"><div class="ttname"><a href="struct_sampler_transmitter.html#a23320992c3c1054923d55cf29e738fd0">SamplerTransmitter::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Variable name in hlsl</div><div class="ttdef"><b>Definition</b> Shader.h:22</div></div>
+<div class="ttc" id="astruct_sampler_transmitter_html_a89e4d112f28ecbbd5200ee0a7e08b309"><div class="ttname"><a href="struct_sampler_transmitter.html#a89e4d112f28ecbbd5200ee0a7e08b309">SamplerTransmitter::setting</a></div><div class="ttdeci">Gpso::SamplerStateSetting setting</div><div class="ttdoc">Sampler state Setting</div><div class="ttdef"><b>Definition</b> Shader.h:20</div></div>
+<div class="ttc" id="astruct_shader_resource_info_html"><div class="ttname"><a href="struct_shader_resource_info.html">ShaderResourceInfo</a></div><div class="ttdoc">Information for shader resource</div><div class="ttdef"><b>Definition</b> Shader.h:47</div></div>
+<div class="ttc" id="astruct_shader_resource_info_html_a290e9f719b99c7bde084b5a09e8878f7"><div class="ttname"><a href="struct_shader_resource_info.html#a290e9f719b99c7bde084b5a09e8878f7">ShaderResourceInfo::index</a></div><div class="ttdeci">UINT index</div><div class="ttdoc">index by descriptor range</div><div class="ttdef"><b>Definition</b> Shader.h:51</div></div>
+<div class="ttc" id="astruct_shader_resource_info_html_a3499346f4df29922984e6f4d9647758a"><div class="ttname"><a href="struct_shader_resource_info.html#a3499346f4df29922984e6f4d9647758a">ShaderResourceInfo::type</a></div><div class="ttdeci">_D3D_SHADER_INPUT_TYPE type</div><div class="ttdoc">Resoruce type</div><div class="ttdef"><b>Definition</b> Shader.h:49</div></div>
+<div class="ttc" id="astruct_shader_resource_info_html_afcc5ae5d4527cec9d87b3cd7695fb68a"><div class="ttname"><a href="struct_shader_resource_info.html#afcc5ae5d4527cec9d87b3cd7695fb68a">ShaderResourceInfo::ShaderResourceInfo</a></div><div class="ttdeci">ShaderResourceInfo(_D3D_SHADER_INPUT_TYPE type, UINT index)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> Shader.h:54</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

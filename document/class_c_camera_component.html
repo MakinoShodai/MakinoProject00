@@ -1,0 +1,1098 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CCameraComponent クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_camera_component-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CCameraComponent クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Camera component  
+ <a href="class_c_camera_component.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_camera_8h_source.html">Camera.h</a>&gt;</code></p>
+<div class="dynheader">
+CCameraComponent の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_component__inherit__graph.png" border="0" usemap="#a_c_camera_component_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_camera_component_inherit__map" id="a_c_camera_component_inherit__map">
+<area shape="rect" title="Camera component" alt="" coords="11,245,152,272"/>
+<area shape="rect" href="class_a_c_component.html" title="This is abstract class for component used in update processing" alt="" coords="29,171,134,197"/>
+<area shape="poly" title=" " alt="" coords="84,213,84,245,79,245,79,213"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="5,80,158,123"/>
+<area shape="poly" title=" " alt="" coords="84,139,84,170,79,170,79,139"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="17,5,146,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,84,80,79,80,79,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CCameraComponent 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_component__coll__graph.png" border="0" usemap="#a_c_camera_component_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_camera_component_coll__map" id="a_c_camera_component_coll__map">
+<area shape="rect" title="Camera component" alt="" coords="155,264,296,291"/>
+<area shape="rect" href="class_a_c_component.html" title="This is abstract class for component used in update processing" alt="" coords="173,188,278,215"/>
+<area shape="poly" title=" " alt="" coords="228,230,228,264,223,264,223,230"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="5,81,158,124"/>
+<area shape="poly" title=" " alt="" coords="127,131,208,185,205,190,124,135"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="17,5,146,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,84,81,79,81,79,48"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="181,89,369,116"/>
+<area shape="poly" title=" " alt="" coords="264,131,234,189,229,187,259,129"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa7ddd20138ef2bf344a74a017950c17f" id="r_aa7ddd20138ef2bf344a74a017950c17f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#aa7ddd20138ef2bf344a74a017950c17f">CCameraComponent</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner, std::wstring cameraName, bool isFocusMode=false)</td></tr>
+<tr class="memdesc:aa7ddd20138ef2bf344a74a017950c17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:aa7ddd20138ef2bf344a74a017950c17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a5567d296aef6d7e1705257ae94161" id="r_ac7a5567d296aef6d7e1705257ae94161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#ac7a5567d296aef6d7e1705257ae94161">Start</a> () override</td></tr>
+<tr class="memdesc:ac7a5567d296aef6d7e1705257ae94161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing for the first update frame  <br /></td></tr>
+<tr class="separator:ac7a5567d296aef6d7e1705257ae94161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312614c976b29c7272d6c7c71b65ce8f" id="r_a312614c976b29c7272d6c7c71b65ce8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a312614c976b29c7272d6c7c71b65ce8f">OnDestroy</a> () override</td></tr>
+<tr class="memdesc:a312614c976b29c7272d6c7c71b65ce8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy processing  <br /></td></tr>
+<tr class="separator:a312614c976b29c7272d6c7c71b65ce8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5a692a13628d280d1c95a82fbf2fd29" id="r_aa5a692a13628d280d1c95a82fbf2fd29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#aa5a692a13628d280d1c95a82fbf2fd29">ApplyRotation</a> ()</td></tr>
+<tr class="memdesc:aa5a692a13628d280d1c95a82fbf2fd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the rotation of this gameobject to this look direction vector  <br /></td></tr>
+<tr class="separator:aa5a692a13628d280d1c95a82fbf2fd29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa4560e0c329083f80aaa8a7a6f553e" id="r_abfa4560e0c329083f80aaa8a7a6f553e"><td class="memItemLeft" align="right" valign="top">DirectX::XMMATRIX&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#abfa4560e0c329083f80aaa8a7a6f553e">GenerateViewMatrix</a> ()</td></tr>
+<tr class="memdesc:abfa4560e0c329083f80aaa8a7a6f553e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a view matrix  <br /></td></tr>
+<tr class="separator:abfa4560e0c329083f80aaa8a7a6f553e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5be76b0277d839421be8594f9a604cb" id="r_af5be76b0277d839421be8594f9a604cb"><td class="memItemLeft" align="right" valign="top">DirectX::XMMATRIX&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#af5be76b0277d839421be8594f9a604cb">GenerateProjectionMatrix</a> ()</td></tr>
+<tr class="memdesc:af5be76b0277d839421be8594f9a604cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a projection matrix  <br /></td></tr>
+<tr class="separator:af5be76b0277d839421be8594f9a604cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416f1458b04bcd673fc5c68b5c1df927" id="r_a416f1458b04bcd673fc5c68b5c1df927"><td class="memItemLeft" align="right" valign="top">DirectX::XMFLOAT4X4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a416f1458b04bcd673fc5c68b5c1df927">GenerateViewProjectionMatrix</a> ()</td></tr>
+<tr class="memdesc:a416f1458b04bcd673fc5c68b5c1df927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a view projection matrix  <br /></td></tr>
+<tr class="separator:a416f1458b04bcd673fc5c68b5c1df927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74a5ff6bafa790d01f32f2a97d9c1de" id="r_ae74a5ff6bafa790d01f32f2a97d9c1de"><td class="memItemLeft" align="right" valign="top">const std::wstring &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#ae74a5ff6bafa790d01f32f2a97d9c1de">GetName</a> () const</td></tr>
+<tr class="memdesc:ae74a5ff6bafa790d01f32f2a97d9c1de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of this camera  <br /></td></tr>
+<tr class="separator:ae74a5ff6bafa790d01f32f2a97d9c1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3be26917cd2e41c078400250b86a91" id="r_a0f3be26917cd2e41c078400250b86a91"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a0f3be26917cd2e41c078400250b86a91">GetPriority</a> () const</td></tr>
+<tr class="memdesc:a0f3be26917cd2e41c078400250b86a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the priority of this camera  <br /></td></tr>
+<tr class="separator:a0f3be26917cd2e41c078400250b86a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36314c77308f7f991dd55bbc34402c5e" id="r_a36314c77308f7f991dd55bbc34402c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a36314c77308f7f991dd55bbc34402c5e">SetPriority</a> (int priority)</td></tr>
+<tr class="memdesc:a36314c77308f7f991dd55bbc34402c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a priority to this camera  <br /></td></tr>
+<tr class="separator:a36314c77308f7f991dd55bbc34402c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afebd4422fee6c0f6eb58130c71621940" id="r_afebd4422fee6c0f6eb58130c71621940"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#afebd4422fee6c0f6eb58130c71621940">GetFocus</a> () const</td></tr>
+<tr class="memdesc:afebd4422fee6c0f6eb58130c71621940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the focus position if in focus mode, otherwise, look direction vector  <br /></td></tr>
+<tr class="separator:afebd4422fee6c0f6eb58130c71621940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834b9be794ebd020bda154cd869eaf94" id="r_a834b9be794ebd020bda154cd869eaf94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a834b9be794ebd020bda154cd869eaf94">GetLookDir</a> () const</td></tr>
+<tr class="memdesc:a834b9be794ebd020bda154cd869eaf94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain look direction vector regardless of focus mode  <br /></td></tr>
+<tr class="separator:a834b9be794ebd020bda154cd869eaf94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32507e305cb817c47492ace915d59912" id="r_a32507e305cb817c47492ace915d59912"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a32507e305cb817c47492ace915d59912">SetFocus</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;focus)</td></tr>
+<tr class="memdesc:a32507e305cb817c47492ace915d59912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a focus position. Value will not change unless in focus mode  <br /></td></tr>
+<tr class="separator:a32507e305cb817c47492ace915d59912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82192fcad999234ec1f71bc9a342e5c" id="r_aa82192fcad999234ec1f71bc9a342e5c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#aa82192fcad999234ec1f71bc9a342e5c">GetUp</a> () const</td></tr>
+<tr class="memdesc:aa82192fcad999234ec1f71bc9a342e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the up vector  <br /></td></tr>
+<tr class="separator:aa82192fcad999234ec1f71bc9a342e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a7b0716ccb2a195c091ee9a853831bd" id="r_a3a7b0716ccb2a195c091ee9a853831bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a3a7b0716ccb2a195c091ee9a853831bd">SetUp</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;up)</td></tr>
+<tr class="memdesc:a3a7b0716ccb2a195c091ee9a853831bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a up vector  <br /></td></tr>
+<tr class="separator:a3a7b0716ccb2a195c091ee9a853831bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace7d2b6e60be4d2706874909b8717ae5" id="r_ace7d2b6e60be4d2706874909b8717ae5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#ace7d2b6e60be4d2706874909b8717ae5">GetFovAngleY</a> () const</td></tr>
+<tr class="memdesc:ace7d2b6e60be4d2706874909b8717ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the fov angle Y  <br /></td></tr>
+<tr class="separator:ace7d2b6e60be4d2706874909b8717ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40579dcec1edec1a6923ab193d99ef97" id="r_a40579dcec1edec1a6923ab193d99ef97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a40579dcec1edec1a6923ab193d99ef97">SetFovAngleY</a> (float fovAngleY)</td></tr>
+<tr class="memdesc:a40579dcec1edec1a6923ab193d99ef97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a fov angle Y  <br /></td></tr>
+<tr class="separator:a40579dcec1edec1a6923ab193d99ef97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36881289fb0b61bfa4c6334dfb95eafa" id="r_a36881289fb0b61bfa4c6334dfb95eafa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a36881289fb0b61bfa4c6334dfb95eafa">GetAspect</a> () const</td></tr>
+<tr class="memdesc:a36881289fb0b61bfa4c6334dfb95eafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the aspect ratio  <br /></td></tr>
+<tr class="separator:a36881289fb0b61bfa4c6334dfb95eafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35647146e593d123c3319ca9f87ca8b7" id="r_a35647146e593d123c3319ca9f87ca8b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a35647146e593d123c3319ca9f87ca8b7">SetAspect</a> (float aspect)</td></tr>
+<tr class="memdesc:a35647146e593d123c3319ca9f87ca8b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an aspect ratio  <br /></td></tr>
+<tr class="separator:a35647146e593d123c3319ca9f87ca8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeece690b4a3d380df9e05701242dfdf5" id="r_aeece690b4a3d380df9e05701242dfdf5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#aeece690b4a3d380df9e05701242dfdf5">GetNear</a> () const</td></tr>
+<tr class="memdesc:aeece690b4a3d380df9e05701242dfdf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the near clipping value  <br /></td></tr>
+<tr class="separator:aeece690b4a3d380df9e05701242dfdf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e59f2fd15a5d8a2a9db19e077fdec6f" id="r_a1e59f2fd15a5d8a2a9db19e077fdec6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a1e59f2fd15a5d8a2a9db19e077fdec6f">SetNear</a> (float nearValue)</td></tr>
+<tr class="memdesc:a1e59f2fd15a5d8a2a9db19e077fdec6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a near clipping value  <br /></td></tr>
+<tr class="separator:a1e59f2fd15a5d8a2a9db19e077fdec6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d31f86bc9b672c413689d7e9e8c196" id="r_a77d31f86bc9b672c413689d7e9e8c196"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a77d31f86bc9b672c413689d7e9e8c196">GetFar</a> () const</td></tr>
+<tr class="memdesc:a77d31f86bc9b672c413689d7e9e8c196"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the far clipping value  <br /></td></tr>
+<tr class="separator:a77d31f86bc9b672c413689d7e9e8c196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11398674544cb73a5224c757a54a819" id="r_af11398674544cb73a5224c757a54a819"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#af11398674544cb73a5224c757a54a819">SetFar</a> (float farValue)</td></tr>
+<tr class="memdesc:af11398674544cb73a5224c757a54a819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a far clipping value  <br /></td></tr>
+<tr class="separator:af11398674544cb73a5224c757a54a819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bddfb4e0f26cda9fde1a6fb42e87d5d" id="r_a4bddfb4e0f26cda9fde1a6fb42e87d5d"><td class="memItemLeft" align="right" valign="top">const DirectX::XMMATRIX &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_component.html#a4bddfb4e0f26cda9fde1a6fb42e87d5d">GetRotationMatrix</a> ()</td></tr>
+<tr class="memdesc:a4bddfb4e0f26cda9fde1a6fb42e87d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get matrix with the same rotation as the view matrix of this camera  <br /></td></tr>
+<tr class="separator:a4bddfb4e0f26cda9fde1a6fb42e87d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_component.html">ACComponent</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component" id="r_a9b2b2d42737a1fe9bb397af5927ff322"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a9b2b2d42737a1fe9bb397af5927ff322">ACComponent</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner)</td></tr>
+<tr class="memdesc:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f1dbaf0bb679d5f41f5541d39f80d9 inherit pub_methods_class_a_c_component" id="r_a42f1dbaf0bb679d5f41f5541d39f80d9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a42f1dbaf0bb679d5f41f5541d39f80d9">Awake</a> ()</td></tr>
+<tr class="memdesc:a42f1dbaf0bb679d5f41f5541d39f80d9 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is added to an object  <br /></td></tr>
+<tr class="separator:a42f1dbaf0bb679d5f41f5541d39f80d9 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add7411781140bec2e38b0fe1d9bbb35a inherit pub_methods_class_a_c_component" id="r_add7411781140bec2e38b0fe1d9bbb35a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#add7411781140bec2e38b0fe1d9bbb35a">Update</a> ()</td></tr>
+<tr class="memdesc:add7411781140bec2e38b0fe1d9bbb35a inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update processing  <br /></td></tr>
+<tr class="separator:add7411781140bec2e38b0fe1d9bbb35a inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component" id="r_a642abc9ed76961dd974d8934485e8055"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a642abc9ed76961dd974d8934485e8055">PrePhysicsUpdate</a> ()</td></tr>
+<tr class="memdesc:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-update process for physics simulation  <br /></td></tr>
+<tr class="separator:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component" id="r_a9f7ad72915aa2e6736bf55e39309d81e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a9f7ad72915aa2e6736bf55e39309d81e">OnEnable</a> ()</td></tr>
+<tr class="memdesc:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is enabled  <br /></td></tr>
+<tr class="separator:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d54222d4b8efabdc66f145c3531da0 inherit pub_methods_class_a_c_component" id="r_a02d54222d4b8efabdc66f145c3531da0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a02d54222d4b8efabdc66f145c3531da0">OnDisable</a> ()</td></tr>
+<tr class="memdesc:a02d54222d4b8efabdc66f145c3531da0 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is disabled  <br /></td></tr>
+<tr class="separator:a02d54222d4b8efabdc66f145c3531da0 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component" id="r_aaed0e5be88178643fba5329ab9b708a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#aaed0e5be88178643fba5329ab9b708a7">OnCollisionBegin</a> (const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;opponent)</td></tr>
+<tr class="memdesc:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when collision begins  <br /></td></tr>
+<tr class="separator:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component" id="r_a21ed1397839942770494c5ab8e96316b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a21ed1397839942770494c5ab8e96316b">OnCollisionHit</a> (const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;opponent)</td></tr>
+<tr class="memdesc:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing during collision  <br /></td></tr>
+<tr class="separator:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component" id="r_a4f1e621bcb3400e0d38f73b758fc0def"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a4f1e621bcb3400e0d38f73b758fc0def">OnCollisionEnd</a> (const <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt; &amp;opponent)</td></tr>
+<tr class="memdesc:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when collision ends  <br /></td></tr>
+<tr class="separator:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component" id="r_ab7d85ad6e45f8b12776d219d27e52210"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ab7d85ad6e45f8b12776d219d27e52210">GetGameObject</a> ()</td></tr>
+<tr class="memdesc:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that this component has  <br /></td></tr>
+<tr class="separator:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component" id="r_ab8f9b780e9c36420c4180c2de84f9733"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ab8f9b780e9c36420c4180c2de84f9733">GetGameObject</a> () const</td></tr>
+<tr class="memdesc:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that this component has  <br /></td></tr>
+<tr class="separator:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component" id="r_a73c656cb09cfd57d43bd4ebdbd992091"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091">GetTransform</a> () const</td></tr>
+<tr class="memdesc:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get transform of the object  <br /></td></tr>
+<tr class="separator:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component" id="r_a1677e72c01ba17b59662de344623cf18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18">GetScene</a> ()</td></tr>
+<tr class="memdesc:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scene where this component exists <br  />
+  <br /></td></tr>
+<tr class="separator:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component" id="r_a1311a24d05c9ba046f11411fc300fa9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1311a24d05c9ba046f11411fc300fa9c">GetScene</a> () const</td></tr>
+<tr class="memdesc:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scene where this component exists <br  />
+  <br /></td></tr>
+<tr class="separator:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component" id="r_a7732e25a7799100e9b39be4f2ab1c4c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_callback_system.html">CCallbackSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a7732e25a7799100e9b39be4f2ab1c4c0">GetCallbackSystem</a> ()</td></tr>
+<tr class="memdesc:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the callback system that the gameobject has  <br /></td></tr>
+<tr class="separator:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component" id="r_ac9afe74cc73092c13a933bf7b82d8fa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ac9afe74cc73092c13a933bf7b82d8fa2">SetIsActive</a> (bool isActive)</td></tr>
+<tr class="memdesc:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the active flag of this component  <br /></td></tr>
+<tr class="separator:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component" id="r_ad7205261ebda783caeedc9f1c210c2f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ad7205261ebda783caeedc9f1c210c2f4">IsActiveSelf</a> () const</td></tr>
+<tr class="memdesc:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component itself active?  <br /></td></tr>
+<tr class="separator:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component" id="r_ad2aa36309aaee515ea36a1765c9b0f97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ad2aa36309aaee515ea36a1765c9b0f97">IsActiveOverall</a> () const</td></tr>
+<tr class="memdesc:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component itself and the game object that owns it active?  <br /></td></tr>
+<tr class="separator:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis&lt; ACComponent &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_ab2905432621e2737bc3f95cb9101a8e2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#ab2905432621e2737bc3f95cb9101a8e2">~ACWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="memdesc:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_aa549f0fbf364d84137496a7eed607bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_component.html">ACComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#aa549f0fbf364d84137496a7eed607bb5">WeakFromThis</a> ()</td></tr>
+<tr class="memdesc:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer from this class  <br /></td></tr>
+<tr class="separator:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_i_weak_ptr_from_this.html">IWeakPtrFromThis</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this" id="r_a5a3acc569a8076065b930bc52a87255c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_weak_ptr_from_this.html#a5a3acc569a8076065b930bc52a87255c">~IWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="separator:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_component.html">ACComponent</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component" id="r_a350f4f03d8f125df479f4bdd6603aa32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">m_gameObj</a></td></tr>
+<tr class="memdesc:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game object that is the owner of this component  <br /></td></tr>
+<tr class="separator:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component" id="r_a1b75230266b37261b0078008cfacab2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1b75230266b37261b0078008cfacab2a">m_isActive</a></td></tr>
+<tr class="memdesc:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component active?  <br /></td></tr>
+<tr class="separator:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Camera component </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="aa7ddd20138ef2bf344a74a017950c17f" name="aa7ddd20138ef2bf344a74a017950c17f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7ddd20138ef2bf344a74a017950c17f">&#9670;&#160;</a></span>CCameraComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CCameraComponent::CCameraComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html">CGameObject</a> *&#160;</td>
+          <td class="paramname"><em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::wstring&#160;</td>
+          <td class="paramname"><em>cameraName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isFocusMode</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">owner</td><td>Game object that is the owner of this component </td></tr>
+    <tr><td class="paramname">cameraName</td><td>Name of this camera </td></tr>
+    <tr><td class="paramname">isFocusMode</td><td>True if focus position is handled, false if viewpoint direction vector is handled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aa5a692a13628d280d1c95a82fbf2fd29" name="aa5a692a13628d280d1c95a82fbf2fd29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5a692a13628d280d1c95a82fbf2fd29">&#9670;&#160;</a></span>ApplyRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraComponent::ApplyRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply the rotation of this gameobject to this look direction vector </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_component_aa5a692a13628d280d1c95a82fbf2fd29_cgraph.png" border="0" usemap="#aclass_c_camera_component_aa5a692a13628d280d1c95a82fbf2fd29_cgraph" alt=""/></div>
+<map name="aclass_c_camera_component_aa5a692a13628d280d1c95a82fbf2fd29_cgraph" id="aclass_c_camera_component_aa5a692a13628d280d1c95a82fbf2fd29_cgraph">
+<area shape="rect" title="Apply the rotation of this gameobject to this look direction vector" alt="" coords="5,284,236,311"/>
+<area shape="rect" href="class_c_camera_component.html#abfa4560e0c329083f80aaa8a7a6f553e" title="Generate a view matrix" alt="" coords="284,124,486,167"/>
+<area shape="poly" title=" " alt="" coords="144,281,331,173,334,177,147,286"/>
+<area shape="rect" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091" title="Get transform of the object" alt="" coords="534,5,725,32"/>
+<area shape="poly" title=" " alt="" coords="127,282,150,247,185,201,229,152,282,110,339,80,400,57,461,40,518,29,519,34,463,46,402,62,342,85,285,114,233,156,189,204,154,250,132,285"/>
+<area shape="rect" href="struct_vector.html#a5fa1e63b510986c5a7c6a933b028c505" title="Normalize this vector" alt="" coords="567,563,692,589"/>
+<area shape="poly" title=" " alt="" coords="138,309,200,365,241,399,285,430,352,470,406,498,535,548,557,555,555,560,533,553,403,503,349,475,282,434,238,403,196,369,134,313"/>
+<area shape="rect" href="namespace_utl_1_1_math.html#aede0c3af4aa312e36d5374d1f9cb7b34" title="Calculate quaternion to rotate vector A to vector B" alt="" coords="299,377,471,420"/>
+<area shape="poly" title=" " alt="" coords="159,309,314,369,312,374,157,314"/>
+<area shape="poly" title=" " alt="" coords="414,121,468,85,533,48,565,35,567,40,535,53,471,89,417,126"/>
+<area shape="rect" href="namespace_utl_1_1_math.html#a0253ec4cae086cc618dacf75d66e3256" title="Are the two 3 dimensional vectors almost the same value?" alt="" coords="543,107,716,133"/>
+<area shape="poly" title=" " alt="" coords="486,132,527,128,528,133,487,137"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="791,259,865,285"/>
+<area shape="poly" title=" " alt="" coords="411,165,465,207,499,228,535,244,598,261,663,270,724,273,775,273,775,278,724,278,662,275,597,266,533,249,497,233,462,212,408,169"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="791,56,865,83"/>
+<area shape="poly" title=" " alt="" coords="439,121,484,105,533,92,598,81,663,74,775,67,775,73,664,79,599,86,535,97,486,110,441,126"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="791,157,865,184"/>
+<area shape="poly" title=" " alt="" coords="486,148,775,165,775,170,486,154"/>
+<area shape="rect" href="namespace_utl.html#ae262045064e2482bc0c092fba1f45a21" title="Check if two values are equal" alt="" coords="784,107,872,133"/>
+<area shape="poly" title=" " alt="" coords="717,117,768,117,768,123,717,123"/>
+<area shape="poly" title=" " alt="" coords="651,132,727,194,750,221,775,245,781,249,778,253,772,249,747,224,723,198,648,136"/>
+<area shape="poly" title=" " alt="" coords="684,103,775,80,776,85,686,109"/>
+<area shape="poly" title=" " alt="" coords="686,131,776,155,775,160,684,137"/>
+<area shape="rect" href="struct_vector.html#a2a17b2b690d93fe77c6acce69e1fb17b" title="Calculate vector length" alt="" coords="775,563,881,589"/>
+<area shape="poly" title=" " alt="" coords="693,573,759,573,759,579,693,579"/>
+<area shape="rect" href="struct_vector.html#a1422d1d25bdd05ed068c786f9c45fcd3" title="Calculate vector length squared" alt="" coords="931,537,1053,564"/>
+<area shape="poly" title=" " alt="" coords="881,565,914,560,915,565,882,570"/>
+<area shape="rect" href="struct_vector.html#a8ab815e67c75162daf574aac3c7597e0" title="Dot product" alt="" coords="1101,512,1188,539"/>
+<area shape="poly" title=" " alt="" coords="1053,538,1085,532,1086,538,1054,543"/>
+<area shape="poly" title=" " alt="" coords="446,374,533,345,664,309,775,281,776,287,665,314,535,351,447,379"/>
+<area shape="poly" title=" " alt="" coords="407,418,472,491,507,526,535,548,554,557,551,562,533,553,504,530,468,495,403,422"/>
+<area shape="poly" title=" " alt="" coords="442,418,535,447,646,466,800,486,1086,517,1085,522,800,491,645,471,533,452,440,423"/>
+<area shape="rect" href="namespace_utl.html#ab5e81dea424788482339039bbdd5d8bc" title="Clamp a value in min to max" alt="" coords="589,360,671,387"/>
+<area shape="poly" title=" " alt="" coords="471,387,573,376,574,382,472,392"/>
+<area shape="rect" href="struct_vector.html#ae05ab43f4df8564f239e37a623545df3" title="Cross product for 2 dimensions" alt="" coords="579,411,680,437"/>
+<area shape="poly" title=" " alt="" coords="472,405,564,415,563,420,471,410"/>
+<area shape="rect" href="struct_vector.html#ac6645f7df485a2cd90507a989c785370" title="Get normalized this vector" alt="" coords="557,512,703,539"/>
+<area shape="poly" title=" " alt="" coords="417,418,471,455,535,491,567,504,565,509,533,496,468,459,414,423"/>
+<area shape="rect" href="namespace_utl_1_1_math.html#a401a8d9a9acf0e84506908655ab1f381" title="Simple judgment of all elements of the unit vector are 0 or not" alt="" coords="536,208,724,235"/>
+<area shape="poly" title=" " alt="" coords="414,375,596,242,599,246,417,379"/>
+<area shape="poly" title=" " alt="" coords="686,537,760,556,759,561,684,542"/>
+<area shape="rect" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997" title="Get vector with all 0 values" alt="" coords="782,512,874,539"/>
+<area shape="poly" title=" " alt="" coords="703,523,766,523,766,528,703,528"/>
+<area shape="poly" title=" " alt="" coords="686,233,776,256,775,261,684,238"/>
+<area shape="poly" title=" " alt="" coords="648,205,723,143,747,117,772,93,778,88,781,93,775,97,750,121,727,147,651,210"/>
+<area shape="poly" title=" " alt="" coords="684,205,775,181,776,187,686,210"/>
+<area shape="rect" href="namespace_utl.html#ac7bd30f0e57ed421e2db52acf38e8a33" title="Check if the value of Float is equal to 0" alt="" coords="773,208,883,235"/>
+<area shape="poly" title=" " alt="" coords="724,219,758,219,758,224,724,224"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af5be76b0277d839421be8594f9a604cb" name="af5be76b0277d839421be8594f9a604cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5be76b0277d839421be8594f9a604cb">&#9670;&#160;</a></span>GenerateProjectionMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMMATRIX CCameraComponent::GenerateProjectionMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a projection matrix </p>
+<dl class="section return"><dt>戻り値</dt><dd>Projection matrix </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_component_af5be76b0277d839421be8594f9a604cb_icgraph.png" border="0" usemap="#aclass_c_camera_component_af5be76b0277d839421be8594f9a604cb_icgraph" alt=""/></div>
+<map name="aclass_c_camera_component_af5be76b0277d839421be8594f9a604cb_icgraph" id="aclass_c_camera_component_af5be76b0277d839421be8594f9a604cb_icgraph">
+<area shape="rect" title="Generate a projection matrix" alt="" coords="256,39,458,81"/>
+<area shape="rect" href="class_c_light_v_p_calculator.html#ae6a4472d7b512277a57110629a5412dd" title="Calculate all light view projection matrices and return it" alt="" coords="39,5,174,48"/>
+<area shape="poly" title=" " alt="" coords="240,47,174,38,175,33,241,42"/>
+<area shape="rect" href="class_c_camera_component.html#a416f1458b04bcd673fc5c68b5c1df927" title="Generate a view projection matrix" alt="" coords="5,72,208,115"/>
+<area shape="poly" title=" " alt="" coords="240,78,208,83,208,77,240,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abfa4560e0c329083f80aaa8a7a6f553e" name="abfa4560e0c329083f80aaa8a7a6f553e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfa4560e0c329083f80aaa8a7a6f553e">&#9670;&#160;</a></span>GenerateViewMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMMATRIX CCameraComponent::GenerateViewMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a view matrix </p>
+<dl class="section return"><dt>戻り値</dt><dd>View matrix </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_component_abfa4560e0c329083f80aaa8a7a6f553e_cgraph.png" border="0" usemap="#aclass_c_camera_component_abfa4560e0c329083f80aaa8a7a6f553e_cgraph" alt=""/></div>
+<map name="aclass_c_camera_component_abfa4560e0c329083f80aaa8a7a6f553e_cgraph" id="aclass_c_camera_component_abfa4560e0c329083f80aaa8a7a6f553e_cgraph">
+<area shape="rect" title="Generate a view matrix" alt="" coords="5,99,208,141"/>
+<area shape="rect" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091" title="Get transform of the object" alt="" coords="256,5,447,32"/>
+<area shape="poly" title=" " alt="" coords="150,96,255,48,290,35,292,40,257,53,152,100"/>
+<area shape="rect" href="namespace_utl_1_1_math.html#a0253ec4cae086cc618dacf75d66e3256" title="Are the two 3 dimensional vectors almost the same value?" alt="" coords="265,107,438,133"/>
+<area shape="poly" title=" " alt="" coords="208,117,249,117,249,123,208,123"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="502,56,576,83"/>
+<area shape="poly" title=" " alt="" coords="208,99,255,92,380,79,486,70,487,75,380,84,256,97,209,104"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="502,157,576,184"/>
+<area shape="poly" title=" " alt="" coords="209,136,256,143,380,156,487,165,486,170,380,161,255,148,208,141"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="502,208,576,235"/>
+<area shape="poly" title=" " alt="" coords="166,139,256,168,380,195,487,212,486,217,379,200,255,173,164,144"/>
+<area shape="rect" href="namespace_utl.html#ae262045064e2482bc0c092fba1f45a21" title="Check if two values are equal" alt="" coords="495,107,583,133"/>
+<area shape="poly" title=" " alt="" coords="438,117,479,117,479,123,438,123"/>
+<area shape="poly" title=" " alt="" coords="403,103,486,81,488,86,404,109"/>
+<area shape="poly" title=" " alt="" coords="404,131,488,154,486,159,403,137"/>
+<area shape="poly" title=" " alt="" coords="379,132,501,198,498,203,377,136"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_component_abfa4560e0c329083f80aaa8a7a6f553e_icgraph.png" border="0" usemap="#aclass_c_camera_component_abfa4560e0c329083f80aaa8a7a6f553e_icgraph" alt=""/></div>
+<map name="aclass_c_camera_component_abfa4560e0c329083f80aaa8a7a6f553e_icgraph" id="aclass_c_camera_component_abfa4560e0c329083f80aaa8a7a6f553e_icgraph">
+<area shape="rect" title="Generate a view matrix" alt="" coords="284,56,486,99"/>
+<area shape="rect" href="class_c_camera_component.html#aa5a692a13628d280d1c95a82fbf2fd29" title="Apply the rotation of this gameobject to this look direction vector" alt="" coords="5,5,236,32"/>
+<area shape="poly" title=" " alt="" coords="271,55,235,47,184,35,185,30,236,41,272,49"/>
+<area shape="rect" href="class_c_light_v_p_calculator.html#ae6a4472d7b512277a57110629a5412dd" title="Calculate all light view projection matrices and return it" alt="" coords="53,56,188,99"/>
+<area shape="poly" title=" " alt="" coords="268,80,188,80,188,75,268,75"/>
+<area shape="rect" href="class_c_camera_component.html#a416f1458b04bcd673fc5c68b5c1df927" title="Generate a view projection matrix" alt="" coords="19,123,222,165"/>
+<area shape="poly" title=" " alt="" coords="283,106,209,125,207,119,282,100"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a416f1458b04bcd673fc5c68b5c1df927" name="a416f1458b04bcd673fc5c68b5c1df927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a416f1458b04bcd673fc5c68b5c1df927">&#9670;&#160;</a></span>GenerateViewProjectionMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectX::XMFLOAT4X4 CCameraComponent::GenerateViewProjectionMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a view projection matrix </p>
+<dl class="section return"><dt>戻り値</dt><dd>View projection matrix </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_component_a416f1458b04bcd673fc5c68b5c1df927_cgraph.png" border="0" usemap="#aclass_c_camera_component_a416f1458b04bcd673fc5c68b5c1df927_cgraph" alt=""/></div>
+<map name="aclass_c_camera_component_a416f1458b04bcd673fc5c68b5c1df927_cgraph" id="aclass_c_camera_component_a416f1458b04bcd673fc5c68b5c1df927_cgraph">
+<area shape="rect" title="Generate a view projection matrix" alt="" coords="5,65,208,108"/>
+<area shape="rect" href="class_c_camera_component.html#af5be76b0277d839421be8594f9a604cb" title="Generate a projection matrix" alt="" coords="256,32,458,75"/>
+<area shape="poly" title=" " alt="" coords="208,71,240,66,241,71,209,76"/>
+<area shape="rect" href="class_c_camera_component.html#abfa4560e0c329083f80aaa8a7a6f553e" title="Generate a view matrix" alt="" coords="256,99,458,141"/>
+<area shape="poly" title=" " alt="" coords="209,98,241,102,240,107,208,103"/>
+<area shape="rect" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091" title="Get transform of the object" alt="" coords="506,5,697,32"/>
+<area shape="poly" title=" " alt="" coords="432,96,457,84,480,67,505,48,534,35,537,40,507,53,484,71,459,89,434,100"/>
+<area shape="rect" href="namespace_utl_1_1_math.html#a0253ec4cae086cc618dacf75d66e3256" title="Are the two 3 dimensional vectors almost the same value?" alt="" coords="515,107,688,133"/>
+<area shape="poly" title=" " alt="" coords="458,117,499,117,499,123,458,123"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="752,56,827,83"/>
+<area shape="poly" title=" " alt="" coords="458,99,506,92,630,79,736,70,737,75,630,84,506,97,459,104"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="752,157,827,184"/>
+<area shape="poly" title=" " alt="" coords="459,136,506,143,630,156,737,165,736,170,630,161,506,148,458,141"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="752,208,827,235"/>
+<area shape="poly" title=" " alt="" coords="416,139,507,168,630,195,737,212,736,217,629,200,505,173,415,144"/>
+<area shape="rect" href="namespace_utl.html#ae262045064e2482bc0c092fba1f45a21" title="Check if two values are equal" alt="" coords="745,107,834,133"/>
+<area shape="poly" title=" " alt="" coords="689,117,730,117,730,123,689,123"/>
+<area shape="poly" title=" " alt="" coords="653,103,737,81,738,86,655,109"/>
+<area shape="poly" title=" " alt="" coords="655,131,738,154,737,159,653,137"/>
+<area shape="poly" title=" " alt="" coords="630,132,751,198,749,203,627,136"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a36881289fb0b61bfa4c6334dfb95eafa" name="a36881289fb0b61bfa4c6334dfb95eafa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36881289fb0b61bfa4c6334dfb95eafa">&#9670;&#160;</a></span>GetAspect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CCameraComponent::GetAspect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the aspect ratio </p>
+
+</div>
+</div>
+<a id="a77d31f86bc9b672c413689d7e9e8c196" name="a77d31f86bc9b672c413689d7e9e8c196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77d31f86bc9b672c413689d7e9e8c196">&#9670;&#160;</a></span>GetFar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CCameraComponent::GetFar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the far clipping value </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_component_a77d31f86bc9b672c413689d7e9e8c196_icgraph.png" border="0" usemap="#aclass_c_camera_component_a77d31f86bc9b672c413689d7e9e8c196_icgraph" alt=""/></div>
+<map name="aclass_c_camera_component_a77d31f86bc9b672c413689d7e9e8c196_icgraph" id="aclass_c_camera_component_a77d31f86bc9b672c413689d7e9e8c196_icgraph">
+<area shape="rect" title="Get the far clipping value" alt="" coords="188,13,377,40"/>
+<area shape="rect" href="class_c_light_v_p_calculator.html#ae6a4472d7b512277a57110629a5412dd" title="Calculate all light view projection matrices and return it" alt="" coords="5,5,140,48"/>
+<area shape="poly" title=" " alt="" coords="172,29,140,29,140,24,172,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afebd4422fee6c0f6eb58130c71621940" name="afebd4422fee6c0f6eb58130c71621940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afebd4422fee6c0f6eb58130c71621940">&#9670;&#160;</a></span>GetFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp; CCameraComponent::GetFocus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the focus position if in focus mode, otherwise, look direction vector </p>
+
+</div>
+</div>
+<a id="ace7d2b6e60be4d2706874909b8717ae5" name="ace7d2b6e60be4d2706874909b8717ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace7d2b6e60be4d2706874909b8717ae5">&#9670;&#160;</a></span>GetFovAngleY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CCameraComponent::GetFovAngleY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the fov angle Y </p>
+
+</div>
+</div>
+<a id="a834b9be794ebd020bda154cd869eaf94" name="a834b9be794ebd020bda154cd869eaf94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834b9be794ebd020bda154cd869eaf94">&#9670;&#160;</a></span>GetLookDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> CCameraComponent::GetLookDir </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain look direction vector regardless of focus mode </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_component_a834b9be794ebd020bda154cd869eaf94_icgraph.png" border="0" usemap="#aclass_c_camera_component_a834b9be794ebd020bda154cd869eaf94_icgraph" alt=""/></div>
+<map name="aclass_c_camera_component_a834b9be794ebd020bda154cd869eaf94_icgraph" id="aclass_c_camera_component_a834b9be794ebd020bda154cd869eaf94_icgraph">
+<area shape="rect" title="Obtain look direction vector regardless of focus mode" alt="" coords="228,13,442,40"/>
+<area shape="rect" href="class_c_player_control_component.html#ac60e570ba93b831af8a61f402f54d390" title="Updating process" alt="" coords="5,5,180,48"/>
+<area shape="poly" title=" " alt="" coords="212,29,180,29,180,24,212,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae74a5ff6bafa790d01f32f2a97d9c1de" name="ae74a5ff6bafa790d01f32f2a97d9c1de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae74a5ff6bafa790d01f32f2a97d9c1de">&#9670;&#160;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::wstring &amp; CCameraComponent::GetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the name of this camera </p>
+
+</div>
+</div>
+<a id="aeece690b4a3d380df9e05701242dfdf5" name="aeece690b4a3d380df9e05701242dfdf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeece690b4a3d380df9e05701242dfdf5">&#9670;&#160;</a></span>GetNear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CCameraComponent::GetNear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the near clipping value </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_component_aeece690b4a3d380df9e05701242dfdf5_icgraph.png" border="0" usemap="#aclass_c_camera_component_aeece690b4a3d380df9e05701242dfdf5_icgraph" alt=""/></div>
+<map name="aclass_c_camera_component_aeece690b4a3d380df9e05701242dfdf5_icgraph" id="aclass_c_camera_component_aeece690b4a3d380df9e05701242dfdf5_icgraph">
+<area shape="rect" title="Get the near clipping value" alt="" coords="188,13,385,40"/>
+<area shape="rect" href="class_c_light_v_p_calculator.html#ae6a4472d7b512277a57110629a5412dd" title="Calculate all light view projection matrices and return it" alt="" coords="5,5,140,48"/>
+<area shape="poly" title=" " alt="" coords="172,29,140,29,140,24,172,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f3be26917cd2e41c078400250b86a91" name="a0f3be26917cd2e41c078400250b86a91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f3be26917cd2e41c078400250b86a91">&#9670;&#160;</a></span>GetPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CCameraComponent::GetPriority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the priority of this camera </p>
+
+</div>
+</div>
+<a id="a4bddfb4e0f26cda9fde1a6fb42e87d5d" name="a4bddfb4e0f26cda9fde1a6fb42e87d5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bddfb4e0f26cda9fde1a6fb42e87d5d">&#9670;&#160;</a></span>GetRotationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DirectX::XMMATRIX &amp; CCameraComponent::GetRotationMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get matrix with the same rotation as the view matrix of this camera </p>
+
+</div>
+</div>
+<a id="aa82192fcad999234ec1f71bc9a342e5c" name="aa82192fcad999234ec1f71bc9a342e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa82192fcad999234ec1f71bc9a342e5c">&#9670;&#160;</a></span>GetUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp; CCameraComponent::GetUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the up vector </p>
+
+</div>
+</div>
+<a id="a312614c976b29c7272d6c7c71b65ce8f" name="a312614c976b29c7272d6c7c71b65ce8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312614c976b29c7272d6c7c71b65ce8f">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraComponent::OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroy processing </p>
+
+<p><a class="el" href="class_a_c_component.html#a88abe0db6e3b1ac90e738c5f1927fc91">ACComponent</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a35647146e593d123c3319ca9f87ca8b7" name="a35647146e593d123c3319ca9f87ca8b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35647146e593d123c3319ca9f87ca8b7">&#9670;&#160;</a></span>SetAspect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraComponent::SetAspect </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>aspect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set an aspect ratio </p>
+
+</div>
+</div>
+<a id="af11398674544cb73a5224c757a54a819" name="af11398674544cb73a5224c757a54a819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11398674544cb73a5224c757a54a819">&#9670;&#160;</a></span>SetFar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraComponent::SetFar </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>farValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a far clipping value </p>
+
+</div>
+</div>
+<a id="a32507e305cb817c47492ace915d59912" name="a32507e305cb817c47492ace915d59912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32507e305cb817c47492ace915d59912">&#9670;&#160;</a></span>SetFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraComponent::SetFocus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>focus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a focus position. Value will not change unless in focus mode </p>
+
+</div>
+</div>
+<a id="a40579dcec1edec1a6923ab193d99ef97" name="a40579dcec1edec1a6923ab193d99ef97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40579dcec1edec1a6923ab193d99ef97">&#9670;&#160;</a></span>SetFovAngleY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraComponent::SetFovAngleY </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fovAngleY</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a fov angle Y </p>
+
+</div>
+</div>
+<a id="a1e59f2fd15a5d8a2a9db19e077fdec6f" name="a1e59f2fd15a5d8a2a9db19e077fdec6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e59f2fd15a5d8a2a9db19e077fdec6f">&#9670;&#160;</a></span>SetNear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraComponent::SetNear </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>nearValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a near clipping value </p>
+
+</div>
+</div>
+<a id="a36314c77308f7f991dd55bbc34402c5e" name="a36314c77308f7f991dd55bbc34402c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36314c77308f7f991dd55bbc34402c5e">&#9670;&#160;</a></span>SetPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraComponent::SetPriority </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a priority to this camera </p>
+
+</div>
+</div>
+<a id="a3a7b0716ccb2a195c091ee9a853831bd" name="a3a7b0716ccb2a195c091ee9a853831bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a7b0716ccb2a195c091ee9a853831bd">&#9670;&#160;</a></span>SetUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraComponent::SetUp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>up</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a up vector </p>
+
+</div>
+</div>
+<a id="ac7a5567d296aef6d7e1705257ae94161" name="ac7a5567d296aef6d7e1705257ae94161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7a5567d296aef6d7e1705257ae94161">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraComponent::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing for the first update frame </p>
+
+<p><a class="el" href="class_a_c_component.html#ae0601a998d4b46b7cf59edbfaa03683f">ACComponent</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_component_ac7a5567d296aef6d7e1705257ae94161_cgraph.png" border="0" usemap="#aclass_c_camera_component_ac7a5567d296aef6d7e1705257ae94161_cgraph" alt=""/></div>
+<map name="aclass_c_camera_component_ac7a5567d296aef6d7e1705257ae94161_cgraph" id="aclass_c_camera_component_ac7a5567d296aef6d7e1705257ae94161_cgraph">
+<area shape="rect" title="Processing for the first update frame" alt="" coords="5,5,183,32"/>
+<area shape="rect" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091" title="Get transform of the object" alt="" coords="231,5,422,32"/>
+<area shape="poly" title=" " alt="" coords="183,16,215,16,215,21,183,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_camera_8h_source.html">Camera.h</a></li>
+<li><a class="el" href="_camera_8cpp.html">Camera.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

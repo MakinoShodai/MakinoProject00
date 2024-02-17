@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CShaderRegistry クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="class_c_shader_registry-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CShaderRegistry クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Registry class manages all shaders  
+ <a href="class_c_shader_registry.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_shader_registry_8h_source.html">ShaderRegistry.h</a>&gt;</code></p>
+<div class="dynheader">
+CShaderRegistry の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_shader_registry__inherit__graph.png" border="0" usemap="#a_c_shader_registry_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_shader_registry_inherit__map" id="a_c_shader_registry_inherit__map">
+<area shape="rect" title="Registry class manages all shaders" alt="" coords="40,245,160,272"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html" title=" " alt="" coords="20,155,180,197"/>
+<area shape="poly" title=" " alt="" coords="103,213,103,245,97,245,97,213"/>
+<area shape="rect" href="class_a_c_singleton_base.html" title="Abstract singleton base class (CRTP Pattern)" alt="" coords="5,80,195,107"/>
+<area shape="poly" title=" " alt="" coords="103,122,103,154,97,154,97,122"/>
+<area shape="rect" href="class_a_c_release_singleton.html" title="This class is used to control the order and release instance" alt="" coords="30,5,170,32"/>
+<area shape="poly" title=" " alt="" coords="103,48,103,80,97,80,97,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CShaderRegistry 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_shader_registry__coll__graph.png" border="0" usemap="#a_c_shader_registry_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_shader_registry_coll__map" id="a_c_shader_registry_coll__map">
+<area shape="rect" title="Registry class manages all shaders" alt="" coords="40,245,160,272"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html" title=" " alt="" coords="20,155,180,197"/>
+<area shape="poly" title=" " alt="" coords="103,213,103,245,97,245,97,213"/>
+<area shape="rect" href="class_a_c_singleton_base.html" title="Abstract singleton base class (CRTP Pattern)" alt="" coords="5,80,195,107"/>
+<area shape="poly" title=" " alt="" coords="103,122,103,154,97,154,97,122"/>
+<area shape="rect" href="class_a_c_release_singleton.html" title="This class is used to control the order and release instance" alt="" coords="30,5,170,32"/>
+<area shape="poly" title=" " alt="" coords="103,48,103,80,97,80,97,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shader_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feature for thread-safe  <a href="class_c_shader_registry_1_1_c_thread_safe_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a77a4927ac87619d576391d01edde3f3d" id="r_a77a4927ac87619d576391d01edde3f3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shader_registry.html#a77a4927ac87619d576391d01edde3f3d">~CShaderRegistry</a> () override=default</td></tr>
+<tr class="memdesc:a77a4927ac87619d576391d01edde3f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a77a4927ac87619d576391d01edde3f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec02e4ed15a5f38d02549b9b3207204f" id="r_aec02e4ed15a5f38d02549b9b3207204f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shader_registry.html#aec02e4ed15a5f38d02549b9b3207204f">Initialize</a> ()</td></tr>
+<tr class="memdesc:aec02e4ed15a5f38d02549b9b3207204f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize  <br /></td></tr>
+<tr class="separator:aec02e4ed15a5f38d02549b9b3207204f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_singleton_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_singleton_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase&lt; Derived &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a8d8b17de954dc5525e41886ecae7bf32 inherit pub_methods_class_a_c_singleton_base" id="r_a8d8b17de954dc5525e41886ecae7bf32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a8d8b17de954dc5525e41886ecae7bf32">ACSingletonBase</a> (const <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a8d8b17de954dc5525e41886ecae7bf32 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy constructor  <br /></td></tr>
+<tr class="separator:a8d8b17de954dc5525e41886ecae7bf32 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a0e0b28b71658eb2286408775cfb38 inherit pub_methods_class_a_c_singleton_base" id="r_a01a0e0b28b71658eb2286408775cfb38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a01a0e0b28b71658eb2286408775cfb38">operator=</a> (const <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a01a0e0b28b71658eb2286408775cfb38 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy assignment operator  <br /></td></tr>
+<tr class="separator:a01a0e0b28b71658eb2286408775cfb38 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a770e4789f75386da1facea672ca600 inherit pub_methods_class_a_c_singleton_base" id="r_a4a770e4789f75386da1facea672ca600"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a4a770e4789f75386da1facea672ca600">ACSingletonBase</a> (<a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a4a770e4789f75386da1facea672ca600 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move constructor  <br /></td></tr>
+<tr class="separator:a4a770e4789f75386da1facea672ca600 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e3e7f0438031a182db777945960318 inherit pub_methods_class_a_c_singleton_base" id="r_a86e3e7f0438031a182db777945960318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a86e3e7f0438031a182db777945960318">operator=</a> (<a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a86e3e7f0438031a182db777945960318 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move assignment constructor  <br /></td></tr>
+<tr class="separator:a86e3e7f0438031a182db777945960318 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae38c0128642991ecb8b1c7ddd1e95a28 inherit pub_methods_class_a_c_singleton_base" id="r_ae38c0128642991ecb8b1c7ddd1e95a28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#ae38c0128642991ecb8b1c7ddd1e95a28">DestroyInstance</a> () override final</td></tr>
+<tr class="memdesc:ae38c0128642991ecb8b1c7ddd1e95a28 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard instance  <br /></td></tr>
+<tr class="separator:ae38c0128642991ecb8b1c7ddd1e95a28 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:aff1e63f1223a161ec2aec0509c0e8e79" id="r_aff1e63f1223a161ec2aec0509c0e8e79"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_shader_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shader_registry.html#aff1e63f1223a161ec2aec0509c0e8e79">GetAny</a> ()</td></tr>
+<tr class="memdesc:aff1e63f1223a161ec2aec0509c0e8e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get feature for thread-safe  <br /></td></tr>
+<tr class="separator:aff1e63f1223a161ec2aec0509c0e8e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_a_c_main_thread_singleton"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_a_c_main_thread_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton&lt; CShaderRegistry &gt;</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:a89d07f64971fd623dd0a8a7179e17e95 inherit pub_static_methods_class_a_c_main_thread_singleton" id="r_a89d07f64971fd623dd0a8a7179e17e95"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_shader_registry.html">CShaderRegistry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95">GetMain</a> ()</td></tr>
+<tr class="memdesc:a89d07f64971fd623dd0a8a7179e17e95 inherit pub_static_methods_class_a_c_main_thread_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get singleton instance for main thread  <br /></td></tr>
+<tr class="separator:a89d07f64971fd623dd0a8a7179e17e95 inherit pub_static_methods_class_a_c_main_thread_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton" id="r_a0d6986b9ad7df98f29aa3b24c3c75030"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#a0d6986b9ad7df98f29aa3b24c3c75030">AllRelease</a> ()</td></tr>
+<tr class="memdesc:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release all instance  <br /></td></tr>
+<tr class="separator:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a956b1b4ee4ed7a8c722e808a5137ebfc" id="r_a956b1b4ee4ed7a8c722e808a5137ebfc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shader_registry.html#a956b1b4ee4ed7a8c722e808a5137ebfc">CShaderRegistry</a> ()</td></tr>
+<tr class="memdesc:a956b1b4ee4ed7a8c722e808a5137ebfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a956b1b4ee4ed7a8c722e808a5137ebfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_singleton_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_singleton_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase&lt; Derived &gt;</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:afabb6c5e30b347d13b6060914aece186 inherit pro_methods_class_a_c_singleton_base" id="r_afabb6c5e30b347d13b6060914aece186"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#afabb6c5e30b347d13b6060914aece186">ACSingletonBase</a> (int priority)</td></tr>
+<tr class="memdesc:afabb6c5e30b347d13b6060914aece186 inherit pro_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:afabb6c5e30b347d13b6060914aece186 inherit pro_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c96b4c5421f892ec2b31f98405460e1 inherit pro_methods_class_a_c_singleton_base" id="r_a3c96b4c5421f892ec2b31f98405460e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a3c96b4c5421f892ec2b31f98405460e1">~ACSingletonBase</a> () override</td></tr>
+<tr class="memdesc:a3c96b4c5421f892ec2b31f98405460e1 inherit pro_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a3c96b4c5421f892ec2b31f98405460e1 inherit pro_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d9da3719c71c9a6e34cdf6a74b7128 inherit pro_methods_class_a_c_singleton_base" id="r_ac7d9da3719c71c9a6e34cdf6a74b7128"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#ac7d9da3719c71c9a6e34cdf6a74b7128">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:ac7d9da3719c71c9a6e34cdf6a74b7128 inherit pro_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process to be called at instance destruction  <br /></td></tr>
+<tr class="separator:ac7d9da3719c71c9a6e34cdf6a74b7128 inherit pro_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton" id="r_aecd0a93d3e8f23cbb8d11de90d0153b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#aecd0a93d3e8f23cbb8d11de90d0153b8">ACReleaseSingleton</a> ()=default</td></tr>
+<tr class="memdesc:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton" id="r_a12315284fb54b24483dd1f9812988c8d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#a12315284fb54b24483dd1f9812988c8d">~ACReleaseSingleton</a> ()</td></tr>
+<tr class="memdesc:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a3273bd1fe91a2694d70da9c751511d0b" id="r_a3273bd1fe91a2694d70da9c751511d0b"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shader_registry.html#a3273bd1fe91a2694d70da9c751511d0b">ACSingletonBase</a></td></tr>
+<tr class="separator:a3273bd1fe91a2694d70da9c751511d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_static_methods_class_a_c_singleton_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_class_a_c_singleton_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase&lt; Derived &gt;</a> に属する継承静的限定公開メンバ関数</td></tr>
+<tr class="memitem:a86122d51b9f611ffbc300eb790c3dabf inherit pro_static_methods_class_a_c_singleton_base" id="r_a86122d51b9f611ffbc300eb790c3dabf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_unique_ptr.html">CUniquePtr</a>&lt; Derived &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a> ()</td></tr>
+<tr class="memdesc:a86122d51b9f611ffbc300eb790c3dabf inherit pro_static_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get singleton instance  <br /></td></tr>
+<tr class="separator:a86122d51b9f611ffbc300eb790c3dabf inherit pro_static_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承静的限定公開メンバ関数</td></tr>
+<tr class="memitem:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton" id="r_abcb065418ac7352ba6390d676a72cc52"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#abcb065418ac7352ba6390d676a72cc52">AddInstanceToArray</a> (int priority, <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> *instance)</td></tr>
+<tr class="memdesc:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the created instance to the array  <br /></td></tr>
+<tr class="separator:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton" id="r_ae432066358bb5bc8e42db6ae2e9f29aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#ae432066358bb5bc8e42db6ae2e9f29aa">RemoveInstanceToArray</a> (<a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> *instance)</td></tr>
+<tr class="memdesc:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the instance in the array  <br /></td></tr>
+<tr class="separator:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Registry class manages all shaders </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a77a4927ac87619d576391d01edde3f3d" name="a77a4927ac87619d576391d01edde3f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77a4927ac87619d576391d01edde3f3d">&#9670;&#160;</a></span>~CShaderRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CShaderRegistry::~CShaderRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<a id="a956b1b4ee4ed7a8c722e808a5137ebfc" name="a956b1b4ee4ed7a8c722e808a5137ebfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a956b1b4ee4ed7a8c722e808a5137ebfc">&#9670;&#160;</a></span>CShaderRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CShaderRegistry::CShaderRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aff1e63f1223a161ec2aec0509c0e8e79" name="aff1e63f1223a161ec2aec0509c0e8e79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff1e63f1223a161ec2aec0509c0e8e79">&#9670;&#160;</a></span>GetAny()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_c_shader_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> &amp; CShaderRegistry::GetAny </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get feature for thread-safe </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_shader_registry_aff1e63f1223a161ec2aec0509c0e8e79_cgraph.png" border="0" usemap="#aclass_c_shader_registry_aff1e63f1223a161ec2aec0509c0e8e79_cgraph" alt=""/></div>
+<map name="aclass_c_shader_registry_aff1e63f1223a161ec2aec0509c0e8e79_cgraph" id="aclass_c_shader_registry_aff1e63f1223a161ec2aec0509c0e8e79_cgraph">
+<area shape="rect" title="Get feature for thread&#45;safe" alt="" coords="5,5,177,32"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="225,5,433,32"/>
+<area shape="poly" title=" " alt="" coords="177,16,209,16,209,21,177,21"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_shader_registry_aff1e63f1223a161ec2aec0509c0e8e79_icgraph.png" border="0" usemap="#aclass_c_shader_registry_aff1e63f1223a161ec2aec0509c0e8e79_icgraph" alt=""/></div>
+<map name="aclass_c_shader_registry_aff1e63f1223a161ec2aec0509c0e8e79_icgraph" id="aclass_c_shader_registry_aff1e63f1223a161ec2aec0509c0e8e79_icgraph">
+<area shape="rect" title="Get feature for thread&#45;safe" alt="" coords="772,205,944,232"/>
+<area shape="rect" href="class_c_scene_registry.html#ad72346dc806d894e2ec6335f02250971" title="Initialize" alt="" coords="525,29,695,56"/>
+<area shape="poly" title=" " alt="" coords="839,193,792,130,760,98,723,70,694,58,696,53,726,66,763,94,796,127,843,190"/>
+<area shape="rect" href="class_c_write_shadow_g_p_s_o_wrapper.html#a8c459b33866eb117f6cf3f011ff137d2" title="Prefab function" alt="" coords="513,80,707,123"/>
+<area shape="poly" title=" " alt="" coords="822,199,776,171,723,144,679,126,681,121,725,139,778,167,825,194"/>
+<area shape="rect" href="class_c_standard_render_pass.html#a9c6b08c098524379f6d3877a4a06c228" title="Start processing" alt="" coords="5,273,159,316"/>
+<area shape="poly" title=" " alt="" coords="798,203,724,188,577,174,518,173,462,176,407,184,349,197,208,239,163,256,123,275,121,270,161,251,206,233,348,192,406,179,462,171,518,168,578,169,725,183,799,198"/>
+<area shape="rect" href="class_c_shading_g_p_s_o_wrapper.html#a006de9e79b5b914ba3db0c27018a564b" title="Prefab function" alt="" coords="528,197,692,240"/>
+<area shape="poly" title=" " alt="" coords="757,221,692,221,692,216,757,216"/>
+<area shape="rect" href="class_c_grass_write_shadow_g_p_s_o_wrapper.html#a12ec67c7f32f363ebfcadfb6a065edc9" title="Prefab function" alt="" coords="495,264,724,307"/>
+<area shape="poly" title=" " alt="" coords="791,239,693,266,691,261,790,234"/>
+<area shape="rect" href="class_c_grass_shading_g_p_s_o_wrapper.html#ad37004db0825811143d5adcda0658b5d" title="Prefab function" alt="" coords="227,303,427,345"/>
+<area shape="poly" title=" " alt="" coords="836,245,788,287,758,306,725,321,649,340,570,347,494,347,427,342,427,337,495,342,570,342,648,335,723,316,755,302,785,282,832,241"/>
+<area shape="rect" href="class_a_c_standard_g_p_s_o_wrapper.html#a0e3f688a53e1e5351ebb328cb5f2ceb4" title="Prefab helper function" alt="" coords="521,407,699,449"/>
+<area shape="poly" title=" " alt="" coords="839,246,790,303,726,365,692,389,657,408,655,404,689,384,723,361,787,300,835,243"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="270,29,384,56"/>
+<area shape="poly" title=" " alt="" coords="509,45,384,45,384,40,509,40"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="57,29,107,56"/>
+<area shape="poly" title=" " alt="" coords="255,45,107,45,107,40,255,40"/>
+<area shape="poly" title=" " alt="" coords="119,27,125,20,122,15,108,10,82,8,52,11,40,17,41,24,58,33,55,38,37,27,35,14,51,6,82,3,109,5,125,11,130,21,123,31"/>
+<area shape="poly" title=" " alt="" coords="497,93,429,92,354,99,279,115,242,128,208,144,170,172,138,207,113,243,96,274,91,271,109,240,134,204,166,168,205,139,240,123,277,110,353,94,429,87,497,87"/>
+<area shape="poly" title=" " alt="" coords="513,232,368,250,207,273,159,282,158,277,206,268,368,245,512,227"/>
+<area shape="poly" title=" " alt="" coords="480,289,207,293,159,295,159,289,207,288,480,284"/>
+<area shape="poly" title=" " alt="" coords="211,313,159,307,160,301,212,308"/>
+<area shape="rect" href="class_c_standard_g_p_s_o_wrapper.html#a99a1b62d10fddcb8646a4f8305c87bb4" title="Prefab function" alt="" coords="242,369,412,412"/>
+<area shape="poly" title=" " alt="" coords="505,417,412,405,413,399,506,412"/>
+<area shape="rect" href="class_c_transparent_g_p_s_o_wrapper.html#abf51f8b428b01311da8feeb0ab76983a" title="Prefab function" alt="" coords="234,436,420,479"/>
+<area shape="poly" title=" " alt="" coords="505,441,420,450,420,445,505,436"/>
+<area shape="rect" href="class_c_transparent_no_culling_g_p_s_o_wrapper.html#a71c088c6c0c5f284e058b1112af6928a" title="Prefab function" alt="" coords="207,503,447,545"/>
+<area shape="poly" title=" " alt="" coords="543,458,448,493,411,505,410,500,446,488,541,453"/>
+<area shape="poly" title=" " alt="" coords="226,367,206,360,120,319,122,314,208,355,228,362"/>
+<area shape="poly" title=" " alt="" coords="219,433,205,426,171,401,141,372,96,318,100,315,145,369,175,397,208,422,221,429"/>
+<area shape="poly" title=" " alt="" coords="211,497,205,493,163,451,129,403,104,356,89,318,93,316,109,353,134,400,167,448,208,489,214,492"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aec02e4ed15a5f38d02549b9b3207204f" name="aec02e4ed15a5f38d02549b9b3207204f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec02e4ed15a5f38d02549b9b3207204f">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CShaderRegistry::Initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_shader_registry_aec02e4ed15a5f38d02549b9b3207204f_icgraph.png" border="0" usemap="#aclass_c_shader_registry_aec02e4ed15a5f38d02549b9b3207204f_icgraph" alt=""/></div>
+<map name="aclass_c_shader_registry_aec02e4ed15a5f38d02549b9b3207204f_icgraph" id="aclass_c_shader_registry_aec02e4ed15a5f38d02549b9b3207204f_icgraph">
+<area shape="rect" title="Initialize" alt="" coords="264,29,438,56"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,29,216,56"/>
+<area shape="poly" title=" " alt="" coords="249,45,216,45,216,40,249,40"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+<area shape="poly" title=" " alt="" coords="51,16,44,10,30,8,17,10,10,14,8,20,12,28,7,30,3,21,6,11,15,5,30,3,46,5,55,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="a3273bd1fe91a2694d70da9c751511d0b" name="a3273bd1fe91a2694d70da9c751511d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3273bd1fe91a2694d70da9c751511d0b">&#9670;&#160;</a></span>ACSingletonBase</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_shader_registry_8h_source.html">ShaderRegistry.h</a></li>
+<li><a class="el" href="_shader_registry_8cpp.html">ShaderRegistry.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

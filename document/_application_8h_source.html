@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Application.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Application.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_application_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __APPLICATION_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __APPLICATION_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_math_8h.html">UtilityForMath.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_c_application.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_application.html">CApplication</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>&lt;CApplication&gt; {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_c_application.html#a3273bd1fe91a2694d70da9c751511d0b">   18</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_a_c_singleton_base.html">ACSingletonBase</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_c_application.html#a840574e9aef1f808c06ade2dd8af8717">   24</a></span>    <a class="code hl_function" href="class_c_application.html#a840574e9aef1f808c06ade2dd8af8717">~CApplication</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_application.html#ae3dc902b56331602c3277148d64c1597">InitializeWnd</a>(WNDPROC wndProc, UINT width, UINT height, <span class="keyword">const</span> std::wstring&amp; name);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_application.html#a220060ccb18e852a65b84d51fe8f0bb8">DestroyWnd</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_application.html#a6ff1ebea0dd760778396798aaeb1bc5d">InitializeDirectX</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="};">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_c_application_1_1_c_thread_safe_feature.html">   46</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_c_application_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;CApplication&gt; {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">using </span><a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;<a class="code hl_class" href="class_c_application.html">CApplication</a>&gt;<a class="code hl_class" href="class_a_c_inner_class.html">::ACInnerClass</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_c_application_1_1_c_thread_safe_feature.html#ae9ef20dc436a73cbf02be6eebe0b3813">   52</a></span>        HWND <a class="code hl_function" href="class_c_application_1_1_c_thread_safe_feature.html#ae9ef20dc436a73cbf02be6eebe0b3813">GetWndHandle</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_wndHandle; }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325">   54</a></span>        ID3D12Device* <a class="code hl_function" href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325">GetDXDevice</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_dxDevice.Get(); }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_application_1_1_c_thread_safe_feature.html#a2dda517b22311321e68d063b6d97aa89">   56</a></span>        IDXGIFactory6* <a class="code hl_function" href="class_c_application_1_1_c_thread_safe_feature.html#a2dda517b22311321e68d063b6d97aa89">GetDXGIFactory</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_dxgiFactory.Get(); }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53">   58</a></span>        UINT <a class="code hl_function" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53">GetHeapTypeSize</a>(D3D12_DESCRIPTOR_HEAP_TYPE type) { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_heapTypeSize[type]; }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_application_1_1_c_thread_safe_feature.html#afb260efcb42aae6378663a8194a9fc6a">   60</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector2f</a>&amp; <a class="code hl_function" href="class_c_application_1_1_c_thread_safe_feature.html#afb260efcb42aae6378663a8194a9fc6a">GetWndSizeMagnification</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_wndSizeMagnification; }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_application_1_1_c_thread_safe_feature.html#ad8271696160bb5a5bfc90e6ea339ede0">   62</a></span>        <span class="keyword">const</span> RECT&amp; <a class="code hl_function" href="class_c_application_1_1_c_thread_safe_feature.html#ad8271696160bb5a5bfc90e6ea339ede0">GetCursorRange</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_cursorRange; }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    };</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd">   66</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="class_c_application_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a>&amp; <a class="code hl_function" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd">GetAny</a>() {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_c_application_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> instance(<a class="code hl_function" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a>().Get());</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_c_application.html#ad102d285eeedbf21d0c8b1c435c912fb">   75</a></span>    <a class="code hl_function" href="class_c_application.html#ad102d285eeedbf21d0c8b1c435c912fb">CApplication</a>() : <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>(9999), m_wndSetting(), m_wndHandle(NULL), m_wndSizeMagnification(<a class="code hl_class" href="struct_vector.html">Vector2f</a>::Ones()), m_cursorRange{} {}</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_application.html#a2fc2c1400c58b5f6dda10d38156754cc">OnDestroy</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_application.html#af09c385a5f783cebc3d657b1c447c005">CalculateCursorRange</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    WNDCLASSEX m_wndSetting;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    HWND m_wndHandle;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    Microsoft::WRL::ComPtr&lt;ID3D12Device&gt; m_dxDevice;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    Microsoft::WRL::ComPtr&lt;IDXGIFactory6&gt; m_dxgiFactory;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_class" href="struct_vector.html">Vector2f</a> m_wndSizeMagnification;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    RECT m_cursorRange;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    UINT m_heapTypeSize[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES];</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>};</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#endif </span><span class="comment">// !__APPLICATION_H__</span></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">File handling abstract singleton class.</div></div>
+<div class="ttc" id="a_utility_for_math_8h_html"><div class="ttname"><a href="_utility_for_math_8h.html">UtilityForMath.h</a></div><div class="ttdoc">This file provides utility in handling mathematics.</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html"><div class="ttname"><a href="class_a_c_inner_class.html">ACInnerClass</a></div><div class="ttdoc">Abstract inner class</div><div class="ttdef"><b>Definition</b> Singleton.h:23</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html_abbb5ecb30cbd08e599e20cc9f3532f6f"><div class="ttname"><a href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">ACInnerClass&lt; CApplication &gt;::m_owner</a></div><div class="ttdeci">CApplication * m_owner</div><div class="ttdoc">Pointer to owner of this class</div><div class="ttdef"><b>Definition</b> Singleton.h:45</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html"><div class="ttname"><a href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a></div><div class="ttdoc">Abstract singleton class for main thread only (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:111</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html"><div class="ttname"><a href="class_a_c_singleton_base.html">ACSingletonBase</a></div><div class="ttdoc">Abstract singleton base class (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:59</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html_a86122d51b9f611ffbc300eb790c3dabf"><div class="ttname"><a href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">ACSingletonBase::GetProtected</a></div><div class="ttdeci">static CUniquePtr&lt; Derived &gt; &amp; GetProtected()</div><div class="ttdoc">Get singleton instance</div><div class="ttdef"><b>Definition</b> Singleton.h:169</div></div>
+<div class="ttc" id="aclass_c_application_1_1_c_thread_safe_feature_html"><div class="ttname"><a href="class_c_application_1_1_c_thread_safe_feature.html">CApplication::CThreadSafeFeature</a></div><div class="ttdoc">Feature for thread-safe</div><div class="ttdef"><b>Definition</b> Application.h:46</div></div>
+<div class="ttc" id="aclass_c_application_1_1_c_thread_safe_feature_html_a2dda517b22311321e68d063b6d97aa89"><div class="ttname"><a href="class_c_application_1_1_c_thread_safe_feature.html#a2dda517b22311321e68d063b6d97aa89">CApplication::CThreadSafeFeature::GetDXGIFactory</a></div><div class="ttdeci">IDXGIFactory6 * GetDXGIFactory()</div><div class="ttdoc">DXGI factory object getter</div><div class="ttdef"><b>Definition</b> Application.h:56</div></div>
+<div class="ttc" id="aclass_c_application_1_1_c_thread_safe_feature_html_a311bf8e4bf8d1735fc29c69dc6142b53"><div class="ttname"><a href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53">CApplication::CThreadSafeFeature::GetHeapTypeSize</a></div><div class="ttdeci">UINT GetHeapTypeSize(D3D12_DESCRIPTOR_HEAP_TYPE type)</div><div class="ttdoc">Get the size of descriptor heap type</div><div class="ttdef"><b>Definition</b> Application.h:58</div></div>
+<div class="ttc" id="aclass_c_application_1_1_c_thread_safe_feature_html_a5f0affd9adebb4920fc882bb6bc99325"><div class="ttname"><a href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325">CApplication::CThreadSafeFeature::GetDXDevice</a></div><div class="ttdeci">ID3D12Device * GetDXDevice()</div><div class="ttdoc">DirectX device getter</div><div class="ttdef"><b>Definition</b> Application.h:54</div></div>
+<div class="ttc" id="aclass_c_application_1_1_c_thread_safe_feature_html_ad8271696160bb5a5bfc90e6ea339ede0"><div class="ttname"><a href="class_c_application_1_1_c_thread_safe_feature.html#ad8271696160bb5a5bfc90e6ea339ede0">CApplication::CThreadSafeFeature::GetCursorRange</a></div><div class="ttdeci">const RECT &amp; GetCursorRange()</div><div class="ttdoc">Get range of cursor position</div><div class="ttdef"><b>Definition</b> Application.h:62</div></div>
+<div class="ttc" id="aclass_c_application_1_1_c_thread_safe_feature_html_ae9ef20dc436a73cbf02be6eebe0b3813"><div class="ttname"><a href="class_c_application_1_1_c_thread_safe_feature.html#ae9ef20dc436a73cbf02be6eebe0b3813">CApplication::CThreadSafeFeature::GetWndHandle</a></div><div class="ttdeci">HWND GetWndHandle() const</div><div class="ttdoc">Window handle getter</div><div class="ttdef"><b>Definition</b> Application.h:52</div></div>
+<div class="ttc" id="aclass_c_application_1_1_c_thread_safe_feature_html_afb260efcb42aae6378663a8194a9fc6a"><div class="ttname"><a href="class_c_application_1_1_c_thread_safe_feature.html#afb260efcb42aae6378663a8194a9fc6a">CApplication::CThreadSafeFeature::GetWndSizeMagnification</a></div><div class="ttdeci">const Vector2f &amp; GetWndSizeMagnification()</div><div class="ttdoc">Magnification of current window size relative to ideal window size</div><div class="ttdef"><b>Definition</b> Application.h:60</div></div>
+<div class="ttc" id="aclass_c_application_html"><div class="ttname"><a href="class_c_application.html">CApplication</a></div><div class="ttdoc">Singleton class for handling application objects such as window and DirectX device</div><div class="ttdef"><b>Definition</b> Application.h:16</div></div>
+<div class="ttc" id="aclass_c_application_html_a220060ccb18e852a65b84d51fe8f0bb8"><div class="ttname"><a href="class_c_application.html#a220060ccb18e852a65b84d51fe8f0bb8">CApplication::DestroyWnd</a></div><div class="ttdeci">void DestroyWnd()</div><div class="ttdoc">Destroy window instance</div><div class="ttdef"><b>Definition</b> Application.cpp:72</div></div>
+<div class="ttc" id="aclass_c_application_html_a2fc2c1400c58b5f6dda10d38156754cc"><div class="ttname"><a href="class_c_application.html#a2fc2c1400c58b5f6dda10d38156754cc">CApplication::OnDestroy</a></div><div class="ttdeci">void OnDestroy() override</div><div class="ttdoc">Process to be called at instance destruction</div><div class="ttdef"><b>Definition</b> Application.cpp:133</div></div>
+<div class="ttc" id="aclass_c_application_html_a6ff1ebea0dd760778396798aaeb1bc5d"><div class="ttname"><a href="class_c_application.html#a6ff1ebea0dd760778396798aaeb1bc5d">CApplication::InitializeDirectX</a></div><div class="ttdeci">void InitializeDirectX()</div><div class="ttdoc">Initialize DirectX such as DirectX device and DXGI factory</div><div class="ttdef"><b>Definition</b> Application.cpp:84</div></div>
+<div class="ttc" id="aclass_c_application_html_a840574e9aef1f808c06ade2dd8af8717"><div class="ttname"><a href="class_c_application.html#a840574e9aef1f808c06ade2dd8af8717">CApplication::~CApplication</a></div><div class="ttdeci">~CApplication()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_application_html_ab44d8126deac403ebe7264dc024541cd"><div class="ttname"><a href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd">CApplication::GetAny</a></div><div class="ttdeci">static CThreadSafeFeature &amp; GetAny()</div><div class="ttdoc">Get feature for thread-safe</div><div class="ttdef"><b>Definition</b> Application.h:66</div></div>
+<div class="ttc" id="aclass_c_application_html_ad102d285eeedbf21d0c8b1c435c912fb"><div class="ttname"><a href="class_c_application.html#ad102d285eeedbf21d0c8b1c435c912fb">CApplication::CApplication</a></div><div class="ttdeci">CApplication()</div><div class="ttdoc">Constrcutor</div><div class="ttdef"><b>Definition</b> Application.h:75</div></div>
+<div class="ttc" id="aclass_c_application_html_ae3dc902b56331602c3277148d64c1597"><div class="ttname"><a href="class_c_application.html#ae3dc902b56331602c3277148d64c1597">CApplication::InitializeWnd</a></div><div class="ttdeci">void InitializeWnd(WNDPROC wndProc, UINT width, UINT height, const std::wstring &amp;name)</div><div class="ttdoc">Create and display a window</div><div class="ttdef"><b>Definition</b> Application.cpp:25</div></div>
+<div class="ttc" id="aclass_c_application_html_af09c385a5f783cebc3d657b1c447c005"><div class="ttname"><a href="class_c_application.html#af09c385a5f783cebc3d657b1c447c005">CApplication::CalculateCursorRange</a></div><div class="ttdeci">void CalculateCursorRange()</div><div class="ttdoc">Calculate the range of cursor position</div><div class="ttdef"><b>Definition</b> Application.cpp:139</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 2 &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

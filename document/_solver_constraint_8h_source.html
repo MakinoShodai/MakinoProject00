@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: SolverConstraint.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">SolverConstraint.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_solver_constraint_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __SOLVER_CONSTRAINT_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __SOLVER_CONSTRAINT_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_collider_wrapper_8h.html">ColliderWrapper.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_stable_handle_vector_8h.html">StableHandleVector.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mkpe.html">Mkpe</a> {</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html">   17</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_solver_constraint.html">SolverConstraint</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#ab290c65422c39d0ef0792a22be94cfcc">   19</a></span>        <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CColliderWrapper&gt;</a> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#ab290c65422c39d0ef0792a22be94cfcc">wrapperA</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#adfb642b5e8ecf481d998fea6e2e50761">   21</a></span>        <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CColliderWrapper&gt;</a> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#adfb642b5e8ecf481d998fea6e2e50761">wrapperB</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a2c3fed2bd762b017d22b6f6863150239">   23</a></span>        <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a2c3fed2bd762b017d22b6f6863150239">linearNormalA</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a78c82226fd8fcfd7d2d94a5863037130">   25</a></span>        <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a78c82226fd8fcfd7d2d94a5863037130">linearNormalB</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a37bb9bc70f891e08e083631a46012ad1">   27</a></span>        <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a37bb9bc70f891e08e083631a46012ad1">torqueA</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a91ff912c8e55cb59f0d05ef1fd4bead1">   29</a></span>        <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a91ff912c8e55cb59f0d05ef1fd4bead1">torqueB</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a89b4d3743978f15a2d12235507c020c8">   31</a></span>        <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a89b4d3743978f15a2d12235507c020c8">angularAxisA</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a174a58be8162d18b69f293a61ce1e319">   33</a></span>        <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a174a58be8162d18b69f293a61ce1e319">angularAxisB</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a630d7857ce2a77d803f7d8de75947f59">   35</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a630d7857ce2a77d803f7d8de75947f59">denomOfImpulse</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#ae75e42f7bddbdfe87b23a63ff63861a8">   37</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#ae75e42f7bddbdfe87b23a63ff63861a8">appliedImpulse</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a7a392b674c610a51af65ceaf026500e7">   39</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a7a392b674c610a51af65ceaf026500e7">velocityImpulse</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#af70f1e72f0f609cad4c5b2e7261623a9">   41</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#af70f1e72f0f609cad4c5b2e7261623a9">penetrationImpulse</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a44527ec580e510df769eb57b2c9d10f4">   43</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a44527ec580e510df769eb57b2c9d10f4">friction</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a88f57ed6f3880735a12343530f79b6fb">   46</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a88f57ed6f3880735a12343530f79b6fb">lowerLimit</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a94e1f684f418806ebd0a9df09227c588">   48</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a94e1f684f418806ebd0a9df09227c588">upperLimit</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#a7c19f807e94657685426355a76b620c8">   51</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#a7c19f807e94657685426355a76b620c8">synchroSolverIndex</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_struct" href="struct_mkpe_1_1_solver_constraint.html">SolverConstraint</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CColliderWrapper&gt;</a> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#ab290c65422c39d0ef0792a22be94cfcc">wrapperA</a>, <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CColliderWrapper&gt;</a> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#adfb642b5e8ecf481d998fea6e2e50761">wrapperB</a>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#aea4de11e90e0a94823c9e2639e81d944">   61</a></span>        <a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>* <a class="code hl_function" href="struct_mkpe_1_1_solver_constraint.html#aea4de11e90e0a94823c9e2639e81d944">GetWrapperA</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#ab290c65422c39d0ef0792a22be94cfcc">wrapperA</a>.Get(); }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_solver_constraint.html#aaaac4e50f69643bb82bedffaaa5786be">   63</a></span>        <a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>* <a class="code hl_function" href="struct_mkpe_1_1_solver_constraint.html#aaaac4e50f69643bb82bedffaaa5786be">GetWrapperB</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_mkpe_1_1_solver_constraint.html#adfb642b5e8ecf481d998fea6e2e50761">wrapperB</a>.Get(); }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    };</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>} <span class="comment">// namespace Mkpe</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">// !__SOLVER_CONSTRAINT_H__</span></div>
+<div class="ttc" id="a_collider_wrapper_8h_html"><div class="ttname"><a href="_collider_wrapper_8h.html">ColliderWrapper.h</a></div><div class="ttdoc">This file handles wrapper class that exists in a 1:1 relationship with a collider.</div></div>
+<div class="ttc" id="a_stable_handle_vector_8h_html"><div class="ttname"><a href="_stable_handle_vector_8h.html">StableHandleVector.h</a></div><div class="ttdoc">This file handles dynamic array capable of generating stable handles.</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html">Mkpe::CColliderWrapper</a></div><div class="ttdoc">Wrapper class that exists in a 1:1 relationship with a collider</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:24</div></div>
+<div class="ttc" id="anamespace_mkpe_html"><div class="ttname"><a href="namespace_mkpe.html">Mkpe</a></div><div class="ttdef"><b>Definition</b> BoudingVolume.h:14</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html">Mkpe::SolverConstraint</a></div><div class="ttdoc">Constraint solver class</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:17</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a174a58be8162d18b69f293a61ce1e319"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a174a58be8162d18b69f293a61ce1e319">Mkpe::SolverConstraint::angularAxisB</a></div><div class="ttdeci">Vector3f angularAxisB</div><div class="ttdoc">Axis of rotation vector for the second collider</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:33</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a2c3fed2bd762b017d22b6f6863150239"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a2c3fed2bd762b017d22b6f6863150239">Mkpe::SolverConstraint::linearNormalA</a></div><div class="ttdeci">Vector3f linearNormalA</div><div class="ttdoc">Normal direction of linear velocity of the first collider</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:23</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a37bb9bc70f891e08e083631a46012ad1"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a37bb9bc70f891e08e083631a46012ad1">Mkpe::SolverConstraint::torqueA</a></div><div class="ttdeci">Vector3f torqueA</div><div class="ttdoc">Torque for the first collider</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:27</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a44527ec580e510df769eb57b2c9d10f4"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a44527ec580e510df769eb57b2c9d10f4">Mkpe::SolverConstraint::friction</a></div><div class="ttdeci">float friction</div><div class="ttdoc">Friction</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:43</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a630d7857ce2a77d803f7d8de75947f59"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a630d7857ce2a77d803f7d8de75947f59">Mkpe::SolverConstraint::denomOfImpulse</a></div><div class="ttdeci">float denomOfImpulse</div><div class="ttdoc">Denominator of impulse</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:35</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a78c82226fd8fcfd7d2d94a5863037130"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a78c82226fd8fcfd7d2d94a5863037130">Mkpe::SolverConstraint::linearNormalB</a></div><div class="ttdeci">Vector3f linearNormalB</div><div class="ttdoc">Normal direction of linear velocity of the second collider</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:25</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a7a392b674c610a51af65ceaf026500e7"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a7a392b674c610a51af65ceaf026500e7">Mkpe::SolverConstraint::velocityImpulse</a></div><div class="ttdeci">float velocityImpulse</div><div class="ttdoc">Impulse required for velocity solving</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:39</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a7c19f807e94657685426355a76b620c8"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a7c19f807e94657685426355a76b620c8">Mkpe::SolverConstraint::synchroSolverIndex</a></div><div class="ttdeci">int synchroSolverIndex</div><div class="ttdoc">Index of the constraint solver to be synchronized with this constraint solver</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:51</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a88f57ed6f3880735a12343530f79b6fb"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a88f57ed6f3880735a12343530f79b6fb">Mkpe::SolverConstraint::lowerLimit</a></div><div class="ttdeci">float lowerLimit</div><div class="ttdoc">Lower limit of friction</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:46</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a89b4d3743978f15a2d12235507c020c8"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a89b4d3743978f15a2d12235507c020c8">Mkpe::SolverConstraint::angularAxisA</a></div><div class="ttdeci">Vector3f angularAxisA</div><div class="ttdoc">Axis of rotation vector for the first collider</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:31</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a91ff912c8e55cb59f0d05ef1fd4bead1"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a91ff912c8e55cb59f0d05ef1fd4bead1">Mkpe::SolverConstraint::torqueB</a></div><div class="ttdeci">Vector3f torqueB</div><div class="ttdoc">Torque for the second collider</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:29</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_a94e1f684f418806ebd0a9df09227c588"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#a94e1f684f418806ebd0a9df09227c588">Mkpe::SolverConstraint::upperLimit</a></div><div class="ttdeci">float upperLimit</div><div class="ttdoc">Upper limit of friction</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:48</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_aaaac4e50f69643bb82bedffaaa5786be"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#aaaac4e50f69643bb82bedffaaa5786be">Mkpe::SolverConstraint::GetWrapperB</a></div><div class="ttdeci">CColliderWrapper * GetWrapperB()</div><div class="ttdoc">Get the second collider wrapper</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:63</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_ab290c65422c39d0ef0792a22be94cfcc"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#ab290c65422c39d0ef0792a22be94cfcc">Mkpe::SolverConstraint::wrapperA</a></div><div class="ttdeci">CWeakPtr&lt; CColliderWrapper &gt; wrapperA</div><div class="ttdoc">Weak pointer to the first collider wrapper</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:19</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_adfb642b5e8ecf481d998fea6e2e50761"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#adfb642b5e8ecf481d998fea6e2e50761">Mkpe::SolverConstraint::wrapperB</a></div><div class="ttdeci">CWeakPtr&lt; CColliderWrapper &gt; wrapperB</div><div class="ttdoc">Weak pointer to the second collider wrapper</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:21</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_ae75e42f7bddbdfe87b23a63ff63861a8"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#ae75e42f7bddbdfe87b23a63ff63861a8">Mkpe::SolverConstraint::appliedImpulse</a></div><div class="ttdeci">float appliedImpulse</div><div class="ttdoc">Total value of impact for contact solving</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:37</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_aea4de11e90e0a94823c9e2639e81d944"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#aea4de11e90e0a94823c9e2639e81d944">Mkpe::SolverConstraint::GetWrapperA</a></div><div class="ttdeci">CColliderWrapper * GetWrapperA()</div><div class="ttdoc">Get the first collider wrapper</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:61</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html_af70f1e72f0f609cad4c5b2e7261623a9"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html#af70f1e72f0f609cad4c5b2e7261623a9">Mkpe::SolverConstraint::penetrationImpulse</a></div><div class="ttdeci">float penetrationImpulse</div><div class="ttdoc">Impulse required for penetration solving</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:41</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 3 &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

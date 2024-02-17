@@ -1,0 +1,490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CImguiHelper クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="class_c_imgui_helper-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CImguiHelper クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Helper class for imgui  
+ <a href="class_c_imgui_helper.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_imgui_helper_8h_source.html">ImguiHelper.h</a>&gt;</code></p>
+<div class="dynheader">
+CImguiHelper の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_imgui_helper__inherit__graph.png" border="0" usemap="#a_c_imgui_helper_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_imgui_helper_inherit__map" id="a_c_imgui_helper_inherit__map">
+<area shape="rect" title="Helper class for imgui" alt="" coords="51,245,149,272"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html" title=" " alt="" coords="20,155,180,197"/>
+<area shape="poly" title=" " alt="" coords="103,213,103,245,97,245,97,213"/>
+<area shape="rect" href="class_a_c_singleton_base.html" title="Abstract singleton base class (CRTP Pattern)" alt="" coords="5,80,195,107"/>
+<area shape="poly" title=" " alt="" coords="103,122,103,154,97,154,97,122"/>
+<area shape="rect" href="class_a_c_release_singleton.html" title="This class is used to control the order and release instance" alt="" coords="30,5,170,32"/>
+<area shape="poly" title=" " alt="" coords="103,48,103,80,97,80,97,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CImguiHelper 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_imgui_helper__coll__graph.png" border="0" usemap="#a_c_imgui_helper_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_imgui_helper_coll__map" id="a_c_imgui_helper_coll__map">
+<area shape="rect" title="Helper class for imgui" alt="" coords="51,245,149,272"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html" title=" " alt="" coords="20,155,180,197"/>
+<area shape="poly" title=" " alt="" coords="103,213,103,245,97,245,97,213"/>
+<area shape="rect" href="class_a_c_singleton_base.html" title="Abstract singleton base class (CRTP Pattern)" alt="" coords="5,80,195,107"/>
+<area shape="poly" title=" " alt="" coords="103,122,103,154,97,154,97,122"/>
+<area shape="rect" href="class_a_c_release_singleton.html" title="This class is used to control the order and release instance" alt="" coords="30,5,170,32"/>
+<area shape="poly" title=" " alt="" coords="103,48,103,80,97,80,97,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_imgui_helper_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feature for thread-safe  <a href="class_c_imgui_helper_1_1_c_thread_safe_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a99a6f06e9a8f66b71cab2c4112d54120" id="r_a99a6f06e9a8f66b71cab2c4112d54120"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_imgui_helper.html#a99a6f06e9a8f66b71cab2c4112d54120">~CImguiHelper</a> ()=default</td></tr>
+<tr class="memdesc:a99a6f06e9a8f66b71cab2c4112d54120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a99a6f06e9a8f66b71cab2c4112d54120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58a9ce2fb4b199cb2c02fc0a251da83" id="r_ac58a9ce2fb4b199cb2c02fc0a251da83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_imgui_helper.html#ac58a9ce2fb4b199cb2c02fc0a251da83">Initialize</a> ()</td></tr>
+<tr class="memdesc:ac58a9ce2fb4b199cb2c02fc0a251da83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize  <br /></td></tr>
+<tr class="separator:ac58a9ce2fb4b199cb2c02fc0a251da83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56b8f268d4d9f3e211b44b800a4269bc" id="r_a56b8f268d4d9f3e211b44b800a4269bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_imgui_helper.html#a56b8f268d4d9f3e211b44b800a4269bc">Draw</a> ()</td></tr>
+<tr class="memdesc:a56b8f268d4d9f3e211b44b800a4269bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing process  <br /></td></tr>
+<tr class="separator:a56b8f268d4d9f3e211b44b800a4269bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_singleton_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_singleton_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase&lt; Derived &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a8d8b17de954dc5525e41886ecae7bf32 inherit pub_methods_class_a_c_singleton_base" id="r_a8d8b17de954dc5525e41886ecae7bf32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a8d8b17de954dc5525e41886ecae7bf32">ACSingletonBase</a> (const <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a8d8b17de954dc5525e41886ecae7bf32 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy constructor  <br /></td></tr>
+<tr class="separator:a8d8b17de954dc5525e41886ecae7bf32 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a0e0b28b71658eb2286408775cfb38 inherit pub_methods_class_a_c_singleton_base" id="r_a01a0e0b28b71658eb2286408775cfb38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a01a0e0b28b71658eb2286408775cfb38">operator=</a> (const <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a01a0e0b28b71658eb2286408775cfb38 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy assignment operator  <br /></td></tr>
+<tr class="separator:a01a0e0b28b71658eb2286408775cfb38 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a770e4789f75386da1facea672ca600 inherit pub_methods_class_a_c_singleton_base" id="r_a4a770e4789f75386da1facea672ca600"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a4a770e4789f75386da1facea672ca600">ACSingletonBase</a> (<a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a4a770e4789f75386da1facea672ca600 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move constructor  <br /></td></tr>
+<tr class="separator:a4a770e4789f75386da1facea672ca600 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e3e7f0438031a182db777945960318 inherit pub_methods_class_a_c_singleton_base" id="r_a86e3e7f0438031a182db777945960318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a86e3e7f0438031a182db777945960318">operator=</a> (<a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a86e3e7f0438031a182db777945960318 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move assignment constructor  <br /></td></tr>
+<tr class="separator:a86e3e7f0438031a182db777945960318 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae38c0128642991ecb8b1c7ddd1e95a28 inherit pub_methods_class_a_c_singleton_base" id="r_ae38c0128642991ecb8b1c7ddd1e95a28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#ae38c0128642991ecb8b1c7ddd1e95a28">DestroyInstance</a> () override final</td></tr>
+<tr class="memdesc:ae38c0128642991ecb8b1c7ddd1e95a28 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard instance  <br /></td></tr>
+<tr class="separator:ae38c0128642991ecb8b1c7ddd1e95a28 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac75c1f8d4eb00682ec5d8a2a34fb4258" id="r_ac75c1f8d4eb00682ec5d8a2a34fb4258"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_imgui_helper_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_imgui_helper.html#ac75c1f8d4eb00682ec5d8a2a34fb4258">GetAny</a> ()</td></tr>
+<tr class="memdesc:ac75c1f8d4eb00682ec5d8a2a34fb4258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get feature for thread-safe  <br /></td></tr>
+<tr class="separator:ac75c1f8d4eb00682ec5d8a2a34fb4258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_a_c_main_thread_singleton"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_a_c_main_thread_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton&lt; CImguiHelper &gt;</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:a89d07f64971fd623dd0a8a7179e17e95 inherit pub_static_methods_class_a_c_main_thread_singleton" id="r_a89d07f64971fd623dd0a8a7179e17e95"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_imgui_helper.html">CImguiHelper</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95">GetMain</a> ()</td></tr>
+<tr class="memdesc:a89d07f64971fd623dd0a8a7179e17e95 inherit pub_static_methods_class_a_c_main_thread_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get singleton instance for main thread  <br /></td></tr>
+<tr class="separator:a89d07f64971fd623dd0a8a7179e17e95 inherit pub_static_methods_class_a_c_main_thread_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton" id="r_a0d6986b9ad7df98f29aa3b24c3c75030"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#a0d6986b9ad7df98f29aa3b24c3c75030">AllRelease</a> ()</td></tr>
+<tr class="memdesc:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release all instance  <br /></td></tr>
+<tr class="separator:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a61ce301a99aa8a082bb478f053049c4e" id="r_a61ce301a99aa8a082bb478f053049c4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_imgui_helper.html#a61ce301a99aa8a082bb478f053049c4e">CImguiHelper</a> ()</td></tr>
+<tr class="memdesc:a61ce301a99aa8a082bb478f053049c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a61ce301a99aa8a082bb478f053049c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b40ed918c5ad284766d22ae58be7074" id="r_a1b40ed918c5ad284766d22ae58be7074"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_imgui_helper.html#a1b40ed918c5ad284766d22ae58be7074">OnDestroy</a> () override</td></tr>
+<tr class="memdesc:a1b40ed918c5ad284766d22ae58be7074"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process to be called at instance destruction  <br /></td></tr>
+<tr class="separator:a1b40ed918c5ad284766d22ae58be7074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_singleton_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_singleton_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase&lt; Derived &gt;</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:afabb6c5e30b347d13b6060914aece186 inherit pro_methods_class_a_c_singleton_base" id="r_afabb6c5e30b347d13b6060914aece186"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#afabb6c5e30b347d13b6060914aece186">ACSingletonBase</a> (int priority)</td></tr>
+<tr class="memdesc:afabb6c5e30b347d13b6060914aece186 inherit pro_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:afabb6c5e30b347d13b6060914aece186 inherit pro_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c96b4c5421f892ec2b31f98405460e1 inherit pro_methods_class_a_c_singleton_base" id="r_a3c96b4c5421f892ec2b31f98405460e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a3c96b4c5421f892ec2b31f98405460e1">~ACSingletonBase</a> () override</td></tr>
+<tr class="memdesc:a3c96b4c5421f892ec2b31f98405460e1 inherit pro_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a3c96b4c5421f892ec2b31f98405460e1 inherit pro_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton" id="r_aecd0a93d3e8f23cbb8d11de90d0153b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#aecd0a93d3e8f23cbb8d11de90d0153b8">ACReleaseSingleton</a> ()=default</td></tr>
+<tr class="memdesc:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton" id="r_a12315284fb54b24483dd1f9812988c8d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#a12315284fb54b24483dd1f9812988c8d">~ACReleaseSingleton</a> ()</td></tr>
+<tr class="memdesc:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a3273bd1fe91a2694d70da9c751511d0b" id="r_a3273bd1fe91a2694d70da9c751511d0b"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_imgui_helper.html#a3273bd1fe91a2694d70da9c751511d0b">ACSingletonBase</a></td></tr>
+<tr class="separator:a3273bd1fe91a2694d70da9c751511d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_static_methods_class_a_c_singleton_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_class_a_c_singleton_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase&lt; Derived &gt;</a> に属する継承静的限定公開メンバ関数</td></tr>
+<tr class="memitem:a86122d51b9f611ffbc300eb790c3dabf inherit pro_static_methods_class_a_c_singleton_base" id="r_a86122d51b9f611ffbc300eb790c3dabf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_unique_ptr.html">CUniquePtr</a>&lt; Derived &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a> ()</td></tr>
+<tr class="memdesc:a86122d51b9f611ffbc300eb790c3dabf inherit pro_static_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get singleton instance  <br /></td></tr>
+<tr class="separator:a86122d51b9f611ffbc300eb790c3dabf inherit pro_static_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承静的限定公開メンバ関数</td></tr>
+<tr class="memitem:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton" id="r_abcb065418ac7352ba6390d676a72cc52"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#abcb065418ac7352ba6390d676a72cc52">AddInstanceToArray</a> (int priority, <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> *instance)</td></tr>
+<tr class="memdesc:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the created instance to the array  <br /></td></tr>
+<tr class="separator:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton" id="r_ae432066358bb5bc8e42db6ae2e9f29aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#ae432066358bb5bc8e42db6ae2e9f29aa">RemoveInstanceToArray</a> (<a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> *instance)</td></tr>
+<tr class="memdesc:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the instance in the array  <br /></td></tr>
+<tr class="separator:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Helper class for imgui </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a99a6f06e9a8f66b71cab2c4112d54120" name="a99a6f06e9a8f66b71cab2c4112d54120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a6f06e9a8f66b71cab2c4112d54120">&#9670;&#160;</a></span>~CImguiHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CImguiHelper::~CImguiHelper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<a id="a61ce301a99aa8a082bb478f053049c4e" name="a61ce301a99aa8a082bb478f053049c4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ce301a99aa8a082bb478f053049c4e">&#9670;&#160;</a></span>CImguiHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CImguiHelper::CImguiHelper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a56b8f268d4d9f3e211b44b800a4269bc" name="a56b8f268d4d9f3e211b44b800a4269bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56b8f268d4d9f3e211b44b800a4269bc">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CImguiHelper::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Drawing process </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_imgui_helper_a56b8f268d4d9f3e211b44b800a4269bc_cgraph.png" border="0" usemap="#aclass_c_imgui_helper_a56b8f268d4d9f3e211b44b800a4269bc_cgraph" alt=""/></div>
+<map name="aclass_c_imgui_helper_a56b8f268d4d9f3e211b44b800a4269bc_cgraph" id="aclass_c_imgui_helper_a56b8f268d4d9f3e211b44b800a4269bc_cgraph">
+<area shape="rect" title="Drawing process" alt="" coords="5,72,141,99"/>
+<area shape="rect" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52" title="Get command list for graphics" alt="" coords="189,64,409,107"/>
+<area shape="poly" title=" " alt="" coords="141,83,173,83,173,88,141,88"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="476,5,652,48"/>
+<area shape="poly" title=" " alt="" coords="113,69,188,49,330,32,460,25,461,30,331,37,189,55,115,74"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a51004cc6c485a6c0475dbf341a5f6ce7" title="Get Descriptor heap address" alt="" coords="210,131,388,173"/>
+<area shape="poly" title=" " alt="" coords="122,97,210,123,209,128,120,102"/>
+<area shape="poly" title=" " alt="" coords="398,61,460,47,461,52,399,66"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="457,72,671,115"/>
+<area shape="poly" title=" " alt="" coords="410,86,441,87,441,92,410,91"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_imgui_helper_a56b8f268d4d9f3e211b44b800a4269bc_icgraph.png" border="0" usemap="#aclass_c_imgui_helper_a56b8f268d4d9f3e211b44b800a4269bc_icgraph" alt=""/></div>
+<map name="aclass_c_imgui_helper_a56b8f268d4d9f3e211b44b800a4269bc_icgraph" id="aclass_c_imgui_helper_a56b8f268d4d9f3e211b44b800a4269bc_icgraph">
+<area shape="rect" title="Drawing process" alt="" coords="503,29,639,56"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="264,21,455,64"/>
+<area shape="poly" title=" " alt="" coords="488,45,456,45,456,40,488,40"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,29,216,56"/>
+<area shape="poly" title=" " alt="" coords="248,45,216,45,216,40,248,40"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+<area shape="poly" title=" " alt="" coords="51,16,44,10,30,8,17,10,10,14,8,20,12,28,7,30,3,21,6,11,15,5,30,3,46,5,55,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac75c1f8d4eb00682ec5d8a2a34fb4258" name="ac75c1f8d4eb00682ec5d8a2a34fb4258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac75c1f8d4eb00682ec5d8a2a34fb4258">&#9670;&#160;</a></span>GetAny()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_c_imgui_helper_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> &amp; CImguiHelper::GetAny </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get feature for thread-safe </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_imgui_helper_ac75c1f8d4eb00682ec5d8a2a34fb4258_cgraph.png" border="0" usemap="#aclass_c_imgui_helper_ac75c1f8d4eb00682ec5d8a2a34fb4258_cgraph" alt=""/></div>
+<map name="aclass_c_imgui_helper_ac75c1f8d4eb00682ec5d8a2a34fb4258_cgraph" id="aclass_c_imgui_helper_ac75c1f8d4eb00682ec5d8a2a34fb4258_cgraph">
+<area shape="rect" title="Get feature for thread&#45;safe" alt="" coords="5,5,156,32"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="204,5,412,32"/>
+<area shape="poly" title=" " alt="" coords="156,16,188,16,188,21,156,21"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_imgui_helper_ac75c1f8d4eb00682ec5d8a2a34fb4258_icgraph.png" border="0" usemap="#aclass_c_imgui_helper_ac75c1f8d4eb00682ec5d8a2a34fb4258_icgraph" alt=""/></div>
+<map name="aclass_c_imgui_helper_ac75c1f8d4eb00682ec5d8a2a34fb4258_icgraph" id="aclass_c_imgui_helper_ac75c1f8d4eb00682ec5d8a2a34fb4258_icgraph">
+<area shape="rect" title="Get feature for thread&#45;safe" alt="" coords="482,31,633,57"/>
+<area shape="rect" href="class_c_scene_registry.html#ad72346dc806d894e2ec6335f02250971" title="Initialize" alt="" coords="264,5,434,32"/>
+<area shape="poly" title=" " alt="" coords="467,36,434,32,435,26,467,30"/>
+<area shape="rect" href="class_c_app_clock.html#a6a2be32605bc5aac99b711b236cfad2f" title="Initialize" alt="" coords="279,56,420,83"/>
+<area shape="poly" title=" " alt="" coords="467,58,421,63,420,58,467,52"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,31,216,57"/>
+<area shape="poly" title=" " alt="" coords="249,35,217,39,216,34,248,29"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="51,17,44,12,30,9,17,11,10,16,8,22,12,29,7,31,3,22,6,13,15,6,30,4,46,7,55,13"/>
+<area shape="poly" title=" " alt="" coords="263,61,216,54,217,49,263,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac58a9ce2fb4b199cb2c02fc0a251da83" name="ac58a9ce2fb4b199cb2c02fc0a251da83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac58a9ce2fb4b199cb2c02fc0a251da83">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CImguiHelper::Initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_imgui_helper_ac58a9ce2fb4b199cb2c02fc0a251da83_cgraph.png" border="0" usemap="#aclass_c_imgui_helper_ac58a9ce2fb4b199cb2c02fc0a251da83_cgraph" alt=""/></div>
+<map name="aclass_c_imgui_helper_ac58a9ce2fb4b199cb2c02fc0a251da83_cgraph" id="aclass_c_imgui_helper_ac58a9ce2fb4b199cb2c02fc0a251da83_cgraph">
+<area shape="rect" title="Initialize" alt="" coords="5,107,159,133"/>
+<area shape="rect" href="class_c_descriptor_heap.html#aecbd2207fc5a4526ef13ca74eca53dc8" title="Create descriptor heap" alt="" coords="230,5,396,32"/>
+<area shape="poly" title=" " alt="" coords="103,104,149,76,206,48,243,35,244,40,208,53,152,81,106,109"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="483,67,629,93"/>
+<area shape="poly" title=" " alt="" coords="141,103,206,92,344,81,467,77,468,82,344,86,207,97,142,109"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="207,157,419,184"/>
+<area shape="poly" title=" " alt="" coords="147,131,235,151,234,156,146,137"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a6a6b26f0fe19ceafd6c9150e5423e4fc" title="Get CPU handle for descriptor heap" alt="" coords="207,107,419,133"/>
+<area shape="poly" title=" " alt="" coords="159,117,191,117,191,123,159,123"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a0b2f130a86a6ebbd8642b96c1d9fef31" title="Get Descriptor heap" alt="" coords="224,208,402,235"/>
+<area shape="poly" title=" " alt="" coords="103,132,149,163,208,194,227,201,225,206,206,198,146,167,100,136"/>
+<area shape="poly" title=" " alt="" coords="369,30,486,60,485,65,368,35"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="693,67,902,93"/>
+<area shape="poly" title=" " alt="" coords="630,77,678,77,678,83,630,83"/>
+<area shape="poly" title=" " alt="" coords="384,154,418,143,442,129,466,114,502,97,504,102,468,118,445,134,420,148,386,159"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="467,128,645,171"/>
+<area shape="poly" title=" " alt="" coords="419,159,451,156,452,161,419,164"/>
+<area shape="poly" title=" " alt="" coords="398,103,468,92,469,97,399,109"/>
+<area shape="poly" title=" " alt="" coords="420,130,452,134,451,139,419,135"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_imgui_helper_ac58a9ce2fb4b199cb2c02fc0a251da83_icgraph.png" border="0" usemap="#aclass_c_imgui_helper_ac58a9ce2fb4b199cb2c02fc0a251da83_icgraph" alt=""/></div>
+<map name="aclass_c_imgui_helper_ac58a9ce2fb4b199cb2c02fc0a251da83_icgraph" id="aclass_c_imgui_helper_ac58a9ce2fb4b199cb2c02fc0a251da83_icgraph">
+<area shape="rect" title="Initialize" alt="" coords="264,29,417,56"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,29,216,56"/>
+<area shape="poly" title=" " alt="" coords="248,45,216,45,216,40,248,40"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+<area shape="poly" title=" " alt="" coords="51,16,44,10,30,8,17,10,10,14,8,20,12,28,7,30,3,21,6,11,15,5,30,3,46,5,55,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1b40ed918c5ad284766d22ae58be7074" name="a1b40ed918c5ad284766d22ae58be7074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b40ed918c5ad284766d22ae58be7074">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CImguiHelper::OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Process to be called at instance destruction </p>
+
+<p><a class="el" href="class_a_c_singleton_base.html#ac7d9da3719c71c9a6e34cdf6a74b7128">ACSingletonBase&lt; Derived &gt;</a>を再実装しています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="a3273bd1fe91a2694d70da9c751511d0b" name="a3273bd1fe91a2694d70da9c751511d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3273bd1fe91a2694d70da9c751511d0b">&#9670;&#160;</a></span>ACSingletonBase</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_imgui_helper_8h_source.html">ImguiHelper.h</a></li>
+<li><a class="el" href="_imgui_helper_8cpp.html">ImguiHelper.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

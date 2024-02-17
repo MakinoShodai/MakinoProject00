@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: UpdateMode.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">UpdateMode.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_update_mode_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __UPDATE_MODE_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __UPDATE_MODE_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_bit_8h.html">UtilityForBit.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_update_mode_8h.html#a622dc7700a53f07696aa3ec440ab4c77">   15</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_update_mode_8h.html#a622dc7700a53f07696aa3ec440ab4c77">UpdateModeType</a> = UINT32;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">   23</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a> : <a class="code hl_typedef" href="_update_mode_8h.html#a622dc7700a53f07696aa3ec440ab4c77">UpdateModeType</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_enumvalue" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7abbb93ef26e3c101ff11cdd21cab08a94">Null</a> = 0,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_enumvalue" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7aa603905470e2a5b8c13e96b579ef0dba">Debug</a> = 1 &lt;&lt; 1,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_enumvalue" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7aa4ecfc70574394990cf17bd83df499f7">Event</a> = 1 &lt;&lt; 2,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="_update_mode_8h.html#ab6cf7067016a110cb81aaca4f28ea7ea">   31</a></span><a class="code hl_define" href="_utility_for_bit_8h.html#ab59a3957da16b45b8ca190b12624bc3c">ENUM_TO_BITFLAG</a>(<a class="code hl_enumeration" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a>); <span class="comment">// Support for bit operation</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif </span><span class="comment">// !__UPDATE_MODE_H__</span></div>
+<div class="ttc" id="a_update_mode_8h_html_a622dc7700a53f07696aa3ec440ab4c77"><div class="ttname"><a href="_update_mode_8h.html#a622dc7700a53f07696aa3ec440ab4c77">UpdateModeType</a></div><div class="ttdeci">UINT32 UpdateModeType</div><div class="ttdoc">Type of scene update mode</div><div class="ttdef"><b>Definition</b> UpdateMode.h:15</div></div>
+<div class="ttc" id="a_update_mode_8h_html_aaacfee37fc3e36ca82bc4998d40036b7"><div class="ttname"><a href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a></div><div class="ttdeci">UpdateMode</div><div class="ttdoc">Update mode of scene While update mode is in effect, any updating process are not performed except fo...</div><div class="ttdef"><b>Definition</b> UpdateMode.h:23</div></div>
+<div class="ttc" id="a_update_mode_8h_html_aaacfee37fc3e36ca82bc4998d40036b7aa4ecfc70574394990cf17bd83df499f7"><div class="ttname"><a href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7aa4ecfc70574394990cf17bd83df499f7">UpdateMode::Event</a></div><div class="ttdeci">@ Event</div><div class="ttdoc">Event mode</div></div>
+<div class="ttc" id="a_update_mode_8h_html_aaacfee37fc3e36ca82bc4998d40036b7aa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7aa603905470e2a5b8c13e96b579ef0dba">UpdateMode::Debug</a></div><div class="ttdeci">@ Debug</div><div class="ttdoc">Debug mode</div></div>
+<div class="ttc" id="a_update_mode_8h_html_aaacfee37fc3e36ca82bc4998d40036b7abbb93ef26e3c101ff11cdd21cab08a94"><div class="ttname"><a href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7abbb93ef26e3c101ff11cdd21cab08a94">UpdateMode::Null</a></div><div class="ttdeci">@ Null</div><div class="ttdoc">No mode</div></div>
+<div class="ttc" id="a_utility_for_bit_8h_html"><div class="ttname"><a href="_utility_for_bit_8h.html">UtilityForBit.h</a></div><div class="ttdoc">This file defines utility functions that are useful for bit operations.</div></div>
+<div class="ttc" id="a_utility_for_bit_8h_html_ab59a3957da16b45b8ca190b12624bc3c"><div class="ttname"><a href="_utility_for_bit_8h.html#ab59a3957da16b45b8ca190b12624bc3c">ENUM_TO_BITFLAG</a></div><div class="ttdeci">#define ENUM_TO_BITFLAG(T)</div><div class="ttdoc">Change Enum to bit flag</div><div class="ttdef"><b>Definition</b> UtilityForBit.h:38</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

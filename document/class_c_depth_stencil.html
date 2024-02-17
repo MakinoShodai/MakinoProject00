@@ -1,0 +1,781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CDepthStencil クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="class_c_depth_stencil-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CDepthStencil クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Depth stencil class  
+ <a href="class_c_depth_stencil.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_depth_stencil_8h_source.html">DepthStencil.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a0b3ab131ba9b8b6844d9e3e1d5f67422" id="r_a0b3ab131ba9b8b6844d9e3e1d5f67422"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#a0b3ab131ba9b8b6844d9e3e1d5f67422">CDepthStencil</a> ()=default</td></tr>
+<tr class="memdesc:a0b3ab131ba9b8b6844d9e3e1d5f67422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a0b3ab131ba9b8b6844d9e3e1d5f67422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af6eb1638d49ccdb656b52f3c38c74b" id="r_a6af6eb1638d49ccdb656b52f3c38c74b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#a6af6eb1638d49ccdb656b52f3c38c74b">~CDepthStencil</a> ()=default</td></tr>
+<tr class="memdesc:a6af6eb1638d49ccdb656b52f3c38c74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a6af6eb1638d49ccdb656b52f3c38c74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa888ba8b968ee7aac9453f0311e7f0" id="r_a7aa888ba8b968ee7aac9453f0311e7f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#a7aa888ba8b968ee7aac9453f0311e7f0">Create</a> (DXGI_FORMAT format, UINT width, UINT height, D3D12_DEPTH_STENCIL_VALUE defaultClearValue={ 1.0f, 0})</td></tr>
+<tr class="memdesc:a7aa888ba8b968ee7aac9453f0311e7f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create depth stencil resource  <br /></td></tr>
+<tr class="separator:a7aa888ba8b968ee7aac9453f0311e7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8502d294033cd2322eebbad294dd0e5" id="r_ae8502d294033cd2322eebbad294dd0e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#ae8502d294033cd2322eebbad294dd0e5">Clear</a> (D3D12_DEPTH_STENCIL_VALUE clearValue={ 1.0f, 0 }, D3D12_CLEAR_FLAGS clearFlag=D3D12_CLEAR_FLAG_DEPTH|D3D12_CLEAR_FLAG_STENCIL)</td></tr>
+<tr class="memdesc:ae8502d294033cd2322eebbad294dd0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the depth stencil  <br /></td></tr>
+<tr class="separator:ae8502d294033cd2322eebbad294dd0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30f2385fa2249d053cc52a94589744a" id="r_ac30f2385fa2249d053cc52a94589744a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#ac30f2385fa2249d053cc52a94589744a">Apply</a> ()</td></tr>
+<tr class="memdesc:ac30f2385fa2249d053cc52a94589744a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply this depth stencil to the destination depth stencil by calling 'OMSetRenderTargets'  <br /></td></tr>
+<tr class="separator:ac30f2385fa2249d053cc52a94589744a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23db9d064a5f179b265bb334e1d62b7a" id="r_a23db9d064a5f179b265bb334e1d62b7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#a23db9d064a5f179b265bb334e1d62b7a">CheckStateAtApplying</a> ()</td></tr>
+<tr class="memdesc:a23db9d064a5f179b265bb334e1d62b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">State check process to be called when applying a destination for drawing  <br /></td></tr>
+<tr class="separator:a23db9d064a5f179b265bb334e1d62b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeff77a7c5e6ec2e58975e8159d8b12d" id="r_aaeff77a7c5e6ec2e58975e8159d8b12d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#aaeff77a7c5e6ec2e58975e8159d8b12d">GetSRVPropertyHandleForDepth</a> ()</td></tr>
+<tr class="memdesc:aaeff77a7c5e6ec2e58975e8159d8b12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SRV property handle for depth buffer  <br /></td></tr>
+<tr class="separator:aaeff77a7c5e6ec2e58975e8159d8b12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa535634218a044edc32d78f57670649f" id="r_aa535634218a044edc32d78f57670649f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#aa535634218a044edc32d78f57670649f">GetSRVPropertyHandleForStencil</a> ()</td></tr>
+<tr class="memdesc:aa535634218a044edc32d78f57670649f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SRV property handle for stencil buffer  <br /></td></tr>
+<tr class="separator:aa535634218a044edc32d78f57670649f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47b541d3b6156101a273d5d41978b3d" id="r_aa47b541d3b6156101a273d5d41978b3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#aa47b541d3b6156101a273d5d41978b3d">GetCPUHandleDSV</a> () const</td></tr>
+<tr class="memdesc:aa47b541d3b6156101a273d5d41978b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get CPU handle for dsv descriptor heap  <br /></td></tr>
+<tr class="separator:aa47b541d3b6156101a273d5d41978b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf2a84407e0b3ca6ad1ae02034009337" id="r_aaf2a84407e0b3ca6ad1ae02034009337"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#aaf2a84407e0b3ca6ad1ae02034009337">GetCPUHandleSRVForDepth</a> () const</td></tr>
+<tr class="memdesc:aaf2a84407e0b3ca6ad1ae02034009337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get CPU handle for srv descriptor heap for depth buffer  <br /></td></tr>
+<tr class="separator:aaf2a84407e0b3ca6ad1ae02034009337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be37c5dad39bc97c3229a5db5e7b14f" id="r_a7be37c5dad39bc97c3229a5db5e7b14f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#a7be37c5dad39bc97c3229a5db5e7b14f">GetCPUHandleSRVForStencil</a> () const</td></tr>
+<tr class="memdesc:a7be37c5dad39bc97c3229a5db5e7b14f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get CPU handle for srv descriptor heap for stencil buffer  <br /></td></tr>
+<tr class="separator:a7be37c5dad39bc97c3229a5db5e7b14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1dc25468f778431258986e0251ccaed" id="r_af1dc25468f778431258986e0251ccaed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#af1dc25468f778431258986e0251ccaed">StateTransition</a> (D3D12_RESOURCE_STATES state)</td></tr>
+<tr class="memdesc:af1dc25468f778431258986e0251ccaed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transition resource state  <br /></td></tr>
+<tr class="separator:af1dc25468f778431258986e0251ccaed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a398604ec3ce19d942b6bd77de1a01851" id="r_a398604ec3ce19d942b6bd77de1a01851"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_depth_stencil.html">CDepthStencil</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_depth_stencil.html#a398604ec3ce19d942b6bd77de1a01851">GetCurrentAppliedDepthStencil</a> ()</td></tr>
+<tr class="memdesc:a398604ec3ce19d942b6bd77de1a01851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to current applied depth stencil  <br /></td></tr>
+<tr class="separator:a398604ec3ce19d942b6bd77de1a01851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Depth stencil class </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a0b3ab131ba9b8b6844d9e3e1d5f67422" name="a0b3ab131ba9b8b6844d9e3e1d5f67422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3ab131ba9b8b6844d9e3e1d5f67422">&#9670;&#160;</a></span>CDepthStencil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDepthStencil::CDepthStencil </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="a6af6eb1638d49ccdb656b52f3c38c74b" name="a6af6eb1638d49ccdb656b52f3c38c74b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af6eb1638d49ccdb656b52f3c38c74b">&#9670;&#160;</a></span>~CDepthStencil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDepthStencil::~CDepthStencil </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ac30f2385fa2249d053cc52a94589744a" name="ac30f2385fa2249d053cc52a94589744a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30f2385fa2249d053cc52a94589744a">&#9670;&#160;</a></span>Apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDepthStencil::Apply </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply this depth stencil to the destination depth stencil by calling 'OMSetRenderTargets' </p>
+<p>If this function is called, RTV is not used </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_ac30f2385fa2249d053cc52a94589744a_cgraph.png" border="0" usemap="#aclass_c_depth_stencil_ac30f2385fa2249d053cc52a94589744a_cgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_ac30f2385fa2249d053cc52a94589744a_cgraph" id="aclass_c_depth_stencil_ac30f2385fa2249d053cc52a94589744a_cgraph">
+<area shape="rect" title="Apply this depth stencil to the destination depth stencil by calling &#39;OMSetRenderTargets&#39;" alt="" coords="5,97,151,124"/>
+<area shape="rect" href="class_c_depth_stencil.html#a23db9d064a5f179b265bb334e1d62b7a" title="State check process to be called when applying a destination for drawing" alt="" coords="222,5,403,48"/>
+<area shape="poly" title=" " alt="" coords="108,94,198,58,218,51,220,56,200,62,110,99"/>
+<area shape="rect" href="class_c_depth_stencil.html#aa47b541d3b6156101a273d5d41978b3d" title="Get CPU handle for dsv descriptor heap" alt="" coords="199,72,426,99"/>
+<area shape="poly" title=" " alt="" coords="150,100,183,97,183,102,151,106"/>
+<area shape="rect" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52" title="Get command list for graphics" alt="" coords="202,173,423,216"/>
+<area shape="poly" title=" " alt="" coords="118,122,200,152,236,165,234,170,198,157,116,127"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="493,119,669,161"/>
+<area shape="poly" title=" " alt="" coords="151,112,478,131,477,137,151,118"/>
+<area shape="rect" href="class_c_depth_stencil.html#af1dc25468f778431258986e0251ccaed" title="Transition resource state" alt="" coords="482,13,681,40"/>
+<area shape="poly" title=" " alt="" coords="403,24,466,24,466,29,403,29"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="476,68,687,95"/>
+<area shape="poly" title=" " alt="" coords="427,81,460,80,460,86,427,86"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="752,39,899,65"/>
+<area shape="poly" title=" " alt="" coords="687,66,737,60,737,65,688,71"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="736,89,915,132"/>
+<area shape="poly" title=" " alt="" coords="688,91,721,95,721,101,687,97"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="963,39,1171,65"/>
+<area shape="poly" title=" " alt="" coords="899,49,947,49,947,55,899,55"/>
+<area shape="poly" title=" " alt="" coords="420,170,477,158,478,164,421,175"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="474,185,688,228"/>
+<area shape="poly" title=" " alt="" coords="423,197,458,199,458,204,423,202"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_ac30f2385fa2249d053cc52a94589744a_icgraph.png" border="0" usemap="#aclass_c_depth_stencil_ac30f2385fa2249d053cc52a94589744a_icgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_ac30f2385fa2249d053cc52a94589744a_icgraph" id="aclass_c_depth_stencil_ac30f2385fa2249d053cc52a94589744a_icgraph">
+<area shape="rect" title="Apply this depth stencil to the destination depth stencil by calling &#39;OMSetRenderTargets&#39;" alt="" coords="207,13,352,40"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="5,5,159,48"/>
+<area shape="poly" title=" " alt="" coords="191,29,159,29,159,24,191,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a23db9d064a5f179b265bb334e1d62b7a" name="a23db9d064a5f179b265bb334e1d62b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23db9d064a5f179b265bb334e1d62b7a">&#9670;&#160;</a></span>CheckStateAtApplying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDepthStencil::CheckStateAtApplying </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>State check process to be called when applying a destination for drawing </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_a23db9d064a5f179b265bb334e1d62b7a_cgraph.png" border="0" usemap="#aclass_c_depth_stencil_a23db9d064a5f179b265bb334e1d62b7a_cgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_a23db9d064a5f179b265bb334e1d62b7a_cgraph" id="aclass_c_depth_stencil_a23db9d064a5f179b265bb334e1d62b7a_cgraph">
+<area shape="rect" title="State check process to be called when applying a destination for drawing" alt="" coords="5,5,186,48"/>
+<area shape="rect" href="class_c_depth_stencil.html#af1dc25468f778431258986e0251ccaed" title="Transition resource state" alt="" coords="234,13,433,40"/>
+<area shape="poly" title=" " alt="" coords="186,24,218,24,218,29,186,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_a23db9d064a5f179b265bb334e1d62b7a_icgraph.png" border="0" usemap="#aclass_c_depth_stencil_a23db9d064a5f179b265bb334e1d62b7a_icgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_a23db9d064a5f179b265bb334e1d62b7a_icgraph" id="aclass_c_depth_stencil_a23db9d064a5f179b265bb334e1d62b7a_icgraph">
+<area shape="rect" title="State check process to be called when applying a destination for drawing" alt="" coords="709,31,889,73"/>
+<area shape="rect" href="class_c_depth_stencil.html#ac30f2385fa2249d053cc52a94589744a" title="Apply this depth stencil to the destination depth stencil by calling &#39;OMSetRenderTargets&#39;" alt="" coords="509,13,655,40"/>
+<area shape="poly" title=" " alt="" coords="693,42,654,38,655,32,694,37"/>
+<area shape="rect" href="class_a_c_render_target.html#a40d00574c158fad570c77ffed5365e3a" title="Apply this render target to the destination render target by calling &#39;OMSetRenderTargets&#39;" alt="" coords="503,64,661,91"/>
+<area shape="poly" title=" " alt="" coords="694,67,661,71,661,65,693,62"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="283,5,436,48"/>
+<area shape="poly" title=" " alt="" coords="494,29,437,29,437,24,494,24"/>
+<area shape="poly" title=" " alt="" coords="505,63,436,47,437,42,506,57"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="264,72,455,115"/>
+<area shape="poly" title=" " alt="" coords="488,87,456,89,456,84,488,81"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,80,216,107"/>
+<area shape="poly" title=" " alt="" coords="248,96,216,96,216,91,248,91"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,80,55,107"/>
+<area shape="poly" title=" " alt="" coords="87,96,55,96,55,91,87,91"/>
+<area shape="poly" title=" " alt="" coords="51,67,44,61,30,59,17,61,10,65,8,71,12,78,7,81,3,71,6,62,15,56,30,53,46,56,55,63"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae8502d294033cd2322eebbad294dd0e5" name="ae8502d294033cd2322eebbad294dd0e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8502d294033cd2322eebbad294dd0e5">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDepthStencil::Clear </td>
+          <td>(</td>
+          <td class="paramtype">D3D12_DEPTH_STENCIL_VALUE&#160;</td>
+          <td class="paramname"><em>clearValue</em> = <code>{&#160;1.0f,&#160;0&#160;}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3D12_CLEAR_FLAGS&#160;</td>
+          <td class="paramname"><em>clearFlag</em> = <code>D3D12_CLEAR_FLAG_DEPTH&#160;|&#160;D3D12_CLEAR_FLAG_STENCIL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear the depth stencil </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clearValue</td><td>Clear value </td></tr>
+    <tr><td class="paramname">clearFlag</td><td>Clear mask </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_ae8502d294033cd2322eebbad294dd0e5_cgraph.png" border="0" usemap="#aclass_c_depth_stencil_ae8502d294033cd2322eebbad294dd0e5_cgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_ae8502d294033cd2322eebbad294dd0e5_cgraph" id="aclass_c_depth_stencil_ae8502d294033cd2322eebbad294dd0e5_cgraph">
+<area shape="rect" title="Clear the depth stencil" alt="" coords="5,120,148,147"/>
+<area shape="rect" href="class_c_depth_stencil.html#aa47b541d3b6156101a273d5d41978b3d" title="Get CPU handle for dsv descriptor heap" alt="" coords="196,39,423,65"/>
+<area shape="poly" title=" " alt="" coords="109,117,195,83,242,68,244,73,197,88,110,122"/>
+<area shape="rect" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52" title="Get command list for graphics" alt="" coords="199,141,420,184"/>
+<area shape="poly" title=" " alt="" coords="148,140,184,144,183,149,148,145"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="490,85,666,128"/>
+<area shape="poly" title=" " alt="" coords="148,127,474,109,474,115,148,132"/>
+<area shape="rect" href="class_c_depth_stencil.html#af1dc25468f778431258986e0251ccaed" title="Transition resource state" alt="" coords="210,208,409,235"/>
+<area shape="poly" title=" " alt="" coords="101,145,144,170,197,194,220,201,218,206,195,198,142,174,98,150"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="473,35,684,61"/>
+<area shape="poly" title=" " alt="" coords="424,48,457,47,457,52,424,53"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="749,5,896,32"/>
+<area shape="poly" title=" " alt="" coords="684,33,734,27,734,32,685,38"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="733,56,912,99"/>
+<area shape="poly" title=" " alt="" coords="685,58,718,62,718,67,684,63"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="960,5,1168,32"/>
+<area shape="poly" title=" " alt="" coords="896,16,944,16,944,21,896,21"/>
+<area shape="poly" title=" " alt="" coords="415,138,474,126,475,131,416,143"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="471,152,685,195"/>
+<area shape="poly" title=" " alt="" coords="420,164,455,166,455,171,420,170"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_ae8502d294033cd2322eebbad294dd0e5_icgraph.png" border="0" usemap="#aclass_c_depth_stencil_ae8502d294033cd2322eebbad294dd0e5_icgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_ae8502d294033cd2322eebbad294dd0e5_icgraph" id="aclass_c_depth_stencil_ae8502d294033cd2322eebbad294dd0e5_icgraph">
+<area shape="rect" title="Clear the depth stencil" alt="" coords="207,13,349,40"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="5,5,159,48"/>
+<area shape="poly" title=" " alt="" coords="191,29,159,29,159,24,191,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7aa888ba8b968ee7aac9453f0311e7f0" name="a7aa888ba8b968ee7aac9453f0311e7f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aa888ba8b968ee7aac9453f0311e7f0">&#9670;&#160;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDepthStencil::Create </td>
+          <td>(</td>
+          <td class="paramtype">DXGI_FORMAT&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3D12_DEPTH_STENCIL_VALUE&#160;</td>
+          <td class="paramname"><em>defaultClearValue</em> = <code>{&#160;1.0f,&#160;0}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create depth stencil resource </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Depth stencil format </td></tr>
+    <tr><td class="paramname">width</td><td>Width of render target </td></tr>
+    <tr><td class="paramname">height</td><td>Height of render target </td></tr>
+    <tr><td class="paramname">defaultClearValue</td><td>Default clear value. If this value is used at clear process, processing is optimized </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_a7aa888ba8b968ee7aac9453f0311e7f0_cgraph.png" border="0" usemap="#aclass_c_depth_stencil_a7aa888ba8b968ee7aac9453f0311e7f0_cgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_a7aa888ba8b968ee7aac9453f0311e7f0_cgraph" id="aclass_c_depth_stencil_a7aa888ba8b968ee7aac9453f0311e7f0_cgraph">
+<area shape="rect" title="Create depth stencil resource" alt="" coords="5,136,156,163"/>
+<area shape="rect" href="class_c_descriptor_heap.html#aecbd2207fc5a4526ef13ca74eca53dc8" title="Create descriptor heap" alt="" coords="227,5,392,32"/>
+<area shape="poly" title=" " alt="" coords="93,134,139,92,170,69,202,48,233,35,235,40,205,53,173,73,143,96,97,138"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="479,52,625,79"/>
+<area shape="poly" title=" " alt="" coords="105,133,150,111,203,92,270,78,339,69,463,62,464,67,340,74,271,83,204,97,152,116,107,138"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="204,107,415,133"/>
+<area shape="poly" title=" " alt="" coords="156,137,188,133,188,138,156,142"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325" title="DirectX device getter" alt="" coords="221,157,398,200"/>
+<area shape="poly" title=" " alt="" coords="156,156,206,163,206,168,156,162"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a0d15ed4211b1e3b86230bb15af25218b" title="Get weak ptr" alt="" coords="237,224,382,267"/>
+<area shape="poly" title=" " alt="" coords="107,161,205,210,223,217,221,222,203,214,105,166"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a553fe022564762ba24fe35296d41dd77" title="Make unique pointer" alt="" coords="237,291,382,333"/>
+<area shape="poly" title=" " alt="" coords="93,162,137,217,169,249,205,276,224,286,221,291,202,281,166,253,133,221,89,165"/>
+<area shape="poly" title=" " alt="" coords="383,30,464,46,463,51,382,35"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="689,52,898,79"/>
+<area shape="poly" title=" " alt="" coords="626,63,674,63,674,68,626,68"/>
+<area shape="poly" title=" " alt="" coords="371,103,474,80,475,85,372,109"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="463,103,641,145"/>
+<area shape="poly" title=" " alt="" coords="416,119,447,120,447,125,416,124"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_a7aa888ba8b968ee7aac9453f0311e7f0_icgraph.png" border="0" usemap="#aclass_c_depth_stencil_a7aa888ba8b968ee7aac9453f0311e7f0_icgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_a7aa888ba8b968ee7aac9453f0311e7f0_icgraph" id="aclass_c_depth_stencil_a7aa888ba8b968ee7aac9453f0311e7f0_icgraph">
+<area shape="rect" title="Create depth stencil resource" alt="" coords="207,13,357,40"/>
+<area shape="rect" href="class_c_standard_render_pass.html#a9c6b08c098524379f6d3877a4a06c228" title="Start processing" alt="" coords="5,5,159,48"/>
+<area shape="poly" title=" " alt="" coords="191,29,159,29,159,24,191,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa47b541d3b6156101a273d5d41978b3d" name="aa47b541d3b6156101a273d5d41978b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa47b541d3b6156101a273d5d41978b3d">&#9670;&#160;</a></span>GetCPUHandleDSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> CDepthStencil::GetCPUHandleDSV </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get CPU handle for dsv descriptor heap </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_aa47b541d3b6156101a273d5d41978b3d_cgraph.png" border="0" usemap="#aclass_c_depth_stencil_aa47b541d3b6156101a273d5d41978b3d_cgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_aa47b541d3b6156101a273d5d41978b3d_cgraph" id="aclass_c_depth_stencil_aa47b541d3b6156101a273d5d41978b3d_cgraph">
+<area shape="rect" title="Get CPU handle for dsv descriptor heap" alt="" coords="5,35,233,61"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="281,35,492,61"/>
+<area shape="poly" title=" " alt="" coords="233,45,265,45,265,51,233,51"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="556,5,702,32"/>
+<area shape="poly" title=" " alt="" coords="492,33,540,27,541,32,493,38"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="540,56,718,99"/>
+<area shape="poly" title=" " alt="" coords="493,58,525,62,524,67,492,63"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="766,5,975,32"/>
+<area shape="poly" title=" " alt="" coords="703,16,751,16,751,21,703,21"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_aa47b541d3b6156101a273d5d41978b3d_icgraph.png" border="0" usemap="#aclass_c_depth_stencil_aa47b541d3b6156101a273d5d41978b3d_icgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_aa47b541d3b6156101a273d5d41978b3d_icgraph" id="aclass_c_depth_stencil_aa47b541d3b6156101a273d5d41978b3d_icgraph">
+<area shape="rect" title="Get CPU handle for dsv descriptor heap" alt="" coords="709,56,936,83"/>
+<area shape="rect" href="class_c_depth_stencil.html#ac30f2385fa2249d053cc52a94589744a" title="Apply this depth stencil to the destination depth stencil by calling &#39;OMSetRenderTargets&#39;" alt="" coords="509,5,655,32"/>
+<area shape="poly" title=" " alt="" coords="740,55,648,35,649,30,741,50"/>
+<area shape="rect" href="class_a_c_render_target.html#a40d00574c158fad570c77ffed5365e3a" title="Apply this render target to the destination render target by calling &#39;OMSetRenderTargets&#39;" alt="" coords="503,107,661,133"/>
+<area shape="poly" title=" " alt="" coords="741,89,649,109,648,103,740,84"/>
+<area shape="rect" href="class_c_depth_stencil.html#ae8502d294033cd2322eebbad294dd0e5" title="Clear the depth stencil" alt="" coords="511,56,653,83"/>
+<area shape="poly" title=" " alt="" coords="693,72,653,72,653,67,693,67"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="283,40,436,83"/>
+<area shape="poly" title=" " alt="" coords="494,38,437,49,436,44,493,33"/>
+<area shape="poly" title=" " alt="" coords="513,105,436,84,437,79,515,100"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="264,107,455,149"/>
+<area shape="poly" title=" " alt="" coords="488,126,456,127,456,122,488,121"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,115,216,141"/>
+<area shape="poly" title=" " alt="" coords="248,131,216,131,216,125,248,125"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,115,55,141"/>
+<area shape="poly" title=" " alt="" coords="87,131,55,131,55,125,87,125"/>
+<area shape="poly" title=" " alt="" coords="51,101,44,96,30,93,17,95,10,100,8,106,12,113,7,115,3,106,6,97,15,90,30,88,46,91,55,97"/>
+<area shape="poly" title=" " alt="" coords="495,69,437,67,437,61,495,64"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaf2a84407e0b3ca6ad1ae02034009337" name="aaf2a84407e0b3ca6ad1ae02034009337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf2a84407e0b3ca6ad1ae02034009337">&#9670;&#160;</a></span>GetCPUHandleSRVForDepth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> CDepthStencil::GetCPUHandleSRVForDepth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get CPU handle for srv descriptor heap for depth buffer </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_aaf2a84407e0b3ca6ad1ae02034009337_cgraph.png" border="0" usemap="#aclass_c_depth_stencil_aaf2a84407e0b3ca6ad1ae02034009337_cgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_aaf2a84407e0b3ca6ad1ae02034009337_cgraph" id="aclass_c_depth_stencil_aaf2a84407e0b3ca6ad1ae02034009337_cgraph">
+<area shape="rect" title="Get CPU handle for srv descriptor heap for depth buffer" alt="" coords="5,27,206,69"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="254,35,465,61"/>
+<area shape="poly" title=" " alt="" coords="206,45,238,45,238,51,206,51"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="529,5,675,32"/>
+<area shape="poly" title=" " alt="" coords="465,33,513,27,514,32,466,38"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="513,56,691,99"/>
+<area shape="poly" title=" " alt="" coords="466,58,498,62,497,67,465,63"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="739,5,948,32"/>
+<area shape="poly" title=" " alt="" coords="676,16,724,16,724,21,676,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7be37c5dad39bc97c3229a5db5e7b14f" name="a7be37c5dad39bc97c3229a5db5e7b14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be37c5dad39bc97c3229a5db5e7b14f">&#9670;&#160;</a></span>GetCPUHandleSRVForStencil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> CDepthStencil::GetCPUHandleSRVForStencil </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get CPU handle for srv descriptor heap for stencil buffer </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_a7be37c5dad39bc97c3229a5db5e7b14f_cgraph.png" border="0" usemap="#aclass_c_depth_stencil_a7be37c5dad39bc97c3229a5db5e7b14f_cgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_a7be37c5dad39bc97c3229a5db5e7b14f_cgraph" id="aclass_c_depth_stencil_a7be37c5dad39bc97c3229a5db5e7b14f_cgraph">
+<area shape="rect" title="Get CPU handle for srv descriptor heap for stencil buffer" alt="" coords="5,27,206,69"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="254,35,465,61"/>
+<area shape="poly" title=" " alt="" coords="206,45,238,45,238,51,206,51"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="529,5,675,32"/>
+<area shape="poly" title=" " alt="" coords="465,33,513,27,514,32,466,38"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="513,56,691,99"/>
+<area shape="poly" title=" " alt="" coords="466,58,498,62,497,67,465,63"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="739,5,948,32"/>
+<area shape="poly" title=" " alt="" coords="676,16,724,16,724,21,676,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a398604ec3ce19d942b6bd77de1a01851" name="a398604ec3ce19d942b6bd77de1a01851"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398604ec3ce19d942b6bd77de1a01851">&#9670;&#160;</a></span>GetCurrentAppliedDepthStencil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_c_depth_stencil.html">CDepthStencil</a> * CDepthStencil::GetCurrentAppliedDepthStencil </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get pointer to current applied depth stencil </p>
+
+</div>
+</div>
+<a id="aaeff77a7c5e6ec2e58975e8159d8b12d" name="aaeff77a7c5e6ec2e58975e8159d8b12d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeff77a7c5e6ec2e58975e8159d8b12d">&#9670;&#160;</a></span>GetSRVPropertyHandleForDepth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a> CDepthStencil::GetSRVPropertyHandleForDepth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get SRV property handle for depth buffer </p>
+<dl class="section return"><dt>戻り値</dt><dd>SRV property handle for depth buffer </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_aaeff77a7c5e6ec2e58975e8159d8b12d_icgraph.png" border="0" usemap="#aclass_c_depth_stencil_aaeff77a7c5e6ec2e58975e8159d8b12d_icgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_aaeff77a7c5e6ec2e58975e8159d8b12d_icgraph" id="aclass_c_depth_stencil_aaeff77a7c5e6ec2e58975e8159d8b12d_icgraph">
+<area shape="rect" title="Get SRV property handle for depth buffer" alt="" coords="205,5,414,48"/>
+<area shape="rect" href="class_a_c_static_s_r_v_allocator.html#a84e1a91a3cc707623c73a791d951bc26" title="Allocate SRV handle" alt="" coords="5,5,157,48"/>
+<area shape="poly" title=" " alt="" coords="189,29,157,29,157,24,189,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa535634218a044edc32d78f57670649f" name="aa535634218a044edc32d78f57670649f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa535634218a044edc32d78f57670649f">&#9670;&#160;</a></span>GetSRVPropertyHandleForStencil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a> CDepthStencil::GetSRVPropertyHandleForStencil </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get SRV property handle for stencil buffer </p>
+<dl class="section return"><dt>戻り値</dt><dd>SRV property handle for stencil buffer </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_aa535634218a044edc32d78f57670649f_icgraph.png" border="0" usemap="#aclass_c_depth_stencil_aa535634218a044edc32d78f57670649f_icgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_aa535634218a044edc32d78f57670649f_icgraph" id="aclass_c_depth_stencil_aa535634218a044edc32d78f57670649f_icgraph">
+<area shape="rect" title="Get SRV property handle for stencil buffer" alt="" coords="205,5,414,48"/>
+<area shape="rect" href="class_a_c_static_s_r_v_allocator.html#a84e1a91a3cc707623c73a791d951bc26" title="Allocate SRV handle" alt="" coords="5,5,157,48"/>
+<area shape="poly" title=" " alt="" coords="189,29,157,29,157,24,189,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af1dc25468f778431258986e0251ccaed" name="af1dc25468f778431258986e0251ccaed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1dc25468f778431258986e0251ccaed">&#9670;&#160;</a></span>StateTransition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDepthStencil::StateTransition </td>
+          <td>(</td>
+          <td class="paramtype">D3D12_RESOURCE_STATES&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transition resource state </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_depth_stencil_af1dc25468f778431258986e0251ccaed_icgraph.png" border="0" usemap="#aclass_c_depth_stencil_af1dc25468f778431258986e0251ccaed_icgraph" alt=""/></div>
+<map name="aclass_c_depth_stencil_af1dc25468f778431258986e0251ccaed_icgraph" id="aclass_c_depth_stencil_af1dc25468f778431258986e0251ccaed_icgraph">
+<area shape="rect" title="Transition resource state" alt="" coords="937,109,1136,136"/>
+<area shape="rect" href="class_c_depth_stencil.html#a23db9d064a5f179b265bb334e1d62b7a" title="State check process to be called when applying a destination for drawing" alt="" coords="709,72,889,115"/>
+<area shape="poly" title=" " alt="" coords="921,111,889,107,890,102,922,106"/>
+<area shape="rect" href="class_c_depth_stencil.html#ae8502d294033cd2322eebbad294dd0e5" title="Clear the depth stencil" alt="" coords="728,139,870,165"/>
+<area shape="poly" title=" " alt="" coords="922,140,871,146,870,141,921,134"/>
+<area shape="rect" href="class_c_depth_stencil.html#ac30f2385fa2249d053cc52a94589744a" title="Apply this depth stencil to the destination depth stencil by calling &#39;OMSetRenderTargets&#39;" alt="" coords="509,88,655,115"/>
+<area shape="poly" title=" " alt="" coords="693,100,655,101,655,96,693,95"/>
+<area shape="rect" href="class_a_c_render_target.html#a40d00574c158fad570c77ffed5365e3a" title="Apply this render target to the destination render target by calling &#39;OMSetRenderTargets&#39;" alt="" coords="503,37,661,64"/>
+<area shape="poly" title=" " alt="" coords="693,75,653,67,654,62,694,70"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="283,88,436,131"/>
+<area shape="poly" title=" " alt="" coords="494,107,437,109,437,104,494,102"/>
+<area shape="poly" title=" " alt="" coords="515,71,437,92,436,87,513,66"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="264,21,455,64"/>
+<area shape="poly" title=" " alt="" coords="488,50,456,49,456,43,488,45"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,29,216,56"/>
+<area shape="poly" title=" " alt="" coords="248,45,216,45,216,40,248,40"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+<area shape="poly" title=" " alt="" coords="51,16,44,10,30,8,17,10,10,14,8,20,12,28,7,30,3,21,6,11,15,5,30,3,46,5,55,12"/>
+<area shape="poly" title=" " alt="" coords="712,148,503,129,436,122,437,116,504,124,712,143"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_depth_stencil_8h_source.html">DepthStencil.h</a></li>
+<li><a class="el" href="_depth_stencil_8cpp.html">DepthStencil.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

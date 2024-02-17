@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: BVNode.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">BVNode.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_b_v_node_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __BV_NODE_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __BV_NODE_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_bouding_volume_8h.html">BoudingVolume.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_i_d_resource_8h.html">IDResource.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_stable_handle_vector_8h.html">StableHandleVector.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mkpe.html">Mkpe</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// Forward declaration</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">class </span>CColliderWrapper;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespace_mkpe_1_1_dbvt.html">   20</a></span>    <span class="keyword">namespace </span>Dbvt {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="comment">// Forward declaration</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">   25</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a> = <a class="code hl_typedef" href="_i_d_resource_8h.html#ab53d10337dff36cd977d64c0afe968f6">UniqueID</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment">// Accessor class that links IDs and nodes</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespace_mkpe_1_1_dbvt.html#afb2451455a689fe2ec84b608fe8bdb77">   27</a></span>        <span class="keyword">using </span><a class="code hl_class" href="class_c_i_d_resource_accessor.html">IDNodeAccessor</a> = <a class="code hl_class" href="class_c_i_d_resource_accessor.html">CIDResourceAccessor&lt;Node&gt;</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="comment">// Factory class that links IDs and nodes</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="namespace_mkpe_1_1_dbvt.html#a9acfca428201609afc8ec4dfa4e16f5b">   29</a></span>        <span class="keyword">using </span><a class="code hl_class" href="class_c_i_d_resource_factory.html">IDNodeFactory</a> = <a class="code hl_class" href="class_c_i_d_resource_factory.html">CIDResourceFactory&lt;Node&gt;</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aa">   32</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aa">TREETYPE</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aaa5154adc779da7abf1e76380842698d47">   34</a></span>            <a class="code hl_enumvalue" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aaa5154adc779da7abf1e76380842698d47">TREETYPE_STATIC</a> = 0,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aaacfe5d358ecf818b568869277065ebc21">   36</a></span>            <a class="code hl_enumvalue" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aaacfe5d358ecf818b568869277065ebc21">TREETYPE_DYNAMIC</a>,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_enumvalue" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aaa18e07a97404b959ef4d34574b258630b">TREETYPE_MAX</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aaa18e07a97404b959ef4d34574b258630b">   39</a></span>        };</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespace_mkpe_1_1_dbvt.html#ad3d25288546116ad51662596f86914cf">   42</a></span>        <span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespace_mkpe_1_1_dbvt.html#ad3d25288546116ad51662596f86914cf">PairDiscardType</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <a class="code hl_enumvalue" href="namespace_mkpe_1_1_dbvt.html#ad3d25288546116ad51662596f86914cfa6adf97f83acf6453d4a6a4b1070f3754">None</a>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_enumvalue" href="namespace_mkpe_1_1_dbvt.html#ad3d25288546116ad51662596f86914cfa060bf2d587991d8f090a1309b285291c">Check</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_enumvalue" href="namespace_mkpe_1_1_dbvt.html#ad3d25288546116ad51662596f86914cfad94b42030b9785fd754d5c1754961269">Discard</a>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        };</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html">   56</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html">LeafData</a> {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#aaf547a878c306ea46b2a3af5b4ad8160">   58</a></span>            <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CColliderWrapper&gt;</a> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#aaf547a878c306ea46b2a3af5b4ad8160">thisWrapper</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#a6ae8eb967ca837e6fe1dbafb1a2adb7d">   60</a></span>            <a class="code hl_enumeration" href="namespace_mkpe_1_1_dbvt.html#ad3d25288546116ad51662596f86914cf">PairDiscardType</a> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#a6ae8eb967ca837e6fe1dbafb1a2adb7d">discardPairType</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#ac2d9439442a9d4c2b00f9317dd48e53a">   66</a></span>            <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#ac2d9439442a9d4c2b00f9317dd48e53a">LeafData</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CColliderWrapper&gt;</a> wrapper) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                this-&gt;thisWrapper = std::move(wrapper);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#a6ae8eb967ca837e6fe1dbafb1a2adb7d">discardPairType</a> = <a class="code hl_enumvalue" href="namespace_mkpe_1_1_dbvt.html#ad3d25288546116ad51662596f86914cfa6adf97f83acf6453d4a6a4b1070f3754">PairDiscardType::None</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#aeb6294e4dc55bb5b8bd9e7d2238e1243">   72</a></span>            <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#aeb6294e4dc55bb5b8bd9e7d2238e1243">~LeafData</a>() {}</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        };</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="};">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html">   76</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html">InternalData</a> {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a240581233535f47ed611a2e99b83bb43">   78</a></span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a240581233535f47ed611a2e99b83bb43">child1</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#ab5236adbebe7f548b1adc5dc03903e96">   80</a></span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#ab5236adbebe7f548b1adc5dc03903e96">child2</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a4230295a1e953d67e25e924c4d479a71">   87</a></span>            <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a4230295a1e953d67e25e924c4d479a71">InternalData</a>(<a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a240581233535f47ed611a2e99b83bb43">child1</a>, <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#ab5236adbebe7f548b1adc5dc03903e96">child2</a>) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                this-&gt;child1 = <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a240581233535f47ed611a2e99b83bb43">child1</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                this-&gt;child2 = <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#ab5236adbebe7f548b1adc5dc03903e96">child2</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a79cf99983a7ad8065d8149d1cb40abca">   93</a></span>            <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a79cf99983a7ad8065d8149d1cb40abca">~InternalData</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a7d5ee9821deef1762b271725aa60729a">ReplaceChild</a>(<a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* oldChild, <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* newChild);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a6e174a959b6fcf0e8ab78ca9f07df96f">GetOtherChild</a>(<a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* child);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        };</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="};">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node.html">  111</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a> {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node.html#a06876bb47c8a1b35143e05fc3d148203">  113</a></span>            <a class="code hl_class" href="class_c_weak_ptr.html">WeakStableHandle&lt;CUniquePtr&lt;Node&gt;</a>&gt; <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#a06876bb47c8a1b35143e05fc3d148203">thisHandle</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node.html#adba354c02f6c7f9952ffb25ab847b39d">  115</a></span>            <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#adba354c02f6c7f9952ffb25ab847b39d">nodeID</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node.html#a499250ff6b61d555620998bff936a699">  117</a></span>            <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#a499250ff6b61d555620998bff936a699">bv</a>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node.html#a93f61bc6973d895962d886c7231bb885">  119</a></span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#a93f61bc6973d895962d886c7231bb885">parentNode</a>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keyword">union </span>{</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node.html#acc99dda263e98282978ab88692c16327">  123</a></span>                <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html">LeafData</a> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#acc99dda263e98282978ab88692c16327">leafData</a>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node.html#a42b1126944075d9709965de7069a540d">  125</a></span>                <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html">InternalData</a> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#a42b1126944075d9709965de7069a540d">internalData</a>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            };</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CColliderWrapper&gt;</a> wrapper, <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#a499250ff6b61d555620998bff936a699">bv</a>, <a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">NodeID</a> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>(<a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* child1, <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* child2, <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#a499250ff6b61d555620998bff936a699">bv</a>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node.html#a741f89f97ae7012317701c8a0fdc887a">  145</a></span>            <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_node.html#a741f89f97ae7012317701c8a0fdc887a">~Node</a>() {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_node.html#a2fe1520619e163534eb039b07c55a312">IsLeafNode</a>()) {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                    <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#acc99dda263e98282978ab88692c16327">leafData</a>.<a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#aeb6294e4dc55bb5b8bd9e7d2238e1243">~LeafData</a>();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                    <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#a42b1126944075d9709965de7069a540d">internalData</a>.<a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a79cf99983a7ad8065d8149d1cb40abca">~InternalData</a>();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            }</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node.html#a2fe1520619e163534eb039b07c55a312">  158</a></span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_node.html#a2fe1520619e163534eb039b07c55a312">IsLeafNode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#adba354c02f6c7f9952ffb25ab847b39d">nodeID</a> != NULL; }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        };</div>
+</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="foldopen" id="foldopen00162" data-start="{" data-end="};">
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_tree.html">  162</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_tree.html">Tree</a> {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_tree.html#a1d8698aac0d1ccf5fd91acd279b704fa">  164</a></span>            <a class="code hl_class" href="class_stable_handle_vector.html">StableHandleVector&lt;CUniquePtr&lt;Node&gt;</a>&gt; <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_tree.html#a1d8698aac0d1ccf5fd91acd279b704fa">nodes</a>;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_tree.html#ac41017061570e83883d079c3249eca3e">  166</a></span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_tree.html#ac41017061570e83883d079c3249eca3e">rootNode</a>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_tree.html#a8b15c696ab77ae34999840fbd686db6f">  169</a></span>            <a class="code hl_function" href="struct_mkpe_1_1_dbvt_1_1_tree.html#a8b15c696ab77ae34999840fbd686db6f">Tree</a>() : <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_tree.html#ac41017061570e83883d079c3249eca3e">rootNode</a>(nullptr) {}</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        };</div>
+</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="foldopen" id="foldopen00173" data-start="{" data-end="};">
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node_cost.html">  173</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node_cost.html">NodeCost</a> {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node_cost.html#a50ca4f96bf416c06724a29418745d145">  175</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node_cost.html#a50ca4f96bf416c06724a29418745d145">cost</a>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node_cost.html#af577ea59a06d0f2468ad877cf8400f2a">  177</a></span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node_cost.html#af577ea59a06d0f2468ad877cf8400f2a">thisNode</a>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_dbvt_1_1_node_cost.html#a0e55109a61ba1dec6358a12fa2008cfb">  179</a></span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node_cost.html#a0e55109a61ba1dec6358a12fa2008cfb">leastNode</a>;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node_cost.html">NodeCost</a>(<a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Node</a>* <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node_cost.html#af577ea59a06d0f2468ad877cf8400f2a">thisNode</a>, <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node_cost.html#a50ca4f96bf416c06724a29418745d145">cost</a> = (std::numeric_limits&lt;float&gt;::max)());</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        };</div>
+</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    } <span class="comment">// namespace Dbvt</span></div>
+</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>} <span class="comment">// namespace Mkpe</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">#endif </span><span class="comment">// !__BV_NODE_H__</span></div>
+<div class="ttc" id="a_bouding_volume_8h_html"><div class="ttname"><a href="_bouding_volume_8h.html">BoudingVolume.h</a></div><div class="ttdoc">This file handles Bounding volume using AABB.</div></div>
+<div class="ttc" id="a_i_d_resource_8h_html"><div class="ttname"><a href="_i_d_resource_8h.html">IDResource.h</a></div><div class="ttdoc">This file handles class that links IDs and resources.</div></div>
+<div class="ttc" id="a_i_d_resource_8h_html_ab53d10337dff36cd977d64c0afe968f6"><div class="ttname"><a href="_i_d_resource_8h.html#ab53d10337dff36cd977d64c0afe968f6">UniqueID</a></div><div class="ttdeci">uint64_t UniqueID</div><div class="ttdoc">Unique ID type</div><div class="ttdef"><b>Definition</b> IDResource.h:13</div></div>
+<div class="ttc" id="a_stable_handle_vector_8h_html"><div class="ttname"><a href="_stable_handle_vector_8h.html">StableHandleVector.h</a></div><div class="ttdoc">This file handles dynamic array capable of generating stable handles.</div></div>
+<div class="ttc" id="aclass_c_i_d_resource_accessor_html"><div class="ttname"><a href="class_c_i_d_resource_accessor.html">CIDResourceAccessor&lt; Node &gt;</a></div></div>
+<div class="ttc" id="aclass_c_i_d_resource_factory_html"><div class="ttname"><a href="class_c_i_d_resource_factory.html">CIDResourceFactory&lt; Node &gt;</a></div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="aclass_stable_handle_vector_html"><div class="ttname"><a href="class_stable_handle_vector.html">StableHandleVector</a></div><div class="ttdoc">Dynamic array capable of generating stable handles</div><div class="ttdef"><b>Definition</b> StableHandleVector.h:63</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_a4c3fcba683260af8580ab52bd8b643aa"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aa">Mkpe::Dbvt::TREETYPE</a></div><div class="ttdeci">TREETYPE</div><div class="ttdoc">Type of bounding volume tree</div><div class="ttdef"><b>Definition</b> BVNode.h:32</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_a4c3fcba683260af8580ab52bd8b643aaa18e07a97404b959ef4d34574b258630b"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aaa18e07a97404b959ef4d34574b258630b">Mkpe::Dbvt::TREETYPE_MAX</a></div><div class="ttdeci">@ TREETYPE_MAX</div><div class="ttdoc">Maximum number of tree type</div><div class="ttdef"><b>Definition</b> BVNode.h:38</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_a4c3fcba683260af8580ab52bd8b643aaa5154adc779da7abf1e76380842698d47"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aaa5154adc779da7abf1e76380842698d47">Mkpe::Dbvt::TREETYPE_STATIC</a></div><div class="ttdeci">@ TREETYPE_STATIC</div><div class="ttdoc">Tree type for static objects</div><div class="ttdef"><b>Definition</b> BVNode.h:34</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_a4c3fcba683260af8580ab52bd8b643aaacfe5d358ecf818b568869277065ebc21"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aaacfe5d358ecf818b568869277065ebc21">Mkpe::Dbvt::TREETYPE_DYNAMIC</a></div><div class="ttdeci">@ TREETYPE_DYNAMIC</div><div class="ttdoc">Tree type for dynamic objects</div><div class="ttdef"><b>Definition</b> BVNode.h:36</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_a6bf7f174a99e1d05a3ec19fc096ed037"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">Mkpe::Dbvt::NodeID</a></div><div class="ttdeci">UniqueID NodeID</div><div class="ttdoc">Node ID. internal node ID is 0</div><div class="ttdef"><b>Definition</b> BVNode.h:25</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_ad3d25288546116ad51662596f86914cf"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#ad3d25288546116ad51662596f86914cf">Mkpe::Dbvt::PairDiscardType</a></div><div class="ttdeci">PairDiscardType</div><div class="ttdoc">Types of pair discard methods</div><div class="ttdef"><b>Definition</b> BVNode.h:42</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_ad3d25288546116ad51662596f86914cfa060bf2d587991d8f090a1309b285291c"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#ad3d25288546116ad51662596f86914cfa060bf2d587991d8f090a1309b285291c">Mkpe::Dbvt::PairDiscardType::Check</a></div><div class="ttdeci">@ Check</div><div class="ttdoc">Contact determination and decide whether to discard.</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_ad3d25288546116ad51662596f86914cfa6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#ad3d25288546116ad51662596f86914cfa6adf97f83acf6453d4a6a4b1070f3754">Mkpe::Dbvt::PairDiscardType::None</a></div><div class="ttdeci">@ None</div><div class="ttdoc">No discard</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_ad3d25288546116ad51662596f86914cfad94b42030b9785fd754d5c1754961269"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#ad3d25288546116ad51662596f86914cfad94b42030b9785fd754d5c1754961269">Mkpe::Dbvt::PairDiscardType::Discard</a></div><div class="ttdeci">@ Discard</div><div class="ttdoc">Discard</div></div>
+<div class="ttc" id="anamespace_mkpe_html"><div class="ttname"><a href="namespace_mkpe.html">Mkpe</a></div><div class="ttdef"><b>Definition</b> BoudingVolume.h:14</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_bounding_volume_html"><div class="ttname"><a href="struct_mkpe_1_1_bounding_volume.html">Mkpe::BoundingVolume</a></div><div class="ttdoc">Bounding volume using AABB</div><div class="ttdef"><b>Definition</b> BoudingVolume.h:16</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_internal_data_html"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_internal_data.html">Mkpe::Dbvt::InternalData</a></div><div class="ttdoc">Internal node data</div><div class="ttdef"><b>Definition</b> BVNode.h:76</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_internal_data_html_a240581233535f47ed611a2e99b83bb43"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a240581233535f47ed611a2e99b83bb43">Mkpe::Dbvt::InternalData::child1</a></div><div class="ttdeci">Node * child1</div><div class="ttdoc">Pointer to the first child node</div><div class="ttdef"><b>Definition</b> BVNode.h:78</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_internal_data_html_a4230295a1e953d67e25e924c4d479a71"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a4230295a1e953d67e25e924c4d479a71">Mkpe::Dbvt::InternalData::InternalData</a></div><div class="ttdeci">InternalData(Node *child1, Node *child2)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> BVNode.h:87</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_internal_data_html_a6e174a959b6fcf0e8ab78ca9f07df96f"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a6e174a959b6fcf0e8ab78ca9f07df96f">Mkpe::Dbvt::InternalData::GetOtherChild</a></div><div class="ttdeci">Node * GetOtherChild(Node *child)</div><div class="ttdoc">Get the other child node</div><div class="ttdef"><b>Definition</b> BVNode.cpp:33</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_internal_data_html_a79cf99983a7ad8065d8149d1cb40abca"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a79cf99983a7ad8065d8149d1cb40abca">Mkpe::Dbvt::InternalData::~InternalData</a></div><div class="ttdeci">~InternalData()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_internal_data_html_a7d5ee9821deef1762b271725aa60729a"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#a7d5ee9821deef1762b271725aa60729a">Mkpe::Dbvt::InternalData::ReplaceChild</a></div><div class="ttdeci">void ReplaceChild(Node *oldChild, Node *newChild)</div><div class="ttdoc">Replace a child node</div><div class="ttdef"><b>Definition</b> BVNode.cpp:22</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_internal_data_html_ab5236adbebe7f548b1adc5dc03903e96"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_internal_data.html#ab5236adbebe7f548b1adc5dc03903e96">Mkpe::Dbvt::InternalData::child2</a></div><div class="ttdeci">Node * child2</div><div class="ttdoc">Pointer to the second child node</div><div class="ttdef"><b>Definition</b> BVNode.h:80</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_leaf_data_html"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html">Mkpe::Dbvt::LeafData</a></div><div class="ttdoc">Leaf node data</div><div class="ttdef"><b>Definition</b> BVNode.h:56</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_leaf_data_html_a6ae8eb967ca837e6fe1dbafb1a2adb7d"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#a6ae8eb967ca837e6fe1dbafb1a2adb7d">Mkpe::Dbvt::LeafData::discardPairType</a></div><div class="ttdeci">PairDiscardType discardPairType</div><div class="ttdoc">Discard the pair containing itself?</div><div class="ttdef"><b>Definition</b> BVNode.h:60</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_leaf_data_html_aaf547a878c306ea46b2a3af5b4ad8160"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#aaf547a878c306ea46b2a3af5b4ad8160">Mkpe::Dbvt::LeafData::thisWrapper</a></div><div class="ttdeci">CWeakPtr&lt; CColliderWrapper &gt; thisWrapper</div><div class="ttdoc">Weak pointer to own collider wrapper</div><div class="ttdef"><b>Definition</b> BVNode.h:58</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_leaf_data_html_ac2d9439442a9d4c2b00f9317dd48e53a"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#ac2d9439442a9d4c2b00f9317dd48e53a">Mkpe::Dbvt::LeafData::LeafData</a></div><div class="ttdeci">LeafData(CWeakPtr&lt; CColliderWrapper &gt; wrapper)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> BVNode.h:66</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_leaf_data_html_aeb6294e4dc55bb5b8bd9e7d2238e1243"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_leaf_data.html#aeb6294e4dc55bb5b8bd9e7d2238e1243">Mkpe::Dbvt::LeafData::~LeafData</a></div><div class="ttdeci">~LeafData()</div><div class="ttdoc">Destructor</div><div class="ttdef"><b>Definition</b> BVNode.h:72</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_cost_html"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node_cost.html">Mkpe::Dbvt::NodeCost</a></div><div class="ttdoc">Structure that manages cost of node</div><div class="ttdef"><b>Definition</b> BVNode.h:173</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_cost_html_a0e55109a61ba1dec6358a12fa2008cfb"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node_cost.html#a0e55109a61ba1dec6358a12fa2008cfb">Mkpe::Dbvt::NodeCost::leastNode</a></div><div class="ttdeci">Node * leastNode</div><div class="ttdoc">The node that results in the lowest node when contained with this node</div><div class="ttdef"><b>Definition</b> BVNode.h:179</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_cost_html_a50ca4f96bf416c06724a29418745d145"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node_cost.html#a50ca4f96bf416c06724a29418745d145">Mkpe::Dbvt::NodeCost::cost</a></div><div class="ttdeci">float cost</div><div class="ttdoc">Cost of bounding volume of own node</div><div class="ttdef"><b>Definition</b> BVNode.h:175</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_cost_html_af577ea59a06d0f2468ad877cf8400f2a"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node_cost.html#af577ea59a06d0f2468ad877cf8400f2a">Mkpe::Dbvt::NodeCost::thisNode</a></div><div class="ttdeci">Node * thisNode</div><div class="ttdoc">Own node</div><div class="ttdef"><b>Definition</b> BVNode.h:177</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_html"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node.html">Mkpe::Dbvt::Node</a></div><div class="ttdoc">Node structure</div><div class="ttdef"><b>Definition</b> BVNode.h:111</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_html_a06876bb47c8a1b35143e05fc3d148203"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node.html#a06876bb47c8a1b35143e05fc3d148203">Mkpe::Dbvt::Node::thisHandle</a></div><div class="ttdeci">WeakStableHandle&lt; CUniquePtr&lt; Node &gt; &gt; thisHandle</div><div class="ttdoc">Weak pointer to handle for this node</div><div class="ttdef"><b>Definition</b> BVNode.h:113</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_html_a2fe1520619e163534eb039b07c55a312"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node.html#a2fe1520619e163534eb039b07c55a312">Mkpe::Dbvt::Node::IsLeafNode</a></div><div class="ttdeci">bool IsLeafNode() const</div><div class="ttdoc">Is this leaf node?</div><div class="ttdef"><b>Definition</b> BVNode.h:158</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_html_a42b1126944075d9709965de7069a540d"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node.html#a42b1126944075d9709965de7069a540d">Mkpe::Dbvt::Node::internalData</a></div><div class="ttdeci">InternalData internalData</div><div class="ttdoc">Internal node data</div><div class="ttdef"><b>Definition</b> BVNode.h:125</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_html_a499250ff6b61d555620998bff936a699"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node.html#a499250ff6b61d555620998bff936a699">Mkpe::Dbvt::Node::bv</a></div><div class="ttdeci">BoundingVolume bv</div><div class="ttdoc">Bounding volume</div><div class="ttdef"><b>Definition</b> BVNode.h:117</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_html_a741f89f97ae7012317701c8a0fdc887a"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node.html#a741f89f97ae7012317701c8a0fdc887a">Mkpe::Dbvt::Node::~Node</a></div><div class="ttdeci">~Node()</div><div class="ttdoc">Destructor</div><div class="ttdef"><b>Definition</b> BVNode.h:145</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_html_a93f61bc6973d895962d886c7231bb885"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node.html#a93f61bc6973d895962d886c7231bb885">Mkpe::Dbvt::Node::parentNode</a></div><div class="ttdeci">Node * parentNode</div><div class="ttdoc">Pointer to the parent node</div><div class="ttdef"><b>Definition</b> BVNode.h:119</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_html_acc99dda263e98282978ab88692c16327"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node.html#acc99dda263e98282978ab88692c16327">Mkpe::Dbvt::Node::leafData</a></div><div class="ttdeci">LeafData leafData</div><div class="ttdoc">Leaf node data</div><div class="ttdef"><b>Definition</b> BVNode.h:123</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_html_adba354c02f6c7f9952ffb25ab847b39d"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node.html#adba354c02f6c7f9952ffb25ab847b39d">Mkpe::Dbvt::Node::nodeID</a></div><div class="ttdeci">const NodeID nodeID</div><div class="ttdoc">Node ID. internal node ID is 0</div><div class="ttdef"><b>Definition</b> BVNode.h:115</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_tree_html"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_tree.html">Mkpe::Dbvt::Tree</a></div><div class="ttdoc">Tree structure</div><div class="ttdef"><b>Definition</b> BVNode.h:162</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_tree_html_a1d8698aac0d1ccf5fd91acd279b704fa"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_tree.html#a1d8698aac0d1ccf5fd91acd279b704fa">Mkpe::Dbvt::Tree::nodes</a></div><div class="ttdeci">StableHandleVector&lt; CUniquePtr&lt; Node &gt; &gt; nodes</div><div class="ttdoc">Dynamic array of each nodes</div><div class="ttdef"><b>Definition</b> BVNode.h:164</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_tree_html_a8b15c696ab77ae34999840fbd686db6f"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_tree.html#a8b15c696ab77ae34999840fbd686db6f">Mkpe::Dbvt::Tree::Tree</a></div><div class="ttdeci">Tree()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> BVNode.h:169</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_tree_html_ac41017061570e83883d079c3249eca3e"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_tree.html#ac41017061570e83883d079c3249eca3e">Mkpe::Dbvt::Tree::rootNode</a></div><div class="ttdeci">Node * rootNode</div><div class="ttdoc">Pointer to root node</div><div class="ttdef"><b>Definition</b> BVNode.h:166</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

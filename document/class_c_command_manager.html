@@ -1,0 +1,903 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CCommandManager クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="class_c_command_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CCommandManager クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>this class handles objects related to DirectX12 commands.  
+ <a href="class_c_command_manager.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_command_manager_8h_source.html">CommandManager.h</a>&gt;</code></p>
+<div class="dynheader">
+CCommandManager の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager__inherit__graph.png" border="0" usemap="#a_c_command_manager_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_command_manager_inherit__map" id="a_c_command_manager_inherit__map">
+<area shape="rect" title="this class handles objects related to DirectX12 commands." alt="" coords="30,245,170,272"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html" title=" " alt="" coords="18,155,182,197"/>
+<area shape="poly" title=" " alt="" coords="103,213,103,245,97,245,97,213"/>
+<area shape="rect" href="class_a_c_singleton_base.html" title="Abstract singleton base class (CRTP Pattern)" alt="" coords="5,80,195,107"/>
+<area shape="poly" title=" " alt="" coords="103,122,103,154,97,154,97,122"/>
+<area shape="rect" href="class_a_c_release_singleton.html" title="This class is used to control the order and release instance" alt="" coords="30,5,170,32"/>
+<area shape="poly" title=" " alt="" coords="103,48,103,80,97,80,97,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CCommandManager 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager__coll__graph.png" border="0" usemap="#a_c_command_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_command_manager_coll__map" id="a_c_command_manager_coll__map">
+<area shape="rect" title="this class handles objects related to DirectX12 commands." alt="" coords="30,245,170,272"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html" title=" " alt="" coords="18,155,182,197"/>
+<area shape="poly" title=" " alt="" coords="103,213,103,245,97,245,97,213"/>
+<area shape="rect" href="class_a_c_singleton_base.html" title="Abstract singleton base class (CRTP Pattern)" alt="" coords="5,80,195,107"/>
+<area shape="poly" title=" " alt="" coords="103,122,103,154,97,154,97,122"/>
+<area shape="rect" href="class_a_c_release_singleton.html" title="This class is used to control the order and release instance" alt="" coords="30,5,170,32"/>
+<area shape="poly" title=" " alt="" coords="103,48,103,80,97,80,97,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feature for thread-safe  <a href="class_c_command_manager_1_1_c_thread_safe_feature.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3b902d159775474e439ccd2ee8e2dadc" id="r_a3b902d159775474e439ccd2ee8e2dadc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#a3b902d159775474e439ccd2ee8e2dadc">~CCommandManager</a> ()</td></tr>
+<tr class="memdesc:a3b902d159775474e439ccd2ee8e2dadc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a3b902d159775474e439ccd2ee8e2dadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d151e588bed09c01c07556ecb48e1a" id="r_af5d151e588bed09c01c07556ecb48e1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#af5d151e588bed09c01c07556ecb48e1a">Initialize</a> ()</td></tr>
+<tr class="memdesc:af5d151e588bed09c01c07556ecb48e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize  <br /></td></tr>
+<tr class="separator:af5d151e588bed09c01c07556ecb48e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2190493f7e13f1a69192b951e1326005" id="r_a2190493f7e13f1a69192b951e1326005"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#a2190493f7e13f1a69192b951e1326005">CommandsExecute</a> (<a class="el" href="_command_manager_8h.html#a21e038f5b8958e203d28bc4f18472352">CommandType</a> type, bool isWaitForGPU)</td></tr>
+<tr class="memdesc:a2190493f7e13f1a69192b951e1326005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute registered commands  <br /></td></tr>
+<tr class="separator:a2190493f7e13f1a69192b951e1326005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a8b626d58ef495a821ca64748e9d00" id="r_af6a8b626d58ef495a821ca64748e9d00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#af6a8b626d58ef495a821ca64748e9d00">UnsafeGraphicsCommandsExecute</a> ()</td></tr>
+<tr class="memdesc:af6a8b626d58ef495a821ca64748e9d00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes registered graphics commands, but does not wait or clear, so it is only used in special situations  <br /></td></tr>
+<tr class="separator:af6a8b626d58ef495a821ca64748e9d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d41d23dac6388eba73f0c7950c5e52f" id="r_a9d41d23dac6388eba73f0c7950c5e52f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#a9d41d23dac6388eba73f0c7950c5e52f">ClearCurrentCommandList</a> ()</td></tr>
+<tr class="memdesc:a9d41d23dac6388eba73f0c7950c5e52f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the current command list  <br /></td></tr>
+<tr class="separator:a9d41d23dac6388eba73f0c7950c5e52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa496f4c1cb52564c742576d2796f8d" id="r_a4aa496f4c1cb52564c742576d2796f8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#a4aa496f4c1cb52564c742576d2796f8d">SecureCommands</a> ()</td></tr>
+<tr class="memdesc:a4aa496f4c1cb52564c742576d2796f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secure command queues and command lists  <br /></td></tr>
+<tr class="separator:a4aa496f4c1cb52564c742576d2796f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429de9234487d377579c18589f9edc65" id="r_a429de9234487d377579c18589f9edc65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#a429de9234487d377579c18589f9edc65">AddResStateController</a> (<a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_utl_1_1_dx_1_1_res_state_controller.html">Utl::Dx::ResStateController</a> &gt; controller)</td></tr>
+<tr class="memdesc:a429de9234487d377579c18589f9edc65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the state controller of the resource with the resource barrier command to the current command list  <br /></td></tr>
+<tr class="separator:a429de9234487d377579c18589f9edc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab66bc94cd4f0a10f2b78adda89022d61" id="r_ab66bc94cd4f0a10f2b78adda89022d61"><td class="memItemLeft" align="right" valign="top">ID3D12CommandQueue *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#ab66bc94cd4f0a10f2b78adda89022d61">GetCommandQueue</a> ()</td></tr>
+<tr class="memdesc:ab66bc94cd4f0a10f2b78adda89022d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get command queue  <br /></td></tr>
+<tr class="separator:ab66bc94cd4f0a10f2b78adda89022d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d39f0cc090f028abaa158ecaab27e52" id="r_a7d39f0cc090f028abaa158ecaab27e52"><td class="memItemLeft" align="right" valign="top">ID3D12GraphicsCommandList *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52">GetGraphicsCmdList</a> ()</td></tr>
+<tr class="memdesc:a7d39f0cc090f028abaa158ecaab27e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get command list for graphics  <br /></td></tr>
+<tr class="separator:a7d39f0cc090f028abaa158ecaab27e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_singleton_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_singleton_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase&lt; Derived &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a8d8b17de954dc5525e41886ecae7bf32 inherit pub_methods_class_a_c_singleton_base" id="r_a8d8b17de954dc5525e41886ecae7bf32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a8d8b17de954dc5525e41886ecae7bf32">ACSingletonBase</a> (const <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a8d8b17de954dc5525e41886ecae7bf32 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy constructor  <br /></td></tr>
+<tr class="separator:a8d8b17de954dc5525e41886ecae7bf32 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a0e0b28b71658eb2286408775cfb38 inherit pub_methods_class_a_c_singleton_base" id="r_a01a0e0b28b71658eb2286408775cfb38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a01a0e0b28b71658eb2286408775cfb38">operator=</a> (const <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a01a0e0b28b71658eb2286408775cfb38 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy assignment operator  <br /></td></tr>
+<tr class="separator:a01a0e0b28b71658eb2286408775cfb38 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a770e4789f75386da1facea672ca600 inherit pub_methods_class_a_c_singleton_base" id="r_a4a770e4789f75386da1facea672ca600"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a4a770e4789f75386da1facea672ca600">ACSingletonBase</a> (<a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a4a770e4789f75386da1facea672ca600 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move constructor  <br /></td></tr>
+<tr class="separator:a4a770e4789f75386da1facea672ca600 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e3e7f0438031a182db777945960318 inherit pub_methods_class_a_c_singleton_base" id="r_a86e3e7f0438031a182db777945960318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a86e3e7f0438031a182db777945960318">operator=</a> (<a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a86e3e7f0438031a182db777945960318 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move assignment constructor  <br /></td></tr>
+<tr class="separator:a86e3e7f0438031a182db777945960318 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae38c0128642991ecb8b1c7ddd1e95a28 inherit pub_methods_class_a_c_singleton_base" id="r_ae38c0128642991ecb8b1c7ddd1e95a28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#ae38c0128642991ecb8b1c7ddd1e95a28">DestroyInstance</a> () override final</td></tr>
+<tr class="memdesc:ae38c0128642991ecb8b1c7ddd1e95a28 inherit pub_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard instance  <br /></td></tr>
+<tr class="separator:ae38c0128642991ecb8b1c7ddd1e95a28 inherit pub_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae25a3521fd40b119016782297cb7ba78" id="r_ae25a3521fd40b119016782297cb7ba78"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_command_manager_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#ae25a3521fd40b119016782297cb7ba78">GetAny</a> ()</td></tr>
+<tr class="memdesc:ae25a3521fd40b119016782297cb7ba78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get feature for thread-safe  <br /></td></tr>
+<tr class="separator:ae25a3521fd40b119016782297cb7ba78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_a_c_main_thread_singleton"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_a_c_main_thread_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton&lt; CCommandManager &gt;</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:a89d07f64971fd623dd0a8a7179e17e95 inherit pub_static_methods_class_a_c_main_thread_singleton" id="r_a89d07f64971fd623dd0a8a7179e17e95"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_command_manager.html">CCommandManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95">GetMain</a> ()</td></tr>
+<tr class="memdesc:a89d07f64971fd623dd0a8a7179e17e95 inherit pub_static_methods_class_a_c_main_thread_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get singleton instance for main thread  <br /></td></tr>
+<tr class="separator:a89d07f64971fd623dd0a8a7179e17e95 inherit pub_static_methods_class_a_c_main_thread_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton" id="r_a0d6986b9ad7df98f29aa3b24c3c75030"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#a0d6986b9ad7df98f29aa3b24c3c75030">AllRelease</a> ()</td></tr>
+<tr class="memdesc:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release all instance  <br /></td></tr>
+<tr class="separator:a0d6986b9ad7df98f29aa3b24c3c75030 inherit pub_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a2d45ac4cbb364b836ed7a1dba2145de0" id="r_a2d45ac4cbb364b836ed7a1dba2145de0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#a2d45ac4cbb364b836ed7a1dba2145de0">CCommandManager</a> ()</td></tr>
+<tr class="memdesc:a2d45ac4cbb364b836ed7a1dba2145de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a2d45ac4cbb364b836ed7a1dba2145de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_singleton_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_singleton_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase&lt; Derived &gt;</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:afabb6c5e30b347d13b6060914aece186 inherit pro_methods_class_a_c_singleton_base" id="r_afabb6c5e30b347d13b6060914aece186"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#afabb6c5e30b347d13b6060914aece186">ACSingletonBase</a> (int priority)</td></tr>
+<tr class="memdesc:afabb6c5e30b347d13b6060914aece186 inherit pro_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:afabb6c5e30b347d13b6060914aece186 inherit pro_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c96b4c5421f892ec2b31f98405460e1 inherit pro_methods_class_a_c_singleton_base" id="r_a3c96b4c5421f892ec2b31f98405460e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a3c96b4c5421f892ec2b31f98405460e1">~ACSingletonBase</a> () override</td></tr>
+<tr class="memdesc:a3c96b4c5421f892ec2b31f98405460e1 inherit pro_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a3c96b4c5421f892ec2b31f98405460e1 inherit pro_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d9da3719c71c9a6e34cdf6a74b7128 inherit pro_methods_class_a_c_singleton_base" id="r_ac7d9da3719c71c9a6e34cdf6a74b7128"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#ac7d9da3719c71c9a6e34cdf6a74b7128">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:ac7d9da3719c71c9a6e34cdf6a74b7128 inherit pro_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process to be called at instance destruction  <br /></td></tr>
+<tr class="separator:ac7d9da3719c71c9a6e34cdf6a74b7128 inherit pro_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton" id="r_aecd0a93d3e8f23cbb8d11de90d0153b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#aecd0a93d3e8f23cbb8d11de90d0153b8">ACReleaseSingleton</a> ()=default</td></tr>
+<tr class="memdesc:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:aecd0a93d3e8f23cbb8d11de90d0153b8 inherit pro_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton" id="r_a12315284fb54b24483dd1f9812988c8d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#a12315284fb54b24483dd1f9812988c8d">~ACReleaseSingleton</a> ()</td></tr>
+<tr class="memdesc:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a12315284fb54b24483dd1f9812988c8d inherit pro_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a3273bd1fe91a2694d70da9c751511d0b" id="r_a3273bd1fe91a2694d70da9c751511d0b"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_command_manager.html#a3273bd1fe91a2694d70da9c751511d0b">ACSingletonBase</a></td></tr>
+<tr class="separator:a3273bd1fe91a2694d70da9c751511d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_static_methods_class_a_c_singleton_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_class_a_c_singleton_base')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase&lt; Derived &gt;</a> に属する継承静的限定公開メンバ関数</td></tr>
+<tr class="memitem:a86122d51b9f611ffbc300eb790c3dabf inherit pro_static_methods_class_a_c_singleton_base" id="r_a86122d51b9f611ffbc300eb790c3dabf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_unique_ptr.html">CUniquePtr</a>&lt; Derived &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a> ()</td></tr>
+<tr class="memdesc:a86122d51b9f611ffbc300eb790c3dabf inherit pro_static_methods_class_a_c_singleton_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get singleton instance  <br /></td></tr>
+<tr class="separator:a86122d51b9f611ffbc300eb790c3dabf inherit pro_static_methods_class_a_c_singleton_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_methods_class_a_c_release_singleton"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_class_a_c_release_singleton')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> に属する継承静的限定公開メンバ関数</td></tr>
+<tr class="memitem:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton" id="r_abcb065418ac7352ba6390d676a72cc52"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#abcb065418ac7352ba6390d676a72cc52">AddInstanceToArray</a> (int priority, <a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> *instance)</td></tr>
+<tr class="memdesc:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the created instance to the array  <br /></td></tr>
+<tr class="separator:abcb065418ac7352ba6390d676a72cc52 inherit pro_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton" id="r_ae432066358bb5bc8e42db6ae2e9f29aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_release_singleton.html#ae432066358bb5bc8e42db6ae2e9f29aa">RemoveInstanceToArray</a> (<a class="el" href="class_a_c_release_singleton.html">ACReleaseSingleton</a> *instance)</td></tr>
+<tr class="memdesc:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the instance in the array  <br /></td></tr>
+<tr class="separator:ae432066358bb5bc8e42db6ae2e9f29aa inherit pro_static_methods_class_a_c_release_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>this class handles objects related to DirectX12 commands. </p>
+<p>Must always call 'Initialize' function before use </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a3b902d159775474e439ccd2ee8e2dadc" name="a3b902d159775474e439ccd2ee8e2dadc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b902d159775474e439ccd2ee8e2dadc">&#9670;&#160;</a></span>~CCommandManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CCommandManager::~CCommandManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_a3b902d159775474e439ccd2ee8e2dadc_cgraph.png" border="0" usemap="#aclass_c_command_manager_a3b902d159775474e439ccd2ee8e2dadc_cgraph" alt=""/></div>
+<map name="aclass_c_command_manager_a3b902d159775474e439ccd2ee8e2dadc_cgraph" id="aclass_c_command_manager_a3b902d159775474e439ccd2ee8e2dadc_cgraph">
+<area shape="rect" title="Destructor" alt="" coords="5,56,229,99"/>
+<area shape="rect" href="class_c_command_manager.html#ae25a3521fd40b119016782297cb7ba78" title="Get feature for thread&#45;safe" alt="" coords="325,5,516,32"/>
+<area shape="poly" title=" " alt="" coords="220,53,276,41,323,33,324,38,277,47,221,58"/>
+<area shape="rect" href="class_c_command_manager_1_1_c_thread_safe_feature.html#afeebd51547d4b4ca6569686bb91f42e5" title="Clear graphics command list and graphics command allocator, However, it is not associated with execut..." alt="" coords="277,56,564,99"/>
+<area shape="poly" title=" " alt="" coords="229,75,261,75,261,80,229,80"/>
+<area shape="rect" href="class_c_command_manager_1_1_c_thread_safe_feature.html#abc72278becb39ddafee24cf26776b90c" title="Wait for the GPU to complete processing" alt="" coords="323,123,518,165"/>
+<area shape="poly" title=" " alt="" coords="218,97,308,117,307,122,217,102"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="612,5,820,32"/>
+<area shape="poly" title=" " alt="" coords="516,16,597,16,597,21,516,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2d45ac4cbb364b836ed7a1dba2145de0" name="a2d45ac4cbb364b836ed7a1dba2145de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d45ac4cbb364b836ed7a1dba2145de0">&#9670;&#160;</a></span>CCommandManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CCommandManager::CCommandManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a429de9234487d377579c18589f9edc65" name="a429de9234487d377579c18589f9edc65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a429de9234487d377579c18589f9edc65">&#9670;&#160;</a></span>AddResStateController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCommandManager::AddResStateController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_utl_1_1_dx_1_1_res_state_controller.html">Utl::Dx::ResStateController</a> &gt;&#160;</td>
+          <td class="paramname"><em>controller</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add the state controller of the resource with the resource barrier command to the current command list </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The state controller of the resource </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_a429de9234487d377579c18589f9edc65_icgraph.png" border="0" usemap="#aclass_c_command_manager_a429de9234487d377579c18589f9edc65_icgraph" alt=""/></div>
+<map name="aclass_c_command_manager_a429de9234487d377579c18589f9edc65_icgraph" id="aclass_c_command_manager_a429de9234487d377579c18589f9edc65_icgraph">
+<area shape="rect" title="Add the state controller of the resource with the resource barrier command to the current command lis..." alt="" coords="451,105,675,148"/>
+<area shape="rect" href="class_utl_1_1_dx_1_1_res_state_controller.html#ad0fa08b68230b05d7610c69d4054f37f" title="Transition resource state" alt="" coords="225,105,403,148"/>
+<area shape="poly" title=" " alt="" coords="435,129,404,129,404,124,435,124"/>
+<area shape="rect" href="class_a_c_static_s_r_v_allocator.html#a23d7b3c75c2b7da45610fd3dc86456c3" title="Allocate and return data" alt="" coords="15,5,167,48"/>
+<area shape="poly" title=" " alt="" coords="256,100,176,62,149,51,151,46,178,58,258,96"/>
+<area shape="rect" href="class_c_graphics_object_asset.html#a5f230ea3a014049ad788f720c9d2c2ea" title="Ask for SRVs assignment information to be built" alt="" coords="14,72,168,115"/>
+<area shape="poly" title=" " alt="" coords="209,114,168,108,169,102,210,108"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a593c31ff21abdf7074ae1b40a5586831" title="Ask for textures assignment information to be built" alt="" coords="9,139,173,181"/>
+<area shape="poly" title=" " alt="" coords="209,145,174,150,173,145,209,140"/>
+<area shape="rect" href="class_a_c_static_s_r_v_allocator.html#a6968baf3998e66412134ccc9bbf8bdaf" title="Get handle of allocated data in resource" alt="" coords="5,205,177,248"/>
+<area shape="poly" title=" " alt="" coords="258,158,178,196,151,207,149,202,176,191,256,153"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9d41d23dac6388eba73f0c7950c5e52f" name="a9d41d23dac6388eba73f0c7950c5e52f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d41d23dac6388eba73f0c7950c5e52f">&#9670;&#160;</a></span>ClearCurrentCommandList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCommandManager::ClearCurrentCommandList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear the current command list </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_a9d41d23dac6388eba73f0c7950c5e52f_cgraph.png" border="0" usemap="#aclass_c_command_manager_a9d41d23dac6388eba73f0c7950c5e52f_cgraph" alt=""/></div>
+<map name="aclass_c_command_manager_a9d41d23dac6388eba73f0c7950c5e52f_cgraph" id="aclass_c_command_manager_a9d41d23dac6388eba73f0c7950c5e52f_cgraph">
+<area shape="rect" title="Clear the current command list" alt="" coords="5,89,225,132"/>
+<area shape="rect" href="class_c_command_manager.html#ae25a3521fd40b119016782297cb7ba78" title="Get feature for thread&#45;safe" alt="" coords="321,5,512,32"/>
+<area shape="poly" title=" " alt="" coords="159,86,212,63,272,41,305,33,306,38,273,47,214,68,161,91"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="328,56,505,99"/>
+<area shape="poly" title=" " alt="" coords="225,96,313,86,313,91,225,101"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="309,123,524,165"/>
+<area shape="poly" title=" " alt="" coords="225,120,294,128,294,133,225,125"/>
+<area shape="rect" href="class_c_command_manager_1_1_c_thread_safe_feature.html#afeebd51547d4b4ca6569686bb91f42e5" title="Clear graphics command list and graphics command allocator, However, it is not associated with execut..." alt="" coords="273,189,560,232"/>
+<area shape="poly" title=" " alt="" coords="163,130,216,153,274,175,298,182,297,187,272,180,214,158,161,135"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="608,5,816,32"/>
+<area shape="poly" title=" " alt="" coords="512,16,593,16,593,21,512,21"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_a9d41d23dac6388eba73f0c7950c5e52f_icgraph.png" border="0" usemap="#aclass_c_command_manager_a9d41d23dac6388eba73f0c7950c5e52f_icgraph" alt=""/></div>
+<map name="aclass_c_command_manager_a9d41d23dac6388eba73f0c7950c5e52f_icgraph" id="aclass_c_command_manager_a9d41d23dac6388eba73f0c7950c5e52f_icgraph">
+<area shape="rect" title="Clear the current command list" alt="" coords="806,43,1025,85"/>
+<area shape="rect" href="class_utl_1_1_error_1_1_c_stop_drawing_scene_error.html#ac95366d1ef997ab93f5d235ae09197f2" title="Constructor" alt="" coords="510,13,751,56"/>
+<area shape="poly" title=" " alt="" coords="790,54,751,50,752,44,791,48"/>
+<area shape="rect" href="class_c_command_manager.html#a4aa496f4c1cb52564c742576d2796f8d" title="Secure command queues and command lists" alt="" coords="503,80,758,107"/>
+<area shape="poly" title=" " alt="" coords="791,80,758,83,758,78,790,74"/>
+<area shape="rect" href="class_utl_1_1_error_1_1_c_fatal_error.html#aad0ff47e0e514a35602f0b6529a94bfa" title="Constructor" alt="" coords="286,5,433,48"/>
+<area shape="poly" title=" " alt="" coords="539,79,503,71,432,51,433,46,504,65,540,74"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="264,72,455,115"/>
+<area shape="poly" title=" " alt="" coords="488,96,456,96,456,91,488,91"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a914ad8572c7e53d4cddb5ae4925d04cf" title="Set prefab" alt="" coords="285,139,435,181"/>
+<area shape="poly" title=" " alt="" coords="559,114,436,144,435,139,558,108"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,80,216,107"/>
+<area shape="poly" title=" " alt="" coords="248,96,216,96,216,91,248,91"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,80,55,107"/>
+<area shape="poly" title=" " alt="" coords="87,96,55,96,55,91,87,91"/>
+<area shape="poly" title=" " alt="" coords="51,67,44,61,30,59,17,61,10,65,8,71,12,78,7,81,3,71,6,62,15,56,30,53,46,56,55,63"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2190493f7e13f1a69192b951e1326005" name="a2190493f7e13f1a69192b951e1326005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2190493f7e13f1a69192b951e1326005">&#9670;&#160;</a></span>CommandsExecute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCommandManager::CommandsExecute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_command_manager_8h.html#a21e038f5b8958e203d28bc4f18472352">CommandType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isWaitForGPU</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute registered commands </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Execute command type </td></tr>
+    <tr><td class="paramname">isWaitForGPU</td><td>Do you want to wait until the process is complete? </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_a2190493f7e13f1a69192b951e1326005_cgraph.png" border="0" usemap="#aclass_c_command_manager_a2190493f7e13f1a69192b951e1326005_cgraph" alt=""/></div>
+<map name="aclass_c_command_manager_a2190493f7e13f1a69192b951e1326005_cgraph" id="aclass_c_command_manager_a2190493f7e13f1a69192b951e1326005_cgraph">
+<area shape="rect" title="Execute registered commands" alt="" coords="5,107,219,149"/>
+<area shape="rect" href="class_c_command_manager.html#ae25a3521fd40b119016782297cb7ba78" title="Get feature for thread&#45;safe" alt="" coords="315,5,506,32"/>
+<area shape="poly" title=" " alt="" coords="149,104,203,75,266,48,316,33,317,39,268,53,205,80,151,109"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="621,81,797,124"/>
+<area shape="poly" title=" " alt="" coords="198,103,266,92,356,86,446,84,605,91,605,96,446,90,356,91,267,97,199,109"/>
+<area shape="rect" href="class_c_command_manager_1_1_c_thread_safe_feature.html#afeebd51547d4b4ca6569686bb91f42e5" title="Clear graphics command list and graphics command allocator, However, it is not associated with execut..." alt="" coords="267,107,554,149"/>
+<area shape="poly" title=" " alt="" coords="219,125,251,125,251,131,219,131"/>
+<area shape="rect" href="class_c_command_manager.html#af6a8b626d58ef495a821ca64748e9d00" title="Executes registered graphics commands, but does not wait or clear, so it is only used in special situ..." alt="" coords="291,173,530,216"/>
+<area shape="poly" title=" " alt="" coords="211,147,298,167,296,172,210,153"/>
+<area shape="rect" href="class_c_command_manager_1_1_c_thread_safe_feature.html#abc72278becb39ddafee24cf26776b90c" title="Wait for the GPU to complete processing" alt="" coords="313,240,508,283"/>
+<area shape="poly" title=" " alt="" coords="142,148,198,188,268,226,299,237,297,242,266,230,195,192,139,152"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="605,5,813,32"/>
+<area shape="poly" title=" " alt="" coords="507,16,590,16,590,21,507,21"/>
+<area shape="poly" title=" " alt="" coords="512,170,553,159,641,128,643,133,555,164,514,175"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="602,173,816,216"/>
+<area shape="poly" title=" " alt="" coords="530,192,586,192,586,197,530,197"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_a2190493f7e13f1a69192b951e1326005_icgraph.png" border="0" usemap="#aclass_c_command_manager_a2190493f7e13f1a69192b951e1326005_icgraph" alt=""/></div>
+<map name="aclass_c_command_manager_a2190493f7e13f1a69192b951e1326005_icgraph" id="aclass_c_command_manager_a2190493f7e13f1a69192b951e1326005_icgraph">
+<area shape="rect" title="Execute registered commands" alt="" coords="689,48,903,91"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#ad02294e127ffd215c75b81f09be6b89d" title="Create resource" alt="" coords="464,48,641,91"/>
+<area shape="poly" title=" " alt="" coords="674,72,642,72,642,67,674,67"/>
+<area shape="rect" href="class_c_index_buffer.html#a1da8cdfad63417296440cfb0b6d01dae" title=" " alt="" coords="259,5,399,32"/>
+<area shape="poly" title=" " alt="" coords="449,49,390,35,392,30,450,43"/>
+<area shape="rect" href="class_c_vertex_buffer.html#a0b656936a16c4ac0ff27cc369280965d" title="Create vertex buffer" alt="" coords="255,56,403,83"/>
+<area shape="poly" title=" " alt="" coords="449,72,403,72,403,67,449,67"/>
+<area shape="rect" href="class_c_texture_resource.html#a5e87e2247ac4d47facbefdc9c82906d2" title="Create texture resource" alt="" coords="242,107,416,133"/>
+<area shape="poly" title=" " alt="" coords="450,95,392,109,390,103,449,90"/>
+<area shape="rect" href="class_c_texture_resource.html#ad76c10ec0f2f42e1c2c97f62726a5f16" title="Constructor for creating texture resource" alt="" coords="5,99,194,141"/>
+<area shape="poly" title=" " alt="" coords="226,123,194,123,194,117,226,117"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae25a3521fd40b119016782297cb7ba78" name="ae25a3521fd40b119016782297cb7ba78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25a3521fd40b119016782297cb7ba78">&#9670;&#160;</a></span>GetAny()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_c_command_manager_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> &amp; CCommandManager::GetAny </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get feature for thread-safe </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_ae25a3521fd40b119016782297cb7ba78_cgraph.png" border="0" usemap="#aclass_c_command_manager_ae25a3521fd40b119016782297cb7ba78_cgraph" alt=""/></div>
+<map name="aclass_c_command_manager_ae25a3521fd40b119016782297cb7ba78_cgraph" id="aclass_c_command_manager_ae25a3521fd40b119016782297cb7ba78_cgraph">
+<area shape="rect" title="Get feature for thread&#45;safe" alt="" coords="5,5,197,32"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="245,5,453,32"/>
+<area shape="poly" title=" " alt="" coords="197,16,229,16,229,21,197,21"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_ae25a3521fd40b119016782297cb7ba78_icgraph.png" border="0" usemap="#aclass_c_command_manager_ae25a3521fd40b119016782297cb7ba78_icgraph" alt=""/></div>
+<map name="aclass_c_command_manager_ae25a3521fd40b119016782297cb7ba78_icgraph" id="aclass_c_command_manager_ae25a3521fd40b119016782297cb7ba78_icgraph">
+<area shape="rect" title="Get feature for thread&#45;safe" alt="" coords="1159,165,1350,192"/>
+<area shape="rect" href="class_c_command_manager.html#a9d41d23dac6388eba73f0c7950c5e52f" title="Clear the current command list" alt="" coords="890,23,1109,65"/>
+<area shape="poly" title=" " alt="" coords="1222,158,1171,122,1110,86,1068,68,1070,63,1112,82,1174,118,1225,154"/>
+<area shape="rect" href="class_c_command_manager.html#a4aa496f4c1cb52564c742576d2796f8d" title="Secure command queues and command lists" alt="" coords="585,88,840,115"/>
+<area shape="poly" title=" " alt="" coords="1168,165,1111,155,838,118,838,113,1111,149,1169,159"/>
+<area shape="rect" href="class_c_command_manager.html#a2190493f7e13f1a69192b951e1326005" title="Execute registered commands" alt="" coords="893,241,1106,284"/>
+<area shape="poly" title=" " alt="" coords="1203,200,1112,232,1076,243,1074,238,1110,227,1201,195"/>
+<area shape="rect" href="class_c_swap_chain.html#a3d838db1a55450cb8bba97f1e67ddbb3" title="Draw and swap the back buffer" alt="" coords="619,147,806,173"/>
+<area shape="poly" title=" " alt="" coords="1144,178,806,166,807,161,1144,172"/>
+<area shape="rect" href="class_c_swap_chain.html#a5c8894c2856644936d2adcca3f530c21" title="GPU wait processing after drawing" alt="" coords="911,191,1088,217"/>
+<area shape="poly" title=" " alt="" coords="1144,192,1089,198,1088,193,1143,187"/>
+<area shape="rect" href="class_c_command_manager.html#a3b902d159775474e439ccd2ee8e2dadc" title="Destructor" alt="" coords="888,308,1111,351"/>
+<area shape="poly" title=" " alt="" coords="1232,205,1180,252,1147,277,1112,298,1087,310,1085,305,1110,294,1144,272,1176,248,1228,201"/>
+<area shape="rect" href="class_utl_1_1_error_1_1_c_stop_drawing_scene_error.html#ac95366d1ef997ab93f5d235ae09197f2" title="Constructor" alt="" coords="592,21,833,64"/>
+<area shape="poly" title=" " alt="" coords="874,46,834,46,834,41,874,41"/>
+<area shape="poly" title=" " alt="" coords="875,72,840,79,784,90,783,85,839,73,874,66"/>
+<area shape="rect" href="class_utl_1_1_error_1_1_c_fatal_error.html#aad0ff47e0e514a35602f0b6529a94bfa" title="Constructor" alt="" coords="368,5,515,48"/>
+<area shape="poly" title=" " alt="" coords="618,87,585,79,504,51,506,46,586,73,619,82"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="346,139,537,181"/>
+<area shape="poly" title=" " alt="" coords="633,121,538,142,537,137,632,116"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a914ad8572c7e53d4cddb5ae4925d04cf" title="Set prefab" alt="" coords="367,72,517,115"/>
+<area shape="poly" title=" " alt="" coords="570,100,517,98,518,93,570,94"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="147,147,261,173"/>
+<area shape="poly" title=" " alt="" coords="330,163,261,163,261,157,330,157"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="12,147,62,173"/>
+<area shape="poly" title=" " alt="" coords="132,163,62,163,62,157,132,157"/>
+<area shape="poly" title=" " alt="" coords="66,135,57,128,37,125,19,127,10,132,9,138,14,146,9,149,3,139,6,129,18,122,37,120,59,123,69,131"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#ad02294e127ffd215c75b81f09be6b89d" title="Create resource" alt="" coords="624,245,801,288"/>
+<area shape="poly" title=" " alt="" coords="877,267,802,268,802,263,877,262"/>
+<area shape="rect" href="class_c_index_buffer.html#a1da8cdfad63417296440cfb0b6d01dae" title=" " alt="" coords="372,205,512,232"/>
+<area shape="poly" title=" " alt="" coords="608,251,512,234,513,228,609,246"/>
+<area shape="rect" href="class_c_vertex_buffer.html#a0b656936a16c4ac0ff27cc369280965d" title="Create vertex buffer" alt="" coords="368,256,515,283"/>
+<area shape="poly" title=" " alt="" coords="608,270,516,271,516,266,608,265"/>
+<area shape="rect" href="class_c_texture_resource.html#a5e87e2247ac4d47facbefdc9c82906d2" title="Create texture resource" alt="" coords="355,307,529,333"/>
+<area shape="poly" title=" " alt="" coords="609,290,514,309,513,303,608,284"/>
+<area shape="rect" href="class_c_texture_resource.html#ad76c10ec0f2f42e1c2c97f62726a5f16" title="Constructor for creating texture resource" alt="" coords="110,299,298,341"/>
+<area shape="poly" title=" " alt="" coords="339,323,299,323,299,317,339,317"/>
+<area shape="poly" title=" " alt="" coords="604,163,538,163,538,157,604,157"/>
+<area shape="poly" title=" " alt="" coords="895,191,803,177,804,171,896,185"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab66bc94cd4f0a10f2b78adda89022d61" name="ab66bc94cd4f0a10f2b78adda89022d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab66bc94cd4f0a10f2b78adda89022d61">&#9670;&#160;</a></span>GetCommandQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12CommandQueue * CCommandManager::GetCommandQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get command queue </p>
+
+</div>
+</div>
+<a id="a7d39f0cc090f028abaa158ecaab27e52" name="a7d39f0cc090f028abaa158ecaab27e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d39f0cc090f028abaa158ecaab27e52">&#9670;&#160;</a></span>GetGraphicsCmdList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12GraphicsCommandList * CCommandManager::GetGraphicsCmdList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get command list for graphics </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_a7d39f0cc090f028abaa158ecaab27e52_cgraph.png" border="0" usemap="#aclass_c_command_manager_a7d39f0cc090f028abaa158ecaab27e52_cgraph" alt=""/></div>
+<map name="aclass_c_command_manager_a7d39f0cc090f028abaa158ecaab27e52_cgraph" id="aclass_c_command_manager_a7d39f0cc090f028abaa158ecaab27e52_cgraph">
+<area shape="rect" title="Get command list for graphics" alt="" coords="5,39,226,81"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="293,5,469,48"/>
+<area shape="poly" title=" " alt="" coords="226,43,277,37,277,42,227,49"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="274,72,488,115"/>
+<area shape="poly" title=" " alt="" coords="227,71,259,75,258,81,226,77"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_a7d39f0cc090f028abaa158ecaab27e52_icgraph.png" border="0" usemap="#aclass_c_command_manager_a7d39f0cc090f028abaa158ecaab27e52_icgraph" alt=""/></div>
+<map name="aclass_c_command_manager_a7d39f0cc090f028abaa158ecaab27e52_icgraph" id="aclass_c_command_manager_a7d39f0cc090f028abaa158ecaab27e52_icgraph">
+<area shape="rect" title="Get command list for graphics" alt="" coords="814,283,1034,325"/>
+<area shape="rect" href="class_c_depth_stencil.html#ac30f2385fa2249d053cc52a94589744a" title="Apply this depth stencil to the destination depth stencil by calling &#39;OMSetRenderTargets&#39;" alt="" coords="603,72,748,99"/>
+<area shape="poly" title=" " alt="" coords="901,271,878,234,846,191,808,149,764,113,742,102,744,97,767,108,812,145,850,187,882,231,906,268"/>
+<area shape="rect" href="class_a_c_render_target.html#a40d00574c158fad570c77ffed5365e3a" title="Apply this render target to the destination render target by calling &#39;OMSetRenderTargets&#39;" alt="" coords="597,291,754,317"/>
+<area shape="poly" title=" " alt="" coords="798,307,755,307,755,301,798,301"/>
+<area shape="rect" href="class_a_c_render_target.html#a8ea9c42479cc0b6cf6bc57b78050a1be" title="Clear the color of all pixels on this render target" alt="" coords="598,240,753,267"/>
+<area shape="poly" title=" " alt="" coords="801,282,744,270,745,265,802,276"/>
+<area shape="rect" href="class_c_depth_stencil.html#ae8502d294033cd2322eebbad294dd0e5" title="Clear the depth stencil" alt="" coords="604,123,747,149"/>
+<area shape="poly" title=" " alt="" coords="893,273,837,217,802,188,764,164,738,152,741,147,767,159,805,184,840,213,897,269"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#ad02294e127ffd215c75b81f09be6b89d" title="Create resource" alt="" coords="587,541,764,584"/>
+<area shape="poly" title=" " alt="" coords="909,340,886,384,854,435,815,486,767,531,749,543,746,539,764,527,811,483,850,432,882,381,904,338"/>
+<area shape="rect" href="class_c_imgui_helper.html#a56b8f268d4d9f3e211b44b800a4269bc" title="Drawing process" alt="" coords="608,341,743,368"/>
+<area shape="poly" title=" " alt="" coords="802,332,744,344,743,338,801,326"/>
+<area shape="rect" href="class_c_descriptor_heap_pool.html#a81d5a9ec0a32e3c16813bbedb19a5f73" title="Drawing preparation processing necessary every frame" alt="" coords="603,392,748,435"/>
+<area shape="poly" title=" " alt="" coords="868,335,767,382,738,394,736,389,765,378,866,330"/>
+<area shape="rect" href="class_c_graphics_pipeline_state.html#abc3395de10313e13b40e56f7b07ec1ad" title="Set this graphics pipeline state to command list" alt="" coords="596,173,755,216"/>
+<area shape="poly" title=" " alt="" coords="866,278,765,230,736,219,738,214,767,226,868,273"/>
+<area shape="rect" href="class_c_layered_g_p_s_o_wrapper.html#af7ad0865d69fa17988fe17da8e4c7134" title="Call &#39;SetCommand&#39; function from GPSOs wrapped this class" alt="" coords="594,5,757,48"/>
+<area shape="poly" title=" " alt="" coords="906,269,884,223,853,167,813,111,764,62,747,51,749,46,767,58,817,108,857,164,889,220,911,267"/>
+<area shape="rect" href="class_c_descriptor_heap_pool.html#aed35283ea5b51d7d3abd58005bbc78ff" title="Set current descriptor heap to command list" alt="" coords="585,459,766,517"/>
+<area shape="poly" title=" " alt="" coords="894,339,838,393,767,449,748,460,745,456,764,444,834,389,890,335"/>
+<area shape="rect" href="class_utl_1_1_dx_1_1_res_state_controller.html#ad0fa08b68230b05d7610c69d4054f37f" title="Transition resource state" alt="" coords="586,692,765,735"/>
+<area shape="poly" title=" " alt="" coords="908,341,849,457,768,597,731,650,697,693,693,690,727,647,763,595,845,454,903,338"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="365,144,518,187"/>
+<area shape="poly" title=" " alt="" coords="609,106,586,113,498,146,496,141,584,108,607,101"/>
+<area shape="poly" title=" " alt="" coords="598,287,584,281,549,260,515,235,463,189,466,185,519,231,552,255,587,276,600,282"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="346,333,537,376"/>
+<area shape="poly" title=" " alt="" coords="596,324,538,337,537,331,595,319"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="147,341,261,368"/>
+<area shape="poly" title=" " alt="" coords="330,357,261,357,261,352,330,352"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="12,341,62,368"/>
+<area shape="poly" title=" " alt="" coords="132,357,62,357,62,352,132,352"/>
+<area shape="poly" title=" " alt="" coords="66,330,57,323,37,320,19,322,10,327,9,333,14,341,9,344,3,334,6,324,18,317,37,315,59,318,69,326"/>
+<area shape="poly" title=" " alt="" coords="605,238,584,230,487,190,490,185,586,226,607,232"/>
+<area shape="poly" title=" " alt="" coords="605,274,586,281,530,308,480,335,478,330,527,303,584,276,603,269"/>
+<area shape="poly" title=" " alt="" coords="590,149,519,158,518,153,589,144"/>
+<area shape="rect" href="class_c_index_buffer.html#a1da8cdfad63417296440cfb0b6d01dae" title=" " alt="" coords="372,473,512,500"/>
+<area shape="poly" title=" " alt="" coords="601,538,537,515,497,503,499,498,538,509,602,533"/>
+<area shape="rect" href="class_c_vertex_buffer.html#a0b656936a16c4ac0ff27cc369280965d" title="Create vertex buffer" alt="" coords="368,524,515,551"/>
+<area shape="poly" title=" " alt="" coords="572,554,516,548,516,543,572,549"/>
+<area shape="rect" href="class_c_texture_resource.html#a5e87e2247ac4d47facbefdc9c82906d2" title="Create texture resource" alt="" coords="355,575,529,601"/>
+<area shape="poly" title=" " alt="" coords="572,577,530,581,529,576,571,571"/>
+<area shape="rect" href="class_c_texture_resource.html#ad76c10ec0f2f42e1c2c97f62726a5f16" title="Constructor for creating texture resource" alt="" coords="110,567,298,609"/>
+<area shape="poly" title=" " alt="" coords="339,591,299,591,299,585,339,585"/>
+<area shape="poly" title=" " alt="" coords="592,357,538,357,538,352,592,352"/>
+<area shape="poly" title=" " alt="" coords="587,394,529,379,530,374,589,389"/>
+<area shape="poly" title=" " alt="" coords="580,185,518,178,519,172,581,180"/>
+<area shape="poly" title=" " alt="" coords="597,57,587,62,522,104,469,146,466,142,519,100,584,58,594,52"/>
+<area shape="poly" title=" " alt="" coords="592,454,584,449,472,379,475,374,587,444,595,449"/>
+<area shape="rect" href="class_a_c_static_s_r_v_allocator.html#a23d7b3c75c2b7da45610fd3dc86456c3" title="Allocate and return data" alt="" coords="366,825,517,868"/>
+<area shape="poly" title=" " alt="" coords="639,747,592,782,539,816,514,827,511,822,536,811,589,778,636,743"/>
+<area shape="rect" href="class_c_graphics_object_asset.html#a5f230ea3a014049ad788f720c9d2c2ea" title="Ask for SRVs assignment information to be built" alt="" coords="365,625,519,668"/>
+<area shape="poly" title=" " alt="" coords="583,690,519,671,520,666,585,685"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a593c31ff21abdf7074ae1b40a5586831" title="Ask for textures assignment information to be built" alt="" coords="360,692,523,735"/>
+<area shape="poly" title=" " alt="" coords="571,716,524,716,524,711,571,711"/>
+<area shape="rect" href="class_a_c_static_s_r_v_allocator.html#a6968baf3998e66412134ccc9bbf8bdaf" title="Get handle of allocated data in resource" alt="" coords="356,759,527,801"/>
+<area shape="poly" title=" " alt="" coords="585,742,520,761,519,755,583,737"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af5d151e588bed09c01c07556ecb48e1a" name="af5d151e588bed09c01c07556ecb48e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d151e588bed09c01c07556ecb48e1a">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCommandManager::Initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_af5d151e588bed09c01c07556ecb48e1a_cgraph.png" border="0" usemap="#aclass_c_command_manager_af5d151e588bed09c01c07556ecb48e1a_cgraph" alt=""/></div>
+<map name="aclass_c_command_manager_af5d151e588bed09c01c07556ecb48e1a_cgraph" id="aclass_c_command_manager_af5d151e588bed09c01c07556ecb48e1a_cgraph">
+<area shape="rect" title="Initialize" alt="" coords="5,5,200,32"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="248,5,394,32"/>
+<area shape="poly" title=" " alt="" coords="200,16,232,16,232,21,200,21"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="442,5,650,32"/>
+<area shape="poly" title=" " alt="" coords="394,16,426,16,426,21,394,21"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_af5d151e588bed09c01c07556ecb48e1a_icgraph.png" border="0" usemap="#aclass_c_command_manager_af5d151e588bed09c01c07556ecb48e1a_icgraph" alt=""/></div>
+<map name="aclass_c_command_manager_af5d151e588bed09c01c07556ecb48e1a_icgraph" id="aclass_c_command_manager_af5d151e588bed09c01c07556ecb48e1a_icgraph">
+<area shape="rect" title="Initialize" alt="" coords="264,29,458,56"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,29,216,56"/>
+<area shape="poly" title=" " alt="" coords="248,45,216,45,216,40,248,40"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+<area shape="poly" title=" " alt="" coords="51,16,44,10,30,8,17,10,10,14,8,20,12,28,7,30,3,21,6,11,15,5,30,3,46,5,55,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4aa496f4c1cb52564c742576d2796f8d" name="a4aa496f4c1cb52564c742576d2796f8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa496f4c1cb52564c742576d2796f8d">&#9670;&#160;</a></span>SecureCommands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCommandManager::SecureCommands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Secure command queues and command lists </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_a4aa496f4c1cb52564c742576d2796f8d_cgraph.png" border="0" usemap="#aclass_c_command_manager_a4aa496f4c1cb52564c742576d2796f8d_cgraph" alt=""/></div>
+<map name="aclass_c_command_manager_a4aa496f4c1cb52564c742576d2796f8d_cgraph" id="aclass_c_command_manager_a4aa496f4c1cb52564c742576d2796f8d_cgraph">
+<area shape="rect" title="Secure command queues and command lists" alt="" coords="5,168,260,195"/>
+<area shape="rect" href="class_c_command_manager.html#a9d41d23dac6388eba73f0c7950c5e52f" title="Clear the current command list" alt="" coords="308,101,527,144"/>
+<area shape="poly" title=" " alt="" coords="201,165,295,145,296,150,202,170"/>
+<area shape="rect" href="class_c_command_manager.html#ae25a3521fd40b119016782297cb7ba78" title="Get feature for thread&#45;safe" alt="" coords="623,5,814,32"/>
+<area shape="poly" title=" " alt="" coords="153,165,220,126,262,105,307,87,384,64,462,47,607,25,608,31,463,52,385,70,309,92,265,110,222,131,156,170"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="631,189,807,232"/>
+<area shape="poly" title=" " alt="" coords="260,185,615,203,615,208,260,190"/>
+<area shape="rect" href="class_c_command_manager_1_1_c_thread_safe_feature.html#abc72278becb39ddafee24cf26776b90c" title="Wait for the GPU to complete processing" alt="" coords="320,219,515,261"/>
+<area shape="poly" title=" " alt="" coords="202,193,305,214,304,219,201,198"/>
+<area shape="rect" href="class_c_swap_chain.html#a0c8a765f76a3dd9e191f509ae033e6a8" title="Wait for present is called in the another thread" alt="" coords="320,285,515,312"/>
+<area shape="poly" title=" " alt="" coords="157,193,223,231,309,271,331,278,329,283,307,276,221,236,154,197"/>
+<area shape="poly" title=" " alt="" coords="453,98,509,69,574,41,607,32,609,37,576,47,511,73,456,103"/>
+<area shape="poly" title=" " alt="" coords="478,142,576,175,616,186,615,191,574,180,476,147"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="612,56,826,99"/>
+<area shape="poly" title=" " alt="" coords="527,104,596,93,597,98,528,109"/>
+<area shape="rect" href="class_c_command_manager_1_1_c_thread_safe_feature.html#afeebd51547d4b4ca6569686bb91f42e5" title="Clear graphics command list and graphics command allocator, However, it is not associated with execut..." alt="" coords="575,123,862,165"/>
+<area shape="poly" title=" " alt="" coords="528,128,559,130,559,135,527,133"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="910,5,1119,32"/>
+<area shape="poly" title=" " alt="" coords="815,16,895,16,895,21,815,21"/>
+<area shape="rect" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a4dff65e9be836b0296d1cadecb4d5fb2" title="Does this future class have a shared state?" alt="" coords="617,267,820,309"/>
+<area shape="poly" title=" " alt="" coords="515,293,601,289,602,295,515,298"/>
+<area shape="rect" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a7995de7fe3113740d3331f87acad79fb" title="Wait for processing to complete" alt="" coords="617,333,820,376"/>
+<area shape="poly" title=" " alt="" coords="494,310,602,330,601,336,493,315"/>
+<area shape="rect" href="class_c_application_error.html#a34280d917897dd4aa7faeceb4178bdf1" title="Check application exit and throws an exception if it exits" alt="" coords="949,296,1080,339"/>
+<area shape="poly" title=" " alt="" coords="821,339,934,325,934,330,821,344"/>
+<area shape="rect" href="class_a_c_any_thread_singleton.html#a7321978d9a2f747a0e596d17c18a8b98" title="Get singleton instance for any thread" alt="" coords="937,363,1092,421"/>
+<area shape="poly" title=" " alt="" coords="821,365,922,378,921,383,821,370"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_a4aa496f4c1cb52564c742576d2796f8d_icgraph.png" border="0" usemap="#aclass_c_command_manager_a4aa496f4c1cb52564c742576d2796f8d_icgraph" alt=""/></div>
+<map name="aclass_c_command_manager_a4aa496f4c1cb52564c742576d2796f8d_icgraph" id="aclass_c_command_manager_a4aa496f4c1cb52564c742576d2796f8d_icgraph">
+<area shape="rect" title="Secure command queues and command lists" alt="" coords="503,80,758,107"/>
+<area shape="rect" href="class_utl_1_1_error_1_1_c_fatal_error.html#aad0ff47e0e514a35602f0b6529a94bfa" title="Constructor" alt="" coords="286,5,433,48"/>
+<area shape="poly" title=" " alt="" coords="558,78,433,47,435,42,559,73"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="264,72,455,115"/>
+<area shape="poly" title=" " alt="" coords="488,96,456,96,456,91,488,91"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a914ad8572c7e53d4cddb5ae4925d04cf" title="Set prefab" alt="" coords="285,139,435,181"/>
+<area shape="poly" title=" " alt="" coords="559,114,436,144,435,139,558,108"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,80,216,107"/>
+<area shape="poly" title=" " alt="" coords="248,96,216,96,216,91,248,91"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,80,55,107"/>
+<area shape="poly" title=" " alt="" coords="87,96,55,96,55,91,87,91"/>
+<area shape="poly" title=" " alt="" coords="51,67,44,61,30,59,17,61,10,65,8,71,12,78,7,81,3,71,6,62,15,56,30,53,46,56,55,63"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af6a8b626d58ef495a821ca64748e9d00" name="af6a8b626d58ef495a821ca64748e9d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6a8b626d58ef495a821ca64748e9d00">&#9670;&#160;</a></span>UnsafeGraphicsCommandsExecute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCommandManager::UnsafeGraphicsCommandsExecute </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Executes registered graphics commands, but does not wait or clear, so it is only used in special situations </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_af6a8b626d58ef495a821ca64748e9d00_cgraph.png" border="0" usemap="#aclass_c_command_manager_af6a8b626d58ef495a821ca64748e9d00_cgraph" alt=""/></div>
+<map name="aclass_c_command_manager_af6a8b626d58ef495a821ca64748e9d00_cgraph" id="aclass_c_command_manager_af6a8b626d58ef495a821ca64748e9d00_cgraph">
+<area shape="rect" title="Executes registered graphics commands, but does not wait or clear, so it is only used in special situ..." alt="" coords="5,39,245,81"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="312,5,488,48"/>
+<area shape="poly" title=" " alt="" coords="245,43,296,37,297,42,246,48"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="293,72,507,115"/>
+<area shape="poly" title=" " alt="" coords="246,72,278,76,277,81,245,77"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_command_manager_af6a8b626d58ef495a821ca64748e9d00_icgraph.png" border="0" usemap="#aclass_c_command_manager_af6a8b626d58ef495a821ca64748e9d00_icgraph" alt=""/></div>
+<map name="aclass_c_command_manager_af6a8b626d58ef495a821ca64748e9d00_icgraph" id="aclass_c_command_manager_af6a8b626d58ef495a821ca64748e9d00_icgraph">
+<area shape="rect" title="Executes registered graphics commands, but does not wait or clear, so it is only used in special situ..." alt="" coords="965,107,1204,149"/>
+<area shape="rect" href="class_c_command_manager.html#a2190493f7e13f1a69192b951e1326005" title="Execute registered commands" alt="" coords="703,76,917,119"/>
+<area shape="poly" title=" " alt="" coords="949,116,917,112,917,107,949,110"/>
+<area shape="rect" href="class_c_swap_chain.html#a3d838db1a55450cb8bba97f1e67ddbb3" title="Draw and swap the back buffer" alt="" coords="716,144,904,171"/>
+<area shape="poly" title=" " alt="" coords="949,145,904,150,904,145,949,140"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#ad02294e127ffd215c75b81f09be6b89d" title="Create resource" alt="" coords="471,65,648,108"/>
+<area shape="poly" title=" " alt="" coords="688,95,649,93,649,88,688,89"/>
+<area shape="rect" href="class_c_index_buffer.html#a1da8cdfad63417296440cfb0b6d01dae" title=" " alt="" coords="259,5,399,32"/>
+<area shape="poly" title=" " alt="" coords="470,63,415,47,377,35,378,30,417,41,472,58"/>
+<area shape="rect" href="class_c_vertex_buffer.html#a0b656936a16c4ac0ff27cc369280965d" title="Create vertex buffer" alt="" coords="255,56,403,83"/>
+<area shape="poly" title=" " alt="" coords="456,82,403,78,403,72,456,76"/>
+<area shape="rect" href="class_c_texture_resource.html#a5e87e2247ac4d47facbefdc9c82906d2" title="Create texture resource" alt="" coords="242,107,416,133"/>
+<area shape="poly" title=" " alt="" coords="456,104,417,110,416,105,456,99"/>
+<area shape="rect" href="class_c_texture_resource.html#ad76c10ec0f2f42e1c2c97f62726a5f16" title="Constructor for creating texture resource" alt="" coords="5,91,194,133"/>
+<area shape="poly" title=" " alt="" coords="226,119,194,118,194,113,226,114"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="464,140,655,183"/>
+<area shape="poly" title=" " alt="" coords="701,162,656,162,656,157,701,156"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="272,165,386,192"/>
+<area shape="poly" title=" " alt="" coords="449,172,386,177,386,172,448,167"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="75,181,124,208"/>
+<area shape="poly" title=" " alt="" coords="257,186,125,196,124,190,257,181"/>
+<area shape="poly" title=" " alt="" coords="135,178,140,171,136,166,123,162,100,160,72,163,60,169,61,176,76,185,73,189,57,178,55,166,71,158,99,155,124,157,139,162,145,171,140,181"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="a3273bd1fe91a2694d70da9c751511d0b" name="a3273bd1fe91a2694d70da9c751511d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3273bd1fe91a2694d70da9c751511d0b">&#9670;&#160;</a></span>ACSingletonBase</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_a_c_singleton_base.html">ACSingletonBase</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_command_manager_8h_source.html">CommandManager.h</a></li>
+<li><a class="el" href="_command_manager_8cpp.html">CommandManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

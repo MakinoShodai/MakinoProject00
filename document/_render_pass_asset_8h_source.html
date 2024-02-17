@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: RenderPassAsset.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">RenderPassAsset.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_render_pass_asset_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __RENDER_PASS_ASSET_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __RENDER_PASS_ASSET_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_weak_ptr_8h.html">WeakPtr.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Forward declaration</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="class_c_scene.html">CScene</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_a_c_render_pass_asset.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="class_a_c_render_pass_asset.html">ACRenderPassAsset</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_a_c_render_pass_asset.html#a9f5018bf1857bc3d7ddbbda78638698a">   23</a></span>    <a class="code hl_function" href="class_a_c_render_pass_asset.html#a9f5018bf1857bc3d7ddbbda78638698a">ACRenderPassAsset</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_a_c_render_pass_asset.html#a2012f27e530049376ee1599768e27a0a">   28</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_a_c_render_pass_asset.html#a2012f27e530049376ee1599768e27a0a">~ACRenderPassAsset</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_render_pass_asset.html#a2820709c423745e9bac23abd6c57f703">CallStart</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CScene&gt;</a> scene);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_a_c_render_pass_asset.html#aaff825dbf53a65eaa7cf3ebfb99e7a03">   39</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_render_pass_asset.html#aaff825dbf53a65eaa7cf3ebfb99e7a03">Draw</a>() = 0;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_a_c_render_pass_asset.html#a454351c5861e80e3c6b193b6d407111c">   47</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_c_render_pass_asset.html#a454351c5861e80e3c6b193b6d407111c">Start</a>() = 0;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_a_c_render_pass_asset.html#a347341f1cf316bed8c6bcb31971a113d">   51</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CScene&gt;</a> <a class="code hl_variable" href="class_a_c_render_pass_asset.html#a347341f1cf316bed8c6bcb31971a113d">m_scene</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_a_c_registrar_for_render_pass_asset.html">   56</a></span><span class="keyword">class </span><a class="code hl_class" href="class_a_c_registrar_for_render_pass_asset.html">ACRegistrarForRenderPassAsset</a> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_a_c_registrar_for_render_pass_asset.html#acc95dad9f81869b4b8d10b940d38eea5">   59</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="class_a_c_registrar_for_render_pass_asset.html#acc95dad9f81869b4b8d10b940d38eea5">ClassMap</a> = std::map&lt;std::string, std::function&lt;<a class="code hl_class" href="class_a_c_render_pass_asset.html">ACRenderPassAsset</a>* ()&gt;&gt;;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_a_c_registrar_for_render_pass_asset.html#ad5c02cb89663c838629c292b23749aaf">   62</a></span>    <a class="code hl_function" href="class_a_c_registrar_for_render_pass_asset.html#ad5c02cb89663c838629c292b23749aaf">ACRegistrarForRenderPassAsset</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_a_c_registrar_for_render_pass_asset.html#a7df54d8a5d861750c4eb21962f5dfb6e">   64</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_a_c_registrar_for_render_pass_asset.html#a7df54d8a5d861750c4eb21962f5dfb6e">~ACRegistrarForRenderPassAsset</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_a_c_render_pass_asset.html">ACRenderPassAsset</a>* <a class="code hl_function" href="class_a_c_registrar_for_render_pass_asset.html#a62700b9fa3d1a557d6c198bbb0aa5a88">CreateRenderPassAsset</a>(<span class="keyword">const</span> std::string&amp; className);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_a_c_registrar_for_render_pass_asset.html#a1df0c76cf90fd468e687ff98992520d1">   74</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="class_a_c_registrar_for_render_pass_asset.html#acc95dad9f81869b4b8d10b940d38eea5">ClassMap</a>&amp; <a class="code hl_function" href="class_a_c_registrar_for_render_pass_asset.html#a1df0c76cf90fd468e687ff98992520d1">GetClassMap</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_a_c_registrar_for_render_pass_asset.html#aadd9fde30213311d6c427dd3cf13deba">GetClassMapProtected</a>(); }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_a_c_registrar_for_render_pass_asset.html#aadd9fde30213311d6c427dd3cf13deba">   78</a></span>    <span class="keyword">static</span> <a class="code hl_typedef" href="class_a_c_registrar_for_render_pass_asset.html#acc95dad9f81869b4b8d10b940d38eea5">ClassMap</a>&amp; <a class="code hl_function" href="class_a_c_registrar_for_render_pass_asset.html#aadd9fde30213311d6c427dd3cf13deba">GetClassMapProtected</a>() { <span class="keyword">static</span> <a class="code hl_typedef" href="class_a_c_registrar_for_render_pass_asset.html#acc95dad9f81869b4b8d10b940d38eea5">ClassMap</a> classMap; <span class="keywordflow">return</span> classMap; }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>};</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="concept_is_a_c_render_pass_asset_child.html">   84</a></span><span class="keyword">concept </span><a class="code hl_concept" href="concept_is_a_c_render_pass_asset_child.html">IsACRenderPassAssetChild</a> = std::is_base_of_v&lt;ACRenderPassAsset, T&gt;;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">template</span>&lt;IsACRenderPassAssetChild T&gt;</div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="};">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_c_registrar_render_pass_asset.html">   91</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_registrar_render_pass_asset.html">CRegistrarRenderPassAsset</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_registrar_for_render_pass_asset.html">ACRegistrarForRenderPassAsset</a> {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_c_registrar_render_pass_asset.html#ae241d6bf21f4931519b8cf339bc7215c">   94</a></span>    <a class="code hl_function" href="class_c_registrar_render_pass_asset.html#ae241d6bf21f4931519b8cf339bc7215c">CRegistrarRenderPassAsset</a>(std::string className) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_function" href="class_a_c_registrar_for_render_pass_asset.html#aadd9fde30213311d6c427dd3cf13deba">ACRegistrarForRenderPassAsset::GetClassMapProtected</a>().emplace(className, []()-&gt;<a class="code hl_class" href="class_a_c_render_pass_asset.html">ACRenderPassAsset</a>* { <span class="keywordflow">return</span> <span class="keyword">new</span> T(); });</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_c_registrar_render_pass_asset.html#a1f8ed64782e004860e5860088c91875d">   99</a></span>    <a class="code hl_function" href="class_c_registrar_render_pass_asset.html#a1f8ed64782e004860e5860088c91875d">~CRegistrarRenderPassAsset</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="_render_pass_asset_8h.html#a495094387506af7137bfb951b2c8da86">  103</a></span><span class="preprocessor">#define REGISTER_RENDERPASS_CLASS(CLASS_NAME) static CRegistrarRenderPassAsset&lt;CLASS_NAME&gt; registrar_##CLASS_NAME(#CLASS_NAME); </span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif </span><span class="comment">// !__RENDER_PASS_ASSET_H__</span></div>
+<div class="ttc" id="a_weak_ptr_8h_html"><div class="ttname"><a href="_weak_ptr_8h.html">WeakPtr.h</a></div><div class="ttdoc">This file handles weak pointer that can be generated from unique pointer and shared pointer.</div></div>
+<div class="ttc" id="aclass_a_c_registrar_for_render_pass_asset_html"><div class="ttname"><a href="class_a_c_registrar_for_render_pass_asset.html">ACRegistrarForRenderPassAsset</a></div><div class="ttdoc">Class for registering scenes to map</div><div class="ttdef"><b>Definition</b> RenderPassAsset.h:56</div></div>
+<div class="ttc" id="aclass_a_c_registrar_for_render_pass_asset_html_a1df0c76cf90fd468e687ff98992520d1"><div class="ttname"><a href="class_a_c_registrar_for_render_pass_asset.html#a1df0c76cf90fd468e687ff98992520d1">ACRegistrarForRenderPassAsset::GetClassMap</a></div><div class="ttdeci">static const ClassMap &amp; GetClassMap()</div><div class="ttdoc">Get map associating class names with the function that created it</div><div class="ttdef"><b>Definition</b> RenderPassAsset.h:74</div></div>
+<div class="ttc" id="aclass_a_c_registrar_for_render_pass_asset_html_a62700b9fa3d1a557d6c198bbb0aa5a88"><div class="ttname"><a href="class_a_c_registrar_for_render_pass_asset.html#a62700b9fa3d1a557d6c198bbb0aa5a88">ACRegistrarForRenderPassAsset::CreateRenderPassAsset</a></div><div class="ttdeci">static ACRenderPassAsset * CreateRenderPassAsset(const std::string &amp;className)</div><div class="ttdoc">Create render pass asset</div><div class="ttdef"><b>Definition</b> RenderPassAsset.cpp:4</div></div>
+<div class="ttc" id="aclass_a_c_registrar_for_render_pass_asset_html_a7df54d8a5d861750c4eb21962f5dfb6e"><div class="ttname"><a href="class_a_c_registrar_for_render_pass_asset.html#a7df54d8a5d861750c4eb21962f5dfb6e">ACRegistrarForRenderPassAsset::~ACRegistrarForRenderPassAsset</a></div><div class="ttdeci">virtual ~ACRegistrarForRenderPassAsset()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_a_c_registrar_for_render_pass_asset_html_aadd9fde30213311d6c427dd3cf13deba"><div class="ttname"><a href="class_a_c_registrar_for_render_pass_asset.html#aadd9fde30213311d6c427dd3cf13deba">ACRegistrarForRenderPassAsset::GetClassMapProtected</a></div><div class="ttdeci">static ClassMap &amp; GetClassMapProtected()</div><div class="ttdoc">Get map associating class names with the function that created it</div><div class="ttdef"><b>Definition</b> RenderPassAsset.h:78</div></div>
+<div class="ttc" id="aclass_a_c_registrar_for_render_pass_asset_html_acc95dad9f81869b4b8d10b940d38eea5"><div class="ttname"><a href="class_a_c_registrar_for_render_pass_asset.html#acc95dad9f81869b4b8d10b940d38eea5">ACRegistrarForRenderPassAsset::ClassMap</a></div><div class="ttdeci">std::map&lt; std::string, std::function&lt; ACRenderPassAsset *()&gt; &gt; ClassMap</div><div class="ttdoc">Type of map associating class names with the function that created it</div><div class="ttdef"><b>Definition</b> RenderPassAsset.h:59</div></div>
+<div class="ttc" id="aclass_a_c_registrar_for_render_pass_asset_html_ad5c02cb89663c838629c292b23749aaf"><div class="ttname"><a href="class_a_c_registrar_for_render_pass_asset.html#ad5c02cb89663c838629c292b23749aaf">ACRegistrarForRenderPassAsset::ACRegistrarForRenderPassAsset</a></div><div class="ttdeci">ACRegistrarForRenderPassAsset()=default</div><div class="ttdoc">Constructor</div></div>
+<div class="ttc" id="aclass_a_c_render_pass_asset_html"><div class="ttname"><a href="class_a_c_render_pass_asset.html">ACRenderPassAsset</a></div><div class="ttdoc">Abstract class for rendering pass asset that scene uses</div><div class="ttdef"><b>Definition</b> RenderPassAsset.h:18</div></div>
+<div class="ttc" id="aclass_a_c_render_pass_asset_html_a2012f27e530049376ee1599768e27a0a"><div class="ttname"><a href="class_a_c_render_pass_asset.html#a2012f27e530049376ee1599768e27a0a">ACRenderPassAsset::~ACRenderPassAsset</a></div><div class="ttdeci">virtual ~ACRenderPassAsset()=default</div><div class="ttdoc">Detructor</div></div>
+<div class="ttc" id="aclass_a_c_render_pass_asset_html_a2820709c423745e9bac23abd6c57f703"><div class="ttname"><a href="class_a_c_render_pass_asset.html#a2820709c423745e9bac23abd6c57f703">ACRenderPassAsset::CallStart</a></div><div class="ttdeci">void CallStart(CWeakPtr&lt; CScene &gt; scene)</div><div class="ttdoc">Call 'Start' function</div><div class="ttdef"><b>Definition</b> RenderPassAsset.cpp:16</div></div>
+<div class="ttc" id="aclass_a_c_render_pass_asset_html_a347341f1cf316bed8c6bcb31971a113d"><div class="ttname"><a href="class_a_c_render_pass_asset.html#a347341f1cf316bed8c6bcb31971a113d">ACRenderPassAsset::m_scene</a></div><div class="ttdeci">CWeakPtr&lt; CScene &gt; m_scene</div><div class="ttdoc">Weak pointer to scene that has this class</div><div class="ttdef"><b>Definition</b> RenderPassAsset.h:51</div></div>
+<div class="ttc" id="aclass_a_c_render_pass_asset_html_a454351c5861e80e3c6b193b6d407111c"><div class="ttname"><a href="class_a_c_render_pass_asset.html#a454351c5861e80e3c6b193b6d407111c">ACRenderPassAsset::Start</a></div><div class="ttdeci">virtual void Start()=0</div><div class="ttdoc">Processing when switching to this scene</div></div>
+<div class="ttc" id="aclass_a_c_render_pass_asset_html_a9f5018bf1857bc3d7ddbbda78638698a"><div class="ttname"><a href="class_a_c_render_pass_asset.html#a9f5018bf1857bc3d7ddbbda78638698a">ACRenderPassAsset::ACRenderPassAsset</a></div><div class="ttdeci">ACRenderPassAsset()=default</div><div class="ttdoc">Constructor</div></div>
+<div class="ttc" id="aclass_a_c_render_pass_asset_html_aaff825dbf53a65eaa7cf3ebfb99e7a03"><div class="ttname"><a href="class_a_c_render_pass_asset.html#aaff825dbf53a65eaa7cf3ebfb99e7a03">ACRenderPassAsset::Draw</a></div><div class="ttdeci">virtual void Draw()=0</div><div class="ttdoc">Drawing process</div></div>
+<div class="ttc" id="aclass_c_registrar_render_pass_asset_html"><div class="ttname"><a href="class_c_registrar_render_pass_asset.html">CRegistrarRenderPassAsset</a></div><div class="ttdoc">Class for registering scene asset to map</div><div class="ttdef"><b>Definition</b> RenderPassAsset.h:91</div></div>
+<div class="ttc" id="aclass_c_registrar_render_pass_asset_html_a1f8ed64782e004860e5860088c91875d"><div class="ttname"><a href="class_c_registrar_render_pass_asset.html#a1f8ed64782e004860e5860088c91875d">CRegistrarRenderPassAsset::~CRegistrarRenderPassAsset</a></div><div class="ttdeci">~CRegistrarRenderPassAsset() override=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_registrar_render_pass_asset_html_ae241d6bf21f4931519b8cf339bc7215c"><div class="ttname"><a href="class_c_registrar_render_pass_asset.html#ae241d6bf21f4931519b8cf339bc7215c">CRegistrarRenderPassAsset::CRegistrarRenderPassAsset</a></div><div class="ttdeci">CRegistrarRenderPassAsset(std::string className)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> RenderPassAsset.h:94</div></div>
+<div class="ttc" id="aclass_c_scene_html"><div class="ttname"><a href="class_c_scene.html">CScene</a></div><div class="ttdoc">Scene class</div><div class="ttdef"><b>Definition</b> Scene.h:25</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="aconcept_is_a_c_render_pass_asset_child_html"><div class="ttname"><a href="concept_is_a_c_render_pass_asset_child.html">IsACRenderPassAssetChild</a></div><div class="ttdoc">Is this a child of ACRenderPassAsset?</div><div class="ttdef"><b>Definition</b> RenderPassAsset.h:84</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

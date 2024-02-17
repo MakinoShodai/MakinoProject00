@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CommandManager.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">CommandManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_command_manager_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __COMMAND_MANAGER_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __COMMAND_MANAGER_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_swap_chain_8h.html">SwapChain.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="_command_manager_8h.html#a21e038f5b8958e203d28bc4f18472352">   16</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_command_manager_8h.html#a21e038f5b8958e203d28bc4f18472352">CommandType</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="_command_manager_8h.html#a21e038f5b8958e203d28bc4f18472352ad334dfcea59127bedfcdbe0a3ee7f494">Graphics</a>,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_c_command_manager.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_command_manager.html">CCommandManager</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>&lt;CCommandManager&gt; {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_c_command_manager.html#a3273bd1fe91a2694d70da9c751511d0b">   28</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_a_c_singleton_base.html">ACSingletonBase</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="class_c_command_manager.html#a3b902d159775474e439ccd2ee8e2dadc">~CCommandManager</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_command_manager.html#af5d151e588bed09c01c07556ecb48e1a">Initialize</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_command_manager.html#a2190493f7e13f1a69192b951e1326005">CommandsExecute</a>(<a class="code hl_enumeration" href="_command_manager_8h.html#a21e038f5b8958e203d28bc4f18472352">CommandType</a> type, <span class="keywordtype">bool</span> isWaitForGPU);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_command_manager.html#af6a8b626d58ef495a821ca64748e9d00">UnsafeGraphicsCommandsExecute</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_command_manager.html#a9d41d23dac6388eba73f0c7950c5e52f">ClearCurrentCommandList</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_command_manager.html#a4aa496f4c1cb52564c742576d2796f8d">SecureCommands</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_c_command_manager.html#a429de9234487d377579c18589f9edc65">   67</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_command_manager.html#a429de9234487d377579c18589f9edc65">AddResStateController</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;Utl::Dx::ResStateController&gt;</a> controller) { m_resStateControllers.push_back(controller); }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_c_command_manager.html#ab66bc94cd4f0a10f2b78adda89022d61">   70</a></span>    ID3D12CommandQueue* <a class="code hl_function" href="class_c_command_manager.html#ab66bc94cd4f0a10f2b78adda89022d61">GetCommandQueue</a>() { <span class="keywordflow">return</span> m_cmdQueue.Get(); }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52">   72</a></span>    ID3D12GraphicsCommandList* <a class="code hl_function" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52">GetGraphicsCmdList</a>() { <span class="keywordflow">return</span> m_graphicsCmdList[<a class="code hl_function" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95">CSwapChain::GetMain</a>().<a class="code hl_function" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de">GetNextBackBufferIndex</a>()].Get(); }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="};">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_c_command_manager_1_1_c_thread_safe_feature.html">   75</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_c_command_manager_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;CCommandManager&gt; {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">using </span><a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;<a class="code hl_class" href="class_c_command_manager.html">CCommandManager</a>&gt;<a class="code hl_class" href="class_a_c_inner_class.html">::ACInnerClass</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_command_manager_1_1_c_thread_safe_feature.html#abc72278becb39ddafee24cf26776b90c">WaitForGPU</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_command_manager_1_1_c_thread_safe_feature.html#afeebd51547d4b4ca6569686bb91f42e5">UnsafeGraphicsCommandsClear</a>(UINT index);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    };</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_c_command_manager.html#ae25a3521fd40b119016782297cb7ba78">   93</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="class_c_command_manager_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a>&amp; <a class="code hl_function" href="class_c_command_manager.html#ae25a3521fd40b119016782297cb7ba78">GetAny</a>() {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_c_command_manager_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> instance(<a class="code hl_function" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a>().Get());</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_c_command_manager.html#a2d45ac4cbb364b836ed7a1dba2145de0">  102</a></span>    <a class="code hl_function" href="class_c_command_manager.html#a2d45ac4cbb364b836ed7a1dba2145de0">CCommandManager</a>() : <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>(-50), m_fenceValue(0){}</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    Microsoft::WRL::ComPtr&lt;ID3D12CommandQueue&gt; m_cmdQueue;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    Microsoft::WRL::ComPtr&lt;ID3D12Fence&gt; m_fence;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    UINT64 m_fenceValue;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    Microsoft::WRL::ComPtr&lt;ID3D12CommandAllocator&gt; m_graphicsCmdAllocator[<a class="code hl_variable" href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a>];</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    Microsoft::WRL::ComPtr&lt;ID3D12GraphicsCommandList&gt; m_graphicsCmdList[<a class="code hl_variable" href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a>];</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    std::vector&lt;CWeakPtr&lt;Utl::Dx::ResStateController&gt;&gt; m_resStateControllers;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>};</div>
+</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">#ifdef _DEBUG</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="_command_manager_8h.html#a50449d2fc08d6d2aec829b28a24658a6">  122</a></span><span class="preprocessor">#define PIX_BEGIN_EVENT(cmdList, color, eventName) PIXBeginEvent(cmdList, color, eventName);</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="_command_manager_8h.html#ae757efa993222bb983455b5a2ce65835">  124</a></span><span class="preprocessor">#define PIX_END_EVENT(cmdList) PIXEndEvent(cmdList)</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#define PIX_BEGIN_EVENT(cmdList, color, eventName) </span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#define PIX_END_EVENT(cmdList)</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif </span><span class="comment">// _DEBUG</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#endif </span><span class="comment">// !__COMMAND_MANAGER_H__</span></div>
+<div class="ttc" id="a_command_manager_8h_html_a21e038f5b8958e203d28bc4f18472352"><div class="ttname"><a href="_command_manager_8h.html#a21e038f5b8958e203d28bc4f18472352">CommandType</a></div><div class="ttdeci">CommandType</div><div class="ttdoc">Command type</div><div class="ttdef"><b>Definition</b> CommandManager.h:16</div></div>
+<div class="ttc" id="a_command_manager_8h_html_a21e038f5b8958e203d28bc4f18472352ad334dfcea59127bedfcdbe0a3ee7f494"><div class="ttname"><a href="_command_manager_8h.html#a21e038f5b8958e203d28bc4f18472352ad334dfcea59127bedfcdbe0a3ee7f494">CommandType::Graphics</a></div><div class="ttdeci">@ Graphics</div><div class="ttdoc">Graphics command type</div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">File handling abstract singleton class.</div></div>
+<div class="ttc" id="a_swap_chain_8h_html"><div class="ttname"><a href="_swap_chain_8h.html">SwapChain.h</a></div><div class="ttdoc">This file handles swap chain.</div></div>
+<div class="ttc" id="a_swap_chain_8h_html_a597c5eff72beb59812955eabb8d454fd"><div class="ttname"><a href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a></div><div class="ttdeci">const UINT SCREEN_BUFFERING_NUM</div><div class="ttdoc">The number of main screen buffer</div><div class="ttdef"><b>Definition</b> SwapChain.h:19</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html"><div class="ttname"><a href="class_a_c_inner_class.html">ACInnerClass</a></div><div class="ttdoc">Abstract inner class</div><div class="ttdef"><b>Definition</b> Singleton.h:23</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html"><div class="ttname"><a href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a></div><div class="ttdoc">Abstract singleton class for main thread only (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:111</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html_a89d07f64971fd623dd0a8a7179e17e95"><div class="ttname"><a href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95">ACMainThreadSingleton&lt; CSwapChain &gt;::GetMain</a></div><div class="ttdeci">static CSwapChain &amp; GetMain()</div><div class="ttdoc">Get singleton instance for main thread</div><div class="ttdef"><b>Definition</b> Singleton.h:120</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html"><div class="ttname"><a href="class_a_c_singleton_base.html">ACSingletonBase</a></div><div class="ttdoc">Abstract singleton base class (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:59</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html_a86122d51b9f611ffbc300eb790c3dabf"><div class="ttname"><a href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">ACSingletonBase::GetProtected</a></div><div class="ttdeci">static CUniquePtr&lt; Derived &gt; &amp; GetProtected()</div><div class="ttdoc">Get singleton instance</div><div class="ttdef"><b>Definition</b> Singleton.h:169</div></div>
+<div class="ttc" id="aclass_c_command_manager_1_1_c_thread_safe_feature_html"><div class="ttname"><a href="class_c_command_manager_1_1_c_thread_safe_feature.html">CCommandManager::CThreadSafeFeature</a></div><div class="ttdoc">Feature for thread-safe</div><div class="ttdef"><b>Definition</b> CommandManager.h:75</div></div>
+<div class="ttc" id="aclass_c_command_manager_1_1_c_thread_safe_feature_html_abc72278becb39ddafee24cf26776b90c"><div class="ttname"><a href="class_c_command_manager_1_1_c_thread_safe_feature.html#abc72278becb39ddafee24cf26776b90c">CCommandManager::CThreadSafeFeature::WaitForGPU</a></div><div class="ttdeci">void WaitForGPU()</div><div class="ttdoc">Wait for the GPU to complete processing</div><div class="ttdef"><b>Definition</b> CommandManager.cpp:137</div></div>
+<div class="ttc" id="aclass_c_command_manager_1_1_c_thread_safe_feature_html_afeebd51547d4b4ca6569686bb91f42e5"><div class="ttname"><a href="class_c_command_manager_1_1_c_thread_safe_feature.html#afeebd51547d4b4ca6569686bb91f42e5">CCommandManager::CThreadSafeFeature::UnsafeGraphicsCommandsClear</a></div><div class="ttdeci">void UnsafeGraphicsCommandsClear(UINT index)</div><div class="ttdoc">Clear graphics command list and graphics command allocator, However, it is not associated with execut...</div><div class="ttdef"><b>Definition</b> CommandManager.cpp:124</div></div>
+<div class="ttc" id="aclass_c_command_manager_html"><div class="ttname"><a href="class_c_command_manager.html">CCommandManager</a></div><div class="ttdoc">this class handles objects related to DirectX12 commands.</div><div class="ttdef"><b>Definition</b> CommandManager.h:26</div></div>
+<div class="ttc" id="aclass_c_command_manager_html_a2190493f7e13f1a69192b951e1326005"><div class="ttname"><a href="class_c_command_manager.html#a2190493f7e13f1a69192b951e1326005">CCommandManager::CommandsExecute</a></div><div class="ttdeci">void CommandsExecute(CommandType type, bool isWaitForGPU)</div><div class="ttdoc">Execute registered commands</div><div class="ttdef"><b>Definition</b> CommandManager.cpp:57</div></div>
+<div class="ttc" id="aclass_c_command_manager_html_a2d45ac4cbb364b836ed7a1dba2145de0"><div class="ttname"><a href="class_c_command_manager.html#a2d45ac4cbb364b836ed7a1dba2145de0">CCommandManager::CCommandManager</a></div><div class="ttdeci">CCommandManager()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> CommandManager.h:102</div></div>
+<div class="ttc" id="aclass_c_command_manager_html_a3b902d159775474e439ccd2ee8e2dadc"><div class="ttname"><a href="class_c_command_manager.html#a3b902d159775474e439ccd2ee8e2dadc">CCommandManager::~CCommandManager</a></div><div class="ttdeci">~CCommandManager()</div><div class="ttdoc">Destructor</div><div class="ttdef"><b>Definition</b> CommandManager.cpp:6</div></div>
+<div class="ttc" id="aclass_c_command_manager_html_a429de9234487d377579c18589f9edc65"><div class="ttname"><a href="class_c_command_manager.html#a429de9234487d377579c18589f9edc65">CCommandManager::AddResStateController</a></div><div class="ttdeci">void AddResStateController(CWeakPtr&lt; Utl::Dx::ResStateController &gt; controller)</div><div class="ttdoc">Add the state controller of the resource with the resource barrier command to the current command lis...</div><div class="ttdef"><b>Definition</b> CommandManager.h:67</div></div>
+<div class="ttc" id="aclass_c_command_manager_html_a4aa496f4c1cb52564c742576d2796f8d"><div class="ttname"><a href="class_c_command_manager.html#a4aa496f4c1cb52564c742576d2796f8d">CCommandManager::SecureCommands</a></div><div class="ttdeci">void SecureCommands()</div><div class="ttdoc">Secure command queues and command lists</div><div class="ttdef"><b>Definition</b> CommandManager.cpp:112</div></div>
+<div class="ttc" id="aclass_c_command_manager_html_a7d39f0cc090f028abaa158ecaab27e52"><div class="ttname"><a href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52">CCommandManager::GetGraphicsCmdList</a></div><div class="ttdeci">ID3D12GraphicsCommandList * GetGraphicsCmdList()</div><div class="ttdoc">Get command list for graphics</div><div class="ttdef"><b>Definition</b> CommandManager.h:72</div></div>
+<div class="ttc" id="aclass_c_command_manager_html_a9d41d23dac6388eba73f0c7950c5e52f"><div class="ttname"><a href="class_c_command_manager.html#a9d41d23dac6388eba73f0c7950c5e52f">CCommandManager::ClearCurrentCommandList</a></div><div class="ttdeci">void ClearCurrentCommandList()</div><div class="ttdoc">Clear the current command list</div><div class="ttdef"><b>Definition</b> CommandManager.cpp:92</div></div>
+<div class="ttc" id="aclass_c_command_manager_html_ab66bc94cd4f0a10f2b78adda89022d61"><div class="ttname"><a href="class_c_command_manager.html#ab66bc94cd4f0a10f2b78adda89022d61">CCommandManager::GetCommandQueue</a></div><div class="ttdeci">ID3D12CommandQueue * GetCommandQueue()</div><div class="ttdoc">Get command queue</div><div class="ttdef"><b>Definition</b> CommandManager.h:70</div></div>
+<div class="ttc" id="aclass_c_command_manager_html_ae25a3521fd40b119016782297cb7ba78"><div class="ttname"><a href="class_c_command_manager.html#ae25a3521fd40b119016782297cb7ba78">CCommandManager::GetAny</a></div><div class="ttdeci">static CThreadSafeFeature &amp; GetAny()</div><div class="ttdoc">Get feature for thread-safe</div><div class="ttdef"><b>Definition</b> CommandManager.h:93</div></div>
+<div class="ttc" id="aclass_c_command_manager_html_af5d151e588bed09c01c07556ecb48e1a"><div class="ttname"><a href="class_c_command_manager.html#af5d151e588bed09c01c07556ecb48e1a">CCommandManager::Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdoc">Initialize</div><div class="ttdef"><b>Definition</b> CommandManager.cpp:24</div></div>
+<div class="ttc" id="aclass_c_command_manager_html_af6a8b626d58ef495a821ca64748e9d00"><div class="ttname"><a href="class_c_command_manager.html#af6a8b626d58ef495a821ca64748e9d00">CCommandManager::UnsafeGraphicsCommandsExecute</a></div><div class="ttdeci">void UnsafeGraphicsCommandsExecute()</div><div class="ttdoc">Executes registered graphics commands, but does not wait or clear, so it is only used in special situ...</div><div class="ttdef"><b>Definition</b> CommandManager.cpp:69</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html_a3adcd8ff2ffa23e627ce094ecdd1b7de"><div class="ttname"><a href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de">CSwapChain::GetNextBackBufferIndex</a></div><div class="ttdeci">UINT GetNextBackBufferIndex()</div><div class="ttdoc">Get the index of the back buffer to be used for the next drawing</div><div class="ttdef"><b>Definition</b> SwapChain.h:100</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

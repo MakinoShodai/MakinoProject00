@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ColliderWrapper.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ColliderWrapper.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_collider_wrapper_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __COLLIDER_WRAPPER_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __COLLIDER_WRAPPER_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_collider3_d_8h.html">Collider3D.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_rigid_body_8h.html">RigidBody.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_b_v_node_8h.html">BVNode.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_simulation_body_8h.html">SimulationBody.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_contact_collider_list_8h.html">ContactColliderList.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mkpe.html">Mkpe</a> {</div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html">   24</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis</a>&lt;CColliderWrapper&gt; {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;ACCollider3D&gt;</a> collider);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a911a5d18c6a134a80313c8551756caf5">~CColliderWrapper</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a3a61cd3d301b749a740d6a085998c9af">   42</a></span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a3a61cd3d301b749a740d6a085998c9af">AddContactedOpponent</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;ACCollider3D&gt;</a>&amp; opponent, <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">Mkpe::Dbvt::BVOverlapPair</a>* pairInfo) { <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a17add70b1beb5c0f7e30fa025e342eba">IsStatic</a>()) { m_contactColliderList.AddOpponent(opponent, pairInfo); } }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#ae403fa21adcbc0d63593ee9bbc73af1f">   45</a></span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#ae403fa21adcbc0d63593ee9bbc73af1f">RebuildContactLists</a>() { m_contactColliderList.RebuildList(); }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a717a036accb1811218e2df259f058fa1">   47</a></span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a717a036accb1811218e2df259f058fa1">ClearContactLists</a>() { m_contactColliderList.AllClear(); }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a17add70b1beb5c0f7e30fa025e342eba">   51</a></span>        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a17add70b1beb5c0f7e30fa025e342eba">IsStatic</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_rigidBody == <span class="keyword">nullptr</span> || m_rigidBody-&gt;IsStatic(); }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a6b77f245afd5429a84da3cad8ed5646b">   54</a></span>        <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_struct" href="struct_rigid_body_material.html">RigidBodyMaterial</a>&amp; <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a6b77f245afd5429a84da3cad8ed5646b">GetMaterial</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_rigidBody == <span class="keyword">nullptr</span>) ? ms_defaultRbMaterial : m_rigidBody-&gt;GetMaterial(); }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a64637912b2e91d52615272bd228fcab0">   58</a></span>        <span class="keyword">inline</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a64637912b2e91d52615272bd228fcab0">GetPos</a>() { <span class="keywordflow">return</span> m_collider-&gt;GetCenter(); }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#ada8ce25d990c6a2abf17f1d5da312bf2">   60</a></span>        <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_class" href="struct_quaternion.html">Quaternionf</a>&amp; <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#ada8ce25d990c6a2abf17f1d5da312bf2">GetRotation</a>() { <span class="keywordflow">return</span> m_collider-&gt;GetTransform().rotation; }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a5df2a61bdf99d8419aefe09b14669843">   62</a></span>        <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a5df2a61bdf99d8419aefe09b14669843">GetScale</a>() { <span class="keywordflow">return</span> m_collider-&gt;GetTransform().scale; }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#aa02075f1f6989c667bcccb8d818c9e56">   66</a></span>        <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#aa02075f1f6989c667bcccb8d818c9e56">GetInvMass</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (!m_simulationBody) ? 0.0f : m_rigidBody-&gt;GetInvMass(); }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a787d517f30fca145bef0a97b2ddf6b0e">   68</a></span>        <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a787d517f30fca145bef0a97b2ddf6b0e">GetMass</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (!m_simulationBody) ? 0.0f : m_rigidBody-&gt;GetMass(); }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#ad3cf7cdcaeaf3aed97b4098bc4e43901">   72</a></span>        <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#ad3cf7cdcaeaf3aed97b4098bc4e43901">GetMaxRotateScalar</a>() { <span class="keywordflow">return</span> m_collider-&gt;GetMaxRotateScalar(); }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a88e7599fa8a803c815434ac56ccb1b59">   75</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a88e7599fa8a803c815434ac56ccb1b59">InitializeInertiaTensor</a>() { <span class="keywordflow">if</span> (m_simulationBody) { <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#adc611c4866a2c1fa6f8842ddfb826c2d">GetSimulationBody</a>()-&gt;<a class="code hl_function" href="class_mkpe_1_1_c_simulation_body_base.html#a8b6f1790879a6c73a6b106a9662a4d04">InitializeInertiaTensor</a>(m_collider.<a class="code hl_function" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219">Get</a>()); } }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a33f682576315d451376d5afce34e3235">   78</a></span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a33f682576315d451376d5afce34e3235">CheckScalingRotation</a>() { m_collider-&gt;CheckScalingRotation(); <span class="keywordflow">if</span> (m_simulationBody) { <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#adc611c4866a2c1fa6f8842ddfb826c2d">GetSimulationBody</a>()-&gt;<a class="code hl_function" href="class_mkpe_1_1_c_simulation_body_base.html#aab7cf3785448e99fb7fcf177fd4ee2ec">CheckScalingRotation</a>(m_collider.<a class="code hl_function" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219">Get</a>()); } }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#adc611c4866a2c1fa6f8842ddfb826c2d">   82</a></span>        <a class="code hl_class" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a>* <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#adc611c4866a2c1fa6f8842ddfb826c2d">GetSimulationBody</a>() { <span class="keywordflow">return</span> (m_simulationBody) ? m_simulationBody.Get() : &amp;ms_staticSimulationBody; }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a8717ab1d0e161c6f4c18366c8c5da8c4">   84</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a8717ab1d0e161c6f4c18366c8c5da8c4">SetRigidBody</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CRigidBody&gt;</a> rb) { m_rigidBody = rb; }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a9c02028df7d23526435da5b78b3ed09e">   86</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a9c02028df7d23526435da5b78b3ed09e">SetSimulationBody</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CSimulationBody&gt;</a> simulationBody) { m_simulationBody = simulationBody; }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#afa0bfe8d7b3e6bc150b3f396375f776d">   90</a></span>        <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;ACCollider3D&gt;</a> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#afa0bfe8d7b3e6bc150b3f396375f776d">GetCollider</a>() { <span class="keywordflow">return</span> m_collider; }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a569943668d47bc891d19cde26534d788">   93</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a569943668d47bc891d19cde26534d788">SetTreeType</a>(<a class="code hl_enumeration" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aa">Dbvt::TREETYPE</a> type) { m_thisTreeType = type; }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a9c9d7db84e7576e67a79a4d519c62e75">   95</a></span>        <a class="code hl_enumeration" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aa">Dbvt::TREETYPE</a> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a9c9d7db84e7576e67a79a4d519c62e75">GetTreeType</a>() { <span class="keywordflow">return</span> m_thisTreeType; }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a9714f08a35029241b00c789728c5fe48">   99</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a9714f08a35029241b00c789728c5fe48">SetNode</a>(<a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Dbvt::Node</a>* node) { m_thisNode = node; }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#ab07a2c4008717f3ebf9d29096879e0dc">  101</a></span>        <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Dbvt::Node</a>* <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#ab07a2c4008717f3ebf9d29096879e0dc">GetNode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_thisNode; }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a943ea74ea78c41b9b4f09b9f08750a55">  104</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a943ea74ea78c41b9b4f09b9f08750a55">CheckMyLeafNodeID</a>(<a class="code hl_typedef" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">Mkpe::Dbvt::NodeID</a> <span class="keywordtype">id</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_thisNode) ? <span class="keywordtype">id</span> == m_thisNode-&gt;<a class="code hl_variable" href="struct_mkpe_1_1_dbvt_1_1_node.html#adba354c02f6c7f9952ffb25ab847b39d">nodeID</a> : <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a2935c6a939ac66b0db3bd441721eb0a7">  108</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a2935c6a939ac66b0db3bd441721eb0a7">IsActive</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_collider-&gt;IsActiveOverall(); }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_collider_wrapper.html#a4d30566848914b994704b4b1ee85fcad">  112</a></span>        <span class="keyword">const</span> CContactColliderList&amp; <a class="code hl_function" href="class_mkpe_1_1_c_collider_wrapper.html#a4d30566848914b994704b4b1ee85fcad">GetContactColliderList</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_contactColliderList; }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_struct" href="struct_rigid_body_material.html">RigidBodyMaterial</a> ms_defaultRbMaterial;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a> ms_staticSimulationBody;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CSimulationBody&gt;</a> m_simulationBody;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;ACCollider3D&gt;</a> m_collider;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CRigidBody&gt;</a> m_rigidBody;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <a class="code hl_enumeration" href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aa">Dbvt::TREETYPE</a> m_thisTreeType;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_node.html">Dbvt::Node</a>* m_thisNode;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        CContactColliderList m_contactColliderList;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    };</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>} <span class="comment">// namespace Mkpe</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">#endif </span><span class="comment">// !__COLLIDER_WRAPPER_H__</span></div>
+<div class="ttc" id="a_b_v_node_8h_html"><div class="ttname"><a href="_b_v_node_8h.html">BVNode.h</a></div><div class="ttdoc">This file handles information needed for the dynamic bouding volume tree.</div></div>
+<div class="ttc" id="a_collider3_d_8h_html"><div class="ttname"><a href="_collider3_d_8h.html">Collider3D.h</a></div><div class="ttdoc">This file handles 3D abstract collider.</div></div>
+<div class="ttc" id="a_contact_collider_list_8h_html"><div class="ttname"><a href="_contact_collider_list_8h.html">ContactColliderList.h</a></div><div class="ttdoc">This file handles the list of colliders contacted by the collider.</div></div>
+<div class="ttc" id="a_rigid_body_8h_html"><div class="ttname"><a href="_rigid_body_8h.html">RigidBody.h</a></div><div class="ttdoc">This file handles rigid body component.</div></div>
+<div class="ttc" id="a_simulation_body_8h_html"><div class="ttname"><a href="_simulation_body_8h.html">SimulationBody.h</a></div><div class="ttdoc">This file handles rigid body class for computing.</div></div>
+<div class="ttc" id="aclass_a_c_weak_ptr_from_this_html"><div class="ttname"><a href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis</a></div><div class="ttdoc">Class inheriting from this class can create WeakPtrs from its instance</div><div class="ttdef"><b>Definition</b> WeakPtr.h:184</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html_a5295091a138e45632de0bb5839899219"><div class="ttname"><a href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219">CWeakPtr::Get</a></div><div class="ttdeci">InstanceType * Get() const</div><div class="ttdoc">Get instance. If the instance has already been destroyed, return nullptr</div><div class="ttdef"><b>Definition</b> WeakPtr.h:148</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html">Mkpe::CColliderWrapper</a></div><div class="ttdoc">Wrapper class that exists in a 1:1 relationship with a collider</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:24</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a17add70b1beb5c0f7e30fa025e342eba"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a17add70b1beb5c0f7e30fa025e342eba">Mkpe::CColliderWrapper::IsStatic</a></div><div class="ttdeci">bool IsStatic() const</div><div class="ttdoc">Is this object static?</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:51</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a2935c6a939ac66b0db3bd441721eb0a7"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a2935c6a939ac66b0db3bd441721eb0a7">Mkpe::CColliderWrapper::IsActive</a></div><div class="ttdeci">bool IsActive() const</div><div class="ttdoc">Is this collider and the gameobject that has this collider active?</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:108</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a33f682576315d451376d5afce34e3235"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a33f682576315d451376d5afce34e3235">Mkpe::CColliderWrapper::CheckScalingRotation</a></div><div class="ttdeci">void CheckScalingRotation()</div><div class="ttdoc">Processing of any scaling or rotation changes</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:78</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a3a61cd3d301b749a740d6a085998c9af"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a3a61cd3d301b749a740d6a085998c9af">Mkpe::CColliderWrapper::AddContactedOpponent</a></div><div class="ttdeci">void AddContactedOpponent(const CWeakPtr&lt; ACCollider3D &gt; &amp;opponent, const Mkpe::Dbvt::BVOverlapPair *pairInfo)</div><div class="ttdoc">Add information of a contacted opponent by this collider</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:42</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a4d30566848914b994704b4b1ee85fcad"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a4d30566848914b994704b4b1ee85fcad">Mkpe::CColliderWrapper::GetContactColliderList</a></div><div class="ttdeci">const CContactColliderList &amp; GetContactColliderList() const</div><div class="ttdoc">Get list class of the contact colliders for each category</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:112</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a569943668d47bc891d19cde26534d788"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a569943668d47bc891d19cde26534d788">Mkpe::CColliderWrapper::SetTreeType</a></div><div class="ttdeci">void SetTreeType(Dbvt::TREETYPE type)</div><div class="ttdoc">Set the tree type of this wrapper</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:93</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a5df2a61bdf99d8419aefe09b14669843"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a5df2a61bdf99d8419aefe09b14669843">Mkpe::CColliderWrapper::GetScale</a></div><div class="ttdeci">const Vector3f &amp; GetScale()</div><div class="ttdoc">Get the scale of the collider</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:62</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a64637912b2e91d52615272bd228fcab0"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a64637912b2e91d52615272bd228fcab0">Mkpe::CColliderWrapper::GetPos</a></div><div class="ttdeci">Vector3f GetPos()</div><div class="ttdoc">Get the center coordinates considering offset</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:58</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a6b77f245afd5429a84da3cad8ed5646b"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a6b77f245afd5429a84da3cad8ed5646b">Mkpe::CColliderWrapper::GetMaterial</a></div><div class="ttdeci">const RigidBodyMaterial &amp; GetMaterial() const</div><div class="ttdoc">Get the rigid body material</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:54</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a717a036accb1811218e2df259f058fa1"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a717a036accb1811218e2df259f058fa1">Mkpe::CColliderWrapper::ClearContactLists</a></div><div class="ttdeci">void ClearContactLists()</div><div class="ttdoc">Clear lists of the contact colliders</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:47</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a787d517f30fca145bef0a97b2ddf6b0e"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a787d517f30fca145bef0a97b2ddf6b0e">Mkpe::CColliderWrapper::GetMass</a></div><div class="ttdeci">float GetMass() const</div><div class="ttdoc">Get the mass of rigid body</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:68</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a8717ab1d0e161c6f4c18366c8c5da8c4"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a8717ab1d0e161c6f4c18366c8c5da8c4">Mkpe::CColliderWrapper::SetRigidBody</a></div><div class="ttdeci">void SetRigidBody(CWeakPtr&lt; CRigidBody &gt; rb)</div><div class="ttdoc">Set rigid body to be related to this wrapper</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:84</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a88e7599fa8a803c815434ac56ccb1b59"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a88e7599fa8a803c815434ac56ccb1b59">Mkpe::CColliderWrapper::InitializeInertiaTensor</a></div><div class="ttdeci">void InitializeInertiaTensor()</div><div class="ttdoc">Initialize inertia tensor</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:75</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a911a5d18c6a134a80313c8551756caf5"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a911a5d18c6a134a80313c8551756caf5">Mkpe::CColliderWrapper::~CColliderWrapper</a></div><div class="ttdeci">~CColliderWrapper()</div><div class="ttdoc">Destructor</div><div class="ttdef"><b>Definition</b> ColliderWrapper.cpp:18</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a943ea74ea78c41b9b4f09b9f08750a55"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a943ea74ea78c41b9b4f09b9f08750a55">Mkpe::CColliderWrapper::CheckMyLeafNodeID</a></div><div class="ttdeci">bool CheckMyLeafNodeID(Mkpe::Dbvt::NodeID id) const</div><div class="ttdoc">Is the ID sent the same as my leaf node ID?</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:104</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a9714f08a35029241b00c789728c5fe48"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a9714f08a35029241b00c789728c5fe48">Mkpe::CColliderWrapper::SetNode</a></div><div class="ttdeci">void SetNode(Dbvt::Node *node)</div><div class="ttdoc">Set node with this wrapper in the tree</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:99</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a9c02028df7d23526435da5b78b3ed09e"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a9c02028df7d23526435da5b78b3ed09e">Mkpe::CColliderWrapper::SetSimulationBody</a></div><div class="ttdeci">void SetSimulationBody(CWeakPtr&lt; CSimulationBody &gt; simulationBody)</div><div class="ttdoc">Set simulation body to be related to this wrapper</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:86</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_a9c9d7db84e7576e67a79a4d519c62e75"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#a9c9d7db84e7576e67a79a4d519c62e75">Mkpe::CColliderWrapper::GetTreeType</a></div><div class="ttdeci">Dbvt::TREETYPE GetTreeType()</div><div class="ttdoc">Get the tree type of this wrapper</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:95</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_aa02075f1f6989c667bcccb8d818c9e56"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#aa02075f1f6989c667bcccb8d818c9e56">Mkpe::CColliderWrapper::GetInvMass</a></div><div class="ttdeci">float GetInvMass() const</div><div class="ttdoc">Get the inverse mass of rigid body</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:66</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_ab07a2c4008717f3ebf9d29096879e0dc"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#ab07a2c4008717f3ebf9d29096879e0dc">Mkpe::CColliderWrapper::GetNode</a></div><div class="ttdeci">Dbvt::Node * GetNode() const</div><div class="ttdoc">Get node with this wrapper in the tree</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:101</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_ad3cf7cdcaeaf3aed97b4098bc4e43901"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#ad3cf7cdcaeaf3aed97b4098bc4e43901">Mkpe::CColliderWrapper::GetMaxRotateScalar</a></div><div class="ttdeci">float GetMaxRotateScalar()</div><div class="ttdoc">Get the maximum extent to which a vertex of collider is shifted by rotation</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:72</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_ada8ce25d990c6a2abf17f1d5da312bf2"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#ada8ce25d990c6a2abf17f1d5da312bf2">Mkpe::CColliderWrapper::GetRotation</a></div><div class="ttdeci">const Quaternionf &amp; GetRotation()</div><div class="ttdoc">Get the rotation of the collider</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:60</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_adc611c4866a2c1fa6f8842ddfb826c2d"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#adc611c4866a2c1fa6f8842ddfb826c2d">Mkpe::CColliderWrapper::GetSimulationBody</a></div><div class="ttdeci">CSimulationBodyBase * GetSimulationBody()</div><div class="ttdoc">Get the simulation body related to this wrapper</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:82</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_ae403fa21adcbc0d63593ee9bbc73af1f"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#ae403fa21adcbc0d63593ee9bbc73af1f">Mkpe::CColliderWrapper::RebuildContactLists</a></div><div class="ttdeci">void RebuildContactLists()</div><div class="ttdoc">Rebuild the lists of the contact colliders for each categories</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:45</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html_afa0bfe8d7b3e6bc150b3f396375f776d"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html#afa0bfe8d7b3e6bc150b3f396375f776d">Mkpe::CColliderWrapper::GetCollider</a></div><div class="ttdeci">CWeakPtr&lt; ACCollider3D &gt; GetCollider()</div><div class="ttdoc">Get the collider related to this wrapper</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:90</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_simulation_body_base_html"><div class="ttname"><a href="class_mkpe_1_1_c_simulation_body_base.html">Mkpe::CSimulationBodyBase</a></div><div class="ttdoc">Rigid body class for computing</div><div class="ttdef"><b>Definition</b> SimulationBody.h:31</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_simulation_body_base_html_a8b6f1790879a6c73a6b106a9662a4d04"><div class="ttname"><a href="class_mkpe_1_1_c_simulation_body_base.html#a8b6f1790879a6c73a6b106a9662a4d04">Mkpe::CSimulationBodyBase::InitializeInertiaTensor</a></div><div class="ttdeci">virtual void InitializeInertiaTensor(ACCollider3D *collider)</div><div class="ttdoc">Initialize inertia tensor</div><div class="ttdef"><b>Definition</b> SimulationBody.h:126</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_simulation_body_base_html_aab7cf3785448e99fb7fcf177fd4ee2ec"><div class="ttname"><a href="class_mkpe_1_1_c_simulation_body_base.html#aab7cf3785448e99fb7fcf177fd4ee2ec">Mkpe::CSimulationBodyBase::CheckScalingRotation</a></div><div class="ttdeci">virtual void CheckScalingRotation(ACCollider3D *collider)</div><div class="ttdoc">Processing of any scaling or rotation changes</div><div class="ttdef"><b>Definition</b> SimulationBody.h:132</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_a4c3fcba683260af8580ab52bd8b643aa"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#a4c3fcba683260af8580ab52bd8b643aa">Mkpe::Dbvt::TREETYPE</a></div><div class="ttdeci">TREETYPE</div><div class="ttdoc">Type of bounding volume tree</div><div class="ttdef"><b>Definition</b> BVNode.h:32</div></div>
+<div class="ttc" id="anamespace_mkpe_1_1_dbvt_html_a6bf7f174a99e1d05a3ec19fc096ed037"><div class="ttname"><a href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">Mkpe::Dbvt::NodeID</a></div><div class="ttdeci">UniqueID NodeID</div><div class="ttdoc">Node ID. internal node ID is 0</div><div class="ttdef"><b>Definition</b> BVNode.h:25</div></div>
+<div class="ttc" id="anamespace_mkpe_html"><div class="ttname"><a href="namespace_mkpe.html">Mkpe</a></div><div class="ttdef"><b>Definition</b> BoudingVolume.h:14</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">Mkpe::Dbvt::BVOverlapPair</a></div><div class="ttdoc">Pair of bounding volumes in contact each other</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:20</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_html"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node.html">Mkpe::Dbvt::Node</a></div><div class="ttdoc">Node structure</div><div class="ttdef"><b>Definition</b> BVNode.h:111</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_node_html_adba354c02f6c7f9952ffb25ab847b39d"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_node.html#adba354c02f6c7f9952ffb25ab847b39d">Mkpe::Dbvt::Node::nodeID</a></div><div class="ttdeci">const NodeID nodeID</div><div class="ttdoc">Node ID. internal node ID is 0</div><div class="ttdef"><b>Definition</b> BVNode.h:115</div></div>
+<div class="ttc" id="astruct_quaternion_html"><div class="ttname"><a href="struct_quaternion.html">Quaternion&lt; float &gt;</a></div></div>
+<div class="ttc" id="astruct_rigid_body_material_html"><div class="ttname"><a href="struct_rigid_body_material.html">RigidBodyMaterial</a></div><div class="ttdoc">Rigid body material</div><div class="ttdef"><b>Definition</b> RigidBody.h:22</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 3 &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

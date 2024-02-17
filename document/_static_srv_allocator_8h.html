@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: StaticSrvAllocator.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a>  </div>
+  <div class="headertitle"><div class="title">StaticSrvAllocator.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file handles class for allocating static resource SRV.  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_static_resource_8h_source.html">StaticResource.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_texture_registry_8h_source.html">TextureRegistry.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+StaticSrvAllocator.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_static_srv_allocator_8h__incl.png" border="0" usemap="#a_static_srv_allocator_8h" alt=""/></div>
+<map name="a_static_srv_allocator_8h" id="a_static_srv_allocator_8h">
+<area shape="rect" title="This file handles class for allocating static resource SRV." alt="" coords="512,5,648,32"/>
+<area shape="rect" href="_static_resource_8h.html" title="This file handles interface class of static resources that don&#39;t need to be updated on a per&#45;object b..." alt="" coords="686,80,807,107"/>
+<area shape="poly" title=" " alt="" coords="610,30,705,71,702,76,608,35"/>
+<area shape="rect" href="_texture_registry_8h.html" title="This file handles all texture resources together in the registry." alt="" coords="412,229,535,256"/>
+<area shape="poly" title=" " alt="" coords="576,34,488,217,483,214,571,31"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="613,528,699,555"/>
+<area shape="poly" title=" " alt="" coords="771,105,804,126,839,157,867,195,875,218,879,241,879,394,874,422,862,446,844,467,821,485,768,513,715,530,713,525,766,508,818,481,840,464,858,443,869,420,873,393,873,242,870,219,862,198,835,160,800,130,768,109"/>
+<area shape="rect" href="_utility_for_direct_x_8h.html" title="This file defines utility functions that are useful for DirectX." alt="" coords="361,453,487,480"/>
+<area shape="poly" title=" " alt="" coords="754,106,772,160,788,239,790,283,786,328,774,370,751,407,735,420,711,432,647,448,573,459,502,465,502,459,572,453,646,443,709,427,732,416,747,404,769,367,781,327,785,283,783,240,767,161,749,108"/>
+<area shape="rect" href="_swap_chain_8h.html" title="This file handles swap chain." alt="" coords="575,155,673,181"/>
+<area shape="poly" title=" " alt="" coords="727,110,660,149,657,144,724,105"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="583,603,716,629"/>
+<area shape="poly" title=" " alt="" coords="657,555,654,587,649,587,652,555"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="411,603,501,629"/>
+<area shape="poly" title=" " alt="" coords="622,558,506,599,504,594,620,553"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="739,603,882,629"/>
+<area shape="poly" title=" " alt="" coords="684,553,771,593,769,598,682,558"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="414,677,498,704"/>
+<area shape="poly" title=" " alt="" coords="459,630,459,662,453,662,453,630"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="367,752,433,779"/>
+<area shape="poly" title=" " alt="" coords="448,706,421,741,417,738,444,703"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="308,827,420,853"/>
+<area shape="poly" title=" " alt="" coords="396,780,379,814,375,811,391,778"/>
+<area shape="poly" title=" " alt="" coords="429,480,453,587,447,588,424,481"/>
+<area shape="poly" title=" " alt="" coords="674,178,714,196,733,210,747,228,769,273,774,314,767,356,752,406,738,439,720,469,681,518,677,515,715,466,733,436,747,404,762,355,769,314,764,275,743,231,729,214,712,201,672,183"/>
+<area shape="poly" title=" " alt="" coords="618,183,443,442,438,439,613,180"/>
+<area shape="rect" href="_descriptor_heap_8h.html" title="This file handles descriptor heap." alt="" coords="19,379,141,405"/>
+<area shape="poly" title=" " alt="" coords="575,174,439,185,266,208,182,225,107,247,49,274,28,289,13,305,9,322,15,338,28,354,46,368,43,372,25,357,10,341,3,322,8,303,24,285,46,269,105,242,181,220,265,203,439,180,575,169"/>
+<area shape="rect" href="_utility_for_async_8h.html" title="This file defines utility functions that are useful for asynchronous." alt="" coords="613,229,734,256"/>
+<area shape="poly" title=" " alt="" coords="635,180,658,215,654,218,630,183"/>
+<area shape="rect" href="_render_target_8h.html" title="This file handles render targets." alt="" coords="196,229,305,256"/>
+<area shape="poly" title=" " alt="" coords="575,181,321,231,320,225,574,176"/>
+<area shape="poly" title=" " alt="" coords="141,403,349,447,348,452,140,409"/>
+<area shape="rect" href="_application_8h.html" title="This file handles application objects such as window and DirectX device." alt="" coords="192,453,288,480"/>
+<area shape="poly" title=" " alt="" coords="109,403,199,444,197,449,107,408"/>
+<area shape="poly" title=" " alt="" coords="289,474,598,527,597,533,288,479"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="183,603,297,629"/>
+<area shape="poly" title=" " alt="" coords="243,481,243,587,237,587,237,481"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="269,677,390,704"/>
+<area shape="poly" title=" " alt="" coords="257,628,304,665,300,669,254,632"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="144,677,245,704"/>
+<area shape="poly" title=" " alt="" coords="234,631,213,665,208,663,230,628"/>
+<area shape="poly" title=" " alt="" coords="343,703,379,739,375,743,340,706"/>
+<area shape="poly" title=" " alt="" coords="335,704,360,811,355,812,330,705"/>
+<area shape="rect" href="_application_error_8h.html" title="This file handles processing when the application makes an error." alt="" coords="612,379,737,405"/>
+<area shape="poly" title=" " alt="" coords="676,256,677,363,672,363,671,257"/>
+<area shape="poly" title=" " alt="" coords="676,406,662,513,657,512,670,406"/>
+<area shape="poly" title=" " alt="" coords="307,250,356,269,380,283,399,302,418,335,427,372,430,408,430,438,424,438,425,408,422,373,413,337,395,306,376,287,354,273,305,255"/>
+<area shape="poly" title=" " alt="" coords="238,259,108,370,104,366,234,254"/>
+<area shape="rect" href="_depth_stencil_8h.html" title="This file handles depth stencil." alt="" coords="23,304,129,331"/>
+<area shape="poly" title=" " alt="" coords="221,259,122,300,120,295,219,254"/>
+<area shape="poly" title=" " alt="" coords="79,331,81,363,76,363,74,331"/>
+<area shape="poly" title=" " alt="" coords="483,255,643,513,638,516,479,258"/>
+<area shape="poly" title=" " alt="" coords="474,257,444,406,435,439,430,438,439,405,468,256"/>
+<area shape="poly" title=" " alt="" coords="412,259,331,278,244,306,185,335,116,373,113,369,183,330,242,302,329,273,411,253"/>
+<area shape="rect" href="_texture_resource_8h.html" title="This file handles texture resources." alt="" coords="255,304,385,331"/>
+<area shape="poly" title=" " alt="" coords="448,259,362,299,359,294,445,254"/>
+<area shape="poly" title=" " alt="" coords="331,330,408,439,404,442,327,333"/>
+<area shape="poly" title=" " alt="" coords="279,334,137,376,136,371,277,329"/>
+<area shape="rect" href="_gpu_optimized_resource_8h.html" title=" " alt="" coords="164,379,334,405"/>
+<area shape="poly" title=" " alt="" coords="309,333,274,369,270,366,306,329"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_static_srv_allocator_8h__dep__incl.png" border="0" usemap="#a_static_srv_allocator_8hdep" alt=""/></div>
+<map name="a_static_srv_allocator_8hdep" id="a_static_srv_allocator_8hdep">
+<area shape="rect" title="This file handles class for allocating static resource SRV." alt="" coords="100,5,236,32"/>
+<area shape="rect" href="_static_srv_allocator_8cpp.html" title=" " alt="" coords="5,80,155,107"/>
+<area shape="poly" title=" " alt="" coords="143,44,97,82,93,78,139,40"/>
+<area shape="rect" href="_static_srv_shadow_map_8h.html" title="This file handles allocator class of SRV static resource for shadow map." alt="" coords="178,80,334,107"/>
+<area shape="poly" title=" " alt="" coords="197,40,243,78,239,82,193,44"/>
+<area shape="rect" href="_standard_render_pass_8h.html" title="This file handles scene base class for stage." alt="" coords="82,155,238,181"/>
+<area shape="poly" title=" " alt="" coords="229,118,178,156,175,152,226,114"/>
+<area shape="rect" href="_static_resource_registry_8cpp.html" title=" " alt="" coords="262,155,445,181"/>
+<area shape="poly" title=" " alt="" coords="287,114,338,152,335,156,283,118"/>
+<area shape="rect" href="_scene_registry_8cpp.html" title=" " alt="" coords="8,229,139,256"/>
+<area shape="poly" title=" " alt="" coords="135,194,90,231,87,227,132,189"/>
+<area shape="rect" href="_standard_render_pass_8cpp.html" title=" " alt="" coords="163,229,333,256"/>
+<area shape="poly" title=" " alt="" coords="189,189,235,227,231,231,185,194"/>
+</map>
+</div>
+</div>
+<p><a href="_static_srv_allocator_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_static_s_r_v_allocator.html">ACStaticSRVAllocator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for allocating static resource SRV  <a href="class_a_c_static_s_r_v_allocator.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This file handles class for allocating static resource SRV. </p>
+<dl class="section author"><dt>著者</dt><dd>Shodai Makino </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2024/1/21 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

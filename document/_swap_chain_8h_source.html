@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: SwapChain.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">SwapChain.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_swap_chain_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __SWAP_CHAIN_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __SWAP_CHAIN_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_descriptor_heap_8h.html">DescriptorHeap.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_direct_x_8h.html">UtilityForDirectX.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_async_8h.html">UtilityForAsync.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_render_target_8h.html">RenderTarget.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">   19</a></span><span class="keyword">const</span> UINT <a class="code hl_variable" href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a> = 2;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_c_render_target_swap_chain.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_render_target_swap_chain.html">CRenderTargetSwapChain</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_render_target.html">ACRenderTarget</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_render_target_swap_chain.html#a0f3f885eaaa634ccbef6291b25a395e3">GetCPUHandleRTV</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    ID3D12Resource* <a class="code hl_function" href="class_c_render_target_swap_chain.html#a56c609bcda8a6229ce4c6191af526bb9">GetResource</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_render_target_swap_chain.html#a961ef2879ffd018927fac3302b9a6ef0">StateTransition</a>(D3D12_RESOURCE_STATES state) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_c_render_target_swap_chain.html#a55b8b029e258af1bc2be16e869a371b8">   34</a></span>    <a class="code hl_function" href="class_c_render_target_swap_chain.html#a55b8b029e258af1bc2be16e869a371b8">CRenderTargetSwapChain</a>() : <a class="code hl_class" href="class_a_c_render_target.html">ACRenderTarget</a>() {}</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_render_target_swap_chain.html#a6b0586abbd3b14f20b162c96889dcdb0">Create</a>(IDXGISwapChain4* swapChainPtr, DXGI_FORMAT format);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_render_target_swap_chain.html#a8aab32d85edc6ba71dc89bf3924db85e">CreateRTVs</a>(IDXGISwapChain4* swapChainPtr, DXGI_FORMAT format);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_render_target_swap_chain.html#a2da73e09f7eacff9f45d55e67edb9113">BufferRelease</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; m_screenBuffers[<a class="code hl_variable" href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a>];</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_class" href="class_c_descriptor_heap.html">CDescriptorHeap</a> m_descriptorHeap;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_class" href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable&lt;Utl::Dx::ResStateMaker&gt;</a> m_resStateController[<a class="code hl_variable" href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a>];</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="};">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_c_swap_chain.html">   65</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_swap_chain.html">CSwapChain</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>&lt;CSwapChain&gt; {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_c_swap_chain.html#a3273bd1fe91a2694d70da9c751511d0b">   67</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_a_c_singleton_base.html">ACSingletonBase</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_c_swap_chain.html#a7057b0e43136466b3a384edb4b426581">   73</a></span>    <a class="code hl_function" href="class_c_swap_chain.html#a7057b0e43136466b3a384edb4b426581">~CSwapChain</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_swap_chain.html#a59a1cd78508f27735564aa9fcf19d27a">Initialize</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_swap_chain.html#a3d838db1a55450cb8bba97f1e67ddbb3">DrawAndSwap</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_swap_chain.html#a0c8a765f76a3dd9e191f509ae033e6a8">WaitForPresent</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_swap_chain.html#af0aff3b86049a5b5d7817e3a6cfa21ee">SetFullScreen</a>(<span class="keywordtype">bool</span> isFullScreen);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de">  100</a></span>    UINT <a class="code hl_function" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de">GetNextBackBufferIndex</a>() { <span class="keywordflow">return</span> m_nextBackBufferIndex; }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="};">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_c_swap_chain_1_1_c_thread_safe_feature.html">  103</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_c_swap_chain_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;CSwapChain&gt; {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keyword">using </span><a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;<a class="code hl_class" href="class_c_swap_chain.html">CSwapChain</a>&gt;<a class="code hl_class" href="class_a_c_inner_class.html">::ACInnerClass</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_c_swap_chain_1_1_c_thread_safe_feature.html#a7ca3f4d2670a1c68e4b5a4dcc2550fad">  112</a></span>        <a class="code hl_class" href="class_a_c_render_target.html">ACRenderTarget</a>* <a class="code hl_function" href="class_c_swap_chain_1_1_c_thread_safe_feature.html#a7ca3f4d2670a1c68e4b5a4dcc2550fad">GetBackBuffer</a>() { <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_renderTarget; }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_c_swap_chain_1_1_c_thread_safe_feature.html#abaafa9d796fab9f5718b08ef237d8e62">  115</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_swap_chain_1_1_c_thread_safe_feature.html#abaafa9d796fab9f5718b08ef237d8e62">IsFullScreen</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a>-&gt;m_isFullScreen; }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    };</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_c_swap_chain.html#ad394d0bb9aa7884085e9cf6067577967">  119</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="class_c_swap_chain_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a>&amp; <a class="code hl_function" href="class_c_swap_chain.html#ad394d0bb9aa7884085e9cf6067577967">GetAny</a>() {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_c_swap_chain_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> instance(<a class="code hl_function" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a>().Get());</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_c_swap_chain.html#a5e3bebb9ae033bacca752b8b08224c3e">  128</a></span>    <a class="code hl_function" href="class_c_swap_chain.html#a5e3bebb9ae033bacca752b8b08224c3e">CSwapChain</a>() : <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>(0), m_nextBackBufferIndex(0), m_isFullScreen(false), m_isRebuildBackBuffers(false) {}</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_swap_chain.html#a5c8894c2856644936d2adcca3f530c21">WaitForGPU</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    Microsoft::WRL::ComPtr&lt;IDXGISwapChain4&gt; m_swapChain;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <a class="code hl_class" href="class_c_render_target_swap_chain.html">CRenderTargetSwapChain</a> m_renderTarget;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <a class="code hl_class" href="class_utl_1_1_async_1_1_c_main_thread_future.html">Utl::Async::CMainThreadFuture&lt;void&gt;</a> m_gpuWaitFuture;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    UINT m_nextBackBufferIndex;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">bool</span> m_isFullScreen;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">bool</span> m_isRebuildBackBuffers;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>};</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">#endif </span><span class="comment">// !__SWAP_CHAIN_H__</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="ttc" id="a_descriptor_heap_8h_html"><div class="ttname"><a href="_descriptor_heap_8h.html">DescriptorHeap.h</a></div><div class="ttdoc">This file handles descriptor heap.</div></div>
+<div class="ttc" id="a_render_target_8h_html"><div class="ttname"><a href="_render_target_8h.html">RenderTarget.h</a></div><div class="ttdoc">This file handles render targets.</div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">File handling abstract singleton class.</div></div>
+<div class="ttc" id="a_swap_chain_8h_html_a597c5eff72beb59812955eabb8d454fd"><div class="ttname"><a href="_swap_chain_8h.html#a597c5eff72beb59812955eabb8d454fd">SCREEN_BUFFERING_NUM</a></div><div class="ttdeci">const UINT SCREEN_BUFFERING_NUM</div><div class="ttdoc">The number of main screen buffer</div><div class="ttdef"><b>Definition</b> SwapChain.h:19</div></div>
+<div class="ttc" id="a_utility_for_async_8h_html"><div class="ttname"><a href="_utility_for_async_8h.html">UtilityForAsync.h</a></div><div class="ttdoc">This file defines utility functions that are useful for asynchronous.</div></div>
+<div class="ttc" id="a_utility_for_direct_x_8h_html"><div class="ttname"><a href="_utility_for_direct_x_8h.html">UtilityForDirectX.h</a></div><div class="ttdoc">This file defines utility functions that are useful for DirectX.</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html"><div class="ttname"><a href="class_a_c_inner_class.html">ACInnerClass</a></div><div class="ttdoc">Abstract inner class</div><div class="ttdef"><b>Definition</b> Singleton.h:23</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html_abbb5ecb30cbd08e599e20cc9f3532f6f"><div class="ttname"><a href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">ACInnerClass&lt; CSwapChain &gt;::m_owner</a></div><div class="ttdeci">CSwapChain * m_owner</div><div class="ttdoc">Pointer to owner of this class</div><div class="ttdef"><b>Definition</b> Singleton.h:45</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html"><div class="ttname"><a href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a></div><div class="ttdoc">Abstract singleton class for main thread only (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:111</div></div>
+<div class="ttc" id="aclass_a_c_render_target_html"><div class="ttname"><a href="class_a_c_render_target.html">ACRenderTarget</a></div><div class="ttdoc">This class handles render target</div><div class="ttdef"><b>Definition</b> RenderTarget.h:17</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html"><div class="ttname"><a href="class_a_c_singleton_base.html">ACSingletonBase</a></div><div class="ttdoc">Abstract singleton base class (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:59</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html_a86122d51b9f611ffbc300eb790c3dabf"><div class="ttname"><a href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">ACSingletonBase::GetProtected</a></div><div class="ttdeci">static CUniquePtr&lt; Derived &gt; &amp; GetProtected()</div><div class="ttdoc">Get singleton instance</div><div class="ttdef"><b>Definition</b> Singleton.h:169</div></div>
+<div class="ttc" id="aclass_c_descriptor_heap_html"><div class="ttname"><a href="class_c_descriptor_heap.html">CDescriptorHeap</a></div><div class="ttdoc">This class handles descriptor heap</div><div class="ttdef"><b>Definition</b> DescriptorHeap.h:16</div></div>
+<div class="ttc" id="aclass_c_render_target_swap_chain_html"><div class="ttname"><a href="class_c_render_target_swap_chain.html">CRenderTargetSwapChain</a></div><div class="ttdoc">This class handles render target for swap chain</div><div class="ttdef"><b>Definition</b> SwapChain.h:22</div></div>
+<div class="ttc" id="aclass_c_render_target_swap_chain_html_a0f3f885eaaa634ccbef6291b25a395e3"><div class="ttname"><a href="class_c_render_target_swap_chain.html#a0f3f885eaaa634ccbef6291b25a395e3">CRenderTargetSwapChain::GetCPUHandleRTV</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE GetCPUHandleRTV() const override</div><div class="ttdoc">Get CPU handle for rtv descriptor heap</div><div class="ttdef"><b>Definition</b> SwapChain.cpp:61</div></div>
+<div class="ttc" id="aclass_c_render_target_swap_chain_html_a2da73e09f7eacff9f45d55e67edb9113"><div class="ttname"><a href="class_c_render_target_swap_chain.html#a2da73e09f7eacff9f45d55e67edb9113">CRenderTargetSwapChain::BufferRelease</a></div><div class="ttdeci">void BufferRelease()</div><div class="ttdoc">Release render target buffers</div><div class="ttdef"><b>Definition</b> SwapChain.cpp:54</div></div>
+<div class="ttc" id="aclass_c_render_target_swap_chain_html_a55b8b029e258af1bc2be16e869a371b8"><div class="ttname"><a href="class_c_render_target_swap_chain.html#a55b8b029e258af1bc2be16e869a371b8">CRenderTargetSwapChain::CRenderTargetSwapChain</a></div><div class="ttdeci">CRenderTargetSwapChain()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> SwapChain.h:34</div></div>
+<div class="ttc" id="aclass_c_render_target_swap_chain_html_a56c609bcda8a6229ce4c6191af526bb9"><div class="ttname"><a href="class_c_render_target_swap_chain.html#a56c609bcda8a6229ce4c6191af526bb9">CRenderTargetSwapChain::GetResource</a></div><div class="ttdeci">ID3D12Resource * GetResource() const override</div><div class="ttdoc">Get pointer to resource</div><div class="ttdef"><b>Definition</b> SwapChain.cpp:67</div></div>
+<div class="ttc" id="aclass_c_render_target_swap_chain_html_a6b0586abbd3b14f20b162c96889dcdb0"><div class="ttname"><a href="class_c_render_target_swap_chain.html#a6b0586abbd3b14f20b162c96889dcdb0">CRenderTargetSwapChain::Create</a></div><div class="ttdeci">void Create(IDXGISwapChain4 *swapChainPtr, DXGI_FORMAT format)</div><div class="ttdoc">Create descriptor heap and render target views</div><div class="ttdef"><b>Definition</b> SwapChain.cpp:17</div></div>
+<div class="ttc" id="aclass_c_render_target_swap_chain_html_a8aab32d85edc6ba71dc89bf3924db85e"><div class="ttname"><a href="class_c_render_target_swap_chain.html#a8aab32d85edc6ba71dc89bf3924db85e">CRenderTargetSwapChain::CreateRTVs</a></div><div class="ttdeci">void CreateRTVs(IDXGISwapChain4 *swapChainPtr, DXGI_FORMAT format)</div><div class="ttdoc">Create render target views</div><div class="ttdef"><b>Definition</b> SwapChain.cpp:27</div></div>
+<div class="ttc" id="aclass_c_render_target_swap_chain_html_a961ef2879ffd018927fac3302b9a6ef0"><div class="ttname"><a href="class_c_render_target_swap_chain.html#a961ef2879ffd018927fac3302b9a6ef0">CRenderTargetSwapChain::StateTransition</a></div><div class="ttdeci">void StateTransition(D3D12_RESOURCE_STATES state) override</div><div class="ttdoc">Transition resource state</div><div class="ttdef"><b>Definition</b> SwapChain.cpp:72</div></div>
+<div class="ttc" id="aclass_c_swap_chain_1_1_c_thread_safe_feature_html"><div class="ttname"><a href="class_c_swap_chain_1_1_c_thread_safe_feature.html">CSwapChain::CThreadSafeFeature</a></div><div class="ttdoc">Feature for thread-safe</div><div class="ttdef"><b>Definition</b> SwapChain.h:103</div></div>
+<div class="ttc" id="aclass_c_swap_chain_1_1_c_thread_safe_feature_html_a7ca3f4d2670a1c68e4b5a4dcc2550fad"><div class="ttname"><a href="class_c_swap_chain_1_1_c_thread_safe_feature.html#a7ca3f4d2670a1c68e4b5a4dcc2550fad">CSwapChain::CThreadSafeFeature::GetBackBuffer</a></div><div class="ttdeci">ACRenderTarget * GetBackBuffer()</div><div class="ttdoc">Get render target for back buffers</div><div class="ttdef"><b>Definition</b> SwapChain.h:112</div></div>
+<div class="ttc" id="aclass_c_swap_chain_1_1_c_thread_safe_feature_html_abaafa9d796fab9f5718b08ef237d8e62"><div class="ttname"><a href="class_c_swap_chain_1_1_c_thread_safe_feature.html#abaafa9d796fab9f5718b08ef237d8e62">CSwapChain::CThreadSafeFeature::IsFullScreen</a></div><div class="ttdeci">bool IsFullScreen()</div><div class="ttdoc">Is it currently in full screen mode?</div><div class="ttdef"><b>Definition</b> SwapChain.h:115</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html"><div class="ttname"><a href="class_c_swap_chain.html">CSwapChain</a></div><div class="ttdoc">Swap chain</div><div class="ttdef"><b>Definition</b> SwapChain.h:65</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html_a0c8a765f76a3dd9e191f509ae033e6a8"><div class="ttname"><a href="class_c_swap_chain.html#a0c8a765f76a3dd9e191f509ae033e6a8">CSwapChain::WaitForPresent</a></div><div class="ttdeci">void WaitForPresent()</div><div class="ttdoc">Wait for present is called in the another thread</div><div class="ttdef"><b>Definition</b> SwapChain.cpp:205</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html_a3adcd8ff2ffa23e627ce094ecdd1b7de"><div class="ttname"><a href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de">CSwapChain::GetNextBackBufferIndex</a></div><div class="ttdeci">UINT GetNextBackBufferIndex()</div><div class="ttdoc">Get the index of the back buffer to be used for the next drawing</div><div class="ttdef"><b>Definition</b> SwapChain.h:100</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html_a3d838db1a55450cb8bba97f1e67ddbb3"><div class="ttname"><a href="class_c_swap_chain.html#a3d838db1a55450cb8bba97f1e67ddbb3">CSwapChain::DrawAndSwap</a></div><div class="ttdeci">void DrawAndSwap()</div><div class="ttdoc">Draw and swap the back buffer</div><div class="ttdef"><b>Definition</b> SwapChain.cpp:126</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html_a59a1cd78508f27735564aa9fcf19d27a"><div class="ttname"><a href="class_c_swap_chain.html#a59a1cd78508f27735564aa9fcf19d27a">CSwapChain::Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdoc">Create a swap chain</div><div class="ttdef"><b>Definition</b> SwapChain.cpp:77</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html_a5c8894c2856644936d2adcca3f530c21"><div class="ttname"><a href="class_c_swap_chain.html#a5c8894c2856644936d2adcca3f530c21">CSwapChain::WaitForGPU</a></div><div class="ttdeci">void WaitForGPU()</div><div class="ttdoc">GPU wait processing after drawing</div><div class="ttdef"><b>Definition</b> SwapChain.cpp:229</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html_a5e3bebb9ae033bacca752b8b08224c3e"><div class="ttname"><a href="class_c_swap_chain.html#a5e3bebb9ae033bacca752b8b08224c3e">CSwapChain::CSwapChain</a></div><div class="ttdeci">CSwapChain()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> SwapChain.h:128</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html_a7057b0e43136466b3a384edb4b426581"><div class="ttname"><a href="class_c_swap_chain.html#a7057b0e43136466b3a384edb4b426581">CSwapChain::~CSwapChain</a></div><div class="ttdeci">~CSwapChain() override=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html_ad394d0bb9aa7884085e9cf6067577967"><div class="ttname"><a href="class_c_swap_chain.html#ad394d0bb9aa7884085e9cf6067577967">CSwapChain::GetAny</a></div><div class="ttdeci">static CThreadSafeFeature &amp; GetAny()</div><div class="ttdoc">Get feature for thread-safe</div><div class="ttdef"><b>Definition</b> SwapChain.h:119</div></div>
+<div class="ttc" id="aclass_c_swap_chain_html_af0aff3b86049a5b5d7817e3a6cfa21ee"><div class="ttname"><a href="class_c_swap_chain.html#af0aff3b86049a5b5d7817e3a6cfa21ee">CSwapChain::SetFullScreen</a></div><div class="ttdeci">void SetFullScreen(bool isFullScreen)</div><div class="ttdoc">Set full screen mode</div><div class="ttdef"><b>Definition</b> SwapChain.cpp:215</div></div>
+<div class="ttc" id="aclass_c_unique_ptr_weakable_html"><div class="ttname"><a href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable</a></div><div class="ttdoc">Unique pointer that can generate weak reference pointer</div><div class="ttdef"><b>Definition</b> UniquePtr.h:19</div></div>
+<div class="ttc" id="aclass_utl_1_1_async_1_1_c_main_thread_future_html"><div class="ttname"><a href="class_utl_1_1_async_1_1_c_main_thread_future.html">Utl::Async::CMainThreadFuture</a></div><div class="ttdoc">Class that wraps future to wait while the main thread checks for the exit of the application</div><div class="ttdef"><b>Definition</b> UtilityForAsync.h:21</div></div>
+<div class="ttc" id="astruct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e_html"><div class="ttname"><a href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a></div><div class="ttdoc">D3D12_CPU_DESCRIPTOR_HANDLE interface</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

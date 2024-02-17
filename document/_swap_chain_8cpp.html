@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: SwapChain.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">SwapChain.cpp ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_swap_chain_8h_source.html">SwapChain.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_application_8h_source.html">Application.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_command_manager_8h_source.html">CommandManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_thread_pool_8h_source.html">ThreadPool.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utility_for_exception_8h_source.html">UtilityForException.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+SwapChain.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_swap_chain_8cpp__incl.png" border="0" usemap="#a_swap_chain_8cpp" alt=""/></div>
+<map name="a_swap_chain_8cpp" id="a_swap_chain_8cpp">
+<area shape="rect" title=" " alt="" coords="474,5,585,32"/>
+<area shape="rect" href="_swap_chain_8h.html" title="This file handles swap chain." alt="" coords="341,155,438,181"/>
+<area shape="poly" title=" " alt="" coords="510,35,479,55,449,82,424,112,405,143,401,140,420,109,445,78,476,51,507,30"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="618,603,761,629"/>
+<area shape="poly" title=" " alt="" coords="586,28,642,44,700,71,724,89,744,111,758,137,763,166,763,468,758,504,745,538,712,592,707,589,740,535,752,502,757,468,757,167,753,139,740,114,721,93,697,76,640,49,584,33"/>
+<area shape="rect" href="_application_8h.html" title="This file handles application objects such as window and DirectX device." alt="" coords="101,453,198,480"/>
+<area shape="poly" title=" " alt="" coords="474,26,343,40,266,51,189,66,119,84,61,108,38,121,22,135,12,150,8,167,8,319,11,340,18,359,43,394,76,422,110,444,107,448,73,427,39,397,13,362,5,341,3,319,3,166,7,148,18,132,35,116,58,103,117,79,188,60,265,46,343,34,473,21"/>
+<area shape="rect" href="_command_manager_8h.html" title="This file handles command lists, command allocators, and command queue." alt="" coords="459,80,600,107"/>
+<area shape="poly" title=" " alt="" coords="532,33,532,64,527,64,527,33"/>
+<area shape="rect" href="_thread_pool_8h.html" title="This file handles thread pool." alt="" coords="625,379,722,405"/>
+<area shape="poly" title=" " alt="" coords="553,30,585,52,619,83,646,121,654,143,657,166,657,244,662,308,670,363,665,364,656,309,652,244,652,167,649,144,641,124,615,86,581,56,550,35"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="445,528,531,555"/>
+<area shape="poly" title=" " alt="" coords="390,182,383,232,379,308,382,351,388,395,399,438,416,479,432,500,453,517,449,521,428,504,411,481,394,440,382,396,376,352,374,308,378,232,384,181"/>
+<area shape="rect" href="_descriptor_heap_8h.html" title="This file handles descriptor heap." alt="" coords="89,379,210,405"/>
+<area shape="poly" title=" " alt="" coords="341,175,276,185,201,207,165,224,133,246,105,273,84,305,81,322,88,339,100,354,117,368,113,372,97,358,83,341,76,323,79,303,101,269,129,242,163,220,199,202,274,180,340,170"/>
+<area shape="rect" href="_utility_for_direct_x_8h.html" title="This file defines utility functions that are useful for DirectX." alt="" coords="225,453,351,480"/>
+<area shape="poly" title=" " alt="" coords="388,183,300,440,295,438,383,181"/>
+<area shape="rect" href="_utility_for_async_8h.html" title="This file defines utility functions that are useful for asynchronous." alt="" coords="427,229,549,256"/>
+<area shape="poly" title=" " alt="" coords="408,180,460,218,457,222,405,184"/>
+<area shape="rect" href="_render_target_8h.html" title="This file handles render targets." alt="" coords="187,229,296,256"/>
+<area shape="poly" title=" " alt="" coords="365,184,282,224,280,220,362,179"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="421,603,555,629"/>
+<area shape="poly" title=" " alt="" coords="491,555,491,587,485,587,485,555"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="275,603,365,629"/>
+<area shape="poly" title=" " alt="" coords="460,558,364,599,362,594,458,553"/>
+<area shape="poly" title=" " alt="" coords="524,553,641,594,639,599,522,558"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="278,677,362,704"/>
+<area shape="poly" title=" " alt="" coords="323,630,323,662,317,662,317,630"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="231,752,297,779"/>
+<area shape="poly" title=" " alt="" coords="312,706,285,741,281,738,308,703"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="172,827,284,853"/>
+<area shape="poly" title=" " alt="" coords="260,780,243,814,239,811,255,778"/>
+<area shape="poly" title=" " alt="" coords="175,404,251,443,249,448,172,408"/>
+<area shape="poly" title=" " alt="" coords="152,406,152,438,147,438,147,406"/>
+<area shape="poly" title=" " alt="" coords="293,480,317,587,311,588,288,481"/>
+<area shape="poly" title=" " alt="" coords="198,476,430,525,429,530,197,481"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="93,603,206,629"/>
+<area shape="poly" title=" " alt="" coords="152,481,152,587,147,587,147,481"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="133,677,254,704"/>
+<area shape="poly" title=" " alt="" coords="159,628,180,663,176,665,155,631"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="9,677,109,704"/>
+<area shape="poly" title=" " alt="" coords="135,632,88,670,84,666,132,628"/>
+<area shape="poly" title=" " alt="" coords="208,703,243,739,239,743,204,706"/>
+<area shape="poly" title=" " alt="" coords="199,704,224,811,219,812,194,705"/>
+<area shape="rect" href="_application_error_8h.html" title="This file handles processing when the application makes an error." alt="" coords="426,453,550,480"/>
+<area shape="poly" title=" " alt="" coords="491,257,491,438,485,438,485,257"/>
+<area shape="poly" title=" " alt="" coords="491,481,491,512,485,512,485,481"/>
+<area shape="poly" title=" " alt="" coords="242,257,232,292,214,332,198,353,180,370,176,366,194,349,210,329,227,290,236,256"/>
+<area shape="poly" title=" " alt="" coords="247,256,285,438,280,439,241,257"/>
+<area shape="rect" href="_depth_stencil_8h.html" title="This file handles depth stencil." alt="" coords="94,304,200,331"/>
+<area shape="poly" title=" " alt="" coords="226,259,177,297,173,292,223,254"/>
+<area shape="poly" title=" " alt="" coords="150,331,151,363,146,363,144,331"/>
+<area shape="poly" title=" " alt="" coords="506,110,429,149,426,145,504,105"/>
+<area shape="poly" title=" " alt="" coords="540,106,571,162,584,201,589,241,589,319,591,403,584,439,565,481,547,504,526,521,522,517,543,500,560,479,579,438,586,403,584,319,584,242,579,202,566,164,535,108"/>
+<area shape="poly" title=" " alt="" coords="668,407,644,443,608,482,574,506,537,524,535,519,571,501,605,478,640,440,664,404"/>
+<area shape="poly" title=" " alt="" coords="677,406,690,587,685,588,672,406"/>
+<area shape="poly" title=" " alt="" coords="642,408,535,450,534,445,640,403"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ac4ce81dcd060d6b13beb82906ea7be32" id="r_ac4ce81dcd060d6b13beb82906ea7be32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_swap_chain_8cpp.html#ac4ce81dcd060d6b13beb82906ea7be32">_UNLIMITED_REFRESHRATE_</a></td></tr>
+<tr class="separator:ac4ce81dcd060d6b13beb82906ea7be32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:ab5b637fffbf3e42246cb6ba177d3af3c" id="r_ab5b637fffbf3e42246cb6ba177d3af3c"><td class="memItemLeft" align="right" valign="top">const UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_swap_chain_8cpp.html#ab5b637fffbf3e42246cb6ba177d3af3c">SWAPCHAIN_FLAGS</a> = DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING</td></tr>
+<tr class="separator:ab5b637fffbf3e42246cb6ba177d3af3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="ac4ce81dcd060d6b13beb82906ea7be32" name="ac4ce81dcd060d6b13beb82906ea7be32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4ce81dcd060d6b13beb82906ea7be32">&#9670;&#160;</a></span>_UNLIMITED_REFRESHRATE_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _UNLIMITED_REFRESHRATE_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="ab5b637fffbf3e42246cb6ba177d3af3c" name="ab5b637fffbf3e42246cb6ba177d3af3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b637fffbf3e42246cb6ba177d3af3c">&#9670;&#160;</a></span>SWAPCHAIN_FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const UINT SWAPCHAIN_FLAGS = DXGI_SWAP_CHAIN_FLAG_ALLOW_TEARING</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
