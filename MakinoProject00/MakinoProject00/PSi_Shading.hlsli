@@ -36,7 +36,7 @@ static const float SHADOW_FACTOR = 0.3f;
 // Minimum value of shadow bias
 static const float MIN_SHADOW_BIAS = 0.005f;
 // Maximum value of shadow bias
-static const float MAX_SHADOW_BIAS = 0.06f;
+static const float MAX_SHADOW_BIAS = 0.015f;
 
 // Array of offset values (used in soft shadow (PCF))
 static const float2 OFFSETS[9] = {

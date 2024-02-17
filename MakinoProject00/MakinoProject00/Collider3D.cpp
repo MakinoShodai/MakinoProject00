@@ -3,6 +3,7 @@
 #include "RigidBody.h"
 #include "ColliderWrapper.h"
 #include "PhysicsWorld.h"
+#include "SceneRegistry.h"
 
 // Constructor
 ACCollider3D::ACCollider3D(CGameObject* owner, ColliderType type, const Vector3f& offset)
@@ -60,6 +61,13 @@ void ACCollider3D::Awake() {
 
     // Call callback function at collider initial processing
     m_gameObj->GetCallbackSystem()->InvokeFunction(CALLBACK_COLLIDER_AWAKE);
+
+#ifdef _EDITOR
+    if (CSceneRegistry::GetAny().IsEditorMode()) {
+        UpdateScalingOffset();
+        UpdateScaling();
+    }
+#endif // _EDITOR
 }
 
 // Start processing

@@ -37,10 +37,12 @@ LRESULT WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
     switch (msg) {
     case WM_KEYDOWN:
         switch (wparam) {
+#if 0
         // Change full screen mode
         case VK_F11:
             CSwapChain::GetMain().SetFullScreen(!CSwapChain::GetAny().IsFullScreen());
             break;
+#endif
         // Exit the application
         case VK_ESCAPE:
             PostQuitMessage(0);

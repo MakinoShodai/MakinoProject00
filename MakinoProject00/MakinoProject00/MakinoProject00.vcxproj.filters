@@ -241,6 +241,12 @@
     <Filter Include="リソース ファイル\PixelShader\Shading">
       <UniqueIdentifier>{2725d695-6887-4026-8dbb-7ef8ddfbd206}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Game\PhysicsSample">
+      <UniqueIdentifier>{6972791c-25be-427c-b252-311c46ac45de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\PhysicsSample">
+      <UniqueIdentifier>{0c751879-024c-418f-835a-264d4714d6c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -620,6 +626,12 @@
     </ClCompile>
     <ClCompile Include="Trees.cpp">
       <Filter>ソース ファイル\Game\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="PistonMachine.cpp">
+      <Filter>ソース ファイル\Game\PhysicsSample</Filter>
+    </ClCompile>
+    <ClCompile Include="ForPhysicsObjects.cpp">
+      <Filter>ソース ファイル\Game\PhysicsSample</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1145,6 +1157,12 @@
     </ClInclude>
     <ClInclude Include="Trees.h">
       <Filter>ヘッダー ファイル\Game\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="PistonMachine.h">
+      <Filter>ヘッダー ファイル\Game\PhysicsSample</Filter>
+    </ClInclude>
+    <ClInclude Include="ForPhysicsObjects.h">
+      <Filter>ヘッダー ファイル\Game\PhysicsSample</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
