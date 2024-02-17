@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: RenderPassAsset.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#concepts">Concepts</a> &#124;
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle"><div class="title">RenderPassAsset.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file handles abstract class for rendering pass asset that scene uses.  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_weak_ptr_8h_source.html">WeakPtr.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+RenderPassAsset.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_render_pass_asset_8h__incl.png" border="0" usemap="#a_render_pass_asset_8h" alt=""/></div>
+<map name="a_render_pass_asset_8h" id="a_render_pass_asset_8h">
+<area shape="rect" title="This file handles abstract class for rendering pass asset that scene uses." alt="" coords="5,5,143,32"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="32,80,116,107"/>
+<area shape="poly" title=" " alt="" coords="77,33,77,64,71,64,71,33"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="41,155,107,181"/>
+<area shape="poly" title=" " alt="" coords="77,107,77,139,71,139,71,107"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="18,229,130,256"/>
+<area shape="poly" title=" " alt="" coords="77,182,77,214,71,214,71,182"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_render_pass_asset_8h__dep__incl.png" border="0" usemap="#a_render_pass_asset_8hdep" alt=""/></div>
+<map name="a_render_pass_asset_8hdep" id="a_render_pass_asset_8hdep">
+<area shape="rect" title="This file handles abstract class for rendering pass asset that scene uses." alt="" coords="190,5,327,32"/>
+<area shape="rect" href="_render_pass_asset_8cpp.html" title=" " alt="" coords="5,80,157,107"/>
+<area shape="poly" title=" " alt="" coords="214,41,113,82,111,77,212,36"/>
+<area shape="rect" href="_scene_8h.html" title="This file handles scene class." alt="" coords="2505,80,2574,107"/>
+<area shape="poly" title=" " alt="" coords="342,20,2505,88,2504,94,342,25"/>
+<area shape="rect" href="_standard_render_pass_8h.html" title="This file handles scene base class for stage." alt="" coords="181,80,336,107"/>
+<area shape="poly" title=" " alt="" coords="261,48,261,80,256,80,256,48"/>
+<area shape="rect" href="_application_clock_8cpp.html" title=" " alt="" coords="1911,229,2054,256"/>
+<area shape="poly" title=" " alt="" coords="2489,98,2035,103,1342,114,703,132,494,144,433,150,408,157,403,168,408,179,432,189,482,197,645,210,869,218,1123,222,1857,227,1910,231,1910,236,1857,232,1122,228,869,223,645,215,481,202,430,194,404,183,397,168,405,153,432,145,493,138,703,127,1342,109,2035,98,2489,92"/>
+<area shape="rect" href="_camera_8cpp.html" title=" " alt="" coords="418,155,509,181"/>
+<area shape="poly" title=" " alt="" coords="2490,98,2124,101,1553,110,959,128,709,141,521,157,510,159,509,154,521,152,709,136,958,123,1553,105,2124,96,2490,92"/>
+<area shape="rect" href="_collider3_d_8cpp.html" title=" " alt="" coords="3680,229,3786,256"/>
+<area shape="poly" title=" " alt="" coords="2590,92,2914,94,3383,103,3615,110,3815,120,3960,134,4004,143,4027,153,4034,168,4027,183,3936,205,3787,234,3786,229,3935,200,4023,179,4028,168,4023,157,4003,148,3959,140,3815,126,3615,115,3383,108,2914,100,2590,97"/>
+<area shape="rect" href="_collider_wrapper_8cpp.html" title=" " alt="" coords="533,155,672,181"/>
+<area shape="poly" title=" " alt="" coords="2490,97,2217,97,1774,102,1237,121,958,136,684,157,672,159,672,153,683,152,958,131,1237,115,1774,97,2217,91,2490,92"/>
+<area shape="rect" href="_collision_algorithm_8cpp.html" title=" " alt="" coords="695,155,846,181"/>
+<area shape="poly" title=" " alt="" coords="2489,97,2239,99,1838,107,1356,125,1105,139,859,157,846,158,846,153,858,152,1104,134,1355,119,1838,101,2239,94,2489,92"/>
+<area shape="rect" href="_component_8cpp.html" title=" " alt="" coords="870,155,983,181"/>
+<area shape="poly" title=" " alt="" coords="2490,97,2257,97,1889,103,1448,121,1219,137,995,157,983,159,983,153,994,152,1219,131,1448,116,1889,98,2257,91,2490,91"/>
+<area shape="rect" href="_debug_camera_8cpp.html" title=" " alt="" coords="1006,155,1135,181"/>
+<area shape="poly" title=" " alt="" coords="2489,97,2277,100,1946,108,1552,126,1347,140,1147,157,1135,159,1135,153,1146,152,1347,134,1551,121,1946,103,2277,94,2489,92"/>
+<area shape="rect" href="_directional_light_8cpp.html" title=" " alt="" coords="4077,229,4213,256"/>
+<area shape="poly" title=" " alt="" coords="2590,92,2951,93,3484,99,3749,106,3977,117,4142,132,4193,142,4219,153,4226,163,4226,175,4215,196,4193,216,4170,231,4167,227,4190,211,4210,193,4221,174,4220,165,4215,157,4191,147,4141,137,3977,123,3749,112,3484,105,2951,98,2590,97"/>
+<area shape="rect" href="_dynamic_b_v_tree_8cpp.html" title=" " alt="" coords="1159,155,1299,181"/>
+<area shape="poly" title=" " alt="" coords="2490,98,2009,112,1665,130,1312,157,1300,159,1299,153,1311,152,1664,125,2009,107,2489,93"/>
+<area shape="rect" href="_dynamic_cb_world_mat_8cpp.html" title=" " alt="" coords="1323,155,1492,181"/>
+<area shape="poly" title=" " alt="" coords="2490,99,2083,117,1797,135,1505,157,1493,159,1492,153,1505,152,1797,129,2083,112,2490,94"/>
+<area shape="rect" href="_for_physics_objects_8cpp.html" title=" " alt="" coords="1517,155,1674,181"/>
+<area shape="poly" title=" " alt="" coords="2490,100,2153,120,1922,136,1687,157,1675,159,1674,153,1686,152,1921,131,2152,114,2489,94"/>
+<area shape="rect" href="_game_object_8cpp.html" title=" " alt="" coords="4237,229,4357,256"/>
+<area shape="poly" title=" " alt="" coords="2590,92,2953,97,3489,108,3988,126,4158,138,4211,145,4240,152,4260,169,4276,189,4295,228,4290,230,4272,192,4256,172,4237,157,4210,150,4157,143,3988,131,3489,113,2953,103,2590,98"/>
+<area shape="rect" href="_graphics_component_8cpp.html" title=" " alt="" coords="4380,229,4545,256"/>
+<area shape="poly" title=" " alt="" coords="2590,93,2942,98,3468,109,3975,127,4161,138,4271,152,4321,167,4369,188,4443,227,4441,231,4367,192,4319,172,4270,157,4161,144,3975,132,3468,114,2942,103,2590,98"/>
+<area shape="rect" href="_graphics_pipeline_state_8cpp.html" title=" " alt="" coords="1699,155,1874,181"/>
+<area shape="poly" title=" " alt="" coords="2490,101,2231,124,1887,157,1875,159,1874,153,1886,152,2231,119,2489,96"/>
+<area shape="rect" href="_physics_world_8cpp.html" title=" " alt="" coords="1899,155,2026,181"/>
+<area shape="poly" title=" " alt="" coords="2490,103,2292,125,2037,157,2027,159,2026,154,2037,152,2291,120,2489,97"/>
+<area shape="rect" href="_piston_machine_8cpp.html" title=" " alt="" coords="2050,155,2182,181"/>
+<area shape="poly" title=" " alt="" coords="2490,106,2183,158,2182,153,2489,100"/>
+<area shape="rect" href="_player_camera_8cpp.html" title=" " alt="" coords="2206,155,2335,181"/>
+<area shape="poly" title=" " alt="" coords="2491,111,2318,157,2317,152,2489,105"/>
+<area shape="rect" href="_player_control_component_8cpp.html" title=" " alt="" coords="2359,155,2550,181"/>
+<area shape="poly" title=" " alt="" coords="2515,119,2471,156,2467,152,2512,115"/>
+<area shape="rect" href="_point_light_8cpp.html" title=" " alt="" coords="4569,229,4673,256"/>
+<area shape="poly" title=" " alt="" coords="2590,92,2919,94,3423,101,3691,108,3944,119,4162,133,4327,152,4402,167,4475,188,4589,226,4588,231,4473,193,4400,173,4326,157,4162,139,3944,124,3691,114,3422,106,2919,99,2590,97"/>
+<area shape="rect" href="_rigid_body_8cpp.html" title=" " alt="" coords="2574,155,2679,181"/>
+<area shape="poly" title=" " alt="" coords="2568,115,2613,152,2610,156,2565,119"/>
+<area shape="rect" href="_scene_8cpp.html" title=" " alt="" coords="2703,155,2787,181"/>
+<area shape="poly" title=" " alt="" coords="2590,109,2710,152,2708,157,2588,114"/>
+<area shape="rect" href="_scene_phase_8cpp.html" title=" " alt="" coords="2810,155,2931,181"/>
+<area shape="poly" title=" " alt="" coords="2590,103,2813,151,2812,157,2589,108"/>
+<area shape="rect" href="_scene_registry_8h.html" title="This file handles registry class that manages all scene." alt="" coords="4088,155,4205,181"/>
+<area shape="poly" title=" " alt="" coords="2590,92,2820,93,3184,101,3621,119,3847,133,4069,152,4088,154,4087,159,4069,157,3847,139,3620,124,3184,106,2820,99,2590,97"/>
+<area shape="rect" href="_sky_dome_8cpp.html" title=" " alt="" coords="2955,155,3058,181"/>
+<area shape="poly" title=" " alt="" coords="2590,99,2943,152,2955,154,2954,159,2942,157,2589,104"/>
+<area shape="rect" href="_static_cb_dir_light_param_8cpp.html" title=" " alt="" coords="3083,155,3261,181"/>
+<area shape="poly" title=" " alt="" coords="2590,98,3071,152,3082,153,3082,159,3070,157,2589,103"/>
+<area shape="rect" href="_static_cb_light_v_p_mat_8cpp.html" title=" " alt="" coords="3286,155,3450,181"/>
+<area shape="poly" title=" " alt="" coords="2590,95,2880,117,3273,152,3285,153,3285,159,3273,157,2880,122,2590,101"/>
+<area shape="rect" href="_static_cb_orthographic_mat_8cpp.html" title=" " alt="" coords="3474,155,3667,181"/>
+<area shape="poly" title=" " alt="" coords="2590,94,2954,115,3463,152,3474,153,3474,158,3462,157,2954,120,2590,100"/>
+<area shape="rect" href="_static_cb_v_p_mat_8cpp.html" title=" " alt="" coords="3690,155,3827,181"/>
+<area shape="poly" title=" " alt="" coords="2590,93,3037,108,3354,125,3679,152,3690,153,3690,159,3678,157,3354,131,3037,113,2590,98"/>
+<area shape="rect" href="_static_sb_point_lights_8cpp.html" title=" " alt="" coords="3851,155,4012,181"/>
+<area shape="poly" title=" " alt="" coords="2590,93,3097,108,3463,125,3839,152,3851,153,3851,159,3838,157,3463,131,3097,113,2590,98"/>
+<area shape="poly" title=" " alt="" coords="4072,180,4025,184,3429,214,2850,232,2365,241,2054,244,2054,238,2365,235,2849,226,3429,209,4025,179,4072,175"/>
+<area shape="poly" title=" " alt="" coords="4073,184,3799,232,3787,234,3786,229,3798,227,4072,179"/>
+<area shape="poly" title=" " alt="" coords="4148,197,4148,229,4143,229,4143,197"/>
+<area shape="poly" title=" " alt="" coords="4187,186,4272,226,4269,231,4185,191"/>
+<area shape="poly" title=" " alt="" coords="4217,183,4408,226,4406,231,4216,188"/>
+<area shape="poly" title=" " alt="" coords="4221,177,4557,227,4569,229,4568,234,4557,232,4220,182"/>
+<area shape="rect" href="_application_main_8cpp.html" title=" " alt="" coords="3915,229,4053,256"/>
+<area shape="poly" title=" " alt="" coords="4105,190,4013,231,4011,226,4103,186"/>
+<area shape="rect" href="_model_8cpp.html" title=" " alt="" coords="3810,229,3891,256"/>
+<area shape="poly" title=" " alt="" coords="4080,188,3892,234,3891,229,4079,183"/>
+<area shape="rect" href="_scene_registry_8cpp.html" title=" " alt="" coords="1714,229,1845,256"/>
+<area shape="poly" title=" " alt="" coords="4072,180,4025,184,3701,200,3427,207,2962,208,2496,208,2222,216,1899,232,1846,236,1845,231,1898,227,2222,210,2496,203,2962,202,3427,202,3701,195,4025,179,4072,175"/>
+<area shape="poly" title=" " alt="" coords="213,116,187,130,166,146,156,163,157,171,163,179,185,189,232,198,385,212,598,223,847,230,1353,237,1714,239,1714,244,1353,243,846,235,598,228,385,217,231,203,183,194,159,183,152,173,151,162,162,143,184,125,211,111"/>
+<area shape="rect" href="_standard_render_pass_8cpp.html" title=" " alt="" coords="174,155,343,181"/>
+<area shape="poly" title=" " alt="" coords="261,122,261,154,256,154,256,122"/>
+</map>
+</div>
+</div>
+<p><a href="_render_pass_asset_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_pass_asset.html">ACRenderPassAsset</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract class for rendering pass asset that scene uses  <a href="class_a_c_render_pass_asset.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_registrar_for_render_pass_asset.html">ACRegistrarForRenderPassAsset</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for registering scenes to map  <a href="class_a_c_registrar_for_render_pass_asset.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_registrar_render_pass_asset.html">CRegistrarRenderPassAsset&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for registering scene asset to map  <a href="class_c_registrar_render_pass_asset.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="concepts" name="concepts"></a>
+Concepts</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_is_a_c_render_pass_asset_child.html">IsACRenderPassAssetChild</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this a child of <a class="el" href="class_a_c_render_pass_asset.html" title="Abstract class for rendering pass asset that scene uses">ACRenderPassAsset</a>? <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a495094387506af7137bfb951b2c8da86" id="r_a495094387506af7137bfb951b2c8da86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_render_pass_asset_8h.html#a495094387506af7137bfb951b2c8da86">REGISTER_RENDERPASS_CLASS</a>(CLASS_NAME)&#160;&#160;&#160;static <a class="el" href="class_c_registrar_render_pass_asset.html">CRegistrarRenderPassAsset</a>&lt;CLASS_NAME&gt; registrar_##CLASS_NAME(#CLASS_NAME);</td></tr>
+<tr class="memdesc:a495094387506af7137bfb951b2c8da86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to register an asset and publish it to the hierarchy  <br /></td></tr>
+<tr class="separator:a495094387506af7137bfb951b2c8da86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This file handles abstract class for rendering pass asset that scene uses. </p>
+<dl class="section author"><dt>著者</dt><dd>Shodai Makino </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2024/1/26 </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a495094387506af7137bfb951b2c8da86" name="a495094387506af7137bfb951b2c8da86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a495094387506af7137bfb951b2c8da86">&#9670;&#160;</a></span>REGISTER_RENDERPASS_CLASS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REGISTER_RENDERPASS_CLASS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CLASS_NAME</td><td>)</td>
+          <td>&#160;&#160;&#160;static <a class="el" href="class_c_registrar_render_pass_asset.html">CRegistrarRenderPassAsset</a>&lt;CLASS_NAME&gt; registrar_##CLASS_NAME(#CLASS_NAME);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro to register an asset and publish it to the hierarchy </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

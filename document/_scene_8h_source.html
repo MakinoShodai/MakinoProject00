@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Scene.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Scene.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_scene_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __SCENE_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __SCENE_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_unique_ptr_8h.html">UniquePtr.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_game_object_8h.html">GameObject.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_camera_registry_8h.html">CameraRegistry.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_graphics_layer_registry_8h.html">GraphicsLayerRegistry.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_graphics_pipeline_state_8h.html">GraphicsPipelineState.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="_dynamic_sb_registry_8h.html">DynamicSbRegistry.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="_int_key_generater_8h.html">IntKeyGenerater.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="_physics_world_8h.html">PhysicsWorld.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="_scene_phase_8h.html">ScenePhase.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="_light_registry_8h.html">LightRegistry.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="_render_pass_asset_8h.html">RenderPassAsset.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_c_scene.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_scene.html">CScene</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis</a>&lt;CScene&gt; {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="class_c_scene.html">CScene</a>(<a class="code hl_class" href="class_c_unique_ptr.html">CUniquePtr&lt;ACRenderPassAsset&gt;</a> renderPass);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_scene.html#a9bba74816e4160bb2d8cafd07b13c8b2">OnDestroy</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_scene.html#a4cbbc0edfb40da14696ec7d7cd51dfa6">Start</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_scene.html#a8407a89d3e0f129ba4b34a607177273d">Draw</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_scene.html#a69fa31992ceb8bf23f649aec0c00baa0">Update</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_scene.html#aee6383ced70bbceca545559d0ccb262e">PrePhysicsSimulation</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_scene.html#a07e0996222151c0e7abb78ebc719d7b6">PostPhysicsSimulation</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_scene.html#a33e19a81e29d296d27020128e3f472a8">EndFrameProcess</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_scene.html#a4c0295d6528393db0e104ea11de1e250">TransferObjectsTransformObserve</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_scene.html#a2b8eedb7258084bb21dc10993ce315a9">SetUpdateMode</a>(<a class="code hl_enumeration" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a> mode);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CGameObject&gt;</a> <a class="code hl_function" href="class_c_scene.html#a1f521bb8497f207c984f893cd20cb05f">CreateGameObject</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_transformf.html">Transformf</a>&amp; transform);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CGameObject&gt;</a> <a class="code hl_function" href="class_c_scene.html#a1f521bb8497f207c984f893cd20cb05f">CreateGameObject</a>(<span class="keyword">const</span> std::string&amp; prefabName, <span class="keyword">const</span> <a class="code hl_struct" href="struct_transformf.html">Transformf</a>&amp; transform);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CGameObject&gt;</a> <a class="code hl_function" href="class_c_scene.html#ab6977a4b8b76fae523be58534561a0ea">FindGameObject</a>(<span class="keyword">const</span> std::wstring&amp; name);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_scene.html#afe7a9d8757997b5f0419c278092409e5">DestroyGameObject</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CGameObject&gt;</a> <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_c_scene.html#ab6d5a88a05af5cd1732eba3eefe6698f">  118</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_scene.html#ab6d5a88a05af5cd1732eba3eefe6698f">AddGraphicsPipelineStatePointer</a>(<a class="code hl_class" href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a>* pipelineState) { <span class="keywordflow">if</span> (pipelineState != <span class="keyword">nullptr</span>) { m_gpsos.push_back(pipelineState); } }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_c_scene.html#ae3d264efe14b9a22fd43a5410639bd60">  121</a></span>    <a class="code hl_class" href="class_mkpe_1_1_c_physics_world.html">Mkpe::CPhysicsWorld</a>* <a class="code hl_function" href="class_c_scene.html#ae3d264efe14b9a22fd43a5410639bd60">GetPhysicsWorld</a>() { <span class="keywordflow">return</span> &amp;m_physicsWorld; }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_c_scene.html#a015694cb980289f186c4b8d997f1631e">  123</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="class_mkpe_1_1_c_physics_world.html">Mkpe::CPhysicsWorld</a>* <a class="code hl_function" href="class_c_scene.html#a015694cb980289f186c4b8d997f1631e">GetPhysicsWorld</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> &amp;m_physicsWorld; }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="class_c_scene.html#ad1980a9f4d0028df633beaf263293cb2">  126</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CCameraRegistry&gt;</a> <a class="code hl_function" href="class_c_scene.html#ad1980a9f4d0028df633beaf263293cb2">GetCameraRegistry</a>() { <span class="keywordflow">return</span> m_cameraRegistry.<a class="code hl_function" href="class_c_unique_ptr_weakable.html#a0d15ed4211b1e3b86230bb15af25218b">GetWeakPtr</a>(); }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_c_scene.html#a9b6bd4943426f04968561a91ed7f24cc">  128</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CCameraRegistry&gt;</a> <a class="code hl_function" href="class_c_scene.html#a9b6bd4943426f04968561a91ed7f24cc">GetCameraRegistry</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_cameraRegistry.<a class="code hl_function" href="class_c_unique_ptr_weakable.html#a0d15ed4211b1e3b86230bb15af25218b">GetWeakPtr</a>(); }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_c_scene.html#a8913ab149f65bc034fe47dcd9a3c9ffc">  131</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CLightRegistry&gt;</a> <a class="code hl_function" href="class_c_scene.html#a8913ab149f65bc034fe47dcd9a3c9ffc">GetLightRegistry</a>() { <span class="keywordflow">return</span> m_lightRegistry.<a class="code hl_function" href="class_c_unique_ptr_weakable.html#a0d15ed4211b1e3b86230bb15af25218b">GetWeakPtr</a>(); }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="class_c_scene.html#a9f4b09815ecc653c82e2a49006957d42">  134</a></span>    <a class="code hl_class" href="class_c_dynamic_sb_registry.html">CDynamicSbRegistry</a>* <a class="code hl_function" href="class_c_scene.html#a9f4b09815ecc653c82e2a49006957d42">GetDynamicSbRegistry</a>() { <span class="keywordflow">return</span> &amp;m_dynamicSbRegistry; }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="class_c_scene.html#a8cc179cccac8174ea6b500c1e0029160">  136</a></span>    <a class="code hl_class" href="class_c_graphics_layer_registry.html">CGraphicsLayerRegistry</a>* <a class="code hl_function" href="class_c_scene.html#a8cc179cccac8174ea6b500c1e0029160">GetGraphicsLayerRegistry</a>() { <span class="keywordflow">return</span> &amp;m_graphicsLayerRegistry; }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="class_c_scene.html#ab481fba38fff144d7778e4a5dd89a8bf">  138</a></span>    <a class="code hl_class" href="class_c_int_key_generater.html">CIntKeyGenerater</a>* <a class="code hl_function" href="class_c_scene.html#ab481fba38fff144d7778e4a5dd89a8bf">GetMeshKeyGenerater</a>() { <span class="keywordflow">return</span> &amp;m_meshKeyGenerater; }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef">  141</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_enumeration" href="_scene_phase_8h.html#a2e732ece159fa6e4595e3b824782fe25">ScenePhase</a> <a class="code hl_function" href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef">GetCurrentScenePhase</a>() { <span class="keywordflow">return</span> ms_currentPhase; }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="class_c_scene.html#a041cf74f8012607730eed32e5b741eb6">  144</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_scene.html#a041cf74f8012607730eed32e5b741eb6">IsUpdateMode</a>() { <span class="keywordflow">return</span> (<a class="code hl_typedef" href="_update_mode_8h.html#a622dc7700a53f07696aa3ec440ab4c77">UpdateModeType</a>)m_currentUpdateMode != 0; }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="class_c_scene.html#a2d9225386a82613e7c14ad5ba250c9f4">  146</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_scene.html#a2d9225386a82613e7c14ad5ba250c9f4">CheckUpdateMode</a>(<a class="code hl_enumeration" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a> mode) { <span class="keywordflow">return</span> <a class="code hl_function" href="namespace_utl.html#a158d8d72098bfd624ad55df851dcaa43">Utl::CheckEnumBit</a>(m_currentUpdateMode &amp; mode); }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#ifdef _EDITOR</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">void</span> SetRenderPass(<a class="code hl_class" href="class_c_unique_ptr.html">CUniquePtr&lt;ACRenderPassAsset&gt;</a> renderPass);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">#endif </span><span class="comment">// _EDITOR</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordtype">void</span> CheckObjectsDestroy();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keyword">static</span> <a class="code hl_enumeration" href="_scene_phase_8h.html#a2e732ece159fa6e4595e3b824782fe25">ScenePhase</a> ms_currentPhase;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <a class="code hl_class" href="class_c_unique_ptr.html">CUniquePtr&lt;ACRenderPassAsset&gt;</a> m_renderPass;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    std::vector&lt;CUniquePtrWeakable&lt;CGameObject&gt;&gt; m_gameObjects;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    std::vector&lt;CUniquePtrWeakable&lt;CGameObject&gt;&gt; m_gameObjectsToCreate;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    std::vector&lt;CWeakPtr&lt;CGameObject&gt;&gt; m_gameObjectsToDestroy;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    std::vector&lt;CGraphicsPipelineState*&gt; m_gpsos;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <a class="code hl_class" href="class_mkpe_1_1_c_physics_world.html">Mkpe::CPhysicsWorld</a> m_physicsWorld;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <a class="code hl_class" href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable&lt;CCameraRegistry&gt;</a> m_cameraRegistry;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <a class="code hl_class" href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable&lt;CLightRegistry&gt;</a> m_lightRegistry;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <a class="code hl_class" href="class_c_dynamic_sb_registry.html">CDynamicSbRegistry</a> m_dynamicSbRegistry;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <a class="code hl_class" href="class_c_graphics_layer_registry.html">CGraphicsLayerRegistry</a> m_graphicsLayerRegistry;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <a class="code hl_class" href="class_c_int_key_generater.html">CIntKeyGenerater</a> m_meshKeyGenerater;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordtype">bool</span> m_isFirstUpdated;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <a class="code hl_enumeration" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a> m_currentUpdateMode;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <a class="code hl_enumeration" href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a> m_scheduleUpdateMode;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>};</div>
+</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="concept_is_c_scene_child.html">  199</a></span><span class="keyword">concept </span><a class="code hl_concept" href="concept_is_c_scene_child.html">IsCSceneChild</a> = std::is_base_of_v&lt;CScene, T&gt;;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">#endif </span><span class="comment">// !__SCENE_H__</span></div>
+<div class="ttc" id="a_camera_registry_8h_html"><div class="ttname"><a href="_camera_registry_8h.html">CameraRegistry.h</a></div><div class="ttdoc">This file handles a camera registry.</div></div>
+<div class="ttc" id="a_dynamic_sb_registry_8h_html"><div class="ttname"><a href="_dynamic_sb_registry_8h.html">DynamicSbRegistry.h</a></div><div class="ttdoc">This file handles the registry that manages all structured buffer allocators per object.</div></div>
+<div class="ttc" id="a_game_object_8h_html"><div class="ttname"><a href="_game_object_8h.html">GameObject.h</a></div><div class="ttdoc">This file handles base class for game object.</div></div>
+<div class="ttc" id="a_graphics_layer_registry_8h_html"><div class="ttname"><a href="_graphics_layer_registry_8h.html">GraphicsLayerRegistry.h</a></div><div class="ttdoc">This file handles drawing components for each layer.</div></div>
+<div class="ttc" id="a_graphics_pipeline_state_8h_html"><div class="ttname"><a href="_graphics_pipeline_state_8h.html">GraphicsPipelineState.h</a></div><div class="ttdoc">This file handles graphics pipeline states.</div></div>
+<div class="ttc" id="a_int_key_generater_8h_html"><div class="ttname"><a href="_int_key_generater_8h.html">IntKeyGenerater.h</a></div><div class="ttdoc">This file handles class that generates keys of integer numeric type.</div></div>
+<div class="ttc" id="a_light_registry_8h_html"><div class="ttname"><a href="_light_registry_8h.html">LightRegistry.h</a></div><div class="ttdoc">This file handles registry for lights.</div></div>
+<div class="ttc" id="a_physics_world_8h_html"><div class="ttname"><a href="_physics_world_8h.html">PhysicsWorld.h</a></div><div class="ttdoc">This file handles physics simulation environment class.</div></div>
+<div class="ttc" id="a_render_pass_asset_8h_html"><div class="ttname"><a href="_render_pass_asset_8h.html">RenderPassAsset.h</a></div><div class="ttdoc">This file handles abstract class for rendering pass asset that scene uses.</div></div>
+<div class="ttc" id="a_scene_phase_8h_html"><div class="ttname"><a href="_scene_phase_8h.html">ScenePhase.h</a></div><div class="ttdoc">This file handles phase of the scene currently being processed.</div></div>
+<div class="ttc" id="a_scene_phase_8h_html_a2e732ece159fa6e4595e3b824782fe25"><div class="ttname"><a href="_scene_phase_8h.html#a2e732ece159fa6e4595e3b824782fe25">ScenePhase</a></div><div class="ttdeci">ScenePhase</div><div class="ttdoc">Phase of the scene currently being processed</div><div class="ttdef"><b>Definition</b> ScenePhase.h:18</div></div>
+<div class="ttc" id="a_unique_ptr_8h_html"><div class="ttname"><a href="_unique_ptr_8h.html">UniquePtr.h</a></div><div class="ttdoc">This file handles unique pointer that can generate weak reference pointer.</div></div>
+<div class="ttc" id="a_update_mode_8h_html_a622dc7700a53f07696aa3ec440ab4c77"><div class="ttname"><a href="_update_mode_8h.html#a622dc7700a53f07696aa3ec440ab4c77">UpdateModeType</a></div><div class="ttdeci">UINT32 UpdateModeType</div><div class="ttdoc">Type of scene update mode</div><div class="ttdef"><b>Definition</b> UpdateMode.h:15</div></div>
+<div class="ttc" id="a_update_mode_8h_html_aaacfee37fc3e36ca82bc4998d40036b7"><div class="ttname"><a href="_update_mode_8h.html#aaacfee37fc3e36ca82bc4998d40036b7">UpdateMode</a></div><div class="ttdeci">UpdateMode</div><div class="ttdoc">Update mode of scene While update mode is in effect, any updating process are not performed except fo...</div><div class="ttdef"><b>Definition</b> UpdateMode.h:23</div></div>
+<div class="ttc" id="aclass_a_c_weak_ptr_from_this_html"><div class="ttname"><a href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis</a></div><div class="ttdoc">Class inheriting from this class can create WeakPtrs from its instance</div><div class="ttdef"><b>Definition</b> WeakPtr.h:184</div></div>
+<div class="ttc" id="aclass_c_dynamic_sb_registry_html"><div class="ttname"><a href="class_c_dynamic_sb_registry.html">CDynamicSbRegistry</a></div><div class="ttdoc">This class handles all structured buffer allocator per object</div><div class="ttdef"><b>Definition</b> DynamicSbRegistry.h:15</div></div>
+<div class="ttc" id="aclass_c_graphics_layer_registry_html"><div class="ttname"><a href="class_c_graphics_layer_registry.html">CGraphicsLayerRegistry</a></div><div class="ttdoc">This class handles drawing components for each layer</div><div class="ttdef"><b>Definition</b> GraphicsLayerRegistry.h:123</div></div>
+<div class="ttc" id="aclass_c_graphics_pipeline_state_html"><div class="ttname"><a href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a></div><div class="ttdoc">This class handles graphics pipeline state</div><div class="ttdef"><b>Definition</b> GraphicsPipelineState.h:27</div></div>
+<div class="ttc" id="aclass_c_int_key_generater_html"><div class="ttname"><a href="class_c_int_key_generater.html">CIntKeyGenerater</a></div><div class="ttdoc">This class generates keys of integer numeric type</div><div class="ttdef"><b>Definition</b> IntKeyGenerater.h:16</div></div>
+<div class="ttc" id="aclass_c_scene_html"><div class="ttname"><a href="class_c_scene.html">CScene</a></div><div class="ttdoc">Scene class</div><div class="ttdef"><b>Definition</b> Scene.h:25</div></div>
+<div class="ttc" id="aclass_c_scene_html_a015694cb980289f186c4b8d997f1631e"><div class="ttname"><a href="class_c_scene.html#a015694cb980289f186c4b8d997f1631e">CScene::GetPhysicsWorld</a></div><div class="ttdeci">const Mkpe::CPhysicsWorld * GetPhysicsWorld() const</div><div class="ttdoc">Get physics simulation environment class</div><div class="ttdef"><b>Definition</b> Scene.h:123</div></div>
+<div class="ttc" id="aclass_c_scene_html_a041cf74f8012607730eed32e5b741eb6"><div class="ttname"><a href="class_c_scene.html#a041cf74f8012607730eed32e5b741eb6">CScene::IsUpdateMode</a></div><div class="ttdeci">bool IsUpdateMode()</div><div class="ttdoc">Is update mode enabled?</div><div class="ttdef"><b>Definition</b> Scene.h:144</div></div>
+<div class="ttc" id="aclass_c_scene_html_a07e0996222151c0e7abb78ebc719d7b6"><div class="ttname"><a href="class_c_scene.html#a07e0996222151c0e7abb78ebc719d7b6">CScene::PostPhysicsSimulation</a></div><div class="ttdeci">void PostPhysicsSimulation()</div><div class="ttdoc">Physics simulation postprocessing</div><div class="ttdef"><b>Definition</b> Scene.cpp:127</div></div>
+<div class="ttc" id="aclass_c_scene_html_a1f521bb8497f207c984f893cd20cb05f"><div class="ttname"><a href="class_c_scene.html#a1f521bb8497f207c984f893cd20cb05f">CScene::CreateGameObject</a></div><div class="ttdeci">CWeakPtr&lt; CGameObject &gt; CreateGameObject(const Transformf &amp;transform)</div><div class="ttdoc">Create a game object</div><div class="ttdef"><b>Definition</b> Scene.cpp:172</div></div>
+<div class="ttc" id="aclass_c_scene_html_a2b8eedb7258084bb21dc10993ce315a9"><div class="ttname"><a href="class_c_scene.html#a2b8eedb7258084bb21dc10993ce315a9">CScene::SetUpdateMode</a></div><div class="ttdeci">void SetUpdateMode(UpdateMode mode)</div><div class="ttdoc">Set update mode</div><div class="ttdef"><b>Definition</b> Scene.cpp:165</div></div>
+<div class="ttc" id="aclass_c_scene_html_a2d9225386a82613e7c14ad5ba250c9f4"><div class="ttname"><a href="class_c_scene.html#a2d9225386a82613e7c14ad5ba250c9f4">CScene::CheckUpdateMode</a></div><div class="ttdeci">bool CheckUpdateMode(UpdateMode mode)</div><div class="ttdoc">Logical conjunction with current update mode bits</div><div class="ttdef"><b>Definition</b> Scene.h:146</div></div>
+<div class="ttc" id="aclass_c_scene_html_a33e19a81e29d296d27020128e3f472a8"><div class="ttname"><a href="class_c_scene.html#a33e19a81e29d296d27020128e3f472a8">CScene::EndFrameProcess</a></div><div class="ttdeci">void EndFrameProcess()</div><div class="ttdoc">Processing at end of a frame</div><div class="ttdef"><b>Definition</b> Scene.cpp:144</div></div>
+<div class="ttc" id="aclass_c_scene_html_a4c0295d6528393db0e104ea11de1e250"><div class="ttname"><a href="class_c_scene.html#a4c0295d6528393db0e104ea11de1e250">CScene::TransferObjectsTransformObserve</a></div><div class="ttdeci">void TransferObjectsTransformObserve()</div><div class="ttdoc">Transfer bit strings to observe the transform of all objects</div><div class="ttdef"><b>Definition</b> Scene.cpp:158</div></div>
+<div class="ttc" id="aclass_c_scene_html_a4cbbc0edfb40da14696ec7d7cd51dfa6"><div class="ttname"><a href="class_c_scene.html#a4cbbc0edfb40da14696ec7d7cd51dfa6">CScene::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Processing when switching to this scene</div><div class="ttdef"><b>Definition</b> Scene.cpp:35</div></div>
+<div class="ttc" id="aclass_c_scene_html_a69fa31992ceb8bf23f649aec0c00baa0"><div class="ttname"><a href="class_c_scene.html#a69fa31992ceb8bf23f649aec0c00baa0">CScene::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Updating process</div><div class="ttdef"><b>Definition</b> Scene.cpp:45</div></div>
+<div class="ttc" id="aclass_c_scene_html_a8407a89d3e0f129ba4b34a607177273d"><div class="ttname"><a href="class_c_scene.html#a8407a89d3e0f129ba4b34a607177273d">CScene::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdoc">Drawing process</div><div class="ttdef"><b>Definition</b> Scene.cpp:40</div></div>
+<div class="ttc" id="aclass_c_scene_html_a8913ab149f65bc034fe47dcd9a3c9ffc"><div class="ttname"><a href="class_c_scene.html#a8913ab149f65bc034fe47dcd9a3c9ffc">CScene::GetLightRegistry</a></div><div class="ttdeci">CWeakPtr&lt; CLightRegistry &gt; GetLightRegistry()</div><div class="ttdoc">Get weak pointer to lights registry</div><div class="ttdef"><b>Definition</b> Scene.h:131</div></div>
+<div class="ttc" id="aclass_c_scene_html_a8cc179cccac8174ea6b500c1e0029160"><div class="ttname"><a href="class_c_scene.html#a8cc179cccac8174ea6b500c1e0029160">CScene::GetGraphicsLayerRegistry</a></div><div class="ttdeci">CGraphicsLayerRegistry * GetGraphicsLayerRegistry()</div><div class="ttdoc">Get pointer to the registry class handles graphics components array of each graphics layers</div><div class="ttdef"><b>Definition</b> Scene.h:136</div></div>
+<div class="ttc" id="aclass_c_scene_html_a9b6bd4943426f04968561a91ed7f24cc"><div class="ttname"><a href="class_c_scene.html#a9b6bd4943426f04968561a91ed7f24cc">CScene::GetCameraRegistry</a></div><div class="ttdeci">CWeakPtr&lt; const CCameraRegistry &gt; GetCameraRegistry() const</div><div class="ttdoc">Get weak pointer to camera registry</div><div class="ttdef"><b>Definition</b> Scene.h:128</div></div>
+<div class="ttc" id="aclass_c_scene_html_a9bba74816e4160bb2d8cafd07b13c8b2"><div class="ttname"><a href="class_c_scene.html#a9bba74816e4160bb2d8cafd07b13c8b2">CScene::OnDestroy</a></div><div class="ttdeci">void OnDestroy()</div><div class="ttdoc">Processing when a scene is discarded</div><div class="ttdef"><b>Definition</b> Scene.cpp:21</div></div>
+<div class="ttc" id="aclass_c_scene_html_a9f4b09815ecc653c82e2a49006957d42"><div class="ttname"><a href="class_c_scene.html#a9f4b09815ecc653c82e2a49006957d42">CScene::GetDynamicSbRegistry</a></div><div class="ttdeci">CDynamicSbRegistry * GetDynamicSbRegistry()</div><div class="ttdoc">Get registry class handles all structured buffer allocator per object</div><div class="ttdef"><b>Definition</b> Scene.h:134</div></div>
+<div class="ttc" id="aclass_c_scene_html_ab481fba38fff144d7778e4a5dd89a8bf"><div class="ttname"><a href="class_c_scene.html#ab481fba38fff144d7778e4a5dd89a8bf">CScene::GetMeshKeyGenerater</a></div><div class="ttdeci">CIntKeyGenerater * GetMeshKeyGenerater()</div><div class="ttdoc">Get key generater class for mesh buffer</div><div class="ttdef"><b>Definition</b> Scene.h:138</div></div>
+<div class="ttc" id="aclass_c_scene_html_ab51421a2bdede73514c1bfb086bda6ef"><div class="ttname"><a href="class_c_scene.html#ab51421a2bdede73514c1bfb086bda6ef">CScene::GetCurrentScenePhase</a></div><div class="ttdeci">static ScenePhase GetCurrentScenePhase()</div><div class="ttdoc">Get current phase of the scene currently being processed</div><div class="ttdef"><b>Definition</b> Scene.h:141</div></div>
+<div class="ttc" id="aclass_c_scene_html_ab6977a4b8b76fae523be58534561a0ea"><div class="ttname"><a href="class_c_scene.html#ab6977a4b8b76fae523be58534561a0ea">CScene::FindGameObject</a></div><div class="ttdeci">CWeakPtr&lt; CGameObject &gt; FindGameObject(const std::wstring &amp;name)</div><div class="ttdoc">Find a game object from the array of game objects</div><div class="ttdef"><b>Definition</b> Scene.cpp:202</div></div>
+<div class="ttc" id="aclass_c_scene_html_ab6d5a88a05af5cd1732eba3eefe6698f"><div class="ttname"><a href="class_c_scene.html#ab6d5a88a05af5cd1732eba3eefe6698f">CScene::AddGraphicsPipelineStatePointer</a></div><div class="ttdeci">void AddGraphicsPipelineStatePointer(CGraphicsPipelineState *pipelineState)</div><div class="ttdoc">Add a pointer to a graphics pipeline state</div><div class="ttdef"><b>Definition</b> Scene.h:118</div></div>
+<div class="ttc" id="aclass_c_scene_html_ad1980a9f4d0028df633beaf263293cb2"><div class="ttname"><a href="class_c_scene.html#ad1980a9f4d0028df633beaf263293cb2">CScene::GetCameraRegistry</a></div><div class="ttdeci">CWeakPtr&lt; CCameraRegistry &gt; GetCameraRegistry()</div><div class="ttdoc">Get weak pointer to camera registry</div><div class="ttdef"><b>Definition</b> Scene.h:126</div></div>
+<div class="ttc" id="aclass_c_scene_html_ae3d264efe14b9a22fd43a5410639bd60"><div class="ttname"><a href="class_c_scene.html#ae3d264efe14b9a22fd43a5410639bd60">CScene::GetPhysicsWorld</a></div><div class="ttdeci">Mkpe::CPhysicsWorld * GetPhysicsWorld()</div><div class="ttdoc">Get physics simulation environment class</div><div class="ttdef"><b>Definition</b> Scene.h:121</div></div>
+<div class="ttc" id="aclass_c_scene_html_aee6383ced70bbceca545559d0ccb262e"><div class="ttname"><a href="class_c_scene.html#aee6383ced70bbceca545559d0ccb262e">CScene::PrePhysicsSimulation</a></div><div class="ttdeci">void PrePhysicsSimulation()</div><div class="ttdoc">Physics simulation preprocessing</div><div class="ttdef"><b>Definition</b> Scene.cpp:106</div></div>
+<div class="ttc" id="aclass_c_scene_html_afe7a9d8757997b5f0419c278092409e5"><div class="ttname"><a href="class_c_scene.html#afe7a9d8757997b5f0419c278092409e5">CScene::DestroyGameObject</a></div><div class="ttdeci">void DestroyGameObject(CWeakPtr&lt; CGameObject &gt; object)</div><div class="ttdoc">Schedule destroying a game object from the array of game objects</div><div class="ttdef"><b>Definition</b> Scene.cpp:230</div></div>
+<div class="ttc" id="aclass_c_unique_ptr_html"><div class="ttname"><a href="class_c_unique_ptr.html">CUniquePtr</a></div><div class="ttdoc">Unique pointer that can't generate weak reference pointer</div><div class="ttdef"><b>Definition</b> UniquePtr.h:250</div></div>
+<div class="ttc" id="aclass_c_unique_ptr_weakable_html"><div class="ttname"><a href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable</a></div><div class="ttdoc">Unique pointer that can generate weak reference pointer</div><div class="ttdef"><b>Definition</b> UniquePtr.h:19</div></div>
+<div class="ttc" id="aclass_c_unique_ptr_weakable_html_a0d15ed4211b1e3b86230bb15af25218b"><div class="ttname"><a href="class_c_unique_ptr_weakable.html#a0d15ed4211b1e3b86230bb15af25218b">CUniquePtrWeakable::GetWeakPtr</a></div><div class="ttdeci">CWeakPtr&lt; T &gt; GetWeakPtr() const</div><div class="ttdoc">Get weak ptr</div><div class="ttdef"><b>Definition</b> UniquePtr.h:91</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_physics_world_html"><div class="ttname"><a href="class_mkpe_1_1_c_physics_world.html">Mkpe::CPhysicsWorld</a></div><div class="ttdoc">Physics simulation environment class</div><div class="ttdef"><b>Definition</b> PhysicsWorld.h:38</div></div>
+<div class="ttc" id="aconcept_is_c_scene_child_html"><div class="ttname"><a href="concept_is_c_scene_child.html">IsCSceneChild</a></div><div class="ttdoc">Is this a child of CScene?</div><div class="ttdef"><b>Definition</b> Scene.h:199</div></div>
+<div class="ttc" id="anamespace_utl_html_a158d8d72098bfd624ad55df851dcaa43"><div class="ttname"><a href="namespace_utl.html#a158d8d72098bfd624ad55df851dcaa43">Utl::CheckEnumBit</a></div><div class="ttdeci">bool CheckEnumBit(T flag)</div><div class="ttdoc">Bool check of enum class for bit operation</div><div class="ttdef"><b>Definition</b> UtilityForBit.h:34</div></div>
+<div class="ttc" id="astruct_transformf_html"><div class="ttname"><a href="struct_transformf.html">Transformf</a></div><div class="ttdoc">Transform that has position and scale, rotation</div><div class="ttdef"><b>Definition</b> UtilityForMath.h:35</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

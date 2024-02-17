@@ -1,0 +1,1108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CSyncSharedPtr&lt; T &gt; クラステンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="class_c_sync_shared_ptr-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CSyncSharedPtr&lt; T &gt; クラステンプレート</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Smart pointer that destroys the instance if this variable is destroyed, regardless of the number of strong reference counts  
+ <a href="class_c_sync_shared_ptr.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_shared_ptr_8h_source.html">SharedPtr.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab9a5ced4840b0b0a2ba315a33d052c6d" id="r_ab9a5ced4840b0b0a2ba315a33d052c6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#ab9a5ced4840b0b0a2ba315a33d052c6d">CSyncSharedPtr</a> (InstanceType *instance=nullptr)</td></tr>
+<tr class="memdesc:ab9a5ced4840b0b0a2ba315a33d052c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:ab9a5ced4840b0b0a2ba315a33d052c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ad4faac8204c6b2d0785a77079031a8" id="r_a2ad4faac8204c6b2d0785a77079031a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a2ad4faac8204c6b2d0785a77079031a8">CSyncSharedPtr</a> (<a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a2ad4faac8204c6b2d0785a77079031a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor  <br /></td></tr>
+<tr class="separator:a2ad4faac8204c6b2d0785a77079031a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c30849e3821e578670810f110399f4b" id="r_a7c30849e3821e578670810f110399f4b"><td class="memTemplParams" colspan="2">template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</td></tr>
+<tr class="memitem:a7c30849e3821e578670810f110399f4b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a7c30849e3821e578670810f110399f4b">CSyncSharedPtr</a> (<a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a7c30849e3821e578670810f110399f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor for cast  <br /></td></tr>
+<tr class="separator:a7c30849e3821e578670810f110399f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac849b689320447dccc1c96be2d21cb7f" id="r_ac849b689320447dccc1c96be2d21cb7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#ac849b689320447dccc1c96be2d21cb7f">CSyncSharedPtr</a> (const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp;other)</td></tr>
+<tr class="memdesc:ac849b689320447dccc1c96be2d21cb7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor  <br /></td></tr>
+<tr class="separator:ac849b689320447dccc1c96be2d21cb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d04e60d877bf050d170d16b04420b2" id="r_a89d04e60d877bf050d170d16b04420b2"><td class="memTemplParams" colspan="2">template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</td></tr>
+<tr class="memitem:a89d04e60d877bf050d170d16b04420b2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a89d04e60d877bf050d170d16b04420b2">CSyncSharedPtr</a> (const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;other)</td></tr>
+<tr class="memdesc:a89d04e60d877bf050d170d16b04420b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor for cast  <br /></td></tr>
+<tr class="separator:a89d04e60d877bf050d170d16b04420b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4829999ee0de9740f3ce7e9aa455f363" id="r_a4829999ee0de9740f3ce7e9aa455f363"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a4829999ee0de9740f3ce7e9aa455f363">~CSyncSharedPtr</a> ()</td></tr>
+<tr class="memdesc:a4829999ee0de9740f3ce7e9aa455f363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a4829999ee0de9740f3ce7e9aa455f363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c728167e68a83f24a465747989b463" id="r_a66c728167e68a83f24a465747989b463"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a66c728167e68a83f24a465747989b463">operator=</a> (<a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a66c728167e68a83f24a465747989b463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator  <br /></td></tr>
+<tr class="separator:a66c728167e68a83f24a465747989b463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63b82e3b84fd27431a38f6ff33f10358" id="r_a63b82e3b84fd27431a38f6ff33f10358"><td class="memTemplParams" colspan="2">template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</td></tr>
+<tr class="memitem:a63b82e3b84fd27431a38f6ff33f10358"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a63b82e3b84fd27431a38f6ff33f10358">operator=</a> (<a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a63b82e3b84fd27431a38f6ff33f10358"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator for cast  <br /></td></tr>
+<tr class="separator:a63b82e3b84fd27431a38f6ff33f10358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68cddbf21afa71b98cbfd2fcfeba9fa" id="r_af68cddbf21afa71b98cbfd2fcfeba9fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#af68cddbf21afa71b98cbfd2fcfeba9fa">operator=</a> (const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp;other)</td></tr>
+<tr class="memdesc:af68cddbf21afa71b98cbfd2fcfeba9fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator  <br /></td></tr>
+<tr class="separator:af68cddbf21afa71b98cbfd2fcfeba9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eb4d05812f2d8a5f8b34f6d4af3c2bf" id="r_a6eb4d05812f2d8a5f8b34f6d4af3c2bf"><td class="memTemplParams" colspan="2">template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</td></tr>
+<tr class="memitem:a6eb4d05812f2d8a5f8b34f6d4af3c2bf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a6eb4d05812f2d8a5f8b34f6d4af3c2bf">operator=</a> (const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;other)</td></tr>
+<tr class="memdesc:a6eb4d05812f2d8a5f8b34f6d4af3c2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator for cast  <br /></td></tr>
+<tr class="separator:a6eb4d05812f2d8a5f8b34f6d4af3c2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a75372cb910691418ef13bd0966911a" id="r_a5a75372cb910691418ef13bd0966911a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a5a75372cb910691418ef13bd0966911a">Reset</a> (InstanceType *instance=nullptr)</td></tr>
+<tr class="memdesc:a5a75372cb910691418ef13bd0966911a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release a instance and set ownership of a new instance  <br /></td></tr>
+<tr class="separator:a5a75372cb910691418ef13bd0966911a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390f562f259cd5acc397caf819bf5500" id="r_a390f562f259cd5acc397caf819bf5500"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a390f562f259cd5acc397caf819bf5500">Release</a> ()</td></tr>
+<tr class="memdesc:a390f562f259cd5acc397caf819bf5500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release a reference to the instance in a way that doesn't destroy the instance if this variable is destroyed  <br /></td></tr>
+<tr class="separator:a390f562f259cd5acc397caf819bf5500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c32ef54744c5a1556153c9abedae3bc" id="r_a8c32ef54744c5a1556153c9abedae3bc"><td class="memItemLeft" align="right" valign="top">InstanceType *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a8c32ef54744c5a1556153c9abedae3bc">Get</a> () const</td></tr>
+<tr class="memdesc:a8c32ef54744c5a1556153c9abedae3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get instance  <br /></td></tr>
+<tr class="separator:a8c32ef54744c5a1556153c9abedae3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a720a5d4d509b9d09ba4a2415d42b3040" id="r_a720a5d4d509b9d09ba4a2415d42b3040"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a720a5d4d509b9d09ba4a2415d42b3040">GetWeakPtr</a> () const</td></tr>
+<tr class="memdesc:a720a5d4d509b9d09ba4a2415d42b3040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak ptr  <br /></td></tr>
+<tr class="separator:a720a5d4d509b9d09ba4a2415d42b3040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7324117042806917c82e1867f563cf78" id="r_a7324117042806917c82e1867f563cf78"><td class="memItemLeft" align="right" valign="top">InstanceType *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a7324117042806917c82e1867f563cf78">operator-&gt;</a> () const</td></tr>
+<tr class="memdesc:a7324117042806917c82e1867f563cf78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance reference operator  <br /></td></tr>
+<tr class="separator:a7324117042806917c82e1867f563cf78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d22b02f4b3eef91f47c58849486963" id="r_a91d22b02f4b3eef91f47c58849486963"><td class="memItemLeft" align="right" valign="top">InstanceType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a91d22b02f4b3eef91f47c58849486963">operator[]</a> (size_t index) const</td></tr>
+<tr class="memdesc:a91d22b02f4b3eef91f47c58849486963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator for array  <br /></td></tr>
+<tr class="separator:a91d22b02f4b3eef91f47c58849486963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a210f536147b2323cc8e9d0eba686da8a" id="r_a210f536147b2323cc8e9d0eba686da8a"><td class="memItemLeft" align="right" valign="top">InstanceType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a210f536147b2323cc8e9d0eba686da8a">operator*</a> () const</td></tr>
+<tr class="memdesc:a210f536147b2323cc8e9d0eba686da8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereference operator  <br /></td></tr>
+<tr class="separator:a210f536147b2323cc8e9d0eba686da8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f78b0c9e381355aefe22826759dcd07" id="r_a6f78b0c9e381355aefe22826759dcd07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a6f78b0c9e381355aefe22826759dcd07">operator==</a> (const InstanceType *instance) const</td></tr>
+<tr class="memdesc:a6f78b0c9e381355aefe22826759dcd07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison operator  <br /></td></tr>
+<tr class="separator:a6f78b0c9e381355aefe22826759dcd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603509d7f977bc6849e17a72206e93de" id="r_a603509d7f977bc6849e17a72206e93de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a603509d7f977bc6849e17a72206e93de">operator!=</a> (const InstanceType *instance) const</td></tr>
+<tr class="memdesc:a603509d7f977bc6849e17a72206e93de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison operator  <br /></td></tr>
+<tr class="separator:a603509d7f977bc6849e17a72206e93de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8d106ff18c3eb9d753c41070a3f562" id="r_a1f8d106ff18c3eb9d753c41070a3f562"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a1f8d106ff18c3eb9d753c41070a3f562">operator==</a> (const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp;other) const</td></tr>
+<tr class="memdesc:a1f8d106ff18c3eb9d753c41070a3f562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison operator  <br /></td></tr>
+<tr class="separator:a1f8d106ff18c3eb9d753c41070a3f562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39616428fd8aad01ab351aa4a6f66cac" id="r_a39616428fd8aad01ab351aa4a6f66cac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a39616428fd8aad01ab351aa4a6f66cac">operator!=</a> (const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp;other) const</td></tr>
+<tr class="memdesc:a39616428fd8aad01ab351aa4a6f66cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison operator  <br /></td></tr>
+<tr class="separator:a39616428fd8aad01ab351aa4a6f66cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47804d95c3a3c7cb8acd3508eb7d6c68" id="r_a47804d95c3a3c7cb8acd3508eb7d6c68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a47804d95c3a3c7cb8acd3508eb7d6c68">operator bool</a> () const</td></tr>
+<tr class="memdesc:a47804d95c3a3c7cb8acd3508eb7d6c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bool check operator  <br /></td></tr>
+<tr class="separator:a47804d95c3a3c7cb8acd3508eb7d6c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8265188175f0e6495c989558678c03" id="r_ade8265188175f0e6495c989558678c03"><td class="memTemplParams" colspan="2">template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</td></tr>
+<tr class="memitem:ade8265188175f0e6495c989558678c03"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#ade8265188175f0e6495c989558678c03">operator=</a> (<a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:ade8265188175f0e6495c989558678c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae394d321686492edd9d542d9b51728a7" id="r_ae394d321686492edd9d542d9b51728a7"><td class="memTemplParams" colspan="2">template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</td></tr>
+<tr class="memitem:ae394d321686492edd9d542d9b51728a7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#ae394d321686492edd9d542d9b51728a7">operator=</a> (const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;other)</td></tr>
+<tr class="separator:ae394d321686492edd9d542d9b51728a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab174710d61de938e32a0194a90271355" id="r_ab174710d61de938e32a0194a90271355"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; <br />
+requires (!std::is_array_v&lt;T&gt;)</td></tr>
+<tr class="memitem:ab174710d61de938e32a0194a90271355"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#ab174710d61de938e32a0194a90271355">Make</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:ab174710d61de938e32a0194a90271355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make shared pointer  <br /></td></tr>
+<tr class="separator:ab174710d61de938e32a0194a90271355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3213e7b3c83b91bb8da62faffd162946" id="r_a3213e7b3c83b91bb8da62faffd162946"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#a3213e7b3c83b91bb8da62faffd162946">Make</a> (size_t size)</td></tr>
+<tr class="memdesc:a3213e7b3c83b91bb8da62faffd162946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make shared pointer for array  <br /></td></tr>
+<tr class="separator:a3213e7b3c83b91bb8da62faffd162946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:aa4146855e3e3ca381b2502ac09b740a6" id="r_aa4146855e3e3ca381b2502ac09b740a6"><td class="memTemplParams" colspan="2">template&lt;class U &gt; </td></tr>
+<tr class="memitem:aa4146855e3e3ca381b2502ac09b740a6"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_sync_shared_ptr.html#aa4146855e3e3ca381b2502ac09b740a6">CSyncPtr</a></td></tr>
+<tr class="separator:aa4146855e3e3ca381b2502ac09b740a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+class CSyncSharedPtr&lt; T &gt;</div><p>Smart pointer that destroys the instance if this variable is destroyed, regardless of the number of strong reference counts </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ab9a5ced4840b0b0a2ba315a33d052c6d" name="ab9a5ced4840b0b0a2ba315a33d052c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9a5ced4840b0b0a2ba315a33d052c6d">&#9670;&#160;</a></span>CSyncSharedPtr() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;<a class="el" href="class_c_sync_shared_ptr.html">::CSyncSharedPtr</a> </td>
+          <td>(</td>
+          <td class="paramtype">InstanceType *&#160;</td>
+          <td class="paramname"><em>instance</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instance</td><td>Instance of passing ownership </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2ad4faac8204c6b2d0785a77079031a8" name="a2ad4faac8204c6b2d0785a77079031a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ad4faac8204c6b2d0785a77079031a8">&#9670;&#160;</a></span>CSyncSharedPtr() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;<a class="el" href="class_c_sync_shared_ptr.html">::CSyncSharedPtr</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Move source </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7c30849e3821e578670810f110399f4b" name="a7c30849e3821e578670810f110399f4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c30849e3821e578670810f110399f4b">&#9670;&#160;</a></span>CSyncSharedPtr() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</div>
+<div class="memtemplate">
+template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;<a class="el" href="class_c_sync_shared_ptr.html">::CSyncSharedPtr</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor for cast </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Class</td><td>in inheritance relationship with T</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Move source </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac849b689320447dccc1c96be2d21cb7f" name="ac849b689320447dccc1c96be2d21cb7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac849b689320447dccc1c96be2d21cb7f">&#9670;&#160;</a></span>CSyncSharedPtr() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;<a class="el" href="class_c_sync_shared_ptr.html">::CSyncSharedPtr</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Copy source </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_sync_shared_ptr_ac849b689320447dccc1c96be2d21cb7f_cgraph.png" border="0" usemap="#aclass_c_sync_shared_ptr_ac849b689320447dccc1c96be2d21cb7f_cgraph" alt=""/></div>
+<map name="aclass_c_sync_shared_ptr_ac849b689320447dccc1c96be2d21cb7f_cgraph" id="aclass_c_sync_shared_ptr_ac849b689320447dccc1c96be2d21cb7f_cgraph">
+<area shape="rect" title="Copy constructor" alt="" coords="5,5,229,32"/>
+<area shape="rect" href="struct_ref_count.html#ae9b232627c4008414e963209c1aa19eb" title="Increment the reference count" alt="" coords="277,5,416,32"/>
+<area shape="poly" title=" " alt="" coords="229,16,261,16,261,21,229,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a89d04e60d877bf050d170d16b04420b2" name="a89d04e60d877bf050d170d16b04420b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d04e60d877bf050d170d16b04420b2">&#9670;&#160;</a></span>CSyncSharedPtr() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</div>
+<div class="memtemplate">
+template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;<a class="el" href="class_c_sync_shared_ptr.html">::CSyncSharedPtr</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy constructor for cast </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Class</td><td>in inheritance relationship with T</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Copy source </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_sync_shared_ptr_a89d04e60d877bf050d170d16b04420b2_cgraph.png" border="0" usemap="#aclass_c_sync_shared_ptr_a89d04e60d877bf050d170d16b04420b2_cgraph" alt=""/></div>
+<map name="aclass_c_sync_shared_ptr_a89d04e60d877bf050d170d16b04420b2_cgraph" id="aclass_c_sync_shared_ptr_a89d04e60d877bf050d170d16b04420b2_cgraph">
+<area shape="rect" title="Copy constructor for cast" alt="" coords="5,5,229,32"/>
+<area shape="rect" href="struct_ref_count.html#ae9b232627c4008414e963209c1aa19eb" title="Increment the reference count" alt="" coords="277,5,416,32"/>
+<area shape="poly" title=" " alt="" coords="229,16,261,16,261,21,229,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4829999ee0de9740f3ce7e9aa455f363" name="a4829999ee0de9740f3ce7e9aa455f363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4829999ee0de9740f3ce7e9aa455f363">&#9670;&#160;</a></span>~CSyncSharedPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::~<a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_sync_shared_ptr_a4829999ee0de9740f3ce7e9aa455f363_cgraph.png" border="0" usemap="#aclass_c_sync_shared_ptr_a4829999ee0de9740f3ce7e9aa455f363_cgraph" alt=""/></div>
+<map name="aclass_c_sync_shared_ptr_a4829999ee0de9740f3ce7e9aa455f363_cgraph" id="aclass_c_sync_shared_ptr_a4829999ee0de9740f3ce7e9aa455f363_cgraph">
+<area shape="rect" title="Destructor" alt="" coords="5,5,237,32"/>
+<area shape="rect" href="class_c_sync_shared_ptr.html#a5a75372cb910691418ef13bd0966911a" title="Release a instance and set ownership of a new instance" alt="" coords="285,5,445,32"/>
+<area shape="poly" title=" " alt="" coords="237,16,269,16,269,21,237,21"/>
+<area shape="rect" href="struct_ref_count.html#a3bf10524595360517d5f90e40db000ca" title="Decrement the reference count. If the reference count reaches zero, destroy it" alt="" coords="493,5,638,32"/>
+<area shape="poly" title=" " alt="" coords="446,16,477,16,477,21,446,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a8c32ef54744c5a1556153c9abedae3bc" name="a8c32ef54744c5a1556153c9abedae3bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c32ef54744c5a1556153c9abedae3bc">&#9670;&#160;</a></span>Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">InstanceType * <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::Get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get instance </p>
+
+</div>
+</div>
+<a id="a720a5d4d509b9d09ba4a2415d42b3040" name="a720a5d4d509b9d09ba4a2415d42b3040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a720a5d4d509b9d09ba4a2415d42b3040">&#9670;&#160;</a></span>GetWeakPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt; <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::GetWeakPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get weak ptr </p>
+
+</div>
+</div>
+<a id="ab174710d61de938e32a0194a90271355" name="ab174710d61de938e32a0194a90271355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab174710d61de938e32a0194a90271355">&#9670;&#160;</a></span>Make() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; <br />
+requires (!std::is_array_v&lt;T&gt;)</div>
+<div class="memtemplate">
+template&lt;typename ... Args&gt; <br />
+requires (!std::is_array_v&lt;T&gt;)</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::Make </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make shared pointer </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>Instance constructor arguments</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Instance constructor arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3213e7b3c83b91bb8da62faffd162946" name="a3213e7b3c83b91bb8da62faffd162946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3213e7b3c83b91bb8da62faffd162946">&#9670;&#160;</a></span>Make() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; <br />
+requires std::is_array_v&lt;T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::Make </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make shared pointer for array </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>Size of instance array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a47804d95c3a3c7cb8acd3508eb7d6c68" name="a47804d95c3a3c7cb8acd3508eb7d6c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47804d95c3a3c7cb8acd3508eb7d6c68">&#9670;&#160;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bool check operator </p>
+
+</div>
+</div>
+<a id="a39616428fd8aad01ab351aa4a6f66cac" name="a39616428fd8aad01ab351aa4a6f66cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39616428fd8aad01ab351aa4a6f66cac">&#9670;&#160;</a></span>operator!=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Comparison operator </p>
+
+</div>
+</div>
+<a id="a603509d7f977bc6849e17a72206e93de" name="a603509d7f977bc6849e17a72206e93de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a603509d7f977bc6849e17a72206e93de">&#9670;&#160;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const InstanceType *&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Comparison operator </p>
+
+</div>
+</div>
+<a id="a210f536147b2323cc8e9d0eba686da8a" name="a210f536147b2323cc8e9d0eba686da8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210f536147b2323cc8e9d0eba686da8a">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">InstanceType &amp; <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dereference operator </p>
+
+</div>
+</div>
+<a id="a7324117042806917c82e1867f563cf78" name="a7324117042806917c82e1867f563cf78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7324117042806917c82e1867f563cf78">&#9670;&#160;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">InstanceType * <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instance reference operator </p>
+
+</div>
+</div>
+<a id="af68cddbf21afa71b98cbfd2fcfeba9fa" name="af68cddbf21afa71b98cbfd2fcfeba9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68cddbf21afa71b98cbfd2fcfeba9fa">&#9670;&#160;</a></span>operator=() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp; <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy assignment operator </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_sync_shared_ptr_af68cddbf21afa71b98cbfd2fcfeba9fa_cgraph.png" border="0" usemap="#aclass_c_sync_shared_ptr_af68cddbf21afa71b98cbfd2fcfeba9fa_cgraph" alt=""/></div>
+<map name="aclass_c_sync_shared_ptr_af68cddbf21afa71b98cbfd2fcfeba9fa_cgraph" id="aclass_c_sync_shared_ptr_af68cddbf21afa71b98cbfd2fcfeba9fa_cgraph">
+<area shape="rect" title="Copy assignment operator" alt="" coords="5,5,187,32"/>
+<area shape="rect" href="struct_ref_count.html#ae9b232627c4008414e963209c1aa19eb" title="Increment the reference count" alt="" coords="235,5,374,32"/>
+<area shape="poly" title=" " alt="" coords="187,16,219,16,219,21,187,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6eb4d05812f2d8a5f8b34f6d4af3c2bf" name="a6eb4d05812f2d8a5f8b34f6d4af3c2bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eb4d05812f2d8a5f8b34f6d4af3c2bf">&#9670;&#160;</a></span>operator=() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<div class="memtemplate">
+template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp; <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy assignment operator for cast </p>
+
+</div>
+</div>
+<a id="ae394d321686492edd9d542d9b51728a7" name="ae394d321686492edd9d542d9b51728a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae394d321686492edd9d542d9b51728a7">&#9670;&#160;</a></span>operator=() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<div class="memtemplate">
+template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp; <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_sync_shared_ptr_ae394d321686492edd9d542d9b51728a7_cgraph.png" border="0" usemap="#aclass_c_sync_shared_ptr_ae394d321686492edd9d542d9b51728a7_cgraph" alt=""/></div>
+<map name="aclass_c_sync_shared_ptr_ae394d321686492edd9d542d9b51728a7_cgraph" id="aclass_c_sync_shared_ptr_ae394d321686492edd9d542d9b51728a7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,187,32"/>
+<area shape="rect" href="struct_ref_count.html#ae9b232627c4008414e963209c1aa19eb" title="Increment the reference count" alt="" coords="235,5,374,32"/>
+<area shape="poly" title=" " alt="" coords="187,16,219,16,219,21,187,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a66c728167e68a83f24a465747989b463" name="a66c728167e68a83f24a465747989b463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c728167e68a83f24a465747989b463">&#9670;&#160;</a></span>operator=() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp; <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment operator </p>
+
+</div>
+</div>
+<a id="a63b82e3b84fd27431a38f6ff33f10358" name="a63b82e3b84fd27431a38f6ff33f10358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b82e3b84fd27431a38f6ff33f10358">&#9670;&#160;</a></span>operator=() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<div class="memtemplate">
+template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a> &amp; <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment operator for cast </p>
+
+</div>
+</div>
+<a id="ade8265188175f0e6495c989558678c03" name="ade8265188175f0e6495c989558678c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8265188175f0e6495c989558678c03">&#9670;&#160;</a></span>operator=() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<div class="memtemplate">
+template&lt;class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp; <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; U &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f8d106ff18c3eb9d753c41070a3f562" name="a1f8d106ff18c3eb9d753c41070a3f562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f8d106ff18c3eb9d753c41070a3f562">&#9670;&#160;</a></span>operator==() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Comparison operator </p>
+
+</div>
+</div>
+<a id="a6f78b0c9e381355aefe22826759dcd07" name="a6f78b0c9e381355aefe22826759dcd07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f78b0c9e381355aefe22826759dcd07">&#9670;&#160;</a></span>operator==() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const InstanceType *&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Comparison operator </p>
+
+</div>
+</div>
+<a id="a91d22b02f4b3eef91f47c58849486963" name="a91d22b02f4b3eef91f47c58849486963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d22b02f4b3eef91f47c58849486963">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">InstanceType &amp; <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operator for array </p>
+
+</div>
+</div>
+<a id="a390f562f259cd5acc397caf819bf5500" name="a390f562f259cd5acc397caf819bf5500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a390f562f259cd5acc397caf819bf5500">&#9670;&#160;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::Release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Release a reference to the instance in a way that doesn't destroy the instance if this variable is destroyed </p>
+<p>If the only strong reference is to this variable, the instance can't be destroyed, so the instance is released </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_sync_shared_ptr_a390f562f259cd5acc397caf819bf5500_cgraph.png" border="0" usemap="#aclass_c_sync_shared_ptr_a390f562f259cd5acc397caf819bf5500_cgraph" alt=""/></div>
+<map name="aclass_c_sync_shared_ptr_a390f562f259cd5acc397caf819bf5500_cgraph" id="aclass_c_sync_shared_ptr_a390f562f259cd5acc397caf819bf5500_cgraph">
+<area shape="rect" title="Release a reference to the instance in a way that doesn&#39;t destroy the instance if this variable is de..." alt="" coords="5,5,179,32"/>
+<area shape="rect" href="struct_ref_count.html#a3bf10524595360517d5f90e40db000ca" title="Decrement the reference count. If the reference count reaches zero, destroy it" alt="" coords="227,5,372,32"/>
+<area shape="poly" title=" " alt="" coords="179,16,211,16,211,21,179,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5a75372cb910691418ef13bd0966911a" name="a5a75372cb910691418ef13bd0966911a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a75372cb910691418ef13bd0966911a">&#9670;&#160;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_c_sync_shared_ptr.html">CSyncSharedPtr</a>&lt; T &gt;::Reset </td>
+          <td>(</td>
+          <td class="paramtype">InstanceType *&#160;</td>
+          <td class="paramname"><em>instance</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Release a instance and set ownership of a new instance </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instance</td><td>Instance of passing ownership </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_sync_shared_ptr_a5a75372cb910691418ef13bd0966911a_cgraph.png" border="0" usemap="#aclass_c_sync_shared_ptr_a5a75372cb910691418ef13bd0966911a_cgraph" alt=""/></div>
+<map name="aclass_c_sync_shared_ptr_a5a75372cb910691418ef13bd0966911a_cgraph" id="aclass_c_sync_shared_ptr_a5a75372cb910691418ef13bd0966911a_cgraph">
+<area shape="rect" title="Release a instance and set ownership of a new instance" alt="" coords="5,5,166,32"/>
+<area shape="rect" href="struct_ref_count.html#a3bf10524595360517d5f90e40db000ca" title="Decrement the reference count. If the reference count reaches zero, destroy it" alt="" coords="214,5,359,32"/>
+<area shape="poly" title=" " alt="" coords="166,16,198,16,198,21,166,21"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_sync_shared_ptr_a5a75372cb910691418ef13bd0966911a_icgraph.png" border="0" usemap="#aclass_c_sync_shared_ptr_a5a75372cb910691418ef13bd0966911a_icgraph" alt=""/></div>
+<map name="aclass_c_sync_shared_ptr_a5a75372cb910691418ef13bd0966911a_icgraph" id="aclass_c_sync_shared_ptr_a5a75372cb910691418ef13bd0966911a_icgraph">
+<area shape="rect" title="Release a instance and set ownership of a new instance" alt="" coords="285,5,445,32"/>
+<area shape="rect" href="class_c_sync_shared_ptr.html#a4829999ee0de9740f3ce7e9aa455f363" title="Destructor" alt="" coords="5,5,237,32"/>
+<area shape="poly" title=" " alt="" coords="269,21,237,21,237,16,269,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="aa4146855e3e3ca381b2502ac09b740a6" name="aa4146855e3e3ca381b2502ac09b740a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4146855e3e3ca381b2502ac09b740a6">&#9670;&#160;</a></span>CSyncPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<div class="memtemplate">
+template&lt;class U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class CSyncPtr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_shared_ptr_8h_source.html">SharedPtr.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

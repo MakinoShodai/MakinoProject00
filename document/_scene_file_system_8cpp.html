@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: SceneFileSystem.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">SceneFileSystem.cpp ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_scene_file_system_8h_source.html">SceneFileSystem.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_collider3_d_8h_source.html">Collider3D.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utility_for_string_8h_source.html">UtilityForString.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_swap_chain_8h_source.html">SwapChain.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_command_manager_8h_source.html">CommandManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_shape_8h_source.html">Shape.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_point_light_8h_source.html">PointLight.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+SceneFileSystem.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_scene_file_system_8cpp__incl.png" border="0" usemap="#a_scene_file_system_8cpp" alt=""/></div>
+<map name="a_scene_file_system_8cpp" id="a_scene_file_system_8cpp">
+<area shape="rect" title=" " alt="" coords="1302,5,1451,32"/>
+<area shape="rect" href="_scene_file_system_8h.html" title="This file handles file system for scene." alt="" coords="606,80,742,107"/>
+<area shape="poly" title=" " alt="" coords="1302,30,757,86,757,81,1301,25"/>
+<area shape="rect" href="_collider3_d_8h.html" title="This file handles 3D abstract collider." alt="" coords="1598,304,1689,331"/>
+<area shape="poly" title=" " alt="" coords="1376,33,1369,74,1366,134,1368,166,1375,198,1386,228,1404,254,1432,272,1478,287,1583,306,1582,311,1476,292,1430,277,1400,258,1382,230,1369,199,1363,167,1360,134,1364,74,1371,32"/>
+<area shape="rect" href="_utility_for_string_8h.html" title="This file defines utility functions that handle strings." alt="" coords="1222,80,1340,107"/>
+<area shape="poly" title=" " alt="" coords="1362,35,1311,73,1308,68,1358,30"/>
+<area shape="rect" href="_swap_chain_8h.html" title="This file handles swap chain." alt="" coords="2095,304,2192,331"/>
+<area shape="poly" title=" " alt="" coords="1410,30,2098,296,2096,301,1408,35"/>
+<area shape="rect" href="_command_manager_8h.html" title="This file handles command lists, command allocators, and command queue." alt="" coords="2073,229,2214,256"/>
+<area shape="poly" title=" " alt="" coords="1452,19,1578,24,1727,35,1868,52,1926,63,1968,78,2019,107,2063,144,2100,182,2127,215,2123,218,2096,186,2060,148,2016,111,1966,82,1924,69,1868,57,1727,40,1577,30,1451,24"/>
+<area shape="rect" href="_shape_8h.html" title="This file handles graphics component for shape." alt="" coords="1449,155,1518,181"/>
+<area shape="poly" title=" " alt="" coords="1388,31,1468,141,1463,144,1384,34"/>
+<area shape="rect" href="_point_light_8h.html" title="This file handles point light component." alt="" coords="140,155,230,181"/>
+<area shape="poly" title=" " alt="" coords="1302,25,993,42,794,59,594,83,403,118,245,154,244,149,402,112,594,77,794,53,992,37,1302,20"/>
+<area shape="rect" href="_game_object_8h.html" title="This file handles base class for game object." alt="" coords="329,155,435,181"/>
+<area shape="poly" title=" " alt="" coords="623,110,448,153,447,148,622,105"/>
+<area shape="rect" href="_int_key_generater_8h.html" title="This file handles class that generates keys of integer numeric type." alt="" coords="611,304,737,331"/>
+<area shape="poly" title=" " alt="" coords="677,107,677,289,671,289,671,107"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="753,752,843,779"/>
+<area shape="poly" title=" " alt="" coords="392,181,419,238,431,276,435,316,435,617,440,647,453,668,473,684,501,702,560,730,623,748,684,757,738,761,738,767,684,763,622,753,558,735,498,706,470,689,449,671,435,649,430,618,430,316,425,277,414,240,387,183"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="868,677,981,704"/>
+<area shape="poly" title=" " alt="" coords="365,184,315,222,287,248,261,277,240,308,226,340,224,373,236,404,253,424,277,445,342,486,424,525,516,563,707,627,861,670,860,675,706,632,515,568,421,530,339,490,274,449,249,428,232,407,219,373,221,339,235,306,257,274,283,244,312,218,361,180"/>
+<area shape="rect" href="_callback_system_8h.html" title="This file handles object&#39;s callback function system." alt="" coords="268,528,395,555"/>
+<area shape="poly" title=" " alt="" coords="385,182,385,316,385,393,381,427,372,461,349,515,344,513,367,459,376,426,379,393,379,316,379,182"/>
+<area shape="rect" href="_graphics_layer_8h.html" title="This file handles the layer function in the graphics processing." alt="" coords="471,304,587,331"/>
+<area shape="poly" title=" " alt="" coords="399,180,453,227,511,290,507,294,449,231,396,184"/>
+<area shape="rect" href="_component_8h.html" title="This file handles abstract class for component used in update processing." alt="" coords="246,379,345,405"/>
+<area shape="poly" title=" " alt="" coords="380,183,308,365,303,363,375,181"/>
+<area shape="rect" href="_graphics_component_8h.html" title="This file handles component for graphics." alt="" coords="750,229,900,256"/>
+<area shape="poly" title=" " alt="" coords="435,175,735,224,734,229,435,181"/>
+<area shape="rect" href="_scene_phase_8h.html" title="This file handles phase of the scene currently being processed." alt="" coords="86,528,193,555"/>
+<area shape="poly" title=" " alt="" coords="329,176,295,182,258,193,223,209,192,231,175,251,165,269,161,289,161,316,161,393,156,458,148,513,142,512,151,457,155,393,155,316,156,289,160,267,170,248,188,227,220,204,257,188,294,177,328,171"/>
+<area shape="rect" href="_update_mode_8h.html" title="This file handles update mode of scene." alt="" coords="5,677,111,704"/>
+<area shape="poly" title=" " alt="" coords="329,181,250,200,206,214,164,232,122,248,86,262,71,270,61,281,54,296,51,316,51,543,58,662,53,662,46,543,46,316,49,294,56,278,68,266,83,257,120,243,162,227,204,209,248,195,328,175"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="756,827,840,853"/>
+<area shape="poly" title=" " alt="" coords="801,779,801,811,795,811,795,779"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="821,901,887,928"/>
+<area shape="poly" title=" " alt="" coords="810,852,837,887,833,891,806,856"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="833,976,945,1003"/>
+<area shape="poly" title=" " alt="" coords="862,927,879,961,874,963,858,930"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="864,827,985,853"/>
+<area shape="poly" title=" " alt="" coords="927,705,927,811,922,811,922,705"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="393,752,494,779"/>
+<area shape="poly" title=" " alt="" coords="868,703,510,757,509,752,867,698"/>
+<area shape="poly" title=" " alt="" coords="914,856,879,892,875,888,910,852"/>
+<area shape="poly" title=" " alt="" coords="924,854,898,962,893,960,919,853"/>
+<area shape="poly" title=" " alt="" coords="336,555,344,586,359,626,383,668,398,686,416,702,440,714,473,725,560,742,655,752,738,759,738,764,654,758,559,747,472,730,438,719,412,706,394,690,378,671,354,628,339,587,331,556"/>
+<area shape="poly" title=" " alt="" coords="288,407,253,463,239,500,233,540,233,617,237,635,248,651,266,666,290,680,353,704,430,723,513,737,597,747,738,759,738,764,597,752,513,742,429,728,351,709,288,685,263,671,244,655,232,637,227,618,227,540,234,499,248,461,283,404"/>
+<area shape="poly" title=" " alt="" coords="345,395,445,412,501,428,554,451,589,475,612,500,633,525,665,553,721,588,779,620,881,668,879,673,777,625,718,593,662,557,629,529,608,503,585,479,551,456,499,433,443,417,344,400"/>
+<area shape="poly" title=" " alt="" coords="817,258,788,293,750,333,707,365,662,388,576,420,540,437,511,460,501,475,493,493,488,514,486,540,486,617,493,654,512,684,541,708,577,726,618,740,660,750,738,759,738,765,659,755,616,745,575,731,538,712,508,688,488,656,481,618,481,540,482,514,488,491,496,472,508,457,537,433,574,415,660,383,705,361,747,329,784,289,813,255"/>
+<area shape="poly" title=" " alt="" coords="845,254,872,277,902,308,927,346,934,368,937,391,937,543,930,662,925,662,931,543,931,391,929,369,922,349,898,311,869,281,842,259"/>
+<area shape="poly" title=" " alt="" coords="773,259,596,302,595,297,772,254"/>
+<area shape="rect" href="_utility_for_direct_x_8h.html" title="This file defines utility functions that are useful for DirectX." alt="" coords="1229,603,1354,629"/>
+<area shape="poly" title=" " alt="" coords="901,247,1030,262,1176,288,1241,307,1294,330,1315,343,1331,357,1341,373,1345,390,1345,468,1341,502,1332,535,1309,590,1304,588,1327,533,1336,501,1339,468,1339,391,1336,375,1327,361,1312,347,1292,335,1239,312,1174,294,1030,267,900,252"/>
+<area shape="rect" href="_mesh_buffer_8h.html" title="This file handles vertex and index buffers needed to construct the mesh." alt="" coords="761,379,859,405"/>
+<area shape="poly" title=" " alt="" coords="826,257,815,363,810,363,821,256"/>
+<area shape="rect" href="_texture_8h.html" title="This file handles textures." alt="" coords="1050,304,1125,331"/>
+<area shape="poly" title=" " alt="" coords="871,254,1035,299,1034,304,870,259"/>
+<area shape="poly" title=" " alt="" coords="800,259,715,299,713,294,797,254"/>
+<area shape="poly" title=" " alt="" coords="1250,633,856,750,854,744,1248,627"/>
+<area shape="poly" title=" " alt="" coords="826,404,845,425,860,452,870,492,872,533,869,575,861,615,838,686,814,739,809,737,833,684,856,613,864,574,867,533,865,493,856,454,841,428,822,408"/>
+<area shape="rect" href="_vertex_buffer_8h.html" title="This file handles vertex buffer." alt="" coords="742,453,846,480"/>
+<area shape="poly" title=" " alt="" coords="810,406,803,439,797,438,805,405"/>
+<area shape="rect" href="_index_buffer_8h.html" title="This file handles index buffer." alt="" coords="622,453,718,480"/>
+<area shape="poly" title=" " alt="" coords="787,408,709,448,707,443,784,404"/>
+<area shape="rect" href="_gpu_optimized_resource_8h.html" title=" " alt="" coords="676,528,846,555"/>
+<area shape="poly" title=" " alt="" coords="791,482,775,515,770,513,786,479"/>
+<area shape="poly" title=" " alt="" coords="687,478,735,516,732,520,684,483"/>
+<area shape="poly" title=" " alt="" coords="1083,332,1069,360,1057,398,1052,440,1055,460,1063,479,1078,500,1096,520,1139,553,1185,577,1229,595,1227,600,1183,582,1136,557,1092,524,1074,504,1058,481,1050,461,1047,440,1051,397,1064,358,1078,330"/>
+<area shape="rect" href="_render_target_8h.html" title="This file handles render targets." alt="" coords="1429,379,1538,405"/>
+<area shape="poly" title=" " alt="" coords="1126,323,1414,375,1413,381,1125,328"/>
+<area shape="rect" href="_texture_registry_8h.html" title="This file handles all texture resources together in the registry." alt="" coords="1076,379,1200,405"/>
+<area shape="poly" title=" " alt="" coords="1098,330,1123,365,1119,368,1094,333"/>
+<area shape="poly" title=" " alt="" coords="1506,404,1531,424,1551,452,1559,483,1555,510,1540,534,1516,557,1482,579,1445,595,1406,606,1370,613,1369,607,1405,601,1443,590,1480,574,1512,553,1535,530,1550,508,1554,483,1546,454,1527,428,1502,408"/>
+<area shape="rect" href="_descriptor_heap_8h.html" title="This file handles descriptor heap." alt="" coords="1380,528,1501,555"/>
+<area shape="poly" title=" " alt="" coords="1464,408,1440,428,1420,454,1417,469,1418,484,1428,514,1423,516,1413,485,1412,469,1416,452,1436,424,1461,404"/>
+<area shape="rect" href="_depth_stencil_8h.html" title="This file handles depth stencil." alt="" coords="1430,453,1537,480"/>
+<area shape="poly" title=" " alt="" coords="1486,406,1486,438,1481,438,1481,406"/>
+<area shape="poly" title=" " alt="" coords="1416,558,1333,598,1330,593,1413,553"/>
+<area shape="rect" href="_application_8h.html" title="This file handles application objects such as window and DirectX device." alt="" coords="1713,603,1809,629"/>
+<area shape="poly" title=" " alt="" coords="1497,553,1698,598,1697,603,1496,558"/>
+<area shape="poly" title=" " alt="" coords="1712,629,1694,632,1497,654,1301,670,997,689,997,683,1301,665,1496,648,1694,627,1712,624"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="2190,677,2276,704"/>
+<area shape="poly" title=" " alt="" coords="1810,625,1821,627,2015,657,2175,679,2174,684,2014,662,1820,632,1809,630"/>
+<area shape="poly" title=" " alt="" coords="2190,704,2172,707,1978,727,1780,742,1398,760,1074,767,858,767,858,762,1074,761,1398,755,1780,736,1978,721,2171,701,2189,699"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="2085,752,2218,779"/>
+<area shape="poly" title=" " alt="" coords="2220,707,2178,744,2175,740,2217,703"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="2242,752,2384,779"/>
+<area shape="poly" title=" " alt="" coords="2248,703,2290,740,2286,744,2245,707"/>
+<area shape="poly" title=" " alt="" coords="1478,482,1458,516,1453,513,1474,479"/>
+<area shape="poly" title=" " alt="" coords="1161,404,1189,424,1217,452,1241,486,1260,522,1286,587,1281,589,1255,525,1236,489,1213,455,1186,428,1158,408"/>
+<area shape="poly" title=" " alt="" coords="1165,403,1403,519,1400,523,1163,408"/>
+<area shape="poly" title=" " alt="" coords="1114,408,1092,422,1073,439,1062,458,1061,468,1063,479,1091,534,1122,571,1162,600,1218,627,1275,640,1375,651,1652,669,1951,680,2174,686,2174,691,1951,685,1652,674,1374,657,1274,645,1216,632,1159,605,1118,575,1086,537,1058,481,1055,469,1057,457,1069,435,1089,417,1111,404"/>
+<area shape="rect" href="_texture_resource_8h.html" title="This file handles texture resources." alt="" coords="1073,453,1203,480"/>
+<area shape="poly" title=" " alt="" coords="1141,406,1141,438,1135,438,1135,406"/>
+<area shape="poly" title=" " alt="" coords="1151,478,1224,553,1266,590,1263,594,1220,557,1147,482"/>
+<area shape="poly" title=" " alt="" coords="1073,483,842,527,841,522,1072,478"/>
+<area shape="poly" title=" " alt="" coords="1192,478,1373,521,1372,526,1190,483"/>
+<area shape="poly" title=" " alt="" coords="144,554,150,585,163,625,183,666,213,702,251,727,294,743,337,754,378,759,377,765,336,759,292,749,249,731,210,706,179,669,158,627,145,586,139,555"/>
+<area shape="poly" title=" " alt="" coords="112,699,378,749,377,754,111,705"/>
+<area shape="poly" title=" " alt="" coords="1597,324,361,390,360,385,1597,318"/>
+<area shape="rect" href="_bouding_volume_8h.html" title="This file handles Bounding volume using AABB." alt="" coords="1662,453,1785,480"/>
+<area shape="poly" title=" " alt="" coords="1652,330,1712,438,1707,441,1648,332"/>
+<area shape="rect" href="_b_v_node_8h.html" title="This file handles information needed for the dynamic bouding volume tree." alt="" coords="1778,379,1858,405"/>
+<area shape="poly" title=" " alt="" coords="1675,329,1774,370,1772,375,1673,334"/>
+<area shape="rect" href="_stable_handle_vector_8h.html" title="This file handles dynamic array capable of generating stable handles." alt="" coords="1934,453,2081,480"/>
+<area shape="poly" title=" " alt="" coords="1690,324,1775,344,1824,358,1871,376,1931,408,1981,442,1978,446,1928,413,1869,381,1822,363,1774,349,1689,329"/>
+<area shape="rect" href="_collider_tag_8h.html" title="This file handles tag for collider." alt="" coords="1833,603,1929,629"/>
+<area shape="poly" title=" " alt="" coords="1643,332,1637,360,1634,398,1638,440,1652,479,1686,520,1730,552,1776,577,1820,595,1818,600,1774,582,1727,557,1683,524,1648,481,1633,441,1629,398,1632,359,1637,331"/>
+<area shape="poly" title=" " alt="" coords="1700,483,1546,557,1458,599,1419,616,1367,632,1268,654,1167,671,997,688,997,683,1167,665,1267,649,1365,627,1417,611,1456,594,1544,552,1698,478"/>
+<area shape="poly" title=" " alt="" coords="1803,408,1753,446,1750,442,1800,404"/>
+<area shape="rect" href="_i_d_resource_8h.html" title="This file handles class that links IDs and resources." alt="" coords="1810,453,1909,480"/>
+<area shape="poly" title=" " alt="" coords="1828,405,1847,439,1842,441,1823,407"/>
+<area shape="poly" title=" " alt="" coords="1852,403,1961,445,1959,450,1850,408"/>
+<area shape="poly" title=" " alt="" coords="2009,481,2004,512,1993,553,1973,596,1959,615,1942,631,1904,655,1854,675,1796,693,1729,709,1578,733,1414,750,1248,760,1092,765,858,767,858,762,1092,760,1247,755,1413,744,1578,728,1728,704,1794,688,1852,670,1901,650,1939,627,1955,612,1969,593,1988,552,1999,511,2004,480"/>
+<area shape="poly" title=" " alt="" coords="1833,630,1821,632,1432,682,1051,720,727,747,509,763,509,757,727,742,1051,715,1431,677,1820,627,1832,625"/>
+<area shape="poly" title=" " alt="" coords="1930,625,2175,675,2174,680,1929,630"/>
+<area shape="poly" title=" " alt="" coords="2149,330,2155,362,2156,404,2148,446,2138,466,2124,482,2098,499,2065,515,1983,542,1882,563,1772,581,1549,604,1369,614,1369,609,1548,598,1771,575,1881,558,1981,536,2063,510,2095,495,2120,478,2134,463,2143,445,2151,403,2149,362,2144,331"/>
+<area shape="poly" title=" " alt="" coords="2095,327,1554,386,1553,380,2094,321"/>
+<area shape="poly" title=" " alt="" coords="2146,331,2145,363,2138,404,2123,446,2110,466,2094,482,2063,495,2007,506,1849,523,1669,534,1517,540,1516,535,1669,529,1849,517,2006,501,2061,490,2091,478,2106,462,2118,444,2133,402,2140,362,2141,331"/>
+<area shape="poly" title=" " alt="" coords="2153,330,2174,378,2196,458,2213,538,2232,662,2227,663,2208,539,2191,459,2169,380,2148,332"/>
+<area shape="rect" href="_utility_for_async_8h.html" title="This file defines utility functions that are useful for asynchronous." alt="" coords="2257,379,2379,405"/>
+<area shape="poly" title=" " alt="" coords="2175,329,2274,370,2272,375,2173,334"/>
+<area shape="rect" href="_application_error_8h.html" title="This file handles processing when the application makes an error." alt="" coords="2256,603,2380,629"/>
+<area shape="poly" title=" " alt="" coords="2321,406,2321,588,2315,588,2315,406"/>
+<area shape="poly" title=" " alt="" coords="2305,632,2260,669,2257,665,2301,628"/>
+<area shape="poly" title=" " alt="" coords="2215,249,2281,263,2316,274,2348,289,2377,307,2400,330,2415,358,2421,390,2421,543,2418,591,2410,610,2395,631,2372,650,2346,665,2292,683,2290,678,2344,660,2369,646,2391,627,2406,608,2413,589,2415,543,2415,391,2410,360,2396,333,2373,311,2345,293,2314,279,2280,268,2214,254"/>
+<area shape="poly" title=" " alt="" coords="2146,257,2146,288,2141,288,2141,257"/>
+<area shape="poly" title=" " alt="" coords="1449,176,916,234,915,229,1448,171"/>
+<area shape="rect" href="_box_collider3_d_8h.html" title="This file handles 3D box collider." alt="" coords="1734,229,1849,256"/>
+<area shape="poly" title=" " alt="" coords="1519,175,1723,223,1722,228,1518,180"/>
+<area shape="rect" href="_capsule_collider3_d_8h.html" title="This file handles 3D capsule collider." alt="" coords="1414,229,1553,256"/>
+<area shape="poly" title=" " alt="" coords="1486,182,1486,214,1481,214,1481,182"/>
+<area shape="rect" href="_sphere_collider3_d_8h.html" title="This file handles 3D sphere collider." alt="" coords="1577,229,1710,256"/>
+<area shape="poly" title=" " alt="" coords="1512,179,1603,220,1601,225,1510,184"/>
+<area shape="poly" title=" " alt="" coords="1767,259,1684,299,1682,294,1764,254"/>
+<area shape="poly" title=" " alt="" coords="1512,254,1603,295,1601,300,1510,259"/>
+<area shape="poly" title=" " alt="" coords="1646,257,1646,288,1641,288,1641,257"/>
+<area shape="poly" title=" " alt="" coords="193,181,285,364,280,366,189,183"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a7b4813ea08cf19f3160947dd7d02aee4" id="r_a7b4813ea08cf19f3160947dd7d02aee4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_file_system_8cpp.html#a7b4813ea08cf19f3160947dd7d02aee4">WriteDelimiter</a> (std::string *outputText, const std::string &amp;delimiter)</td></tr>
+<tr class="separator:a7b4813ea08cf19f3160947dd7d02aee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4e14daaeac3ec9b3c0c2b7d7f8103ee" id="r_af4e14daaeac3ec9b3c0c2b7d7f8103ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_file_system_8cpp.html#af4e14daaeac3ec9b3c0c2b7d7f8103ee">GetToDelimiter</a> (std::string *text, std::string *ret, std::string *delimiter)</td></tr>
+<tr class="separator:af4e14daaeac3ec9b3c0c2b7d7f8103ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4022be344992e437d441bbf32061733" id="r_ae4022be344992e437d441bbf32061733"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_file_system_8cpp.html#ae4022be344992e437d441bbf32061733">GetVector3fFromString</a> (std::string *text, <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> *vec)</td></tr>
+<tr class="separator:ae4022be344992e437d441bbf32061733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a3207494086f7646674420a2869af0427" id="r_a3207494086f7646674420a2869af0427"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_file_system_8cpp.html#a3207494086f7646674420a2869af0427">SCENE_FILE_EXTENSION</a> = &quot;.scene&quot;</td></tr>
+<tr class="separator:a3207494086f7646674420a2869af0427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad730dae3a6eb68a15c5e7a2841c31aa5" id="r_ad730dae3a6eb68a15c5e7a2841c31aa5"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_file_system_8cpp.html#ad730dae3a6eb68a15c5e7a2841c31aa5">COMMON_DELIMITER</a> = '&quot;'</td></tr>
+<tr class="separator:ad730dae3a6eb68a15c5e7a2841c31aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e65bcdfba6fa0734baee639616be80" id="r_a32e65bcdfba6fa0734baee639616be80"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_file_system_8cpp.html#a32e65bcdfba6fa0734baee639616be80">DELIMITER_AFTER_RENDERPASS</a> = &quot;renderpass&quot;</td></tr>
+<tr class="separator:a32e65bcdfba6fa0734baee639616be80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86ac41ae394c99b30b2504a73fcf8395" id="r_a86ac41ae394c99b30b2504a73fcf8395"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_file_system_8cpp.html#a86ac41ae394c99b30b2504a73fcf8395">DELIMITER_AFTER_HIERARCHYNAME</a> = &quot;hierarchyname&quot;</td></tr>
+<tr class="separator:a86ac41ae394c99b30b2504a73fcf8395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a772d889409bd53a7f7c9434ddf41fe6f" id="r_a772d889409bd53a7f7c9434ddf41fe6f"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_file_system_8cpp.html#a772d889409bd53a7f7c9434ddf41fe6f">DELIMITER_AFTER_PREFABNAME</a> = &quot;prefabname&quot;</td></tr>
+<tr class="separator:a772d889409bd53a7f7c9434ddf41fe6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af817dc50c1b19105374c53155b20a690" id="r_af817dc50c1b19105374c53155b20a690"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_scene_file_system_8cpp.html#af817dc50c1b19105374c53155b20a690">DELIMITER_AFTER_TRANSFORM</a> = &quot;tr&quot;</td></tr>
+<tr class="separator:af817dc50c1b19105374c53155b20a690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="af4e14daaeac3ec9b3c0c2b7d7f8103ee" name="af4e14daaeac3ec9b3c0c2b7d7f8103ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e14daaeac3ec9b3c0c2b7d7f8103ee">&#9670;&#160;</a></span>GetToDelimiter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetToDelimiter </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>ret</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>delimiter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_scene_file_system_8cpp_af4e14daaeac3ec9b3c0c2b7d7f8103ee_icgraph.png" border="0" usemap="#a_scene_file_system_8cpp_af4e14daaeac3ec9b3c0c2b7d7f8103ee_icgraph" alt=""/></div>
+<map name="a_scene_file_system_8cpp_af4e14daaeac3ec9b3c0c2b7d7f8103ee_icgraph" id="a_scene_file_system_8cpp_af4e14daaeac3ec9b3c0c2b7d7f8103ee_icgraph">
+<area shape="rect" title=" " alt="" coords="208,5,315,32"/>
+<area shape="rect" href="_scene_file_system_8cpp.html#ae4022be344992e437d441bbf32061733" title=" " alt="" coords="5,5,160,32"/>
+<area shape="poly" title=" " alt="" coords="192,21,160,21,160,16,192,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae4022be344992e437d441bbf32061733" name="ae4022be344992e437d441bbf32061733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4022be344992e437d441bbf32061733">&#9670;&#160;</a></span>GetVector3fFromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetVector3fFromString </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> *&#160;</td>
+          <td class="paramname"><em>vec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_scene_file_system_8cpp_ae4022be344992e437d441bbf32061733_cgraph.png" border="0" usemap="#a_scene_file_system_8cpp_ae4022be344992e437d441bbf32061733_cgraph" alt=""/></div>
+<map name="a_scene_file_system_8cpp_ae4022be344992e437d441bbf32061733_cgraph" id="a_scene_file_system_8cpp_ae4022be344992e437d441bbf32061733_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,160,32"/>
+<area shape="rect" href="_scene_file_system_8cpp.html#af4e14daaeac3ec9b3c0c2b7d7f8103ee" title=" " alt="" coords="208,5,315,32"/>
+<area shape="poly" title=" " alt="" coords="160,16,192,16,192,21,160,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7b4813ea08cf19f3160947dd7d02aee4" name="a7b4813ea08cf19f3160947dd7d02aee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4813ea08cf19f3160947dd7d02aee4">&#9670;&#160;</a></span>WriteDelimiter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WriteDelimiter </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>outputText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>delimiter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="ad730dae3a6eb68a15c5e7a2841c31aa5" name="ad730dae3a6eb68a15c5e7a2841c31aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad730dae3a6eb68a15c5e7a2841c31aa5">&#9670;&#160;</a></span>COMMON_DELIMITER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char COMMON_DELIMITER = '&quot;'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86ac41ae394c99b30b2504a73fcf8395" name="a86ac41ae394c99b30b2504a73fcf8395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ac41ae394c99b30b2504a73fcf8395">&#9670;&#160;</a></span>DELIMITER_AFTER_HIERARCHYNAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string DELIMITER_AFTER_HIERARCHYNAME = &quot;hierarchyname&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a772d889409bd53a7f7c9434ddf41fe6f" name="a772d889409bd53a7f7c9434ddf41fe6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772d889409bd53a7f7c9434ddf41fe6f">&#9670;&#160;</a></span>DELIMITER_AFTER_PREFABNAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string DELIMITER_AFTER_PREFABNAME = &quot;prefabname&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32e65bcdfba6fa0734baee639616be80" name="a32e65bcdfba6fa0734baee639616be80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e65bcdfba6fa0734baee639616be80">&#9670;&#160;</a></span>DELIMITER_AFTER_RENDERPASS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string DELIMITER_AFTER_RENDERPASS = &quot;renderpass&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af817dc50c1b19105374c53155b20a690" name="af817dc50c1b19105374c53155b20a690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af817dc50c1b19105374c53155b20a690">&#9670;&#160;</a></span>DELIMITER_AFTER_TRANSFORM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string DELIMITER_AFTER_TRANSFORM = &quot;tr&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3207494086f7646674420a2869af0427" name="a3207494086f7646674420a2869af0427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3207494086f7646674420a2869af0427">&#9670;&#160;</a></span>SCENE_FILE_EXTENSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string SCENE_FILE_EXTENSION = &quot;.scene&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ACRenderPassAsset クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="class_a_c_render_pass_asset-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">ACRenderPassAsset クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Abstract class for rendering pass asset that scene uses  
+ <a href="class_a_c_render_pass_asset.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_render_pass_asset_8h_source.html">RenderPassAsset.h</a>&gt;</code></p>
+<div class="dynheader">
+ACRenderPassAsset の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_render_pass_asset__inherit__graph.png" border="0" usemap="#a_a_c_render_pass_asset_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_a_c_render_pass_asset_inherit__map" id="a_a_c_render_pass_asset_inherit__map">
+<area shape="rect" title="Abstract class for rendering pass asset that scene uses" alt="" coords="10,5,154,32"/>
+<area shape="rect" href="class_c_standard_render_pass.html" title="Default rendering pass asset" alt="" coords="5,80,159,107"/>
+<area shape="poly" title=" " alt="" coords="85,48,85,80,79,80,79,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+ACRenderPassAsset 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_render_pass_asset__coll__graph.png" border="0" usemap="#a_a_c_render_pass_asset_coll__map" alt="Collaboration graph"/></div>
+<map name="a_a_c_render_pass_asset_coll__map" id="a_a_c_render_pass_asset_coll__map">
+<area shape="rect" title="Abstract class for rendering pass asset that scene uses" alt="" coords="9,96,153,123"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="5,5,157,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,84,95,78,95,78,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9f5018bf1857bc3d7ddbbda78638698a" id="r_a9f5018bf1857bc3d7ddbbda78638698a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_pass_asset.html#a9f5018bf1857bc3d7ddbbda78638698a">ACRenderPassAsset</a> ()=default</td></tr>
+<tr class="memdesc:a9f5018bf1857bc3d7ddbbda78638698a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a9f5018bf1857bc3d7ddbbda78638698a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2012f27e530049376ee1599768e27a0a" id="r_a2012f27e530049376ee1599768e27a0a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_pass_asset.html#a2012f27e530049376ee1599768e27a0a">~ACRenderPassAsset</a> ()=default</td></tr>
+<tr class="memdesc:a2012f27e530049376ee1599768e27a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detructor  <br /></td></tr>
+<tr class="separator:a2012f27e530049376ee1599768e27a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2820709c423745e9bac23abd6c57f703" id="r_a2820709c423745e9bac23abd6c57f703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_pass_asset.html#a2820709c423745e9bac23abd6c57f703">CallStart</a> (<a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt; scene)</td></tr>
+<tr class="memdesc:a2820709c423745e9bac23abd6c57f703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call 'Start' function  <br /></td></tr>
+<tr class="separator:a2820709c423745e9bac23abd6c57f703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff825dbf53a65eaa7cf3ebfb99e7a03" id="r_aaff825dbf53a65eaa7cf3ebfb99e7a03"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_pass_asset.html#aaff825dbf53a65eaa7cf3ebfb99e7a03">Draw</a> ()=0</td></tr>
+<tr class="memdesc:aaff825dbf53a65eaa7cf3ebfb99e7a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing process  <br /></td></tr>
+<tr class="separator:aaff825dbf53a65eaa7cf3ebfb99e7a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a454351c5861e80e3c6b193b6d407111c" id="r_a454351c5861e80e3c6b193b6d407111c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_pass_asset.html#a454351c5861e80e3c6b193b6d407111c">Start</a> ()=0</td></tr>
+<tr class="memdesc:a454351c5861e80e3c6b193b6d407111c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when switching to this scene  <br /></td></tr>
+<tr class="separator:a454351c5861e80e3c6b193b6d407111c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a347341f1cf316bed8c6bcb31971a113d" id="r_a347341f1cf316bed8c6bcb31971a113d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_pass_asset.html#a347341f1cf316bed8c6bcb31971a113d">m_scene</a></td></tr>
+<tr class="memdesc:a347341f1cf316bed8c6bcb31971a113d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weak pointer to scene that has this class  <br /></td></tr>
+<tr class="separator:a347341f1cf316bed8c6bcb31971a113d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Abstract class for rendering pass asset that scene uses </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a9f5018bf1857bc3d7ddbbda78638698a" name="a9f5018bf1857bc3d7ddbbda78638698a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5018bf1857bc3d7ddbbda78638698a">&#9670;&#160;</a></span>ACRenderPassAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ACRenderPassAsset::ACRenderPassAsset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="a2012f27e530049376ee1599768e27a0a" name="a2012f27e530049376ee1599768e27a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2012f27e530049376ee1599768e27a0a">&#9670;&#160;</a></span>~ACRenderPassAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ACRenderPassAsset::~ACRenderPassAsset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Detructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a2820709c423745e9bac23abd6c57f703" name="a2820709c423745e9bac23abd6c57f703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2820709c423745e9bac23abd6c57f703">&#9670;&#160;</a></span>CallStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACRenderPassAsset::CallStart </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Call 'Start' function </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td>Weak pointer to scene that has this class </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_render_pass_asset_a2820709c423745e9bac23abd6c57f703_cgraph.png" border="0" usemap="#aclass_a_c_render_pass_asset_a2820709c423745e9bac23abd6c57f703_cgraph" alt=""/></div>
+<map name="aclass_a_c_render_pass_asset_a2820709c423745e9bac23abd6c57f703_cgraph" id="aclass_a_c_render_pass_asset_a2820709c423745e9bac23abd6c57f703_cgraph">
+<area shape="rect" title="Call &#39;Start&#39; function" alt="" coords="5,5,158,48"/>
+<area shape="rect" href="class_a_c_render_pass_asset.html#a454351c5861e80e3c6b193b6d407111c" title="Processing when switching to this scene" alt="" coords="206,5,358,48"/>
+<area shape="poly" title=" " alt="" coords="158,24,190,24,190,29,158,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaff825dbf53a65eaa7cf3ebfb99e7a03" name="aaff825dbf53a65eaa7cf3ebfb99e7a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaff825dbf53a65eaa7cf3ebfb99e7a03">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACRenderPassAsset::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Drawing process </p>
+
+<p><a class="el" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84">CStandardRenderPass</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a454351c5861e80e3c6b193b6d407111c" name="a454351c5861e80e3c6b193b6d407111c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a454351c5861e80e3c6b193b6d407111c">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACRenderPassAsset::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing when switching to this scene </p>
+<p>This function is called outside the main thread </p>
+
+<p><a class="el" href="class_c_standard_render_pass.html#a9c6b08c098524379f6d3877a4a06c228">CStandardRenderPass</a>で実装されています。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_render_pass_asset_a454351c5861e80e3c6b193b6d407111c_icgraph.png" border="0" usemap="#aclass_a_c_render_pass_asset_a454351c5861e80e3c6b193b6d407111c_icgraph" alt=""/></div>
+<map name="aclass_a_c_render_pass_asset_a454351c5861e80e3c6b193b6d407111c_icgraph" id="aclass_a_c_render_pass_asset_a454351c5861e80e3c6b193b6d407111c_icgraph">
+<area shape="rect" title="Processing when switching to this scene" alt="" coords="206,5,358,48"/>
+<area shape="rect" href="class_a_c_render_pass_asset.html#a2820709c423745e9bac23abd6c57f703" title="Call &#39;Start&#39; function" alt="" coords="5,5,158,48"/>
+<area shape="poly" title=" " alt="" coords="190,29,158,29,158,24,190,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a347341f1cf316bed8c6bcb31971a113d" name="a347341f1cf316bed8c6bcb31971a113d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a347341f1cf316bed8c6bcb31971a113d">&#9670;&#160;</a></span>m_scene</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt;<a class="el" href="class_c_scene.html">CScene</a>&gt; ACRenderPassAsset::m_scene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Weak pointer to scene that has this class </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_render_pass_asset_8h_source.html">RenderPassAsset.h</a></li>
+<li><a class="el" href="_render_pass_asset_8cpp.html">RenderPassAsset.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

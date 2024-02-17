@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ModelRegistry.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ModelRegistry.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_model_registry_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __MODEL_REGISTRY_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __MODEL_REGISTRY_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_loaded_model_info_8h.html">LoadedModelInfo.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_exception_8h.html">UtilityForException.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="_model_registry_8h.html#aafd022319061dcdb4a298ac808163fd3">   17</a></span><span class="keyword">const</span> std::wstring <a class="code hl_variable" href="_model_registry_8h.html#aafd022319061dcdb4a298ac808163fd3">MODELASSET_DIR</a> = L<span class="stringliteral">&quot;Model/&quot;</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_model_registry_8h.html#a484233ddfb68780679b57fdcd8ee3534">   19</a></span><span class="keyword">const</span> std::wstring <a class="code hl_variable" href="_model_registry_8h.html#a484233ddfb68780679b57fdcd8ee3534">ANIMASSET_DIR</a> = L<span class="stringliteral">&quot;Anim/&quot;</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_for_make_anim_to_anim_data.html">   22</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_for_make_anim_to_anim_data.html">ForMakeAnimToAnimData</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_for_make_anim_to_anim_data.html#a6f11ddffe85b57c978d7529b4e075df2">   24</a></span>    <a class="code hl_class" href="class_c_static_model_data.html">CStaticModelData</a>* <a class="code hl_variable" href="struct_for_make_anim_to_anim_data.html#a6f11ddffe85b57c978d7529b4e075df2">model</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_for_make_anim_to_anim_data.html#aec012c9b99c844368e39592066a77dea">   26</a></span>    std::vector&lt;std::pair&lt;std::wstring, ModelInfo::InterpolationSetting&gt;&gt; <a class="code hl_variable" href="struct_for_make_anim_to_anim_data.html#aec012c9b99c844368e39592066a77dea">nameAndSettings</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_for_make_anim_to_anim_data.html#ad1a6fca0e80823efe3fa006e04c9d37a">   29</a></span>    <a class="code hl_function" href="struct_for_make_anim_to_anim_data.html#ad1a6fca0e80823efe3fa006e04c9d37a">ForMakeAnimToAnimData</a>() : <a class="code hl_variable" href="struct_for_make_anim_to_anim_data.html#a6f11ddffe85b57c978d7529b4e075df2">model</a>(nullptr) {}</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_c_model_registry.html">   33</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_model_registry.html">CModelRegistry</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a>&lt;CModelRegistry&gt; {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_c_model_registry.html#a3273bd1fe91a2694d70da9c751511d0b">   35</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_a_c_singleton_base.html">ACSingletonBase</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_c_model_registry.html#a52e157bf949ab8defbe26fc18808a47b">   39</a></span>    <a class="code hl_function" href="class_c_model_registry.html#a52e157bf949ab8defbe26fc18808a47b">~CModelRegistry</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_model_registry.html#a959d88479440944f780a8b06fd3d8de9">LoadModelPak</a>(<span class="keyword">const</span> std::wstring&amp; filePath);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_model_registry.html#a0d2076dd4798482cf355afaee9c25870">LoadAnimPak</a>(<span class="keyword">const</span> std::wstring&amp; filePath);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_model_registry.html#a9f32960ab54e085409b6770d39088f7d">AddModelLoadDesc</a>(<span class="keyword">const</span> std::wstring&amp; filePath, <a class="code hl_struct" href="struct_model_info_1_1_load_1_1_model_desc.html">ModelInfo::Load::ModelDesc</a> loadDesc);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_model_registry.html#a75f82fbc63e68b1ebab9f9019c67be95">AddModelAdditionalTex</a>(<span class="keyword">const</span> std::wstring&amp; modelFilePath, <span class="keyword">const</span> std::wstring&amp; srcTexPath, <a class="code hl_struct" href="struct_model_info_1_1_load_1_1_additional_model_tex.html">ModelInfo::Load::AdditionalModelTex</a> additionalTex);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_model_registry.html#a59315646c7d5bffa1cc319645ca0c748">AddModelTransparentTex</a>(<span class="keyword">const</span> std::wstring&amp; modelFilePath, <span class="keyword">const</span> std::wstring&amp; transparentTexPath);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_model_registry.html#aef498cbebd6390d7caf007969b0271d3">AddAnimLoadDesc</a>(<span class="keyword">const</span> std::wstring&amp; filePath, <a class="code hl_struct" href="struct_model_info_1_1_load_1_1_anim_desc.html">ModelInfo::Load::AnimDesc</a> loadDesc);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_model_registry.html#a4f55cb37b39bd1ba5c02d9c5dae95380">AddAnimToAnimSetting</a>(<span class="keyword">const</span> std::wstring&amp; srcFilePath, <span class="keyword">const</span> std::wstring&amp; destFilePath, <a class="code hl_struct" href="struct_model_info_1_1_interpolation_setting.html">ModelInfo::InterpolationSetting</a> setting);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="};">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_c_model_registry_1_1_c_thread_safe_feature.html">   93</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_c_model_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;CModelRegistry&gt; {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="comment">// Friend declaration</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keyword">using </span><a class="code hl_class" href="class_a_c_inner_class.html">ACInnerClass</a>&lt;<a class="code hl_class" href="class_c_model_registry.html">CModelRegistry</a>&gt;<a class="code hl_class" href="class_a_c_inner_class.html">::ACInnerClass</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_c_static_model_data.html">CStaticModelData</a>&amp; <a class="code hl_function" href="class_c_model_registry_1_1_c_thread_safe_feature.html#a8bfc09ddb889472c645fdb55c961e32e">GetModel</a>(<span class="keyword">const</span> std::wstring&amp; filePath);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_model_info.html#a02d8c9b299d0474644fbd9de0940343b">ModelInfo::AnimID</a> <a class="code hl_function" href="class_c_model_registry_1_1_c_thread_safe_feature.html#aa822cd2d854a752ce71e262c0818048d">GetAnimID</a>(<span class="keyword">const</span> std::wstring&amp; filePath);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    };</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_c_model_registry.html#ac276de9f530877f2772a3f63466fdb26">  116</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="class_c_model_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a>&amp; <a class="code hl_function" href="class_c_model_registry.html#ac276de9f530877f2772a3f63466fdb26">GetAny</a>() {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_c_model_registry_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a> instance(<a class="code hl_function" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">GetProtected</a>().Get());</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_function" href="class_c_model_registry.html#adf02fb0aca6b94adaeafe8200e94cb33">CModelRegistry</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keyword">static</span> std::wstring <a class="code hl_function" href="class_c_model_registry.html#a3f8d53a8a06daffbde500312647650b6">ExtractRelevantPart</a>(<span class="keyword">const</span> std::wstring&amp; path);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_class" href="class_c_unique_ptr.html">CUniquePtr&lt;std::unordered_map&lt;std::wstring, ModelInfo::Load::ModelDesc&gt;</a>&gt; m_modelLoadDescs;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_class" href="class_c_unique_ptr.html">CUniquePtr&lt;std::unordered_map&lt;std::wstring, ModelInfo::Load::AnimDesc&gt;</a>&gt; m_animLoadDescs;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <a class="code hl_class" href="class_c_unique_ptr.html">CUniquePtr&lt;std::map&lt;std::wstring, ForMakeAnimToAnimData&gt;</a>&gt; m_animInterpolationMap;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    std::unordered_map&lt;std::wstring, CUniquePtr&lt;CStaticModelData&gt;&gt; m_loadedModelMap;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    std::unordered_map&lt;std::wstring, ModelInfo::AnimID&gt; m_loadedAnimIDMap;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>};</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="preprocessor">#endif </span><span class="comment">// !__MODEL_REGISTRY_H__</span></div>
+<div class="ttc" id="a_loaded_model_info_8h_html"><div class="ttname"><a href="_loaded_model_info_8h.html">LoadedModelInfo.h</a></div><div class="ttdoc">This file handles mesh information of loaded model.</div></div>
+<div class="ttc" id="a_model_registry_8h_html_a484233ddfb68780679b57fdcd8ee3534"><div class="ttname"><a href="_model_registry_8h.html#a484233ddfb68780679b57fdcd8ee3534">ANIMASSET_DIR</a></div><div class="ttdeci">const std::wstring ANIMASSET_DIR</div><div class="ttdoc">Directory of animation</div><div class="ttdef"><b>Definition</b> ModelRegistry.h:19</div></div>
+<div class="ttc" id="a_model_registry_8h_html_aafd022319061dcdb4a298ac808163fd3"><div class="ttname"><a href="_model_registry_8h.html#aafd022319061dcdb4a298ac808163fd3">MODELASSET_DIR</a></div><div class="ttdeci">const std::wstring MODELASSET_DIR</div><div class="ttdoc">Directory of model</div><div class="ttdef"><b>Definition</b> ModelRegistry.h:17</div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">File handling abstract singleton class.</div></div>
+<div class="ttc" id="a_utility_for_exception_8h_html"><div class="ttname"><a href="_utility_for_exception_8h.html">UtilityForException.h</a></div><div class="ttdoc">This file defines utility functions that are useful for exception.</div></div>
+<div class="ttc" id="aclass_a_c_inner_class_html"><div class="ttname"><a href="class_a_c_inner_class.html">ACInnerClass</a></div><div class="ttdoc">Abstract inner class</div><div class="ttdef"><b>Definition</b> Singleton.h:23</div></div>
+<div class="ttc" id="aclass_a_c_main_thread_singleton_html"><div class="ttname"><a href="class_a_c_main_thread_singleton.html">ACMainThreadSingleton</a></div><div class="ttdoc">Abstract singleton class for main thread only (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:111</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html"><div class="ttname"><a href="class_a_c_singleton_base.html">ACSingletonBase</a></div><div class="ttdoc">Abstract singleton base class (CRTP Pattern)</div><div class="ttdef"><b>Definition</b> Singleton.h:59</div></div>
+<div class="ttc" id="aclass_a_c_singleton_base_html_a86122d51b9f611ffbc300eb790c3dabf"><div class="ttname"><a href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf">ACSingletonBase::GetProtected</a></div><div class="ttdeci">static CUniquePtr&lt; Derived &gt; &amp; GetProtected()</div><div class="ttdoc">Get singleton instance</div><div class="ttdef"><b>Definition</b> Singleton.h:169</div></div>
+<div class="ttc" id="aclass_c_model_registry_1_1_c_thread_safe_feature_html"><div class="ttname"><a href="class_c_model_registry_1_1_c_thread_safe_feature.html">CModelRegistry::CThreadSafeFeature</a></div><div class="ttdoc">Feature for thread-safe</div><div class="ttdef"><b>Definition</b> ModelRegistry.h:93</div></div>
+<div class="ttc" id="aclass_c_model_registry_1_1_c_thread_safe_feature_html_a8bfc09ddb889472c645fdb55c961e32e"><div class="ttname"><a href="class_c_model_registry_1_1_c_thread_safe_feature.html#a8bfc09ddb889472c645fdb55c961e32e">CModelRegistry::CThreadSafeFeature::GetModel</a></div><div class="ttdeci">const CStaticModelData &amp; GetModel(const std::wstring &amp;filePath)</div><div class="ttdoc">Get a static data of a model</div><div class="ttdef"><b>Definition</b> ModelRegistry.cpp:142</div></div>
+<div class="ttc" id="aclass_c_model_registry_1_1_c_thread_safe_feature_html_aa822cd2d854a752ce71e262c0818048d"><div class="ttname"><a href="class_c_model_registry_1_1_c_thread_safe_feature.html#aa822cd2d854a752ce71e262c0818048d">CModelRegistry::CThreadSafeFeature::GetAnimID</a></div><div class="ttdeci">const ModelInfo::AnimID GetAnimID(const std::wstring &amp;filePath)</div><div class="ttdoc">Get ID of a loaded animation</div><div class="ttdef"><b>Definition</b> ModelRegistry.cpp:153</div></div>
+<div class="ttc" id="aclass_c_model_registry_html"><div class="ttname"><a href="class_c_model_registry.html">CModelRegistry</a></div><div class="ttdoc">This class manages all loaded models</div><div class="ttdef"><b>Definition</b> ModelRegistry.h:33</div></div>
+<div class="ttc" id="aclass_c_model_registry_html_a0d2076dd4798482cf355afaee9c25870"><div class="ttname"><a href="class_c_model_registry.html#a0d2076dd4798482cf355afaee9c25870">CModelRegistry::LoadAnimPak</a></div><div class="ttdeci">bool LoadAnimPak(const std::wstring &amp;filePath)</div><div class="ttdoc">Load animations from pak file</div><div class="ttdef"><b>Definition</b> ModelRegistry.cpp:34</div></div>
+<div class="ttc" id="aclass_c_model_registry_html_a3f8d53a8a06daffbde500312647650b6"><div class="ttname"><a href="class_c_model_registry.html#a3f8d53a8a06daffbde500312647650b6">CModelRegistry::ExtractRelevantPart</a></div><div class="ttdeci">static std::wstring ExtractRelevantPart(const std::wstring &amp;path)</div><div class="ttdoc">Extract relevant part from sent path</div><div class="ttdef"><b>Definition</b> ModelRegistry.cpp:172</div></div>
+<div class="ttc" id="aclass_c_model_registry_html_a4f55cb37b39bd1ba5c02d9c5dae95380"><div class="ttname"><a href="class_c_model_registry.html#a4f55cb37b39bd1ba5c02d9c5dae95380">CModelRegistry::AddAnimToAnimSetting</a></div><div class="ttdeci">void AddAnimToAnimSetting(const std::wstring &amp;srcFilePath, const std::wstring &amp;destFilePath, ModelInfo::InterpolationSetting setting)</div><div class="ttdoc">Add setting for animation to animation interpolation</div><div class="ttdef"><b>Definition</b> ModelRegistry.cpp:133</div></div>
+<div class="ttc" id="aclass_c_model_registry_html_a52e157bf949ab8defbe26fc18808a47b"><div class="ttname"><a href="class_c_model_registry.html#a52e157bf949ab8defbe26fc18808a47b">CModelRegistry::~CModelRegistry</a></div><div class="ttdeci">~CModelRegistry()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_model_registry_html_a59315646c7d5bffa1cc319645ca0c748"><div class="ttname"><a href="class_c_model_registry.html#a59315646c7d5bffa1cc319645ca0c748">CModelRegistry::AddModelTransparentTex</a></div><div class="ttdeci">void AddModelTransparentTex(const std::wstring &amp;modelFilePath, const std::wstring &amp;transparentTexPath)</div><div class="ttdoc">Add a texture of the material to be forced in the transparent layer</div><div class="ttdef"><b>Definition</b> ModelRegistry.cpp:121</div></div>
+<div class="ttc" id="aclass_c_model_registry_html_a75f82fbc63e68b1ebab9f9019c67be95"><div class="ttname"><a href="class_c_model_registry.html#a75f82fbc63e68b1ebab9f9019c67be95">CModelRegistry::AddModelAdditionalTex</a></div><div class="ttdeci">void AddModelAdditionalTex(const std::wstring &amp;modelFilePath, const std::wstring &amp;srcTexPath, ModelInfo::Load::AdditionalModelTex additionalTex)</div><div class="ttdoc">Add the additional texture of model</div><div class="ttdef"><b>Definition</b> ModelRegistry.cpp:114</div></div>
+<div class="ttc" id="aclass_c_model_registry_html_a959d88479440944f780a8b06fd3d8de9"><div class="ttname"><a href="class_c_model_registry.html#a959d88479440944f780a8b06fd3d8de9">CModelRegistry::LoadModelPak</a></div><div class="ttdeci">bool LoadModelPak(const std::wstring &amp;filePath)</div><div class="ttdoc">Load models from pak file</div><div class="ttdef"><b>Definition</b> ModelRegistry.cpp:5</div></div>
+<div class="ttc" id="aclass_c_model_registry_html_a9f32960ab54e085409b6770d39088f7d"><div class="ttname"><a href="class_c_model_registry.html#a9f32960ab54e085409b6770d39088f7d">CModelRegistry::AddModelLoadDesc</a></div><div class="ttdeci">void AddModelLoadDesc(const std::wstring &amp;filePath, ModelInfo::Load::ModelDesc loadDesc)</div><div class="ttdoc">Add descriptor to load model</div><div class="ttdef"><b>Definition</b> ModelRegistry.cpp:103</div></div>
+<div class="ttc" id="aclass_c_model_registry_html_ac276de9f530877f2772a3f63466fdb26"><div class="ttname"><a href="class_c_model_registry.html#ac276de9f530877f2772a3f63466fdb26">CModelRegistry::GetAny</a></div><div class="ttdeci">static CThreadSafeFeature &amp; GetAny()</div><div class="ttdoc">Get feature for thread-safe</div><div class="ttdef"><b>Definition</b> ModelRegistry.h:116</div></div>
+<div class="ttc" id="aclass_c_model_registry_html_adf02fb0aca6b94adaeafe8200e94cb33"><div class="ttname"><a href="class_c_model_registry.html#adf02fb0aca6b94adaeafe8200e94cb33">CModelRegistry::CModelRegistry</a></div><div class="ttdeci">CModelRegistry()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> ModelRegistry.cpp:164</div></div>
+<div class="ttc" id="aclass_c_model_registry_html_aef498cbebd6390d7caf007969b0271d3"><div class="ttname"><a href="class_c_model_registry.html#aef498cbebd6390d7caf007969b0271d3">CModelRegistry::AddAnimLoadDesc</a></div><div class="ttdeci">void AddAnimLoadDesc(const std::wstring &amp;filePath, ModelInfo::Load::AnimDesc loadDesc)</div><div class="ttdoc">Add descriptor to load animation</div><div class="ttdef"><b>Definition</b> ModelRegistry.cpp:127</div></div>
+<div class="ttc" id="aclass_c_static_model_data_html"><div class="ttname"><a href="class_c_static_model_data.html">CStaticModelData</a></div><div class="ttdoc">Static data per model</div><div class="ttdef"><b>Definition</b> LoadedModelInfo.h:359</div></div>
+<div class="ttc" id="aclass_c_unique_ptr_html"><div class="ttname"><a href="class_c_unique_ptr.html">CUniquePtr</a></div><div class="ttdoc">Unique pointer that can't generate weak reference pointer</div><div class="ttdef"><b>Definition</b> UniquePtr.h:250</div></div>
+<div class="ttc" id="anamespace_model_info_html_a02d8c9b299d0474644fbd9de0940343b"><div class="ttname"><a href="namespace_model_info.html#a02d8c9b299d0474644fbd9de0940343b">ModelInfo::AnimID</a></div><div class="ttdeci">unsigned int AnimID</div><div class="ttdoc">Indentifier of animation</div><div class="ttdef"><b>Definition</b> LoadedModelInfo.h:111</div></div>
+<div class="ttc" id="astruct_for_make_anim_to_anim_data_html"><div class="ttname"><a href="struct_for_make_anim_to_anim_data.html">ForMakeAnimToAnimData</a></div><div class="ttdoc">Data to make animation to animation interpolation</div><div class="ttdef"><b>Definition</b> ModelRegistry.h:22</div></div>
+<div class="ttc" id="astruct_for_make_anim_to_anim_data_html_a6f11ddffe85b57c978d7529b4e075df2"><div class="ttname"><a href="struct_for_make_anim_to_anim_data.html#a6f11ddffe85b57c978d7529b4e075df2">ForMakeAnimToAnimData::model</a></div><div class="ttdeci">CStaticModelData * model</div><div class="ttdoc">Static data of model supported own animation</div><div class="ttdef"><b>Definition</b> ModelRegistry.h:24</div></div>
+<div class="ttc" id="astruct_for_make_anim_to_anim_data_html_ad1a6fca0e80823efe3fa006e04c9d37a"><div class="ttname"><a href="struct_for_make_anim_to_anim_data.html#ad1a6fca0e80823efe3fa006e04c9d37a">ForMakeAnimToAnimData::ForMakeAnimToAnimData</a></div><div class="ttdeci">ForMakeAnimToAnimData()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> ModelRegistry.h:29</div></div>
+<div class="ttc" id="astruct_for_make_anim_to_anim_data_html_aec012c9b99c844368e39592066a77dea"><div class="ttname"><a href="struct_for_make_anim_to_anim_data.html#aec012c9b99c844368e39592066a77dea">ForMakeAnimToAnimData::nameAndSettings</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; std::wstring, ModelInfo::InterpolationSetting &gt; &gt; nameAndSettings</div><div class="ttdoc">Names of animation for transition destination and its settings</div><div class="ttdef"><b>Definition</b> ModelRegistry.h:26</div></div>
+<div class="ttc" id="astruct_model_info_1_1_interpolation_setting_html"><div class="ttname"><a href="struct_model_info_1_1_interpolation_setting.html">ModelInfo::InterpolationSetting</a></div><div class="ttdoc">Setting for animation to animation interpolation</div><div class="ttdef"><b>Definition</b> LoadedModelInfo.h:142</div></div>
+<div class="ttc" id="astruct_model_info_1_1_load_1_1_additional_model_tex_html"><div class="ttname"><a href="struct_model_info_1_1_load_1_1_additional_model_tex.html">ModelInfo::Load::AdditionalModelTex</a></div><div class="ttdoc">Additional texture of model</div><div class="ttdef"><b>Definition</b> LoadedModelInfo.h:286</div></div>
+<div class="ttc" id="astruct_model_info_1_1_load_1_1_anim_desc_html"><div class="ttname"><a href="struct_model_info_1_1_load_1_1_anim_desc.html">ModelInfo::Load::AnimDesc</a></div><div class="ttdoc">Descriptor to load animation</div><div class="ttdef"><b>Definition</b> LoadedModelInfo.h:328</div></div>
+<div class="ttc" id="astruct_model_info_1_1_load_1_1_model_desc_html"><div class="ttname"><a href="struct_model_info_1_1_load_1_1_model_desc.html">ModelInfo::Load::ModelDesc</a></div><div class="ttdoc">Descriptor to load model</div><div class="ttdef"><b>Definition</b> LoadedModelInfo.h:302</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

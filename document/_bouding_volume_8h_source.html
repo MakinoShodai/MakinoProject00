@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: BoudingVolume.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">BoudingVolume.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_bouding_volume_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __BOUNDING_VOLUME_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __BOUNDING_VOLUME_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_math_8h.html">UtilityForMath.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespace_mkpe.html">   14</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mkpe.html">Mkpe</a> {</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_bounding_volume.html">   16</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">   18</a></span>        <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">   20</a></span>        <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_bounding_volume.html#a150f8b51279f24b9e12216c8ed304c7d">   27</a></span>        <a class="code hl_function" href="struct_mkpe_1_1_bounding_volume.html#a150f8b51279f24b9e12216c8ed304c7d">BoundingVolume</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; <a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a> = <a class="code hl_typedef" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>(0.0f, 0.0f, 0.0f), <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; <a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a> = <a class="code hl_typedef" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>(0.0f, 0.0f, 0.0f))</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            : <a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>(<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>), <a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>(<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>) { }</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; a, <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; b);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; a, <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; b, <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; c);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; pos, <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; localBV);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="struct_mkpe_1_1_bounding_volume.html#a34c1644baebb8b6bcaddb8ba245a2fac">Expand</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; expand);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_function" href="struct_mkpe_1_1_bounding_volume.html#ad361c9719f360d91df93a240bc4d5648">GetCost</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_function" href="struct_mkpe_1_1_bounding_volume.html#a940322f03c213864da85342295d854f7">GetProximity</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; target) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_mkpe_1_1_bounding_volume.html#afbc140232be2a54f55ac9fd42a0c2712">IsContain</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; target) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_mkpe_1_1_bounding_volume.html#aaad46c89c40573e14f50d46d18b32a93">IsIntersect</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; target) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    };</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>} <span class="comment">// namespace Mkpe</span></div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">// Is this BV contains the subject BV?</span></div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_bounding_volume.html#afbc140232be2a54f55ac9fd42a0c2712">   81</a></span><span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_mkpe_1_1_bounding_volume.html#afbc140232be2a54f55ac9fd42a0c2712">Mkpe::BoundingVolume::IsContain</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; target)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">return</span> (</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        (<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>.<a class="code hl_function" href="struct_vector.html#a4407486f92778f38fd9163d559026b91">x</a>() &lt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>.<a class="code hl_function" href="struct_vector.html#a4407486f92778f38fd9163d559026b91">x</a>()) &amp;&amp;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        (<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>.<a class="code hl_function" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe">z</a>() &lt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>.<a class="code hl_function" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe">z</a>()) &amp;&amp;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        (<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>.<a class="code hl_function" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa">y</a>() &lt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>.<a class="code hl_function" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa">y</a>()) &amp;&amp;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        (<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>.<a class="code hl_function" href="struct_vector.html#a4407486f92778f38fd9163d559026b91">x</a>() &gt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>.<a class="code hl_function" href="struct_vector.html#a4407486f92778f38fd9163d559026b91">x</a>()) &amp;&amp;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        (<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>.<a class="code hl_function" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe">z</a>() &gt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>.<a class="code hl_function" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe">z</a>()) &amp;&amp;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        (<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>.<a class="code hl_function" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa">y</a>() &gt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>.<a class="code hl_function" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa">y</a>()));</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">// Is this BV in contact with the subject BV?</span></div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="struct_mkpe_1_1_bounding_volume.html#aaad46c89c40573e14f50d46d18b32a93">   92</a></span><span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_mkpe_1_1_bounding_volume.html#aaad46c89c40573e14f50d46d18b32a93">Mkpe::BoundingVolume::IsIntersect</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_bounding_volume.html">BoundingVolume</a>&amp; target)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">return</span> (</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        (minAABB.<a class="code hl_function" href="struct_vector.html#a4407486f92778f38fd9163d559026b91">x</a>() &lt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>.<a class="code hl_function" href="struct_vector.html#a4407486f92778f38fd9163d559026b91">x</a>()) &amp;&amp;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        (maxAABB.<a class="code hl_function" href="struct_vector.html#a4407486f92778f38fd9163d559026b91">x</a>() &gt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>.<a class="code hl_function" href="struct_vector.html#a4407486f92778f38fd9163d559026b91">x</a>()) &amp;&amp;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        (minAABB.<a class="code hl_function" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe">z</a>() &lt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>.<a class="code hl_function" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe">z</a>()) &amp;&amp;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        (maxAABB.<a class="code hl_function" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe">z</a>() &gt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>.<a class="code hl_function" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe">z</a>()) &amp;&amp;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        (minAABB.<a class="code hl_function" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa">y</a>() &lt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">maxAABB</a>.<a class="code hl_function" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa">y</a>()) &amp;&amp;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        (maxAABB.<a class="code hl_function" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa">y</a>() &gt;= target.<a class="code hl_variable" href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">minAABB</a>.<a class="code hl_function" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa">y</a>()));</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif </span><span class="comment">// !__BOUNDING_VOLUME_H__</span></div>
+<div class="ttc" id="a_utility_for_math_8h_html"><div class="ttname"><a href="_utility_for_math_8h.html">UtilityForMath.h</a></div><div class="ttdoc">This file provides utility in handling mathematics.</div></div>
+<div class="ttc" id="a_utility_for_math_8h_html_afc90efb8e49ed4917d40330808764413"><div class="ttname"><a href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a></div><div class="ttdeci">Vector&lt; float, 3 &gt; Vector3f</div><div class="ttdoc">3 dimensional vector</div><div class="ttdef"><b>Definition</b> UtilityForMath.h:18</div></div>
+<div class="ttc" id="anamespace_mkpe_html"><div class="ttname"><a href="namespace_mkpe.html">Mkpe</a></div><div class="ttdef"><b>Definition</b> BoudingVolume.h:14</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_bounding_volume_html"><div class="ttname"><a href="struct_mkpe_1_1_bounding_volume.html">Mkpe::BoundingVolume</a></div><div class="ttdoc">Bounding volume using AABB</div><div class="ttdef"><b>Definition</b> BoudingVolume.h:16</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_bounding_volume_html_a150f8b51279f24b9e12216c8ed304c7d"><div class="ttname"><a href="struct_mkpe_1_1_bounding_volume.html#a150f8b51279f24b9e12216c8ed304c7d">Mkpe::BoundingVolume::BoundingVolume</a></div><div class="ttdeci">BoundingVolume(const Vector3f &amp;minAABB=Vector3f(0.0f, 0.0f, 0.0f), const Vector3f &amp;maxAABB=Vector3f(0.0f, 0.0f, 0.0f))</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> BoudingVolume.h:27</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_bounding_volume_html_a34c1644baebb8b6bcaddb8ba245a2fac"><div class="ttname"><a href="struct_mkpe_1_1_bounding_volume.html#a34c1644baebb8b6bcaddb8ba245a2fac">Mkpe::BoundingVolume::Expand</a></div><div class="ttdeci">void Expand(const Vector3f &amp;expand)</div><div class="ttdoc">Expand the bounding volume by a specified amount in each axis</div><div class="ttdef"><b>Definition</b> BoudingVolume.cpp:25</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_bounding_volume_html_a3969ab4e9899efe6f175db5f1c38d01a"><div class="ttname"><a href="struct_mkpe_1_1_bounding_volume.html#a3969ab4e9899efe6f175db5f1c38d01a">Mkpe::BoundingVolume::maxAABB</a></div><div class="ttdeci">Vector3f maxAABB</div><div class="ttdoc">Maximum coordinates of AABB</div><div class="ttdef"><b>Definition</b> BoudingVolume.h:20</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_bounding_volume_html_a940322f03c213864da85342295d854f7"><div class="ttname"><a href="struct_mkpe_1_1_bounding_volume.html#a940322f03c213864da85342295d854f7">Mkpe::BoundingVolume::GetProximity</a></div><div class="ttdeci">const float GetProximity(const BoundingVolume &amp;target) const</div><div class="ttdoc">Get proximity to target bounding volume</div><div class="ttdef"><b>Definition</b> BoudingVolume.cpp:39</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_bounding_volume_html_aaad46c89c40573e14f50d46d18b32a93"><div class="ttname"><a href="struct_mkpe_1_1_bounding_volume.html#aaad46c89c40573e14f50d46d18b32a93">Mkpe::BoundingVolume::IsIntersect</a></div><div class="ttdeci">const bool IsIntersect(const BoundingVolume &amp;target) const</div><div class="ttdoc">Is this BV in contact with the subject BV?</div><div class="ttdef"><b>Definition</b> BoudingVolume.h:92</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_bounding_volume_html_ad361c9719f360d91df93a240bc4d5648"><div class="ttname"><a href="struct_mkpe_1_1_bounding_volume.html#ad361c9719f360d91df93a240bc4d5648">Mkpe::BoundingVolume::GetCost</a></div><div class="ttdeci">const float GetCost() const</div><div class="ttdoc">Get const of bounding volume</div><div class="ttdef"><b>Definition</b> BoudingVolume.cpp:31</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_bounding_volume_html_ae31c1a7b8e407e13cd4a8fad31673d05"><div class="ttname"><a href="struct_mkpe_1_1_bounding_volume.html#ae31c1a7b8e407e13cd4a8fad31673d05">Mkpe::BoundingVolume::minAABB</a></div><div class="ttdeci">Vector3f minAABB</div><div class="ttdoc">Minimum coordinates of AABB</div><div class="ttdef"><b>Definition</b> BoudingVolume.h:18</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_bounding_volume_html_afbc140232be2a54f55ac9fd42a0c2712"><div class="ttname"><a href="struct_mkpe_1_1_bounding_volume.html#afbc140232be2a54f55ac9fd42a0c2712">Mkpe::BoundingVolume::IsContain</a></div><div class="ttdeci">const bool IsContain(const BoundingVolume &amp;target) const</div><div class="ttdoc">Is this BV contains the subject BV?</div><div class="ttdef"><b>Definition</b> BoudingVolume.h:81</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 3 &gt;</a></div></div>
+<div class="ttc" id="astruct_vector_html_a181d70c39c99dc2377df11e7126a6baa"><div class="ttname"><a href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa">Vector::y</a></div><div class="ttdeci">T &amp; y()</div><div class="ttdoc">Get the second element</div><div class="ttdef"><b>Definition</b> MathStructures.h:120</div></div>
+<div class="ttc" id="astruct_vector_html_a4407486f92778f38fd9163d559026b91"><div class="ttname"><a href="struct_vector.html#a4407486f92778f38fd9163d559026b91">Vector::x</a></div><div class="ttdeci">T &amp; x()</div><div class="ttdoc">Get the first element</div><div class="ttdef"><b>Definition</b> MathStructures.h:118</div></div>
+<div class="ttc" id="astruct_vector_html_a4ba4ff1b2c182f27529be07f82e290fe"><div class="ttname"><a href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe">Vector::z</a></div><div class="ttdeci">T &amp; z()</div><div class="ttdoc">Get the third element</div><div class="ttdef"><b>Definition</b> MathStructures.h:122</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

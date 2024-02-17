@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CContactPointWrapper クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_contact_point_wrapper-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CContactPointWrapper クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Wrapped classes to make it easier for users to handle collision point  
+ <a href="class_c_contact_point_wrapper.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_contact_collider_list_8h_source.html">ContactColliderList.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:acf6d4605dcdb585422fc67989e32f697" id="r_acf6d4605dcdb585422fc67989e32f697"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_contact_point_wrapper.html#acf6d4605dcdb585422fc67989e32f697">CContactPointWrapper</a> (const <a class="el" href="struct_mkpe_1_1_contact_point.html">Mkpe::ContactPoint</a> *point, const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> *opponent)</td></tr>
+<tr class="memdesc:acf6d4605dcdb585422fc67989e32f697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:acf6d4605dcdb585422fc67989e32f697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a5cbcefe854439c039450675a4d172" id="r_ab2a5cbcefe854439c039450675a4d172"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_contact_point_wrapper.html#ab2a5cbcefe854439c039450675a4d172">IsHaving</a> ()</td></tr>
+<tr class="memdesc:ab2a5cbcefe854439c039450675a4d172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this class have a contact point?  <br /></td></tr>
+<tr class="separator:ab2a5cbcefe854439c039450675a4d172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c201b7586ab3fae6ee971a4923ea5f0" id="r_a5c201b7586ab3fae6ee971a4923ea5f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_contact_point_wrapper.html#a5c201b7586ab3fae6ee971a4923ea5f0">GetMidPoint</a> ()</td></tr>
+<tr class="memdesc:a5c201b7586ab3fae6ee971a4923ea5f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get midpoint of contact point  <br /></td></tr>
+<tr class="separator:a5c201b7586ab3fae6ee971a4923ea5f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab21776758769f68ea93e93d8cd33e441" id="r_ab21776758769f68ea93e93d8cd33e441"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_contact_point_wrapper.html#ab21776758769f68ea93e93d8cd33e441">GetMyPoint</a> ()</td></tr>
+<tr class="memdesc:ab21776758769f68ea93e93d8cd33e441"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get contact point of my collider  <br /></td></tr>
+<tr class="separator:ab21776758769f68ea93e93d8cd33e441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc960b63d64b96b87b44faffd82ce7ef" id="r_acc960b63d64b96b87b44faffd82ce7ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_contact_point_wrapper.html#acc960b63d64b96b87b44faffd82ce7ef">GetOpponentPoint</a> ()</td></tr>
+<tr class="memdesc:acc960b63d64b96b87b44faffd82ce7ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get contact point of opponent collider  <br /></td></tr>
+<tr class="separator:acc960b63d64b96b87b44faffd82ce7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d22a8ea690fbf3bc3c53aa758ca050f" id="r_a5d22a8ea690fbf3bc3c53aa758ca050f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_contact_point_wrapper.html#a5d22a8ea690fbf3bc3c53aa758ca050f">GetMyNormal</a> ()</td></tr>
+<tr class="memdesc:a5d22a8ea690fbf3bc3c53aa758ca050f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get contact normal vector of my collider  <br /></td></tr>
+<tr class="separator:a5d22a8ea690fbf3bc3c53aa758ca050f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec5786ea9fe3b80195c3c2dca582213e" id="r_aec5786ea9fe3b80195c3c2dca582213e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_contact_point_wrapper.html#aec5786ea9fe3b80195c3c2dca582213e">GetOpponentNormal</a> ()</td></tr>
+<tr class="memdesc:aec5786ea9fe3b80195c3c2dca582213e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get contact normal vector of opponent collider  <br /></td></tr>
+<tr class="separator:aec5786ea9fe3b80195c3c2dca582213e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Wrapped classes to make it easier for users to handle collision point </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="acf6d4605dcdb585422fc67989e32f697" name="acf6d4605dcdb585422fc67989e32f697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf6d4605dcdb585422fc67989e32f697">&#9670;&#160;</a></span>CContactPointWrapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CContactPointWrapper::CContactPointWrapper </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_mkpe_1_1_contact_point.html">Mkpe::ContactPoint</a> *&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> *&#160;</td>
+          <td class="paramname"><em>opponent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>Contact point </td></tr>
+    <tr><td class="paramname">opponent</td><td>Information of contacted opponent by the collider </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a5c201b7586ab3fae6ee971a4923ea5f0" name="a5c201b7586ab3fae6ee971a4923ea5f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c201b7586ab3fae6ee971a4923ea5f0">&#9670;&#160;</a></span>GetMidPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> CContactPointWrapper::GetMidPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get midpoint of contact point </p>
+<dl class="section return"><dt>戻り値</dt><dd>Midpoint </dd></dl>
+
+</div>
+</div>
+<a id="a5d22a8ea690fbf3bc3c53aa758ca050f" name="a5d22a8ea690fbf3bc3c53aa758ca050f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d22a8ea690fbf3bc3c53aa758ca050f">&#9670;&#160;</a></span>GetMyNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> CContactPointWrapper::GetMyNormal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get contact normal vector of my collider </p>
+<dl class="section return"><dt>戻り値</dt><dd>Contact normal vector of my collider </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_contact_point_wrapper_a5d22a8ea690fbf3bc3c53aa758ca050f_cgraph.png" border="0" usemap="#aclass_c_contact_point_wrapper_a5d22a8ea690fbf3bc3c53aa758ca050f_cgraph" alt=""/></div>
+<map name="aclass_c_contact_point_wrapper_a5d22a8ea690fbf3bc3c53aa758ca050f_cgraph" id="aclass_c_contact_point_wrapper_a5d22a8ea690fbf3bc3c53aa758ca050f_cgraph">
+<area shape="rect" title="Get contact normal vector of my collider" alt="" coords="5,5,160,48"/>
+<area shape="rect" href="class_c_contact_opponent.html#aee0dccde0b9e9eab6c062da36ebbc3da" title="Am I a node on the A side?" alt="" coords="208,5,387,48"/>
+<area shape="poly" title=" " alt="" coords="160,24,192,24,192,29,160,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab21776758769f68ea93e93d8cd33e441" name="ab21776758769f68ea93e93d8cd33e441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab21776758769f68ea93e93d8cd33e441">&#9670;&#160;</a></span>GetMyPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> CContactPointWrapper::GetMyPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get contact point of my collider </p>
+<dl class="section return"><dt>戻り値</dt><dd>Contact point of my collider </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_contact_point_wrapper_ab21776758769f68ea93e93d8cd33e441_cgraph.png" border="0" usemap="#aclass_c_contact_point_wrapper_ab21776758769f68ea93e93d8cd33e441_cgraph" alt=""/></div>
+<map name="aclass_c_contact_point_wrapper_ab21776758769f68ea93e93d8cd33e441_cgraph" id="aclass_c_contact_point_wrapper_ab21776758769f68ea93e93d8cd33e441_cgraph">
+<area shape="rect" title="Get contact point of my collider" alt="" coords="5,5,160,48"/>
+<area shape="rect" href="class_c_contact_opponent.html#aee0dccde0b9e9eab6c062da36ebbc3da" title="Am I a node on the A side?" alt="" coords="208,5,387,48"/>
+<area shape="poly" title=" " alt="" coords="160,24,192,24,192,29,160,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aec5786ea9fe3b80195c3c2dca582213e" name="aec5786ea9fe3b80195c3c2dca582213e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec5786ea9fe3b80195c3c2dca582213e">&#9670;&#160;</a></span>GetOpponentNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> CContactPointWrapper::GetOpponentNormal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get contact normal vector of opponent collider </p>
+<dl class="section return"><dt>戻り値</dt><dd>Contact normal vector of opponent collider </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_contact_point_wrapper_aec5786ea9fe3b80195c3c2dca582213e_cgraph.png" border="0" usemap="#aclass_c_contact_point_wrapper_aec5786ea9fe3b80195c3c2dca582213e_cgraph" alt=""/></div>
+<map name="aclass_c_contact_point_wrapper_aec5786ea9fe3b80195c3c2dca582213e_cgraph" id="aclass_c_contact_point_wrapper_aec5786ea9fe3b80195c3c2dca582213e_cgraph">
+<area shape="rect" title="Get contact normal vector of opponent collider" alt="" coords="5,5,160,48"/>
+<area shape="rect" href="class_c_contact_opponent.html#aee0dccde0b9e9eab6c062da36ebbc3da" title="Am I a node on the A side?" alt="" coords="208,5,387,48"/>
+<area shape="poly" title=" " alt="" coords="160,24,192,24,192,29,160,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acc960b63d64b96b87b44faffd82ce7ef" name="acc960b63d64b96b87b44faffd82ce7ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc960b63d64b96b87b44faffd82ce7ef">&#9670;&#160;</a></span>GetOpponentPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> CContactPointWrapper::GetOpponentPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get contact point of opponent collider </p>
+<dl class="section return"><dt>戻り値</dt><dd>Contact point of opponent collider </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_contact_point_wrapper_acc960b63d64b96b87b44faffd82ce7ef_cgraph.png" border="0" usemap="#aclass_c_contact_point_wrapper_acc960b63d64b96b87b44faffd82ce7ef_cgraph" alt=""/></div>
+<map name="aclass_c_contact_point_wrapper_acc960b63d64b96b87b44faffd82ce7ef_cgraph" id="aclass_c_contact_point_wrapper_acc960b63d64b96b87b44faffd82ce7ef_cgraph">
+<area shape="rect" title="Get contact point of opponent collider" alt="" coords="5,5,160,48"/>
+<area shape="rect" href="class_c_contact_opponent.html#aee0dccde0b9e9eab6c062da36ebbc3da" title="Am I a node on the A side?" alt="" coords="208,5,387,48"/>
+<area shape="poly" title=" " alt="" coords="160,24,192,24,192,29,160,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab2a5cbcefe854439c039450675a4d172" name="ab2a5cbcefe854439c039450675a4d172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a5cbcefe854439c039450675a4d172">&#9670;&#160;</a></span>IsHaving()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CContactPointWrapper::IsHaving </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Does this class have a contact point? </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_contact_collider_list_8h_source.html">ContactColliderList.h</a></li>
+<li><a class="el" href="_contact_collider_list_8cpp.html">ContactColliderList.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

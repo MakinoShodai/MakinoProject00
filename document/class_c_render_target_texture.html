@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CRenderTargetTexture クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_render_target_texture-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CRenderTargetTexture クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class handles render target that can also be used as SRV  
+ <a href="class_c_render_target_texture.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_render_target_8h_source.html">RenderTarget.h</a>&gt;</code></p>
+<div class="dynheader">
+CRenderTargetTexture の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_render_target_texture__inherit__graph.png" border="0" usemap="#a_c_render_target_texture_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_render_target_texture_inherit__map" id="a_c_render_target_texture_inherit__map">
+<area shape="rect" title="This class handles render target that can also be used as SRV" alt="" coords="5,80,156,107"/>
+<area shape="rect" href="class_a_c_render_target.html" title="This class handles render target" alt="" coords="22,5,139,32"/>
+<area shape="poly" title=" " alt="" coords="83,48,83,80,78,80,78,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CRenderTargetTexture 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_render_target_texture__coll__graph.png" border="0" usemap="#a_c_render_target_texture_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_render_target_texture_coll__map" id="a_c_render_target_texture_coll__map">
+<area shape="rect" title="This class handles render target that can also be used as SRV" alt="" coords="5,81,156,108"/>
+<area shape="rect" href="class_a_c_render_target.html" title="This class handles render target" alt="" coords="22,5,139,32"/>
+<area shape="poly" title=" " alt="" coords="83,47,83,81,78,81,78,47"/>
+<area shape="poly" title=" " alt="" coords="156,11,165,19,157,26,140,28,139,23,155,21,160,19,153,16"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa416a710c22c9ad8a3aa2ee60f1fbdbb" id="r_aa416a710c22c9ad8a3aa2ee60f1fbdbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_render_target_texture.html#aa416a710c22c9ad8a3aa2ee60f1fbdbb">GetCPUHandleRTV</a> () const override</td></tr>
+<tr class="memdesc:aa416a710c22c9ad8a3aa2ee60f1fbdbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get CPU handle for rtv descriptor heap  <br /></td></tr>
+<tr class="separator:aa416a710c22c9ad8a3aa2ee60f1fbdbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0259429373099c9a41817dca1c3119a" id="r_ae0259429373099c9a41817dca1c3119a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_render_target_texture.html#ae0259429373099c9a41817dca1c3119a">GetCPUHandleSRV</a> () const</td></tr>
+<tr class="memdesc:ae0259429373099c9a41817dca1c3119a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get CPU handle for srv descriptor heap  <br /></td></tr>
+<tr class="separator:ae0259429373099c9a41817dca1c3119a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe25e21bded545e0289604757c862881" id="r_abe25e21bded545e0289604757c862881"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_render_target_texture.html#abe25e21bded545e0289604757c862881">GetResource</a> () const override</td></tr>
+<tr class="memdesc:abe25e21bded545e0289604757c862881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to resource  <br /></td></tr>
+<tr class="separator:abe25e21bded545e0289604757c862881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f3e8c7a222dc72dbefb6498823ba2f" id="r_a91f3e8c7a222dc72dbefb6498823ba2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_render_target_texture.html#a91f3e8c7a222dc72dbefb6498823ba2f">StateTransition</a> (D3D12_RESOURCE_STATES state) override</td></tr>
+<tr class="memdesc:a91f3e8c7a222dc72dbefb6498823ba2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transition resource state  <br /></td></tr>
+<tr class="separator:a91f3e8c7a222dc72dbefb6498823ba2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407af872131df1a36ca1e89674ef9c41" id="r_a407af872131df1a36ca1e89674ef9c41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_render_target_texture.html#a407af872131df1a36ca1e89674ef9c41">CRenderTargetTexture</a> ()</td></tr>
+<tr class="memdesc:a407af872131df1a36ca1e89674ef9c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a407af872131df1a36ca1e89674ef9c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dadff77b3c24e3de232568144ee25eb" id="r_a3dadff77b3c24e3de232568144ee25eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_render_target_texture.html#a3dadff77b3c24e3de232568144ee25eb">Create</a> (DXGI_FORMAT format, UINT width, UINT height, const <a class="el" href="_utility_for_math_8h.html#aec0a157ba62275f3e25a3ea3e8a9c176">Colorf</a> &amp;defaultClearColor)</td></tr>
+<tr class="memdesc:a3dadff77b3c24e3de232568144ee25eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create render target resource  <br /></td></tr>
+<tr class="separator:a3dadff77b3c24e3de232568144ee25eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2112b4e96fa91a6c1e4ff60d3e9939f1" id="r_a2112b4e96fa91a6c1e4ff60d3e9939f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_render_target_texture.html#a2112b4e96fa91a6c1e4ff60d3e9939f1">GetSRVPropertyHandle</a> ()</td></tr>
+<tr class="memdesc:a2112b4e96fa91a6c1e4ff60d3e9939f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle for SRV property  <br /></td></tr>
+<tr class="separator:a2112b4e96fa91a6c1e4ff60d3e9939f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_render_target"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_render_target')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_render_target.html">ACRenderTarget</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a4c3ac3717b2cdc7dda7371de650517b0 inherit pub_methods_class_a_c_render_target" id="r_a4c3ac3717b2cdc7dda7371de650517b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_target.html#a4c3ac3717b2cdc7dda7371de650517b0">ACRenderTarget</a> ()</td></tr>
+<tr class="memdesc:a4c3ac3717b2cdc7dda7371de650517b0 inherit pub_methods_class_a_c_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a4c3ac3717b2cdc7dda7371de650517b0 inherit pub_methods_class_a_c_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a681f3634a3049eef0f75482c5980740f inherit pub_methods_class_a_c_render_target" id="r_a681f3634a3049eef0f75482c5980740f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_target.html#a681f3634a3049eef0f75482c5980740f">~ACRenderTarget</a> ()</td></tr>
+<tr class="memdesc:a681f3634a3049eef0f75482c5980740f inherit pub_methods_class_a_c_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a681f3634a3049eef0f75482c5980740f inherit pub_methods_class_a_c_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d00574c158fad570c77ffed5365e3a inherit pub_methods_class_a_c_render_target" id="r_a40d00574c158fad570c77ffed5365e3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_target.html#a40d00574c158fad570c77ffed5365e3a">Apply</a> (<a class="el" href="class_c_depth_stencil.html">CDepthStencil</a> *dsv, std::initializer_list&lt; <a class="el" href="class_a_c_render_target.html">ACRenderTarget</a> * &gt; otherRT={})</td></tr>
+<tr class="memdesc:a40d00574c158fad570c77ffed5365e3a inherit pub_methods_class_a_c_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply this render target to the destination render target by calling 'OMSetRenderTargets'  <br /></td></tr>
+<tr class="separator:a40d00574c158fad570c77ffed5365e3a inherit pub_methods_class_a_c_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea9c42479cc0b6cf6bc57b78050a1be inherit pub_methods_class_a_c_render_target" id="r_a8ea9c42479cc0b6cf6bc57b78050a1be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_target.html#a8ea9c42479cc0b6cf6bc57b78050a1be">Clear</a> (const <a class="el" href="_utility_for_math_8h.html#aec0a157ba62275f3e25a3ea3e8a9c176">Colorf</a> &amp;color)</td></tr>
+<tr class="memdesc:a8ea9c42479cc0b6cf6bc57b78050a1be inherit pub_methods_class_a_c_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the color of all pixels on this render target  <br /></td></tr>
+<tr class="separator:a8ea9c42479cc0b6cf6bc57b78050a1be inherit pub_methods_class_a_c_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24b36fa8db56b1bfd5206e0edbac74a inherit pub_methods_class_a_c_render_target" id="r_ac24b36fa8db56b1bfd5206e0edbac74a"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_target.html#ac24b36fa8db56b1bfd5206e0edbac74a">GetWidth</a> ()</td></tr>
+<tr class="memdesc:ac24b36fa8db56b1bfd5206e0edbac74a inherit pub_methods_class_a_c_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get width of resolution  <br /></td></tr>
+<tr class="separator:ac24b36fa8db56b1bfd5206e0edbac74a inherit pub_methods_class_a_c_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5e6238c51d1193dd88dc676dd1f736d inherit pub_methods_class_a_c_render_target" id="r_aa5e6238c51d1193dd88dc676dd1f736d"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_target.html#aa5e6238c51d1193dd88dc676dd1f736d">GetHeight</a> ()</td></tr>
+<tr class="memdesc:aa5e6238c51d1193dd88dc676dd1f736d inherit pub_methods_class_a_c_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get height of resolution  <br /></td></tr>
+<tr class="separator:aa5e6238c51d1193dd88dc676dd1f736d inherit pub_methods_class_a_c_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_a_c_render_target"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_a_c_render_target')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_render_target.html">ACRenderTarget</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:ac5117dbb1c7b3720541e714b28bbed7b inherit pub_static_methods_class_a_c_render_target" id="r_ac5117dbb1c7b3720541e714b28bbed7b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_a_c_render_target.html">ACRenderTarget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_target.html#ac5117dbb1c7b3720541e714b28bbed7b">GetCurrentAppliedRenderTarget</a> ()</td></tr>
+<tr class="memdesc:ac5117dbb1c7b3720541e714b28bbed7b inherit pub_static_methods_class_a_c_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to current applied render target  <br /></td></tr>
+<tr class="separator:ac5117dbb1c7b3720541e714b28bbed7b inherit pub_static_methods_class_a_c_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_render_target"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_render_target')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_render_target.html">ACRenderTarget</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a11c03907b558d57f0512c45bea8103c1 inherit pro_methods_class_a_c_render_target" id="r_a11c03907b558d57f0512c45bea8103c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_target.html#a11c03907b558d57f0512c45bea8103c1">SetResolution</a> (ID3D12Resource *renderTarget)</td></tr>
+<tr class="memdesc:a11c03907b558d57f0512c45bea8103c1 inherit pro_methods_class_a_c_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set resolution  <br /></td></tr>
+<tr class="separator:a11c03907b558d57f0512c45bea8103c1 inherit pro_methods_class_a_c_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_render_target"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_render_target')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_render_target.html">ACRenderTarget</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a335103adc649429815e5e824ecc771b6 inherit pro_attribs_class_a_c_render_target" id="r_a335103adc649429815e5e824ecc771b6"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_target.html#a335103adc649429815e5e824ecc771b6">m_width</a></td></tr>
+<tr class="memdesc:a335103adc649429815e5e824ecc771b6 inherit pro_attribs_class_a_c_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of render target  <br /></td></tr>
+<tr class="separator:a335103adc649429815e5e824ecc771b6 inherit pro_attribs_class_a_c_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac93589b3647c8c6e609d822ea7f5070e inherit pro_attribs_class_a_c_render_target" id="r_ac93589b3647c8c6e609d822ea7f5070e"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_target.html#ac93589b3647c8c6e609d822ea7f5070e">m_height</a></td></tr>
+<tr class="memdesc:ac93589b3647c8c6e609d822ea7f5070e inherit pro_attribs_class_a_c_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height of render target  <br /></td></tr>
+<tr class="separator:ac93589b3647c8c6e609d822ea7f5070e inherit pro_attribs_class_a_c_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_class_a_c_render_target"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_a_c_render_target')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_render_target.html">ACRenderTarget</a> に属する継承静的限定公開変数類</td></tr>
+<tr class="memitem:a9afdd9927fe73d7efb56aca5130cd472 inherit pro_static_attribs_class_a_c_render_target" id="r_a9afdd9927fe73d7efb56aca5130cd472"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_a_c_render_target.html">ACRenderTarget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_render_target.html#a9afdd9927fe73d7efb56aca5130cd472">ms_currentAppliedRenderTarget</a> = nullptr</td></tr>
+<tr class="memdesc:a9afdd9927fe73d7efb56aca5130cd472 inherit pro_static_attribs_class_a_c_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to current applied render target  <br /></td></tr>
+<tr class="separator:a9afdd9927fe73d7efb56aca5130cd472 inherit pro_static_attribs_class_a_c_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This class handles render target that can also be used as SRV </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a407af872131df1a36ca1e89674ef9c41" name="a407af872131df1a36ca1e89674ef9c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a407af872131df1a36ca1e89674ef9c41">&#9670;&#160;</a></span>CRenderTargetTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CRenderTargetTexture::CRenderTargetTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a3dadff77b3c24e3de232568144ee25eb" name="a3dadff77b3c24e3de232568144ee25eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dadff77b3c24e3de232568144ee25eb">&#9670;&#160;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRenderTargetTexture::Create </td>
+          <td>(</td>
+          <td class="paramtype">DXGI_FORMAT&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#aec0a157ba62275f3e25a3ea3e8a9c176">Colorf</a> &amp;&#160;</td>
+          <td class="paramname"><em>defaultClearColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create render target resource </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Render target format </td></tr>
+    <tr><td class="paramname">width</td><td>Width of render target </td></tr>
+    <tr><td class="paramname">height</td><td>Height of render target </td></tr>
+    <tr><td class="paramname">defaultClearColor</td><td>Default clear color. If this value is used at clear process, processing is optimized </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_render_target_texture_a3dadff77b3c24e3de232568144ee25eb_cgraph.png" border="0" usemap="#aclass_c_render_target_texture_a3dadff77b3c24e3de232568144ee25eb_cgraph" alt=""/></div>
+<map name="aclass_c_render_target_texture_a3dadff77b3c24e3de232568144ee25eb_cgraph" id="aclass_c_render_target_texture_a3dadff77b3c24e3de232568144ee25eb_cgraph">
+<area shape="rect" title="Create render target resource" alt="" coords="5,128,156,171"/>
+<area shape="rect" href="class_c_descriptor_heap.html#aecbd2207fc5a4526ef13ca74eca53dc8" title="Create descriptor heap" alt="" coords="227,5,392,32"/>
+<area shape="poly" title=" " alt="" coords="102,126,146,86,202,48,233,35,235,40,205,53,149,91,105,130"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="479,52,625,79"/>
+<area shape="poly" title=" " alt="" coords="120,125,159,107,203,92,270,78,339,69,463,62,464,67,340,74,271,83,204,97,161,112,122,130"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="204,107,415,133"/>
+<area shape="poly" title=" " alt="" coords="156,137,188,133,188,138,156,142"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325" title="DirectX device getter" alt="" coords="221,157,398,200"/>
+<area shape="poly" title=" " alt="" coords="156,156,206,163,206,168,156,162"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a553fe022564762ba24fe35296d41dd77" title="Make unique pointer" alt="" coords="237,224,382,267"/>
+<area shape="poly" title=" " alt="" coords="121,169,205,210,223,217,221,222,203,214,119,173"/>
+<area shape="rect" href="class_a_c_render_target.html#a11c03907b558d57f0512c45bea8103c1" title="Set resolution" alt="" coords="207,291,412,317"/>
+<area shape="poly" title=" " alt="" coords="98,169,142,224,171,252,205,276,216,282,214,287,202,281,168,256,138,227,94,173"/>
+<area shape="poly" title=" " alt="" coords="383,30,464,46,463,51,382,35"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="689,52,898,79"/>
+<area shape="poly" title=" " alt="" coords="626,63,674,63,674,68,626,68"/>
+<area shape="poly" title=" " alt="" coords="371,103,474,80,475,85,372,109"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="463,103,641,145"/>
+<area shape="poly" title=" " alt="" coords="416,119,447,120,447,125,416,124"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa416a710c22c9ad8a3aa2ee60f1fbdbb" name="aa416a710c22c9ad8a3aa2ee60f1fbdbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa416a710c22c9ad8a3aa2ee60f1fbdbb">&#9670;&#160;</a></span>GetCPUHandleRTV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> CRenderTargetTexture::GetCPUHandleRTV </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get CPU handle for rtv descriptor heap </p>
+
+<p><a class="el" href="class_a_c_render_target.html#a92904be9d0e8724a8737fea2b8f567b2">ACRenderTarget</a>を実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_render_target_texture_aa416a710c22c9ad8a3aa2ee60f1fbdbb_cgraph.png" border="0" usemap="#aclass_c_render_target_texture_aa416a710c22c9ad8a3aa2ee60f1fbdbb_cgraph" alt=""/></div>
+<map name="aclass_c_render_target_texture_aa416a710c22c9ad8a3aa2ee60f1fbdbb_cgraph" id="aclass_c_render_target_texture_aa416a710c22c9ad8a3aa2ee60f1fbdbb_cgraph">
+<area shape="rect" title="Get CPU handle for rtv descriptor heap" alt="" coords="5,27,156,69"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="204,35,415,61"/>
+<area shape="poly" title=" " alt="" coords="156,45,188,45,188,51,156,51"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="479,5,625,32"/>
+<area shape="poly" title=" " alt="" coords="415,33,463,27,464,32,416,38"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="463,56,641,99"/>
+<area shape="poly" title=" " alt="" coords="416,58,448,62,447,67,415,63"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="689,5,898,32"/>
+<area shape="poly" title=" " alt="" coords="626,16,674,16,674,21,626,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae0259429373099c9a41817dca1c3119a" name="ae0259429373099c9a41817dca1c3119a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0259429373099c9a41817dca1c3119a">&#9670;&#160;</a></span>GetCPUHandleSRV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> CRenderTargetTexture::GetCPUHandleSRV </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get CPU handle for srv descriptor heap </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_render_target_texture_ae0259429373099c9a41817dca1c3119a_cgraph.png" border="0" usemap="#aclass_c_render_target_texture_ae0259429373099c9a41817dca1c3119a_cgraph" alt=""/></div>
+<map name="aclass_c_render_target_texture_ae0259429373099c9a41817dca1c3119a_cgraph" id="aclass_c_render_target_texture_ae0259429373099c9a41817dca1c3119a_cgraph">
+<area shape="rect" title="Get CPU handle for srv descriptor heap" alt="" coords="5,27,156,69"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="204,35,415,61"/>
+<area shape="poly" title=" " alt="" coords="156,45,188,45,188,51,156,51"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="479,5,625,32"/>
+<area shape="poly" title=" " alt="" coords="415,33,463,27,464,32,416,38"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53" title="Get the size of descriptor heap type" alt="" coords="463,56,641,99"/>
+<area shape="poly" title=" " alt="" coords="416,58,448,62,447,67,415,63"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="689,5,898,32"/>
+<area shape="poly" title=" " alt="" coords="626,16,674,16,674,21,626,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abe25e21bded545e0289604757c862881" name="abe25e21bded545e0289604757c862881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe25e21bded545e0289604757c862881">&#9670;&#160;</a></span>GetResource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource * CRenderTargetTexture::GetResource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get pointer to resource </p>
+
+<p><a class="el" href="class_a_c_render_target.html#aefb769c1a4e03d86537a2f1177f1d88d">ACRenderTarget</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a2112b4e96fa91a6c1e4ff60d3e9939f1" name="a2112b4e96fa91a6c1e4ff60d3e9939f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2112b4e96fa91a6c1e4ff60d3e9939f1">&#9670;&#160;</a></span>GetSRVPropertyHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a> CRenderTargetTexture::GetSRVPropertyHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get handle for SRV property </p>
+<dl class="section return"><dt>戻り値</dt><dd>Handle for SRV property </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_render_target_texture_a2112b4e96fa91a6c1e4ff60d3e9939f1_icgraph.png" border="0" usemap="#aclass_c_render_target_texture_a2112b4e96fa91a6c1e4ff60d3e9939f1_icgraph" alt=""/></div>
+<map name="aclass_c_render_target_texture_a2112b4e96fa91a6c1e4ff60d3e9939f1_icgraph" id="aclass_c_render_target_texture_a2112b4e96fa91a6c1e4ff60d3e9939f1_icgraph">
+<area shape="rect" title="Get handle for SRV property" alt="" coords="406,5,572,48"/>
+<area shape="rect" href="class_a_c_static_s_r_v_allocator.html#a440c4126ea1a5fe59927486133796c23" title="Allocate SRV handle" alt="" coords="207,5,358,48"/>
+<area shape="poly" title=" " alt="" coords="390,29,359,29,359,24,390,24"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="5,5,159,48"/>
+<area shape="poly" title=" " alt="" coords="191,29,159,29,159,24,191,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a91f3e8c7a222dc72dbefb6498823ba2f" name="a91f3e8c7a222dc72dbefb6498823ba2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91f3e8c7a222dc72dbefb6498823ba2f">&#9670;&#160;</a></span>StateTransition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRenderTargetTexture::StateTransition </td>
+          <td>(</td>
+          <td class="paramtype">D3D12_RESOURCE_STATES&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transition resource state </p>
+
+<p><a class="el" href="class_a_c_render_target.html#a79d77f5d913d004ac6b174311e3b098a">ACRenderTarget</a>を実装しています。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_render_target_8h_source.html">RenderTarget.h</a></li>
+<li><a class="el" href="_render_target_8cpp.html">RenderTarget.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

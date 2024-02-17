@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ContactColliderList.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ContactColliderList.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_contact_collider_list_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __CONTACT_COLLIDER_LIST_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __CONTACT_COLLIDER_LIST_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_collider3_d_8h.html">Collider3D.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Forward declaration</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="class_c_contact_opponent.html">CContactOpponent</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mkpe.html">Mkpe</a> { <span class="keyword">namespace </span>Dbvt { <span class="keyword">struct </span>BVOverlapPair; } }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mkpe.html">Mkpe</a> { <span class="keyword">struct </span>ContactPoint; }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_c_contact_point_wrapper.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_contact_point_wrapper.html">CContactPointWrapper</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="class_c_contact_point_wrapper.html">CContactPointWrapper</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_contact_point.html">Mkpe::ContactPoint</a>* point, <span class="keyword">const</span> <a class="code hl_class" href="class_c_contact_opponent.html">CContactOpponent</a>* opponent);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_c_contact_point_wrapper.html#ab2a5cbcefe854439c039450675a4d172">   30</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_contact_point_wrapper.html#ab2a5cbcefe854439c039450675a4d172">IsHaving</a>() { <span class="keywordflow">return</span> (m_point != <span class="keyword">nullptr</span>); }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_function" href="class_c_contact_point_wrapper.html#a5c201b7586ab3fae6ee971a4923ea5f0">GetMidPoint</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_function" href="class_c_contact_point_wrapper.html#ab21776758769f68ea93e93d8cd33e441">GetMyPoint</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_function" href="class_c_contact_point_wrapper.html#acc960b63d64b96b87b44faffd82ce7ef">GetOpponentPoint</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_function" href="class_c_contact_point_wrapper.html#a5d22a8ea690fbf3bc3c53aa758ca050f">GetMyNormal</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_function" href="class_c_contact_point_wrapper.html#aec5786ea9fe3b80195c3c2dca582213e">GetOpponentNormal</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_contact_point.html">Mkpe::ContactPoint</a>* m_point;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_c_contact_opponent.html">CContactOpponent</a>* m_opponent;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="};">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_c_contact_opponent.html">   73</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_contact_opponent.html">CContactOpponent</a> {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_class" href="class_c_contact_opponent.html">CContactOpponent</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;ACCollider3D&gt;</a> opponent, <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">Mkpe::Dbvt::BVOverlapPair</a>* pairInfo);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_c_contact_opponent.html#adf172abe1ec666df5cdb1baa0517646e">   83</a></span>    <a class="code hl_function" href="class_c_contact_opponent.html#adf172abe1ec666df5cdb1baa0517646e">CContactOpponent</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_c_contact_opponent.html">CContactOpponent</a>&amp; other) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_c_contact_opponent.html#a87efd2e0179e8c8eaa200d4d4baa99e7">   86</a></span>    <a class="code hl_function" href="class_c_contact_opponent.html#a87efd2e0179e8c8eaa200d4d4baa99e7">~CContactOpponent</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_contact_opponent.html#aee0dccde0b9e9eab6c062da36ebbc3da">IsNodeASelf</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_class" href="class_c_contact_point_wrapper.html">CContactPointWrapper</a> <a class="code hl_function" href="class_c_contact_opponent.html#a3ca280bee6af93f507942348795196ac">GetContactPoint</a>(UINT index) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    UINT <a class="code hl_function" href="class_c_contact_opponent.html#a7aea7701b52ea691285b1601c1401b29">GetContactPointsNum</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_c_contact_opponent.html#a1ac4ca8e79122307662e183285c516bb">  108</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;ACCollider3D&gt;</a>&amp; <a class="code hl_function" href="class_c_contact_opponent.html#a1ac4ca8e79122307662e183285c516bb">GetOpponent</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_opponent; }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="class_c_contact_opponent.html#ac52eee62a7521cfb691cbc066a57946a">  111</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_contact_opponent.html#ac52eee62a7521cfb691cbc066a57946a">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_c_contact_opponent.html">CContactOpponent</a>&amp; other)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_opponent == other.m_opponent; }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_c_contact_opponent.html#a7b0315cd65068a6e2ec763d224733e52">  113</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_contact_opponent.html#a7b0315cd65068a6e2ec763d224733e52">operator!=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_c_contact_opponent.html">CContactOpponent</a>&amp; other)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_opponent != other.m_opponent; }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;ACCollider3D&gt;</a> m_opponent;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">Mkpe::Dbvt::BVOverlapPair</a>* m_pairInfo;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>};</div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mkpe.html">Mkpe</a> {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">class </span>CContactColliderList {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        CContactColliderList();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        ~CContactColliderList() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> AddOpponent(<span class="keyword">const</span> <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;ACCollider3D&gt;</a>&amp; opponent, <span class="keyword">const</span> <a class="code hl_struct" href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">Mkpe::Dbvt::BVOverlapPair</a>* pairInfo) { m_contactLists[m_currentFrameIndex].emplace_back(opponent, pairInfo); }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordtype">void</span> RebuildList();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordtype">void</span> AllClear();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keyword">const</span> std::vector&lt;CContactOpponent&gt;&amp; GetBeginList()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_beginContactList; }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keyword">const</span> std::vector&lt;CContactOpponent&gt;&amp; GetHitList()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_hitContactList; }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keyword">const</span> std::vector&lt;CWeakPtr&lt;ACCollider3D&gt;&gt;&amp; GetEndList()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_endContactList; }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        std::vector&lt;CContactOpponent&gt; m_contactLists[2];</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        UINT m_currentFrameIndex;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        std::vector&lt;CContactOpponent&gt; m_beginContactList;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        std::vector&lt;CContactOpponent&gt; m_hitContactList;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        std::vector&lt;CWeakPtr&lt;ACCollider3D&gt;&gt; m_endContactList;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    };</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>} <span class="comment">// namespace Mkpe</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">#endif </span><span class="comment">// !__CONTACT_COLLIDER_LIST_H__</span></div>
+<div class="ttc" id="a_collider3_d_8h_html"><div class="ttname"><a href="_collider3_d_8h.html">Collider3D.h</a></div><div class="ttdoc">This file handles 3D abstract collider.</div></div>
+<div class="ttc" id="aclass_c_contact_opponent_html"><div class="ttname"><a href="class_c_contact_opponent.html">CContactOpponent</a></div><div class="ttdoc">Information of contacted opponent by the collider</div><div class="ttdef"><b>Definition</b> ContactColliderList.h:73</div></div>
+<div class="ttc" id="aclass_c_contact_opponent_html_a1ac4ca8e79122307662e183285c516bb"><div class="ttname"><a href="class_c_contact_opponent.html#a1ac4ca8e79122307662e183285c516bb">CContactOpponent::GetOpponent</a></div><div class="ttdeci">const CWeakPtr&lt; ACCollider3D &gt; &amp; GetOpponent() const</div><div class="ttdoc">Get reference to weak pointer to collider of the contacted opponent</div><div class="ttdef"><b>Definition</b> ContactColliderList.h:108</div></div>
+<div class="ttc" id="aclass_c_contact_opponent_html_a3ca280bee6af93f507942348795196ac"><div class="ttname"><a href="class_c_contact_opponent.html#a3ca280bee6af93f507942348795196ac">CContactOpponent::GetContactPoint</a></div><div class="ttdeci">CContactPointWrapper GetContactPoint(UINT index) const</div><div class="ttdoc">Get a contact point</div><div class="ttdef"><b>Definition</b> ContactColliderList.cpp:84</div></div>
+<div class="ttc" id="aclass_c_contact_opponent_html_a7aea7701b52ea691285b1601c1401b29"><div class="ttname"><a href="class_c_contact_opponent.html#a7aea7701b52ea691285b1601c1401b29">CContactOpponent::GetContactPointsNum</a></div><div class="ttdeci">UINT GetContactPointsNum() const</div><div class="ttdoc">Get the number of contact point</div><div class="ttdef"><b>Definition</b> ContactColliderList.cpp:89</div></div>
+<div class="ttc" id="aclass_c_contact_opponent_html_a7b0315cd65068a6e2ec763d224733e52"><div class="ttname"><a href="class_c_contact_opponent.html#a7b0315cd65068a6e2ec763d224733e52">CContactOpponent::operator!=</a></div><div class="ttdeci">bool operator!=(const CContactOpponent &amp;other) const</div><div class="ttdoc">Comparison operator</div><div class="ttdef"><b>Definition</b> ContactColliderList.h:113</div></div>
+<div class="ttc" id="aclass_c_contact_opponent_html_a87efd2e0179e8c8eaa200d4d4baa99e7"><div class="ttname"><a href="class_c_contact_opponent.html#a87efd2e0179e8c8eaa200d4d4baa99e7">CContactOpponent::~CContactOpponent</a></div><div class="ttdeci">~CContactOpponent()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_contact_opponent_html_ac52eee62a7521cfb691cbc066a57946a"><div class="ttname"><a href="class_c_contact_opponent.html#ac52eee62a7521cfb691cbc066a57946a">CContactOpponent::operator==</a></div><div class="ttdeci">bool operator==(const CContactOpponent &amp;other) const</div><div class="ttdoc">Comparison operator</div><div class="ttdef"><b>Definition</b> ContactColliderList.h:111</div></div>
+<div class="ttc" id="aclass_c_contact_opponent_html_adf172abe1ec666df5cdb1baa0517646e"><div class="ttname"><a href="class_c_contact_opponent.html#adf172abe1ec666df5cdb1baa0517646e">CContactOpponent::CContactOpponent</a></div><div class="ttdeci">CContactOpponent(const CContactOpponent &amp;other)=default</div><div class="ttdoc">Copy constructor</div></div>
+<div class="ttc" id="aclass_c_contact_opponent_html_aee0dccde0b9e9eab6c062da36ebbc3da"><div class="ttname"><a href="class_c_contact_opponent.html#aee0dccde0b9e9eab6c062da36ebbc3da">CContactOpponent::IsNodeASelf</a></div><div class="ttdeci">bool IsNodeASelf() const</div><div class="ttdoc">Am I a node on the A side?</div><div class="ttdef"><b>Definition</b> ContactColliderList.cpp:79</div></div>
+<div class="ttc" id="aclass_c_contact_point_wrapper_html"><div class="ttname"><a href="class_c_contact_point_wrapper.html">CContactPointWrapper</a></div><div class="ttdoc">Wrapped classes to make it easier for users to handle collision point</div><div class="ttdef"><b>Definition</b> ContactColliderList.h:20</div></div>
+<div class="ttc" id="aclass_c_contact_point_wrapper_html_a5c201b7586ab3fae6ee971a4923ea5f0"><div class="ttname"><a href="class_c_contact_point_wrapper.html#a5c201b7586ab3fae6ee971a4923ea5f0">CContactPointWrapper::GetMidPoint</a></div><div class="ttdeci">Vector3f GetMidPoint()</div><div class="ttdoc">Get midpoint of contact point</div><div class="ttdef"><b>Definition</b> ContactColliderList.cpp:13</div></div>
+<div class="ttc" id="aclass_c_contact_point_wrapper_html_a5d22a8ea690fbf3bc3c53aa758ca050f"><div class="ttname"><a href="class_c_contact_point_wrapper.html#a5d22a8ea690fbf3bc3c53aa758ca050f">CContactPointWrapper::GetMyNormal</a></div><div class="ttdeci">Vector3f GetMyNormal()</div><div class="ttdoc">Get contact normal vector of my collider</div><div class="ttdef"><b>Definition</b> ContactColliderList.cpp:47</div></div>
+<div class="ttc" id="aclass_c_contact_point_wrapper_html_ab21776758769f68ea93e93d8cd33e441"><div class="ttname"><a href="class_c_contact_point_wrapper.html#ab21776758769f68ea93e93d8cd33e441">CContactPointWrapper::GetMyPoint</a></div><div class="ttdeci">Vector3f GetMyPoint()</div><div class="ttdoc">Get contact point of my collider</div><div class="ttdef"><b>Definition</b> ContactColliderList.cpp:21</div></div>
+<div class="ttc" id="aclass_c_contact_point_wrapper_html_ab2a5cbcefe854439c039450675a4d172"><div class="ttname"><a href="class_c_contact_point_wrapper.html#ab2a5cbcefe854439c039450675a4d172">CContactPointWrapper::IsHaving</a></div><div class="ttdeci">bool IsHaving()</div><div class="ttdoc">Does this class have a contact point?</div><div class="ttdef"><b>Definition</b> ContactColliderList.h:30</div></div>
+<div class="ttc" id="aclass_c_contact_point_wrapper_html_acc960b63d64b96b87b44faffd82ce7ef"><div class="ttname"><a href="class_c_contact_point_wrapper.html#acc960b63d64b96b87b44faffd82ce7ef">CContactPointWrapper::GetOpponentPoint</a></div><div class="ttdeci">Vector3f GetOpponentPoint()</div><div class="ttdoc">Get contact point of opponent collider</div><div class="ttdef"><b>Definition</b> ContactColliderList.cpp:34</div></div>
+<div class="ttc" id="aclass_c_contact_point_wrapper_html_aec5786ea9fe3b80195c3c2dca582213e"><div class="ttname"><a href="class_c_contact_point_wrapper.html#aec5786ea9fe3b80195c3c2dca582213e">CContactPointWrapper::GetOpponentNormal</a></div><div class="ttdeci">Vector3f GetOpponentNormal()</div><div class="ttdoc">Get contact normal vector of opponent collider</div><div class="ttdef"><b>Definition</b> ContactColliderList.cpp:60</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="anamespace_mkpe_html"><div class="ttname"><a href="namespace_mkpe.html">Mkpe</a></div><div class="ttdef"><b>Definition</b> BoudingVolume.h:14</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_contact_point_html"><div class="ttname"><a href="struct_mkpe_1_1_contact_point.html">Mkpe::ContactPoint</a></div><div class="ttdoc">Contact point structure</div><div class="ttdef"><b>Definition</b> ContactPoint.h:20</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair_html"><div class="ttname"><a href="struct_mkpe_1_1_dbvt_1_1_b_v_overlap_pair.html">Mkpe::Dbvt::BVOverlapPair</a></div><div class="ttdoc">Pair of bounding volumes in contact each other</div><div class="ttdef"><b>Definition</b> BVOverlapPair.h:20</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 3 &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

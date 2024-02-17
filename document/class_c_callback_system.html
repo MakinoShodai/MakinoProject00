@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CCallbackSystem クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_callback_system-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CCallbackSystem クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_callback_system_8h_source.html">CallbackSystem.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a82c1910016214c226c77dd64c221a777" id="r_a82c1910016214c226c77dd64c221a777"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_callback_system.html#a82c1910016214c226c77dd64c221a777">CCallbackSystem</a> ()</td></tr>
+<tr class="memdesc:a82c1910016214c226c77dd64c221a777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a82c1910016214c226c77dd64c221a777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9717405cb2149c80bb151771223cab4" id="r_af9717405cb2149c80bb151771223cab4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_callback_system.html#af9717405cb2149c80bb151771223cab4">~CCallbackSystem</a> ()=default</td></tr>
+<tr class="memdesc:af9717405cb2149c80bb151771223cab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:af9717405cb2149c80bb151771223cab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125b66bae6476874c8e1c998f0d1c436" id="r_a125b66bae6476874c8e1c998f0d1c436"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_callback_system.html#a125b66bae6476874c8e1c998f0d1c436">AddFunction</a> (const std::string &amp;callbackName, const <a class="el" href="_callback_system_8h.html#a97bd95a71064083c1f93c3a9573c61d9">CallbackFunctionType</a> &amp;callbackFunction)</td></tr>
+<tr class="memdesc:a125b66bae6476874c8e1c998f0d1c436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a callback function to the callback function group  <br /></td></tr>
+<tr class="separator:a125b66bae6476874c8e1c998f0d1c436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c960f55deef6a7acd517de203db4b7" id="r_a41c960f55deef6a7acd517de203db4b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_callback_system.html#a41c960f55deef6a7acd517de203db4b7">RemoveCurrentInvokeFunction</a> (const std::string &amp;callbackName)</td></tr>
+<tr class="memdesc:a41c960f55deef6a7acd517de203db4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the callback function that is currently being invoked  <br /></td></tr>
+<tr class="separator:a41c960f55deef6a7acd517de203db4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5ef7bf770e9b388aa9e3b06bb26050" id="r_a6e5ef7bf770e9b388aa9e3b06bb26050"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_callback_system.html#a6e5ef7bf770e9b388aa9e3b06bb26050">InvokeFunction</a> (const std::string &amp;callbackName)</td></tr>
+<tr class="memdesc:a6e5ef7bf770e9b388aa9e3b06bb26050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke callback functions group  <br /></td></tr>
+<tr class="separator:a6e5ef7bf770e9b388aa9e3b06bb26050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a82c1910016214c226c77dd64c221a777" name="a82c1910016214c226c77dd64c221a777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82c1910016214c226c77dd64c221a777">&#9670;&#160;</a></span>CCallbackSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CCallbackSystem::CCallbackSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="af9717405cb2149c80bb151771223cab4" name="af9717405cb2149c80bb151771223cab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9717405cb2149c80bb151771223cab4">&#9670;&#160;</a></span>~CCallbackSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CCallbackSystem::~CCallbackSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a125b66bae6476874c8e1c998f0d1c436" name="a125b66bae6476874c8e1c998f0d1c436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125b66bae6476874c8e1c998f0d1c436">&#9670;&#160;</a></span>AddFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCallbackSystem::AddFunction </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>callbackName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_callback_system_8h.html#a97bd95a71064083c1f93c3a9573c61d9">CallbackFunctionType</a> &amp;&#160;</td>
+          <td class="paramname"><em>callbackFunction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a callback function to the callback function group </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callbackName</td><td>Name of the callback function group to be added </td></tr>
+    <tr><td class="paramname">callbackFunction</td><td>The callback function to be added </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_callback_system_a125b66bae6476874c8e1c998f0d1c436_icgraph.png" border="0" usemap="#aclass_c_callback_system_a125b66bae6476874c8e1c998f0d1c436_icgraph" alt=""/></div>
+<map name="aclass_c_callback_system_a125b66bae6476874c8e1c998f0d1c436_icgraph" id="aclass_c_callback_system_a125b66bae6476874c8e1c998f0d1c436_icgraph">
+<area shape="rect" title="Add a callback function to the callback function group" alt="" coords="237,31,443,57"/>
+<area shape="rect" href="class_a_c_collider3_d.html#af039578b8e4159e4626febebd3a96056" title="Constructor" alt="" coords="5,5,189,32"/>
+<area shape="poly" title=" " alt="" coords="221,34,189,31,189,26,221,29"/>
+<area shape="rect" href="class_c_rigid_body.html#ae6c96bfddbcce724fc979deda6f185a4" title="Constructor" alt="" coords="14,56,180,83"/>
+<area shape="poly" title=" " alt="" coords="222,59,180,63,180,58,221,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6e5ef7bf770e9b388aa9e3b06bb26050" name="a6e5ef7bf770e9b388aa9e3b06bb26050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e5ef7bf770e9b388aa9e3b06bb26050">&#9670;&#160;</a></span>InvokeFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CCallbackSystem::InvokeFunction </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>callbackName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invoke callback functions group </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callbackName</td><td>Name of the callback function group to be invoked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Successful invoking? </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_callback_system_a6e5ef7bf770e9b388aa9e3b06bb26050_icgraph.png" border="0" usemap="#aclass_c_callback_system_a6e5ef7bf770e9b388aa9e3b06bb26050_icgraph" alt=""/></div>
+<map name="aclass_c_callback_system_a6e5ef7bf770e9b388aa9e3b06bb26050_icgraph" id="aclass_c_callback_system_a6e5ef7bf770e9b388aa9e3b06bb26050_icgraph">
+<area shape="rect" title="Invoke callback functions group" alt="" coords="229,56,448,83"/>
+<area shape="rect" href="class_c_rigid_body.html#aff76c36313cdffb15bbdb8bcf918c05a" title="Awake processing" alt="" coords="25,5,161,32"/>
+<area shape="poly" title=" " alt="" coords="255,55,161,35,162,30,256,50"/>
+<area shape="rect" href="class_c_rigid_body.html#ae6c96bfddbcce724fc979deda6f185a4" title="Constructor" alt="" coords="10,56,176,83"/>
+<area shape="poly" title=" " alt="" coords="213,72,176,72,176,67,213,67"/>
+<area shape="rect" href="class_c_rigid_body.html#aaae104a70e5cab6749ff89ce9b450084" title="Set rigid body type" alt="" coords="5,107,181,133"/>
+<area shape="poly" title=" " alt="" coords="256,89,162,109,161,103,255,84"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a41c960f55deef6a7acd517de203db4b7" name="a41c960f55deef6a7acd517de203db4b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41c960f55deef6a7acd517de203db4b7">&#9670;&#160;</a></span>RemoveCurrentInvokeFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCallbackSystem::RemoveCurrentInvokeFunction </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>callbackName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove the callback function that is currently being invoked </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callbackName</td><td>Name of the callback function group to be removed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>The invoking function itself should call this function </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_callback_system_8h_source.html">CallbackSystem.h</a></li>
+<li><a class="el" href="_callback_system_8cpp.html">CallbackSystem.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

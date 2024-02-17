@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: StaticCbDirLightParam.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">StaticCbDirLightParam.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_static_cb_dir_light_param_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __STATIC_CB_DIR_LIGHT_PARAM_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __STATIC_CB_DIR_LIGHT_PARAM_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_static_cb_allocator_8h.html">StaticCbAllocator.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_directional_light_8h.html">DirectionalLight.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_static_cb_light_v_p_mat_8h.html">StaticCbLightVPMat.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_light_registry_8h.html">LightRegistry.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_dir_light_param.html">   18</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_dir_light_param.html">DirLightParam</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_dir_light_param.html#ada34b465e3fec68159c0303e8835884e">   20</a></span>    <a class="code hl_class" href="struct_vector.html">Colorf</a> <a class="code hl_variable" href="struct_dir_light_param.html#ada34b465e3fec68159c0303e8835884e">lightColor</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_dir_light_param.html#aa02071d5c46d17c5a69d68541c3eb500">   22</a></span>    <a class="code hl_class" href="struct_vector.html">Colorf</a> <a class="code hl_variable" href="struct_dir_light_param.html#aa02071d5c46d17c5a69d68541c3eb500">ambientColor</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_dir_light_param.html#af53eb059535f101db64cac0ad84e9223">   24</a></span>    <a class="code hl_class" href="struct_vector.html">Vector4f</a> <a class="code hl_variable" href="struct_dir_light_param.html#af53eb059535f101db64cac0ad84e9223">lightDir</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_dir_light_param.html#a579092fc9dc13a59ddb9c8775b3200e0">   26</a></span>    <a class="code hl_class" href="struct_vector.html">Vector4f</a> <a class="code hl_variable" href="struct_dir_light_param.html#a579092fc9dc13a59ddb9c8775b3200e0">cameraPos</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_dir_light_param.html#abad0b969cc1846854f6d5d78f3c3e024">   28</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_dir_light_param.html#abad0b969cc1846854f6d5d78f3c3e024">cascadeEndZ</a>[4];</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_dir_light_param.html#a005e5e6b4cf69b7d5887809c05ec5efc">   30</a></span>    DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_dir_light_param.html#a005e5e6b4cf69b7d5887809c05ec5efc">entireShadowVPMatrix</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_dir_light_param.html#ae77f62d02919544a157f01fc8cc1bae6">   32</a></span>    <a class="code hl_class" href="struct_vector.html">Vector4f</a> <a class="code hl_variable" href="struct_dir_light_param.html#ae77f62d02919544a157f01fc8cc1bae6">cascadeOffsets</a>[<a class="code hl_variable" href="_static_cb_light_v_p_mat_8h.html#a8a2aad25cb21ca64b5757955d4f6027f">CASCADE_NUM</a>];</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_dir_light_param.html#a7ff1bf83273db300745e008ed04871fe">   34</a></span>    <a class="code hl_class" href="struct_vector.html">Vector4f</a> <a class="code hl_variable" href="struct_dir_light_param.html#a7ff1bf83273db300745e008ed04871fe">cascadeScales</a>[<a class="code hl_variable" href="_static_cb_light_v_p_mat_8h.html#a8a2aad25cb21ca64b5757955d4f6027f">CASCADE_NUM</a>];</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_dir_light_param.html#ad5454357f2c4b51ea45433a9872b73ad">   36</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_dir_light_param.html#ad5454357f2c4b51ea45433a9872b73ad">intensity</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_dir_light_param.html#a713ea4c3585d4e39d2944fb10c4e1b48">   38</a></span>    UINT <a class="code hl_variable" href="struct_dir_light_param.html#a713ea4c3585d4e39d2944fb10c4e1b48">pointLightsNum</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_static_cb_dir_light_param.html">   42</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_static_cb_dir_light_param.html">CStaticCbDirLightParam</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_static_cb_allocator.html">ACStaticCbAllocator</a>&lt;DirLightParam&gt; {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_static_cb_dir_light_param.html#a18eda2f4fe88612fb4b1100096b87e98">   45</a></span>    <a class="code hl_function" href="class_c_static_cb_dir_light_param.html#a18eda2f4fe88612fb4b1100096b87e98">CStaticCbDirLightParam</a>() : <a class="code hl_class" href="class_a_c_static_cb_allocator.html">ACStaticCbAllocator</a>(<span class="stringliteral">&quot;DirLightParam&quot;</span>) {}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_static_cb_dir_light_param.html#a32fc8aab1f089b1dcc8e6d00df3d1aec">Start</a>(<a class="code hl_class" href="class_c_scene.html">CScene</a>* scene) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_static_cb_dir_light_param.html#a2d3071e94857c5e23753dfb87c7373b1">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_static_cb_dir_light_param.html#a2d3071e94857c5e23753dfb87c7373b1">SetLightVPCalculater</a>(<a class="code hl_class" href="class_c_shared_ptr.html">CSharedPtr&lt;CLightVPCalculator&gt;</a> calculater) { m_lightVPCaculator = calculater; }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_static_cb_dir_light_param.html#a22486d5d786dc04ff3d5391493c60c0f">AllocateData</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CLightRegistry&gt;</a> m_lightRegistry;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_class" href="class_c_shared_ptr.html">CSharedPtr&lt;CLightVPCalculator&gt;</a> m_lightVPCaculator;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif </span><span class="comment">// !__STATIC_CB_DIR_LIGHT_PARAM_H__</span></div>
+<div class="ttc" id="a_directional_light_8h_html"><div class="ttname"><a href="_directional_light_8h.html">DirectionalLight.h</a></div><div class="ttdoc">This file handles component and object for directional light.</div></div>
+<div class="ttc" id="a_light_registry_8h_html"><div class="ttname"><a href="_light_registry_8h.html">LightRegistry.h</a></div><div class="ttdoc">This file handles registry for lights.</div></div>
+<div class="ttc" id="a_static_cb_allocator_8h_html"><div class="ttname"><a href="_static_cb_allocator_8h.html">StaticCbAllocator.h</a></div><div class="ttdoc">This file handles abstract class of static constant buffer that don't need to be updated on a per-obj...</div></div>
+<div class="ttc" id="a_static_cb_light_v_p_mat_8h_html"><div class="ttname"><a href="_static_cb_light_v_p_mat_8h.html">StaticCbLightVPMat.h</a></div><div class="ttdoc">This file handles the static CB allocater of the light's view projection matrix.</div></div>
+<div class="ttc" id="a_static_cb_light_v_p_mat_8h_html_a8a2aad25cb21ca64b5757955d4f6027f"><div class="ttname"><a href="_static_cb_light_v_p_mat_8h.html#a8a2aad25cb21ca64b5757955d4f6027f">CASCADE_NUM</a></div><div class="ttdeci">const UINT CASCADE_NUM</div><div class="ttdoc">Number of cascade shadow map</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:18</div></div>
+<div class="ttc" id="aclass_a_c_static_cb_allocator_html"><div class="ttname"><a href="class_a_c_static_cb_allocator.html">ACStaticCbAllocator</a></div><div class="ttdoc">This class allocates data for constant buffer view that don't need to be updated on a per-object basi...</div><div class="ttdef"><b>Definition</b> StaticCbAllocator.h:20</div></div>
+<div class="ttc" id="aclass_c_scene_html"><div class="ttname"><a href="class_c_scene.html">CScene</a></div><div class="ttdoc">Scene class</div><div class="ttdef"><b>Definition</b> Scene.h:25</div></div>
+<div class="ttc" id="aclass_c_shared_ptr_html"><div class="ttname"><a href="class_c_shared_ptr.html">CSharedPtr</a></div><div class="ttdoc">Self-made shared pointer class</div><div class="ttdef"><b>Definition</b> SharedPtr.h:16</div></div>
+<div class="ttc" id="aclass_c_static_cb_dir_light_param_html"><div class="ttname"><a href="class_c_static_cb_dir_light_param.html">CStaticCbDirLightParam</a></div><div class="ttdoc">Static CB allocater class for parameter of directional light</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:42</div></div>
+<div class="ttc" id="aclass_c_static_cb_dir_light_param_html_a18eda2f4fe88612fb4b1100096b87e98"><div class="ttname"><a href="class_c_static_cb_dir_light_param.html#a18eda2f4fe88612fb4b1100096b87e98">CStaticCbDirLightParam::CStaticCbDirLightParam</a></div><div class="ttdeci">CStaticCbDirLightParam()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:45</div></div>
+<div class="ttc" id="aclass_c_static_cb_dir_light_param_html_a22486d5d786dc04ff3d5391493c60c0f"><div class="ttname"><a href="class_c_static_cb_dir_light_param.html#a22486d5d786dc04ff3d5391493c60c0f">CStaticCbDirLightParam::AllocateData</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData() override</div><div class="ttdoc">Allocate data</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.cpp:10</div></div>
+<div class="ttc" id="aclass_c_static_cb_dir_light_param_html_a2d3071e94857c5e23753dfb87c7373b1"><div class="ttname"><a href="class_c_static_cb_dir_light_param.html#a2d3071e94857c5e23753dfb87c7373b1">CStaticCbDirLightParam::SetLightVPCalculater</a></div><div class="ttdeci">void SetLightVPCalculater(CSharedPtr&lt; CLightVPCalculator &gt; calculater)</div><div class="ttdoc">Set class for computing all light-view projection matrices</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:51</div></div>
+<div class="ttc" id="aclass_c_static_cb_dir_light_param_html_a32fc8aab1f089b1dcc8e6d00df3d1aec"><div class="ttname"><a href="class_c_static_cb_dir_light_param.html#a32fc8aab1f089b1dcc8e6d00df3d1aec">CStaticCbDirLightParam::Start</a></div><div class="ttdeci">void Start(CScene *scene) override</div><div class="ttdoc">Scene start processing</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.cpp:5</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="astruct_dir_light_param_html"><div class="ttname"><a href="struct_dir_light_param.html">DirLightParam</a></div><div class="ttdoc">Parameter for directional light in hlsl</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:18</div></div>
+<div class="ttc" id="astruct_dir_light_param_html_a005e5e6b4cf69b7d5887809c05ec5efc"><div class="ttname"><a href="struct_dir_light_param.html#a005e5e6b4cf69b7d5887809c05ec5efc">DirLightParam::entireShadowVPMatrix</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 entireShadowVPMatrix</div><div class="ttdoc">Shadow camera view projection matrix of the entire cascade</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:30</div></div>
+<div class="ttc" id="astruct_dir_light_param_html_a579092fc9dc13a59ddb9c8775b3200e0"><div class="ttname"><a href="struct_dir_light_param.html#a579092fc9dc13a59ddb9c8775b3200e0">DirLightParam::cameraPos</a></div><div class="ttdeci">Vector4f cameraPos</div><div class="ttdoc">Position of camera</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:26</div></div>
+<div class="ttc" id="astruct_dir_light_param_html_a713ea4c3585d4e39d2944fb10c4e1b48"><div class="ttname"><a href="struct_dir_light_param.html#a713ea4c3585d4e39d2944fb10c4e1b48">DirLightParam::pointLightsNum</a></div><div class="ttdeci">UINT pointLightsNum</div><div class="ttdoc">The number of point lights</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:38</div></div>
+<div class="ttc" id="astruct_dir_light_param_html_a7ff1bf83273db300745e008ed04871fe"><div class="ttname"><a href="struct_dir_light_param.html#a7ff1bf83273db300745e008ed04871fe">DirLightParam::cascadeScales</a></div><div class="ttdeci">Vector4f cascadeScales[CASCADE_NUM]</div><div class="ttdoc">Scales after applying the shadow matrix to the object's vertices for each cascades</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:34</div></div>
+<div class="ttc" id="astruct_dir_light_param_html_aa02071d5c46d17c5a69d68541c3eb500"><div class="ttname"><a href="struct_dir_light_param.html#aa02071d5c46d17c5a69d68541c3eb500">DirLightParam::ambientColor</a></div><div class="ttdeci">Colorf ambientColor</div><div class="ttdoc">Ambient color</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:22</div></div>
+<div class="ttc" id="astruct_dir_light_param_html_abad0b969cc1846854f6d5d78f3c3e024"><div class="ttname"><a href="struct_dir_light_param.html#abad0b969cc1846854f6d5d78f3c3e024">DirLightParam::cascadeEndZ</a></div><div class="ttdeci">float cascadeEndZ[4]</div><div class="ttdoc">Endpoint position of each cascade Z in the projection space</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:28</div></div>
+<div class="ttc" id="astruct_dir_light_param_html_ad5454357f2c4b51ea45433a9872b73ad"><div class="ttname"><a href="struct_dir_light_param.html#ad5454357f2c4b51ea45433a9872b73ad">DirLightParam::intensity</a></div><div class="ttdeci">float intensity</div><div class="ttdoc">Intensity of this light</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:36</div></div>
+<div class="ttc" id="astruct_dir_light_param_html_ada34b465e3fec68159c0303e8835884e"><div class="ttname"><a href="struct_dir_light_param.html#ada34b465e3fec68159c0303e8835884e">DirLightParam::lightColor</a></div><div class="ttdeci">Colorf lightColor</div><div class="ttdoc">Color of directional light</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:20</div></div>
+<div class="ttc" id="astruct_dir_light_param_html_ae77f62d02919544a157f01fc8cc1bae6"><div class="ttname"><a href="struct_dir_light_param.html#ae77f62d02919544a157f01fc8cc1bae6">DirLightParam::cascadeOffsets</a></div><div class="ttdeci">Vector4f cascadeOffsets[CASCADE_NUM]</div><div class="ttdoc">Offsets after applying the shadow matrix to the object's vertices for each cascades</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:32</div></div>
+<div class="ttc" id="astruct_dir_light_param_html_af53eb059535f101db64cac0ad84e9223"><div class="ttname"><a href="struct_dir_light_param.html#af53eb059535f101db64cac0ad84e9223">DirLightParam::lightDir</a></div><div class="ttdeci">Vector4f lightDir</div><div class="ttdoc">Direction vector of diretional light</div><div class="ttdef"><b>Definition</b> StaticCbDirLightParam.h:24</div></div>
+<div class="ttc" id="astruct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e_html"><div class="ttname"><a href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a></div><div class="ttdoc">D3D12_CPU_DESCRIPTOR_HANDLE interface</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:68</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 4 &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

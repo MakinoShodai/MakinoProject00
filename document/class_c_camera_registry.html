@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CCameraRegistry クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_camera_registry-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CCameraRegistry クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Registry class that manages all cameras in a scene  
+ <a href="class_c_camera_registry.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_camera_registry_8h_source.html">CameraRegistry.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a070d10e5574e5e87918e2a27ba1c038f" id="r_a070d10e5574e5e87918e2a27ba1c038f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_registry.html#a070d10e5574e5e87918e2a27ba1c038f">CCameraRegistry</a> ()=default</td></tr>
+<tr class="memdesc:a070d10e5574e5e87918e2a27ba1c038f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a070d10e5574e5e87918e2a27ba1c038f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f050c8a2de6d1dc76ce97ca1aaa2297" id="r_a8f050c8a2de6d1dc76ce97ca1aaa2297"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_registry.html#a8f050c8a2de6d1dc76ce97ca1aaa2297">~CCameraRegistry</a> ()=default</td></tr>
+<tr class="memdesc:a8f050c8a2de6d1dc76ce97ca1aaa2297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a8f050c8a2de6d1dc76ce97ca1aaa2297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57a2a76aa24d4eee4d9e70fe2496076" id="r_ab57a2a76aa24d4eee4d9e70fe2496076"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_registry.html#ab57a2a76aa24d4eee4d9e70fe2496076">EndUpdate</a> ()</td></tr>
+<tr class="memdesc:ab57a2a76aa24d4eee4d9e70fe2496076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing at the end of the update process  <br /></td></tr>
+<tr class="separator:ab57a2a76aa24d4eee4d9e70fe2496076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57406771917a1ee371ad26353607da9a" id="r_a57406771917a1ee371ad26353607da9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_camera_component.html">CCameraComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_registry.html#a57406771917a1ee371ad26353607da9a">GetCameraPriority</a> () const</td></tr>
+<tr class="memdesc:a57406771917a1ee371ad26353607da9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a camera with highest priority  <br /></td></tr>
+<tr class="separator:a57406771917a1ee371ad26353607da9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67f64d021ba30d3006eafe15b6ecf5cb" id="r_a67f64d021ba30d3006eafe15b6ecf5cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_camera_component.html">CCameraComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_registry.html#a67f64d021ba30d3006eafe15b6ecf5cb">GetCameraName</a> (const std::wstring &amp;name) const</td></tr>
+<tr class="memdesc:a67f64d021ba30d3006eafe15b6ecf5cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a camera with the same name as the specified name  <br /></td></tr>
+<tr class="separator:a67f64d021ba30d3006eafe15b6ecf5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80fca4a34cc123c5b226575c019deeb6" id="r_a80fca4a34cc123c5b226575c019deeb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_registry.html#a80fca4a34cc123c5b226575c019deeb6">AddCamera</a> (<a class="el" href="class_c_camera_component.html">CCameraComponent</a> *camera)</td></tr>
+<tr class="memdesc:a80fca4a34cc123c5b226575c019deeb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a camera to the registry  <br /></td></tr>
+<tr class="separator:a80fca4a34cc123c5b226575c019deeb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091714e48017e60883f082f531c92670" id="r_a091714e48017e60883f082f531c92670"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_registry.html#a091714e48017e60883f082f531c92670">RemoveCamera</a> (<a class="el" href="class_c_camera_component.html">CCameraComponent</a> *camera)</td></tr>
+<tr class="memdesc:a091714e48017e60883f082f531c92670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a camera from the registry  <br /></td></tr>
+<tr class="separator:a091714e48017e60883f082f531c92670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Registry class that manages all cameras in a scene </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a070d10e5574e5e87918e2a27ba1c038f" name="a070d10e5574e5e87918e2a27ba1c038f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a070d10e5574e5e87918e2a27ba1c038f">&#9670;&#160;</a></span>CCameraRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CCameraRegistry::CCameraRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="a8f050c8a2de6d1dc76ce97ca1aaa2297" name="a8f050c8a2de6d1dc76ce97ca1aaa2297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f050c8a2de6d1dc76ce97ca1aaa2297">&#9670;&#160;</a></span>~CCameraRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CCameraRegistry::~CCameraRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a80fca4a34cc123c5b226575c019deeb6" name="a80fca4a34cc123c5b226575c019deeb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80fca4a34cc123c5b226575c019deeb6">&#9670;&#160;</a></span>AddCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraRegistry::AddCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_camera_component.html">CCameraComponent</a> *&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a camera to the registry </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>Camera to be added </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_camera_registry_a80fca4a34cc123c5b226575c019deeb6_cgraph.png" border="0" usemap="#aclass_c_camera_registry_a80fca4a34cc123c5b226575c019deeb6_cgraph" alt=""/></div>
+<map name="aclass_c_camera_registry_a80fca4a34cc123c5b226575c019deeb6_cgraph" id="aclass_c_camera_registry_a80fca4a34cc123c5b226575c019deeb6_cgraph">
+<area shape="rect" title="Add a camera to the registry" alt="" coords="5,13,205,40"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html#aa549f0fbf364d84137496a7eed607bb5" title="Get weak pointer from this class" alt="" coords="253,5,405,48"/>
+<area shape="poly" title=" " alt="" coords="205,24,237,24,237,29,205,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab57a2a76aa24d4eee4d9e70fe2496076" name="ab57a2a76aa24d4eee4d9e70fe2496076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57a2a76aa24d4eee4d9e70fe2496076">&#9670;&#160;</a></span>EndUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraRegistry::EndUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processing at the end of the update process </p>
+
+</div>
+</div>
+<a id="a67f64d021ba30d3006eafe15b6ecf5cb" name="a67f64d021ba30d3006eafe15b6ecf5cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67f64d021ba30d3006eafe15b6ecf5cb">&#9670;&#160;</a></span>GetCameraName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_camera_component.html">CCameraComponent</a> &gt; CCameraRegistry::GetCameraName </td>
+          <td>(</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a camera with the same name as the specified name </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name to be searched </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Weak pointer to camera component </dd></dl>
+
+</div>
+</div>
+<a id="a57406771917a1ee371ad26353607da9a" name="a57406771917a1ee371ad26353607da9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57406771917a1ee371ad26353607da9a">&#9670;&#160;</a></span>GetCameraPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_camera_component.html">CCameraComponent</a> &gt; CCameraRegistry::GetCameraPriority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a camera with highest priority </p>
+<dl class="section return"><dt>戻り値</dt><dd>Weak pointer to camera component </dd></dl>
+
+</div>
+</div>
+<a id="a091714e48017e60883f082f531c92670" name="a091714e48017e60883f082f531c92670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a091714e48017e60883f082f531c92670">&#9670;&#160;</a></span>RemoveCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCameraRegistry::RemoveCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_camera_component.html">CCameraComponent</a> *&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a camera from the registry </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>Camera to be removed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_camera_registry_8h_source.html">CameraRegistry.h</a></li>
+<li><a class="el" href="_camera_registry_8cpp.html">CameraRegistry.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

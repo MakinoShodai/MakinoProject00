@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: StaticCbLightVPMat.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">StaticCbLightVPMat.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_static_cb_light_v_p_mat_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __STATIC_CB_LIGHT_VP_MAT_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __STATIC_CB_LIGHT_VP_MAT_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_static_cb_allocator_8h.html">StaticCbAllocator.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_directional_light_8h.html">DirectionalLight.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_shared_ptr_8h.html">SharedPtr.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_light_registry_8h.html">LightRegistry.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="_static_cb_light_v_p_mat_8h.html#a8a2aad25cb21ca64b5757955d4f6027f">   18</a></span><span class="keyword">const</span> UINT <a class="code hl_variable" href="_static_cb_light_v_p_mat_8h.html#a8a2aad25cb21ca64b5757955d4f6027f">CASCADE_NUM</a> = 3;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_static_cb_light_v_p_mat_8h.html#a822062bc54f3ab968083baeba50d9b52">   21</a></span><span class="keyword">const</span> UINT <a class="code hl_variable" href="_static_cb_light_v_p_mat_8h.html#a822062bc54f3ab968083baeba50d9b52">SHADOWMAP_SIZE</a> = 2048;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_all_light_v_p.html">   24</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_all_light_v_p.html">AllLightVP</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_all_light_v_p.html#a5770ef16cb1a56ea43a37cb8e5dd20dc">   26</a></span>    DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_all_light_v_p.html#a5770ef16cb1a56ea43a37cb8e5dd20dc">m_cascadeVPMatrices</a>[<a class="code hl_variable" href="_static_cb_light_v_p_mat_8h.html#a8a2aad25cb21ca64b5757955d4f6027f">CASCADE_NUM</a>];</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_c_light_v_p_calculator.html">   30</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_light_v_p_calculator.html">CLightVPCalculator</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_function" href="class_c_light_v_p_calculator.html#aaf2bc93bcea970f9abd706850a87e453">CLightVPCalculator</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_c_light_v_p_calculator.html#a0e27cc32be514132ec96ecb4c294d888">   38</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_light_v_p_calculator.html#a0e27cc32be514132ec96ecb4c294d888">SetLightRegistry</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CLightRegistry&gt;</a> lightRegistry) { m_lightRegistry = lightRegistry; }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_all_light_v_p.html">AllLightVP</a>* <a class="code hl_function" href="class_c_light_v_p_calculator.html#ae6a4472d7b512277a57110629a5412dd">Calculate</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_light_v_p_calculator.html#a438112276c7d040d929d21ab553d9c07">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_light_v_p_calculator.html#a438112276c7d040d929d21ab553d9c07">SetCascadeEndZ</a>(<span class="keywordtype">float</span> firstEnd, <span class="keywordtype">float</span> secondEnd) { m_cascadeSplitVals[1] = firstEnd; m_cascadeSplitVals[2] = secondEnd; }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_light_v_p_calculator.html#a1c154621fa5fef10777800f3e94e15f7">   56</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_light_v_p_calculator.html#a1c154621fa5fef10777800f3e94e15f7">ResetCalculated</a>() { m_isCalculated = <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_light_v_p_calculator.html#ac949ea12d76e9b9d99feed921774f48c">   59</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_c_light_v_p_calculator.html#ac949ea12d76e9b9d99feed921774f48c">GetCascadeEndZ</a>(UINT index) { <span class="keywordflow">return</span> m_cascadeSplitsPassShader[index]; }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_light_v_p_calculator.html#a4f21f55f97d40a0b24f2ac741417dc3f">   62</a></span>    <span class="keyword">const</span> DirectX::XMFLOAT4X4&amp; <a class="code hl_function" href="class_c_light_v_p_calculator.html#a4f21f55f97d40a0b24f2ac741417dc3f">GetShadowMatrix</a>() { <span class="keywordflow">return</span> m_entireShadowMatrix; }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_c_light_v_p_calculator.html#a50a6ee714779543c05b802f834bb2b91">   64</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector4f</a>&amp; <a class="code hl_function" href="class_c_light_v_p_calculator.html#a50a6ee714779543c05b802f834bb2b91">GetCascadeOffset</a>(UINT index) { <span class="keywordflow">return</span> m_cascadeOffsets[index]; }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_c_light_v_p_calculator.html#a1df74ff5b02ffb59f0d9d8aaa6bc33b8">   66</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector4f</a>&amp; <a class="code hl_function" href="class_c_light_v_p_calculator.html#a1df74ff5b02ffb59f0d9d8aaa6bc33b8">GetCascadeScale</a>(UINT index) { <span class="keywordflow">return</span> m_cascadeScales[index]; }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> CalculateShadowMatrix(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; lightDir, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>* frustumCorners, <span class="keyword">const</span> DirectX::XMMATRIX&amp; toUVSpaceMatrix, DirectX::XMMATRIX* entireShadowMatrix);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;CLightRegistry&gt;</a> m_lightRegistry;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_struct" href="struct_all_light_v_p.html">AllLightVP</a> m_lightVPs;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">bool</span> m_isCalculated;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">float</span> m_cascadeSplitVals[<a class="code hl_variable" href="_static_cb_light_v_p_mat_8h.html#a8a2aad25cb21ca64b5757955d4f6027f">CASCADE_NUM</a>];</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">float</span> m_cascadeSplitsPassShader[<a class="code hl_variable" href="_static_cb_light_v_p_mat_8h.html#a8a2aad25cb21ca64b5757955d4f6027f">CASCADE_NUM</a>];</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    DirectX::XMFLOAT4X4 m_entireShadowMatrix;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_class" href="struct_vector.html">Vector4f</a> m_cascadeOffsets[<a class="code hl_variable" href="_static_cb_light_v_p_mat_8h.html#a8a2aad25cb21ca64b5757955d4f6027f">CASCADE_NUM</a>];</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_class" href="struct_vector.html">Vector4f</a> m_cascadeScales[<a class="code hl_variable" href="_static_cb_light_v_p_mat_8h.html#a8a2aad25cb21ca64b5757955d4f6027f">CASCADE_NUM</a>];</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="};">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_c_static_cb_light_v_p.html">   98</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_static_cb_light_v_p.html">CStaticCbLightVP</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_static_cb_allocator.html">ACStaticCbAllocator</a>&lt;DirectX::XMFLOAT4X4&gt; {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_function" href="class_c_static_cb_light_v_p.html#a5c9a70a72ceefda40e56d44d12904c1a">CStaticCbLightVP</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_static_cb_light_v_p.html#a65e0ad15861b1ec11a43194a4a8b02a0">Start</a>(<a class="code hl_class" href="class_c_scene.html">CScene</a>* scene) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_static_cb_light_v_p.html#af5a7b649622f2e5242464c42b1a19eb1">Advance</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_static_cb_light_v_p.html#a6d113cd6233bd55c9759ced1920c4347">AllocateData</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_static_cb_light_v_p.html#ad38b64899d2fbdb99b3a4ccb3c58e56c">RefreshDerived</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_c_static_cb_light_v_p.html#affb1b9fe5f34eddc857bcaf1cb759c11">  121</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_static_cb_light_v_p.html#affb1b9fe5f34eddc857bcaf1cb759c11">IsAdvanceNextAllocate</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> m_isAdvance; }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_class" href="class_c_shared_ptr.html">CSharedPtr&lt;CLightVPCalculator&gt;</a> m_lightVPCaculator;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    UINT m_cascadesIndex;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">bool</span> m_isAdvance;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>};</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#endif </span><span class="comment">// !__STATIC_CB_LIGHT_VP_MAT_H__</span></div>
+<div class="ttc" id="a_directional_light_8h_html"><div class="ttname"><a href="_directional_light_8h.html">DirectionalLight.h</a></div><div class="ttdoc">This file handles component and object for directional light.</div></div>
+<div class="ttc" id="a_light_registry_8h_html"><div class="ttname"><a href="_light_registry_8h.html">LightRegistry.h</a></div><div class="ttdoc">This file handles registry for lights.</div></div>
+<div class="ttc" id="a_shared_ptr_8h_html"><div class="ttname"><a href="_shared_ptr_8h.html">SharedPtr.h</a></div><div class="ttdoc">This file handles self-made shared pointer.</div></div>
+<div class="ttc" id="a_static_cb_allocator_8h_html"><div class="ttname"><a href="_static_cb_allocator_8h.html">StaticCbAllocator.h</a></div><div class="ttdoc">This file handles abstract class of static constant buffer that don't need to be updated on a per-obj...</div></div>
+<div class="ttc" id="a_static_cb_light_v_p_mat_8h_html_a822062bc54f3ab968083baeba50d9b52"><div class="ttname"><a href="_static_cb_light_v_p_mat_8h.html#a822062bc54f3ab968083baeba50d9b52">SHADOWMAP_SIZE</a></div><div class="ttdeci">const UINT SHADOWMAP_SIZE</div><div class="ttdoc">Pixel size of shadow map</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:21</div></div>
+<div class="ttc" id="a_static_cb_light_v_p_mat_8h_html_a8a2aad25cb21ca64b5757955d4f6027f"><div class="ttname"><a href="_static_cb_light_v_p_mat_8h.html#a8a2aad25cb21ca64b5757955d4f6027f">CASCADE_NUM</a></div><div class="ttdeci">const UINT CASCADE_NUM</div><div class="ttdoc">Number of cascade shadow map</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:18</div></div>
+<div class="ttc" id="aclass_a_c_static_cb_allocator_html"><div class="ttname"><a href="class_a_c_static_cb_allocator.html">ACStaticCbAllocator</a></div><div class="ttdoc">This class allocates data for constant buffer view that don't need to be updated on a per-object basi...</div><div class="ttdef"><b>Definition</b> StaticCbAllocator.h:20</div></div>
+<div class="ttc" id="aclass_c_light_v_p_calculator_html"><div class="ttname"><a href="class_c_light_v_p_calculator.html">CLightVPCalculator</a></div><div class="ttdoc">Class for computing all light-view projection matrices</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:30</div></div>
+<div class="ttc" id="aclass_c_light_v_p_calculator_html_a0e27cc32be514132ec96ecb4c294d888"><div class="ttname"><a href="class_c_light_v_p_calculator.html#a0e27cc32be514132ec96ecb4c294d888">CLightVPCalculator::SetLightRegistry</a></div><div class="ttdeci">void SetLightRegistry(CWeakPtr&lt; CLightRegistry &gt; lightRegistry)</div><div class="ttdoc">Set light registry</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:38</div></div>
+<div class="ttc" id="aclass_c_light_v_p_calculator_html_a1c154621fa5fef10777800f3e94e15f7"><div class="ttname"><a href="class_c_light_v_p_calculator.html#a1c154621fa5fef10777800f3e94e15f7">CLightVPCalculator::ResetCalculated</a></div><div class="ttdeci">void ResetCalculated()</div><div class="ttdoc">Reset calculated flag</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:56</div></div>
+<div class="ttc" id="aclass_c_light_v_p_calculator_html_a1df74ff5b02ffb59f0d9d8aaa6bc33b8"><div class="ttname"><a href="class_c_light_v_p_calculator.html#a1df74ff5b02ffb59f0d9d8aaa6bc33b8">CLightVPCalculator::GetCascadeScale</a></div><div class="ttdeci">const Vector4f &amp; GetCascadeScale(UINT index)</div><div class="ttdoc">Get the scale after applying the shadow matrix to the object's vertices</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:66</div></div>
+<div class="ttc" id="aclass_c_light_v_p_calculator_html_a438112276c7d040d929d21ab553d9c07"><div class="ttname"><a href="class_c_light_v_p_calculator.html#a438112276c7d040d929d21ab553d9c07">CLightVPCalculator::SetCascadeEndZ</a></div><div class="ttdeci">void SetCascadeEndZ(float firstEnd, float secondEnd)</div><div class="ttdoc">Set local endpoint position of each cascade Z</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:51</div></div>
+<div class="ttc" id="aclass_c_light_v_p_calculator_html_a4f21f55f97d40a0b24f2ac741417dc3f"><div class="ttname"><a href="class_c_light_v_p_calculator.html#a4f21f55f97d40a0b24f2ac741417dc3f">CLightVPCalculator::GetShadowMatrix</a></div><div class="ttdeci">const DirectX::XMFLOAT4X4 &amp; GetShadowMatrix()</div><div class="ttdoc">Get the shadow camera view projection matrix of the entire frustum</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:62</div></div>
+<div class="ttc" id="aclass_c_light_v_p_calculator_html_a50a6ee714779543c05b802f834bb2b91"><div class="ttname"><a href="class_c_light_v_p_calculator.html#a50a6ee714779543c05b802f834bb2b91">CLightVPCalculator::GetCascadeOffset</a></div><div class="ttdeci">const Vector4f &amp; GetCascadeOffset(UINT index)</div><div class="ttdoc">Get the offset after applying the shadow matrix to the object's vertices</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:64</div></div>
+<div class="ttc" id="aclass_c_light_v_p_calculator_html_aaf2bc93bcea970f9abd706850a87e453"><div class="ttname"><a href="class_c_light_v_p_calculator.html#aaf2bc93bcea970f9abd706850a87e453">CLightVPCalculator::CLightVPCalculator</a></div><div class="ttdeci">CLightVPCalculator()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.cpp:19</div></div>
+<div class="ttc" id="aclass_c_light_v_p_calculator_html_ac949ea12d76e9b9d99feed921774f48c"><div class="ttname"><a href="class_c_light_v_p_calculator.html#ac949ea12d76e9b9d99feed921774f48c">CLightVPCalculator::GetCascadeEndZ</a></div><div class="ttdeci">float GetCascadeEndZ(UINT index)</div><div class="ttdoc">Get local startpoint position and endpoint position of each cascade Z</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:59</div></div>
+<div class="ttc" id="aclass_c_light_v_p_calculator_html_ae6a4472d7b512277a57110629a5412dd"><div class="ttname"><a href="class_c_light_v_p_calculator.html#ae6a4472d7b512277a57110629a5412dd">CLightVPCalculator::Calculate</a></div><div class="ttdeci">const AllLightVP * Calculate()</div><div class="ttdoc">Calculate all light view projection matrices and return it</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.cpp:34</div></div>
+<div class="ttc" id="aclass_c_scene_html"><div class="ttname"><a href="class_c_scene.html">CScene</a></div><div class="ttdoc">Scene class</div><div class="ttdef"><b>Definition</b> Scene.h:25</div></div>
+<div class="ttc" id="aclass_c_shared_ptr_html"><div class="ttname"><a href="class_c_shared_ptr.html">CSharedPtr</a></div><div class="ttdoc">Self-made shared pointer class</div><div class="ttdef"><b>Definition</b> SharedPtr.h:16</div></div>
+<div class="ttc" id="aclass_c_static_cb_light_v_p_html"><div class="ttname"><a href="class_c_static_cb_light_v_p.html">CStaticCbLightVP</a></div><div class="ttdoc">Static CB allocater class that handles light view projection matrix</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:98</div></div>
+<div class="ttc" id="aclass_c_static_cb_light_v_p_html_a5c9a70a72ceefda40e56d44d12904c1a"><div class="ttname"><a href="class_c_static_cb_light_v_p.html#a5c9a70a72ceefda40e56d44d12904c1a">CStaticCbLightVP::CStaticCbLightVP</a></div><div class="ttdeci">CStaticCbLightVP()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.cpp:202</div></div>
+<div class="ttc" id="aclass_c_static_cb_light_v_p_html_a65e0ad15861b1ec11a43194a4a8b02a0"><div class="ttname"><a href="class_c_static_cb_light_v_p.html#a65e0ad15861b1ec11a43194a4a8b02a0">CStaticCbLightVP::Start</a></div><div class="ttdeci">void Start(CScene *scene) override</div><div class="ttdoc">Scene start processing</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.cpp:218</div></div>
+<div class="ttc" id="aclass_c_static_cb_light_v_p_html_a6d113cd6233bd55c9759ced1920c4347"><div class="ttname"><a href="class_c_static_cb_light_v_p.html#a6d113cd6233bd55c9759ced1920c4347">CStaticCbLightVP::AllocateData</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData() override</div><div class="ttdoc">Allocate data</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.cpp:229</div></div>
+<div class="ttc" id="aclass_c_static_cb_light_v_p_html_ad38b64899d2fbdb99b3a4ccb3c58e56c"><div class="ttname"><a href="class_c_static_cb_light_v_p.html#ad38b64899d2fbdb99b3a4ccb3c58e56c">CStaticCbLightVP::RefreshDerived</a></div><div class="ttdeci">void RefreshDerived() override</div><div class="ttdoc">Refresh process</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.cpp:241</div></div>
+<div class="ttc" id="aclass_c_static_cb_light_v_p_html_af5a7b649622f2e5242464c42b1a19eb1"><div class="ttname"><a href="class_c_static_cb_light_v_p.html#af5a7b649622f2e5242464c42b1a19eb1">CStaticCbLightVP::Advance</a></div><div class="ttdeci">void Advance()</div><div class="ttdoc">Advance to the next cascade shadow map</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.cpp:223</div></div>
+<div class="ttc" id="aclass_c_static_cb_light_v_p_html_affb1b9fe5f34eddc857bcaf1cb759c11"><div class="ttname"><a href="class_c_static_cb_light_v_p.html#affb1b9fe5f34eddc857bcaf1cb759c11">CStaticCbLightVP::IsAdvanceNextAllocate</a></div><div class="ttdeci">bool IsAdvanceNextAllocate() override</div><div class="ttdoc">Advance to the next data assignment?</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:121</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="astruct_all_light_v_p_html"><div class="ttname"><a href="struct_all_light_v_p.html">AllLightVP</a></div><div class="ttdoc">All light view projection matrices in hlsl</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:24</div></div>
+<div class="ttc" id="astruct_all_light_v_p_html_a5770ef16cb1a56ea43a37cb8e5dd20dc"><div class="ttname"><a href="struct_all_light_v_p.html#a5770ef16cb1a56ea43a37cb8e5dd20dc">AllLightVP::m_cascadeVPMatrices</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 m_cascadeVPMatrices[CASCADE_NUM]</div><div class="ttdoc">View projection matrix for each cascade</div><div class="ttdef"><b>Definition</b> StaticCbLightVPMat.h:26</div></div>
+<div class="ttc" id="astruct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e_html"><div class="ttname"><a href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a></div><div class="ttdoc">D3D12_CPU_DESCRIPTOR_HANDLE interface</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:68</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 4 &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: GraphicsLayer.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">GraphicsLayer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_graphics_layer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __GRAPHICS_LAYER_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __GRAPHICS_LAYER_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="_graphics_layer_8h.html#ad82bb2a574a88ce525f2924cb8957785">   13</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_graphics_layer_8h.html#ad82bb2a574a88ce525f2924cb8957785">GraphicsLayerUINT</a> = UINT32;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">   16</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> : <a class="code hl_typedef" href="_graphics_layer_8h.html#ad82bb2a574a88ce525f2924cb8957785">GraphicsLayerUINT</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfaeb6d8ae6f20283755b339c0dc273988b">Standard</a> = 0,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa71ff71526d15db86eb50fcac245d183b">UI</a>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa3d971943089a3388c01fb297a32d9ba7">Transparent</a>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa03a83cfe53a27bb66fce354f972c3533">TransparentNoCulling</a>,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa86c2e2659012adf6095185449cb3a2b4">ReadWriteShading</a>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfaa457123b6431473d86adce204543fba9">ReadOnlyShading</a>,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa08e4fdb3e57d21c152842970ae8350ff">SkyDome</a>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfaaaf26f648d3f6bf473ea3186caa87744">ReadWriteShadingForGrass</a>,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa6a061313d22e51e0f25b7cd4dc065233">Max</a>,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="_graphics_layer_8h.html#a6efe5820c32cb850755e2d8e96e8c912">   42</a></span><span class="keyword">inline</span> std::wstring <a class="code hl_function" href="_graphics_layer_8h.html#a6efe5820c32cb850755e2d8e96e8c912">GraphicsLayerEnumToString</a>(<a class="code hl_enumeration" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">switch</span> (layer) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfaeb6d8ae6f20283755b339c0dc273988b">GraphicsLayer::Standard</a>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> L<span class="stringliteral">&quot;STANDARD&quot;</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa71ff71526d15db86eb50fcac245d183b">GraphicsLayer::UI</a>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span> L<span class="stringliteral">&quot;UI&quot;</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa3d971943089a3388c01fb297a32d9ba7">GraphicsLayer::Transparent</a>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">return</span> L<span class="stringliteral">&quot;Transparent&quot;</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa86c2e2659012adf6095185449cb3a2b4">GraphicsLayer::ReadWriteShading</a>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> L<span class="stringliteral">&quot;ReadWriteShading&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa6a061313d22e51e0f25b7cd4dc065233">GraphicsLayer::Max</a>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> L<span class="stringliteral">&quot;MAX&quot;</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">return</span> L<span class="stringliteral">&quot;Unknown&quot;</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">// !__GRAPHICS_LAYER_H__</span></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdf"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a></div><div class="ttdeci">GraphicsLayer</div><div class="ttdoc">Graphics layer type</div><div class="ttdef"><b>Definition</b> GraphicsLayer.h:16</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdfa03a83cfe53a27bb66fce354f972c3533"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa03a83cfe53a27bb66fce354f972c3533">GraphicsLayer::TransparentNoCulling</a></div><div class="ttdeci">@ TransparentNoCulling</div><div class="ttdoc">Translucent and no culling object</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdfa08e4fdb3e57d21c152842970ae8350ff"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa08e4fdb3e57d21c152842970ae8350ff">GraphicsLayer::SkyDome</a></div><div class="ttdeci">@ SkyDome</div><div class="ttdoc">Sky dome</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdfa3d971943089a3388c01fb297a32d9ba7"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa3d971943089a3388c01fb297a32d9ba7">GraphicsLayer::Transparent</a></div><div class="ttdeci">@ Transparent</div><div class="ttdoc">Translucent object</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdfa6a061313d22e51e0f25b7cd4dc065233"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa6a061313d22e51e0f25b7cd4dc065233">GraphicsLayer::Max</a></div><div class="ttdeci">@ Max</div><div class="ttdoc">The maximum number of layer</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdfa71ff71526d15db86eb50fcac245d183b"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa71ff71526d15db86eb50fcac245d183b">GraphicsLayer::UI</a></div><div class="ttdeci">@ UI</div><div class="ttdoc">User interface</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdfa86c2e2659012adf6095185449cb3a2b4"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfa86c2e2659012adf6095185449cb3a2b4">GraphicsLayer::ReadWriteShading</a></div><div class="ttdeci">@ ReadWriteShading</div><div class="ttdoc">Shading that both writes and reads</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdfaa457123b6431473d86adce204543fba9"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfaa457123b6431473d86adce204543fba9">GraphicsLayer::ReadOnlyShading</a></div><div class="ttdeci">@ ReadOnlyShading</div><div class="ttdoc">Shading (read only)</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdfaaaf26f648d3f6bf473ea3186caa87744"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfaaaf26f648d3f6bf473ea3186caa87744">GraphicsLayer::ReadWriteShadingForGrass</a></div><div class="ttdeci">@ ReadWriteShadingForGrass</div><div class="ttdoc">Shading that both writes and reads for grass</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a397bed8b403d46e344350d9b731b1cdfaeb6d8ae6f20283755b339c0dc273988b"><div class="ttname"><a href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdfaeb6d8ae6f20283755b339c0dc273988b">GraphicsLayer::Standard</a></div><div class="ttdeci">@ Standard</div><div class="ttdoc">Standard layer</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_a6efe5820c32cb850755e2d8e96e8c912"><div class="ttname"><a href="_graphics_layer_8h.html#a6efe5820c32cb850755e2d8e96e8c912">GraphicsLayerEnumToString</a></div><div class="ttdeci">std::wstring GraphicsLayerEnumToString(GraphicsLayer layer)</div><div class="ttdoc">Convert from 'GraphicsLayer' to string</div><div class="ttdef"><b>Definition</b> GraphicsLayer.h:42</div></div>
+<div class="ttc" id="a_graphics_layer_8h_html_ad82bb2a574a88ce525f2924cb8957785"><div class="ttname"><a href="_graphics_layer_8h.html#ad82bb2a574a88ce525f2924cb8957785">GraphicsLayerUINT</a></div><div class="ttdeci">UINT32 GraphicsLayerUINT</div><div class="ttdoc">Internal type of the graphics layer enumeration type</div><div class="ttdef"><b>Definition</b> GraphicsLayer.h:13</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

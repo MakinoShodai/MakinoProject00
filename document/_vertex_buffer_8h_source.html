@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: VertexBuffer.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">VertexBuffer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_vertex_buffer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __VERTEX_BUFFER_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __VERTEX_BUFFER_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_gpu_optimized_resource_8h.html">GpuOptimizedResource.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_c_vertex_buffer.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_vertex_buffer.html">CVertexBuffer</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_gpu_optimized_resource.html">ACGpuOptimizedResource</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_c_vertex_buffer.html#adcbb5f67d9d07b9b329d3e6310c3a32e">   20</a></span>    <a class="code hl_function" href="class_c_vertex_buffer.html#adcbb5f67d9d07b9b329d3e6310c3a32e">CVertexBuffer</a>() : <a class="code hl_class" href="class_a_c_gpu_optimized_resource.html">ACGpuOptimizedResource</a>(), m_vbView(), m_numVertices(0), m_bytesPerVertex(0) {}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TVertex&gt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_vertex_buffer.html#a0b656936a16c4ac0ff27cc369280965d">Create</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* verticesData, UINT numVertices);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_c_vertex_buffer.html#a92e7f7da3a62260ba1ac107deea4ab0c">   33</a></span>    <span class="keyword">const</span> D3D12_VERTEX_BUFFER_VIEW* <a class="code hl_function" href="class_c_vertex_buffer.html#a92e7f7da3a62260ba1ac107deea4ab0c">GetView</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> &amp;m_vbView; }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_c_vertex_buffer.html#a1316109fd246b3586f1cfafe403c8790">   35</a></span>    <span class="keyword">const</span> UINT <a class="code hl_function" href="class_c_vertex_buffer.html#a1316109fd246b3586f1cfafe403c8790">GetNumVertices</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_numVertices; }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_vertex_buffer.html#adeeeb68346a1e8baa581c947c6de8ea6">UpdateDataForResource</a>(D3D12_HEAP_PROPERTIES* heapProp, D3D12_RESOURCE_DESC* resDesc) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_vertex_buffer.html#a908d309d7d2f041d63731bbc8438aeff">CopyRegion</a>(ID3D12GraphicsCommandList* cmdList, ID3D12Resource* srcResource) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    D3D12_VERTEX_BUFFER_VIEW m_vbView;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    UINT m_numVertices;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    UINT m_bytesPerVertex;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">// Create vertex buffer</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> TVertex&gt;</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_vertex_buffer.html#a0b656936a16c4ac0ff27cc369280965d">   59</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_vertex_buffer.html#a0b656936a16c4ac0ff27cc369280965d">CVertexBuffer::Create</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* verticesData, UINT numVertices) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// Copy vertex information</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    m_numVertices = numVertices;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    m_bytesPerVertex = <span class="keyword">sizeof</span>(TVertex);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Calculate bytes of all vertices</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    UINT64 bytesAllVertices = <span class="keyword">static_cast&lt;</span>UINT64<span class="keyword">&gt;</span>(m_numVertices) * m_bytesPerVertex;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// Define mapping function</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">auto</span> mappingFunc = [&amp;](UINT8* mappedBuffer) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        memcpy(mappedBuffer, verticesData, bytesAllVertices);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    };</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// Create resource</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_function" href="class_a_c_gpu_optimized_resource.html#ad02294e127ffd215c75b81f09be6b89d">CreateResource</a>(bytesAllVertices, D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER, mappingFunc);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// Create vertex buffer view</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    m_vbView.BufferLocation = <a class="code hl_variable" href="class_a_c_gpu_optimized_resource.html#a649d395779e88a8ad72f2bbad548c2b5">m_resource</a>-&gt;GetGPUVirtualAddress();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    m_vbView.SizeInBytes = (UINT)bytesAllVertices;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    m_vbView.StrideInBytes = m_bytesPerVertex;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif </span><span class="comment">// !__VERTEX_BUFFER_H__</span></div>
+<div class="ttc" id="a_gpu_optimized_resource_8h_html"><div class="ttname"><a href="_gpu_optimized_resource_8h.html">GpuOptimizedResource.h</a></div></div>
+<div class="ttc" id="aclass_a_c_gpu_optimized_resource_html"><div class="ttname"><a href="class_a_c_gpu_optimized_resource.html">ACGpuOptimizedResource</a></div><div class="ttdoc">This class handles resource optimized for GPU</div><div class="ttdef"><b>Definition</b> GpuOptimizedResource.h:13</div></div>
+<div class="ttc" id="aclass_a_c_gpu_optimized_resource_html_a649d395779e88a8ad72f2bbad548c2b5"><div class="ttname"><a href="class_a_c_gpu_optimized_resource.html#a649d395779e88a8ad72f2bbad548c2b5">ACGpuOptimizedResource::m_resource</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ID3D12Resource &gt; m_resource</div><div class="ttdoc">Texture resource</div><div class="ttdef"><b>Definition</b> GpuOptimizedResource.h:62</div></div>
+<div class="ttc" id="aclass_a_c_gpu_optimized_resource_html_ad02294e127ffd215c75b81f09be6b89d"><div class="ttname"><a href="class_a_c_gpu_optimized_resource.html#ad02294e127ffd215c75b81f09be6b89d">ACGpuOptimizedResource::CreateResource</a></div><div class="ttdeci">void CreateResource(UINT64 byteSize, D3D12_RESOURCE_STATES resourceState, MappingFunction mapFunc)</div><div class="ttdoc">Create resource</div><div class="ttdef"><b>Definition</b> GpuOptimizedResource.cpp:8</div></div>
+<div class="ttc" id="aclass_c_vertex_buffer_html"><div class="ttname"><a href="class_c_vertex_buffer.html">CVertexBuffer</a></div><div class="ttdoc">Vertex buffer class</div><div class="ttdef"><b>Definition</b> VertexBuffer.h:15</div></div>
+<div class="ttc" id="aclass_c_vertex_buffer_html_a0b656936a16c4ac0ff27cc369280965d"><div class="ttname"><a href="class_c_vertex_buffer.html#a0b656936a16c4ac0ff27cc369280965d">CVertexBuffer::Create</a></div><div class="ttdeci">void Create(const void *verticesData, UINT numVertices)</div><div class="ttdoc">Create vertex buffer</div><div class="ttdef"><b>Definition</b> VertexBuffer.h:59</div></div>
+<div class="ttc" id="aclass_c_vertex_buffer_html_a1316109fd246b3586f1cfafe403c8790"><div class="ttname"><a href="class_c_vertex_buffer.html#a1316109fd246b3586f1cfafe403c8790">CVertexBuffer::GetNumVertices</a></div><div class="ttdeci">const UINT GetNumVertices() const</div><div class="ttdoc">Get the number of vertices</div><div class="ttdef"><b>Definition</b> VertexBuffer.h:35</div></div>
+<div class="ttc" id="aclass_c_vertex_buffer_html_a908d309d7d2f041d63731bbc8438aeff"><div class="ttname"><a href="class_c_vertex_buffer.html#a908d309d7d2f041d63731bbc8438aeff">CVertexBuffer::CopyRegion</a></div><div class="ttdeci">void CopyRegion(ID3D12GraphicsCommandList *cmdList, ID3D12Resource *srcResource) override</div><div class="ttdoc">Set command to copy data</div><div class="ttdef"><b>Definition</b> VertexBuffer.cpp:10</div></div>
+<div class="ttc" id="aclass_c_vertex_buffer_html_a92e7f7da3a62260ba1ac107deea4ab0c"><div class="ttname"><a href="class_c_vertex_buffer.html#a92e7f7da3a62260ba1ac107deea4ab0c">CVertexBuffer::GetView</a></div><div class="ttdeci">const D3D12_VERTEX_BUFFER_VIEW * GetView() const</div><div class="ttdoc">Get vertex buffer view</div><div class="ttdef"><b>Definition</b> VertexBuffer.h:33</div></div>
+<div class="ttc" id="aclass_c_vertex_buffer_html_adcbb5f67d9d07b9b329d3e6310c3a32e"><div class="ttname"><a href="class_c_vertex_buffer.html#adcbb5f67d9d07b9b329d3e6310c3a32e">CVertexBuffer::CVertexBuffer</a></div><div class="ttdeci">CVertexBuffer()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> VertexBuffer.h:20</div></div>
+<div class="ttc" id="aclass_c_vertex_buffer_html_adeeeb68346a1e8baa581c947c6de8ea6"><div class="ttname"><a href="class_c_vertex_buffer.html#adeeeb68346a1e8baa581c947c6de8ea6">CVertexBuffer::UpdateDataForResource</a></div><div class="ttdeci">void UpdateDataForResource(D3D12_HEAP_PROPERTIES *heapProp, D3D12_RESOURCE_DESC *resDesc) override</div><div class="ttdoc">Update heap properties and resource descriptor, for resource</div><div class="ttdef"><b>Definition</b> VertexBuffer.cpp:4</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

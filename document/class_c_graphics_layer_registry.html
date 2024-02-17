@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CGraphicsLayerRegistry クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_graphics_layer_registry-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CGraphicsLayerRegistry クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class handles drawing components for each layer  
+ <a href="class_c_graphics_layer_registry.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_graphics_layer_registry_8h_source.html">GraphicsLayerRegistry.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad57110da02ea135c7c16d6eabc776a75" id="r_ad57110da02ea135c7c16d6eabc776a75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_graphics_layer_registry.html#ad57110da02ea135c7c16d6eabc776a75">CGraphicsLayerRegistry</a> ()=default</td></tr>
+<tr class="memdesc:ad57110da02ea135c7c16d6eabc776a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:ad57110da02ea135c7c16d6eabc776a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2292c2e0b645cfc94d0302f945b0e6" id="r_a7e2292c2e0b645cfc94d0302f945b0e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_graphics_layer_registry.html#a7e2292c2e0b645cfc94d0302f945b0e6">~CGraphicsLayerRegistry</a> ()=default</td></tr>
+<tr class="memdesc:a7e2292c2e0b645cfc94d0302f945b0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a7e2292c2e0b645cfc94d0302f945b0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae71fd8d6d5d2e40e424feabeb5146050" id="r_ae71fd8d6d5d2e40e424feabeb5146050"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_graphics_layer_registry.html#ae71fd8d6d5d2e40e424feabeb5146050">Register</a> (<a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *component)</td></tr>
+<tr class="memdesc:ae71fd8d6d5d2e40e424feabeb5146050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register graphics component in the registry  <br /></td></tr>
+<tr class="separator:ae71fd8d6d5d2e40e424feabeb5146050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728fef001b692ad089ea9b33c0733aba" id="r_a728fef001b692ad089ea9b33c0733aba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_graphics_layer_registry.html#a728fef001b692ad089ea9b33c0733aba">Exclude</a> (<a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *component)</td></tr>
+<tr class="memdesc:a728fef001b692ad089ea9b33c0733aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exclude graphcis component from the registry  <br /></td></tr>
+<tr class="separator:a728fef001b692ad089ea9b33c0733aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d0d2ff963285a03ce1a4c2fa9ed9599" id="r_a0d0d2ff963285a03ce1a4c2fa9ed9599"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_graphics_layer_registry.html#a0d0d2ff963285a03ce1a4c2fa9ed9599">CheckExists</a> (const std::vector&lt; <a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> &gt; &amp;layers, const std::vector&lt; <a class="el" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a> &gt; &amp;types)</td></tr>
+<tr class="memdesc:a0d0d2ff963285a03ce1a4c2fa9ed9599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the graphics components to be drawn exists  <br /></td></tr>
+<tr class="separator:a0d0d2ff963285a03ce1a4c2fa9ed9599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6de289f0ded0b832a559739d628928f1" id="r_a6de289f0ded0b832a559739d628928f1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_each_graphics_component_vector.html">EachGraphicsComponentVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_graphics_layer_registry.html#a6de289f0ded0b832a559739d628928f1">GetLayerComponents</a> (<a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer)</td></tr>
+<tr class="memdesc:a6de289f0ded0b832a559739d628928f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all components belonging to a layer  <br /></td></tr>
+<tr class="separator:a6de289f0ded0b832a559739d628928f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This class handles drawing components for each layer </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ad57110da02ea135c7c16d6eabc776a75" name="ad57110da02ea135c7c16d6eabc776a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57110da02ea135c7c16d6eabc776a75">&#9670;&#160;</a></span>CGraphicsLayerRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGraphicsLayerRegistry::CGraphicsLayerRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="a7e2292c2e0b645cfc94d0302f945b0e6" name="a7e2292c2e0b645cfc94d0302f945b0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2292c2e0b645cfc94d0302f945b0e6">&#9670;&#160;</a></span>~CGraphicsLayerRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGraphicsLayerRegistry::~CGraphicsLayerRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a0d0d2ff963285a03ce1a4c2fa9ed9599" name="a0d0d2ff963285a03ce1a4c2fa9ed9599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d0d2ff963285a03ce1a4c2fa9ed9599">&#9670;&#160;</a></span>CheckExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CGraphicsLayerRegistry::CheckExists </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>layers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>types</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the graphics components to be drawn exists </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layers</td><td>Layers to be checked </td></tr>
+    <tr><td class="paramname">types</td><td>The type to check to see if it exists in the layer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Returns true if they exists </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_graphics_layer_registry_a0d0d2ff963285a03ce1a4c2fa9ed9599_cgraph.png" border="0" usemap="#aclass_c_graphics_layer_registry_a0d0d2ff963285a03ce1a4c2fa9ed9599_cgraph" alt=""/></div>
+<map name="aclass_c_graphics_layer_registry_a0d0d2ff963285a03ce1a4c2fa9ed9599_cgraph" id="aclass_c_graphics_layer_registry_a0d0d2ff963285a03ce1a4c2fa9ed9599_cgraph">
+<area shape="rect" title="Check if the graphics components to be drawn exists" alt="" coords="5,5,168,48"/>
+<area shape="rect" href="struct_each_graphics_component_vector.html#a6de08c527adc7d5016b20df3d6ec9012" title="Check if the array of the specified type is empty" alt="" coords="216,5,423,48"/>
+<area shape="poly" title=" " alt="" coords="168,24,200,24,200,29,168,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a728fef001b692ad089ea9b33c0733aba" name="a728fef001b692ad089ea9b33c0733aba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728fef001b692ad089ea9b33c0733aba">&#9670;&#160;</a></span>Exclude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CGraphicsLayerRegistry::Exclude </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exclude graphcis component from the registry </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Graphics component to be excluded </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_graphics_layer_registry_a728fef001b692ad089ea9b33c0733aba_cgraph.png" border="0" usemap="#aclass_c_graphics_layer_registry_a728fef001b692ad089ea9b33c0733aba_cgraph" alt=""/></div>
+<map name="aclass_c_graphics_layer_registry_a728fef001b692ad089ea9b33c0733aba_cgraph" id="aclass_c_graphics_layer_registry_a728fef001b692ad089ea9b33c0733aba_cgraph">
+<area shape="rect" title="Exclude graphcis component from the registry" alt="" coords="5,72,168,115"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a2d0da04f004c80508383d71a7ff285af" title="Get graphics layer to which this class belongs" alt="" coords="241,5,398,48"/>
+<area shape="poly" title=" " alt="" coords="162,69,227,50,228,55,164,74"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a4b2c3a110f02516f9075141e6cccd4b0" title="Get type of this graphics component" alt="" coords="241,72,398,115"/>
+<area shape="poly" title=" " alt="" coords="168,91,225,91,225,96,168,96"/>
+<area shape="rect" href="struct_each_graphics_component_vector.html#aecd7bb2c3c02f8519b740f31c77596da" title="Get dynamic array corresponding to the specified type" alt="" coords="216,139,423,181"/>
+<area shape="poly" title=" " alt="" coords="164,113,228,131,227,136,162,118"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_graphics_layer_registry_a728fef001b692ad089ea9b33c0733aba_icgraph.png" border="0" usemap="#aclass_c_graphics_layer_registry_a728fef001b692ad089ea9b33c0733aba_icgraph" alt=""/></div>
+<map name="aclass_c_graphics_layer_registry_a728fef001b692ad089ea9b33c0733aba_icgraph" id="aclass_c_graphics_layer_registry_a728fef001b692ad089ea9b33c0733aba_icgraph">
+<area shape="rect" title="Exclude graphcis component from the registry" alt="" coords="211,5,373,48"/>
+<area shape="rect" href="class_a_c_graphics_component.html#accacea0b02e3091b401ceb7f4cc2ef4b" title="Belong to a new layer" alt="" coords="5,5,163,48"/>
+<area shape="poly" title=" " alt="" coords="195,29,163,29,163,24,195,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6de289f0ded0b832a559739d628928f1" name="a6de289f0ded0b832a559739d628928f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6de289f0ded0b832a559739d628928f1">&#9670;&#160;</a></span>GetLayerComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_each_graphics_component_vector.html">EachGraphicsComponentVector</a> &amp; CGraphicsLayerRegistry::GetLayerComponents </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a>&#160;</td>
+          <td class="paramname"><em>layer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get all components belonging to a layer </p>
+
+</div>
+</div>
+<a id="ae71fd8d6d5d2e40e424feabeb5146050" name="ae71fd8d6d5d2e40e424feabeb5146050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71fd8d6d5d2e40e424feabeb5146050">&#9670;&#160;</a></span>Register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CGraphicsLayerRegistry::Register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register graphics component in the registry </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Graphics component to be registred </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_graphics_layer_registry_ae71fd8d6d5d2e40e424feabeb5146050_cgraph.png" border="0" usemap="#aclass_c_graphics_layer_registry_ae71fd8d6d5d2e40e424feabeb5146050_cgraph" alt=""/></div>
+<map name="aclass_c_graphics_layer_registry_ae71fd8d6d5d2e40e424feabeb5146050_cgraph" id="aclass_c_graphics_layer_registry_ae71fd8d6d5d2e40e424feabeb5146050_cgraph">
+<area shape="rect" title="Register graphics component in the registry" alt="" coords="5,72,168,115"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a2d0da04f004c80508383d71a7ff285af" title="Get graphics layer to which this class belongs" alt="" coords="241,5,398,48"/>
+<area shape="poly" title=" " alt="" coords="162,69,227,50,228,55,164,74"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a4b2c3a110f02516f9075141e6cccd4b0" title="Get type of this graphics component" alt="" coords="241,72,398,115"/>
+<area shape="poly" title=" " alt="" coords="168,91,225,91,225,96,168,96"/>
+<area shape="rect" href="struct_each_graphics_component_vector.html#aecd7bb2c3c02f8519b740f31c77596da" title="Get dynamic array corresponding to the specified type" alt="" coords="216,139,423,181"/>
+<area shape="poly" title=" " alt="" coords="164,113,228,131,227,136,162,118"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_graphics_layer_registry_ae71fd8d6d5d2e40e424feabeb5146050_icgraph.png" border="0" usemap="#aclass_c_graphics_layer_registry_ae71fd8d6d5d2e40e424feabeb5146050_icgraph" alt=""/></div>
+<map name="aclass_c_graphics_layer_registry_ae71fd8d6d5d2e40e424feabeb5146050_icgraph" id="aclass_c_graphics_layer_registry_ae71fd8d6d5d2e40e424feabeb5146050_icgraph">
+<area shape="rect" title="Register graphics component in the registry" alt="" coords="211,5,373,48"/>
+<area shape="rect" href="class_a_c_graphics_component.html#accacea0b02e3091b401ceb7f4cc2ef4b" title="Belong to a new layer" alt="" coords="5,5,163,48"/>
+<area shape="poly" title=" " alt="" coords="195,29,163,29,163,24,195,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_graphics_layer_registry_8h_source.html">GraphicsLayerRegistry.h</a></li>
+<li><a class="el" href="_graphics_layer_registry_8cpp.html">GraphicsLayerRegistry.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

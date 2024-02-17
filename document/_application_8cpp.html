@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Application.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">Application.cpp ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_application_8h_source.html">Application.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utility_for_exception_8h_source.html">UtilityForException.h</a>&quot;</code><br />
+<code>#include &quot;Resource/Resource.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Application.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_application_8cpp__incl.png" border="0" usemap="#a_application_8cpp" alt=""/></div>
+<map name="a_application_8cpp" id="a_application_8cpp">
+<area shape="rect" title=" " alt="" coords="407,5,517,32"/>
+<area shape="rect" href="_application_8h.html" title="This file handles application objects such as window and DirectX device." alt="" coords="302,80,398,107"/>
+<area shape="poly" title=" " alt="" coords="444,35,384,74,381,69,441,30"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="419,229,561,256"/>
+<area shape="poly" title=" " alt="" coords="466,32,489,214,484,215,461,33"/>
+<area shape="rect" title=" " alt="" coords="500,80,646,107"/>
+<area shape="poly" title=" " alt="" coords="483,30,542,69,539,74,480,35"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="307,155,393,181"/>
+<area shape="poly" title=" " alt="" coords="353,107,353,139,347,139,347,107"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="9,229,123,256"/>
+<area shape="poly" title=" " alt="" coords="327,110,105,224,102,220,325,105"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="147,229,281,256"/>
+<area shape="poly" title=" " alt="" coords="328,184,252,224,250,219,325,180"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="305,229,395,256"/>
+<area shape="poly" title=" " alt="" coords="353,182,353,214,347,214,347,182"/>
+<area shape="poly" title=" " alt="" coords="376,180,453,219,451,224,373,184"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="291,304,374,331"/>
+<area shape="poly" title=" " alt="" coords="350,257,342,289,337,288,344,256"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="104,379,169,405"/>
+<area shape="poly" title=" " alt="" coords="299,334,185,376,183,371,298,329"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="45,453,157,480"/>
+<area shape="poly" title=" " alt="" coords="133,407,116,440,111,438,128,405"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="5,304,127,331"/>
+<area shape="poly" title=" " alt="" coords="69,257,69,288,63,288,63,257"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="151,304,251,331"/>
+<area shape="poly" title=" " alt="" coords="91,254,165,294,162,299,88,259"/>
+<area shape="poly" title=" " alt="" coords="80,329,116,366,112,369,76,333"/>
+<area shape="poly" title=" " alt="" coords="72,331,97,438,92,439,66,332"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a522551d3cc03b1665142a2dbf17ac3b1" id="r_a522551d3cc03b1665142a2dbf17ac3b1"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_application_8cpp.html#a522551d3cc03b1665142a2dbf17ac3b1">MonitorObtainRectProc</a> (HMONITOR monitorHandle, HDC deviceContextHandle, LPRECT rectPtr, LPARAM rectVectorPtr)</td></tr>
+<tr class="separator:a522551d3cc03b1665142a2dbf17ac3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a40ec75beefcec12d228ed11445497374" id="r_a40ec75beefcec12d228ed11445497374"><td class="memItemLeft" align="right" valign="top">const UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_application_8cpp.html#a40ec75beefcec12d228ed11445497374">IDEAL_WINDOW_WIDTH</a> = 1920</td></tr>
+<tr class="separator:a40ec75beefcec12d228ed11445497374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a38e55abea767c6ae6c436dfff16212" id="r_a2a38e55abea767c6ae6c436dfff16212"><td class="memItemLeft" align="right" valign="top">const UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_application_8cpp.html#a2a38e55abea767c6ae6c436dfff16212">IDEAL_WINDOW_HEIGHT</a> = 1080</td></tr>
+<tr class="separator:a2a38e55abea767c6ae6c436dfff16212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a522551d3cc03b1665142a2dbf17ac3b1" name="a522551d3cc03b1665142a2dbf17ac3b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a522551d3cc03b1665142a2dbf17ac3b1">&#9670;&#160;</a></span>MonitorObtainRectProc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL MonitorObtainRectProc </td>
+          <td>(</td>
+          <td class="paramtype">HMONITOR&#160;</td>
+          <td class="paramname"><em>monitorHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HDC&#160;</td>
+          <td class="paramname"><em>deviceContextHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPRECT&#160;</td>
+          <td class="paramname"><em>rectPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>rectVectorPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_application_8cpp_a522551d3cc03b1665142a2dbf17ac3b1_icgraph.png" border="0" usemap="#a_application_8cpp_a522551d3cc03b1665142a2dbf17ac3b1_icgraph" alt=""/></div>
+<map name="a_application_8cpp_a522551d3cc03b1665142a2dbf17ac3b1_icgraph" id="a_application_8cpp_a522551d3cc03b1665142a2dbf17ac3b1_icgraph">
+<area shape="rect" title=" " alt="" coords="731,29,887,56"/>
+<area shape="rect" href="class_c_application.html#af09c385a5f783cebc3d657b1c447c005" title="Calculate the range of cursor position" alt="" coords="488,21,683,64"/>
+<area shape="poly" title=" " alt="" coords="715,45,683,45,683,40,715,40"/>
+<area shape="rect" href="class_c_application.html#ae3dc902b56331602c3277148d64c1597" title="Create and display a window" alt="" coords="264,29,440,56"/>
+<area shape="poly" title=" " alt="" coords="473,45,441,45,441,40,473,40"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,29,216,56"/>
+<area shape="poly" title=" " alt="" coords="248,45,216,45,216,40,248,40"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+<area shape="poly" title=" " alt="" coords="51,16,44,10,30,8,17,10,10,14,8,20,12,28,7,30,3,21,6,11,15,5,30,3,46,5,55,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a2a38e55abea767c6ae6c436dfff16212" name="a2a38e55abea767c6ae6c436dfff16212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a38e55abea767c6ae6c436dfff16212">&#9670;&#160;</a></span>IDEAL_WINDOW_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const UINT IDEAL_WINDOW_HEIGHT = 1080</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40ec75beefcec12d228ed11445497374" name="a40ec75beefcec12d228ed11445497374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40ec75beefcec12d228ed11445497374">&#9670;&#160;</a></span>IDEAL_WINDOW_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const UINT IDEAL_WINDOW_WIDTH = 1920</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CApplication::CThreadSafeFeature クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="class_c_application.html">CApplication</a></li><li class="navelem"><a class="el" href="class_c_application_1_1_c_thread_safe_feature.html">CThreadSafeFeature</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_application_1_1_c_thread_safe_feature-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CApplication::CThreadSafeFeature クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Feature for thread-safe  
+ <a href="class_c_application_1_1_c_thread_safe_feature.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_application_8h_source.html">Application.h</a>&gt;</code></p>
+<div class="dynheader">
+CApplication::CThreadSafeFeature の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_application_1_1_c_thread_safe_feature__inherit__graph.png" border="0" usemap="#a_c_application_1_1_c_thread_safe_feature_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_application_1_1_c_thread_safe_feature_inherit__map" id="a_c_application_1_1_c_thread_safe_feature_inherit__map">
+<area shape="rect" title="Feature for thread&#45;safe" alt="" coords="16,80,192,123"/>
+<area shape="rect" href="class_a_c_inner_class.html" title=" " alt="" coords="5,5,203,32"/>
+<area shape="poly" title=" " alt="" coords="107,48,107,80,101,80,101,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CApplication::CThreadSafeFeature 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_application_1_1_c_thread_safe_feature__coll__graph.png" border="0" usemap="#a_c_application_1_1_c_thread_safe_feature_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_application_1_1_c_thread_safe_feature_coll__map" id="a_c_application_1_1_c_thread_safe_feature_coll__map">
+<area shape="rect" title="Feature for thread&#45;safe" alt="" coords="16,416,192,459"/>
+<area shape="rect" href="class_a_c_inner_class.html" title=" " alt="" coords="5,340,203,367"/>
+<area shape="poly" title=" " alt="" coords="107,382,107,416,101,416,101,382"/>
+<area shape="rect" href="class_c_application.html" title="Singleton class for handling application objects such as window and DirectX device" alt="" coords="57,249,151,276"/>
+<area shape="poly" title=" " alt="" coords="107,292,107,339,101,339,101,292"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html" title=" " alt="" coords="24,157,184,200"/>
+<area shape="poly" title=" " alt="" coords="107,216,107,249,101,249,101,216"/>
+<area shape="rect" href="class_a_c_singleton_base.html" title="Abstract singleton base class (CRTP Pattern)" alt="" coords="9,81,199,108"/>
+<area shape="poly" title=" " alt="" coords="107,124,107,157,101,157,101,124"/>
+<area shape="rect" href="class_a_c_release_singleton.html" title="This class is used to control the order and release instance" alt="" coords="34,5,174,32"/>
+<area shape="poly" title=" " alt="" coords="107,47,107,81,101,81,101,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae9ef20dc436a73cbf02be6eebe0b3813" id="r_ae9ef20dc436a73cbf02be6eebe0b3813"><td class="memItemLeft" align="right" valign="top">HWND&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_application_1_1_c_thread_safe_feature.html#ae9ef20dc436a73cbf02be6eebe0b3813">GetWndHandle</a> () const</td></tr>
+<tr class="memdesc:ae9ef20dc436a73cbf02be6eebe0b3813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window handle getter  <br /></td></tr>
+<tr class="separator:ae9ef20dc436a73cbf02be6eebe0b3813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0affd9adebb4920fc882bb6bc99325" id="r_a5f0affd9adebb4920fc882bb6bc99325"><td class="memItemLeft" align="right" valign="top">ID3D12Device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325">GetDXDevice</a> ()</td></tr>
+<tr class="memdesc:a5f0affd9adebb4920fc882bb6bc99325"><td class="mdescLeft">&#160;</td><td class="mdescRight">DirectX device getter  <br /></td></tr>
+<tr class="separator:a5f0affd9adebb4920fc882bb6bc99325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dda517b22311321e68d063b6d97aa89" id="r_a2dda517b22311321e68d063b6d97aa89"><td class="memItemLeft" align="right" valign="top">IDXGIFactory6 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_application_1_1_c_thread_safe_feature.html#a2dda517b22311321e68d063b6d97aa89">GetDXGIFactory</a> ()</td></tr>
+<tr class="memdesc:a2dda517b22311321e68d063b6d97aa89"><td class="mdescLeft">&#160;</td><td class="mdescRight">DXGI factory object getter  <br /></td></tr>
+<tr class="separator:a2dda517b22311321e68d063b6d97aa89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a311bf8e4bf8d1735fc29c69dc6142b53" id="r_a311bf8e4bf8d1735fc29c69dc6142b53"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_application_1_1_c_thread_safe_feature.html#a311bf8e4bf8d1735fc29c69dc6142b53">GetHeapTypeSize</a> (D3D12_DESCRIPTOR_HEAP_TYPE type)</td></tr>
+<tr class="memdesc:a311bf8e4bf8d1735fc29c69dc6142b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of descriptor heap type  <br /></td></tr>
+<tr class="separator:a311bf8e4bf8d1735fc29c69dc6142b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb260efcb42aae6378663a8194a9fc6a" id="r_afb260efcb42aae6378663a8194a9fc6a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#a52b5008b61e10ae145e2a0555ece28f6">Vector2f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_application_1_1_c_thread_safe_feature.html#afb260efcb42aae6378663a8194a9fc6a">GetWndSizeMagnification</a> ()</td></tr>
+<tr class="memdesc:afb260efcb42aae6378663a8194a9fc6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magnification of current window size relative to ideal window size  <br /></td></tr>
+<tr class="separator:afb260efcb42aae6378663a8194a9fc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8271696160bb5a5bfc90e6ea339ede0" id="r_ad8271696160bb5a5bfc90e6ea339ede0"><td class="memItemLeft" align="right" valign="top">const RECT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_application_1_1_c_thread_safe_feature.html#ad8271696160bb5a5bfc90e6ea339ede0">GetCursorRange</a> ()</td></tr>
+<tr class="memdesc:ad8271696160bb5a5bfc90e6ea339ede0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get range of cursor position  <br /></td></tr>
+<tr class="separator:ad8271696160bb5a5bfc90e6ea339ede0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_inner_class"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_inner_class')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_inner_class.html">ACInnerClass&lt; CApplication &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a141a686a9595c907d6b5ef9ff20ae38a inherit pub_methods_class_a_c_inner_class" id="r_a141a686a9595c907d6b5ef9ff20ae38a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_inner_class.html#a141a686a9595c907d6b5ef9ff20ae38a">ACInnerClass</a> (const <a class="el" href="class_a_c_inner_class.html">ACInnerClass</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a141a686a9595c907d6b5ef9ff20ae38a inherit pub_methods_class_a_c_inner_class"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy constructor  <br /></td></tr>
+<tr class="separator:a141a686a9595c907d6b5ef9ff20ae38a inherit pub_methods_class_a_c_inner_class"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5022f6af1df16f7534a7a5858850591 inherit pub_methods_class_a_c_inner_class" id="r_ac5022f6af1df16f7534a7a5858850591"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_inner_class.html#ac5022f6af1df16f7534a7a5858850591">ACInnerClass</a> (<a class="el" href="class_a_c_inner_class.html">ACInnerClass</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:ac5022f6af1df16f7534a7a5858850591 inherit pub_methods_class_a_c_inner_class"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move constructor  <br /></td></tr>
+<tr class="separator:ac5022f6af1df16f7534a7a5858850591 inherit pub_methods_class_a_c_inner_class"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f07b2b30eb4f001ffdc34c3601389d inherit pub_methods_class_a_c_inner_class" id="r_a45f07b2b30eb4f001ffdc34c3601389d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_inner_class.html#a45f07b2b30eb4f001ffdc34c3601389d">ACInnerClass</a> (<a class="el" href="class_c_application.html">CApplication</a> *owner)</td></tr>
+<tr class="memdesc:a45f07b2b30eb4f001ffdc34c3601389d inherit pub_methods_class_a_c_inner_class"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a45f07b2b30eb4f001ffdc34c3601389d inherit pub_methods_class_a_c_inner_class"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17a75edffb06841ff43db0060789e8c inherit pub_methods_class_a_c_inner_class" id="r_ac17a75edffb06841ff43db0060789e8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_inner_class.html">ACInnerClass</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_inner_class.html#ac17a75edffb06841ff43db0060789e8c">operator=</a> (const <a class="el" href="class_a_c_inner_class.html">ACInnerClass</a> &amp;)=delete</td></tr>
+<tr class="memdesc:ac17a75edffb06841ff43db0060789e8c inherit pub_methods_class_a_c_inner_class"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy assignment operator  <br /></td></tr>
+<tr class="separator:ac17a75edffb06841ff43db0060789e8c inherit pub_methods_class_a_c_inner_class"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6d646c8ada65afce888e71748dcf315 inherit pub_methods_class_a_c_inner_class" id="r_ac6d646c8ada65afce888e71748dcf315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_inner_class.html">ACInnerClass</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_inner_class.html#ac6d646c8ada65afce888e71748dcf315">operator=</a> (<a class="el" href="class_a_c_inner_class.html">ACInnerClass</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:ac6d646c8ada65afce888e71748dcf315 inherit pub_methods_class_a_c_inner_class"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move assignment constructor  <br /></td></tr>
+<tr class="separator:ac6d646c8ada65afce888e71748dcf315 inherit pub_methods_class_a_c_inner_class"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e4914cf941028e9744f26e14e835e4 inherit pub_methods_class_a_c_inner_class" id="r_a52e4914cf941028e9744f26e14e835e4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_inner_class.html#a52e4914cf941028e9744f26e14e835e4">~ACInnerClass</a> ()=default</td></tr>
+<tr class="memdesc:a52e4914cf941028e9744f26e14e835e4 inherit pub_methods_class_a_c_inner_class"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a52e4914cf941028e9744f26e14e835e4 inherit pub_methods_class_a_c_inner_class"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_inner_class"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_inner_class')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_inner_class.html">ACInnerClass&lt; CApplication &gt;</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:abbb5ecb30cbd08e599e20cc9f3532f6f inherit pro_attribs_class_a_c_inner_class" id="r_abbb5ecb30cbd08e599e20cc9f3532f6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_application.html">CApplication</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_inner_class.html#abbb5ecb30cbd08e599e20cc9f3532f6f">m_owner</a></td></tr>
+<tr class="memdesc:abbb5ecb30cbd08e599e20cc9f3532f6f inherit pro_attribs_class_a_c_inner_class"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to owner of this class  <br /></td></tr>
+<tr class="separator:abbb5ecb30cbd08e599e20cc9f3532f6f inherit pro_attribs_class_a_c_inner_class"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Feature for thread-safe </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ad8271696160bb5a5bfc90e6ea339ede0" name="ad8271696160bb5a5bfc90e6ea339ede0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8271696160bb5a5bfc90e6ea339ede0">&#9670;&#160;</a></span>GetCursorRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const RECT &amp; CApplication::CThreadSafeFeature::GetCursorRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get range of cursor position </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_application_1_1_c_thread_safe_feature_ad8271696160bb5a5bfc90e6ea339ede0_icgraph.png" border="0" usemap="#aclass_c_application_1_1_c_thread_safe_feature_ad8271696160bb5a5bfc90e6ea339ede0_icgraph" alt=""/></div>
+<map name="aclass_c_application_1_1_c_thread_safe_feature_ad8271696160bb5a5bfc90e6ea339ede0_icgraph" id="aclass_c_application_1_1_c_thread_safe_feature_ad8271696160bb5a5bfc90e6ea339ede0_icgraph">
+<area shape="rect" title="Get range of cursor position" alt="" coords="464,21,641,64"/>
+<area shape="rect" href="class_c_input_system.html#a711502a23eaa5547a7c02ae533b050b6" title="Update processing that must be called every frame" alt="" coords="264,29,416,56"/>
+<area shape="poly" title=" " alt="" coords="449,45,417,45,417,40,449,40"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,29,216,56"/>
+<area shape="poly" title=" " alt="" coords="249,45,216,45,216,40,249,40"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+<area shape="poly" title=" " alt="" coords="51,16,44,10,30,8,17,10,10,14,8,20,12,28,7,30,3,21,6,11,15,5,30,3,46,5,55,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5f0affd9adebb4920fc882bb6bc99325" name="a5f0affd9adebb4920fc882bb6bc99325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f0affd9adebb4920fc882bb6bc99325">&#9670;&#160;</a></span>GetDXDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Device * CApplication::CThreadSafeFeature::GetDXDevice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DirectX device getter </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_application_1_1_c_thread_safe_feature_a5f0affd9adebb4920fc882bb6bc99325_icgraph.png" border="0" usemap="#aclass_c_application_1_1_c_thread_safe_feature_a5f0affd9adebb4920fc882bb6bc99325_icgraph" alt=""/></div>
+<map name="aclass_c_application_1_1_c_thread_safe_feature_a5f0affd9adebb4920fc882bb6bc99325_icgraph" id="aclass_c_application_1_1_c_thread_safe_feature_a5f0affd9adebb4920fc882bb6bc99325_icgraph">
+<area shape="rect" title="DirectX device getter" alt="" coords="962,248,1138,291"/>
+<area shape="rect" href="class_c_graphics_object_asset.html#a5f230ea3a014049ad788f720c9d2c2ea" title="Ask for SRVs assignment information to be built" alt="" coords="750,5,904,48"/>
+<area shape="poly" title=" " alt="" coords="1032,235,1013,195,986,149,953,103,912,62,895,51,898,46,916,58,957,99,991,146,1018,193,1037,233"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a593c31ff21abdf7074ae1b40a5586831" title="Ask for textures assignment information to be built" alt="" coords="745,72,909,115"/>
+<area shape="poly" title=" " alt="" coords="1022,237,974,182,945,154,913,129,893,118,895,113,915,124,948,150,978,178,1026,234"/>
+<area shape="rect" href="class_c_render_target_texture.html#a3dadff77b3c24e3de232568144ee25eb" title="Create render target resource" alt="" coords="752,139,902,181"/>
+<area shape="poly" title=" " alt="" coords="999,242,913,196,887,184,889,179,915,191,1002,238"/>
+<area shape="rect" href="class_c_depth_stencil.html#a7aa888ba8b968ee7aac9453f0311e7f0" title="Create depth stencil resource" alt="" coords="752,205,902,232"/>
+<area shape="poly" title=" " alt="" coords="947,249,888,235,890,230,948,243"/>
+<area shape="rect" href="class_c_texture_resource.html#a5e87e2247ac4d47facbefdc9c82906d2" title="Create texture resource" alt="" coords="740,256,914,283"/>
+<area shape="poly" title=" " alt="" coords="947,272,914,272,914,267,947,267"/>
+<area shape="rect" href="class_a_c_sb_allocater.html#a256ee912c30c65dcf1b83c52382a75d9" title="Create a per mesh data" alt="" coords="741,307,913,349"/>
+<area shape="poly" title=" " alt="" coords="953,298,911,309,910,303,951,293"/>
+<area shape="rect" href="class_c_render_target_swap_chain.html#a8aab32d85edc6ba71dc89bf3924db85e" title="Create render target views" alt="" coords="741,373,913,416"/>
+<area shape="poly" title=" " alt="" coords="1011,302,966,333,915,364,891,375,889,370,913,359,963,329,1008,298"/>
+<area shape="rect" href="class_a_c_static_sb_allocator.html#a9c3e00c3b7fa7e368116624c9498502c" title="Recreate structured buffer" alt="" coords="740,452,914,495"/>
+<area shape="poly" title=" " alt="" coords="1028,305,980,367,949,400,916,430,879,454,876,449,912,426,945,396,976,363,1024,302"/>
+<area shape="rect" href="class_c_graphics_pipeline_state.html#abc3395de10313e13b40e56f7b07ec1ad" title="Set this graphics pipeline state to command list" alt="" coords="747,544,907,587"/>
+<area shape="poly" title=" " alt="" coords="1037,306,990,402,956,458,916,508,893,529,869,546,866,541,890,525,912,505,952,454,986,400,1032,304"/>
+<area shape="rect" href="class_c_standard_render_pass.html#a9c6b08c098524379f6d3877a4a06c228" title="Start processing" alt="" coords="521,173,674,216"/>
+<area shape="poly" title=" " alt="" coords="736,212,674,205,675,200,736,207"/>
+<area shape="rect" href="class_c_texture_resource.html#ad76c10ec0f2f42e1c2c97f62726a5f16" title="Constructor for creating texture resource" alt="" coords="503,240,692,283"/>
+<area shape="poly" title=" " alt="" coords="724,268,692,267,692,262,724,263"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a166a7be93cfea8497df2cc7698254de5" title="Create buffer for model" alt="" coords="519,307,676,349"/>
+<area shape="poly" title=" " alt="" coords="726,331,677,331,677,325,726,325"/>
+<area shape="rect" href="class_c_render_target_swap_chain.html#a6b0586abbd3b14f20b162c96889dcdb0" title="Create descriptor heap and render target views" alt="" coords="511,373,684,416"/>
+<area shape="poly" title=" " alt="" coords="725,397,684,397,684,392,725,392"/>
+<area shape="rect" href="class_c_swap_chain.html#a3d838db1a55450cb8bba97f1e67ddbb3" title="Draw and swap the back buffer" alt="" coords="504,440,691,467"/>
+<area shape="poly" title=" " alt="" coords="727,423,653,442,652,437,726,418"/>
+<area shape="rect" href="class_c_swap_chain.html#a59a1cd78508f27735564aa9fcf19d27a" title="Create a swap chain" alt="" coords="285,381,435,408"/>
+<area shape="poly" title=" " alt="" coords="496,397,435,397,435,392,496,392"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,411,216,437"/>
+<area shape="poly" title=" " alt="" coords="270,411,216,418,216,413,269,405"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,411,55,437"/>
+<area shape="poly" title=" " alt="" coords="87,427,55,427,55,421,87,421"/>
+<area shape="poly" title=" " alt="" coords="51,397,44,392,30,389,17,391,10,396,8,402,12,409,7,411,3,402,6,393,15,386,30,384,46,387,55,393"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="264,432,455,475"/>
+<area shape="poly" title=" " alt="" coords="488,456,456,456,456,451,488,451"/>
+<area shape="poly" title=" " alt="" coords="248,440,216,435,217,430,249,434"/>
+<area shape="rect" href="class_a_c_static_sb_allocator.html#af95a2126e52b3e0229a1c0b728aee8bb" title="Constcurtor" alt="" coords="523,491,672,533"/>
+<area shape="poly" title=" " alt="" coords="725,493,672,502,672,497,724,488"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="521,557,674,600"/>
+<area shape="poly" title=" " alt="" coords="732,574,675,577,675,572,732,568"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2dda517b22311321e68d063b6d97aa89" name="a2dda517b22311321e68d063b6d97aa89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dda517b22311321e68d063b6d97aa89">&#9670;&#160;</a></span>GetDXGIFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDXGIFactory6 * CApplication::CThreadSafeFeature::GetDXGIFactory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DXGI factory object getter </p>
+
+</div>
+</div>
+<a id="a311bf8e4bf8d1735fc29c69dc6142b53" name="a311bf8e4bf8d1735fc29c69dc6142b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a311bf8e4bf8d1735fc29c69dc6142b53">&#9670;&#160;</a></span>GetHeapTypeSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT CApplication::CThreadSafeFeature::GetHeapTypeSize </td>
+          <td>(</td>
+          <td class="paramtype">D3D12_DESCRIPTOR_HEAP_TYPE&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the size of descriptor heap type </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_application_1_1_c_thread_safe_feature_a311bf8e4bf8d1735fc29c69dc6142b53_icgraph.png" border="0" usemap="#aclass_c_application_1_1_c_thread_safe_feature_a311bf8e4bf8d1735fc29c69dc6142b53_icgraph" alt=""/></div>
+<map name="aclass_c_application_1_1_c_thread_safe_feature_a311bf8e4bf8d1735fc29c69dc6142b53_icgraph" id="aclass_c_application_1_1_c_thread_safe_feature_a311bf8e4bf8d1735fc29c69dc6142b53_icgraph">
+<area shape="rect" title="Get the size of descriptor heap type" alt="" coords="1275,340,1454,383"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d" title="Get CPU handle for descriptor heap" alt="" coords="1016,348,1227,375"/>
+<area shape="poly" title=" " alt="" coords="1260,364,1227,364,1227,359,1260,359"/>
+<area shape="rect" href="class_c_render_target_swap_chain.html#a0f3f885eaaa634ccbef6291b25a395e3" title="Get CPU handle for rtv descriptor heap" alt="" coords="767,675,940,717"/>
+<area shape="poly" title=" " alt="" coords="1331,396,1268,453,1181,525,1079,600,1024,634,968,665,941,677,939,672,966,660,1021,630,1076,595,1178,521,1265,449,1328,392"/>
+<area shape="rect" href="class_c_descriptor_heap.html#a6a6b26f0fe19ceafd6c9150e5423e4fc" title="Get CPU handle for descriptor heap" alt="" coords="1015,152,1227,179"/>
+<area shape="poly" title=" " alt="" coords="1323,332,1138,181,1141,177,1327,328"/>
+<area shape="rect" href="class_c_render_target_texture.html#a3dadff77b3c24e3de232568144ee25eb" title="Create render target resource" alt="" coords="778,256,929,299"/>
+<area shape="poly" title=" " alt="" coords="1064,345,966,313,928,302,930,297,968,308,1065,340"/>
+<area shape="rect" href="class_c_depth_stencil.html#a7aa888ba8b968ee7aac9453f0311e7f0" title="Create depth stencil resource" alt="" coords="778,323,929,349"/>
+<area shape="poly" title=" " alt="" coords="1000,353,929,346,929,340,1000,347"/>
+<area shape="rect" href="class_c_texture_resource.html#a5e87e2247ac4d47facbefdc9c82906d2" title="Create texture resource" alt="" coords="766,373,941,400"/>
+<area shape="poly" title=" " alt="" coords="1000,375,941,381,941,376,1000,370"/>
+<area shape="rect" href="class_a_c_sb_allocater.html#a256ee912c30c65dcf1b83c52382a75d9" title="Create a per mesh data" alt="" coords="767,424,940,467"/>
+<area shape="poly" title=" " alt="" coords="1065,383,968,415,930,426,929,421,966,409,1064,378"/>
+<area shape="rect" href="class_c_render_target_swap_chain.html#a8aab32d85edc6ba71dc89bf3924db85e" title="Create render target views" alt="" coords="767,491,940,533"/>
+<area shape="poly" title=" " alt="" coords="1097,387,1040,434,1005,459,968,481,941,493,939,488,966,476,1002,455,1037,430,1093,383"/>
+<area shape="rect" href="class_c_depth_stencil.html#aa47b541d3b6156101a273d5d41978b3d" title="Get CPU handle for dsv descriptor heap" alt="" coords="740,624,967,651"/>
+<area shape="poly" title=" " alt="" coords="1104,389,1017,524,1005,550,998,573,989,594,969,614,948,626,946,621,965,610,984,590,993,571,1000,548,1013,521,1099,386"/>
+<area shape="rect" href="class_c_render_target_texture.html#aa416a710c22c9ad8a3aa2ee60f1fbdbb" title="Get CPU handle for rtv descriptor heap" alt="" coords="778,557,929,600"/>
+<area shape="poly" title=" " alt="" coords="1107,390,1084,426,1052,468,1014,511,968,548,930,566,928,561,966,543,1010,507,1048,465,1080,422,1102,387"/>
+<area shape="poly" title=" " alt="" coords="1102,389,1060,449,1017,524,1005,564,1001,598,993,631,984,648,969,665,941,683,938,678,965,661,979,644,988,629,995,597,999,563,1013,522,1056,446,1098,386"/>
+<area shape="rect" href="class_c_render_target_texture.html#ae0259429373099c9a41817dca1c3119a" title="Get CPU handle for srv descriptor heap" alt="" coords="778,56,929,99"/>
+<area shape="poly" title=" " alt="" coords="1101,336,1013,192,993,148,983,131,965,113,928,93,930,89,969,109,987,127,998,146,1017,189,1106,334"/>
+<area shape="rect" href="class_c_depth_stencil.html#aaf2a84407e0b3ca6ad1ae02034009337" title="Get CPU handle for srv descriptor heap for depth buffer" alt="" coords="753,123,954,165"/>
+<area shape="poly" title=" " alt="" coords="1102,336,1080,300,1048,258,1010,216,966,180,944,168,947,163,968,175,1014,212,1052,255,1084,297,1107,333"/>
+<area shape="rect" href="class_c_depth_stencil.html#a7be37c5dad39bc97c3229a5db5e7b14f" title="Get CPU handle for srv descriptor heap for stencil buffer" alt="" coords="753,189,954,232"/>
+<area shape="poly" title=" " alt="" coords="1093,340,1037,292,1002,268,966,246,940,235,942,230,968,242,1005,263,1040,288,1097,335"/>
+<area shape="rect" href="class_c_imgui_helper.html#ac58a9ce2fb4b199cb2c02fc0a251da83" title="Initialize" alt="" coords="777,5,930,32"/>
+<area shape="poly" title=" " alt="" coords="1099,336,1057,272,1013,192,1000,148,997,112,989,79,980,63,965,46,949,35,930,27,932,22,951,30,969,42,985,59,994,77,1002,111,1005,147,1017,190,1061,269,1103,334"/>
+<area shape="rect" href="class_c_standard_render_pass.html#a9c6b08c098524379f6d3877a4a06c228" title="Start processing" alt="" coords="521,291,674,333"/>
+<area shape="poly" title=" " alt="" coords="762,330,674,322,675,317,763,325"/>
+<area shape="rect" href="class_c_texture_resource.html#ad76c10ec0f2f42e1c2c97f62726a5f16" title="Constructor for creating texture resource" alt="" coords="503,357,692,400"/>
+<area shape="poly" title=" " alt="" coords="750,386,692,384,692,379,750,381"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a166a7be93cfea8497df2cc7698254de5" title="Create buffer for model" alt="" coords="519,424,676,467"/>
+<area shape="poly" title=" " alt="" coords="751,448,677,448,677,443,751,443"/>
+<area shape="rect" href="class_c_render_target_swap_chain.html#a6b0586abbd3b14f20b162c96889dcdb0" title="Create descriptor heap and render target views" alt="" coords="511,491,684,533"/>
+<area shape="poly" title=" " alt="" coords="751,515,684,515,684,509,751,509"/>
+<area shape="rect" href="class_c_swap_chain.html#a3d838db1a55450cb8bba97f1e67ddbb3" title="Draw and swap the back buffer" alt="" coords="504,557,691,584"/>
+<area shape="poly" title=" " alt="" coords="753,538,660,559,658,554,751,533"/>
+<area shape="rect" href="class_c_swap_chain.html#a59a1cd78508f27735564aa9fcf19d27a" title="Create a swap chain" alt="" coords="285,499,435,525"/>
+<area shape="poly" title=" " alt="" coords="496,515,435,515,435,509,496,509"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,499,216,525"/>
+<area shape="poly" title=" " alt="" coords="269,515,216,515,216,509,269,509"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,499,55,525"/>
+<area shape="poly" title=" " alt="" coords="87,515,55,515,55,509,87,509"/>
+<area shape="poly" title=" " alt="" coords="51,485,44,480,30,477,17,479,10,484,8,490,12,497,7,499,3,490,6,481,15,474,30,472,46,475,55,481"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="264,549,455,592"/>
+<area shape="poly" title=" " alt="" coords="488,573,456,573,456,568,488,568"/>
+<area shape="poly" title=" " alt="" coords="270,547,207,528,208,523,271,542"/>
+<area shape="rect" href="class_c_depth_stencil.html#ac30f2385fa2249d053cc52a94589744a" title="Apply this depth stencil to the destination depth stencil by calling &#39;OMSetRenderTargets&#39;" alt="" coords="525,659,670,685"/>
+<area shape="poly" title=" " alt="" coords="735,656,671,665,670,660,735,651"/>
+<area shape="rect" href="class_a_c_render_target.html#a40d00574c158fad570c77ffed5365e3a" title="Apply this render target to the destination render target by calling &#39;OMSetRenderTargets&#39;" alt="" coords="519,608,676,635"/>
+<area shape="poly" title=" " alt="" coords="724,632,676,629,677,624,724,627"/>
+<area shape="rect" href="class_c_depth_stencil.html#ae8502d294033cd2322eebbad294dd0e5" title="Clear the depth stencil" alt="" coords="526,709,669,736"/>
+<area shape="poly" title=" " alt="" coords="758,658,741,665,717,682,693,700,663,711,661,706,690,695,714,678,738,660,756,653"/>
+<area shape="rect" href="class_c_standard_render_pass.html#ac85040737d572664a90826556daf8e84" title="Drawing process" alt="" coords="283,651,436,693"/>
+<area shape="poly" title=" " alt="" coords="509,675,437,675,437,669,509,669"/>
+<area shape="poly" title=" " alt="" coords="516,607,455,594,456,588,517,602"/>
+<area shape="poly" title=" " alt="" coords="517,641,437,658,436,653,516,636"/>
+<area shape="poly" title=" " alt="" coords="516,708,436,691,437,686,517,703"/>
+<area shape="poly" title=" " alt="" coords="762,38,741,46,644,100,551,162,462,229,382,297,251,420,175,500,171,496,247,416,378,293,459,225,547,157,641,95,739,42,760,33"/>
+<area shape="poly" title=" " alt="" coords="1095,143,1039,93,1003,68,966,46,930,33,931,28,968,42,1006,63,1042,89,1098,139"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae9ef20dc436a73cbf02be6eebe0b3813" name="ae9ef20dc436a73cbf02be6eebe0b3813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ef20dc436a73cbf02be6eebe0b3813">&#9670;&#160;</a></span>GetWndHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HWND CApplication::CThreadSafeFeature::GetWndHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Window handle getter </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_application_1_1_c_thread_safe_feature_ae9ef20dc436a73cbf02be6eebe0b3813_icgraph.png" border="0" usemap="#aclass_c_application_1_1_c_thread_safe_feature_ae9ef20dc436a73cbf02be6eebe0b3813_icgraph" alt=""/></div>
+<map name="aclass_c_application_1_1_c_thread_safe_feature_ae9ef20dc436a73cbf02be6eebe0b3813_icgraph" id="aclass_c_application_1_1_c_thread_safe_feature_ae9ef20dc436a73cbf02be6eebe0b3813_icgraph">
+<area shape="rect" title="Window handle getter" alt="" coords="108,21,285,64"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="11,29,60,56"/>
+<area shape="poly" title=" " alt="" coords="93,45,61,45,61,40,93,40"/>
+<area shape="poly" title=" " alt="" coords="63,17,54,10,36,8,19,10,10,15,8,20,13,28,8,31,3,21,6,11,17,5,36,3,56,5,66,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afb260efcb42aae6378663a8194a9fc6a" name="afb260efcb42aae6378663a8194a9fc6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb260efcb42aae6378663a8194a9fc6a">&#9670;&#160;</a></span>GetWndSizeMagnification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_utility_for_math_8h.html#a52b5008b61e10ae145e2a0555ece28f6">Vector2f</a> &amp; CApplication::CThreadSafeFeature::GetWndSizeMagnification </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Magnification of current window size relative to ideal window size </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_application_1_1_c_thread_safe_feature_afb260efcb42aae6378663a8194a9fc6a_icgraph.png" border="0" usemap="#aclass_c_application_1_1_c_thread_safe_feature_afb260efcb42aae6378663a8194a9fc6a_icgraph" alt=""/></div>
+<map name="aclass_c_application_1_1_c_thread_safe_feature_afb260efcb42aae6378663a8194a9fc6a_icgraph" id="aclass_c_application_1_1_c_thread_safe_feature_afb260efcb42aae6378663a8194a9fc6a_icgraph">
+<area shape="rect" title="Magnification of current window size relative to ideal window size" alt="" coords="397,5,620,48"/>
+<area shape="rect" href="_dynamic_cb_world_mat_8cpp.html#a135c059ed4ae9159fc82b9b1520ab441" title=" " alt="" coords="207,13,349,40"/>
+<area shape="poly" title=" " alt="" coords="381,29,349,29,349,24,381,24"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#aebd3e9d52c465127e119c96d725814be" title="Allocate data for sprite UI" alt="" coords="5,5,159,48"/>
+<area shape="poly" title=" " alt="" coords="191,29,159,29,159,24,191,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_application_8h_source.html">Application.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CDynamicSbRegistry クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_dynamic_sb_registry-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CDynamicSbRegistry クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class handles all structured buffer allocator per object  
+ <a href="class_c_dynamic_sb_registry.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_dynamic_sb_registry_8h_source.html">DynamicSbRegistry.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a59ccf924119c78f20262bb5123d2ed6b" id="r_a59ccf924119c78f20262bb5123d2ed6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_sb_registry.html#a59ccf924119c78f20262bb5123d2ed6b">CDynamicSbRegistry</a> ()</td></tr>
+<tr class="memdesc:a59ccf924119c78f20262bb5123d2ed6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a59ccf924119c78f20262bb5123d2ed6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56f7829cff2e0f8dc66e8247868dd608" id="r_a56f7829cff2e0f8dc66e8247868dd608"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_sb_registry.html#a56f7829cff2e0f8dc66e8247868dd608">~CDynamicSbRegistry</a> ()=default</td></tr>
+<tr class="memdesc:a56f7829cff2e0f8dc66e8247868dd608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a56f7829cff2e0f8dc66e8247868dd608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d1518e8f2ee5c06f29800067ebb691" id="r_ad9d1518e8f2ee5c06f29800067ebb691"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_dynamic_sb_allocator.html">IDynamicSbAllocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_sb_registry.html#ad9d1518e8f2ee5c06f29800067ebb691">GetSbAllocator</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:ad9d1518e8f2ee5c06f29800067ebb691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get structured buffer class with matching name  <br /></td></tr>
+<tr class="separator:ad9d1518e8f2ee5c06f29800067ebb691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920f012ab2d415a225016f786f60a165" id="r_a920f012ab2d415a225016f786f60a165"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_sb_registry.html#a920f012ab2d415a225016f786f60a165">FrameRefresh</a> ()</td></tr>
+<tr class="memdesc:a920f012ab2d415a225016f786f60a165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh process that must be called at the end of every frame  <br /></td></tr>
+<tr class="separator:a920f012ab2d415a225016f786f60a165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb9dd26b2ec9052e577f4905d1d554bd" id="r_acb9dd26b2ec9052e577f4905d1d554bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_sb_registry.html#acb9dd26b2ec9052e577f4905d1d554bd">ReleaseBuffer</a> (<a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *component)</td></tr>
+<tr class="memdesc:acb9dd26b2ec9052e577f4905d1d554bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release strutured buffers corresponding to the component sent  <br /></td></tr>
+<tr class="separator:acb9dd26b2ec9052e577f4905d1d554bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f782593125c33a81e6d73529cf86308" id="r_a8f782593125c33a81e6d73529cf86308"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_base_of&lt;<a class="el" href="class_i_dynamic_sb_allocator.html">IDynamicSbAllocator</a>, T&gt;</td></tr>
+<tr class="memitem:a8f782593125c33a81e6d73529cf86308"><td class="memTemplItemLeft" align="right" valign="top">::value void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_dynamic_sb_registry.html#a8f782593125c33a81e6d73529cf86308">EmplaceSbAllocator</a> ()</td></tr>
+<tr class="separator:a8f782593125c33a81e6d73529cf86308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This class handles all structured buffer allocator per object </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a59ccf924119c78f20262bb5123d2ed6b" name="a59ccf924119c78f20262bb5123d2ed6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59ccf924119c78f20262bb5123d2ed6b">&#9670;&#160;</a></span>CDynamicSbRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDynamicSbRegistry::CDynamicSbRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="a56f7829cff2e0f8dc66e8247868dd608" name="a56f7829cff2e0f8dc66e8247868dd608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56f7829cff2e0f8dc66e8247868dd608">&#9670;&#160;</a></span>~CDynamicSbRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDynamicSbRegistry::~CDynamicSbRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a8f782593125c33a81e6d73529cf86308" name="a8f782593125c33a81e6d73529cf86308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f782593125c33a81e6d73529cf86308">&#9670;&#160;</a></span>EmplaceSbAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires std::is_base_of&lt;<a class="el" href="class_i_dynamic_sb_allocator.html">IDynamicSbAllocator</a>, T&gt;</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">::value void CDynamicSbRegistry::EmplaceSbAllocator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_sb_registry_a8f782593125c33a81e6d73529cf86308_cgraph.png" border="0" usemap="#aclass_c_dynamic_sb_registry_a8f782593125c33a81e6d73529cf86308_cgraph" alt=""/></div>
+<map name="aclass_c_dynamic_sb_registry_a8f782593125c33a81e6d73529cf86308_cgraph" id="aclass_c_dynamic_sb_registry_a8f782593125c33a81e6d73529cf86308_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,153,48"/>
+<area shape="rect" href="class_i_dynamic_resource.html#a5a662fc9f40dd0b382f1c27cf7ef1cc3" title="Get the name of cbuffer defined in hlsl" alt="" coords="201,13,394,40"/>
+<area shape="poly" title=" " alt="" coords="153,24,185,24,185,29,153,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a920f012ab2d415a225016f786f60a165" name="a920f012ab2d415a225016f786f60a165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a920f012ab2d415a225016f786f60a165">&#9670;&#160;</a></span>FrameRefresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDynamicSbRegistry::FrameRefresh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Refresh process that must be called at the end of every frame </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_sb_registry_a920f012ab2d415a225016f786f60a165_icgraph.png" border="0" usemap="#aclass_c_dynamic_sb_registry_a920f012ab2d415a225016f786f60a165_icgraph" alt=""/></div>
+<map name="aclass_c_dynamic_sb_registry_a920f012ab2d415a225016f786f60a165_icgraph" id="aclass_c_dynamic_sb_registry_a920f012ab2d415a225016f786f60a165_icgraph">
+<area shape="rect" title="Refresh process that must be called at the end of every frame" alt="" coords="237,5,382,48"/>
+<area shape="rect" href="class_c_scene.html#a33e19a81e29d296d27020128e3f472a8" title="Processing at end of a frame" alt="" coords="5,13,189,40"/>
+<area shape="poly" title=" " alt="" coords="221,29,189,29,189,24,221,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad9d1518e8f2ee5c06f29800067ebb691" name="ad9d1518e8f2ee5c06f29800067ebb691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d1518e8f2ee5c06f29800067ebb691">&#9670;&#160;</a></span>GetSbAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_dynamic_sb_allocator.html">IDynamicSbAllocator</a> * CDynamicSbRegistry::GetSbAllocator </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get structured buffer class with matching name </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Structured buffer name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>If a match is found, return its structured buffer. If no match, return nullptr </dd></dl>
+
+</div>
+</div>
+<a id="acb9dd26b2ec9052e577f4905d1d554bd" name="acb9dd26b2ec9052e577f4905d1d554bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb9dd26b2ec9052e577f4905d1d554bd">&#9670;&#160;</a></span>ReleaseBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDynamicSbRegistry::ReleaseBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Release strutured buffers corresponding to the component sent </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>component that wants to release buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_dynamic_sb_registry_8h_source.html">DynamicSbRegistry.h</a></li>
+<li><a class="el" href="_dynamic_sb_registry_8cpp.html">DynamicSbRegistry.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CBasicModel クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="class_c_basic_model-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CBasicModel クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Non-animated model  
+ <a href="class_c_basic_model.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_model_8h_source.html">Model.h</a>&gt;</code></p>
+<div class="dynheader">
+CBasicModel の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_basic_model__inherit__graph.png" border="0" usemap="#a_c_basic_model_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_basic_model_inherit__map" id="a_c_basic_model_inherit__map">
+<area shape="rect" title="Non&#45;animated model" alt="" coords="35,155,133,181"/>
+<area shape="rect" href="class_a_c_model.html" title="Abstract class of model" alt="" coords="47,80,121,107"/>
+<area shape="poly" title=" " alt="" coords="87,122,87,154,81,154,81,122"/>
+<area shape="rect" href="class_a_c_graphics_component.html" title="Abstract class of component of graphics" alt="" coords="5,5,163,32"/>
+<area shape="poly" title=" " alt="" coords="87,48,87,80,81,80,81,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CBasicModel 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_basic_model__coll__graph.png" border="0" usemap="#a_c_basic_model_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_basic_model_coll__map" id="a_c_basic_model_coll__map">
+<area shape="rect" title="Non&#45;animated model" alt="" coords="50,248,148,275"/>
+<area shape="rect" href="class_a_c_model.html" title="Abstract class of model" alt="" coords="62,172,136,199"/>
+<area shape="poly" title=" " alt="" coords="102,214,102,248,96,248,96,214"/>
+<area shape="rect" href="class_a_c_graphics_component.html" title="Abstract class of component of graphics" alt="" coords="20,96,178,123"/>
+<area shape="poly" title=" " alt="" coords="102,138,102,172,96,172,96,138"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="5,5,193,32"/>
+<area shape="poly" title=" " alt="" coords="102,48,102,95,96,95,96,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a89b929950e49c70cfe47261de4a333d2" id="r_a89b929950e49c70cfe47261de4a333d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_basic_model.html#a89b929950e49c70cfe47261de4a333d2">CBasicModel</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner, <a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer, const std::wstring &amp;modelPath, int additionalTexID=<a class="el" href="namespace_model_info.html#a53e8c37a869f8adc4c739ceb1450a115">ModelInfo::NON_ADDITIONAL_TEX_ID</a>)</td></tr>
+<tr class="memdesc:a89b929950e49c70cfe47261de4a333d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a89b929950e49c70cfe47261de4a333d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0ab509849a7fc576c5d1e791a4b78c" id="r_a8d0ab509849a7fc576c5d1e791a4b78c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_basic_model.html#a8d0ab509849a7fc576c5d1e791a4b78c">~CBasicModel</a> () override</td></tr>
+<tr class="memdesc:a8d0ab509849a7fc576c5d1e791a4b78c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a8d0ab509849a7fc576c5d1e791a4b78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_model')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_model.html">ACModel</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a8641abba5be948645437ccd2843bd709 inherit pub_methods_class_a_c_model" id="r_a8641abba5be948645437ccd2843bd709"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_model.html#a8641abba5be948645437ccd2843bd709">ACModel</a> (<a class="el" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a> type, <a class="el" href="class_c_game_object.html">CGameObject</a> *owner, <a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer, bool isSubstance, int additionalTexID)</td></tr>
+<tr class="memdesc:a8641abba5be948645437ccd2843bd709 inherit pub_methods_class_a_c_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a8641abba5be948645437ccd2843bd709 inherit pub_methods_class_a_c_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b00f353e47b15b82ae8622a88581027 inherit pub_methods_class_a_c_model" id="r_a1b00f353e47b15b82ae8622a88581027"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_model.html#a1b00f353e47b15b82ae8622a88581027">~ACModel</a> ()=default</td></tr>
+<tr class="memdesc:a1b00f353e47b15b82ae8622a88581027 inherit pub_methods_class_a_c_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a1b00f353e47b15b82ae8622a88581027 inherit pub_methods_class_a_c_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d21430bc1c5635b9ff9f3c488bc66c inherit pub_methods_class_a_c_model" id="r_a54d21430bc1c5635b9ff9f3c488bc66c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_model.html#a54d21430bc1c5635b9ff9f3c488bc66c">Start</a> () override</td></tr>
+<tr class="memdesc:a54d21430bc1c5635b9ff9f3c488bc66c inherit pub_methods_class_a_c_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing for the first draw frame  <br /></td></tr>
+<tr class="separator:a54d21430bc1c5635b9ff9f3c488bc66c inherit pub_methods_class_a_c_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f06d54b3e622c46f9d1bb9dd6111b89 inherit pub_methods_class_a_c_model" id="r_a0f06d54b3e622c46f9d1bb9dd6111b89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_model.html#a0f06d54b3e622c46f9d1bb9dd6111b89">OnDestroy</a> () override</td></tr>
+<tr class="memdesc:a0f06d54b3e622c46f9d1bb9dd6111b89 inherit pub_methods_class_a_c_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process to be called at instance destruction  <br /></td></tr>
+<tr class="separator:a0f06d54b3e622c46f9d1bb9dd6111b89 inherit pub_methods_class_a_c_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bea2dd6af75b0a7e537a0a44e5daae8 inherit pub_methods_class_a_c_model" id="r_a3bea2dd6af75b0a7e537a0a44e5daae8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_model.html#a3bea2dd6af75b0a7e537a0a44e5daae8">GetAdditionalTexID</a> ()</td></tr>
+<tr class="memdesc:a3bea2dd6af75b0a7e537a0a44e5daae8 inherit pub_methods_class_a_c_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID of additional textures used  <br /></td></tr>
+<tr class="separator:a3bea2dd6af75b0a7e537a0a44e5daae8 inherit pub_methods_class_a_c_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f161f8069f8adeb6232e4a9a075a13 inherit pub_methods_class_a_c_model" id="r_a19f161f8069f8adeb6232e4a9a075a13"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_model.html#a19f161f8069f8adeb6232e4a9a075a13">IsActiveSelf</a> () const override</td></tr>
+<tr class="memdesc:a19f161f8069f8adeb6232e4a9a075a13 inherit pub_methods_class_a_c_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this graphics component itself active?  <br /></td></tr>
+<tr class="separator:a19f161f8069f8adeb6232e4a9a075a13 inherit pub_methods_class_a_c_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94e8e10b6d60344b57ce1bc56f2b04f inherit pub_methods_class_a_c_model" id="r_ac94e8e10b6d60344b57ce1bc56f2b04f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_model.html#ac94e8e10b6d60344b57ce1bc56f2b04f">IsActiveOverall</a> () const override</td></tr>
+<tr class="memdesc:ac94e8e10b6d60344b57ce1bc56f2b04f inherit pub_methods_class_a_c_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this graphics component itself and the game object that owns it active?  <br /></td></tr>
+<tr class="separator:ac94e8e10b6d60344b57ce1bc56f2b04f inherit pub_methods_class_a_c_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba725ed5bb553d9c8ace94e2b6f94dd inherit pub_methods_class_a_c_model" id="r_a1ba725ed5bb553d9c8ace94e2b6f94dd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#aec0a157ba62275f3e25a3ea3e8a9c176">Colorf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_model.html#a1ba725ed5bb553d9c8ace94e2b6f94dd">GetColor</a> () const override</td></tr>
+<tr class="memdesc:a1ba725ed5bb553d9c8ace94e2b6f94dd inherit pub_methods_class_a_c_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color  <br /></td></tr>
+<tr class="separator:a1ba725ed5bb553d9c8ace94e2b6f94dd inherit pub_methods_class_a_c_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_graphics_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_graphics_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:aa76bdc36dae53c66a9b7c987c6f0b109 inherit pub_methods_class_a_c_graphics_component" id="r_aa76bdc36dae53c66a9b7c987c6f0b109"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#aa76bdc36dae53c66a9b7c987c6f0b109">ACGraphicsComponent</a> (<a class="el" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a> type, <a class="el" href="class_c_game_object.html">CGameObject</a> *owner, <a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer)</td></tr>
+<tr class="memdesc:aa76bdc36dae53c66a9b7c987c6f0b109 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:aa76bdc36dae53c66a9b7c987c6f0b109 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f21739d3903597b5a27ec3af605fb2 inherit pub_methods_class_a_c_graphics_component" id="r_ac0f21739d3903597b5a27ec3af605fb2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ac0f21739d3903597b5a27ec3af605fb2">~ACGraphicsComponent</a> ()</td></tr>
+<tr class="memdesc:ac0f21739d3903597b5a27ec3af605fb2 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ac0f21739d3903597b5a27ec3af605fb2 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad09896a56b44419f0b868da44f0328f5 inherit pub_methods_class_a_c_graphics_component" id="r_ad09896a56b44419f0b868da44f0328f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ad09896a56b44419f0b868da44f0328f5">Awake</a> ()</td></tr>
+<tr class="memdesc:ad09896a56b44419f0b868da44f0328f5 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is added to an object  <br /></td></tr>
+<tr class="separator:ad09896a56b44419f0b868da44f0328f5 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46c7382df0dc09611bb4d2291fd7c53 inherit pub_methods_class_a_c_graphics_component" id="r_af46c7382df0dc09611bb4d2291fd7c53"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#af46c7382df0dc09611bb4d2291fd7c53">PreDraw</a> ()</td></tr>
+<tr class="memdesc:af46c7382df0dc09611bb4d2291fd7c53 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre drawing processing  <br /></td></tr>
+<tr class="separator:af46c7382df0dc09611bb4d2291fd7c53 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf55893b5a3a941e66f2763a179222b inherit pub_methods_class_a_c_graphics_component" id="r_abcf55893b5a3a941e66f2763a179222b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#abcf55893b5a3a941e66f2763a179222b">IsDrawCondition</a> ()</td></tr>
+<tr class="memdesc:abcf55893b5a3a941e66f2763a179222b inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing conditions set in derived classes  <br /></td></tr>
+<tr class="separator:abcf55893b5a3a941e66f2763a179222b inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593c31ff21abdf7074ae1b40a5586831 inherit pub_methods_class_a_c_graphics_component" id="r_a593c31ff21abdf7074ae1b40a5586831"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a593c31ff21abdf7074ae1b40a5586831">AskToAllocateTextures</a> (UINT meshNum, const <a class="el" href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a> &amp;gpso, UINT totalNum)</td></tr>
+<tr class="memdesc:a593c31ff21abdf7074ae1b40a5586831 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask for textures assignment information to be built  <br /></td></tr>
+<tr class="separator:a593c31ff21abdf7074ae1b40a5586831 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accacea0b02e3091b401ceb7f4cc2ef4b inherit pub_methods_class_a_c_graphics_component" id="r_accacea0b02e3091b401ceb7f4cc2ef4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#accacea0b02e3091b401ceb7f4cc2ef4b">SetLayer</a> (<a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer)</td></tr>
+<tr class="memdesc:accacea0b02e3091b401ceb7f4cc2ef4b inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Belong to a new layer  <br /></td></tr>
+<tr class="separator:accacea0b02e3091b401ceb7f4cc2ef4b inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4882f101596b39ff4170e3c38df122fd inherit pub_methods_class_a_c_graphics_component" id="r_a4882f101596b39ff4170e3c38df122fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a4882f101596b39ff4170e3c38df122fd">SetIsActive</a> (bool isActive)</td></tr>
+<tr class="memdesc:a4882f101596b39ff4170e3c38df122fd inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set active flag  <br /></td></tr>
+<tr class="separator:a4882f101596b39ff4170e3c38df122fd inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b6a3ddf26c12b8c5e42d3cf574a8e96 inherit pub_methods_class_a_c_graphics_component" id="r_a4b6a3ddf26c12b8c5e42d3cf574a8e96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a4b6a3ddf26c12b8c5e42d3cf574a8e96">SetColor</a> (const <a class="el" href="_utility_for_math_8h.html#aec0a157ba62275f3e25a3ea3e8a9c176">Colorf</a> &amp;color)</td></tr>
+<tr class="memdesc:a4b6a3ddf26c12b8c5e42d3cf574a8e96 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color  <br /></td></tr>
+<tr class="separator:a4b6a3ddf26c12b8c5e42d3cf574a8e96 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ec2eb65e83103f7e6929ff8d4789ca inherit pub_methods_class_a_c_graphics_component" id="r_ac3ec2eb65e83103f7e6929ff8d4789ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ac3ec2eb65e83103f7e6929ff8d4789ca">SetNumericMaterialToAllMesh</a> (const <a class="el" href="struct_per_mesh_material_numeric.html">PerMeshMaterialNumeric</a> &amp;numeric)</td></tr>
+<tr class="memdesc:ac3ec2eb65e83103f7e6929ff8d4789ca inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set numeric part of the material to all meshes  <br /></td></tr>
+<tr class="separator:ac3ec2eb65e83103f7e6929ff8d4789ca inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9efdbb742727244d13d9b263188af035 inherit pub_methods_class_a_c_graphics_component" id="r_a9efdbb742727244d13d9b263188af035"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_per_mesh_material_numeric.html">PerMeshMaterialNumeric</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a9efdbb742727244d13d9b263188af035">GetMaterialNumeric</a> (UINT meshIndex)</td></tr>
+<tr class="memdesc:a9efdbb742727244d13d9b263188af035 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get numeric part of the material  <br /></td></tr>
+<tr class="separator:a9efdbb742727244d13d9b263188af035 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b2c3a110f02516f9075141e6cccd4b0 inherit pub_methods_class_a_c_graphics_component" id="r_a4b2c3a110f02516f9075141e6cccd4b0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a4b2c3a110f02516f9075141e6cccd4b0">GetType</a> ()</td></tr>
+<tr class="memdesc:a4b2c3a110f02516f9075141e6cccd4b0 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of this graphics component  <br /></td></tr>
+<tr class="separator:a4b2c3a110f02516f9075141e6cccd4b0 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11907622e291958581ecc628ab688d14 inherit pub_methods_class_a_c_graphics_component" id="r_a11907622e291958581ecc628ab688d14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a11907622e291958581ecc628ab688d14">GetGameObj</a> ()</td></tr>
+<tr class="memdesc:a11907622e291958581ecc628ab688d14 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that is the owner of this graphics component  <br /></td></tr>
+<tr class="separator:a11907622e291958581ecc628ab688d14 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d0da04f004c80508383d71a7ff285af inherit pub_methods_class_a_c_graphics_component" id="r_a2d0da04f004c80508383d71a7ff285af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a2d0da04f004c80508383d71a7ff285af">GetLayer</a> ()</td></tr>
+<tr class="memdesc:a2d0da04f004c80508383d71a7ff285af inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get graphics layer to which this class belongs  <br /></td></tr>
+<tr class="separator:a2d0da04f004c80508383d71a7ff285af inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388fdd5f49c6e0d4d62ce3b02522629d inherit pub_methods_class_a_c_graphics_component" id="r_a388fdd5f49c6e0d4d62ce3b02522629d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_mesh_buffer.html">CMeshBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a388fdd5f49c6e0d4d62ce3b02522629d">GetMeshBuffer</a> (UINT meshIndex)</td></tr>
+<tr class="memdesc:a388fdd5f49c6e0d4d62ce3b02522629d inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mesh buffer  <br /></td></tr>
+<tr class="separator:a388fdd5f49c6e0d4d62ce3b02522629d inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545bba36a3c30ed07c4969e9e0fde6c6 inherit pub_methods_class_a_c_graphics_component" id="r_a545bba36a3c30ed07c4969e9e0fde6c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a545bba36a3c30ed07c4969e9e0fde6c6">GetMeshKey</a> (UINT meshIndex)</td></tr>
+<tr class="memdesc:a545bba36a3c30ed07c4969e9e0fde6c6 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a key for mesh buffer  <br /></td></tr>
+<tr class="separator:a545bba36a3c30ed07c4969e9e0fde6c6 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f8fdd8e71b45c11b5ac589740db1b4 inherit pub_methods_class_a_c_graphics_component" id="r_af5f8fdd8e71b45c11b5ac589740db1b4"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#af5f8fdd8e71b45c11b5ac589740db1b4">GetMeshNum</a> ()</td></tr>
+<tr class="memdesc:af5f8fdd8e71b45c11b5ac589740db1b4 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of all meshes  <br /></td></tr>
+<tr class="separator:af5f8fdd8e71b45c11b5ac589740db1b4 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6947a32dfe5d33165e8dd0bf0b76dd7c inherit pub_methods_class_a_c_graphics_component" id="r_a6947a32dfe5d33165e8dd0bf0b76dd7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a6947a32dfe5d33165e8dd0bf0b76dd7c">SetUVTiling</a> (const <a class="el" href="_utility_for_math_8h.html#a52b5008b61e10ae145e2a0555ece28f6">Vector2f</a> &amp;tiling)</td></tr>
+<tr class="memdesc:a6947a32dfe5d33165e8dd0bf0b76dd7c inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set uv tiling  <br /></td></tr>
+<tr class="separator:a6947a32dfe5d33165e8dd0bf0b76dd7c inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea1c54e724428d7ea3d1d8e36e2392d inherit pub_methods_class_a_c_graphics_component" id="r_adea1c54e724428d7ea3d1d8e36e2392d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#adea1c54e724428d7ea3d1d8e36e2392d">SetUVOffset</a> (const <a class="el" href="_utility_for_math_8h.html#a52b5008b61e10ae145e2a0555ece28f6">Vector2f</a> &amp;offset)</td></tr>
+<tr class="memdesc:adea1c54e724428d7ea3d1d8e36e2392d inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set uv offset  <br /></td></tr>
+<tr class="separator:adea1c54e724428d7ea3d1d8e36e2392d inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73139bd175f3a9a2fc2f16af0971693d inherit pub_methods_class_a_c_graphics_component" id="r_a73139bd175f3a9a2fc2f16af0971693d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#a18c8f722481c3a3852a798dd00ca2c8d">Vector4f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a73139bd175f3a9a2fc2f16af0971693d">GetTexCoordParam</a> ()</td></tr>
+<tr class="memdesc:a73139bd175f3a9a2fc2f16af0971693d inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameter for texture coordinate (xy = tiling, zw = offset)  <br /></td></tr>
+<tr class="separator:a73139bd175f3a9a2fc2f16af0971693d inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa4f3b3d62f8a5edccfeb7e8f6ba87e96" id="r_aa4f3b3d62f8a5edccfeb7e8f6ba87e96"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_static_model_data.html">CStaticModelData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_basic_model.html#aa4f3b3d62f8a5edccfeb7e8f6ba87e96">GetStaticData</a> () override</td></tr>
+<tr class="memdesc:aa4f3b3d62f8a5edccfeb7e8f6ba87e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get static data per model  <br /></td></tr>
+<tr class="separator:aa4f3b3d62f8a5edccfeb7e8f6ba87e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d4bfadceeeda1806a58ef1e4241262" id="r_a33d4bfadceeeda1806a58ef1e4241262"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_a_c_model.html">ACModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_basic_model.html#a33d4bfadceeeda1806a58ef1e4241262">GetSubstance</a> () const override</td></tr>
+<tr class="memdesc:a33d4bfadceeeda1806a58ef1e4241262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to substance  <br /></td></tr>
+<tr class="separator:a33d4bfadceeeda1806a58ef1e4241262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe5756b6d5c268f3b4c6eb0f88bd3de2" id="r_afe5756b6d5c268f3b4c6eb0f88bd3de2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_model.html">ACModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_basic_model.html#afe5756b6d5c268f3b4c6eb0f88bd3de2">GetTransparentComponent</a> ()</td></tr>
+<tr class="memdesc:afe5756b6d5c268f3b4c6eb0f88bd3de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to transparent component  <br /></td></tr>
+<tr class="separator:afe5756b6d5c268f3b4c6eb0f88bd3de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_model"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_model')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_model.html">ACModel</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a8e7d56feee9de06ef5922326b13fe907 inherit pro_methods_class_a_c_model" id="r_a8e7d56feee9de06ef5922326b13fe907"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_model.html#a8e7d56feee9de06ef5922326b13fe907">CreateOpacityMesh</a> ()</td></tr>
+<tr class="memdesc:a8e7d56feee9de06ef5922326b13fe907 inherit pro_methods_class_a_c_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create opacity mesh data and texture data  <br /></td></tr>
+<tr class="separator:a8e7d56feee9de06ef5922326b13fe907 inherit pro_methods_class_a_c_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a997a74b08255a81dce51b16bdc50c115 inherit pro_methods_class_a_c_model" id="r_a997a74b08255a81dce51b16bdc50c115"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_model.html#a997a74b08255a81dce51b16bdc50c115">CreateTransparentMesh</a> ()</td></tr>
+<tr class="memdesc:a997a74b08255a81dce51b16bdc50c115 inherit pro_methods_class_a_c_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create transparent mesh data and texture data  <br /></td></tr>
+<tr class="separator:a997a74b08255a81dce51b16bdc50c115 inherit pro_methods_class_a_c_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_graphics_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_graphics_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:ae6835e365df082d9776996f5e16150ac inherit pro_methods_class_a_c_graphics_component" id="r_ae6835e365df082d9776996f5e16150ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ae6835e365df082d9776996f5e16150ac">InitializeMesh</a> (UINT meshNum, UINT texIndexPerMesh)</td></tr>
+<tr class="memdesc:ae6835e365df082d9776996f5e16150ac inherit pro_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare arrays of the meshes and its materials  <br /></td></tr>
+<tr class="separator:ae6835e365df082d9776996f5e16150ac inherit pro_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993db977d5efc6b131a014f27973da5c inherit pro_methods_class_a_c_graphics_component" id="r_a993db977d5efc6b131a014f27973da5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a993db977d5efc6b131a014f27973da5c">SetMeshInfo</a> (UINT meshIndex, <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a> &gt; vertex, <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a> &gt; index, D3D_PRIMITIVE_TOPOLOGY topology)</td></tr>
+<tr class="memdesc:a993db977d5efc6b131a014f27973da5c inherit pro_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mesh information  <br /></td></tr>
+<tr class="separator:a993db977d5efc6b131a014f27973da5c inherit pro_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998e35b7460dd55e425537867615c06d inherit pro_methods_class_a_c_graphics_component" id="r_a998e35b7460dd55e425537867615c06d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a998e35b7460dd55e425537867615c06d">SetTexture</a> (UINT meshIndex, UINT texIndexPerMesh, <a class="el" href="class_c_texture.html">CTexture</a> tex)</td></tr>
+<tr class="memdesc:a998e35b7460dd55e425537867615c06d inherit pro_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set texture  <br /></td></tr>
+<tr class="separator:a998e35b7460dd55e425537867615c06d inherit pro_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912aba43aff9d9063b36f75bd316e51b inherit pro_methods_class_a_c_graphics_component" id="r_a912aba43aff9d9063b36f75bd316e51b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a912aba43aff9d9063b36f75bd316e51b">SetNumericPartMaterial</a> (UINT meshIndex, <a class="el" href="struct_per_mesh_material_numeric.html">PerMeshMaterialNumeric</a> numeric)</td></tr>
+<tr class="memdesc:a912aba43aff9d9063b36f75bd316e51b inherit pro_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set numeric part of the material  <br /></td></tr>
+<tr class="separator:a912aba43aff9d9063b36f75bd316e51b inherit pro_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb59722b7b70a60f5a668b257279103 inherit pro_methods_class_a_c_graphics_component" id="r_a0bb59722b7b70a60f5a668b257279103"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_texture.html">CTexture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a0bb59722b7b70a60f5a668b257279103">GetTexture</a> (UINT meshIndex, UINT texIndexPerMesh)</td></tr>
+<tr class="memdesc:a0bb59722b7b70a60f5a668b257279103 inherit pro_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get texture  <br /></td></tr>
+<tr class="separator:a0bb59722b7b70a60f5a668b257279103 inherit pro_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_model"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_model')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_model.html">ACModel</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a15ba422b6d790d884caabb45d861c78b inherit pro_attribs_class_a_c_model" id="r_a15ba422b6d790d884caabb45d861c78b"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_model.html#a15ba422b6d790d884caabb45d861c78b">m_isSubstance</a></td></tr>
+<tr class="memdesc:a15ba422b6d790d884caabb45d861c78b inherit pro_attribs_class_a_c_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component for an substance?  <br /></td></tr>
+<tr class="separator:a15ba422b6d790d884caabb45d861c78b inherit pro_attribs_class_a_c_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_graphics_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_graphics_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a9c64ac1a5a38b522af5acea05cc1a50f inherit pro_attribs_class_a_c_graphics_component" id="r_a9c64ac1a5a38b522af5acea05cc1a50f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a9c64ac1a5a38b522af5acea05cc1a50f">m_gameObj</a></td></tr>
+<tr class="memdesc:a9c64ac1a5a38b522af5acea05cc1a50f inherit pro_attribs_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game object that is the owner of this graphics component  <br /></td></tr>
+<tr class="separator:a9c64ac1a5a38b522af5acea05cc1a50f inherit pro_attribs_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6461ca45132ed0b6bed3cf865ae8bd7 inherit pro_attribs_class_a_c_graphics_component" id="r_ac6461ca45132ed0b6bed3cf865ae8bd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ac6461ca45132ed0b6bed3cf865ae8bd7">m_layer</a></td></tr>
+<tr class="memdesc:ac6461ca45132ed0b6bed3cf865ae8bd7 inherit pro_attribs_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphics layer to which this class belongs  <br /></td></tr>
+<tr class="separator:ac6461ca45132ed0b6bed3cf865ae8bd7 inherit pro_attribs_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Non-animated model </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a89b929950e49c70cfe47261de4a333d2" name="a89b929950e49c70cfe47261de4a333d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b929950e49c70cfe47261de4a333d2">&#9670;&#160;</a></span>CBasicModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CBasicModel::CBasicModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html">CGameObject</a> *&#160;</td>
+          <td class="paramname"><em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a>&#160;</td>
+          <td class="paramname"><em>layer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>modelPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>additionalTexID</em> = <code><a class="el" href="namespace_model_info.html#a53e8c37a869f8adc4c739ceb1450a115">ModelInfo::NON_ADDITIONAL_TEX_ID</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">owner</td><td>Game object that is the owner of this graphics component </td></tr>
+    <tr><td class="paramname">layer</td><td>Graphics layer to which this class belongs </td></tr>
+    <tr><td class="paramname">modelPath</td><td>Path of model file </td></tr>
+    <tr><td class="paramname">additionalTexID</td><td>If using an additional texture instead of the default texture, specify its ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_basic_model_a89b929950e49c70cfe47261de4a333d2_cgraph.png" border="0" usemap="#aclass_c_basic_model_a89b929950e49c70cfe47261de4a333d2_cgraph" alt=""/></div>
+<map name="aclass_c_basic_model_a89b929950e49c70cfe47261de4a333d2_cgraph" id="aclass_c_basic_model_a89b929950e49c70cfe47261de4a333d2_cgraph">
+<area shape="rect" title="Constructor" alt="" coords="5,257,189,284"/>
+<area shape="rect" href="class_a_c_model.html#a8e7d56feee9de06ef5922326b13fe907" title="Create opacity mesh data and texture data" alt="" coords="237,232,434,259"/>
+<area shape="poly" title=" " alt="" coords="189,258,221,255,221,260,189,264"/>
+<area shape="rect" href="class_c_basic_model.html#aa4f3b3d62f8a5edccfeb7e8f6ba87e96" title="Get static data per model" alt="" coords="241,283,430,309"/>
+<area shape="poly" title=" " alt="" coords="189,278,226,282,225,287,189,283"/>
+<area shape="rect" href="class_c_static_model_data.html#a6db5a3125656e0206426668cba5c3dc3" title="Get a material of this model" alt="" coords="498,5,699,32"/>
+<area shape="poly" title=" " alt="" coords="340,230,358,192,388,141,429,87,453,63,481,42,489,36,492,41,483,46,457,67,433,91,392,144,363,195,345,233"/>
+<area shape="rect" href="class_c_static_model_data.html#a974fcae622406d9ad1ef39e094906c2b" title="Get a mesh that has opacity texture" alt="" coords="482,56,714,83"/>
+<area shape="poly" title=" " alt="" coords="344,230,396,163,435,125,481,92,493,86,496,91,483,97,439,129,400,167,348,233"/>
+<area shape="rect" href="class_c_static_model_data.html#a318c3a3fc1a88e470972b71a46228138" title="Get the number of meshes that has opacity texture" alt="" coords="498,107,698,149"/>
+<area shape="poly" title=" " alt="" coords="356,229,411,195,481,159,497,152,499,157,483,164,414,199,358,234"/>
+<area shape="rect" href="class_a_c_model.html#a9283fb149f2be4c1751f9ad38b604e19" title="Get static data per model" alt="" coords="516,173,680,200"/>
+<area shape="poly" title=" " alt="" coords="397,229,481,209,518,201,519,206,483,215,398,234"/>
+<area shape="rect" href="struct_model_info_1_1_material.html#a6f8f9a251b36faed667319c2464f37bb" title="Get texture handle" alt="" coords="533,224,663,267"/>
+<area shape="poly" title=" " alt="" coords="435,243,517,243,517,248,435,248"/>
+<area shape="rect" href="class_a_c_graphics_component.html#ae6835e365df082d9776996f5e16150ac" title="Prepare arrays of the meshes and its materials" alt="" coords="520,291,677,333"/>
+<area shape="poly" title=" " alt="" coords="392,257,505,286,504,291,391,262"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a993db977d5efc6b131a014f27973da5c" title="Set mesh information" alt="" coords="520,357,677,400"/>
+<area shape="poly" title=" " alt="" coords="414,257,436,269,453,287,461,307,468,326,484,343,506,356,504,361,480,347,463,328,456,309,448,290,432,273,412,262"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a912aba43aff9d9063b36f75bd316e51b" title="Set numeric part of the material" alt="" coords="515,424,682,467"/>
+<area shape="poly" title=" " alt="" coords="419,257,436,269,450,286,458,305,461,341,464,376,470,393,484,410,502,423,499,428,480,414,466,396,459,378,456,341,453,306,446,289,432,273,416,262"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a998e35b7460dd55e425537867615c06d" title="Set texture" alt="" coords="520,491,677,533"/>
+<area shape="poly" title=" " alt="" coords="421,257,436,269,455,295,463,322,464,348,461,375,458,401,459,426,466,452,484,477,507,493,503,498,480,481,462,454,454,427,453,400,456,374,458,348,458,323,450,297,432,273,417,261"/>
+<area shape="rect" href="class_c_int_key_generater.html#af4834f22e0b0649e5aac1f28304b2389" title="Generate a key" alt="" coords="762,299,971,325"/>
+<area shape="poly" title=" " alt="" coords="677,309,747,309,747,315,677,315"/>
+<area shape="rect" href="class_c_unique_ptr.html#a214aca2b0021fdf82a55034e39f1a8f9" title="Make unique pointer" alt="" coords="803,424,930,451"/>
+<area shape="poly" title=" " alt="" coords="678,329,715,343,781,377,835,412,832,417,778,382,713,348,676,334"/>
+<area shape="poly" title=" " alt="" coords="677,488,800,453,802,458,678,493"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8d0ab509849a7fc576c5d1e791a4b78c" name="a8d0ab509849a7fc576c5d1e791a4b78c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d0ab509849a7fc576c5d1e791a4b78c">&#9670;&#160;</a></span>~CBasicModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CBasicModel::~CBasicModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aa4f3b3d62f8a5edccfeb7e8f6ba87e96" name="aa4f3b3d62f8a5edccfeb7e8f6ba87e96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f3b3d62f8a5edccfeb7e8f6ba87e96">&#9670;&#160;</a></span>GetStaticData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_c_static_model_data.html">CStaticModelData</a> * CBasicModel::GetStaticData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get static data per model </p>
+
+<p><a class="el" href="class_a_c_model.html#a9283fb149f2be4c1751f9ad38b604e19">ACModel</a>を実装しています。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_basic_model_aa4f3b3d62f8a5edccfeb7e8f6ba87e96_icgraph.png" border="0" usemap="#aclass_c_basic_model_aa4f3b3d62f8a5edccfeb7e8f6ba87e96_icgraph" alt=""/></div>
+<map name="aclass_c_basic_model_aa4f3b3d62f8a5edccfeb7e8f6ba87e96_icgraph" id="aclass_c_basic_model_aa4f3b3d62f8a5edccfeb7e8f6ba87e96_icgraph">
+<area shape="rect" title="Get static data per model" alt="" coords="237,5,425,32"/>
+<area shape="rect" href="class_c_basic_model.html#a89b929950e49c70cfe47261de4a333d2" title="Constructor" alt="" coords="5,5,189,32"/>
+<area shape="poly" title=" " alt="" coords="221,21,189,21,189,16,221,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a33d4bfadceeeda1806a58ef1e4241262" name="a33d4bfadceeeda1806a58ef1e4241262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33d4bfadceeeda1806a58ef1e4241262">&#9670;&#160;</a></span>GetSubstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_a_c_model.html">ACModel</a> * CBasicModel::GetSubstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get pointer to substance </p>
+
+<p><a class="el" href="class_a_c_model.html#a261642d125abf3a946caf4245b2c75ae">ACModel</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="afe5756b6d5c268f3b4c6eb0f88bd3de2" name="afe5756b6d5c268f3b4c6eb0f88bd3de2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe5756b6d5c268f3b4c6eb0f88bd3de2">&#9670;&#160;</a></span>GetTransparentComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_model.html">ACModel</a> * CBasicModel::GetTransparentComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get pointer to transparent component </p>
+
+<p><a class="el" href="class_a_c_model.html#a2ecdc3e912ca1c4667c0b69b98017c4c">ACModel</a>を実装しています。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_model_8h_source.html">Model.h</a></li>
+<li><a class="el" href="_model_8cpp.html">Model.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

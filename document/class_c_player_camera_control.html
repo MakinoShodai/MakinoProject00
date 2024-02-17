@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CPlayerCameraControl クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_player_camera_control-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CPlayerCameraControl クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Component for controlling player camera  
+ <a href="class_c_player_camera_control.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_player_camera_8h_source.html">PlayerCamera.h</a>&gt;</code></p>
+<div class="dynheader">
+CPlayerCameraControl の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_player_camera_control__inherit__graph.png" border="0" usemap="#a_c_player_camera_control_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_player_camera_control_inherit__map" id="a_c_player_camera_control_inherit__map">
+<area shape="rect" title="Component for controlling player camera" alt="" coords="5,245,159,272"/>
+<area shape="rect" href="class_a_c_component.html" title="This is abstract class for component used in update processing" alt="" coords="29,171,135,197"/>
+<area shape="poly" title=" " alt="" coords="85,213,85,245,79,245,79,213"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="6,80,158,123"/>
+<area shape="poly" title=" " alt="" coords="85,139,85,170,79,170,79,139"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="17,5,147,32"/>
+<area shape="poly" title=" " alt="" coords="85,48,85,80,79,80,79,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CPlayerCameraControl 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_player_camera_control__coll__graph.png" border="0" usemap="#a_c_player_camera_control_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_player_camera_control_coll__map" id="a_c_player_camera_control_coll__map">
+<area shape="rect" title="Component for controlling player camera" alt="" coords="149,264,302,291"/>
+<area shape="rect" href="class_a_c_component.html" title="This is abstract class for component used in update processing" alt="" coords="173,188,278,215"/>
+<area shape="poly" title=" " alt="" coords="228,230,228,264,223,264,223,230"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="5,81,158,124"/>
+<area shape="poly" title=" " alt="" coords="127,131,208,185,205,190,124,135"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="17,5,146,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,84,81,79,81,79,48"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="181,89,369,116"/>
+<area shape="poly" title=" " alt="" coords="264,131,234,189,229,187,259,129"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae0963721668fae2978a0b556ef5c7c06" id="r_ae0963721668fae2978a0b556ef5c7c06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_player_camera_control.html#ae0963721668fae2978a0b556ef5c7c06">Start</a> () override</td></tr>
+<tr class="memdesc:ae0963721668fae2978a0b556ef5c7c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting process  <br /></td></tr>
+<tr class="separator:ae0963721668fae2978a0b556ef5c7c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9af9fa4514596f1f1d7902c1f5bcf810" id="r_a9af9fa4514596f1f1d7902c1f5bcf810"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_player_camera_control.html#a9af9fa4514596f1f1d7902c1f5bcf810">Update</a> () override</td></tr>
+<tr class="memdesc:a9af9fa4514596f1f1d7902c1f5bcf810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updating process  <br /></td></tr>
+<tr class="separator:a9af9fa4514596f1f1d7902c1f5bcf810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2b2d42737a1fe9bb397af5927ff322" id="r_a9b2b2d42737a1fe9bb397af5927ff322"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_player_camera_control.html#a9b2b2d42737a1fe9bb397af5927ff322">ACComponent</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner)</td></tr>
+<tr class="memdesc:a9b2b2d42737a1fe9bb397af5927ff322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a9b2b2d42737a1fe9bb397af5927ff322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_component.html">ACComponent</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component" id="r_a9b2b2d42737a1fe9bb397af5927ff322"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a9b2b2d42737a1fe9bb397af5927ff322">ACComponent</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner)</td></tr>
+<tr class="memdesc:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f1dbaf0bb679d5f41f5541d39f80d9 inherit pub_methods_class_a_c_component" id="r_a42f1dbaf0bb679d5f41f5541d39f80d9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a42f1dbaf0bb679d5f41f5541d39f80d9">Awake</a> ()</td></tr>
+<tr class="memdesc:a42f1dbaf0bb679d5f41f5541d39f80d9 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is added to an object  <br /></td></tr>
+<tr class="separator:a42f1dbaf0bb679d5f41f5541d39f80d9 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component" id="r_a642abc9ed76961dd974d8934485e8055"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a642abc9ed76961dd974d8934485e8055">PrePhysicsUpdate</a> ()</td></tr>
+<tr class="memdesc:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-update process for physics simulation  <br /></td></tr>
+<tr class="separator:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88abe0db6e3b1ac90e738c5f1927fc91 inherit pub_methods_class_a_c_component" id="r_a88abe0db6e3b1ac90e738c5f1927fc91"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a88abe0db6e3b1ac90e738c5f1927fc91">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:a88abe0db6e3b1ac90e738c5f1927fc91 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process to be called at instance destruction  <br /></td></tr>
+<tr class="separator:a88abe0db6e3b1ac90e738c5f1927fc91 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component" id="r_a9f7ad72915aa2e6736bf55e39309d81e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a9f7ad72915aa2e6736bf55e39309d81e">OnEnable</a> ()</td></tr>
+<tr class="memdesc:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is enabled  <br /></td></tr>
+<tr class="separator:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d54222d4b8efabdc66f145c3531da0 inherit pub_methods_class_a_c_component" id="r_a02d54222d4b8efabdc66f145c3531da0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a02d54222d4b8efabdc66f145c3531da0">OnDisable</a> ()</td></tr>
+<tr class="memdesc:a02d54222d4b8efabdc66f145c3531da0 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is disabled  <br /></td></tr>
+<tr class="separator:a02d54222d4b8efabdc66f145c3531da0 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component" id="r_aaed0e5be88178643fba5329ab9b708a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#aaed0e5be88178643fba5329ab9b708a7">OnCollisionBegin</a> (const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;opponent)</td></tr>
+<tr class="memdesc:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when collision begins  <br /></td></tr>
+<tr class="separator:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component" id="r_a21ed1397839942770494c5ab8e96316b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a21ed1397839942770494c5ab8e96316b">OnCollisionHit</a> (const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;opponent)</td></tr>
+<tr class="memdesc:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing during collision  <br /></td></tr>
+<tr class="separator:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component" id="r_a4f1e621bcb3400e0d38f73b758fc0def"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a4f1e621bcb3400e0d38f73b758fc0def">OnCollisionEnd</a> (const <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt; &amp;opponent)</td></tr>
+<tr class="memdesc:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when collision ends  <br /></td></tr>
+<tr class="separator:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component" id="r_ab7d85ad6e45f8b12776d219d27e52210"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ab7d85ad6e45f8b12776d219d27e52210">GetGameObject</a> ()</td></tr>
+<tr class="memdesc:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that this component has  <br /></td></tr>
+<tr class="separator:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component" id="r_ab8f9b780e9c36420c4180c2de84f9733"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ab8f9b780e9c36420c4180c2de84f9733">GetGameObject</a> () const</td></tr>
+<tr class="memdesc:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that this component has  <br /></td></tr>
+<tr class="separator:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component" id="r_a73c656cb09cfd57d43bd4ebdbd992091"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091">GetTransform</a> () const</td></tr>
+<tr class="memdesc:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get transform of the object  <br /></td></tr>
+<tr class="separator:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component" id="r_a1677e72c01ba17b59662de344623cf18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18">GetScene</a> ()</td></tr>
+<tr class="memdesc:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scene where this component exists <br  />
+  <br /></td></tr>
+<tr class="separator:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component" id="r_a1311a24d05c9ba046f11411fc300fa9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1311a24d05c9ba046f11411fc300fa9c">GetScene</a> () const</td></tr>
+<tr class="memdesc:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scene where this component exists <br  />
+  <br /></td></tr>
+<tr class="separator:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component" id="r_a7732e25a7799100e9b39be4f2ab1c4c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_callback_system.html">CCallbackSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a7732e25a7799100e9b39be4f2ab1c4c0">GetCallbackSystem</a> ()</td></tr>
+<tr class="memdesc:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the callback system that the gameobject has  <br /></td></tr>
+<tr class="separator:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component" id="r_ac9afe74cc73092c13a933bf7b82d8fa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ac9afe74cc73092c13a933bf7b82d8fa2">SetIsActive</a> (bool isActive)</td></tr>
+<tr class="memdesc:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the active flag of this component  <br /></td></tr>
+<tr class="separator:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component" id="r_ad7205261ebda783caeedc9f1c210c2f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ad7205261ebda783caeedc9f1c210c2f4">IsActiveSelf</a> () const</td></tr>
+<tr class="memdesc:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component itself active?  <br /></td></tr>
+<tr class="separator:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component" id="r_ad2aa36309aaee515ea36a1765c9b0f97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ad2aa36309aaee515ea36a1765c9b0f97">IsActiveOverall</a> () const</td></tr>
+<tr class="memdesc:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component itself and the game object that owns it active?  <br /></td></tr>
+<tr class="separator:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis&lt; ACComponent &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_ab2905432621e2737bc3f95cb9101a8e2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#ab2905432621e2737bc3f95cb9101a8e2">~ACWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="memdesc:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_aa549f0fbf364d84137496a7eed607bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_component.html">ACComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#aa549f0fbf364d84137496a7eed607bb5">WeakFromThis</a> ()</td></tr>
+<tr class="memdesc:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer from this class  <br /></td></tr>
+<tr class="separator:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_i_weak_ptr_from_this.html">IWeakPtrFromThis</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this" id="r_a5a3acc569a8076065b930bc52a87255c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_weak_ptr_from_this.html#a5a3acc569a8076065b930bc52a87255c">~IWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="separator:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_component.html">ACComponent</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component" id="r_a350f4f03d8f125df479f4bdd6603aa32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">m_gameObj</a></td></tr>
+<tr class="memdesc:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game object that is the owner of this component  <br /></td></tr>
+<tr class="separator:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component" id="r_a1b75230266b37261b0078008cfacab2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1b75230266b37261b0078008cfacab2a">m_isActive</a></td></tr>
+<tr class="memdesc:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component active?  <br /></td></tr>
+<tr class="separator:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Component for controlling player camera </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a9b2b2d42737a1fe9bb397af5927ff322" name="a9b2b2d42737a1fe9bb397af5927ff322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2b2d42737a1fe9bb397af5927ff322">&#9670;&#160;</a></span>ACComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ACComponent::ACComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html">CGameObject</a> *&#160;</td>
+          <td class="paramname"><em>owner</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">owner</td><td>Game object that is the owner of this component </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae0963721668fae2978a0b556ef5c7c06" name="ae0963721668fae2978a0b556ef5c7c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0963721668fae2978a0b556ef5c7c06">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CPlayerCameraControl::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Starting process </p>
+
+<p><a class="el" href="class_a_c_component.html#ae0601a998d4b46b7cf59edbfaa03683f">ACComponent</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_player_camera_control_ae0963721668fae2978a0b556ef5c7c06_cgraph.png" border="0" usemap="#aclass_c_player_camera_control_ae0963721668fae2978a0b556ef5c7c06_cgraph" alt=""/></div>
+<map name="aclass_c_player_camera_control_ae0963721668fae2978a0b556ef5c7c06_cgraph" id="aclass_c_player_camera_control_ae0963721668fae2978a0b556ef5c7c06_cgraph">
+<area shape="rect" title="Starting process" alt="" coords="5,64,159,107"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="207,5,391,48"/>
+<area shape="poly" title=" " alt="" coords="158,62,202,50,203,55,160,67"/>
+<area shape="rect" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18" title="Get scene where this component exists" alt="" coords="213,72,385,99"/>
+<area shape="poly" title=" " alt="" coords="159,83,198,83,198,88,159,88"/>
+<area shape="rect" href="class_c_input_system.html#aa06eeb8ab61d365ceb5115946de85102" title="Set a flag that the cursor repeats in the screen" alt="" coords="208,123,390,165"/>
+<area shape="poly" title=" " alt="" coords="160,103,203,115,202,121,158,109"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9af9fa4514596f1f1d7902c1f5bcf810" name="a9af9fa4514596f1f1d7902c1f5bcf810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9af9fa4514596f1f1d7902c1f5bcf810">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CPlayerCameraControl::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updating process </p>
+
+<p><a class="el" href="class_a_c_component.html#add7411781140bec2e38b0fe1d9bbb35a">ACComponent</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_player_camera_control_a9af9fa4514596f1f1d7902c1f5bcf810_cgraph.png" border="0" usemap="#aclass_c_player_camera_control_a9af9fa4514596f1f1d7902c1f5bcf810_cgraph" alt=""/></div>
+<map name="aclass_c_player_camera_control_a9af9fa4514596f1f1d7902c1f5bcf810_cgraph" id="aclass_c_player_camera_control_a9af9fa4514596f1f1d7902c1f5bcf810_cgraph">
+<area shape="rect" title="Updating process" alt="" coords="5,259,159,301"/>
+<area shape="rect" href="struct_vector.html#afb943983cc6c451a370b9e83608d44a8" title="Calculate the angle of rotation from this vector to another vector in 2D, ignoring one axis" alt="" coords="261,5,376,32"/>
+<area shape="poly" title=" " alt="" coords="86,258,100,214,124,157,159,99,180,72,205,49,224,36,245,28,247,33,227,41,208,53,184,76,163,102,129,160,105,216,91,259"/>
+<area shape="rect" href="namespace_utl.html#ab5e81dea424788482339039bbdd5d8bc" title="Clamp a value in min to max" alt="" coords="490,56,572,83"/>
+<area shape="poly" title=" " alt="" coords="88,257,104,220,128,174,162,129,182,109,205,92,238,76,274,65,346,53,416,52,475,57,475,62,416,57,347,58,275,70,240,81,208,97,186,113,166,132,132,177,108,222,93,259"/>
+<area shape="rect" href="namespace_utl.html#a0c74eff4528c2a699d45278e6169f763" title="Convert value, which is the value of inMin ～ inMax, to outMin ～ outMax" alt="" coords="224,107,413,133"/>
+<area shape="poly" title=" " alt="" coords="95,256,139,199,170,169,205,143,216,137,219,142,208,148,174,173,143,203,99,260"/>
+<area shape="rect" href="class_c_input_system.html#ac3badfce16432612b2c10c37cba7851c" title="Get amount of change in cursor position from previous frame" alt="" coords="207,157,430,184"/>
+<area shape="poly" title=" " alt="" coords="107,256,152,224,206,194,224,187,226,192,208,198,155,228,111,260"/>
+<area shape="rect" href="class_c_app_clock.html#a99f40def33f8d074f23ebdee1f86f4f6" title="Get elapsed time from prev frame" alt="" coords="232,208,405,235"/>
+<area shape="poly" title=" " alt="" coords="158,257,206,244,239,236,240,241,207,249,160,262"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="226,259,411,301"/>
+<area shape="poly" title=" " alt="" coords="159,286,211,286,210,292,159,291"/>
+<area shape="poly" title=" " alt="" coords="159,269,210,268,211,274,159,274"/>
+<area shape="rect" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091" title="Get transform of the object" alt="" coords="223,325,414,352"/>
+<area shape="poly" title=" " alt="" coords="160,298,207,311,240,319,239,324,206,316,158,303"/>
+<area shape="rect" href="struct_vector.html#a2a17b2b690d93fe77c6acce69e1fb17b" title="Calculate vector length" alt="" coords="478,452,584,479"/>
+<area shape="poly" title=" " alt="" coords="111,300,155,332,208,362,268,382,318,389,368,395,431,412,495,442,492,447,429,417,367,401,317,394,267,387,206,366,152,336,107,304"/>
+<area shape="rect" href="namespace_utl_1_1_math.html#a0ffb416d5179d97eb00eb2791384c3e4" title="Linear interpolation" alt="" coords="265,427,372,453"/>
+<area shape="poly" title=" " alt="" coords="101,300,145,353,175,382,208,406,251,424,249,429,205,410,172,386,141,357,97,304"/>
+<area shape="rect" href="namespace_utl.html#a5874820b0795c487487a88fa48e335dc" title="Linear interpolation from A to B" alt="" coords="283,477,354,504"/>
+<area shape="poly" title=" " alt="" coords="94,301,110,337,134,381,167,426,208,463,237,477,268,485,267,490,235,482,205,468,163,429,130,384,105,339,89,303"/>
+<area shape="rect" href="struct_vector.html#a5fa1e63b510986c5a7c6a933b028c505" title="Normalize this vector" alt="" coords="256,528,381,555"/>
+<area shape="poly" title=" " alt="" coords="91,301,104,346,127,404,161,464,183,491,208,514,241,530,239,535,205,518,179,494,157,467,122,407,99,348,86,303"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="281,579,356,605"/>
+<area shape="poly" title=" " alt="" coords="89,301,99,355,120,427,136,465,155,502,179,535,208,565,236,580,266,587,265,593,234,585,205,569,175,539,151,504,131,467,115,429,94,357,83,302"/>
+<area shape="poly" title=" " alt="" coords="377,30,475,53,474,59,375,35"/>
+<area shape="poly" title=" " alt="" coords="377,103,474,80,475,85,378,109"/>
+<area shape="rect" href="struct_vector.html#a1422d1d25bdd05ed068c786f9c45fcd3" title="Calculate vector length squared" alt="" coords="632,452,755,479"/>
+<area shape="poly" title=" " alt="" coords="585,463,617,463,617,468,585,468"/>
+<area shape="rect" href="struct_vector.html#a8ab815e67c75162daf574aac3c7597e0" title="Dot product" alt="" coords="803,452,890,479"/>
+<area shape="poly" title=" " alt="" coords="755,463,787,463,787,468,755,468"/>
+<area shape="poly" title=" " alt="" coords="380,527,429,514,492,484,494,489,431,518,382,533"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_player_camera_8h_source.html">PlayerCamera.h</a></li>
+<li><a class="el" href="_player_camera_8cpp.html">PlayerCamera.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

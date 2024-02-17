@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: TextureRegistry.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">TextureRegistry.cpp ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_texture_registry_8h_source.html">TextureRegistry.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_asset_crypter_8h_source.html">AssetCrypter.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utility_for_exception_8h_source.html">UtilityForException.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+TextureRegistry.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_texture_registry_8cpp__incl.png" border="0" usemap="#a_texture_registry_8cpp" alt=""/></div>
+<map name="a_texture_registry_8cpp" id="a_texture_registry_8cpp">
+<area shape="rect" title=" " alt="" coords="543,5,680,32"/>
+<area shape="rect" href="_texture_registry_8h.html" title="This file handles all texture resources together in the registry." alt="" coords="398,80,521,107"/>
+<area shape="poly" title=" " alt="" coords="586,35,501,75,499,70,584,30"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="543,453,685,480"/>
+<area shape="poly" title=" " alt="" coords="614,33,614,167,614,319,616,438,611,438,609,319,609,167,609,33"/>
+<area shape="rect" href="_asset_crypter_8h.html" title="This file handles asset encryption and decryption functions." alt="" coords="649,80,758,107"/>
+<area shape="poly" title=" " alt="" coords="629,30,677,68,674,73,626,35"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="411,379,497,405"/>
+<area shape="poly" title=" " alt="" coords="471,106,504,157,521,192,534,229,536,243,534,256,530,295,516,332,501,353,484,370,480,367,497,349,512,329,525,294,529,256,530,243,529,230,516,194,499,160,467,109"/>
+<area shape="rect" href="_texture_resource_8h.html" title="This file handles texture resources." alt="" coords="258,155,389,181"/>
+<area shape="poly" title=" " alt="" coords="437,110,362,149,359,145,434,105"/>
+<area shape="rect" href="_utility_for_direct_x_8h.html" title="This file defines utility functions that are useful for DirectX." alt="" coords="161,304,286,331"/>
+<area shape="poly" title=" " alt="" coords="398,105,323,123,284,138,247,157,208,187,196,205,185,230,182,246,186,262,203,291,198,294,181,264,177,246,179,229,191,202,204,184,245,152,282,133,321,118,396,100"/>
+<area shape="rect" href="_descriptor_heap_8h.html" title="This file handles descriptor heap." alt="" coords="399,229,520,256"/>
+<area shape="poly" title=" " alt="" coords="462,107,462,214,457,214,457,107"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="386,453,519,480"/>
+<area shape="poly" title=" " alt="" coords="456,406,456,438,451,438,451,406"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="272,453,361,480"/>
+<area shape="poly" title=" " alt="" coords="431,408,355,448,353,443,429,404"/>
+<area shape="poly" title=" " alt="" coords="483,403,573,444,571,449,481,408"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="275,528,358,555"/>
+<area shape="poly" title=" " alt="" coords="319,481,319,512,314,512,314,481"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="104,603,169,629"/>
+<area shape="poly" title=" " alt="" coords="286,558,183,599,181,594,284,553"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="45,677,157,704"/>
+<area shape="poly" title=" " alt="" coords="133,631,116,664,111,662,128,629"/>
+<area shape="rect" href="_gpu_optimized_resource_8h.html" title=" " alt="" coords="205,229,375,256"/>
+<area shape="poly" title=" " alt="" coords="320,183,305,216,300,214,315,181"/>
+<area shape="poly" title=" " alt="" coords="263,184,225,202,208,215,195,231,190,245,191,260,206,290,201,293,186,262,185,244,190,228,205,211,222,198,261,179"/>
+<area shape="poly" title=" " alt="" coords="348,180,423,219,421,224,346,184"/>
+<area shape="poly" title=" " alt="" coords="234,330,303,439,298,441,229,333"/>
+<area shape="poly" title=" " alt="" coords="419,259,280,302,278,296,417,254"/>
+<area shape="rect" href="_application_8h.html" title="This file handles application objects such as window and DirectX device." alt="" coords="406,304,502,331"/>
+<area shape="poly" title=" " alt="" coords="461,257,459,289,453,288,456,256"/>
+<area shape="poly" title=" " alt="" coords="457,331,457,363,451,363,451,331"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="135,453,248,480"/>
+<area shape="poly" title=" " alt="" coords="433,333,228,448,226,443,430,329"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="5,528,127,555"/>
+<area shape="poly" title=" " alt="" coords="171,483,102,522,99,518,168,478"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="151,528,251,555"/>
+<area shape="poly" title=" " alt="" coords="196,480,200,512,194,513,190,481"/>
+<area shape="poly" title=" " alt="" coords="80,553,116,590,112,593,76,557"/>
+<area shape="poly" title=" " alt="" coords="72,555,97,662,92,663,66,556"/>
+</map>
+</div>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

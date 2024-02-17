@@ -1,0 +1,1280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CRigidBody クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_rigid_body-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CRigidBody クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Rigid body component  
+ <a href="class_c_rigid_body.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_rigid_body_8h_source.html">RigidBody.h</a>&gt;</code></p>
+<div class="dynheader">
+CRigidBody の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body__inherit__graph.png" border="0" usemap="#a_c_rigid_body_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_rigid_body_inherit__map" id="a_c_rigid_body_inherit__map">
+<area shape="rect" title="Rigid body component" alt="" coords="37,245,126,272"/>
+<area shape="rect" href="class_a_c_component.html" title="This is abstract class for component used in update processing" alt="" coords="29,171,134,197"/>
+<area shape="poly" title=" " alt="" coords="84,213,84,245,79,245,79,213"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="5,80,158,123"/>
+<area shape="poly" title=" " alt="" coords="84,139,84,170,79,170,79,139"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="17,5,146,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,84,80,79,80,79,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CRigidBody 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body__coll__graph.png" border="0" usemap="#a_c_rigid_body_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_rigid_body_coll__map" id="a_c_rigid_body_coll__map">
+<area shape="rect" title="Rigid body component" alt="" coords="181,264,270,291"/>
+<area shape="rect" href="class_a_c_component.html" title="This is abstract class for component used in update processing" alt="" coords="173,188,278,215"/>
+<area shape="poly" title=" " alt="" coords="228,230,228,264,223,264,223,230"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="5,81,158,124"/>
+<area shape="poly" title=" " alt="" coords="127,131,208,185,205,190,124,135"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="17,5,146,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,84,81,79,81,79,48"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="181,89,369,116"/>
+<area shape="poly" title=" " alt="" coords="264,131,234,189,229,187,259,129"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae6c96bfddbcce724fc979deda6f185a4" id="r_ae6c96bfddbcce724fc979deda6f185a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#ae6c96bfddbcce724fc979deda6f185a4">CRigidBody</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner)</td></tr>
+<tr class="memdesc:ae6c96bfddbcce724fc979deda6f185a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:ae6c96bfddbcce724fc979deda6f185a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44045d927f131496861e79649706f022" id="r_a44045d927f131496861e79649706f022"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a44045d927f131496861e79649706f022">~CRigidBody</a> ()=default</td></tr>
+<tr class="memdesc:a44045d927f131496861e79649706f022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a44045d927f131496861e79649706f022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff76c36313cdffb15bbdb8bcf918c05a" id="r_aff76c36313cdffb15bbdb8bcf918c05a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#aff76c36313cdffb15bbdb8bcf918c05a">Awake</a> () override</td></tr>
+<tr class="memdesc:aff76c36313cdffb15bbdb8bcf918c05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awake processing  <br /></td></tr>
+<tr class="separator:aff76c36313cdffb15bbdb8bcf918c05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a075d9d55b87e21f6156fec20702a3711" id="r_a075d9d55b87e21f6156fec20702a3711"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a075d9d55b87e21f6156fec20702a3711">Start</a> () override</td></tr>
+<tr class="memdesc:a075d9d55b87e21f6156fec20702a3711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start processing  <br /></td></tr>
+<tr class="separator:a075d9d55b87e21f6156fec20702a3711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa050e9de295fade523fa1d5efcb8aea0" id="r_aa050e9de295fade523fa1d5efcb8aea0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#aa050e9de295fade523fa1d5efcb8aea0">Update</a> () override</td></tr>
+<tr class="memdesc:aa050e9de295fade523fa1d5efcb8aea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update processing  <br /></td></tr>
+<tr class="separator:aa050e9de295fade523fa1d5efcb8aea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10532b33bd766ec20ffba2032c60403a" id="r_a10532b33bd766ec20ffba2032c60403a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a10532b33bd766ec20ffba2032c60403a">OnDestroy</a> () override</td></tr>
+<tr class="memdesc:a10532b33bd766ec20ffba2032c60403a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing at destruction  <br /></td></tr>
+<tr class="separator:a10532b33bd766ec20ffba2032c60403a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76bd729c2f736a37107527ebed824592" id="r_a76bd729c2f736a37107527ebed824592"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a76bd729c2f736a37107527ebed824592">OnDisable</a> () override</td></tr>
+<tr class="memdesc:a76bd729c2f736a37107527ebed824592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is disabled  <br /></td></tr>
+<tr class="separator:a76bd729c2f736a37107527ebed824592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e8eb50f4c574bfdc67c43b8e82c328" id="r_a83e8eb50f4c574bfdc67c43b8e82c328"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a83e8eb50f4c574bfdc67c43b8e82c328">AddForce</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;force, <a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0ac">ForceMode</a> mode=<a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0aca9eb6b78a99cdb6ffd3d40d18621d9f80">ForceMode::Force</a>)</td></tr>
+<tr class="memdesc:a83e8eb50f4c574bfdc67c43b8e82c328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add force to this rigid body  <br /></td></tr>
+<tr class="separator:a83e8eb50f4c574bfdc67c43b8e82c328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26285a1bd56ce0dbb49a681da72d624a" id="r_a26285a1bd56ce0dbb49a681da72d624a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a26285a1bd56ce0dbb49a681da72d624a">AddTorque</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;torque, <a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0ac">ForceMode</a> mode=<a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0aca9eb6b78a99cdb6ffd3d40d18621d9f80">ForceMode::Force</a>)</td></tr>
+<tr class="memdesc:a26285a1bd56ce0dbb49a681da72d624a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add torque to this rigid body  <br /></td></tr>
+<tr class="separator:a26285a1bd56ce0dbb49a681da72d624a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027e27aa76af9882ef0679e6332c6ce7" id="r_a027e27aa76af9882ef0679e6332c6ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a027e27aa76af9882ef0679e6332c6ce7">BindWrapper</a> (<a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">Mkpe::CColliderWrapper</a> *wrapper)</td></tr>
+<tr class="memdesc:a027e27aa76af9882ef0679e6332c6ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind this collider to wrapper  <br /></td></tr>
+<tr class="separator:a027e27aa76af9882ef0679e6332c6ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db16c64904de5788ac9f96cb772b931" id="r_a6db16c64904de5788ac9f96cb772b931"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a6db16c64904de5788ac9f96cb772b931">SetMoveLock</a> (<a class="el" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">RigidBodyAxisLock::Bit</a> bit)</td></tr>
+<tr class="memdesc:a6db16c64904de5788ac9f96cb772b931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set axis lock for movement  <br /></td></tr>
+<tr class="separator:a6db16c64904de5788ac9f96cb772b931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab97ad2c6508bc8f24c79594cf1b5e9fe" id="r_ab97ad2c6508bc8f24c79594cf1b5e9fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#ab97ad2c6508bc8f24c79594cf1b5e9fe">SetRotateLock</a> (<a class="el" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">RigidBodyAxisLock::Bit</a> bit)</td></tr>
+<tr class="memdesc:ab97ad2c6508bc8f24c79594cf1b5e9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set axis lock for rotation  <br /></td></tr>
+<tr class="separator:ab97ad2c6508bc8f24c79594cf1b5e9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce2091eb213a8aacf5d28ccb04b073c" id="r_a9ce2091eb213a8aacf5d28ccb04b073c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a9ce2091eb213a8aacf5d28ccb04b073c">IsStatic</a> () const</td></tr>
+<tr class="memdesc:a9ce2091eb213a8aacf5d28ccb04b073c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this rigid body static?  <br /></td></tr>
+<tr class="separator:a9ce2091eb213a8aacf5d28ccb04b073c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b69cc565e34437b97f761f6e3dff800" id="r_a9b69cc565e34437b97f761f6e3dff800"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a9b69cc565e34437b97f761f6e3dff800">SetIsPseudoVelocity</a> (bool isPseudoVelocity)</td></tr>
+<tr class="memdesc:a9b69cc565e34437b97f761f6e3dff800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the flag to use pseudo velocity  <br /></td></tr>
+<tr class="separator:a9b69cc565e34437b97f761f6e3dff800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765e28c1cf302124609d4ffb04ef3b2d" id="r_a765e28c1cf302124609d4ffb04ef3b2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a765e28c1cf302124609d4ffb04ef3b2d">IsPseudoVelocity</a> () const</td></tr>
+<tr class="memdesc:a765e28c1cf302124609d4ffb04ef3b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use pseudo velocity?  <br /></td></tr>
+<tr class="separator:a765e28c1cf302124609d4ffb04ef3b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac369f1d754603fd195a68f4530dda9b8" id="r_ac369f1d754603fd195a68f4530dda9b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#ac369f1d754603fd195a68f4530dda9b8">SetMaterial</a> (const <a class="el" href="struct_rigid_body_material.html">RigidBodyMaterial</a> &amp;material)</td></tr>
+<tr class="memdesc:ac369f1d754603fd195a68f4530dda9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set material of rigid body  <br /></td></tr>
+<tr class="separator:ac369f1d754603fd195a68f4530dda9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af646fea54afe827ec60a1a9ce2d92a0f" id="r_af646fea54afe827ec60a1a9ce2d92a0f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_rigid_body_material.html">RigidBodyMaterial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#af646fea54afe827ec60a1a9ce2d92a0f">GetMaterial</a> () const</td></tr>
+<tr class="memdesc:af646fea54afe827ec60a1a9ce2d92a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the material of rigid body  <br /></td></tr>
+<tr class="separator:af646fea54afe827ec60a1a9ce2d92a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae104a70e5cab6749ff89ce9b450084" id="r_aaae104a70e5cab6749ff89ce9b450084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#aaae104a70e5cab6749ff89ce9b450084">SetBodyType</a> (<a class="el" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585">RigidBodyType</a> bodyType)</td></tr>
+<tr class="memdesc:aaae104a70e5cab6749ff89ce9b450084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rigid body type  <br /></td></tr>
+<tr class="separator:aaae104a70e5cab6749ff89ce9b450084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5bec9ac5b2a8204ff36a1cb86bc267f" id="r_ae5bec9ac5b2a8204ff36a1cb86bc267f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585">RigidBodyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#ae5bec9ac5b2a8204ff36a1cb86bc267f">GetBodyType</a> () const</td></tr>
+<tr class="memdesc:ae5bec9ac5b2a8204ff36a1cb86bc267f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rigid body type  <br /></td></tr>
+<tr class="separator:ae5bec9ac5b2a8204ff36a1cb86bc267f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41deddf5ddeb8deaea18698d850e78e0" id="r_a41deddf5ddeb8deaea18698d850e78e0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a41deddf5ddeb8deaea18698d850e78e0">GetLinearVelocity</a> () const</td></tr>
+<tr class="memdesc:a41deddf5ddeb8deaea18698d850e78e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear velocity  <br /></td></tr>
+<tr class="separator:a41deddf5ddeb8deaea18698d850e78e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abef57df2dc3193a755392304644f4ae6" id="r_abef57df2dc3193a755392304644f4ae6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#abef57df2dc3193a755392304644f4ae6">GetAngularVelocity</a> () const</td></tr>
+<tr class="memdesc:abef57df2dc3193a755392304644f4ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the angular velocity  <br /></td></tr>
+<tr class="separator:abef57df2dc3193a755392304644f4ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67bfe6c3bd0e32d7ee66cf1d6e14550b" id="r_a67bfe6c3bd0e32d7ee66cf1d6e14550b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a67bfe6c3bd0e32d7ee66cf1d6e14550b">SetMass</a> (float mass)</td></tr>
+<tr class="memdesc:a67bfe6c3bd0e32d7ee66cf1d6e14550b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mass  <br /></td></tr>
+<tr class="separator:a67bfe6c3bd0e32d7ee66cf1d6e14550b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea129e1d632dc39962039b1507fba873" id="r_aea129e1d632dc39962039b1507fba873"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#aea129e1d632dc39962039b1507fba873">GetInvMass</a> () const</td></tr>
+<tr class="memdesc:aea129e1d632dc39962039b1507fba873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the inverse of the mass  <br /></td></tr>
+<tr class="separator:aea129e1d632dc39962039b1507fba873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc453d1738a0738f0ea4d145b7a695d" id="r_aecc453d1738a0738f0ea4d145b7a695d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#aecc453d1738a0738f0ea4d145b7a695d">GetMass</a> () const</td></tr>
+<tr class="memdesc:aecc453d1738a0738f0ea4d145b7a695d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mass  <br /></td></tr>
+<tr class="separator:aecc453d1738a0738f0ea4d145b7a695d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a6647d496e866efe7aef2924e0fb61" id="r_ac1a6647d496e866efe7aef2924e0fb61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#ac1a6647d496e866efe7aef2924e0fb61">SetLinearDrag</a> (float drag)</td></tr>
+<tr class="memdesc:ac1a6647d496e866efe7aef2924e0fb61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set aerodynamic drag for movement by force  <br /></td></tr>
+<tr class="separator:ac1a6647d496e866efe7aef2924e0fb61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8889d9442426a855d183fcf4768b69c9" id="r_a8889d9442426a855d183fcf4768b69c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a8889d9442426a855d183fcf4768b69c9">SetAngularDrag</a> (float drag)</td></tr>
+<tr class="memdesc:a8889d9442426a855d183fcf4768b69c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set aerodynamic drag for rotation by torque  <br /></td></tr>
+<tr class="separator:a8889d9442426a855d183fcf4768b69c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b595b4738e42d12e646647c16a144e" id="r_ad2b595b4738e42d12e646647c16a144e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#ad2b595b4738e42d12e646647c16a144e">SetGravityScale</a> (float gravityScale=<a class="el" href="_rigid_body_8h.html#a0336cd953cf16f8bb083c757a611d0c5">GRAVITYSCALE_NULL</a>)</td></tr>
+<tr class="memdesc:ad2b595b4738e42d12e646647c16a144e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set gravity scale  <br /></td></tr>
+<tr class="separator:ad2b595b4738e42d12e646647c16a144e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4897dc975d5285c74d1d5cab809cb5f" id="r_ad4897dc975d5285c74d1d5cab809cb5f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#ad4897dc975d5285c74d1d5cab809cb5f">GetGravityScale</a> () const</td></tr>
+<tr class="memdesc:ad4897dc975d5285c74d1d5cab809cb5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the gravity scale  <br /></td></tr>
+<tr class="separator:ad4897dc975d5285c74d1d5cab809cb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149fe3a416366e0e8e39793f1e4ddf5d" id="r_a149fe3a416366e0e8e39793f1e4ddf5d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a149fe3a416366e0e8e39793f1e4ddf5d">GetMoveAllowable</a> () const</td></tr>
+<tr class="memdesc:a149fe3a416366e0e8e39793f1e4ddf5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get allowable vector for movement  <br /></td></tr>
+<tr class="separator:a149fe3a416366e0e8e39793f1e4ddf5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bdf0e09cb8c53fcf5a5d28615ab30dd" id="r_a4bdf0e09cb8c53fcf5a5d28615ab30dd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rigid_body.html#a4bdf0e09cb8c53fcf5a5d28615ab30dd">GetRotateAllowable</a> () const</td></tr>
+<tr class="memdesc:a4bdf0e09cb8c53fcf5a5d28615ab30dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get allowable vector for rotation  <br /></td></tr>
+<tr class="separator:a4bdf0e09cb8c53fcf5a5d28615ab30dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_component.html">ACComponent</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component" id="r_a9b2b2d42737a1fe9bb397af5927ff322"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a9b2b2d42737a1fe9bb397af5927ff322">ACComponent</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner)</td></tr>
+<tr class="memdesc:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component" id="r_a642abc9ed76961dd974d8934485e8055"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a642abc9ed76961dd974d8934485e8055">PrePhysicsUpdate</a> ()</td></tr>
+<tr class="memdesc:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-update process for physics simulation  <br /></td></tr>
+<tr class="separator:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component" id="r_a9f7ad72915aa2e6736bf55e39309d81e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a9f7ad72915aa2e6736bf55e39309d81e">OnEnable</a> ()</td></tr>
+<tr class="memdesc:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is enabled  <br /></td></tr>
+<tr class="separator:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component" id="r_aaed0e5be88178643fba5329ab9b708a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#aaed0e5be88178643fba5329ab9b708a7">OnCollisionBegin</a> (const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;opponent)</td></tr>
+<tr class="memdesc:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when collision begins  <br /></td></tr>
+<tr class="separator:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component" id="r_a21ed1397839942770494c5ab8e96316b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a21ed1397839942770494c5ab8e96316b">OnCollisionHit</a> (const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;opponent)</td></tr>
+<tr class="memdesc:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing during collision  <br /></td></tr>
+<tr class="separator:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component" id="r_a4f1e621bcb3400e0d38f73b758fc0def"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a4f1e621bcb3400e0d38f73b758fc0def">OnCollisionEnd</a> (const <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt; &amp;opponent)</td></tr>
+<tr class="memdesc:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when collision ends  <br /></td></tr>
+<tr class="separator:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component" id="r_ab7d85ad6e45f8b12776d219d27e52210"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ab7d85ad6e45f8b12776d219d27e52210">GetGameObject</a> ()</td></tr>
+<tr class="memdesc:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that this component has  <br /></td></tr>
+<tr class="separator:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component" id="r_ab8f9b780e9c36420c4180c2de84f9733"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ab8f9b780e9c36420c4180c2de84f9733">GetGameObject</a> () const</td></tr>
+<tr class="memdesc:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that this component has  <br /></td></tr>
+<tr class="separator:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component" id="r_a73c656cb09cfd57d43bd4ebdbd992091"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091">GetTransform</a> () const</td></tr>
+<tr class="memdesc:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get transform of the object  <br /></td></tr>
+<tr class="separator:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component" id="r_a1677e72c01ba17b59662de344623cf18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18">GetScene</a> ()</td></tr>
+<tr class="memdesc:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scene where this component exists <br  />
+  <br /></td></tr>
+<tr class="separator:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component" id="r_a1311a24d05c9ba046f11411fc300fa9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1311a24d05c9ba046f11411fc300fa9c">GetScene</a> () const</td></tr>
+<tr class="memdesc:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scene where this component exists <br  />
+  <br /></td></tr>
+<tr class="separator:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component" id="r_a7732e25a7799100e9b39be4f2ab1c4c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_callback_system.html">CCallbackSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a7732e25a7799100e9b39be4f2ab1c4c0">GetCallbackSystem</a> ()</td></tr>
+<tr class="memdesc:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the callback system that the gameobject has  <br /></td></tr>
+<tr class="separator:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component" id="r_ac9afe74cc73092c13a933bf7b82d8fa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ac9afe74cc73092c13a933bf7b82d8fa2">SetIsActive</a> (bool isActive)</td></tr>
+<tr class="memdesc:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the active flag of this component  <br /></td></tr>
+<tr class="separator:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component" id="r_ad7205261ebda783caeedc9f1c210c2f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ad7205261ebda783caeedc9f1c210c2f4">IsActiveSelf</a> () const</td></tr>
+<tr class="memdesc:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component itself active?  <br /></td></tr>
+<tr class="separator:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component" id="r_ad2aa36309aaee515ea36a1765c9b0f97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ad2aa36309aaee515ea36a1765c9b0f97">IsActiveOverall</a> () const</td></tr>
+<tr class="memdesc:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component itself and the game object that owns it active?  <br /></td></tr>
+<tr class="separator:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis&lt; ACComponent &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_ab2905432621e2737bc3f95cb9101a8e2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#ab2905432621e2737bc3f95cb9101a8e2">~ACWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="memdesc:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_aa549f0fbf364d84137496a7eed607bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_component.html">ACComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#aa549f0fbf364d84137496a7eed607bb5">WeakFromThis</a> ()</td></tr>
+<tr class="memdesc:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer from this class  <br /></td></tr>
+<tr class="separator:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_i_weak_ptr_from_this.html">IWeakPtrFromThis</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this" id="r_a5a3acc569a8076065b930bc52a87255c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_weak_ptr_from_this.html#a5a3acc569a8076065b930bc52a87255c">~IWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="separator:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_component.html">ACComponent</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component" id="r_a350f4f03d8f125df479f4bdd6603aa32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">m_gameObj</a></td></tr>
+<tr class="memdesc:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game object that is the owner of this component  <br /></td></tr>
+<tr class="separator:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component" id="r_a1b75230266b37261b0078008cfacab2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1b75230266b37261b0078008cfacab2a">m_isActive</a></td></tr>
+<tr class="memdesc:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component active?  <br /></td></tr>
+<tr class="separator:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Rigid body component </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ae6c96bfddbcce724fc979deda6f185a4" name="ae6c96bfddbcce724fc979deda6f185a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6c96bfddbcce724fc979deda6f185a4">&#9670;&#160;</a></span>CRigidBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CRigidBody::CRigidBody </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html">CGameObject</a> *&#160;</td>
+          <td class="paramname"><em>owner</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">owner</td><td>Game object that is the owner of this component </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_ae6c96bfddbcce724fc979deda6f185a4_cgraph.png" border="0" usemap="#aclass_c_rigid_body_ae6c96bfddbcce724fc979deda6f185a4_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_ae6c96bfddbcce724fc979deda6f185a4_cgraph" id="aclass_c_rigid_body_ae6c96bfddbcce724fc979deda6f185a4_cgraph">
+<area shape="rect" title="Constructor" alt="" coords="5,64,171,91"/>
+<area shape="rect" href="class_c_callback_system.html#a125b66bae6476874c8e1c998f0d1c436" title="Add a callback function to the callback function group" alt="" coords="225,5,432,32"/>
+<area shape="poly" title=" " alt="" coords="141,61,218,41,251,34,252,39,219,47,143,66"/>
+<area shape="rect" href="class_a_c_component.html#a7732e25a7799100e9b39be4f2ab1c4c0" title="Get the callback system that the gameobject has" alt="" coords="236,56,421,99"/>
+<area shape="poly" title=" " alt="" coords="171,75,221,75,221,80,171,80"/>
+<area shape="rect" href="class_c_callback_system.html#a6e5ef7bf770e9b388aa9e3b06bb26050" title="Invoke callback functions group" alt="" coords="219,123,438,149"/>
+<area shape="poly" title=" " alt="" coords="143,89,219,108,252,116,251,121,218,113,141,94"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a44045d927f131496861e79649706f022" name="a44045d927f131496861e79649706f022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44045d927f131496861e79649706f022">&#9670;&#160;</a></span>~CRigidBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CRigidBody::~CRigidBody </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a83e8eb50f4c574bfdc67c43b8e82c328" name="a83e8eb50f4c574bfdc67c43b8e82c328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e8eb50f4c574bfdc67c43b8e82c328">&#9670;&#160;</a></span>AddForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::AddForce </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>force</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0ac">ForceMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0aca9eb6b78a99cdb6ffd3d40d18621d9f80">ForceMode::Force</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add force to this rigid body </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">force</td><td>Strength of force </td></tr>
+    <tr><td class="paramname">mode</td><td>Force mode </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_a83e8eb50f4c574bfdc67c43b8e82c328_cgraph.png" border="0" usemap="#aclass_c_rigid_body_a83e8eb50f4c574bfdc67c43b8e82c328_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_a83e8eb50f4c574bfdc67c43b8e82c328_cgraph" id="aclass_c_rigid_body_a83e8eb50f4c574bfdc67c43b8e82c328_cgraph">
+<area shape="rect" title="Add force to this rigid body" alt="" coords="5,5,159,32"/>
+<area shape="rect" href="class_a_c_component.html#ad2aa36309aaee515ea36a1765c9b0f97" title="Is this component itself and the game object that owns it active?" alt="" coords="207,5,404,32"/>
+<area shape="poly" title=" " alt="" coords="159,16,191,16,191,21,159,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a26285a1bd56ce0dbb49a681da72d624a" name="a26285a1bd56ce0dbb49a681da72d624a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26285a1bd56ce0dbb49a681da72d624a">&#9670;&#160;</a></span>AddTorque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::AddTorque </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>torque</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0ac">ForceMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0aca9eb6b78a99cdb6ffd3d40d18621d9f80">ForceMode::Force</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add torque to this rigid body </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">torque</td><td>Strength of torque </td></tr>
+    <tr><td class="paramname">mode</td><td>Force mode </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_a26285a1bd56ce0dbb49a681da72d624a_cgraph.png" border="0" usemap="#aclass_c_rigid_body_a26285a1bd56ce0dbb49a681da72d624a_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_a26285a1bd56ce0dbb49a681da72d624a_cgraph" id="aclass_c_rigid_body_a26285a1bd56ce0dbb49a681da72d624a_cgraph">
+<area shape="rect" title="Add torque to this rigid body" alt="" coords="5,5,165,32"/>
+<area shape="rect" href="class_a_c_component.html#ad2aa36309aaee515ea36a1765c9b0f97" title="Is this component itself and the game object that owns it active?" alt="" coords="213,5,410,32"/>
+<area shape="poly" title=" " alt="" coords="165,16,197,16,197,21,165,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aff76c36313cdffb15bbdb8bcf918c05a" name="aff76c36313cdffb15bbdb8bcf918c05a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff76c36313cdffb15bbdb8bcf918c05a">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Awake processing </p>
+
+<p><a class="el" href="class_a_c_component.html#a42f1dbaf0bb679d5f41f5541d39f80d9">ACComponent</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_aff76c36313cdffb15bbdb8bcf918c05a_cgraph.png" border="0" usemap="#aclass_c_rigid_body_aff76c36313cdffb15bbdb8bcf918c05a_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_aff76c36313cdffb15bbdb8bcf918c05a_cgraph" id="aclass_c_rigid_body_aff76c36313cdffb15bbdb8bcf918c05a_cgraph">
+<area shape="rect" title="Awake processing" alt="" coords="5,43,142,69"/>
+<area shape="rect" href="class_a_c_component.html#a7732e25a7799100e9b39be4f2ab1c4c0" title="Get the callback system that the gameobject has" alt="" coords="207,5,392,48"/>
+<area shape="poly" title=" " alt="" coords="141,45,191,38,192,43,142,50"/>
+<area shape="rect" href="class_c_callback_system.html#a6e5ef7bf770e9b388aa9e3b06bb26050" title="Invoke callback functions group" alt="" coords="190,72,409,99"/>
+<area shape="poly" title=" " alt="" coords="142,62,177,67,176,72,141,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a027e27aa76af9882ef0679e6332c6ce7" name="a027e27aa76af9882ef0679e6332c6ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027e27aa76af9882ef0679e6332c6ce7">&#9670;&#160;</a></span>BindWrapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::BindWrapper </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">Mkpe::CColliderWrapper</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bind this collider to wrapper </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper to bind thsi collider </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_a027e27aa76af9882ef0679e6332c6ce7_cgraph.png" border="0" usemap="#aclass_c_rigid_body_a027e27aa76af9882ef0679e6332c6ce7_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_a027e27aa76af9882ef0679e6332c6ce7_cgraph" id="aclass_c_rigid_body_a027e27aa76af9882ef0679e6332c6ce7_cgraph">
+<area shape="rect" title="Bind this collider to wrapper" alt="" coords="5,80,178,107"/>
+<area shape="rect" href="class_mkpe_1_1_c_collider_wrapper.html#a8717ab1d0e161c6f4c18366c8c5da8c4" title="Set rigid body to be related to this wrapper" alt="" coords="253,5,416,48"/>
+<area shape="poly" title=" " alt="" coords="142,77,239,50,240,55,144,82"/>
+<area shape="rect" href="class_mkpe_1_1_c_collider_wrapper.html#a9c02028df7d23526435da5b78b3ed09e" title="Set simulation body to be related to this wrapper" alt="" coords="253,72,416,115"/>
+<area shape="poly" title=" " alt="" coords="178,91,238,91,238,96,178,96"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html#aa549f0fbf364d84137496a7eed607bb5" title="Get weak pointer from this class" alt="" coords="226,139,443,181"/>
+<area shape="poly" title=" " alt="" coords="144,105,240,131,239,137,142,110"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_a027e27aa76af9882ef0679e6332c6ce7_icgraph.png" border="0" usemap="#aclass_c_rigid_body_a027e27aa76af9882ef0679e6332c6ce7_icgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_a027e27aa76af9882ef0679e6332c6ce7_icgraph" id="aclass_c_rigid_body_a027e27aa76af9882ef0679e6332c6ce7_icgraph">
+<area shape="rect" title="Bind this collider to wrapper" alt="" coords="237,5,409,32"/>
+<area shape="rect" href="class_a_c_collider3_d.html#af039578b8e4159e4626febebd3a96056" title="Constructor" alt="" coords="5,5,189,32"/>
+<area shape="poly" title=" " alt="" coords="221,21,189,21,189,16,221,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abef57df2dc3193a755392304644f4ae6" name="abef57df2dc3193a755392304644f4ae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abef57df2dc3193a755392304644f4ae6">&#9670;&#160;</a></span>GetAngularVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp; CRigidBody::GetAngularVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the angular velocity </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_abef57df2dc3193a755392304644f4ae6_cgraph.png" border="0" usemap="#aclass_c_rigid_body_abef57df2dc3193a755392304644f4ae6_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_abef57df2dc3193a755392304644f4ae6_cgraph" id="aclass_c_rigid_body_abef57df2dc3193a755392304644f4ae6_cgraph">
+<area shape="rect" title="Get the angular velocity" alt="" coords="5,13,215,40"/>
+<area shape="rect" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997" title="Get vector with all 0 values" alt="" coords="263,5,385,48"/>
+<area shape="poly" title=" " alt="" coords="215,24,247,24,247,29,215,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae5bec9ac5b2a8204ff36a1cb86bc267f" name="ae5bec9ac5b2a8204ff36a1cb86bc267f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5bec9ac5b2a8204ff36a1cb86bc267f">&#9670;&#160;</a></span>GetBodyType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585">RigidBodyType</a> CRigidBody::GetBodyType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the rigid body type </p>
+
+</div>
+</div>
+<a id="ad4897dc975d5285c74d1d5cab809cb5f" name="ad4897dc975d5285c74d1d5cab809cb5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4897dc975d5285c74d1d5cab809cb5f">&#9670;&#160;</a></span>GetGravityScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CRigidBody::GetGravityScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the gravity scale </p>
+
+</div>
+</div>
+<a id="aea129e1d632dc39962039b1507fba873" name="aea129e1d632dc39962039b1507fba873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea129e1d632dc39962039b1507fba873">&#9670;&#160;</a></span>GetInvMass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CRigidBody::GetInvMass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the inverse of the mass </p>
+
+</div>
+</div>
+<a id="a41deddf5ddeb8deaea18698d850e78e0" name="a41deddf5ddeb8deaea18698d850e78e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41deddf5ddeb8deaea18698d850e78e0">&#9670;&#160;</a></span>GetLinearVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp; CRigidBody::GetLinearVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the linear velocity </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_a41deddf5ddeb8deaea18698d850e78e0_cgraph.png" border="0" usemap="#aclass_c_rigid_body_a41deddf5ddeb8deaea18698d850e78e0_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_a41deddf5ddeb8deaea18698d850e78e0_cgraph" id="aclass_c_rigid_body_a41deddf5ddeb8deaea18698d850e78e0_cgraph">
+<area shape="rect" title="Get the linear velocity" alt="" coords="5,13,206,40"/>
+<area shape="rect" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997" title="Get vector with all 0 values" alt="" coords="254,5,376,48"/>
+<area shape="poly" title=" " alt="" coords="206,24,238,24,238,29,206,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aecc453d1738a0738f0ea4d145b7a695d" name="aecc453d1738a0738f0ea4d145b7a695d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc453d1738a0738f0ea4d145b7a695d">&#9670;&#160;</a></span>GetMass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CRigidBody::GetMass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the mass </p>
+
+</div>
+</div>
+<a id="af646fea54afe827ec60a1a9ce2d92a0f" name="af646fea54afe827ec60a1a9ce2d92a0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af646fea54afe827ec60a1a9ce2d92a0f">&#9670;&#160;</a></span>GetMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_rigid_body_material.html">RigidBodyMaterial</a> &amp; CRigidBody::GetMaterial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the material of rigid body </p>
+
+</div>
+</div>
+<a id="a149fe3a416366e0e8e39793f1e4ddf5d" name="a149fe3a416366e0e8e39793f1e4ddf5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a149fe3a416366e0e8e39793f1e4ddf5d">&#9670;&#160;</a></span>GetMoveAllowable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp; CRigidBody::GetMoveAllowable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get allowable vector for movement </p>
+
+</div>
+</div>
+<a id="a4bdf0e09cb8c53fcf5a5d28615ab30dd" name="a4bdf0e09cb8c53fcf5a5d28615ab30dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bdf0e09cb8c53fcf5a5d28615ab30dd">&#9670;&#160;</a></span>GetRotateAllowable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp; CRigidBody::GetRotateAllowable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get allowable vector for rotation </p>
+
+</div>
+</div>
+<a id="a765e28c1cf302124609d4ffb04ef3b2d" name="a765e28c1cf302124609d4ffb04ef3b2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765e28c1cf302124609d4ffb04ef3b2d">&#9670;&#160;</a></span>IsPseudoVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRigidBody::IsPseudoVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Use pseudo velocity? </p>
+
+</div>
+</div>
+<a id="a9ce2091eb213a8aacf5d28ccb04b073c" name="a9ce2091eb213a8aacf5d28ccb04b073c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce2091eb213a8aacf5d28ccb04b073c">&#9670;&#160;</a></span>IsStatic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRigidBody::IsStatic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this rigid body static? </p>
+<dl class="section return"><dt>戻り値</dt><dd>Result </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_a9ce2091eb213a8aacf5d28ccb04b073c_icgraph.png" border="0" usemap="#aclass_c_rigid_body_a9ce2091eb213a8aacf5d28ccb04b073c_icgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_a9ce2091eb213a8aacf5d28ccb04b073c_icgraph" id="aclass_c_rigid_body_a9ce2091eb213a8aacf5d28ccb04b073c_icgraph">
+<area shape="rect" title="Is this rigid body static?" alt="" coords="229,5,370,32"/>
+<area shape="rect" href="class_c_rigid_body.html#aaae104a70e5cab6749ff89ce9b450084" title="Set rigid body type" alt="" coords="5,5,181,32"/>
+<area shape="poly" title=" " alt="" coords="213,21,181,21,181,16,213,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a10532b33bd766ec20ffba2032c60403a" name="a10532b33bd766ec20ffba2032c60403a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10532b33bd766ec20ffba2032c60403a">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing at destruction </p>
+
+<p><a class="el" href="class_a_c_component.html#a88abe0db6e3b1ac90e738c5f1927fc91">ACComponent</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_a10532b33bd766ec20ffba2032c60403a_cgraph.png" border="0" usemap="#aclass_c_rigid_body_a10532b33bd766ec20ffba2032c60403a_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_a10532b33bd766ec20ffba2032c60403a_cgraph" id="aclass_c_rigid_body_a10532b33bd766ec20ffba2032c60403a_cgraph">
+<area shape="rect" title="Processing at destruction" alt="" coords="5,5,165,32"/>
+<area shape="rect" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18" title="Get scene where this component exists" alt="" coords="213,5,384,32"/>
+<area shape="poly" title=" " alt="" coords="165,16,197,16,197,21,165,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a76bd729c2f736a37107527ebed824592" name="a76bd729c2f736a37107527ebed824592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76bd729c2f736a37107527ebed824592">&#9670;&#160;</a></span>OnDisable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::OnDisable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing when this component is disabled </p>
+
+<p><a class="el" href="class_a_c_component.html#a02d54222d4b8efabdc66f145c3531da0">ACComponent</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a8889d9442426a855d183fcf4768b69c9" name="a8889d9442426a855d183fcf4768b69c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8889d9442426a855d183fcf4768b69c9">&#9670;&#160;</a></span>SetAngularDrag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::SetAngularDrag </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>drag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set aerodynamic drag for rotation by torque </p>
+
+</div>
+</div>
+<a id="aaae104a70e5cab6749ff89ce9b450084" name="aaae104a70e5cab6749ff89ce9b450084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae104a70e5cab6749ff89ce9b450084">&#9670;&#160;</a></span>SetBodyType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::SetBodyType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585">RigidBodyType</a>&#160;</td>
+          <td class="paramname"><em>bodyType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set rigid body type </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_aaae104a70e5cab6749ff89ce9b450084_cgraph.png" border="0" usemap="#aclass_c_rigid_body_aaae104a70e5cab6749ff89ce9b450084_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_aaae104a70e5cab6749ff89ce9b450084_cgraph" id="aclass_c_rigid_body_aaae104a70e5cab6749ff89ce9b450084_cgraph">
+<area shape="rect" title="Set rigid body type" alt="" coords="5,97,181,124"/>
+<area shape="rect" href="class_a_c_component.html#a7732e25a7799100e9b39be4f2ab1c4c0" title="Get the callback system that the gameobject has" alt="" coords="246,5,431,48"/>
+<area shape="poly" title=" " alt="" coords="129,94,228,57,248,51,250,56,230,63,130,99"/>
+<area shape="rect" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18" title="Get scene where this component exists" alt="" coords="253,72,424,99"/>
+<area shape="poly" title=" " alt="" coords="181,99,237,93,238,98,182,104"/>
+<area shape="rect" href="class_c_callback_system.html#a6e5ef7bf770e9b388aa9e3b06bb26050" title="Invoke callback functions group" alt="" coords="229,123,448,149"/>
+<area shape="poly" title=" " alt="" coords="182,117,213,120,213,126,181,122"/>
+<area shape="rect" href="class_c_rigid_body.html#a9ce2091eb213a8aacf5d28ccb04b073c" title="Is this rigid body static?" alt="" coords="268,173,409,200"/>
+<area shape="poly" title=" " alt="" coords="128,122,229,159,257,167,256,172,228,164,127,127"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad2b595b4738e42d12e646647c16a144e" name="ad2b595b4738e42d12e646647c16a144e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b595b4738e42d12e646647c16a144e">&#9670;&#160;</a></span>SetGravityScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::SetGravityScale </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>gravityScale</em> = <code><a class="el" href="_rigid_body_8h.html#a0336cd953cf16f8bb083c757a611d0c5">GRAVITYSCALE_NULL</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set gravity scale </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gravityScale</td><td>Don't use gravity scale in default argument </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9b69cc565e34437b97f761f6e3dff800" name="a9b69cc565e34437b97f761f6e3dff800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b69cc565e34437b97f761f6e3dff800">&#9670;&#160;</a></span>SetIsPseudoVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::SetIsPseudoVelocity </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isPseudoVelocity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the flag to use pseudo velocity </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isPseudoVelocity</td><td>Use pseudo velocity?</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If this flag is true, collision detection can be performed even if the object's transform is changed directly. </p>
+
+</div>
+</div>
+<a id="ac1a6647d496e866efe7aef2924e0fb61" name="ac1a6647d496e866efe7aef2924e0fb61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1a6647d496e866efe7aef2924e0fb61">&#9670;&#160;</a></span>SetLinearDrag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::SetLinearDrag </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>drag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set aerodynamic drag for movement by force </p>
+
+</div>
+</div>
+<a id="a67bfe6c3bd0e32d7ee66cf1d6e14550b" name="a67bfe6c3bd0e32d7ee66cf1d6e14550b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67bfe6c3bd0e32d7ee66cf1d6e14550b">&#9670;&#160;</a></span>SetMass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::SetMass </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>mass</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set mass </p>
+
+</div>
+</div>
+<a id="ac369f1d754603fd195a68f4530dda9b8" name="ac369f1d754603fd195a68f4530dda9b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac369f1d754603fd195a68f4530dda9b8">&#9670;&#160;</a></span>SetMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::SetMaterial </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_rigid_body_material.html">RigidBodyMaterial</a> &amp;&#160;</td>
+          <td class="paramname"><em>material</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set material of rigid body </p>
+
+</div>
+</div>
+<a id="a6db16c64904de5788ac9f96cb772b931" name="a6db16c64904de5788ac9f96cb772b931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db16c64904de5788ac9f96cb772b931">&#9670;&#160;</a></span>SetMoveLock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::SetMoveLock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">RigidBodyAxisLock::Bit</a>&#160;</td>
+          <td class="paramname"><em>bit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set axis lock for movement </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bit</td><td>Bitstring representing the axis to be locked </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_a6db16c64904de5788ac9f96cb772b931_cgraph.png" border="0" usemap="#aclass_c_rigid_body_a6db16c64904de5788ac9f96cb772b931_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_a6db16c64904de5788ac9f96cb772b931_cgraph" id="aclass_c_rigid_body_a6db16c64904de5788ac9f96cb772b931_cgraph">
+<area shape="rect" title="Set axis lock for movement" alt="" coords="5,56,181,83"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="229,5,303,32"/>
+<area shape="poly" title=" " alt="" coords="141,53,213,31,215,36,142,58"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="229,56,303,83"/>
+<area shape="poly" title=" " alt="" coords="181,67,213,67,213,72,181,72"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="229,107,303,133"/>
+<area shape="poly" title=" " alt="" coords="142,81,215,102,213,108,141,86"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab97ad2c6508bc8f24c79594cf1b5e9fe" name="ab97ad2c6508bc8f24c79594cf1b5e9fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab97ad2c6508bc8f24c79594cf1b5e9fe">&#9670;&#160;</a></span>SetRotateLock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::SetRotateLock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">RigidBodyAxisLock::Bit</a>&#160;</td>
+          <td class="paramname"><em>bit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set axis lock for rotation </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bit</td><td>Bitstring representing the axis to be locked </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_ab97ad2c6508bc8f24c79594cf1b5e9fe_cgraph.png" border="0" usemap="#aclass_c_rigid_body_ab97ad2c6508bc8f24c79594cf1b5e9fe_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_ab97ad2c6508bc8f24c79594cf1b5e9fe_cgraph" id="aclass_c_rigid_body_ab97ad2c6508bc8f24c79594cf1b5e9fe_cgraph">
+<area shape="rect" title="Set axis lock for rotation" alt="" coords="5,56,189,83"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="237,5,311,32"/>
+<area shape="poly" title=" " alt="" coords="146,53,221,31,222,36,147,58"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="237,56,311,83"/>
+<area shape="poly" title=" " alt="" coords="189,67,221,67,221,72,189,72"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="237,107,311,133"/>
+<area shape="poly" title=" " alt="" coords="147,81,222,103,221,108,146,86"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a075d9d55b87e21f6156fec20702a3711" name="a075d9d55b87e21f6156fec20702a3711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a075d9d55b87e21f6156fec20702a3711">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start processing </p>
+
+<p><a class="el" href="class_a_c_component.html#ae0601a998d4b46b7cf59edbfaa03683f">ACComponent</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_rigid_body_a075d9d55b87e21f6156fec20702a3711_cgraph.png" border="0" usemap="#aclass_c_rigid_body_a075d9d55b87e21f6156fec20702a3711_cgraph" alt=""/></div>
+<map name="aclass_c_rigid_body_a075d9d55b87e21f6156fec20702a3711_cgraph" id="aclass_c_rigid_body_a075d9d55b87e21f6156fec20702a3711_cgraph">
+<area shape="rect" title="Start processing" alt="" coords="5,35,131,61"/>
+<area shape="rect" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18" title="Get scene where this component exists" alt="" coords="202,5,373,32"/>
+<area shape="poly" title=" " alt="" coords="130,37,186,30,187,35,131,42"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html#aa549f0fbf364d84137496a7eed607bb5" title="Get weak pointer from this class" alt="" coords="179,56,396,99"/>
+<area shape="poly" title=" " alt="" coords="131,54,164,58,163,63,130,59"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa050e9de295fade523fa1d5efcb8aea0" name="aa050e9de295fade523fa1d5efcb8aea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa050e9de295fade523fa1d5efcb8aea0">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRigidBody::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update processing </p>
+
+<p><a class="el" href="class_a_c_component.html#add7411781140bec2e38b0fe1d9bbb35a">ACComponent</a>を再実装しています。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_rigid_body_8h_source.html">RigidBody.h</a></li>
+<li><a class="el" href="_rigid_body_8cpp.html">RigidBody.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

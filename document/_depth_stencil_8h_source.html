@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: DepthStencil.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">DepthStencil.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_depth_stencil_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __DEPTH_STENCIL_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __DEPTH_STENCIL_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_descriptor_heap_8h.html">DescriptorHeap.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_c_depth_stencil.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_depth_stencil.html">CDepthStencil</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_c_depth_stencil.html#a398604ec3ce19d942b6bd77de1a01851">   18</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="class_c_depth_stencil.html">CDepthStencil</a>* <a class="code hl_function" href="class_c_depth_stencil.html#a398604ec3ce19d942b6bd77de1a01851">GetCurrentAppliedDepthStencil</a>() { <span class="keywordflow">return</span> ms_currentAppliedDepthStencil; }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_c_depth_stencil.html#a0b3ab131ba9b8b6844d9e3e1d5f67422">   23</a></span>    <a class="code hl_function" href="class_c_depth_stencil.html#a0b3ab131ba9b8b6844d9e3e1d5f67422">CDepthStencil</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_c_depth_stencil.html#a6af6eb1638d49ccdb656b52f3c38c74b">   28</a></span>    <a class="code hl_function" href="class_c_depth_stencil.html#a6af6eb1638d49ccdb656b52f3c38c74b">~CDepthStencil</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_depth_stencil.html#a7aa888ba8b968ee7aac9453f0311e7f0">Create</a>(DXGI_FORMAT format, UINT width, UINT height, D3D12_DEPTH_STENCIL_VALUE defaultClearValue = { 1.0f, 0});</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_depth_stencil.html#ae8502d294033cd2322eebbad294dd0e5">Clear</a>(D3D12_DEPTH_STENCIL_VALUE clearValue = { 1.0f, 0 }, D3D12_CLEAR_FLAGS clearFlag = D3D12_CLEAR_FLAG_DEPTH | D3D12_CLEAR_FLAG_STENCIL);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_depth_stencil.html#ac30f2385fa2249d053cc52a94589744a">Apply</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_depth_stencil.html#a23db9d064a5f179b265bb334e1d62b7a">CheckStateAtApplying</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_depth_stencil.html#aaeff77a7c5e6ec2e58975e8159d8b12d">   62</a></span>    <a class="code hl_class" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a> <a class="code hl_function" href="class_c_depth_stencil.html#aaeff77a7c5e6ec2e58975e8159d8b12d">GetSRVPropertyHandleForDepth</a>() { <span class="keywordflow">return</span> m_srvPropertyForDepth-&gt;GetHandle(); }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_c_depth_stencil.html#aa535634218a044edc32d78f57670649f">   67</a></span>    <a class="code hl_class" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a> <a class="code hl_function" href="class_c_depth_stencil.html#aa535634218a044edc32d78f57670649f">GetSRVPropertyHandleForStencil</a>() { <span class="keywordflow">return</span> m_srvPropertyForStencil-&gt;GetHandle(); }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_c_depth_stencil.html#aa47b541d3b6156101a273d5d41978b3d">   70</a></span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_depth_stencil.html#aa47b541d3b6156101a273d5d41978b3d">GetCPUHandleDSV</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_dsvDescriptorHeap.<a class="code hl_function" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d">GetCpuHandle</a>(); }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_c_depth_stencil.html#aaf2a84407e0b3ca6ad1ae02034009337">   72</a></span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_depth_stencil.html#aaf2a84407e0b3ca6ad1ae02034009337">GetCPUHandleSRVForDepth</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_srvDescriptorHeap.<a class="code hl_function" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d">GetCpuHandle</a>(); }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_c_depth_stencil.html#a7be37c5dad39bc97c3229a5db5e7b14f">   74</a></span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_depth_stencil.html#a7be37c5dad39bc97c3229a5db5e7b14f">GetCPUHandleSRVForStencil</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_srvDescriptorHeap.<a class="code hl_function" href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d">GetCpuHandle</a>(1); }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_c_depth_stencil.html#af1dc25468f778431258986e0251ccaed">   76</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_depth_stencil.html#af1dc25468f778431258986e0251ccaed">StateTransition</a>(D3D12_RESOURCE_STATES state) { m_srvPropertyForDepth-&gt;stateMaker-&gt;StateTransition(state); }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    DXGI_FORMAT ConvertDSVFormat2SRVFormatForDepth(DXGI_FORMAT dsvFormat);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    DXGI_FORMAT ConvertDSVFormat2SRVFormatForStencil(DXGI_FORMAT dsvFormat);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">bool</span> IsStencilUseFormat(DXGI_FORMAT dsvFormat);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_c_depth_stencil.html">CDepthStencil</a>* ms_currentAppliedDepthStencil;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; m_depthStencil;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_class" href="class_c_descriptor_heap.html">CDescriptorHeap</a> m_dsvDescriptorHeap;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_class" href="class_c_descriptor_heap.html">CDescriptorHeap</a> m_srvDescriptorHeap;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_class" href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable&lt;Utl::Dx::SRVProperty&gt;</a> m_srvPropertyForDepth;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_class" href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable&lt;Utl::Dx::SRVPropertyNoStateMaker&gt;</a> m_srvPropertyForStencil;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#endif </span><span class="comment">// !__DEPTH_STENCIL_H__</span></div>
+<div class="ttc" id="a_descriptor_heap_8h_html"><div class="ttname"><a href="_descriptor_heap_8h.html">DescriptorHeap.h</a></div><div class="ttdoc">This file handles descriptor heap.</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html"><div class="ttname"><a href="class_c_depth_stencil.html">CDepthStencil</a></div><div class="ttdoc">Depth stencil class</div><div class="ttdef"><b>Definition</b> DepthStencil.h:15</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_a0b3ab131ba9b8b6844d9e3e1d5f67422"><div class="ttname"><a href="class_c_depth_stencil.html#a0b3ab131ba9b8b6844d9e3e1d5f67422">CDepthStencil::CDepthStencil</a></div><div class="ttdeci">CDepthStencil()=default</div><div class="ttdoc">Constructor</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_a23db9d064a5f179b265bb334e1d62b7a"><div class="ttname"><a href="class_c_depth_stencil.html#a23db9d064a5f179b265bb334e1d62b7a">CDepthStencil::CheckStateAtApplying</a></div><div class="ttdeci">void CheckStateAtApplying()</div><div class="ttdoc">State check process to be called when applying a destination for drawing</div><div class="ttdef"><b>Definition</b> DepthStencil.cpp:124</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_a398604ec3ce19d942b6bd77de1a01851"><div class="ttname"><a href="class_c_depth_stencil.html#a398604ec3ce19d942b6bd77de1a01851">CDepthStencil::GetCurrentAppliedDepthStencil</a></div><div class="ttdeci">static CDepthStencil * GetCurrentAppliedDepthStencil()</div><div class="ttdoc">Get pointer to current applied depth stencil</div><div class="ttdef"><b>Definition</b> DepthStencil.h:18</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_a6af6eb1638d49ccdb656b52f3c38c74b"><div class="ttname"><a href="class_c_depth_stencil.html#a6af6eb1638d49ccdb656b52f3c38c74b">CDepthStencil::~CDepthStencil</a></div><div class="ttdeci">~CDepthStencil()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_a7aa888ba8b968ee7aac9453f0311e7f0"><div class="ttname"><a href="class_c_depth_stencil.html#a7aa888ba8b968ee7aac9453f0311e7f0">CDepthStencil::Create</a></div><div class="ttdeci">void Create(DXGI_FORMAT format, UINT width, UINT height, D3D12_DEPTH_STENCIL_VALUE defaultClearValue={ 1.0f, 0})</div><div class="ttdoc">Create depth stencil resource</div><div class="ttdef"><b>Definition</b> DepthStencil.cpp:9</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_a7be37c5dad39bc97c3229a5db5e7b14f"><div class="ttname"><a href="class_c_depth_stencil.html#a7be37c5dad39bc97c3229a5db5e7b14f">CDepthStencil::GetCPUHandleSRVForStencil</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE GetCPUHandleSRVForStencil() const</div><div class="ttdoc">Get CPU handle for srv descriptor heap for stencil buffer</div><div class="ttdef"><b>Definition</b> DepthStencil.h:74</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_aa47b541d3b6156101a273d5d41978b3d"><div class="ttname"><a href="class_c_depth_stencil.html#aa47b541d3b6156101a273d5d41978b3d">CDepthStencil::GetCPUHandleDSV</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE GetCPUHandleDSV() const</div><div class="ttdoc">Get CPU handle for dsv descriptor heap</div><div class="ttdef"><b>Definition</b> DepthStencil.h:70</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_aa535634218a044edc32d78f57670649f"><div class="ttname"><a href="class_c_depth_stencil.html#aa535634218a044edc32d78f57670649f">CDepthStencil::GetSRVPropertyHandleForStencil</a></div><div class="ttdeci">Utl::Dx::SRVPropertyHandle GetSRVPropertyHandleForStencil()</div><div class="ttdoc">Get SRV property handle for stencil buffer</div><div class="ttdef"><b>Definition</b> DepthStencil.h:67</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_aaeff77a7c5e6ec2e58975e8159d8b12d"><div class="ttname"><a href="class_c_depth_stencil.html#aaeff77a7c5e6ec2e58975e8159d8b12d">CDepthStencil::GetSRVPropertyHandleForDepth</a></div><div class="ttdeci">Utl::Dx::SRVPropertyHandle GetSRVPropertyHandleForDepth()</div><div class="ttdoc">Get SRV property handle for depth buffer</div><div class="ttdef"><b>Definition</b> DepthStencil.h:62</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_aaf2a84407e0b3ca6ad1ae02034009337"><div class="ttname"><a href="class_c_depth_stencil.html#aaf2a84407e0b3ca6ad1ae02034009337">CDepthStencil::GetCPUHandleSRVForDepth</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE GetCPUHandleSRVForDepth() const</div><div class="ttdoc">Get CPU handle for srv descriptor heap for depth buffer</div><div class="ttdef"><b>Definition</b> DepthStencil.h:72</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_ac30f2385fa2249d053cc52a94589744a"><div class="ttname"><a href="class_c_depth_stencil.html#ac30f2385fa2249d053cc52a94589744a">CDepthStencil::Apply</a></div><div class="ttdeci">void Apply()</div><div class="ttdoc">Apply this depth stencil to the destination depth stencil by calling 'OMSetRenderTargets'</div><div class="ttdef"><b>Definition</b> DepthStencil.cpp:95</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_ae8502d294033cd2322eebbad294dd0e5"><div class="ttname"><a href="class_c_depth_stencil.html#ae8502d294033cd2322eebbad294dd0e5">CDepthStencil::Clear</a></div><div class="ttdeci">void Clear(D3D12_DEPTH_STENCIL_VALUE clearValue={ 1.0f, 0 }, D3D12_CLEAR_FLAGS clearFlag=D3D12_CLEAR_FLAG_DEPTH|D3D12_CLEAR_FLAG_STENCIL)</div><div class="ttdoc">Clear the depth stencil</div><div class="ttdef"><b>Definition</b> DepthStencil.cpp:85</div></div>
+<div class="ttc" id="aclass_c_depth_stencil_html_af1dc25468f778431258986e0251ccaed"><div class="ttname"><a href="class_c_depth_stencil.html#af1dc25468f778431258986e0251ccaed">CDepthStencil::StateTransition</a></div><div class="ttdeci">void StateTransition(D3D12_RESOURCE_STATES state)</div><div class="ttdoc">Transition resource state</div><div class="ttdef"><b>Definition</b> DepthStencil.h:76</div></div>
+<div class="ttc" id="aclass_c_descriptor_heap_html"><div class="ttname"><a href="class_c_descriptor_heap.html">CDescriptorHeap</a></div><div class="ttdoc">This class handles descriptor heap</div><div class="ttdef"><b>Definition</b> DescriptorHeap.h:16</div></div>
+<div class="ttc" id="aclass_c_descriptor_heap_html_a76bf98e5948e5061b193686704b6948d"><div class="ttname"><a href="class_c_descriptor_heap.html#a76bf98e5948e5061b193686704b6948d">CDescriptorHeap::GetCpuHandle</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE GetCpuHandle(size_t offset=0) const</div><div class="ttdoc">Get CPU handle for descriptor heap</div><div class="ttdef"><b>Definition</b> DescriptorHeap.h:54</div></div>
+<div class="ttc" id="aclass_c_unique_ptr_weakable_html"><div class="ttname"><a href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable</a></div><div class="ttdoc">Unique pointer that can generate weak reference pointer</div><div class="ttdef"><b>Definition</b> UniquePtr.h:19</div></div>
+<div class="ttc" id="aclass_utl_1_1_dx_1_1_s_r_v_property_handle_html"><div class="ttname"><a href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html">Utl::Dx::SRVPropertyHandle</a></div><div class="ttdoc">Handle class for a SRVProperty that can only be created from within the SRVProperty</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:271</div></div>
+<div class="ttc" id="astruct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e_html"><div class="ttname"><a href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a></div><div class="ttdoc">D3D12_CPU_DESCRIPTOR_HANDLE interface</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

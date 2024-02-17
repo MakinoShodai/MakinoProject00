@@ -1,0 +1,625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ACCbAllocator&lt; ConstBuffType &gt; クラステンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="class_a_c_cb_allocator-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">ACCbAllocator&lt; ConstBuffType &gt; クラステンプレート</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class allocates data for constant buffer  
+ <a href="class_a_c_cb_allocator.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_abstract_cb_allocator_8h_source.html">AbstractCbAllocator.h</a>&gt;</code></p>
+<div class="dynheader">
+ACCbAllocator&lt; ConstBuffType &gt; の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_cb_allocator__inherit__graph.png" border="0" usemap="#a_a_c_cb_allocator_3_01_const_buff_type_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_a_c_cb_allocator_3_01_const_buff_type_01_4_inherit__map" id="a_a_c_cb_allocator_3_01_const_buff_type_01_4_inherit__map">
+<area shape="rect" title="This class allocates data for constant buffer" alt="" coords="5,239,180,281"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title=" " alt="" coords="228,5,437,48"/>
+<area shape="poly" title=" " alt="" coords="106,223,125,185,152,140,186,96,226,58,245,46,248,51,229,62,190,100,156,143,130,187,111,226"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title=" " alt="" coords="228,72,437,115"/>
+<area shape="poly" title=" " alt="" coords="117,225,165,174,194,147,226,124,249,113,252,118,229,129,198,151,168,177,121,229"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title=" " alt="" coords="228,139,437,181"/>
+<area shape="poly" title=" " alt="" coords="146,229,227,191,257,179,259,184,229,196,148,234"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title=" " alt="" coords="228,205,437,248"/>
+<area shape="poly" title=" " alt="" coords="195,243,227,239,227,244,195,248"/>
+<area shape="rect" href="class_a_c_static_cb_allocator.html" title=" " alt="" coords="262,272,403,315"/>
+<area shape="poly" title=" " alt="" coords="195,272,262,281,261,286,194,277"/>
+<area shape="rect" href="class_a_c_static_cb_allocator.html" title=" " alt="" coords="245,339,420,381"/>
+<area shape="poly" title=" " alt="" coords="148,286,229,324,259,336,257,341,227,329,146,291"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title="This class allocates data for constant buffer view per object" alt="" coords="228,512,437,555"/>
+<area shape="poly" title=" " alt="" coords="125,292,314,510,310,513,121,295"/>
+<area shape="rect" href="class_a_c_static_cb_allocator.html" title="This class allocates data for constant buffer view that don&#39;t need to be updated on a per&#45;object basi..." alt="" coords="262,579,403,621"/>
+<area shape="poly" title=" " alt="" coords="102,296,116,355,140,427,177,501,201,535,229,565,263,584,260,589,226,569,197,538,173,504,135,429,111,356,97,297"/>
+<area shape="rect" href="class_c_dynamic_cb_material.html" title="CB allocator class for material" alt="" coords="505,80,648,107"/>
+<area shape="poly" title=" " alt="" coords="452,91,504,91,504,96,452,96"/>
+<area shape="rect" href="class_c_static_cb_dir_light_param.html" title="Static CB allocater class for parameter of directional light" alt="" coords="495,159,657,185"/>
+<area shape="poly" title=" " alt="" coords="416,269,435,258,450,243,459,227,467,211,483,195,506,184,508,188,487,199,471,214,463,230,455,246,439,262,418,274"/>
+<area shape="rect" href="class_c_static_cb_light_v_p.html" title="Static CB allocater class that handles light view projection matrix" alt="" coords="513,209,639,236"/>
+<area shape="poly" title=" " alt="" coords="431,328,435,325,451,306,458,286,466,266,483,246,511,231,514,236,487,250,471,269,463,288,456,308,439,329,434,332"/>
+<area shape="rect" href="class_c_static_cb_orthographic_mat.html" title="Static CB class that handles orthographic projection matrix" alt="" coords="488,260,664,287"/>
+<area shape="poly" title=" " alt="" coords="421,330,436,324,460,310,484,296,516,285,518,290,486,301,462,315,438,329,423,335"/>
+<area shape="rect" href="class_c_static_cb_orthographic_view_proj_mat.html" title="Static CB class that handles orthographic view projection matrix" alt="" coords="485,311,667,353"/>
+<area shape="poly" title=" " alt="" coords="435,346,484,340,485,345,435,351"/>
+<area shape="rect" href="class_c_static_cb_remove_pos_v_p.html" title="Static CB allocater class that handles remove a position view projection matrix" alt="" coords="493,377,660,404"/>
+<area shape="poly" title=" " alt="" coords="435,370,492,377,492,383,435,376"/>
+<area shape="rect" href="class_c_static_cb_v_p.html" title="Static CB allocater class that handles view projection matrix" alt="" coords="527,428,625,455"/>
+<area shape="poly" title=" " alt="" coords="405,385,486,413,527,426,526,431,484,419,403,390"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator.html" title=" " alt="" coords="498,479,655,521"/>
+<area shape="poly" title=" " alt="" coords="452,514,497,508,497,513,453,520"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator.html" title=" " alt="" coords="498,545,655,588"/>
+<area shape="poly" title=" " alt="" coords="453,547,497,553,497,559,452,552"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator.html" title=" " alt="" coords="489,612,663,655"/>
+<area shape="poly" title=" " alt="" coords="425,558,438,564,463,581,486,598,511,609,509,614,484,602,460,585,436,569,423,563"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator.html" title="This class allocates data for constant buffer view per object" alt="" coords="498,679,655,721"/>
+<area shape="poly" title=" " alt="" coords="435,561,439,565,450,577,458,590,464,616,470,641,476,653,487,665,503,676,499,680,483,669,472,656,465,643,459,617,453,592,446,580,435,569,431,566"/>
+<area shape="rect" href="class_c_dynamic_cb_color.html" title="CB allocator class that handles color" alt="" coords="747,487,874,513"/>
+<area shape="poly" title=" " alt="" coords="670,497,746,497,746,503,670,503"/>
+<area shape="rect" href="class_c_dynamic_cb_tex_coord_param.html" title="CB allocator class that handles color" alt="" coords="715,553,906,580"/>
+<area shape="poly" title=" " alt="" coords="670,564,715,564,715,569,670,569"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html" title="CB allocator class that handles world matrix" alt="" coords="734,620,887,647"/>
+<area shape="poly" title=" " alt="" coords="679,631,734,631,734,636,679,636"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a8d376c36b9f72036a034718797edb483" id="r_a8d376c36b9f72036a034718797edb483"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a8d376c36b9f72036a034718797edb483">ACCbAllocator</a> (const <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a8d376c36b9f72036a034718797edb483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy constructor  <br /></td></tr>
+<tr class="separator:a8d376c36b9f72036a034718797edb483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23605f21749e4e7ccdc44dc058a987bd" id="r_a23605f21749e4e7ccdc44dc058a987bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a23605f21749e4e7ccdc44dc058a987bd">operator=</a> (const <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a23605f21749e4e7ccdc44dc058a987bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy assignment operator  <br /></td></tr>
+<tr class="separator:a23605f21749e4e7ccdc44dc058a987bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a7c9420c0143b18717d9996fed19ae" id="r_a51a7c9420c0143b18717d9996fed19ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a51a7c9420c0143b18717d9996fed19ae">ACCbAllocator</a> (<a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a51a7c9420c0143b18717d9996fed19ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move constructor  <br /></td></tr>
+<tr class="separator:a51a7c9420c0143b18717d9996fed19ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc044e9f610bcbb9ac944ff56739e377" id="r_afc044e9f610bcbb9ac944ff56739e377"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#afc044e9f610bcbb9ac944ff56739e377">operator=</a> (<a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:afc044e9f610bcbb9ac944ff56739e377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move assignment constructor  <br /></td></tr>
+<tr class="separator:afc044e9f610bcbb9ac944ff56739e377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f9248dee80f50e5e42796c69026b1c2" id="r_a8f9248dee80f50e5e42796c69026b1c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a8f9248dee80f50e5e42796c69026b1c2">ACCbAllocator</a> (UINT maxUsePerFrame, std::string hlslBufferName)</td></tr>
+<tr class="memdesc:a8f9248dee80f50e5e42796c69026b1c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a8f9248dee80f50e5e42796c69026b1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe64be63ecb1f7ef816a39311d2bab04" id="r_abe64be63ecb1f7ef816a39311d2bab04"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#abe64be63ecb1f7ef816a39311d2bab04">~ACCbAllocator</a> ()</td></tr>
+<tr class="memdesc:abe64be63ecb1f7ef816a39311d2bab04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:abe64be63ecb1f7ef816a39311d2bab04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3a7c8412a38133febbf2762d0cc6af03" id="r_a3a7c8412a38133febbf2762d0cc6af03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a3a7c8412a38133febbf2762d0cc6af03">DirectDataCopy</a> (const ConstBuffType *src)</td></tr>
+<tr class="memdesc:a3a7c8412a38133febbf2762d0cc6af03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data directly  <br /></td></tr>
+<tr class="separator:a3a7c8412a38133febbf2762d0cc6af03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acffe82536938e07e29b776cc426bedbd" id="r_acffe82536938e07e29b776cc426bedbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#acffe82536938e07e29b776cc426bedbd">RefreshCbAllocator</a> ()</td></tr>
+<tr class="memdesc:acffe82536938e07e29b776cc426bedbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh process that must be called at the end of every frame  <br /></td></tr>
+<tr class="separator:acffe82536938e07e29b776cc426bedbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa49646ce5c26e898f236a94f9ab5899" id="r_aaa49646ce5c26e898f236a94f9ab5899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#aaa49646ce5c26e898f236a94f9ab5899">GetPrevAllocatedData</a> ()</td></tr>
+<tr class="memdesc:aaa49646ce5c26e898f236a94f9ab5899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle for one previous allocated data  <br /></td></tr>
+<tr class="separator:aaa49646ce5c26e898f236a94f9ab5899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a0d9081b59229ef366e3eebbbfe3ef4cc" id="r_a0d9081b59229ef366e3eebbbfe3ef4cc"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a0d9081b59229ef366e3eebbbfe3ef4cc">m_hlslBufferName</a></td></tr>
+<tr class="memdesc:a0d9081b59229ef366e3eebbbfe3ef4cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of cbuffer defined in hlsl  <br /></td></tr>
+<tr class="separator:a0d9081b59229ef366e3eebbbfe3ef4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class ConstBuffType&gt;<br />
+class ACCbAllocator&lt; ConstBuffType &gt;</div><p>This class allocates data for constant buffer </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ConstBuffType</td><td>type of constant buffe</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The following must be done in the derived class. Only 'UINT maxUsePerFrame' should be the argument of the constructor of the derived class </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a8d376c36b9f72036a034718797edb483" name="a8d376c36b9f72036a034718797edb483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d376c36b9f72036a034718797edb483">&#9670;&#160;</a></span>ACCbAllocator() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ConstBuffType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt;<a class="el" href="class_a_c_cb_allocator.html">::ACCbAllocator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disallow the copy constructor </p>
+
+</div>
+</div>
+<a id="a51a7c9420c0143b18717d9996fed19ae" name="a51a7c9420c0143b18717d9996fed19ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a7c9420c0143b18717d9996fed19ae">&#9670;&#160;</a></span>ACCbAllocator() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ConstBuffType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt;<a class="el" href="class_a_c_cb_allocator.html">::ACCbAllocator</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disallow the move constructor </p>
+
+</div>
+</div>
+<a id="a8f9248dee80f50e5e42796c69026b1c2" name="a8f9248dee80f50e5e42796c69026b1c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f9248dee80f50e5e42796c69026b1c2">&#9670;&#160;</a></span>ACCbAllocator() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ConstBuffType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt;<a class="el" href="class_a_c_cb_allocator.html">::ACCbAllocator</a> </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>maxUsePerFrame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>hlslBufferName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">maxUsePerFrame</td><td>The maximum number of buffers that can be used in one frame </td></tr>
+    <tr><td class="paramname">hlslBufferName</td><td>The name of cbuffer defined in hlsl </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abe64be63ecb1f7ef816a39311d2bab04" name="abe64be63ecb1f7ef816a39311d2bab04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe64be63ecb1f7ef816a39311d2bab04">&#9670;&#160;</a></span>~ACCbAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ConstBuffType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt;::~<a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a3a7c8412a38133febbf2762d0cc6af03" name="a3a7c8412a38133febbf2762d0cc6af03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a7c8412a38133febbf2762d0cc6af03">&#9670;&#160;</a></span>DirectDataCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ConstBuffType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt;::DirectDataCopy </td>
+          <td>(</td>
+          <td class="paramtype">const ConstBuffType *&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy data directly </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Data to be copy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CPU handle for data copied </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>The Map operation is called within the function. However, the Unmap operation is not called </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_cb_allocator_a3a7c8412a38133febbf2762d0cc6af03_cgraph.png" border="0" usemap="#aclass_a_c_cb_allocator_a3a7c8412a38133febbf2762d0cc6af03_cgraph" alt=""/></div>
+<map name="aclass_a_c_cb_allocator_a3a7c8412a38133febbf2762d0cc6af03_cgraph" id="aclass_a_c_cb_allocator_a3a7c8412a38133febbf2762d0cc6af03_cgraph">
+<area shape="rect" title="Copy data directly" alt="" coords="5,47,211,73"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="278,5,454,48"/>
+<area shape="poly" title=" " alt="" coords="211,44,262,37,262,43,212,49"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="259,72,473,115"/>
+<area shape="poly" title=" " alt="" coords="212,71,243,75,243,80,211,76"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_cb_allocator_a3a7c8412a38133febbf2762d0cc6af03_icgraph.png" border="0" usemap="#aclass_a_c_cb_allocator_a3a7c8412a38133febbf2762d0cc6af03_icgraph" alt=""/></div>
+<map name="aclass_a_c_cb_allocator_a3a7c8412a38133febbf2762d0cc6af03_icgraph" id="aclass_a_c_cb_allocator_a3a7c8412a38133febbf2762d0cc6af03_icgraph">
+<area shape="rect" title="Copy data directly" alt="" coords="761,499,966,525"/>
+<area shape="rect" href="class_c_static_cb_dir_light_param.html#a22486d5d786dc04ff3d5391493c60c0f" title="Allocate data" alt="" coords="527,5,689,48"/>
+<area shape="poly" title=" " alt="" coords="858,484,851,401,842,347,829,288,810,227,784,167,752,111,711,62,688,46,691,42,714,58,756,108,789,165,815,225,834,287,847,346,856,401,864,483"/>
+<area shape="rect" href="class_c_static_cb_light_v_p.html#a6d113cd6233bd55c9759ced1920c4347" title="Allocate data" alt="" coords="504,72,712,99"/>
+<area shape="poly" title=" " alt="" coords="858,484,848,409,824,308,805,255,781,203,749,154,711,113,694,101,697,97,714,109,754,151,785,200,810,253,829,307,853,408,863,483"/>
+<area shape="rect" href="class_c_static_cb_orthographic_mat.html#a5ebe85f42a833955d10f75cc2d5728fd" title="Allocate data" alt="" coords="520,123,696,165"/>
+<area shape="poly" title=" " alt="" coords="855,484,840,421,814,339,795,296,771,253,744,214,711,179,695,168,698,164,714,175,748,211,776,251,799,293,818,337,846,420,860,483"/>
+<area shape="rect" href="class_c_static_cb_orthographic_view_proj_mat.html#a359c2368c9f058bbd9988274b7b861a7" title="Allocate data" alt="" coords="517,189,699,232"/>
+<area shape="poly" title=" " alt="" coords="851,485,834,434,805,369,764,303,739,273,711,246,694,235,696,230,714,242,743,269,768,300,809,367,838,432,857,483"/>
+<area shape="rect" href="class_c_static_cb_v_p.html#a369c4249f4852c7bbd7ea59ad3bb59dd" title="Allocate data" alt="" coords="518,256,698,283"/>
+<area shape="poly" title=" " alt="" coords="848,485,828,443,799,392,759,340,736,317,711,297,690,286,692,281,714,292,740,313,763,337,803,389,833,441,853,483"/>
+<area shape="rect" href="class_c_static_cb_remove_pos_v_p.html#aa1fa2ac54d1744972a5b4fa3756dfe84" title="Allocate data" alt="" coords="524,307,692,349"/>
+<area shape="poly" title=" " alt="" coords="841,488,787,426,751,392,711,364,689,352,691,347,714,359,754,388,791,422,845,485"/>
+<area shape="rect" href="class_c_dynamic_cb_color.html#a6c93ccea8b98dc9b74ded3b4bf71074b" title="Allocate data" alt="" coords="503,373,713,400"/>
+<area shape="poly" title=" " alt="" coords="832,491,778,452,712,414,680,403,681,398,714,410,781,447,835,487"/>
+<area shape="rect" href="class_c_dynamic_cb_tex_coord_param.html#ae5c9cdf68c3c712e34b1f732ac3d66b3" title="Allocate data" alt="" coords="513,424,703,467"/>
+<area shape="poly" title=" " alt="" coords="794,497,692,470,693,465,795,492"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#ac295bc80f0ff033e39ca4d2416c6695b" title="Allocate data" alt="" coords="531,491,685,533"/>
+<area shape="poly" title=" " alt="" coords="745,515,685,515,685,509,745,509"/>
+<area shape="rect" href="class_c_dynamic_cb_material.html#a518fb78082eab6ae600c475c0f42da12" title="Allocate data" alt="" coords="536,557,680,600"/>
+<area shape="poly" title=" " alt="" coords="795,532,681,563,679,557,794,527"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#a427961e85654640a15ef36cef27a8b29" title="Allocate data for billboard" alt="" coords="531,624,685,667"/>
+<area shape="poly" title=" " alt="" coords="835,537,780,576,714,614,686,626,684,621,711,610,777,571,831,533"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#ab4fa4bb97bc39b0f1441ab20feb24f88" title="Allocate data for debugging collider shape" alt="" coords="531,691,685,733"/>
+<area shape="poly" title=" " alt="" coords="847,540,793,610,756,648,714,681,686,695,684,690,711,676,753,644,789,606,843,537"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#a1e75e1ec732e0e5d8ce50dad70f110db" title="Allocate data for sprite 3D" alt="" coords="531,757,685,800"/>
+<area shape="poly" title=" " alt="" coords="854,541,834,586,804,641,764,698,740,724,714,748,687,763,684,759,711,743,737,721,760,695,800,639,829,583,849,539"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#aebd3e9d52c465127e119c96d725814be" title="Allocate data for sprite UI" alt="" coords="531,824,685,867"/>
+<area shape="poly" title=" " alt="" coords="858,541,842,598,814,672,772,748,745,783,714,814,686,831,683,827,711,810,741,780,767,745,809,669,837,597,853,540"/>
+<area shape="rect" href="class_c_dynamic_cb_color.html#a5811c04fa1c7193c1da9f2a6beaf82a9" title="Allocate data for no component" alt="" coords="517,891,699,933"/>
+<area shape="poly" title=" " alt="" coords="861,542,849,610,823,701,803,750,779,797,750,841,714,881,699,892,696,888,711,877,746,838,775,794,799,747,818,699,843,609,856,541"/>
+<area shape="rect" href="class_c_dynamic_cb_tex_coord_param.html#abb61c2d4a9c31a78e21699ce18529c51" title="Allocate data for no component" alt="" coords="513,957,703,1000"/>
+<area shape="poly" title=" " alt="" coords="863,541,854,621,831,730,812,788,787,846,755,900,715,947,699,959,696,955,711,943,750,896,782,843,807,786,826,728,849,620,858,541"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#ad06532f9790e66fa2f1bce49a113fc99" title="Allocate data for no component" alt="" coords="515,1024,701,1067"/>
+<area shape="poly" title=" " alt="" coords="865,541,860,631,852,692,840,758,821,826,795,894,760,958,715,1014,700,1025,697,1021,711,1010,755,955,790,892,816,825,834,756,847,691,854,631,860,541"/>
+<area shape="rect" href="class_c_scene_registry.html#ad30119b70679268521655882941fda25" title="Processing per frame" alt="" coords="264,1024,455,1067"/>
+<area shape="poly" title=" " alt="" coords="500,1048,456,1048,456,1043,500,1043"/>
+<area shape="rect" href="_application_main_8cpp.html#a9f7ec4675853ebb9fc2dabdf70fd558b" title="Main funciton for application" alt="" coords="103,1032,216,1059"/>
+<area shape="poly" title=" " alt="" coords="248,1048,216,1048,216,1043,248,1043"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,1032,55,1059"/>
+<area shape="poly" title=" " alt="" coords="87,1048,55,1048,55,1043,87,1043"/>
+<area shape="poly" title=" " alt="" coords="51,1019,44,1013,30,1011,17,1013,10,1017,8,1023,12,1030,7,1033,3,1023,6,1014,15,1008,30,1005,46,1008,55,1015"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaa49646ce5c26e898f236a94f9ab5899" name="aaa49646ce5c26e898f236a94f9ab5899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa49646ce5c26e898f236a94f9ab5899">&#9670;&#160;</a></span>GetPrevAllocatedData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ConstBuffType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt;::GetPrevAllocatedData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get handle for one previous allocated data </p>
+<dl class="section return"><dt>戻り値</dt><dd>Handle for one previous allocated data </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_cb_allocator_aaa49646ce5c26e898f236a94f9ab5899_cgraph.png" border="0" usemap="#aclass_a_c_cb_allocator_aaa49646ce5c26e898f236a94f9ab5899_cgraph" alt=""/></div>
+<map name="aclass_a_c_cb_allocator_aaa49646ce5c26e898f236a94f9ab5899_cgraph" id="aclass_a_c_cb_allocator_aaa49646ce5c26e898f236a94f9ab5899_cgraph">
+<area shape="rect" title="Get handle for one previous allocated data" alt="" coords="5,47,247,73"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="314,5,490,48"/>
+<area shape="poly" title=" " alt="" coords="242,43,298,37,298,42,242,49"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="295,72,509,115"/>
+<area shape="poly" title=" " alt="" coords="242,71,280,76,279,81,242,77"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_cb_allocator_aaa49646ce5c26e898f236a94f9ab5899_icgraph.png" border="0" usemap="#aclass_a_c_cb_allocator_aaa49646ce5c26e898f236a94f9ab5899_icgraph" alt=""/></div>
+<map name="aclass_a_c_cb_allocator_aaa49646ce5c26e898f236a94f9ab5899_icgraph" id="aclass_a_c_cb_allocator_aaa49646ce5c26e898f236a94f9ab5899_icgraph">
+<area shape="rect" title="Get handle for one previous allocated data" alt="" coords="225,13,466,40"/>
+<area shape="rect" href="class_a_c_static_cb_allocator.html#a3ea38317d1f8cf266c7450f6c7b95fd7" title="Get handle of allocated data in resource" alt="" coords="5,5,177,48"/>
+<area shape="poly" title=" " alt="" coords="209,29,177,29,177,24,209,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afc044e9f610bcbb9ac944ff56739e377" name="afc044e9f610bcbb9ac944ff56739e377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc044e9f610bcbb9ac944ff56739e377">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ConstBuffType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp; <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disallow the move assignment constructor </p>
+
+</div>
+</div>
+<a id="a23605f21749e4e7ccdc44dc058a987bd" name="a23605f21749e4e7ccdc44dc058a987bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23605f21749e4e7ccdc44dc058a987bd">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ConstBuffType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp; <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disallow the copy assignment operator </p>
+
+</div>
+</div>
+<a id="acffe82536938e07e29b776cc426bedbd" name="acffe82536938e07e29b776cc426bedbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acffe82536938e07e29b776cc426bedbd">&#9670;&#160;</a></span>RefreshCbAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ConstBuffType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt;::RefreshCbAllocator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Refresh process that must be called at the end of every frame </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_cb_allocator_acffe82536938e07e29b776cc426bedbd_cgraph.png" border="0" usemap="#aclass_a_c_cb_allocator_acffe82536938e07e29b776cc426bedbd_cgraph" alt=""/></div>
+<map name="aclass_a_c_cb_allocator_acffe82536938e07e29b776cc426bedbd_cgraph" id="aclass_a_c_cb_allocator_acffe82536938e07e29b776cc426bedbd_cgraph">
+<area shape="rect" title="Refresh process that must be called at the end of every frame" alt="" coords="5,39,180,81"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="247,5,423,48"/>
+<area shape="poly" title=" " alt="" coords="180,45,231,38,232,44,180,51"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="228,72,442,115"/>
+<area shape="poly" title=" " alt="" coords="180,69,213,74,212,79,180,75"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_cb_allocator_acffe82536938e07e29b776cc426bedbd_icgraph.png" border="0" usemap="#aclass_a_c_cb_allocator_acffe82536938e07e29b776cc426bedbd_icgraph" alt=""/></div>
+<map name="aclass_a_c_cb_allocator_acffe82536938e07e29b776cc426bedbd_icgraph" id="aclass_a_c_cb_allocator_acffe82536938e07e29b776cc426bedbd_icgraph">
+<area shape="rect" title="Refresh process that must be called at the end of every frame" alt="" coords="263,39,437,81"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7e6a65998bfe85cc305fbaf0879b059d" title="Refresh process that must be called at the end of every frame" alt="" coords="5,5,215,48"/>
+<area shape="poly" title=" " alt="" coords="247,48,215,44,216,39,248,43"/>
+<area shape="rect" href="class_a_c_static_cb_allocator.html#a96a4bf5b3d8894a8e1c78d3ba6a2406d" title="Refresh process that must be called at the end of every frame" alt="" coords="40,72,180,115"/>
+<area shape="poly" title=" " alt="" coords="248,77,181,86,180,81,247,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a0d9081b59229ef366e3eebbbfe3ef4cc" name="a0d9081b59229ef366e3eebbbfe3ef4cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9081b59229ef366e3eebbbfe3ef4cc">&#9670;&#160;</a></span>m_hlslBufferName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ConstBuffType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a>&lt; ConstBuffType &gt;::m_hlslBufferName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The name of cbuffer defined in hlsl </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_abstract_cb_allocator_8h_source.html">AbstractCbAllocator.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

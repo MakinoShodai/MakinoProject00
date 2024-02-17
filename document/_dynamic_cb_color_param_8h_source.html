@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjectName: DynamicCbColorParam.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ProjectName
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">DynamicCbColorParam.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_dynamic_cb_color_param_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __DYNAMIC_CB_COLOR_PARAM_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __DYNAMIC_CB_COLOR_PARAM_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_dynamic_cb_allocator_8h.html">DynamicCbAllocator.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> <a class="code hl_function" href="_dynamic_cb_color_param_8h.html#a037e3139e6d91463f61b1188b2c7fd76">CbTestParamReset</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_color_param.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_dynamic_cb_color_param.html">CDynamicCbColorParam</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_dynamic_cb_allocator.html">ACDynamicCbAllocator</a>&lt;DirectX::XMFLOAT4&gt; {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_color_param.html#ade7819e07e19013e0bf3816e05160e22">   18</a></span>    <a class="code hl_function" href="class_c_dynamic_cb_color_param.html#ade7819e07e19013e0bf3816e05160e22">CDynamicCbColorParam</a>(UINT maxUsePerFrame) : <a class="code hl_class" href="class_a_c_dynamic_cb_allocator.html">ACDynamicCbAllocator</a>(maxUsePerFrame, <span class="stringliteral">&quot;ColorParam&quot;</span>) {}</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_color_param.html#acffea390345e83ff9971659a9f8e150a">AllocateData</a>(<a class="code hl_class" href="class_a_c_graphics_component.html">ACGraphicsComponent</a>* component);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_color_param.html#acffea390345e83ff9971659a9f8e150a">AllocateData</a>(<a class="code hl_class" href="class_c_sprite_u_i.html">CSpriteUI</a>* sprite);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_color_param.html#a948173deff424dcd4056339c84d8e8c2">ExternalAllocateData</a>(<span class="keyword">const</span> DirectX::XMFLOAT4&amp; color);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_test_param.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_dynamic_cb_test_param.html">CDynamicCbTestParam</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_dynamic_cb_allocator.html">ACDynamicCbAllocator</a>&lt;DirectX::XMFLOAT4&gt; {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_test_param.html#a98a988b4f8ab4b60b857cdfa4c57e06c">   28</a></span>    <a class="code hl_function" href="class_c_dynamic_cb_test_param.html#a98a988b4f8ab4b60b857cdfa4c57e06c">CDynamicCbTestParam</a>(UINT maxUsePerFrame) : <a class="code hl_class" href="class_a_c_dynamic_cb_allocator.html">ACDynamicCbAllocator</a>(maxUsePerFrame, <span class="stringliteral">&quot;TestParam&quot;</span>) {}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_test_param.html#a53b64e7eed9d3f502cf289ef768af25a">AllocateData</a>(<a class="code hl_class" href="class_a_c_graphics_component.html">ACGraphicsComponent</a>* component);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_test_param.html#a53b64e7eed9d3f502cf289ef768af25a">AllocateData</a>(<a class="code hl_class" href="class_c_model.html">CModel</a>* model);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_test_param.html#a894b8eb827c9abe4c3eefbc71a96e20e">ExternalAllocateData</a>(<span class="keyword">const</span> DirectX::XMFLOAT4&amp; testParam);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_constant_buffer_anim_matrix.html">   36</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_constant_buffer_anim_matrix.html">ConstantBufferAnimMatrix</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_constant_buffer_anim_matrix.html#afac20647472e330beeb60cf84aab5998">   37</a></span>    DirectX::XMFLOAT4X4 <a class="code hl_variable" href="struct_constant_buffer_anim_matrix.html#afac20647472e330beeb60cf84aab5998">mat</a>[200];</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_anim_matrix.html">   40</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_dynamic_cb_anim_matrix.html">CDynamicCbAnimMatrix</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_dynamic_cb_allocator_per_mesh.html">ACDynamicCbAllocatorPerMesh</a>&lt;ConstantBufferAnimMatrix&gt; {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_dynamic_cb_anim_matrix.html#ac2ff95545ea59cfd2937daa29248927e">   42</a></span>    <a class="code hl_function" href="class_c_dynamic_cb_anim_matrix.html#ac2ff95545ea59cfd2937daa29248927e">CDynamicCbAnimMatrix</a>(UINT maxUsePerFrame) : <a class="code hl_class" href="class_a_c_dynamic_cb_allocator_per_mesh.html">ACDynamicCbAllocatorPerMesh</a>(maxUsePerFrame, <span class="stringliteral">&quot;AnimMat&quot;</span>) {}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_anim_matrix.html#a41146e6bf1ae40a6bcde5fc829d8caaa">AllocateData</a>(<a class="code hl_class" href="class_a_c_graphics_component.html">ACGraphicsComponent</a>* component, UINT meshIndex);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> <a class="code hl_function" href="class_c_dynamic_cb_anim_matrix.html#a41146e6bf1ae40a6bcde5fc829d8caaa">AllocateData</a>(<a class="code hl_class" href="class_c_model.html">CModel</a>* model, UINT meshIndex);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">// !__DYNAMIC_CB_COLOR_PARAM_H__</span></div>
+<div class="ttc" id="a_dynamic_cb_allocator_8h_html"><div class="ttname"><a href="_dynamic_cb_allocator_8h.html">DynamicCbAllocator.h</a></div><div class="ttdoc">This file handles class that allocates data for constant buffer per object.</div></div>
+<div class="ttc" id="a_dynamic_cb_color_param_8h_html_a037e3139e6d91463f61b1188b2c7fd76"><div class="ttname"><a href="_dynamic_cb_color_param_8h.html#a037e3139e6d91463f61b1188b2c7fd76">CbTestParamReset</a></div><div class="ttdeci">void CbTestParamReset()</div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.cpp:41</div></div>
+<div class="ttc" id="aclass_a_c_dynamic_cb_allocator_html"><div class="ttname"><a href="class_a_c_dynamic_cb_allocator.html">ACDynamicCbAllocator</a></div><div class="ttdoc">This class allocates data for constant buffer view per object</div><div class="ttdef"><b>Definition</b> DynamicCbAllocator.h:68</div></div>
+<div class="ttc" id="aclass_a_c_dynamic_cb_allocator_per_mesh_html"><div class="ttname"><a href="class_a_c_dynamic_cb_allocator_per_mesh.html">ACDynamicCbAllocatorPerMesh</a></div><div class="ttdoc">This class allocates data for constant buffer view per object</div><div class="ttdef"><b>Definition</b> DynamicCbAllocator.h:23</div></div>
+<div class="ttc" id="aclass_a_c_graphics_component_html"><div class="ttname"><a href="class_a_c_graphics_component.html">ACGraphicsComponent</a></div><div class="ttdoc">Abstract class of component of graphics</div><div class="ttdef"><b>Definition</b> GraphicsComponent.h:38</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_anim_matrix_html"><div class="ttname"><a href="class_c_dynamic_cb_anim_matrix.html">CDynamicCbAnimMatrix</a></div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.h:40</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_anim_matrix_html_a41146e6bf1ae40a6bcde5fc829d8caaa"><div class="ttname"><a href="class_c_dynamic_cb_anim_matrix.html#a41146e6bf1ae40a6bcde5fc829d8caaa">CDynamicCbAnimMatrix::AllocateData</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(ACGraphicsComponent *component, UINT meshIndex)</div><div class="ttdoc">Allocate data calculated for a mesh held by sent graphics component in the constant buffer</div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.cpp:46</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_anim_matrix_html_ac2ff95545ea59cfd2937daa29248927e"><div class="ttname"><a href="class_c_dynamic_cb_anim_matrix.html#ac2ff95545ea59cfd2937daa29248927e">CDynamicCbAnimMatrix::CDynamicCbAnimMatrix</a></div><div class="ttdeci">CDynamicCbAnimMatrix(UINT maxUsePerFrame)</div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.h:42</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_color_param_html"><div class="ttname"><a href="class_c_dynamic_cb_color_param.html">CDynamicCbColorParam</a></div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.h:16</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_color_param_html_a948173deff424dcd4056339c84d8e8c2"><div class="ttname"><a href="class_c_dynamic_cb_color_param.html#a948173deff424dcd4056339c84d8e8c2">CDynamicCbColorParam::ExternalAllocateData</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE ExternalAllocateData(const DirectX::XMFLOAT4 &amp;color)</div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.cpp:19</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_color_param_html_acffea390345e83ff9971659a9f8e150a"><div class="ttname"><a href="class_c_dynamic_cb_color_param.html#acffea390345e83ff9971659a9f8e150a">CDynamicCbColorParam::AllocateData</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(ACGraphicsComponent *component)</div><div class="ttdoc">Allocate data calculated for sent graphics component in the constant buffer</div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.cpp:6</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_color_param_html_ade7819e07e19013e0bf3816e05160e22"><div class="ttname"><a href="class_c_dynamic_cb_color_param.html#ade7819e07e19013e0bf3816e05160e22">CDynamicCbColorParam::CDynamicCbColorParam</a></div><div class="ttdeci">CDynamicCbColorParam(UINT maxUsePerFrame)</div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.h:18</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_test_param_html"><div class="ttname"><a href="class_c_dynamic_cb_test_param.html">CDynamicCbTestParam</a></div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.h:26</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_test_param_html_a53b64e7eed9d3f502cf289ef768af25a"><div class="ttname"><a href="class_c_dynamic_cb_test_param.html#a53b64e7eed9d3f502cf289ef768af25a">CDynamicCbTestParam::AllocateData</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(ACGraphicsComponent *component)</div><div class="ttdoc">Allocate data calculated for sent graphics component in the constant buffer</div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.cpp:23</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_test_param_html_a894b8eb827c9abe4c3eefbc71a96e20e"><div class="ttname"><a href="class_c_dynamic_cb_test_param.html#a894b8eb827c9abe4c3eefbc71a96e20e">CDynamicCbTestParam::ExternalAllocateData</a></div><div class="ttdeci">Utl::Dx::CPU_DESCRIPTOR_HANDLE ExternalAllocateData(const DirectX::XMFLOAT4 &amp;testParam)</div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.cpp:37</div></div>
+<div class="ttc" id="aclass_c_dynamic_cb_test_param_html_a98a988b4f8ab4b60b857cdfa4c57e06c"><div class="ttname"><a href="class_c_dynamic_cb_test_param.html#a98a988b4f8ab4b60b857cdfa4c57e06c">CDynamicCbTestParam::CDynamicCbTestParam</a></div><div class="ttdeci">CDynamicCbTestParam(UINT maxUsePerFrame)</div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.h:28</div></div>
+<div class="ttc" id="aclass_c_model_html"><div class="ttname"><a href="class_c_model.html">CModel</a></div><div class="ttdef"><b>Definition</b> Model.h:15</div></div>
+<div class="ttc" id="aclass_c_sprite_u_i_html"><div class="ttname"><a href="class_c_sprite_u_i.html">CSpriteUI</a></div><div class="ttdoc">Sprite class for UI</div><div class="ttdef"><b>Definition</b> Sprite.h:70</div></div>
+<div class="ttc" id="astruct_constant_buffer_anim_matrix_html"><div class="ttname"><a href="struct_constant_buffer_anim_matrix.html">ConstantBufferAnimMatrix</a></div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.h:36</div></div>
+<div class="ttc" id="astruct_constant_buffer_anim_matrix_html_afac20647472e330beeb60cf84aab5998"><div class="ttname"><a href="struct_constant_buffer_anim_matrix.html#afac20647472e330beeb60cf84aab5998">ConstantBufferAnimMatrix::mat</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 mat[200]</div><div class="ttdef"><b>Definition</b> DynamicCbColorParam.h:37</div></div>
+<div class="ttc" id="astruct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e_html"><div class="ttname"><a href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a></div><div class="ttdoc">D3D12_CPU_DESCRIPTOR_HANDLE interface</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: MeshBuffer.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MeshBuffer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_mesh_buffer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __MESH_BUFFER_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __MESH_BUFFER_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_vertex_buffer_8h.html">VertexBuffer.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_index_buffer_8h.html">IndexBuffer.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_unique_ptr_8h.html">UniquePtr.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_mesh_buffer.html">CMeshBuffer</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer.html#a06d4c4859183bacbc582020240222a7f">   26</a></span>    <a class="code hl_function" href="class_c_mesh_buffer.html#a06d4c4859183bacbc582020240222a7f">CMeshBuffer</a>() : <a class="code hl_variable" href="class_c_mesh_buffer.html#a2bc6a4fbc45df936381b100c42557d0b">m_vertexBuffer</a>(nullptr), <a class="code hl_variable" href="class_c_mesh_buffer.html#a170f9a6719346d2e99c221e119ac4044">m_indexBuffer</a>(nullptr), <a class="code hl_variable" href="class_c_mesh_buffer.html#a2872b7b60488eb0f17a2c5b1acd0c18f">m_topologyType</a>(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST) {}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_mesh_buffer.html#a2898d8dd16d750f9323f3dea3e482c66">SetInfo</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CVertexBuffer&gt;</a> vertex, <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CIndexBuffer&gt;</a> index, D3D_PRIMITIVE_TOPOLOGY topology);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer.html#a13a81042cdaeaaadf1c2ab8fd685dda3">   37</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="class_c_vertex_buffer.html">CVertexBuffer</a>* <a class="code hl_function" href="class_c_mesh_buffer.html#a13a81042cdaeaaadf1c2ab8fd685dda3">GetVertex</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_c_mesh_buffer.html#a2bc6a4fbc45df936381b100c42557d0b">m_vertexBuffer</a>.<a class="code hl_function" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219">Get</a>(); }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer.html#a2d0e2030e49e9fa59ec6400c24ee244c">   39</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="class_c_index_buffer.html">CIndexBuffer</a>* <a class="code hl_function" href="class_c_mesh_buffer.html#a2d0e2030e49e9fa59ec6400c24ee244c">GetIndex</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_c_mesh_buffer.html#a170f9a6719346d2e99c221e119ac4044">m_indexBuffer</a>.<a class="code hl_function" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219">Get</a>(); }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer.html#a29d6b8905dba12b2023a1e33e74db62c">   41</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CVertexBuffer&gt;</a> <a class="code hl_function" href="class_c_mesh_buffer.html#a29d6b8905dba12b2023a1e33e74db62c">GetVertexWeakPtr</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_c_mesh_buffer.html#a2bc6a4fbc45df936381b100c42557d0b">m_vertexBuffer</a>; }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer.html#ad9bff6ec4143452028b8b03c79608d14">   43</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CIndexBuffer&gt;</a> <a class="code hl_function" href="class_c_mesh_buffer.html#ad9bff6ec4143452028b8b03c79608d14">GetIndexWeakPtr</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_c_mesh_buffer.html#a170f9a6719346d2e99c221e119ac4044">m_indexBuffer</a>; }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer.html#a9cd84119359127ba6d60d14b5cb5ecba">   45</a></span>    D3D_PRIMITIVE_TOPOLOGY <a class="code hl_function" href="class_c_mesh_buffer.html#a9cd84119359127ba6d60d14b5cb5ecba">GetTopologyType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_c_mesh_buffer.html#a2872b7b60488eb0f17a2c5b1acd0c18f">m_topologyType</a>; }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer.html#a2bc6a4fbc45df936381b100c42557d0b">   49</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CVertexBuffer&gt;</a> <a class="code hl_variable" href="class_c_mesh_buffer.html#a2bc6a4fbc45df936381b100c42557d0b">m_vertexBuffer</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer.html#a170f9a6719346d2e99c221e119ac4044">   51</a></span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CIndexBuffer&gt;</a> <a class="code hl_variable" href="class_c_mesh_buffer.html#a170f9a6719346d2e99c221e119ac4044">m_indexBuffer</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer.html#a2872b7b60488eb0f17a2c5b1acd0c18f">   53</a></span>    D3D_PRIMITIVE_TOPOLOGY <a class="code hl_variable" href="class_c_mesh_buffer.html#a2872b7b60488eb0f17a2c5b1acd0c18f">m_topologyType</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer_full.html">   61</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_mesh_buffer_full.html">CMeshBufferFull</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_c_mesh_buffer.html">CMeshBuffer</a> {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_function" href="class_c_mesh_buffer_full.html#abd843a115a14c99d4d4c7560a2bba2bd">CMeshBufferFull</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer_full.html#aa4761f6298608410a85b7efc4bd91bba">   69</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_mesh_buffer_full.html#aa4761f6298608410a85b7efc4bd91bba">SetInfo</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CVertexBuffer&gt;</a> vertex, <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CIndexBuffer&gt;</a> index, D3D_PRIMITIVE_TOPOLOGY topology) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer_full.html#a918004ea8c2050f9afaf72dd33629639">   75</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_mesh_buffer_full.html#a918004ea8c2050f9afaf72dd33629639">SetInfo</a>(D3D_PRIMITIVE_TOPOLOGY topology) { <a class="code hl_variable" href="class_c_mesh_buffer.html#a2872b7b60488eb0f17a2c5b1acd0c18f">m_topologyType</a> = topology; }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer_full.html#aba9c1f5e9c79c734c9859c70967754ee">   78</a></span>    <a class="code hl_class" href="class_c_vertex_buffer.html">CVertexBuffer</a>* <a class="code hl_function" href="class_c_mesh_buffer_full.html#aba9c1f5e9c79c734c9859c70967754ee">GetVertexEntity</a>() { <span class="keywordflow">return</span> m_vertexBufferEntity.<a class="code hl_function" href="class_c_unique_ptr_weakable.html#a4b64b02e3b999d7eea63bcd34f7ba5e8">Get</a>(); }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_c_mesh_buffer_full.html#a1e8e561882f3e142bfd6ac9a068d8de9">   80</a></span>    <a class="code hl_class" href="class_c_index_buffer.html">CIndexBuffer</a>* <a class="code hl_function" href="class_c_mesh_buffer_full.html#a1e8e561882f3e142bfd6ac9a068d8de9">GetIndexEntity</a>() { <span class="keywordflow">return</span> m_indexBufferEntity.<a class="code hl_function" href="class_c_unique_ptr_weakable.html#a4b64b02e3b999d7eea63bcd34f7ba5e8">Get</a>(); }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_class" href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable&lt;CVertexBuffer&gt;</a> m_vertexBufferEntity;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_class" href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable&lt;CIndexBuffer&gt;</a> m_indexBufferEntity;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">// !__MESH_BUFFER_H__</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="ttc" id="a_index_buffer_8h_html"><div class="ttname"><a href="_index_buffer_8h.html">IndexBuffer.h</a></div><div class="ttdoc">This file handles index buffer.</div></div>
+<div class="ttc" id="a_unique_ptr_8h_html"><div class="ttname"><a href="_unique_ptr_8h.html">UniquePtr.h</a></div><div class="ttdoc">This file handles unique pointer that can generate weak reference pointer.</div></div>
+<div class="ttc" id="a_vertex_buffer_8h_html"><div class="ttname"><a href="_vertex_buffer_8h.html">VertexBuffer.h</a></div><div class="ttdoc">This file handles vertex buffer.</div></div>
+<div class="ttc" id="aclass_c_index_buffer_html"><div class="ttname"><a href="class_c_index_buffer.html">CIndexBuffer</a></div><div class="ttdoc">This class handles index buffer</div><div class="ttdef"><b>Definition</b> IndexBuffer.h:23</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_full_html"><div class="ttname"><a href="class_c_mesh_buffer_full.html">CMeshBufferFull</a></div><div class="ttdoc">This class handles vertex and index buffers entities, needed to construct the mesh</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:61</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_full_html_a1e8e561882f3e142bfd6ac9a068d8de9"><div class="ttname"><a href="class_c_mesh_buffer_full.html#a1e8e561882f3e142bfd6ac9a068d8de9">CMeshBufferFull::GetIndexEntity</a></div><div class="ttdeci">CIndexBuffer * GetIndexEntity()</div><div class="ttdoc">Get index buffer entity</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:80</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_full_html_a918004ea8c2050f9afaf72dd33629639"><div class="ttname"><a href="class_c_mesh_buffer_full.html#a918004ea8c2050f9afaf72dd33629639">CMeshBufferFull::SetInfo</a></div><div class="ttdeci">void SetInfo(D3D_PRIMITIVE_TOPOLOGY topology)</div><div class="ttdoc">Set the information needed to construct the mesh</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:75</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_full_html_aa4761f6298608410a85b7efc4bd91bba"><div class="ttname"><a href="class_c_mesh_buffer_full.html#aa4761f6298608410a85b7efc4bd91bba">CMeshBufferFull::SetInfo</a></div><div class="ttdeci">void SetInfo(CWeakPtr&lt; const CVertexBuffer &gt; vertex, CWeakPtr&lt; const CIndexBuffer &gt; index, D3D_PRIMITIVE_TOPOLOGY topology)=delete</div><div class="ttdoc">Disallow setting vertex and index buffers externally</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_full_html_aba9c1f5e9c79c734c9859c70967754ee"><div class="ttname"><a href="class_c_mesh_buffer_full.html#aba9c1f5e9c79c734c9859c70967754ee">CMeshBufferFull::GetVertexEntity</a></div><div class="ttdeci">CVertexBuffer * GetVertexEntity()</div><div class="ttdoc">Get vertex buffer entity</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:78</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_full_html_abd843a115a14c99d4d4c7560a2bba2bd"><div class="ttname"><a href="class_c_mesh_buffer_full.html#abd843a115a14c99d4d4c7560a2bba2bd">CMeshBufferFull::CMeshBufferFull</a></div><div class="ttdeci">CMeshBufferFull()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> MeshBuffer.cpp:13</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html"><div class="ttname"><a href="class_c_mesh_buffer.html">CMeshBuffer</a></div><div class="ttdoc">This class handles, pointers to vertex and index buffers, needed to construct the mesh.</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:21</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a06d4c4859183bacbc582020240222a7f"><div class="ttname"><a href="class_c_mesh_buffer.html#a06d4c4859183bacbc582020240222a7f">CMeshBuffer::CMeshBuffer</a></div><div class="ttdeci">CMeshBuffer()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:26</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a13a81042cdaeaaadf1c2ab8fd685dda3"><div class="ttname"><a href="class_c_mesh_buffer.html#a13a81042cdaeaaadf1c2ab8fd685dda3">CMeshBuffer::GetVertex</a></div><div class="ttdeci">const CVertexBuffer * GetVertex() const</div><div class="ttdoc">Get the pointer to vertex buffer</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:37</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a170f9a6719346d2e99c221e119ac4044"><div class="ttname"><a href="class_c_mesh_buffer.html#a170f9a6719346d2e99c221e119ac4044">CMeshBuffer::m_indexBuffer</a></div><div class="ttdeci">CWeakPtr&lt; const CIndexBuffer &gt; m_indexBuffer</div><div class="ttdoc">Pointer to index buffer</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:51</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a2872b7b60488eb0f17a2c5b1acd0c18f"><div class="ttname"><a href="class_c_mesh_buffer.html#a2872b7b60488eb0f17a2c5b1acd0c18f">CMeshBuffer::m_topologyType</a></div><div class="ttdeci">D3D_PRIMITIVE_TOPOLOGY m_topologyType</div><div class="ttdoc">Topology type</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:53</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a2898d8dd16d750f9323f3dea3e482c66"><div class="ttname"><a href="class_c_mesh_buffer.html#a2898d8dd16d750f9323f3dea3e482c66">CMeshBuffer::SetInfo</a></div><div class="ttdeci">void SetInfo(CWeakPtr&lt; const CVertexBuffer &gt; vertex, CWeakPtr&lt; const CIndexBuffer &gt; index, D3D_PRIMITIVE_TOPOLOGY topology)</div><div class="ttdoc">Set the information needed to construct the mesh</div><div class="ttdef"><b>Definition</b> MeshBuffer.cpp:4</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a29d6b8905dba12b2023a1e33e74db62c"><div class="ttname"><a href="class_c_mesh_buffer.html#a29d6b8905dba12b2023a1e33e74db62c">CMeshBuffer::GetVertexWeakPtr</a></div><div class="ttdeci">CWeakPtr&lt; const CVertexBuffer &gt; GetVertexWeakPtr() const</div><div class="ttdoc">Get the weak pointer to vertex buffer</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:41</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a2bc6a4fbc45df936381b100c42557d0b"><div class="ttname"><a href="class_c_mesh_buffer.html#a2bc6a4fbc45df936381b100c42557d0b">CMeshBuffer::m_vertexBuffer</a></div><div class="ttdeci">CWeakPtr&lt; const CVertexBuffer &gt; m_vertexBuffer</div><div class="ttdoc">Pointer to vertex buffer</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:49</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a2d0e2030e49e9fa59ec6400c24ee244c"><div class="ttname"><a href="class_c_mesh_buffer.html#a2d0e2030e49e9fa59ec6400c24ee244c">CMeshBuffer::GetIndex</a></div><div class="ttdeci">const CIndexBuffer * GetIndex() const</div><div class="ttdoc">Get the pointer to index buffer</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:39</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_a9cd84119359127ba6d60d14b5cb5ecba"><div class="ttname"><a href="class_c_mesh_buffer.html#a9cd84119359127ba6d60d14b5cb5ecba">CMeshBuffer::GetTopologyType</a></div><div class="ttdeci">D3D_PRIMITIVE_TOPOLOGY GetTopologyType() const</div><div class="ttdoc">Get the topology type</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:45</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html_ad9bff6ec4143452028b8b03c79608d14"><div class="ttname"><a href="class_c_mesh_buffer.html#ad9bff6ec4143452028b8b03c79608d14">CMeshBuffer::GetIndexWeakPtr</a></div><div class="ttdeci">CWeakPtr&lt; const CIndexBuffer &gt; GetIndexWeakPtr() const</div><div class="ttdoc">Get the weak pointer to index buffer</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:43</div></div>
+<div class="ttc" id="aclass_c_unique_ptr_weakable_html"><div class="ttname"><a href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable</a></div><div class="ttdoc">Unique pointer that can generate weak reference pointer</div><div class="ttdef"><b>Definition</b> UniquePtr.h:19</div></div>
+<div class="ttc" id="aclass_c_unique_ptr_weakable_html_a4b64b02e3b999d7eea63bcd34f7ba5e8"><div class="ttname"><a href="class_c_unique_ptr_weakable.html#a4b64b02e3b999d7eea63bcd34f7ba5e8">CUniquePtrWeakable::Get</a></div><div class="ttdeci">InstanceType * Get() const</div><div class="ttdoc">Get instance</div><div class="ttdef"><b>Definition</b> UniquePtr.h:89</div></div>
+<div class="ttc" id="aclass_c_vertex_buffer_html"><div class="ttname"><a href="class_c_vertex_buffer.html">CVertexBuffer</a></div><div class="ttdoc">Vertex buffer class</div><div class="ttdef"><b>Definition</b> VertexBuffer.h:15</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html_a5295091a138e45632de0bb5839899219"><div class="ttname"><a href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219">CWeakPtr::Get</a></div><div class="ttdeci">InstanceType * Get() const</div><div class="ttdoc">Get instance. If the instance has already been destroyed, return nullptr</div><div class="ttdef"><b>Definition</b> WeakPtr.h:148</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

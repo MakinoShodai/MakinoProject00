@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjectName: ConstantBuffer.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ProjectName
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ConstantBuffer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_constant_buffer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __CONSTANT_BUFFER_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __CONSTANT_BUFFER_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_8h.html">Utility.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_direct_x_8h.html">UtilityForDirectX.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_application_8h.html">Application.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_constant_buffer.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="class_constant_buffer.html">ConstantBuffer</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="class_constant_buffer.html">ConstantBuffer</a>(UINT maxUsePerFrame, <span class="keyword">const</span> std::string&amp; hlslBufferName);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_constant_buffer.html#a7dc0e0e3c31b1f035ba5af8b97495269">Map</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_constant_buffer.html#a5919791323dc6d465ea3d8f35b4db95d">Unmap</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_constant_buffer.html#a2090ffaace2ee068976bee95c7078a3d">DataCopy</a>(<span class="keyword">const</span> T* src, UINT offset);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    D3D12_GPU_VIRTUAL_ADDRESS <a class="code hl_function" href="class_constant_buffer.html#a7bc987a0b50ae2f0fca7767648524462">GetGPUVirtualAddress</a>(UINT offset);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_constant_buffer.html#ac910e9a7827b9807bb4dcaaadb5df012">   52</a></span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_constant_buffer.html#ac910e9a7827b9807bb4dcaaadb5df012">GetName</a>() { <span class="keywordflow">return</span> m_hlslBufferName; }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_constant_buffer.html#a501303066a4488c74496a5536c2cd1a6">   54</a></span>    UINT <a class="code hl_function" href="class_constant_buffer.html#a501303066a4488c74496a5536c2cd1a6">GetSize</a>() { <span class="keywordflow">return</span> m_alignedSize; }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    Microsoft::WRL::ComPtr&lt;ID3D12Resource&gt; m_constantBuffer;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::string m_hlslBufferName;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    UINT8* m_mappedBuffer;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">bool</span> m_isMapped;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    UINT m_alignedSize;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    UINT m_maxUsePerFrame;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// Constructor</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_constant_buffer.html#a6b732c8357d9498b5389773bdf3c640c">   73</a></span><a class="code hl_function" href="class_constant_buffer.html#a6b732c8357d9498b5389773bdf3c640c">ConstantBuffer&lt;T&gt;::ConstantBuffer</a>(UINT maxUsePerFrame, <span class="keyword">const</span> std::string&amp; hlslBufferName)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    : m_hlslBufferName(hlslBufferName)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    , m_mappedBuffer(nullptr)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    , m_isMapped(false)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    , m_alignedSize(<a class="code hl_namespace" href="namespace_u_t_l.html">UTL</a>::Align&lt;UINT&gt;(sizeof(T), D3D12_CONSTANT_BUFFER_DATA_PLACEMENT_ALIGNMENT))</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    , m_maxUsePerFrame(maxUsePerFrame) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// Create property and desc</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_struct" href="struct_u_t_l_1_1_d_x_1_1_h_e_a_p___p_r_o_p_e_r_t_i_e_s.html">UTL::DX::HEAP_PROPERTIES</a> heapProp(D3D12_HEAP_TYPE_UPLOAD);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_struct" href="struct_u_t_l_1_1_d_x_1_1_r_e_s_o_u_r_c_e___d_e_s_c.html">UTL::DX::RESOURCE_DESC</a> resDesc(m_alignedSize * m_maxUsePerFrame);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// Create constant buffer</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_define" href="_application_8h.html#abe35c9ade8f848661092527cc4e5e5bb">HR_CHECK</a>(_T(<span class="stringliteral">&quot;Create constant buffer&quot;</span>), <a class="code hl_function" href="class_a_c_singleton.html#a355bd3105e9ca4a74c4c4d8f43d3be0e">CApplication::Get</a>().GetDXDevice()-&gt;CreateCommittedResource(</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        &amp;heapProp, D3D12_HEAP_FLAG_NONE,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        &amp;resDesc, D3D12_RESOURCE_STATE_GENERIC_READ, <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        IID_PPV_ARGS(m_constantBuffer.GetAddressOf()))</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    );</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">// Mapping starts</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_constant_buffer.html#a7dc0e0e3c31b1f035ba5af8b97495269">   92</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_constant_buffer.html#a7dc0e0e3c31b1f035ba5af8b97495269">ConstantBuffer&lt;T&gt;::Map</a>() {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> (<span class="keyword">false</span> == m_isMapped) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        m_constantBuffer-&gt;Map(0, <span class="keyword">nullptr</span>, <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>**<span class="keyword">&gt;</span>(&amp;m_mappedBuffer));</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        m_isMapped = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">// Mapping ends</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_constant_buffer.html#a5919791323dc6d465ea3d8f35b4db95d">  101</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_constant_buffer.html#a5919791323dc6d465ea3d8f35b4db95d">ConstantBuffer&lt;T&gt;::Unmap</a>() {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">if</span> (<span class="keyword">true</span> == m_isMapped) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        m_constantBuffer-&gt;Unmap(0, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        m_isMapped = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">// Copy data to the constant buffer</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_constant_buffer.html#a2090ffaace2ee068976bee95c7078a3d">  110</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_constant_buffer.html#a2090ffaace2ee068976bee95c7078a3d">ConstantBuffer&lt;T&gt;::DataCopy</a>(<span class="keyword">const</span> T* src, UINT offset) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">if</span> (m_isMapped) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        memcpy(m_mappedBuffer + offset * m_alignedSize, src, <span class="keyword">sizeof</span>(T));</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">// Get GPU address of this constant buffer</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_constant_buffer.html#a7bc987a0b50ae2f0fca7767648524462">  118</a></span><span class="keyword">inline</span> D3D12_GPU_VIRTUAL_ADDRESS <a class="code hl_function" href="class_constant_buffer.html#a7bc987a0b50ae2f0fca7767648524462">ConstantBuffer&lt;T&gt;::GetGPUVirtualAddress</a>(UINT offset) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> m_constantBuffer-&gt;GetGPUVirtualAddress() + offset * m_alignedSize;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif </span><span class="comment">// !__CONSTANT_BUFFER_H__</span></div>
+<div class="ttc" id="a_application_8h_html"><div class="ttname"><a href="_application_8h.html">Application.h</a></div><div class="ttdoc">File that handle application objects such as window and DirectX device.</div></div>
+<div class="ttc" id="a_application_8h_html_abe35c9ade8f848661092527cc4e5e5bb"><div class="ttname"><a href="_application_8h.html#abe35c9ade8f848661092527cc4e5e5bb">HR_CHECK</a></div><div class="ttdeci">#define HR_CHECK(str, hr)</div><div class="ttdoc">Error handling if HRESULT fails (literal)</div><div class="ttdef"><b>Definition</b> Application.h:81</div></div>
+<div class="ttc" id="a_utility_8h_html"><div class="ttname"><a href="_utility_8h.html">Utility.h</a></div><div class="ttdoc">This file defines utility functions that are useful for general programs.</div></div>
+<div class="ttc" id="a_utility_for_direct_x_8h_html"><div class="ttname"><a href="_utility_for_direct_x_8h.html">UtilityForDirectX.h</a></div><div class="ttdoc">This file defines utility functions that are useful for DirectX.</div></div>
+<div class="ttc" id="aclass_a_c_singleton_html_a355bd3105e9ca4a74c4c4d8f43d3be0e"><div class="ttname"><a href="class_a_c_singleton.html#a355bd3105e9ca4a74c4c4d8f43d3be0e">ACSingleton&lt; CApplication &gt;::Get</a></div><div class="ttdeci">static CApplication &amp; Get()</div><div class="ttdoc">Get singleton instance</div><div class="ttdef"><b>Definition</b> Singleton.h:84</div></div>
+<div class="ttc" id="aclass_constant_buffer_html"><div class="ttname"><a href="class_constant_buffer.html">ConstantBuffer</a></div><div class="ttdoc">This class handles constant buffer</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:18</div></div>
+<div class="ttc" id="aclass_constant_buffer_html_a2090ffaace2ee068976bee95c7078a3d"><div class="ttname"><a href="class_constant_buffer.html#a2090ffaace2ee068976bee95c7078a3d">ConstantBuffer::DataCopy</a></div><div class="ttdeci">void DataCopy(const T *src, UINT offset)</div><div class="ttdoc">Copy data to the constant buffer</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:110</div></div>
+<div class="ttc" id="aclass_constant_buffer_html_a501303066a4488c74496a5536c2cd1a6"><div class="ttname"><a href="class_constant_buffer.html#a501303066a4488c74496a5536c2cd1a6">ConstantBuffer::GetSize</a></div><div class="ttdeci">UINT GetSize()</div><div class="ttdoc">Get the size of buffer per</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:54</div></div>
+<div class="ttc" id="aclass_constant_buffer_html_a5919791323dc6d465ea3d8f35b4db95d"><div class="ttname"><a href="class_constant_buffer.html#a5919791323dc6d465ea3d8f35b4db95d">ConstantBuffer::Unmap</a></div><div class="ttdeci">void Unmap()</div><div class="ttdoc">Mapping ends</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:101</div></div>
+<div class="ttc" id="aclass_constant_buffer_html_a6b732c8357d9498b5389773bdf3c640c"><div class="ttname"><a href="class_constant_buffer.html#a6b732c8357d9498b5389773bdf3c640c">ConstantBuffer::ConstantBuffer</a></div><div class="ttdeci">ConstantBuffer(UINT maxUsePerFrame, const std::string &amp;hlslBufferName)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:73</div></div>
+<div class="ttc" id="aclass_constant_buffer_html_a7bc987a0b50ae2f0fca7767648524462"><div class="ttname"><a href="class_constant_buffer.html#a7bc987a0b50ae2f0fca7767648524462">ConstantBuffer::GetGPUVirtualAddress</a></div><div class="ttdeci">D3D12_GPU_VIRTUAL_ADDRESS GetGPUVirtualAddress(UINT offset)</div><div class="ttdoc">Get GPU address of this constant buffer</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:118</div></div>
+<div class="ttc" id="aclass_constant_buffer_html_a7dc0e0e3c31b1f035ba5af8b97495269"><div class="ttname"><a href="class_constant_buffer.html#a7dc0e0e3c31b1f035ba5af8b97495269">ConstantBuffer::Map</a></div><div class="ttdeci">void Map()</div><div class="ttdoc">Mapping starts</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:92</div></div>
+<div class="ttc" id="aclass_constant_buffer_html_ac910e9a7827b9807bb4dcaaadb5df012"><div class="ttname"><a href="class_constant_buffer.html#ac910e9a7827b9807bb4dcaaadb5df012">ConstantBuffer::GetName</a></div><div class="ttdeci">const std::string &amp; GetName()</div><div class="ttdoc">Get the name of cbuffer defined in hlsl</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:52</div></div>
+<div class="ttc" id="anamespace_u_t_l_html"><div class="ttname"><a href="namespace_u_t_l.html">UTL</a></div><div class="ttdef"><b>Definition</b> Utility.h:12</div></div>
+<div class="ttc" id="astruct_u_t_l_1_1_d_x_1_1_h_e_a_p___p_r_o_p_e_r_t_i_e_s_html"><div class="ttname"><a href="struct_u_t_l_1_1_d_x_1_1_h_e_a_p___p_r_o_p_e_r_t_i_e_s.html">UTL::DX::HEAP_PROPERTIES</a></div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:11</div></div>
+<div class="ttc" id="astruct_u_t_l_1_1_d_x_1_1_r_e_s_o_u_r_c_e___d_e_s_c_html"><div class="ttname"><a href="struct_u_t_l_1_1_d_x_1_1_r_e_s_o_u_r_c_e___d_e_s_c.html">UTL::DX::RESOURCE_DESC</a></div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

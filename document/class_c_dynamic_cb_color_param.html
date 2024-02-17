@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjectName: CDynamicCbColorParam クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ProjectName
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_dynamic_cb_color_param-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CDynamicCbColorParam クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_dynamic_cb_color_param_8h_source.html">DynamicCbColorParam.h</a>&gt;</code></p>
+<div class="dynheader">
+CDynamicCbColorParam の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_cb_color_param__inherit__graph.png" border="0" usemap="#a_c_dynamic_cb_color_param_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_dynamic_cb_color_param_inherit__map" id="a_c_dynamic_cb_color_param_inherit__map">
+<area shape="rect" title=" " alt="" coords="76,277,241,304"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator.html" title=" " alt="" coords="78,187,239,229"/>
+<area shape="poly" title=" " alt="" coords="161,245,161,277,156,277,156,245"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title="This class allocates data for constant buffer view per object" alt="" coords="54,96,263,139"/>
+<area shape="poly" title=" " alt="" coords="161,154,161,186,156,186,156,154"/>
+<area shape="rect" href="class_i_dynamic_resource.html" title="Interface for dynamic resource that need to be allocated per object" alt="" coords="5,13,136,40"/>
+<area shape="poly" title=" " alt="" coords="96,49,140,94,136,97,92,53"/>
+<area shape="rect" href="class_a_c_cb_allocator.html" title="This class allocates data for constant buffer" alt="" coords="159,5,334,48"/>
+<area shape="poly" title=" " alt="" coords="217,61,181,98,177,94,214,57"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CDynamicCbColorParam 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_cb_color_param__coll__graph.png" border="0" usemap="#a_c_dynamic_cb_color_param_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_dynamic_cb_color_param_coll__map" id="a_c_dynamic_cb_color_param_coll__map">
+<area shape="rect" title=" " alt="" coords="76,277,241,304"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator.html" title=" " alt="" coords="78,187,239,229"/>
+<area shape="poly" title=" " alt="" coords="161,245,161,277,156,277,156,245"/>
+<area shape="rect" href="class_a_c_dynamic_cb_allocator_per_mesh.html" title="This class allocates data for constant buffer view per object" alt="" coords="54,96,263,139"/>
+<area shape="poly" title=" " alt="" coords="161,154,161,186,156,186,156,154"/>
+<area shape="rect" href="class_i_dynamic_resource.html" title="Interface for dynamic resource that need to be allocated per object" alt="" coords="5,13,136,40"/>
+<area shape="poly" title=" " alt="" coords="96,49,140,94,136,97,92,53"/>
+<area shape="rect" href="class_a_c_cb_allocator.html" title="This class allocates data for constant buffer" alt="" coords="159,5,334,48"/>
+<area shape="poly" title=" " alt="" coords="217,61,181,98,177,94,214,57"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ade7819e07e19013e0bf3816e05160e22" id="r_ade7819e07e19013e0bf3816e05160e22"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_cb_color_param.html#ade7819e07e19013e0bf3816e05160e22">CDynamicCbColorParam</a> (UINT maxUsePerFrame)</td></tr>
+<tr class="separator:ade7819e07e19013e0bf3816e05160e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acffea390345e83ff9971659a9f8e150a" id="r_acffea390345e83ff9971659a9f8e150a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_cb_color_param.html#acffea390345e83ff9971659a9f8e150a">AllocateData</a> (<a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *component)</td></tr>
+<tr class="memdesc:acffea390345e83ff9971659a9f8e150a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent graphics component in the constant buffer  <br /></td></tr>
+<tr class="separator:acffea390345e83ff9971659a9f8e150a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a325c4a2dcb063b622374e6c93aced20c" id="r_a325c4a2dcb063b622374e6c93aced20c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_cb_color_param.html#a325c4a2dcb063b622374e6c93aced20c">AllocateData</a> (<a class="el" href="class_c_sprite_u_i.html">CSpriteUI</a> *sprite)</td></tr>
+<tr class="memdesc:a325c4a2dcb063b622374e6c93aced20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent sprite UI in the constant buffer  <br /></td></tr>
+<tr class="separator:a325c4a2dcb063b622374e6c93aced20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948173deff424dcd4056339c84d8e8c2" id="r_a948173deff424dcd4056339c84d8e8c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_dynamic_cb_color_param.html#a948173deff424dcd4056339c84d8e8c2">ExternalAllocateData</a> (const DirectX::XMFLOAT4 &amp;color)</td></tr>
+<tr class="separator:a948173deff424dcd4056339c84d8e8c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_dynamic_cb_allocator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_dynamic_cb_allocator')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_dynamic_cb_allocator.html">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4 &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a1e6f4d63981e30844282ed42c3ce5cb0 inherit pub_methods_class_a_c_dynamic_cb_allocator" id="r_a1e6f4d63981e30844282ed42c3ce5cb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#a1e6f4d63981e30844282ed42c3ce5cb0">ACDynamicCbAllocator</a> (UINT maxUsePerFrame, std::string hlslBufferName)</td></tr>
+<tr class="memdesc:a1e6f4d63981e30844282ed42c3ce5cb0 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a1e6f4d63981e30844282ed42c3ce5cb0 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0271b946368a1bd571bcb8ef08fba91 inherit pub_methods_class_a_c_dynamic_cb_allocator" id="r_af0271b946368a1bd571bcb8ef08fba91"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#af0271b946368a1bd571bcb8ef08fba91">~ACDynamicCbAllocator</a> ()=default</td></tr>
+<tr class="memdesc:af0271b946368a1bd571bcb8ef08fba91 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:af0271b946368a1bd571bcb8ef08fba91 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5911fffaab12839b327f84edecb724f6 inherit pub_methods_class_a_c_dynamic_cb_allocator" id="r_a5911fffaab12839b327f84edecb724f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#a5911fffaab12839b327f84edecb724f6">GetAllocatedDataHandle</a> (<a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *sentComponent, UINT meshIndex) override final</td></tr>
+<tr class="memdesc:a5911fffaab12839b327f84edecb724f6 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle of allocated data in constant buffer  <br /></td></tr>
+<tr class="separator:a5911fffaab12839b327f84edecb724f6 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6a0ec1537efb9abe5378ade0347cc71 inherit pub_methods_class_a_c_dynamic_cb_allocator" id="r_ae6a0ec1537efb9abe5378ade0347cc71"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#ae6a0ec1537efb9abe5378ade0347cc71">AllocateData</a> (<a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *graphics, UINT meshIndex) override final</td></tr>
+<tr class="memdesc:ae6a0ec1537efb9abe5378ade0347cc71 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent graphics component in the constant buffer  <br /></td></tr>
+<tr class="separator:ae6a0ec1537efb9abe5378ade0347cc71 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9659a1d6769ca9a4826574bde95e533 inherit pub_methods_class_a_c_dynamic_cb_allocator" id="r_af9659a1d6769ca9a4826574bde95e533"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#af9659a1d6769ca9a4826574bde95e533">AllocateData</a> (<a class="el" href="class_c_model.html">CModel</a> *model, UINT meshIndex) override final</td></tr>
+<tr class="memdesc:af9659a1d6769ca9a4826574bde95e533 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent model in the constant buffer  <br /></td></tr>
+<tr class="separator:af9659a1d6769ca9a4826574bde95e533 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a5109d71a9f8942c405cb15fc4baef inherit pub_methods_class_a_c_dynamic_cb_allocator" id="r_a31a5109d71a9f8942c405cb15fc4baef"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#a31a5109d71a9f8942c405cb15fc4baef">AllocateData</a> (<a class="el" href="class_a_c_sprite.html">ACSprite</a> *sprite, UINT meshIndex) override final</td></tr>
+<tr class="memdesc:a31a5109d71a9f8942c405cb15fc4baef inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent abstract sprite class in the constant buffer  <br /></td></tr>
+<tr class="separator:a31a5109d71a9f8942c405cb15fc4baef inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1134a8d11902e176424654865531d53a inherit pub_methods_class_a_c_dynamic_cb_allocator" id="r_a1134a8d11902e176424654865531d53a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#a1134a8d11902e176424654865531d53a">AllocateData</a> (<a class="el" href="class_c_sprite_u_i.html">CSpriteUI</a> *sprite, UINT meshIndex) override final</td></tr>
+<tr class="memdesc:a1134a8d11902e176424654865531d53a inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent sprite UI in the constant buffer  <br /></td></tr>
+<tr class="separator:a1134a8d11902e176424654865531d53a inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af29b8dc3d3d4e0b1666078156f45ea38 inherit pub_methods_class_a_c_dynamic_cb_allocator" id="r_af29b8dc3d3d4e0b1666078156f45ea38"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#af29b8dc3d3d4e0b1666078156f45ea38">AllocateData</a> (<a class="el" href="class_c_sprite3_d.html">CSprite3D</a> *sprite, UINT meshIndex) override final</td></tr>
+<tr class="memdesc:af29b8dc3d3d4e0b1666078156f45ea38 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent sprite 3D in the constant buffer  <br /></td></tr>
+<tr class="separator:af29b8dc3d3d4e0b1666078156f45ea38 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da10368e1f7ae8a817a49d55e48a4e1 inherit pub_methods_class_a_c_dynamic_cb_allocator" id="r_a7da10368e1f7ae8a817a49d55e48a4e1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#a7da10368e1f7ae8a817a49d55e48a4e1">AllocateData</a> (<a class="el" href="class_c_billboard.html">CBillboard</a> *sprite, UINT meshIndex) override final</td></tr>
+<tr class="memdesc:a7da10368e1f7ae8a817a49d55e48a4e1 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent billboard in the constant buffer  <br /></td></tr>
+<tr class="separator:a7da10368e1f7ae8a817a49d55e48a4e1 inherit pub_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_dynamic_cb_allocator_per_mesh"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_dynamic_cb_allocator_per_mesh')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:aa78eb69d617581759827c3e6ed32ee09 inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh" id="r_aa78eb69d617581759827c3e6ed32ee09"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#aa78eb69d617581759827c3e6ed32ee09">ACDynamicCbAllocatorPerMesh</a> (UINT maxUsePerFrame, std::string hlslBufferName)</td></tr>
+<tr class="memdesc:aa78eb69d617581759827c3e6ed32ee09 inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:aa78eb69d617581759827c3e6ed32ee09 inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2fbb370f8031eb56c12a006962983a3 inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh" id="r_ae2fbb370f8031eb56c12a006962983a3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#ae2fbb370f8031eb56c12a006962983a3">~ACDynamicCbAllocatorPerMesh</a> ()=default</td></tr>
+<tr class="memdesc:ae2fbb370f8031eb56c12a006962983a3 inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ae2fbb370f8031eb56c12a006962983a3 inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad259e157fcde1e1d09bfd991389a218 inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh" id="r_aad259e157fcde1e1d09bfd991389a218"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#aad259e157fcde1e1d09bfd991389a218">GetAllocatedDataHandle</a> (<a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *sentComponent, UINT meshIndex) override</td></tr>
+<tr class="memdesc:aad259e157fcde1e1d09bfd991389a218 inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle of allocated data in constant buffer  <br /></td></tr>
+<tr class="separator:aad259e157fcde1e1d09bfd991389a218 inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e6a65998bfe85cc305fbaf0879b059d inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh" id="r_a7e6a65998bfe85cc305fbaf0879b059d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a7e6a65998bfe85cc305fbaf0879b059d">Refresh</a> () override final</td></tr>
+<tr class="memdesc:a7e6a65998bfe85cc305fbaf0879b059d inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh process that must be called at the end of every frame  <br /></td></tr>
+<tr class="separator:a7e6a65998bfe85cc305fbaf0879b059d inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df6085ca025f9ccbc5ef1e17891ee2f inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh" id="r_a9df6085ca025f9ccbc5ef1e17891ee2f"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#a9df6085ca025f9ccbc5ef1e17891ee2f">GetName</a> () override final</td></tr>
+<tr class="memdesc:a9df6085ca025f9ccbc5ef1e17891ee2f inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of cbuffer defined in hlsl  <br /></td></tr>
+<tr class="separator:a9df6085ca025f9ccbc5ef1e17891ee2f inherit pub_methods_class_a_c_dynamic_cb_allocator_per_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_cb_allocator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_cb_allocator')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator&lt; ConstBuffType &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a8d376c36b9f72036a034718797edb483 inherit pub_methods_class_a_c_cb_allocator" id="r_a8d376c36b9f72036a034718797edb483"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a8d376c36b9f72036a034718797edb483">ACCbAllocator</a> (const <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a8d376c36b9f72036a034718797edb483 inherit pub_methods_class_a_c_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy constructor  <br /></td></tr>
+<tr class="separator:a8d376c36b9f72036a034718797edb483 inherit pub_methods_class_a_c_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23605f21749e4e7ccdc44dc058a987bd inherit pub_methods_class_a_c_cb_allocator" id="r_a23605f21749e4e7ccdc44dc058a987bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a23605f21749e4e7ccdc44dc058a987bd">operator=</a> (const <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a23605f21749e4e7ccdc44dc058a987bd inherit pub_methods_class_a_c_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the copy assignment operator  <br /></td></tr>
+<tr class="separator:a23605f21749e4e7ccdc44dc058a987bd inherit pub_methods_class_a_c_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a7c9420c0143b18717d9996fed19ae inherit pub_methods_class_a_c_cb_allocator" id="r_a51a7c9420c0143b18717d9996fed19ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a51a7c9420c0143b18717d9996fed19ae">ACCbAllocator</a> (<a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a51a7c9420c0143b18717d9996fed19ae inherit pub_methods_class_a_c_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move constructor  <br /></td></tr>
+<tr class="separator:a51a7c9420c0143b18717d9996fed19ae inherit pub_methods_class_a_c_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc044e9f610bcbb9ac944ff56739e377 inherit pub_methods_class_a_c_cb_allocator" id="r_afc044e9f610bcbb9ac944ff56739e377"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#afc044e9f610bcbb9ac944ff56739e377">operator=</a> (<a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:afc044e9f610bcbb9ac944ff56739e377 inherit pub_methods_class_a_c_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow the move assignment constructor  <br /></td></tr>
+<tr class="separator:afc044e9f610bcbb9ac944ff56739e377 inherit pub_methods_class_a_c_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f9248dee80f50e5e42796c69026b1c2 inherit pub_methods_class_a_c_cb_allocator" id="r_a8f9248dee80f50e5e42796c69026b1c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a8f9248dee80f50e5e42796c69026b1c2">ACCbAllocator</a> (UINT maxUsePerFrame, std::string hlslBufferName)</td></tr>
+<tr class="memdesc:a8f9248dee80f50e5e42796c69026b1c2 inherit pub_methods_class_a_c_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a8f9248dee80f50e5e42796c69026b1c2 inherit pub_methods_class_a_c_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe64be63ecb1f7ef816a39311d2bab04 inherit pub_methods_class_a_c_cb_allocator" id="r_abe64be63ecb1f7ef816a39311d2bab04"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#abe64be63ecb1f7ef816a39311d2bab04">~ACCbAllocator</a> ()</td></tr>
+<tr class="memdesc:abe64be63ecb1f7ef816a39311d2bab04 inherit pub_methods_class_a_c_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:abe64be63ecb1f7ef816a39311d2bab04 inherit pub_methods_class_a_c_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_methods_class_a_c_dynamic_cb_allocator"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_dynamic_cb_allocator')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_dynamic_cb_allocator.html">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4 &gt;</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:ab50db8ed9e9d077e98f537b7c7b2f3dc inherit pro_methods_class_a_c_dynamic_cb_allocator" id="r_ab50db8ed9e9d077e98f537b7c7b2f3dc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#ab50db8ed9e9d077e98f537b7c7b2f3dc">AllocateData</a> (<a class="el" href="class_c_model.html">CModel</a> *model)</td></tr>
+<tr class="memdesc:ab50db8ed9e9d077e98f537b7c7b2f3dc inherit pro_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent model in the constant buffer  <br /></td></tr>
+<tr class="separator:ab50db8ed9e9d077e98f537b7c7b2f3dc inherit pro_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77bd762f0b60ae2d8f8ddf77d014bf59 inherit pro_methods_class_a_c_dynamic_cb_allocator" id="r_a77bd762f0b60ae2d8f8ddf77d014bf59"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#a77bd762f0b60ae2d8f8ddf77d014bf59">AllocateData</a> (<a class="el" href="class_a_c_sprite.html">ACSprite</a> *sprite)</td></tr>
+<tr class="memdesc:a77bd762f0b60ae2d8f8ddf77d014bf59 inherit pro_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent abstract sprite class in the constant buffer  <br /></td></tr>
+<tr class="separator:a77bd762f0b60ae2d8f8ddf77d014bf59 inherit pro_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcf3ab521f0fedb3ada6dd7c4f8bd123 inherit pro_methods_class_a_c_dynamic_cb_allocator" id="r_afcf3ab521f0fedb3ada6dd7c4f8bd123"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#afcf3ab521f0fedb3ada6dd7c4f8bd123">AllocateData</a> (<a class="el" href="class_c_sprite3_d.html">CSprite3D</a> *sprite)</td></tr>
+<tr class="memdesc:afcf3ab521f0fedb3ada6dd7c4f8bd123 inherit pro_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent sprite 3D in the constant buffer  <br /></td></tr>
+<tr class="separator:afcf3ab521f0fedb3ada6dd7c4f8bd123 inherit pro_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c47d3ee59c6c170aeb74711615479d inherit pro_methods_class_a_c_dynamic_cb_allocator" id="r_af6c47d3ee59c6c170aeb74711615479d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator.html#af6c47d3ee59c6c170aeb74711615479d">AllocateData</a> (<a class="el" href="class_c_billboard.html">CBillboard</a> *sprite)</td></tr>
+<tr class="memdesc:af6c47d3ee59c6c170aeb74711615479d inherit pro_methods_class_a_c_dynamic_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate data calculated for sent billboard in the constant buffer  <br /></td></tr>
+<tr class="separator:af6c47d3ee59c6c170aeb74711615479d inherit pro_methods_class_a_c_dynamic_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_a_c_cb_allocator"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_cb_allocator')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator&lt; ConstBuffType &gt;</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a3a7c8412a38133febbf2762d0cc6af03 inherit pro_methods_class_a_c_cb_allocator" id="r_a3a7c8412a38133febbf2762d0cc6af03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a3a7c8412a38133febbf2762d0cc6af03">DirectDataCopy</a> (const ConstBuffType *src)</td></tr>
+<tr class="memdesc:a3a7c8412a38133febbf2762d0cc6af03 inherit pro_methods_class_a_c_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy data directly  <br /></td></tr>
+<tr class="separator:a3a7c8412a38133febbf2762d0cc6af03 inherit pro_methods_class_a_c_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acffe82536938e07e29b776cc426bedbd inherit pro_methods_class_a_c_cb_allocator" id="r_acffe82536938e07e29b776cc426bedbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#acffe82536938e07e29b776cc426bedbd">RefreshCbAllocator</a> ()</td></tr>
+<tr class="memdesc:acffe82536938e07e29b776cc426bedbd inherit pro_methods_class_a_c_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh process that must be called at the end of every frame  <br /></td></tr>
+<tr class="separator:acffe82536938e07e29b776cc426bedbd inherit pro_methods_class_a_c_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa49646ce5c26e898f236a94f9ab5899 inherit pro_methods_class_a_c_cb_allocator" id="r_aaa49646ce5c26e898f236a94f9ab5899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#aaa49646ce5c26e898f236a94f9ab5899">GetPrevAllocatedData</a> ()</td></tr>
+<tr class="memdesc:aaa49646ce5c26e898f236a94f9ab5899 inherit pro_methods_class_a_c_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle for one previous allocated data  <br /></td></tr>
+<tr class="separator:aaa49646ce5c26e898f236a94f9ab5899 inherit pro_methods_class_a_c_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_dynamic_cb_allocator_per_mesh"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_dynamic_cb_allocator_per_mesh')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html">ACDynamicCbAllocatorPerMesh&lt; ConstBuffType &gt;</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:ad404807bb7592ad482aa3355378fc2ea inherit pro_attribs_class_a_c_dynamic_cb_allocator_per_mesh" id="r_ad404807bb7592ad482aa3355378fc2ea"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a>, <a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_dynamic_cb_allocator_per_mesh.html#ad404807bb7592ad482aa3355378fc2ea">m_cachedHandleMap</a></td></tr>
+<tr class="memdesc:ad404807bb7592ad482aa3355378fc2ea inherit pro_attribs_class_a_c_dynamic_cb_allocator_per_mesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map to connect handles of calculated data, and meshes held by graphics components that calculated it  <br /></td></tr>
+<tr class="separator:ad404807bb7592ad482aa3355378fc2ea inherit pro_attribs_class_a_c_dynamic_cb_allocator_per_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_cb_allocator"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_cb_allocator')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_cb_allocator.html">ACCbAllocator&lt; ConstBuffType &gt;</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a0d9081b59229ef366e3eebbbfe3ef4cc inherit pro_attribs_class_a_c_cb_allocator" id="r_a0d9081b59229ef366e3eebbbfe3ef4cc"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_cb_allocator.html#a0d9081b59229ef366e3eebbbfe3ef4cc">m_hlslBufferName</a></td></tr>
+<tr class="memdesc:a0d9081b59229ef366e3eebbbfe3ef4cc inherit pro_attribs_class_a_c_cb_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of cbuffer defined in hlsl  <br /></td></tr>
+<tr class="separator:a0d9081b59229ef366e3eebbbfe3ef4cc inherit pro_attribs_class_a_c_cb_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="ade7819e07e19013e0bf3816e05160e22" name="ade7819e07e19013e0bf3816e05160e22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade7819e07e19013e0bf3816e05160e22">&#9670;&#160;</a></span>CDynamicCbColorParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDynamicCbColorParam::CDynamicCbColorParam </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>maxUsePerFrame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="acffea390345e83ff9971659a9f8e150a" name="acffea390345e83ff9971659a9f8e150a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acffea390345e83ff9971659a9f8e150a">&#9670;&#160;</a></span>AllocateData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> CDynamicCbColorParam::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> *&#160;</td>
+          <td class="paramname"><em>graphics</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for sent graphics component in the constant buffer </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>component that wants to calculate data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>The handle of allocated data in the constant buffer </dd></dl>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator.html#adb67df2037725299910b26ceef9bf058">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4 &gt;</a>を実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_cb_color_param_acffea390345e83ff9971659a9f8e150a_cgraph.png" border="0" usemap="#aclass_c_dynamic_cb_color_param_acffea390345e83ff9971659a9f8e150a_cgraph" alt=""/></div>
+<map name="aclass_c_dynamic_cb_color_param_acffea390345e83ff9971659a9f8e150a_cgraph" id="aclass_c_dynamic_cb_color_param_acffea390345e83ff9971659a9f8e150a_cgraph">
+<area shape="rect" title="Allocate data calculated for sent graphics component in the constant buffer" alt="" coords="5,39,171,81"/>
+<area shape="rect" href="class_a_c_cb_allocator.html#a3a7c8412a38133febbf2762d0cc6af03" title="Copy data directly" alt="" coords="219,47,424,73"/>
+<area shape="poly" title=" " alt="" coords="171,57,203,57,203,63,171,63"/>
+<area shape="rect" href="class_a_c_singleton.html#a355bd3105e9ca4a74c4c4d8f43d3be0e" title="Get singleton instance" alt="" coords="490,5,669,48"/>
+<area shape="poly" title=" " alt="" coords="424,44,474,38,475,43,425,49"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="472,72,686,115"/>
+<area shape="poly" title=" " alt="" coords="425,71,457,75,456,80,424,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a325c4a2dcb063b622374e6c93aced20c" name="a325c4a2dcb063b622374e6c93aced20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a325c4a2dcb063b622374e6c93aced20c">&#9670;&#160;</a></span>AllocateData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> CDynamicCbColorParam::AllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_sprite_u_i.html">CSpriteUI</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate data calculated for sent sprite UI in the constant buffer </p>
+
+<p><a class="el" href="class_a_c_dynamic_cb_allocator.html#af725be591daacf24a37a503d18b6a677">ACDynamicCbAllocator&lt; DirectX::XMFLOAT4 &gt;</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_cb_color_param_a325c4a2dcb063b622374e6c93aced20c_cgraph.png" border="0" usemap="#aclass_c_dynamic_cb_color_param_a325c4a2dcb063b622374e6c93aced20c_cgraph" alt=""/></div>
+<map name="aclass_c_dynamic_cb_color_param_a325c4a2dcb063b622374e6c93aced20c_cgraph" id="aclass_c_dynamic_cb_color_param_a325c4a2dcb063b622374e6c93aced20c_cgraph">
+<area shape="rect" title="Allocate data calculated for sent sprite UI in the constant buffer" alt="" coords="5,39,171,81"/>
+<area shape="rect" href="class_a_c_cb_allocator.html#a3a7c8412a38133febbf2762d0cc6af03" title="Copy data directly" alt="" coords="219,47,424,73"/>
+<area shape="poly" title=" " alt="" coords="171,57,203,57,203,63,171,63"/>
+<area shape="rect" href="class_a_c_singleton.html#a355bd3105e9ca4a74c4c4d8f43d3be0e" title="Get singleton instance" alt="" coords="490,5,669,48"/>
+<area shape="poly" title=" " alt="" coords="424,44,474,38,475,43,425,49"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="472,72,686,115"/>
+<area shape="poly" title=" " alt="" coords="425,71,457,75,456,80,424,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a948173deff424dcd4056339c84d8e8c2" name="a948173deff424dcd4056339c84d8e8c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948173deff424dcd4056339c84d8e8c2">&#9670;&#160;</a></span>ExternalAllocateData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> CDynamicCbColorParam::ExternalAllocateData </td>
+          <td>(</td>
+          <td class="paramtype">const DirectX::XMFLOAT4 &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_dynamic_cb_color_param_a948173deff424dcd4056339c84d8e8c2_cgraph.png" border="0" usemap="#aclass_c_dynamic_cb_color_param_a948173deff424dcd4056339c84d8e8c2_cgraph" alt=""/></div>
+<map name="aclass_c_dynamic_cb_color_param_a948173deff424dcd4056339c84d8e8c2_cgraph" id="aclass_c_dynamic_cb_color_param_a948173deff424dcd4056339c84d8e8c2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,171,81"/>
+<area shape="rect" href="class_a_c_cb_allocator.html#a3a7c8412a38133febbf2762d0cc6af03" title="Copy data directly" alt="" coords="219,47,424,73"/>
+<area shape="poly" title=" " alt="" coords="171,57,203,57,203,63,171,63"/>
+<area shape="rect" href="class_a_c_singleton.html#a355bd3105e9ca4a74c4c4d8f43d3be0e" title="Get singleton instance" alt="" coords="490,5,669,48"/>
+<area shape="poly" title=" " alt="" coords="424,44,474,38,475,43,425,49"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="472,72,686,115"/>
+<area shape="poly" title=" " alt="" coords="425,71,457,75,456,80,424,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_dynamic_cb_color_param_8h_source.html">DynamicCbColorParam.h</a></li>
+<li><a class="el" href="_dynamic_cb_color_param_8cpp.html">DynamicCbColorParam.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

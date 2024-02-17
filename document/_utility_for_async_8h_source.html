@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: UtilityForAsync.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">UtilityForAsync.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_utility_for_async_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __UTILITY_FOR_ASYNC_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __UTILITY_FOR_ASYNC_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_application_error_8h.html">ApplicationError.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_utl.html">Utl</a> {</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespace_utl_1_1_async.html">   15</a></span>    <span class="keyword">namespace </span>Async {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespace_utl_1_1_async.html#a40f43a0b7170bd854260eb710ba3a73e">   17</a></span>        <span class="keyword">const</span> std::chrono::seconds <a class="code hl_variable" href="namespace_utl_1_1_async.html#a40f43a0b7170bd854260eb710ba3a73e">INTERVAL_CHECK</a> = std::chrono::seconds(100);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_utl_1_1_async_1_1_c_main_thread_future.html">   21</a></span>        <span class="keyword">class </span><a class="code hl_class" href="class_utl_1_1_async_1_1_c_main_thread_future.html">CMainThreadFuture</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a330aedaaf70e6011728b7e4f1dda3f40">   26</a></span>            <a class="code hl_function" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a330aedaaf70e6011728b7e4f1dda3f40">CMainThreadFuture</a>() : m_future() {}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_utl_1_1_async_1_1_c_main_thread_future.html#aea62e6c7fb29431156f9edc4229f7250">   31</a></span>            <a class="code hl_function" href="class_utl_1_1_async_1_1_c_main_thread_future.html#aea62e6c7fb29431156f9edc4229f7250">CMainThreadFuture</a>(std::future&lt;T&gt;&amp;&amp; fut) : m_future(<a class="code hl_namespace" href="namespacestd.html">std</a>::move(fut)) {}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a4362b4865f402bb64754ebbe838faa1c">   34</a></span>            <a class="code hl_function" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a4362b4865f402bb64754ebbe838faa1c">~CMainThreadFuture</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_utl_1_1_async_1_1_c_main_thread_future.html#adf67dad3eec92ed429bcc52cf6e2d5b6">   37</a></span>            <a class="code hl_class" href="class_utl_1_1_async_1_1_c_main_thread_future.html">CMainThreadFuture</a>&amp; <a class="code hl_function" href="class_utl_1_1_async_1_1_c_main_thread_future.html#adf67dad3eec92ed429bcc52cf6e2d5b6">operator=</a>(std::future&lt;T&gt;&amp;&amp; fut) { m_future = std::move(fut); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a7995de7fe3113740d3331f87acad79fb">   42</a></span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a7995de7fe3113740d3331f87acad79fb">Wait</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a4dff65e9be836b0296d1cadecb4d5fb2">   45</a></span>            <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a4dff65e9be836b0296d1cadecb4d5fb2">Valid</a>() { <span class="keywordflow">return</span> m_future.valid(); }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_utl_1_1_async_1_1_c_main_thread_future.html#ab940e3cb79ae2eaab139475ec938cb03">   48</a></span>            T <a class="code hl_function" href="class_utl_1_1_async_1_1_c_main_thread_future.html#ab940e3cb79ae2eaab139475ec938cb03">Get</a>() <span class="keyword">requires</span> (!std::is_void_v&lt;T&gt;) { <a class="code hl_function" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a7995de7fe3113740d3331f87acad79fb">Wait</a>(); <span class="keywordflow">return</span> std::move(m_future.get()); }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a66b7f577ade41e2082989e596bece501">   51</a></span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a66b7f577ade41e2082989e596bece501">Get</a>() <span class="keyword">requires</span> (std::is_void_v&lt;T&gt;) { <a class="code hl_function" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a7995de7fe3113740d3331f87acad79fb">Wait</a>(); m_future.get(); }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            std::future&lt;T&gt; m_future;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        };</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    } <span class="comment">// namespace Async</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>} <span class="comment">// namespace Utl</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// Wait for processing to complete</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a7995de7fe3113740d3331f87acad79fb">   63</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_utl_1_1_async_1_1_c_main_thread_future.html#a7995de7fe3113740d3331f87acad79fb">Utl::Async::CMainThreadFuture&lt;T&gt;::Wait</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">while</span> (m_future.wait_for(<a class="code hl_variable" href="namespace_utl_1_1_async.html#a40f43a0b7170bd854260eb710ba3a73e">INTERVAL_CHECK</a>) != std::future_status::ready) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">// Check application exit</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_function" href="class_a_c_any_thread_singleton.html#a7321978d9a2f747a0e596d17c18a8b98">CApplicationError::GetAny</a>().<a class="code hl_function" href="class_c_application_error.html#a34280d917897dd4aa7faeceb4178bdf1">Check</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif </span><span class="comment">// !__UTILITY_FOR_ASYNC_H__</span></div>
+</div>
+</div>
+<div class="ttc" id="a_application_error_8h_html"><div class="ttname"><a href="_application_error_8h.html">ApplicationError.h</a></div><div class="ttdoc">This file handles processing when the application makes an error.</div></div>
+<div class="ttc" id="aclass_a_c_any_thread_singleton_html_a7321978d9a2f747a0e596d17c18a8b98"><div class="ttname"><a href="class_a_c_any_thread_singleton.html#a7321978d9a2f747a0e596d17c18a8b98">ACAnyThreadSingleton&lt; CApplicationError &gt;::GetAny</a></div><div class="ttdeci">static CApplicationError &amp; GetAny()</div><div class="ttdoc">Get singleton instance for any thread</div><div class="ttdef"><b>Definition</b> Singleton.h:150</div></div>
+<div class="ttc" id="aclass_c_application_error_html_a34280d917897dd4aa7faeceb4178bdf1"><div class="ttname"><a href="class_c_application_error.html#a34280d917897dd4aa7faeceb4178bdf1">CApplicationError::Check</a></div><div class="ttdeci">void Check()</div><div class="ttdoc">Check application exit and throws an exception if it exits</div><div class="ttdef"><b>Definition</b> ApplicationError.cpp:16</div></div>
+<div class="ttc" id="aclass_utl_1_1_async_1_1_c_main_thread_future_html"><div class="ttname"><a href="class_utl_1_1_async_1_1_c_main_thread_future.html">Utl::Async::CMainThreadFuture</a></div><div class="ttdoc">Class that wraps future to wait while the main thread checks for the exit of the application</div><div class="ttdef"><b>Definition</b> UtilityForAsync.h:21</div></div>
+<div class="ttc" id="aclass_utl_1_1_async_1_1_c_main_thread_future_html_a330aedaaf70e6011728b7e4f1dda3f40"><div class="ttname"><a href="class_utl_1_1_async_1_1_c_main_thread_future.html#a330aedaaf70e6011728b7e4f1dda3f40">Utl::Async::CMainThreadFuture::CMainThreadFuture</a></div><div class="ttdeci">CMainThreadFuture()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> UtilityForAsync.h:26</div></div>
+<div class="ttc" id="aclass_utl_1_1_async_1_1_c_main_thread_future_html_a4362b4865f402bb64754ebbe838faa1c"><div class="ttname"><a href="class_utl_1_1_async_1_1_c_main_thread_future.html#a4362b4865f402bb64754ebbe838faa1c">Utl::Async::CMainThreadFuture::~CMainThreadFuture</a></div><div class="ttdeci">~CMainThreadFuture()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_utl_1_1_async_1_1_c_main_thread_future_html_a4dff65e9be836b0296d1cadecb4d5fb2"><div class="ttname"><a href="class_utl_1_1_async_1_1_c_main_thread_future.html#a4dff65e9be836b0296d1cadecb4d5fb2">Utl::Async::CMainThreadFuture::Valid</a></div><div class="ttdeci">bool Valid()</div><div class="ttdoc">Does this future class have a shared state?</div><div class="ttdef"><b>Definition</b> UtilityForAsync.h:45</div></div>
+<div class="ttc" id="aclass_utl_1_1_async_1_1_c_main_thread_future_html_a66b7f577ade41e2082989e596bece501"><div class="ttname"><a href="class_utl_1_1_async_1_1_c_main_thread_future.html#a66b7f577ade41e2082989e596bece501">Utl::Async::CMainThreadFuture::Get</a></div><div class="ttdeci">void Get()</div><div class="ttdoc">Get result for void</div><div class="ttdef"><b>Definition</b> UtilityForAsync.h:51</div></div>
+<div class="ttc" id="aclass_utl_1_1_async_1_1_c_main_thread_future_html_a7995de7fe3113740d3331f87acad79fb"><div class="ttname"><a href="class_utl_1_1_async_1_1_c_main_thread_future.html#a7995de7fe3113740d3331f87acad79fb">Utl::Async::CMainThreadFuture::Wait</a></div><div class="ttdeci">void Wait() const</div><div class="ttdoc">Wait for processing to complete</div><div class="ttdef"><b>Definition</b> UtilityForAsync.h:63</div></div>
+<div class="ttc" id="aclass_utl_1_1_async_1_1_c_main_thread_future_html_ab940e3cb79ae2eaab139475ec938cb03"><div class="ttname"><a href="class_utl_1_1_async_1_1_c_main_thread_future.html#ab940e3cb79ae2eaab139475ec938cb03">Utl::Async::CMainThreadFuture::Get</a></div><div class="ttdeci">T Get()</div><div class="ttdoc">Get result</div><div class="ttdef"><b>Definition</b> UtilityForAsync.h:48</div></div>
+<div class="ttc" id="aclass_utl_1_1_async_1_1_c_main_thread_future_html_adf67dad3eec92ed429bcc52cf6e2d5b6"><div class="ttname"><a href="class_utl_1_1_async_1_1_c_main_thread_future.html#adf67dad3eec92ed429bcc52cf6e2d5b6">Utl::Async::CMainThreadFuture::operator=</a></div><div class="ttdeci">CMainThreadFuture &amp; operator=(std::future&lt; T &gt; &amp;&amp;fut)</div><div class="ttdoc">Move assignment operator</div><div class="ttdef"><b>Definition</b> UtilityForAsync.h:37</div></div>
+<div class="ttc" id="aclass_utl_1_1_async_1_1_c_main_thread_future_html_aea62e6c7fb29431156f9edc4229f7250"><div class="ttname"><a href="class_utl_1_1_async_1_1_c_main_thread_future.html#aea62e6c7fb29431156f9edc4229f7250">Utl::Async::CMainThreadFuture::CMainThreadFuture</a></div><div class="ttdeci">CMainThreadFuture(std::future&lt; T &gt; &amp;&amp;fut)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> UtilityForAsync.h:31</div></div>
+<div class="ttc" id="anamespace_utl_1_1_async_html_a40f43a0b7170bd854260eb710ba3a73e"><div class="ttname"><a href="namespace_utl_1_1_async.html#a40f43a0b7170bd854260eb710ba3a73e">Utl::Async::INTERVAL_CHECK</a></div><div class="ttdeci">const std::chrono::seconds INTERVAL_CHECK</div><div class="ttdoc">Interval to check for errors</div><div class="ttdef"><b>Definition</b> UtilityForAsync.h:17</div></div>
+<div class="ttc" id="anamespace_utl_html"><div class="ttname"><a href="namespace_utl.html">Utl</a></div><div class="ttdef"><b>Definition</b> Utility.h:24</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> StableHandleVector.h:132</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

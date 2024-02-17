@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ConstraintSolverDirector.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ConstraintSolverDirector.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_constraint_solver_director_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __CONSTRAINT_SOLVER_DIRECTOR_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __CONSTRAINT_SOLVER_DIRECTOR_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_solver_constraint_8h.html">SolverConstraint.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_contact_point_8h.html">ContactPoint.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mkpe.html">Mkpe</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// Forward declaration</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">class </span>CPhysicsWorld;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespace_mkpe.html#ade1b6f458df33d287ec2e1e6225200bd">   20</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespace_mkpe.html#ade1b6f458df33d287ec2e1e6225200bd">SimulationBodySolveFunc</a> = void (<a class="code hl_class" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a>::*)(const <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp;, const <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp;, float);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespace_mkpe.html#aacc71a66da001ebba8330e572eaa5760">   22</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespace_mkpe.html#aacc71a66da001ebba8330e572eaa5760">SimulationBodyGetVelocityFunc</a> = <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; (<a class="code hl_class" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a>::*)() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_mkpe_1_1_c_constraint_solver_director.html">   25</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_mkpe_1_1_c_constraint_solver_director.html">CConstraintSolverDirector</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_class" href="class_mkpe_1_1_c_constraint_solver_director.html">CConstraintSolverDirector</a>(<a class="code hl_class" href="class_mkpe_1_1_c_physics_world.html">CPhysicsWorld</a>* physicsWorld);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_constraint_solver_director.html#af186893b1d468066dc108afacf80ad22">CreateConstraint</a>(<span class="keywordtype">float</span> invTimeStep);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_constraint_solver_director.html#aa800308c5ce28f2f4d25d027a6cb8602">IterativeSolver</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_mkpe_1_1_c_constraint_solver_director.html#adae4d3da72aab1d1ecd5e3125e9747d2">ClearConstraint</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordtype">void</span> CreateContactConstraint(<a class="code hl_struct" href="struct_mkpe_1_1_solver_constraint.html">SolverConstraint</a>* solver, <a class="code hl_struct" href="struct_mkpe_1_1_contact_point.html">ContactPoint</a>* cp,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>* wrapperA, <a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>* wrapperB,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <a class="code hl_class" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a>* bodyA, <a class="code hl_class" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a>* bodyB,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; relativePosA, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; relativePosB,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordtype">bool</span> isMoveA, <span class="keywordtype">bool</span> isMoveB, <span class="keywordtype">float</span> invTimeStep);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">void</span> CreateFrictionConstraint(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; frictionDirA, </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <a class="code hl_struct" href="struct_mkpe_1_1_solver_constraint.html">SolverConstraint</a>* solver, <a class="code hl_struct" href="struct_mkpe_1_1_contact_point.html">ContactPoint</a>* cp,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>* wrapperA, <a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>* wrapperB,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <a class="code hl_class" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a>* bodyA, <a class="code hl_class" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a>* bodyB,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; relativePosA, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; relativePosB, </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordtype">bool</span> isMoveA, <span class="keywordtype">bool</span> isMoveB, <span class="keywordtype">float</span> invTimeStep);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordtype">float</span> CalculateDenomOfImpulse(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; dirA, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; dirB, <a class="code hl_struct" href="struct_mkpe_1_1_solver_constraint.html">SolverConstraint</a>* solver, <a class="code hl_struct" href="struct_mkpe_1_1_contact_point.html">ContactPoint</a>* cp,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>* wrapperA, <a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">CColliderWrapper</a>* wrapperB,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <a class="code hl_class" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a>* bodyA, <a class="code hl_class" href="class_mkpe_1_1_c_simulation_body_base.html">CSimulationBodyBase</a>* bodyB,</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; relativePosA, <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; relativePosB,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordtype">bool</span> isMoveA, <span class="keywordtype">bool</span> isMoveB);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordtype">void</span> IterativeSolverPenetrationImpulse();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordtype">float</span> SingleIterationConstraintSolver();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordtype">float</span> SolverPenetrationImpulse(<a class="code hl_struct" href="struct_mkpe_1_1_solver_constraint.html">SolverConstraint</a>* solver);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordtype">float</span> SolverContactVelocityImpulse(<a class="code hl_struct" href="struct_mkpe_1_1_solver_constraint.html">SolverConstraint</a>* solver);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordtype">float</span> SolverFrictionVelocityImpulse(<a class="code hl_struct" href="struct_mkpe_1_1_solver_constraint.html">SolverConstraint</a>* solver);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordtype">float</span> SolverImpulse(<a class="code hl_struct" href="struct_mkpe_1_1_solver_constraint.html">SolverConstraint</a>* solver, <span class="keywordtype">float</span> impulse,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            <a class="code hl_typedef" href="namespace_mkpe.html#aacc71a66da001ebba8330e572eaa5760">SimulationBodyGetVelocityFunc</a> linearFunc, </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <a class="code hl_typedef" href="namespace_mkpe.html#aacc71a66da001ebba8330e572eaa5760">SimulationBodyGetVelocityFunc</a> angularFunc,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <a class="code hl_typedef" href="namespace_mkpe.html#ade1b6f458df33d287ec2e1e6225200bd">SimulationBodySolveFunc</a> solveFunc,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="keywordtype">bool</span> isUpperLimit = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        std::vector&lt;SolverConstraint&gt; m_contactConstraints;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        std::vector&lt;SolverConstraint&gt; m_frictionConstraints;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <a class="code hl_class" href="class_mkpe_1_1_c_physics_world.html">CPhysicsWorld</a>* m_physicsWorld;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordtype">int</span> m_iterativeSolverMax;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    };</div>
+</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>} <span class="comment">// namespace Mkpe</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">#endif </span><span class="comment">// !__CONSTRAINT_SOLVER_DIRECTOR_H__</span></div>
+<div class="ttc" id="a_contact_point_8h_html"><div class="ttname"><a href="_contact_point_8h.html">ContactPoint.h</a></div><div class="ttdoc">This file handles contact point information between rigid bodies..</div></div>
+<div class="ttc" id="a_solver_constraint_8h_html"><div class="ttname"><a href="_solver_constraint_8h.html">SolverConstraint.h</a></div><div class="ttdoc">This file handles constraint solver class.</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html">Mkpe::CColliderWrapper</a></div><div class="ttdoc">Wrapper class that exists in a 1:1 relationship with a collider</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:24</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_constraint_solver_director_html"><div class="ttname"><a href="class_mkpe_1_1_c_constraint_solver_director.html">Mkpe::CConstraintSolverDirector</a></div><div class="ttdoc">Class that create and resolve constraints for contact resolution</div><div class="ttdef"><b>Definition</b> ConstraintSolverDirector.h:25</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_constraint_solver_director_html_aa800308c5ce28f2f4d25d027a6cb8602"><div class="ttname"><a href="class_mkpe_1_1_c_constraint_solver_director.html#aa800308c5ce28f2f4d25d027a6cb8602">Mkpe::CConstraintSolverDirector::IterativeSolver</a></div><div class="ttdeci">void IterativeSolver()</div><div class="ttdoc">Contact solving with an iterative solver</div><div class="ttdef"><b>Definition</b> ConstraintSolverDirector.cpp:103</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_constraint_solver_director_html_adae4d3da72aab1d1ecd5e3125e9747d2"><div class="ttname"><a href="class_mkpe_1_1_c_constraint_solver_director.html#adae4d3da72aab1d1ecd5e3125e9747d2">Mkpe::CConstraintSolverDirector::ClearConstraint</a></div><div class="ttdeci">void ClearConstraint()</div><div class="ttdoc">Clear all constraints</div><div class="ttdef"><b>Definition</b> ConstraintSolverDirector.cpp:123</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_constraint_solver_director_html_af186893b1d468066dc108afacf80ad22"><div class="ttname"><a href="class_mkpe_1_1_c_constraint_solver_director.html#af186893b1d468066dc108afacf80ad22">Mkpe::CConstraintSolverDirector::CreateConstraint</a></div><div class="ttdeci">void CreateConstraint(float invTimeStep)</div><div class="ttdoc">Create constraints in the current frame</div><div class="ttdef"><b>Definition</b> ConstraintSolverDirector.cpp:13</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_physics_world_html"><div class="ttname"><a href="class_mkpe_1_1_c_physics_world.html">Mkpe::CPhysicsWorld</a></div><div class="ttdoc">Physics simulation environment class</div><div class="ttdef"><b>Definition</b> PhysicsWorld.h:38</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_simulation_body_base_html"><div class="ttname"><a href="class_mkpe_1_1_c_simulation_body_base.html">Mkpe::CSimulationBodyBase</a></div><div class="ttdoc">Rigid body class for computing</div><div class="ttdef"><b>Definition</b> SimulationBody.h:31</div></div>
+<div class="ttc" id="anamespace_mkpe_html"><div class="ttname"><a href="namespace_mkpe.html">Mkpe</a></div><div class="ttdef"><b>Definition</b> BoudingVolume.h:14</div></div>
+<div class="ttc" id="anamespace_mkpe_html_aacc71a66da001ebba8330e572eaa5760"><div class="ttname"><a href="namespace_mkpe.html#aacc71a66da001ebba8330e572eaa5760">Mkpe::SimulationBodyGetVelocityFunc</a></div><div class="ttdeci">const Vector3f &amp;(CSimulationBodyBase::*)() const SimulationBodyGetVelocityFunc</div><div class="ttdoc">Function to get velocity of simulation body</div><div class="ttdef"><b>Definition</b> ConstraintSolverDirector.h:22</div></div>
+<div class="ttc" id="anamespace_mkpe_html_ade1b6f458df33d287ec2e1e6225200bd"><div class="ttname"><a href="namespace_mkpe.html#ade1b6f458df33d287ec2e1e6225200bd">Mkpe::SimulationBodySolveFunc</a></div><div class="ttdeci">void(CSimulationBodyBase::*)(const Vector3f &amp;, const Vector3f &amp;, float) SimulationBodySolveFunc</div><div class="ttdoc">Function for contact solving operations of simulation body</div><div class="ttdef"><b>Definition</b> ConstraintSolverDirector.h:20</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_contact_point_html"><div class="ttname"><a href="struct_mkpe_1_1_contact_point.html">Mkpe::ContactPoint</a></div><div class="ttdoc">Contact point structure</div><div class="ttdef"><b>Definition</b> ContactPoint.h:20</div></div>
+<div class="ttc" id="astruct_mkpe_1_1_solver_constraint_html"><div class="ttname"><a href="struct_mkpe_1_1_solver_constraint.html">Mkpe::SolverConstraint</a></div><div class="ttdoc">Constraint solver class</div><div class="ttdef"><b>Definition</b> SolverConstraint.h:17</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 3 &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Mkpe::CConstraintSolverDirector クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_mkpe.html">Mkpe</a></li><li class="navelem"><a class="el" href="class_mkpe_1_1_c_constraint_solver_director.html">CConstraintSolverDirector</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_mkpe_1_1_c_constraint_solver_director-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">Mkpe::CConstraintSolverDirector クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Class that create and resolve constraints for contact resolution  
+ <a href="class_mkpe_1_1_c_constraint_solver_director.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_constraint_solver_director_8h_source.html">ConstraintSolverDirector.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:afb7529e50e33dd4217964dd14fddc81e" id="r_afb7529e50e33dd4217964dd14fddc81e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_constraint_solver_director.html#afb7529e50e33dd4217964dd14fddc81e">CConstraintSolverDirector</a> (<a class="el" href="class_mkpe_1_1_c_physics_world.html">CPhysicsWorld</a> *physicsWorld)</td></tr>
+<tr class="memdesc:afb7529e50e33dd4217964dd14fddc81e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:afb7529e50e33dd4217964dd14fddc81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af186893b1d468066dc108afacf80ad22" id="r_af186893b1d468066dc108afacf80ad22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_constraint_solver_director.html#af186893b1d468066dc108afacf80ad22">CreateConstraint</a> (float invTimeStep)</td></tr>
+<tr class="memdesc:af186893b1d468066dc108afacf80ad22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create constraints in the current frame  <br /></td></tr>
+<tr class="separator:af186893b1d468066dc108afacf80ad22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa800308c5ce28f2f4d25d027a6cb8602" id="r_aa800308c5ce28f2f4d25d027a6cb8602"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_constraint_solver_director.html#aa800308c5ce28f2f4d25d027a6cb8602">IterativeSolver</a> ()</td></tr>
+<tr class="memdesc:aa800308c5ce28f2f4d25d027a6cb8602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contact solving with an iterative solver  <br /></td></tr>
+<tr class="separator:aa800308c5ce28f2f4d25d027a6cb8602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae4d3da72aab1d1ecd5e3125e9747d2" id="r_adae4d3da72aab1d1ecd5e3125e9747d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mkpe_1_1_c_constraint_solver_director.html#adae4d3da72aab1d1ecd5e3125e9747d2">ClearConstraint</a> ()</td></tr>
+<tr class="memdesc:adae4d3da72aab1d1ecd5e3125e9747d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all constraints  <br /></td></tr>
+<tr class="separator:adae4d3da72aab1d1ecd5e3125e9747d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Class that create and resolve constraints for contact resolution </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="afb7529e50e33dd4217964dd14fddc81e" name="afb7529e50e33dd4217964dd14fddc81e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb7529e50e33dd4217964dd14fddc81e">&#9670;&#160;</a></span>CConstraintSolverDirector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mkpe::CConstraintSolverDirector::CConstraintSolverDirector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mkpe_1_1_c_physics_world.html">CPhysicsWorld</a> *&#160;</td>
+          <td class="paramname"><em>physicsWorld</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">physicsWorld</td><td>Physics simulation environment class owning this class </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="adae4d3da72aab1d1ecd5e3125e9747d2" name="adae4d3da72aab1d1ecd5e3125e9747d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae4d3da72aab1d1ecd5e3125e9747d2">&#9670;&#160;</a></span>ClearConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CConstraintSolverDirector::ClearConstraint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear all constraints </p>
+
+</div>
+</div>
+<a id="af186893b1d468066dc108afacf80ad22" name="af186893b1d468066dc108afacf80ad22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af186893b1d468066dc108afacf80ad22">&#9670;&#160;</a></span>CreateConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CConstraintSolverDirector::CreateConstraint </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>invTimeStep</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create constraints in the current frame </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">invTimeStep</td><td>Inverse of elapsed time from previous frame </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mkpe_1_1_c_constraint_solver_director_af186893b1d468066dc108afacf80ad22_cgraph.png" border="0" usemap="#aclass_mkpe_1_1_c_constraint_solver_director_af186893b1d468066dc108afacf80ad22_cgraph" alt=""/></div>
+<map name="aclass_mkpe_1_1_c_constraint_solver_director_af186893b1d468066dc108afacf80ad22_cgraph" id="aclass_mkpe_1_1_c_constraint_solver_director_af186893b1d468066dc108afacf80ad22_cgraph">
+<area shape="rect" title="Create constraints in the current frame" alt="" coords="5,124,215,167"/>
+<area shape="rect" href="class_c_unique_ptr.html#ae221025865772158391c36b66485ccb3" title="Get instance" alt="" coords="300,5,417,32"/>
+<area shape="poly" title=" " alt="" coords="137,121,192,81,262,42,285,33,286,38,264,46,195,85,140,126"/>
+<area shape="rect" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219" title="Get instance. If the instance has already been destroyed, return nullptr" alt="" coords="303,56,414,83"/>
+<area shape="poly" title=" " alt="" coords="182,121,297,85,299,90,183,126"/>
+<area shape="rect" href="namespace_utl_1_1_math.html#a30811c9389f7661d27d4f1cf105332a3" title="Calculate and return tangent vector" alt="" coords="265,259,452,285"/>
+<area shape="poly" title=" " alt="" coords="155,165,318,249,315,254,152,169"/>
+<area shape="rect" href="struct_vector.html#a1422d1d25bdd05ed068c786f9c45fcd3" title="Calculate vector length squared" alt="" coords="851,132,973,159"/>
+<area shape="poly" title=" " alt="" coords="215,140,263,139,581,138,835,141,835,147,581,143,263,144,215,145"/>
+<area shape="rect" href="class_mkpe_1_1_c_simulation_body_base.html#acaa18f24000c13b1b6e31e807eb54ccc" title="Calculate the velocity of point p in the object" alt="" coords="263,356,454,399"/>
+<area shape="poly" title=" " alt="" coords="134,165,264,295,320,344,317,348,261,299,130,169"/>
+<area shape="rect" href="struct_vector.html#a5fa1e63b510986c5a7c6a933b028c505" title="Normalize this vector" alt="" coords="513,157,638,184"/>
+<area shape="poly" title=" " alt="" coords="215,148,497,164,497,169,215,154"/>
+<area shape="rect" href="struct_vector.html#ac6645f7df485a2cd90507a989c785370" title="Get normalized this vector" alt="" coords="502,208,648,235"/>
+<area shape="poly" title=" " alt="" coords="418,255,500,236,501,241,419,261"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="538,259,612,285"/>
+<area shape="poly" title=" " alt="" coords="452,269,522,269,522,275,452,275"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="538,309,612,336"/>
+<area shape="poly" title=" " alt="" coords="419,283,524,308,523,313,418,289"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="538,360,612,387"/>
+<area shape="poly" title=" " alt="" coords="384,283,438,313,503,346,525,354,523,359,501,350,435,318,381,288"/>
+<area shape="rect" href="struct_vector.html#a2a17b2b690d93fe77c6acce69e1fb17b" title="Calculate vector length" alt="" coords="696,157,803,184"/>
+<area shape="poly" title=" " alt="" coords="623,205,686,186,687,191,625,210"/>
+<area shape="rect" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997" title="Get vector with all 0 values" alt="" coords="703,309,796,336"/>
+<area shape="poly" title=" " alt="" coords="624,233,650,244,690,270,724,297,721,301,687,274,647,249,622,238"/>
+<area shape="poly" title=" " alt="" coords="803,160,835,155,836,160,804,165"/>
+<area shape="rect" href="struct_vector.html#a8ab815e67c75162daf574aac3c7597e0" title="Dot product" alt="" coords="1021,132,1108,159"/>
+<area shape="poly" title=" " alt="" coords="973,143,1006,143,1006,148,973,148"/>
+<area shape="poly" title=" " alt="" coords="438,397,486,405,540,410,594,408,647,396,690,373,724,345,728,349,693,378,649,401,595,413,539,415,486,411,437,402"/>
+<area shape="poly" title=" " alt="" coords="638,168,681,168,681,173,638,173"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa800308c5ce28f2f4d25d027a6cb8602" name="aa800308c5ce28f2f4d25d027a6cb8602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa800308c5ce28f2f4d25d027a6cb8602">&#9670;&#160;</a></span>IterativeSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mkpe::CConstraintSolverDirector::IterativeSolver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contact solving with an iterative solver </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_constraint_solver_director_8h_source.html">ConstraintSolverDirector.h</a></li>
+<li><a class="el" href="_constraint_solver_director_8cpp.html">ConstraintSolverDirector.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

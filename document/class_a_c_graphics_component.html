@@ -1,0 +1,1674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: ACGraphicsComponent クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="class_a_c_graphics_component-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">ACGraphicsComponent クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Abstract class of component of graphics  
+ <a href="class_a_c_graphics_component.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_graphics_component_8h_source.html">GraphicsComponent.h</a>&gt;</code></p>
+<div class="dynheader">
+ACGraphicsComponent の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component__inherit__graph.png" border="0" usemap="#a_a_c_graphics_component_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_a_c_graphics_component_inherit__map" id="a_a_c_graphics_component_inherit__map">
+<area shape="rect" title="Abstract class of component of graphics" alt="" coords="400,5,557,32"/>
+<area shape="rect" href="class_a_c_model.html" title="Abstract class of model" alt="" coords="147,80,221,107"/>
+<area shape="poly" title=" " alt="" coords="413,39,222,85,221,80,411,34"/>
+<area shape="rect" href="class_a_c_sprite.html" title="Abstract class for sprite" alt="" coords="319,80,393,107"/>
+<area shape="poly" title=" " alt="" coords="445,43,379,82,376,77,443,38"/>
+<area shape="rect" href="class_c_color_only_shape.html" title="Shape for color only" alt="" coords="416,80,541,107"/>
+<area shape="poly" title=" " alt="" coords="481,48,481,80,476,80,476,48"/>
+<area shape="rect" href="class_c_debug_collider_shape.html" title="Shape for debugging collider" alt="" coords="565,80,712,107"/>
+<area shape="poly" title=" " alt="" coords="521,36,612,77,609,82,519,41"/>
+<area shape="rect" href="class_c_tex_shape.html" title="Shape for texture" alt="" coords="736,80,824,107"/>
+<area shape="poly" title=" " alt="" coords="547,34,736,79,735,84,546,39"/>
+<area shape="rect" href="class_c_basic_model.html" title="Non&#45;animated model" alt="" coords="5,155,104,181"/>
+<area shape="poly" title=" " alt="" coords="149,117,79,156,76,152,147,112"/>
+<area shape="rect" href="class_c_skeletal_model.html" title="Model animated with bones" alt="" coords="128,155,240,181"/>
+<area shape="poly" title=" " alt="" coords="187,122,187,154,181,154,181,122"/>
+<area shape="rect" href="class_c_billboard.html" title="Billboard class" alt="" coords="264,155,344,181"/>
+<area shape="poly" title=" " alt="" coords="340,121,315,156,311,153,336,118"/>
+<area shape="rect" href="class_c_sprite3_d.html" title="Sprite class for 3D coordinate space" alt="" coords="368,155,448,181"/>
+<area shape="poly" title=" " alt="" coords="376,118,401,153,397,156,372,121"/>
+<area shape="rect" href="class_c_sprite_u_i.html" title="Sprite class for UI" alt="" coords="472,155,549,181"/>
+<area shape="poly" title=" " alt="" coords="398,111,484,152,482,156,396,116"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+ACGraphicsComponent 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component__coll__graph.png" border="0" usemap="#a_a_c_graphics_component_coll__map" alt="Collaboration graph"/></div>
+<map name="a_a_c_graphics_component_coll__map" id="a_a_c_graphics_component_coll__map">
+<area shape="rect" title="Abstract class of component of graphics" alt="" coords="20,96,178,123"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="5,5,193,32"/>
+<area shape="poly" title=" " alt="" coords="102,48,102,95,96,95,96,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa76bdc36dae53c66a9b7c987c6f0b109" id="r_aa76bdc36dae53c66a9b7c987c6f0b109"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#aa76bdc36dae53c66a9b7c987c6f0b109">ACGraphicsComponent</a> (<a class="el" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a> type, <a class="el" href="class_c_game_object.html">CGameObject</a> *owner, <a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer)</td></tr>
+<tr class="memdesc:aa76bdc36dae53c66a9b7c987c6f0b109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:aa76bdc36dae53c66a9b7c987c6f0b109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f21739d3903597b5a27ec3af605fb2" id="r_ac0f21739d3903597b5a27ec3af605fb2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ac0f21739d3903597b5a27ec3af605fb2">~ACGraphicsComponent</a> ()</td></tr>
+<tr class="memdesc:ac0f21739d3903597b5a27ec3af605fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ac0f21739d3903597b5a27ec3af605fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad09896a56b44419f0b868da44f0328f5" id="r_ad09896a56b44419f0b868da44f0328f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ad09896a56b44419f0b868da44f0328f5">Awake</a> ()</td></tr>
+<tr class="memdesc:ad09896a56b44419f0b868da44f0328f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is added to an object  <br /></td></tr>
+<tr class="separator:ad09896a56b44419f0b868da44f0328f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27acf950518c654ba6919cc8c53172c2" id="r_a27acf950518c654ba6919cc8c53172c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a27acf950518c654ba6919cc8c53172c2">Start</a> ()</td></tr>
+<tr class="memdesc:a27acf950518c654ba6919cc8c53172c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing for the first draw frame  <br /></td></tr>
+<tr class="separator:a27acf950518c654ba6919cc8c53172c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46c7382df0dc09611bb4d2291fd7c53" id="r_af46c7382df0dc09611bb4d2291fd7c53"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#af46c7382df0dc09611bb4d2291fd7c53">PreDraw</a> ()</td></tr>
+<tr class="memdesc:af46c7382df0dc09611bb4d2291fd7c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre drawing processing  <br /></td></tr>
+<tr class="separator:af46c7382df0dc09611bb4d2291fd7c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14e03af3d7d03b5513558fa9a3375b1" id="r_aa14e03af3d7d03b5513558fa9a3375b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#aa14e03af3d7d03b5513558fa9a3375b1">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:aa14e03af3d7d03b5513558fa9a3375b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process to be called at instance destruction  <br /></td></tr>
+<tr class="separator:aa14e03af3d7d03b5513558fa9a3375b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf55893b5a3a941e66f2763a179222b" id="r_abcf55893b5a3a941e66f2763a179222b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#abcf55893b5a3a941e66f2763a179222b">IsDrawCondition</a> ()</td></tr>
+<tr class="memdesc:abcf55893b5a3a941e66f2763a179222b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing conditions set in derived classes  <br /></td></tr>
+<tr class="separator:abcf55893b5a3a941e66f2763a179222b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593c31ff21abdf7074ae1b40a5586831" id="r_a593c31ff21abdf7074ae1b40a5586831"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a593c31ff21abdf7074ae1b40a5586831">AskToAllocateTextures</a> (UINT meshNum, const <a class="el" href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a> &amp;gpso, UINT totalNum)</td></tr>
+<tr class="memdesc:a593c31ff21abdf7074ae1b40a5586831"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask for textures assignment information to be built  <br /></td></tr>
+<tr class="separator:a593c31ff21abdf7074ae1b40a5586831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accacea0b02e3091b401ceb7f4cc2ef4b" id="r_accacea0b02e3091b401ceb7f4cc2ef4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#accacea0b02e3091b401ceb7f4cc2ef4b">SetLayer</a> (<a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer)</td></tr>
+<tr class="memdesc:accacea0b02e3091b401ceb7f4cc2ef4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Belong to a new layer  <br /></td></tr>
+<tr class="separator:accacea0b02e3091b401ceb7f4cc2ef4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4882f101596b39ff4170e3c38df122fd" id="r_a4882f101596b39ff4170e3c38df122fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a4882f101596b39ff4170e3c38df122fd">SetIsActive</a> (bool isActive)</td></tr>
+<tr class="memdesc:a4882f101596b39ff4170e3c38df122fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set active flag  <br /></td></tr>
+<tr class="separator:a4882f101596b39ff4170e3c38df122fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445855ed7d28b7ad17d2e9307abb1b15" id="r_a445855ed7d28b7ad17d2e9307abb1b15"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a445855ed7d28b7ad17d2e9307abb1b15">IsActiveSelf</a> () const</td></tr>
+<tr class="memdesc:a445855ed7d28b7ad17d2e9307abb1b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this graphics component itself active?  <br /></td></tr>
+<tr class="separator:a445855ed7d28b7ad17d2e9307abb1b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d2e1ec2ccd18538cdfd37f4b17d5031" id="r_a2d2e1ec2ccd18538cdfd37f4b17d5031"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a2d2e1ec2ccd18538cdfd37f4b17d5031">IsActiveOverall</a> () const</td></tr>
+<tr class="memdesc:a2d2e1ec2ccd18538cdfd37f4b17d5031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this graphics component itself and the game object that owns it active?  <br /></td></tr>
+<tr class="separator:a2d2e1ec2ccd18538cdfd37f4b17d5031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b6a3ddf26c12b8c5e42d3cf574a8e96" id="r_a4b6a3ddf26c12b8c5e42d3cf574a8e96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a4b6a3ddf26c12b8c5e42d3cf574a8e96">SetColor</a> (const <a class="el" href="_utility_for_math_8h.html#aec0a157ba62275f3e25a3ea3e8a9c176">Colorf</a> &amp;color)</td></tr>
+<tr class="memdesc:a4b6a3ddf26c12b8c5e42d3cf574a8e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color  <br /></td></tr>
+<tr class="separator:a4b6a3ddf26c12b8c5e42d3cf574a8e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49a188b5cd07abd5d8ef3e06b388e4c" id="r_ae49a188b5cd07abd5d8ef3e06b388e4c"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_utility_for_math_8h.html#aec0a157ba62275f3e25a3ea3e8a9c176">Colorf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ae49a188b5cd07abd5d8ef3e06b388e4c">GetColor</a> () const</td></tr>
+<tr class="memdesc:ae49a188b5cd07abd5d8ef3e06b388e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color  <br /></td></tr>
+<tr class="separator:ae49a188b5cd07abd5d8ef3e06b388e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ec2eb65e83103f7e6929ff8d4789ca" id="r_ac3ec2eb65e83103f7e6929ff8d4789ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ac3ec2eb65e83103f7e6929ff8d4789ca">SetNumericMaterialToAllMesh</a> (const <a class="el" href="struct_per_mesh_material_numeric.html">PerMeshMaterialNumeric</a> &amp;numeric)</td></tr>
+<tr class="memdesc:ac3ec2eb65e83103f7e6929ff8d4789ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set numeric part of the material to all meshes  <br /></td></tr>
+<tr class="separator:ac3ec2eb65e83103f7e6929ff8d4789ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9efdbb742727244d13d9b263188af035" id="r_a9efdbb742727244d13d9b263188af035"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_per_mesh_material_numeric.html">PerMeshMaterialNumeric</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a9efdbb742727244d13d9b263188af035">GetMaterialNumeric</a> (UINT meshIndex)</td></tr>
+<tr class="memdesc:a9efdbb742727244d13d9b263188af035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get numeric part of the material  <br /></td></tr>
+<tr class="separator:a9efdbb742727244d13d9b263188af035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b2c3a110f02516f9075141e6cccd4b0" id="r_a4b2c3a110f02516f9075141e6cccd4b0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a4b2c3a110f02516f9075141e6cccd4b0">GetType</a> ()</td></tr>
+<tr class="memdesc:a4b2c3a110f02516f9075141e6cccd4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of this graphics component  <br /></td></tr>
+<tr class="separator:a4b2c3a110f02516f9075141e6cccd4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11907622e291958581ecc628ab688d14" id="r_a11907622e291958581ecc628ab688d14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a11907622e291958581ecc628ab688d14">GetGameObj</a> ()</td></tr>
+<tr class="memdesc:a11907622e291958581ecc628ab688d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that is the owner of this graphics component  <br /></td></tr>
+<tr class="separator:a11907622e291958581ecc628ab688d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d0da04f004c80508383d71a7ff285af" id="r_a2d0da04f004c80508383d71a7ff285af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a2d0da04f004c80508383d71a7ff285af">GetLayer</a> ()</td></tr>
+<tr class="memdesc:a2d0da04f004c80508383d71a7ff285af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get graphics layer to which this class belongs  <br /></td></tr>
+<tr class="separator:a2d0da04f004c80508383d71a7ff285af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388fdd5f49c6e0d4d62ce3b02522629d" id="r_a388fdd5f49c6e0d4d62ce3b02522629d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_mesh_buffer.html">CMeshBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a388fdd5f49c6e0d4d62ce3b02522629d">GetMeshBuffer</a> (UINT meshIndex)</td></tr>
+<tr class="memdesc:a388fdd5f49c6e0d4d62ce3b02522629d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mesh buffer  <br /></td></tr>
+<tr class="separator:a388fdd5f49c6e0d4d62ce3b02522629d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545bba36a3c30ed07c4969e9e0fde6c6" id="r_a545bba36a3c30ed07c4969e9e0fde6c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a545bba36a3c30ed07c4969e9e0fde6c6">GetMeshKey</a> (UINT meshIndex)</td></tr>
+<tr class="memdesc:a545bba36a3c30ed07c4969e9e0fde6c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a key for mesh buffer  <br /></td></tr>
+<tr class="separator:a545bba36a3c30ed07c4969e9e0fde6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f8fdd8e71b45c11b5ac589740db1b4" id="r_af5f8fdd8e71b45c11b5ac589740db1b4"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#af5f8fdd8e71b45c11b5ac589740db1b4">GetMeshNum</a> ()</td></tr>
+<tr class="memdesc:af5f8fdd8e71b45c11b5ac589740db1b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of all meshes  <br /></td></tr>
+<tr class="separator:af5f8fdd8e71b45c11b5ac589740db1b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6947a32dfe5d33165e8dd0bf0b76dd7c" id="r_a6947a32dfe5d33165e8dd0bf0b76dd7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a6947a32dfe5d33165e8dd0bf0b76dd7c">SetUVTiling</a> (const <a class="el" href="_utility_for_math_8h.html#a52b5008b61e10ae145e2a0555ece28f6">Vector2f</a> &amp;tiling)</td></tr>
+<tr class="memdesc:a6947a32dfe5d33165e8dd0bf0b76dd7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set uv tiling  <br /></td></tr>
+<tr class="separator:a6947a32dfe5d33165e8dd0bf0b76dd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea1c54e724428d7ea3d1d8e36e2392d" id="r_adea1c54e724428d7ea3d1d8e36e2392d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#adea1c54e724428d7ea3d1d8e36e2392d">SetUVOffset</a> (const <a class="el" href="_utility_for_math_8h.html#a52b5008b61e10ae145e2a0555ece28f6">Vector2f</a> &amp;offset)</td></tr>
+<tr class="memdesc:adea1c54e724428d7ea3d1d8e36e2392d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set uv offset  <br /></td></tr>
+<tr class="separator:adea1c54e724428d7ea3d1d8e36e2392d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73139bd175f3a9a2fc2f16af0971693d" id="r_a73139bd175f3a9a2fc2f16af0971693d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#a18c8f722481c3a3852a798dd00ca2c8d">Vector4f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a73139bd175f3a9a2fc2f16af0971693d">GetTexCoordParam</a> ()</td></tr>
+<tr class="memdesc:a73139bd175f3a9a2fc2f16af0971693d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameter for texture coordinate (xy = tiling, zw = offset)  <br /></td></tr>
+<tr class="separator:a73139bd175f3a9a2fc2f16af0971693d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae6835e365df082d9776996f5e16150ac" id="r_ae6835e365df082d9776996f5e16150ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ae6835e365df082d9776996f5e16150ac">InitializeMesh</a> (UINT meshNum, UINT texIndexPerMesh)</td></tr>
+<tr class="memdesc:ae6835e365df082d9776996f5e16150ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare arrays of the meshes and its materials  <br /></td></tr>
+<tr class="separator:ae6835e365df082d9776996f5e16150ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993db977d5efc6b131a014f27973da5c" id="r_a993db977d5efc6b131a014f27973da5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a993db977d5efc6b131a014f27973da5c">SetMeshInfo</a> (UINT meshIndex, <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a> &gt; vertex, <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a> &gt; index, D3D_PRIMITIVE_TOPOLOGY topology)</td></tr>
+<tr class="memdesc:a993db977d5efc6b131a014f27973da5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mesh information  <br /></td></tr>
+<tr class="separator:a993db977d5efc6b131a014f27973da5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998e35b7460dd55e425537867615c06d" id="r_a998e35b7460dd55e425537867615c06d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a998e35b7460dd55e425537867615c06d">SetTexture</a> (UINT meshIndex, UINT texIndexPerMesh, <a class="el" href="class_c_texture.html">CTexture</a> tex)</td></tr>
+<tr class="memdesc:a998e35b7460dd55e425537867615c06d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set texture  <br /></td></tr>
+<tr class="separator:a998e35b7460dd55e425537867615c06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912aba43aff9d9063b36f75bd316e51b" id="r_a912aba43aff9d9063b36f75bd316e51b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a912aba43aff9d9063b36f75bd316e51b">SetNumericPartMaterial</a> (UINT meshIndex, <a class="el" href="struct_per_mesh_material_numeric.html">PerMeshMaterialNumeric</a> numeric)</td></tr>
+<tr class="memdesc:a912aba43aff9d9063b36f75bd316e51b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set numeric part of the material  <br /></td></tr>
+<tr class="separator:a912aba43aff9d9063b36f75bd316e51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb59722b7b70a60f5a668b257279103" id="r_a0bb59722b7b70a60f5a668b257279103"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_texture.html">CTexture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a0bb59722b7b70a60f5a668b257279103">GetTexture</a> (UINT meshIndex, UINT texIndexPerMesh)</td></tr>
+<tr class="memdesc:a0bb59722b7b70a60f5a668b257279103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get texture  <br /></td></tr>
+<tr class="separator:a0bb59722b7b70a60f5a668b257279103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a9c64ac1a5a38b522af5acea05cc1a50f" id="r_a9c64ac1a5a38b522af5acea05cc1a50f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a9c64ac1a5a38b522af5acea05cc1a50f">m_gameObj</a></td></tr>
+<tr class="memdesc:a9c64ac1a5a38b522af5acea05cc1a50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game object that is the owner of this graphics component  <br /></td></tr>
+<tr class="separator:a9c64ac1a5a38b522af5acea05cc1a50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6461ca45132ed0b6bed3cf865ae8bd7" id="r_ac6461ca45132ed0b6bed3cf865ae8bd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ac6461ca45132ed0b6bed3cf865ae8bd7">m_layer</a></td></tr>
+<tr class="memdesc:ac6461ca45132ed0b6bed3cf865ae8bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphics layer to which this class belongs  <br /></td></tr>
+<tr class="separator:ac6461ca45132ed0b6bed3cf865ae8bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Abstract class of component of graphics </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="aa76bdc36dae53c66a9b7c987c6f0b109" name="aa76bdc36dae53c66a9b7c987c6f0b109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76bdc36dae53c66a9b7c987c6f0b109">&#9670;&#160;</a></span>ACGraphicsComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ACGraphicsComponent::ACGraphicsComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html">CGameObject</a> *&#160;</td>
+          <td class="paramname"><em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a>&#160;</td>
+          <td class="paramname"><em>layer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Type of this graphics component </td></tr>
+    <tr><td class="paramname">owner</td><td>Game object that is the owner of this graphics component </td></tr>
+    <tr><td class="paramname">layer</td><td>Graphics layer to which this class belongs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac0f21739d3903597b5a27ec3af605fb2" name="ac0f21739d3903597b5a27ec3af605fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f21739d3903597b5a27ec3af605fb2">&#9670;&#160;</a></span>~ACGraphicsComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ACGraphicsComponent::~ACGraphicsComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a593c31ff21abdf7074ae1b40a5586831" name="a593c31ff21abdf7074ae1b40a5586831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a593c31ff21abdf7074ae1b40a5586831">&#9670;&#160;</a></span>AskToAllocateTextures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ACGraphicsComponent::AskToAllocateTextures </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a> &amp;&#160;</td>
+          <td class="paramname"><em>gpso</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>totalNum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ask for textures assignment information to be built </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">meshNum</td><td>The number of all meshes </td></tr>
+    <tr><td class="paramname">gpso</td><td>GPSO to assign textures </td></tr>
+    <tr><td class="paramname">totalNum</td><td>Total number of textures needed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Have you allocated the needed number of textures? </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a593c31ff21abdf7074ae1b40a5586831_cgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a593c31ff21abdf7074ae1b40a5586831_cgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a593c31ff21abdf7074ae1b40a5586831_cgraph" id="aclass_a_c_graphics_component_a593c31ff21abdf7074ae1b40a5586831_cgraph">
+<area shape="rect" title="Ask for textures assignment information to be built" alt="" coords="5,379,169,421"/>
+<area shape="rect" href="namespace_utl_1_1_dx.html#a874a0d5822b1c9d033b409a4279037cf" title="Get the resource state for texture, applicable to the shader type" alt="" coords="218,5,406,48"/>
+<area shape="poly" title=" " alt="" coords="88,378,97,316,118,231,135,184,156,139,182,96,215,58,217,56,221,60,219,62,187,99,161,141,140,186,123,232,102,317,93,379"/>
+<area shape="rect" href="class_c_unique_ptr.html#ae221025865772158391c36b66485ccb3" title="Get instance" alt="" coords="254,72,370,99"/>
+<area shape="poly" title=" " alt="" coords="89,378,100,323,123,251,140,212,160,174,185,139,215,109,238,95,241,99,218,113,189,143,165,177,144,214,128,252,106,324,94,379"/>
+<area shape="rect" href="class_c_application.html#ab44d8126deac403ebe7264dc024541cd" title="Get feature for thread&#45;safe" alt="" coords="239,123,385,149"/>
+<area shape="poly" title=" " alt="" coords="91,377,106,332,130,273,166,212,189,184,215,159,223,153,227,158,218,163,193,187,171,215,135,275,111,333,96,379"/>
+<area shape="rect" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html#a951bb4794c6f1eb17b28e30ce9454455" title="Get CPU handle" alt="" coords="219,173,405,216"/>
+<area shape="poly" title=" " alt="" coords="98,377,144,307,177,268,215,233,232,221,235,226,218,237,181,271,148,311,102,380"/>
+<area shape="rect" href="class_c_descriptor_heap_pool.html#a94be553cb145046459e138d08f98ead9" title="Get CPU handle for descriptor heap" alt="" coords="495,475,640,517"/>
+<area shape="poly" title=" " alt="" coords="169,376,224,368,286,366,349,373,379,381,408,394,426,409,434,427,442,444,457,461,481,474,479,479,453,465,437,447,430,429,422,412,406,398,377,386,348,378,285,371,224,374,169,382"/>
+<area shape="rect" href="class_a_c_main_thread_singleton.html#a89d07f64971fd623dd0a8a7179e17e95" title="Get singleton instance for main thread" alt="" coords="746,312,923,355"/>
+<area shape="poly" title=" " alt="" coords="101,376,147,323,179,296,216,276,288,254,363,244,439,242,514,247,586,258,653,272,762,304,760,309,651,278,585,263,514,253,439,247,363,249,289,260,218,281,182,301,151,327,105,380"/>
+<area shape="rect" href="class_c_application_1_1_c_thread_safe_feature.html#a5f0affd9adebb4920fc882bb6bc99325" title="DirectX device getter" alt="" coords="224,408,400,451"/>
+<area shape="poly" title=" " alt="" coords="170,408,209,413,208,419,169,413"/>
+<area shape="rect" href="class_c_graphics_pipeline_state.html#a0ba11683319fa2b61af536b744a8cd7a" title="Get the offset of a dynamic resource" alt="" coords="217,475,407,517"/>
+<area shape="poly" title=" " alt="" coords="131,419,218,460,233,466,231,471,216,465,129,424"/>
+<area shape="rect" href="class_c_texture.html#a1c0b0be3f76dcb75b5834913c00e9dd5" title="Get handle for SRV property" alt="" coords="241,541,383,568"/>
+<area shape="poly" title=" " alt="" coords="106,420,152,474,184,503,218,527,229,533,227,538,215,532,180,507,149,478,102,424"/>
+<area shape="rect" href="class_c_texture.html#a571edcbaff8dd091827edbb5b6ce224d" title="Get name of texture in hlsl" alt="" coords="228,592,396,619"/>
+<area shape="poly" title=" " alt="" coords="100,420,117,455,143,498,177,541,218,578,226,583,223,587,215,582,173,545,139,501,113,458,95,423"/>
+<area shape="rect" href="class_utl_1_1_dx_1_1_shader_string.html#ac09f3e6892358f09c1b2fb1b3fc16f16" title="Get the shader type" alt="" coords="240,643,384,685"/>
+<area shape="poly" title=" " alt="" coords="97,421,113,464,138,520,173,578,194,605,218,629,228,635,224,640,215,633,190,609,168,581,133,523,108,466,92,423"/>
+<area shape="rect" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html#aef88ce43aa13524a42934256030758c2" title="Get resource state controller" alt="" coords="219,709,405,752"/>
+<area shape="poly" title=" " alt="" coords="94,421,106,476,129,550,145,589,165,627,190,664,219,695,222,698,218,702,215,699,185,667,161,630,140,591,124,551,101,477,89,422"/>
+<area shape="rect" href="class_utl_1_1_dx_1_1_s_r_v_property_handle.html#aa6c9fcd31cf9f8192fede561bfbadb2a" title="Is the property instance valid?" alt="" coords="219,776,405,819"/>
+<area shape="poly" title=" " alt="" coords="92,422,100,487,120,578,137,628,158,676,185,722,219,762,221,764,217,768,215,766,181,725,153,679,132,629,115,580,95,488,87,422"/>
+<area shape="rect" href="class_utl_1_1_dx_1_1_res_state_controller.html#ad0fa08b68230b05d7610c69d4054f37f" title="Transition resource state" alt="" coords="223,291,401,333"/>
+<area shape="poly" title=" " alt="" coords="143,376,240,337,242,342,145,381"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="463,123,671,149"/>
+<area shape="poly" title=" " alt="" coords="386,133,447,133,447,139,386,139"/>
+<area shape="poly" title=" " alt="" coords="639,479,678,460,693,446,702,431,711,415,726,398,777,361,780,365,729,402,715,418,707,434,697,449,681,465,641,484"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="727,412,942,455"/>
+<area shape="poly" title=" " alt="" coords="640,476,725,456,726,461,641,482"/>
+<area shape="poly" title=" " alt="" coords="401,313,731,326,731,332,401,318"/>
+<area shape="rect" href="class_c_command_manager.html#a429de9234487d377579c18589f9edc65" title="Add the state controller of the resource with the resource barrier command to the current command lis..." alt="" coords="455,408,679,451"/>
+<area shape="poly" title=" " alt="" coords="374,331,408,350,423,362,433,373,442,383,456,394,466,399,464,404,454,398,439,387,429,376,419,365,406,354,372,336"/>
+<area shape="rect" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52" title="Get command list for graphics" alt="" coords="457,341,677,384"/>
+<area shape="poly" title=" " alt="" coords="402,327,442,335,441,340,401,332"/>
+<area shape="poly" title=" " alt="" coords="677,348,731,342,731,347,678,353"/>
+<area shape="poly" title=" " alt="" coords="651,382,737,405,736,410,650,387"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad09896a56b44419f0b868da44f0328f5" name="ad09896a56b44419f0b868da44f0328f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad09896a56b44419f0b868da44f0328f5">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processing when this component is added to an object </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_ad09896a56b44419f0b868da44f0328f5_cgraph.png" border="0" usemap="#aclass_a_c_graphics_component_ad09896a56b44419f0b868da44f0328f5_cgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_ad09896a56b44419f0b868da44f0328f5_cgraph" id="aclass_a_c_graphics_component_ad09896a56b44419f0b868da44f0328f5_cgraph">
+<area shape="rect" title="Processing when this component is added to an object" alt="" coords="5,5,163,48"/>
+<area shape="rect" href="class_c_scene_registry.html#a787faf02c2f73dfd080e3d1a838b27c2" title="Get feature for thread&#45;safe" alt="" coords="211,13,378,40"/>
+<area shape="poly" title=" " alt="" coords="163,24,195,24,195,29,163,29"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="426,13,634,40"/>
+<area shape="poly" title=" " alt="" coords="379,24,410,24,410,29,379,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae49a188b5cd07abd5d8ef3e06b388e4c" name="ae49a188b5cd07abd5d8ef3e06b388e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae49a188b5cd07abd5d8ef3e06b388e4c">&#9670;&#160;</a></span>GetColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="_utility_for_math_8h.html#aec0a157ba62275f3e25a3ea3e8a9c176">Colorf</a> &amp; ACGraphicsComponent::GetColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get color </p>
+
+<p><a class="el" href="class_a_c_model.html#a1ba725ed5bb553d9c8ace94e2b6f94dd">ACModel</a>で再実装されています。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_ae49a188b5cd07abd5d8ef3e06b388e4c_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_ae49a188b5cd07abd5d8ef3e06b388e4c_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_ae49a188b5cd07abd5d8ef3e06b388e4c_icgraph" id="aclass_a_c_graphics_component_ae49a188b5cd07abd5d8ef3e06b388e4c_icgraph">
+<area shape="rect" title="Get color" alt="" coords="263,27,420,69"/>
+<area shape="rect" href="class_c_dynamic_cb_color.html#a6c93ccea8b98dc9b74ded3b4bf71074b" title="Allocate data" alt="" coords="5,5,215,32"/>
+<area shape="poly" title=" " alt="" coords="247,39,215,35,215,29,248,34"/>
+<area shape="rect" href="class_c_dynamic_cb_material.html#a518fb78082eab6ae600c475c0f42da12" title="Allocate data" alt="" coords="38,56,182,99"/>
+<area shape="poly" title=" " alt="" coords="248,62,182,71,182,66,247,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11907622e291958581ecc628ab688d14" name="a11907622e291958581ecc628ab688d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11907622e291958581ecc628ab688d14">&#9670;&#160;</a></span>GetGameObj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt; ACGraphicsComponent::GetGameObj </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get game object that is the owner of this graphics component </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a11907622e291958581ecc628ab688d14_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a11907622e291958581ecc628ab688d14_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a11907622e291958581ecc628ab688d14_icgraph" id="aclass_a_c_graphics_component_a11907622e291958581ecc628ab688d14_icgraph">
+<area shape="rect" title="Get game object that is the owner of this graphics component" alt="" coords="207,139,364,181"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#ac295bc80f0ff033e39ca4d2416c6695b" title="Allocate data" alt="" coords="5,5,159,48"/>
+<area shape="poly" title=" " alt="" coords="248,130,206,96,157,62,136,51,139,46,160,58,209,92,251,126"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#a427961e85654640a15ef36cef27a8b29" title="Allocate data for billboard" alt="" coords="5,72,159,115"/>
+<area shape="poly" title=" " alt="" coords="203,136,149,118,150,113,205,131"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#ab4fa4bb97bc39b0f1441ab20feb24f88" title="Allocate data for debugging collider shape" alt="" coords="5,139,159,181"/>
+<area shape="poly" title=" " alt="" coords="191,163,159,163,159,157,191,157"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#a1e75e1ec732e0e5d8ce50dad70f110db" title="Allocate data for sprite 3D" alt="" coords="5,205,159,248"/>
+<area shape="poly" title=" " alt="" coords="205,189,150,207,149,202,203,184"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#aebd3e9d52c465127e119c96d725814be" title="Allocate data for sprite UI" alt="" coords="5,272,159,315"/>
+<area shape="poly" title=" " alt="" coords="251,194,209,228,160,262,139,274,136,269,157,258,206,224,248,190"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2d0da04f004c80508383d71a7ff285af" name="a2d0da04f004c80508383d71a7ff285af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d0da04f004c80508383d71a7ff285af">&#9670;&#160;</a></span>GetLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> ACGraphicsComponent::GetLayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get graphics layer to which this class belongs </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a2d0da04f004c80508383d71a7ff285af_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a2d0da04f004c80508383d71a7ff285af_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a2d0da04f004c80508383d71a7ff285af_icgraph" id="aclass_a_c_graphics_component_a2d0da04f004c80508383d71a7ff285af_icgraph">
+<area shape="rect" title="Get graphics layer to which this class belongs" alt="" coords="421,39,578,81"/>
+<area shape="rect" href="class_c_graphics_layer_registry.html#a728fef001b692ad089ea9b33c0733aba" title="Exclude graphcis component from the registry" alt="" coords="211,5,373,48"/>
+<area shape="poly" title=" " alt="" coords="405,48,373,42,374,37,406,42"/>
+<area shape="rect" href="class_c_graphics_layer_registry.html#ae71fd8d6d5d2e40e424feabeb5146050" title="Register graphics component in the registry" alt="" coords="211,72,373,115"/>
+<area shape="poly" title=" " alt="" coords="406,78,374,83,373,78,405,72"/>
+<area shape="rect" href="class_a_c_graphics_component.html#accacea0b02e3091b401ceb7f4cc2ef4b" title="Belong to a new layer" alt="" coords="5,39,163,81"/>
+<area shape="poly" title=" " alt="" coords="195,45,164,50,163,45,195,40"/>
+<area shape="poly" title=" " alt="" coords="195,80,163,75,164,70,195,75"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9efdbb742727244d13d9b263188af035" name="a9efdbb742727244d13d9b263188af035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9efdbb742727244d13d9b263188af035">&#9670;&#160;</a></span>GetMaterialNumeric()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_per_mesh_material_numeric.html">PerMeshMaterialNumeric</a> &amp; ACGraphicsComponent::GetMaterialNumeric </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get numeric part of the material </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">meshIndex</td><td>Index of all meshes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Pointer to the material </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a9efdbb742727244d13d9b263188af035_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a9efdbb742727244d13d9b263188af035_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a9efdbb742727244d13d9b263188af035_icgraph" id="aclass_a_c_graphics_component_a9efdbb742727244d13d9b263188af035_icgraph">
+<area shape="rect" title="Get numeric part of the material" alt="" coords="197,5,354,48"/>
+<area shape="rect" href="class_c_dynamic_cb_material.html#a518fb78082eab6ae600c475c0f42da12" title="Allocate data" alt="" coords="5,5,149,48"/>
+<area shape="poly" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a388fdd5f49c6e0d4d62ce3b02522629d" name="a388fdd5f49c6e0d4d62ce3b02522629d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388fdd5f49c6e0d4d62ce3b02522629d">&#9670;&#160;</a></span>GetMeshBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_c_mesh_buffer.html">CMeshBuffer</a> * ACGraphicsComponent::GetMeshBuffer </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get mesh buffer </p>
+
+</div>
+</div>
+<a id="a545bba36a3c30ed07c4969e9e0fde6c6" name="a545bba36a3c30ed07c4969e9e0fde6c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a545bba36a3c30ed07c4969e9e0fde6c6">&#9670;&#160;</a></span>GetMeshKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a> ACGraphicsComponent::GetMeshKey </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a key for mesh buffer </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a545bba36a3c30ed07c4969e9e0fde6c6_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a545bba36a3c30ed07c4969e9e0fde6c6_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a545bba36a3c30ed07c4969e9e0fde6c6_icgraph" id="aclass_a_c_graphics_component_a545bba36a3c30ed07c4969e9e0fde6c6_icgraph">
+<area shape="rect" title="Get a key for mesh buffer" alt="" coords="263,72,420,115"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a8124cae7f185f361950dffa4202adbf7" title="Allocate data for model" alt="" coords="31,5,189,48"/>
+<area shape="poly" title=" " alt="" coords="250,70,186,51,188,46,251,65"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a166a7be93cfea8497df2cc7698254de5" title="Create buffer for model" alt="" coords="31,72,189,115"/>
+<area shape="poly" title=" " alt="" coords="247,96,189,96,189,91,247,91"/>
+<area shape="rect" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a8ae21aa52398014f871a12c66bc02398" title="Release strutured buffers corresponding to the component sent" alt="" coords="5,139,215,181"/>
+<area shape="poly" title=" " alt="" coords="251,122,188,141,186,135,250,117"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af5f8fdd8e71b45c11b5ac589740db1b4" name="af5f8fdd8e71b45c11b5ac589740db1b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5f8fdd8e71b45c11b5ac589740db1b4">&#9670;&#160;</a></span>GetMeshNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT ACGraphicsComponent::GetMeshNum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of all meshes </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_af5f8fdd8e71b45c11b5ac589740db1b4_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_af5f8fdd8e71b45c11b5ac589740db1b4_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_af5f8fdd8e71b45c11b5ac589740db1b4_icgraph" id="aclass_a_c_graphics_component_af5f8fdd8e71b45c11b5ac589740db1b4_icgraph">
+<area shape="rect" title="Get the number of all meshes" alt="" coords="263,39,420,81"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a166a7be93cfea8497df2cc7698254de5" title="Create buffer for model" alt="" coords="31,5,189,48"/>
+<area shape="poly" title=" " alt="" coords="247,49,189,41,189,35,248,44"/>
+<area shape="rect" href="class_a_c_dynamic_sb_allocator_per_mesh.html#a8ae21aa52398014f871a12c66bc02398" title="Release strutured buffers corresponding to the component sent" alt="" coords="5,72,215,115"/>
+<area shape="poly" title=" " alt="" coords="248,76,215,81,215,76,247,71"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a73139bd175f3a9a2fc2f16af0971693d" name="a73139bd175f3a9a2fc2f16af0971693d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73139bd175f3a9a2fc2f16af0971693d">&#9670;&#160;</a></span>GetTexCoordParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_utility_for_math_8h.html#a18c8f722481c3a3852a798dd00ca2c8d">Vector4f</a> &amp; ACGraphicsComponent::GetTexCoordParam </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get parameter for texture coordinate (xy = tiling, zw = offset) </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a73139bd175f3a9a2fc2f16af0971693d_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a73139bd175f3a9a2fc2f16af0971693d_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a73139bd175f3a9a2fc2f16af0971693d_icgraph" id="aclass_a_c_graphics_component_a73139bd175f3a9a2fc2f16af0971693d_icgraph">
+<area shape="rect" title="Get parameter for texture coordinate (xy = tiling, zw = offset)" alt="" coords="244,5,401,48"/>
+<area shape="rect" href="class_c_dynamic_cb_tex_coord_param.html#ae5c9cdf68c3c712e34b1f732ac3d66b3" title="Allocate data" alt="" coords="5,5,196,48"/>
+<area shape="poly" title=" " alt="" coords="228,29,196,29,196,24,228,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0bb59722b7b70a60f5a668b257279103" name="a0bb59722b7b70a60f5a668b257279103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb59722b7b70a60f5a668b257279103">&#9670;&#160;</a></span>GetTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_texture.html">CTexture</a> * ACGraphicsComponent::GetTexture </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>texIndexPerMesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get texture </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">meshIndex</td><td>Index of all meshes </td></tr>
+    <tr><td class="paramname">texIndexPerMesh</td><td>Index of textures per mesh </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Pointer to the texture </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a0bb59722b7b70a60f5a668b257279103_cgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a0bb59722b7b70a60f5a668b257279103_cgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a0bb59722b7b70a60f5a668b257279103_cgraph" id="aclass_a_c_graphics_component_a0bb59722b7b70a60f5a668b257279103_cgraph">
+<area shape="rect" title="Get texture" alt="" coords="5,5,163,48"/>
+<area shape="rect" href="class_c_unique_ptr.html#ae221025865772158391c36b66485ccb3" title="Get instance" alt="" coords="211,13,327,40"/>
+<area shape="poly" title=" " alt="" coords="163,24,195,24,195,29,163,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a0bb59722b7b70a60f5a668b257279103_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a0bb59722b7b70a60f5a668b257279103_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a0bb59722b7b70a60f5a668b257279103_icgraph" id="aclass_a_c_graphics_component_a0bb59722b7b70a60f5a668b257279103_icgraph">
+<area shape="rect" title="Get texture" alt="" coords="187,5,344,48"/>
+<area shape="rect" href="class_a_c_sprite.html#ab8e50a82a7298b03becdc2337891b917" title="Constructor" alt="" coords="5,13,139,40"/>
+<area shape="poly" title=" " alt="" coords="171,29,139,29,139,24,171,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4b2c3a110f02516f9075141e6cccd4b0" name="a4b2c3a110f02516f9075141e6cccd4b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b2c3a110f02516f9075141e6cccd4b0">&#9670;&#160;</a></span>GetType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_graphics_component_8h.html#aa60a96503a2d2b84e2e2b7c430a32b13">GraphicsComponentType</a> ACGraphicsComponent::GetType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get type of this graphics component </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a4b2c3a110f02516f9075141e6cccd4b0_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a4b2c3a110f02516f9075141e6cccd4b0_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a4b2c3a110f02516f9075141e6cccd4b0_icgraph" id="aclass_a_c_graphics_component_a4b2c3a110f02516f9075141e6cccd4b0_icgraph">
+<area shape="rect" title="Get type of this graphics component" alt="" coords="421,39,578,81"/>
+<area shape="rect" href="class_c_graphics_layer_registry.html#a728fef001b692ad089ea9b33c0733aba" title="Exclude graphcis component from the registry" alt="" coords="211,5,373,48"/>
+<area shape="poly" title=" " alt="" coords="405,48,373,42,374,37,406,42"/>
+<area shape="rect" href="class_c_graphics_layer_registry.html#ae71fd8d6d5d2e40e424feabeb5146050" title="Register graphics component in the registry" alt="" coords="211,72,373,115"/>
+<area shape="poly" title=" " alt="" coords="406,78,374,83,373,78,405,72"/>
+<area shape="rect" href="class_a_c_graphics_component.html#accacea0b02e3091b401ceb7f4cc2ef4b" title="Belong to a new layer" alt="" coords="5,39,163,81"/>
+<area shape="poly" title=" " alt="" coords="195,45,164,50,163,45,195,40"/>
+<area shape="poly" title=" " alt="" coords="195,80,163,75,164,70,195,75"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae6835e365df082d9776996f5e16150ac" name="ae6835e365df082d9776996f5e16150ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6835e365df082d9776996f5e16150ac">&#9670;&#160;</a></span>InitializeMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::InitializeMesh </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>texIndexPerMesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepare arrays of the meshes and its materials </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">meshNum</td><td>The number of all meshes </td></tr>
+    <tr><td class="paramname">texIndexPerMesh</td><td>The number of textures per mesh </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_ae6835e365df082d9776996f5e16150ac_cgraph.png" border="0" usemap="#aclass_a_c_graphics_component_ae6835e365df082d9776996f5e16150ac_cgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_ae6835e365df082d9776996f5e16150ac_cgraph" id="aclass_a_c_graphics_component_ae6835e365df082d9776996f5e16150ac_cgraph">
+<area shape="rect" title="Prepare arrays of the meshes and its materials" alt="" coords="5,23,163,65"/>
+<area shape="rect" href="class_c_int_key_generater.html#af4834f22e0b0649e5aac1f28304b2389" title="Generate a key" alt="" coords="211,5,419,32"/>
+<area shape="poly" title=" " alt="" coords="163,33,195,29,195,34,164,38"/>
+<area shape="rect" href="class_c_unique_ptr.html#a214aca2b0021fdf82a55034e39f1a8f9" title="Make unique pointer" alt="" coords="251,56,379,83"/>
+<area shape="poly" title=" " alt="" coords="164,50,236,58,235,63,163,55"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_ae6835e365df082d9776996f5e16150ac_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_ae6835e365df082d9776996f5e16150ac_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_ae6835e365df082d9776996f5e16150ac_icgraph" id="aclass_a_c_graphics_component_ae6835e365df082d9776996f5e16150ac_icgraph">
+<area shape="rect" title="Prepare arrays of the meshes and its materials" alt="" coords="505,152,662,195"/>
+<area shape="rect" href="class_a_c_sprite.html#ab8e50a82a7298b03becdc2337891b917" title="Constructor" alt="" coords="280,5,414,32"/>
+<area shape="poly" title=" " alt="" coords="557,141,513,91,486,67,456,46,413,30,415,25,458,42,489,63,517,88,561,138"/>
+<area shape="rect" href="class_c_color_only_shape.html#aada7cecd529128f34a8d253507362215" title="Constructor" alt="" coords="248,56,446,99"/>
+<area shape="poly" title=" " alt="" coords="529,147,456,113,425,102,426,97,458,108,531,142"/>
+<area shape="rect" href="class_c_debug_collider_shape.html#abe7e81543dbd6d6177cc1de86cc60938" title="Constructor" alt="" coords="269,123,425,165"/>
+<area shape="poly" title=" " alt="" coords="489,164,425,156,425,151,490,159"/>
+<area shape="rect" href="class_a_c_model.html#a8e7d56feee9de06ef5922326b13fe907" title="Create opacity mesh data and texture data" alt="" coords="248,189,446,216"/>
+<area shape="poly" title=" " alt="" coords="489,188,446,193,445,188,489,182"/>
+<area shape="rect" href="class_a_c_model.html#a997a74b08255a81dce51b16bdc50c115" title="Create transparent mesh data and texture data" alt="" coords="237,240,457,267"/>
+<area shape="poly" title=" " alt="" coords="525,204,458,231,417,242,416,237,456,225,523,199"/>
+<area shape="rect" href="class_c_tex_shape.html#af8ed1a66936a293ec274b3ab72780963" title="Constructor" alt="" coords="265,291,429,317"/>
+<area shape="poly" title=" " alt="" coords="554,208,511,246,458,281,429,293,427,288,456,276,508,242,550,204"/>
+<area shape="rect" href="class_c_basic_model.html#a89b929950e49c70cfe47261de4a333d2" title="Constructor" alt="" coords="5,160,189,187"/>
+<area shape="poly" title=" " alt="" coords="232,192,189,187,190,181,233,187"/>
+<area shape="rect" href="class_c_skeletal_model.html#a395eeab5a0b4af93475f010a411f26f3" title="Constructor" alt="" coords="9,211,185,253"/>
+<area shape="poly" title=" " alt="" coords="233,219,186,224,185,219,232,213"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2d2e1ec2ccd18538cdfd37f4b17d5031" name="a2d2e1ec2ccd18538cdfd37f4b17d5031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d2e1ec2ccd18538cdfd37f4b17d5031">&#9670;&#160;</a></span>IsActiveOverall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ACGraphicsComponent::IsActiveOverall </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this graphics component itself and the game object that owns it active? </p>
+
+<p><a class="el" href="class_a_c_model.html#ac94e8e10b6d60344b57ce1bc56f2b04f">ACModel</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a445855ed7d28b7ad17d2e9307abb1b15" name="a445855ed7d28b7ad17d2e9307abb1b15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a445855ed7d28b7ad17d2e9307abb1b15">&#9670;&#160;</a></span>IsActiveSelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ACGraphicsComponent::IsActiveSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is this graphics component itself active? </p>
+
+<p><a class="el" href="class_a_c_model.html#a19f161f8069f8adeb6232e4a9a075a13">ACModel</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="abcf55893b5a3a941e66f2763a179222b" name="abcf55893b5a3a941e66f2763a179222b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcf55893b5a3a941e66f2763a179222b">&#9670;&#160;</a></span>IsDrawCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ACGraphicsComponent::IsDrawCondition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Drawing conditions set in derived classes </p>
+<dl class="section return"><dt>戻り値</dt><dd>Can this graphcis component draw? </dd></dl>
+
+<p><a class="el" href="class_c_debug_collider_shape.html#adac243e6f20454192cfa66a2df79ec0c">CDebugColliderShape</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="aa14e03af3d7d03b5513558fa9a3375b1" name="aa14e03af3d7d03b5513558fa9a3375b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa14e03af3d7d03b5513558fa9a3375b1">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Process to be called at instance destruction </p>
+
+<p><a class="el" href="class_a_c_model.html#a0f06d54b3e622c46f9d1bb9dd6111b89">ACModel</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_aa14e03af3d7d03b5513558fa9a3375b1_cgraph.png" border="0" usemap="#aclass_a_c_graphics_component_aa14e03af3d7d03b5513558fa9a3375b1_cgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_aa14e03af3d7d03b5513558fa9a3375b1_cgraph" id="aclass_a_c_graphics_component_aa14e03af3d7d03b5513558fa9a3375b1_cgraph">
+<area shape="rect" title="Process to be called at instance destruction" alt="" coords="5,5,163,48"/>
+<area shape="rect" href="class_c_int_key_generater.html#a50819e372a21544f8bc41df43a9ebc96" title="Release a key" alt="" coords="211,13,413,40"/>
+<area shape="poly" title=" " alt="" coords="163,24,195,24,195,29,163,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_aa14e03af3d7d03b5513558fa9a3375b1_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_aa14e03af3d7d03b5513558fa9a3375b1_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_aa14e03af3d7d03b5513558fa9a3375b1_icgraph" id="aclass_a_c_graphics_component_aa14e03af3d7d03b5513558fa9a3375b1_icgraph">
+<area shape="rect" title="Process to be called at instance destruction" alt="" coords="198,5,355,48"/>
+<area shape="rect" href="class_a_c_model.html#a0f06d54b3e622c46f9d1bb9dd6111b89" title="Process to be called at instance destruction" alt="" coords="5,13,150,40"/>
+<area shape="poly" title=" " alt="" coords="182,29,150,29,150,24,182,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af46c7382df0dc09611bb4d2291fd7c53" name="af46c7382df0dc09611bb4d2291fd7c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af46c7382df0dc09611bb4d2291fd7c53">&#9670;&#160;</a></span>PreDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACGraphicsComponent::PreDraw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pre drawing processing </p>
+
+<p><a class="el" href="class_c_skeletal_model.html#a778fecdad62f78c631516c39d1f06b01">CSkeletalModel</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a4b6a3ddf26c12b8c5e42d3cf574a8e96" name="a4b6a3ddf26c12b8c5e42d3cf574a8e96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b6a3ddf26c12b8c5e42d3cf574a8e96">&#9670;&#160;</a></span>SetColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::SetColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#aec0a157ba62275f3e25a3ea3e8a9c176">Colorf</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set color </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a4b6a3ddf26c12b8c5e42d3cf574a8e96_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a4b6a3ddf26c12b8c5e42d3cf574a8e96_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a4b6a3ddf26c12b8c5e42d3cf574a8e96_icgraph" id="aclass_a_c_graphics_component_a4b6a3ddf26c12b8c5e42d3cf574a8e96_icgraph">
+<area shape="rect" title="Set color" alt="" coords="252,39,409,81"/>
+<area shape="rect" href="class_c_color_only_shape.html#aada7cecd529128f34a8d253507362215" title="Constructor" alt="" coords="5,5,204,48"/>
+<area shape="poly" title=" " alt="" coords="236,49,204,44,204,39,237,44"/>
+<area shape="rect" href="class_c_debug_collider_shape.html#abe7e81543dbd6d6177cc1de86cc60938" title="Constructor" alt="" coords="27,72,182,115"/>
+<area shape="poly" title=" " alt="" coords="237,76,183,84,182,79,236,71"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4882f101596b39ff4170e3c38df122fd" name="a4882f101596b39ff4170e3c38df122fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4882f101596b39ff4170e3c38df122fd">&#9670;&#160;</a></span>SetIsActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::SetIsActive </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isActive</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set active flag </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a4882f101596b39ff4170e3c38df122fd_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a4882f101596b39ff4170e3c38df122fd_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a4882f101596b39ff4170e3c38df122fd_icgraph" id="aclass_a_c_graphics_component_a4882f101596b39ff4170e3c38df122fd_icgraph">
+<area shape="rect" title="Set active flag" alt="" coords="204,5,361,48"/>
+<area shape="rect" href="class_c_object_hierarchy_data.html#a81a699fd91386ba628488e295adaa87c" title="Set collider drawing on/off" alt="" coords="5,5,156,48"/>
+<area shape="poly" title=" " alt="" coords="188,29,156,29,156,24,188,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="accacea0b02e3091b401ceb7f4cc2ef4b" name="accacea0b02e3091b401ceb7f4cc2ef4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accacea0b02e3091b401ceb7f4cc2ef4b">&#9670;&#160;</a></span>SetLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::SetLayer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a>&#160;</td>
+          <td class="paramname"><em>layer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Belong to a new layer </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>Layer to be belonged </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_accacea0b02e3091b401ceb7f4cc2ef4b_cgraph.png" border="0" usemap="#aclass_a_c_graphics_component_accacea0b02e3091b401ceb7f4cc2ef4b_cgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_accacea0b02e3091b401ceb7f4cc2ef4b_cgraph" id="aclass_a_c_graphics_component_accacea0b02e3091b401ceb7f4cc2ef4b_cgraph">
+<area shape="rect" title="Belong to a new layer" alt="" coords="5,72,163,115"/>
+<area shape="rect" href="class_c_graphics_layer_registry.html#a728fef001b692ad089ea9b33c0733aba" title="Exclude graphcis component from the registry" alt="" coords="211,39,373,81"/>
+<area shape="poly" title=" " alt="" coords="162,78,195,73,195,78,163,83"/>
+<area shape="rect" href="class_c_graphics_layer_registry.html#ae71fd8d6d5d2e40e424feabeb5146050" title="Register graphics component in the registry" alt="" coords="211,105,373,148"/>
+<area shape="poly" title=" " alt="" coords="163,103,195,109,195,114,162,109"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a2d0da04f004c80508383d71a7ff285af" title="Get graphics layer to which this class belongs" alt="" coords="446,5,603,48"/>
+<area shape="poly" title=" " alt="" coords="373,46,430,37,431,43,373,51"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a4b2c3a110f02516f9075141e6cccd4b0" title="Get type of this graphics component" alt="" coords="446,72,603,115"/>
+<area shape="poly" title=" " alt="" coords="373,69,431,77,430,83,373,74"/>
+<area shape="rect" href="struct_each_graphics_component_vector.html#aecd7bb2c3c02f8519b740f31c77596da" title="Get dynamic array corresponding to the specified type" alt="" coords="421,139,628,181"/>
+<area shape="poly" title=" " alt="" coords="351,79,374,91,398,108,422,124,435,130,432,135,420,129,395,113,372,96,349,84"/>
+<area shape="poly" title=" " alt="" coords="349,102,372,91,395,74,420,58,432,52,435,57,422,62,398,79,374,96,351,107"/>
+<area shape="poly" title=" " alt="" coords="373,112,430,104,431,109,373,118"/>
+<area shape="poly" title=" " alt="" coords="373,136,406,140,405,146,373,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a993db977d5efc6b131a014f27973da5c" name="a993db977d5efc6b131a014f27973da5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993db977d5efc6b131a014f27973da5c">&#9670;&#160;</a></span>SetMeshInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::SetMeshInfo </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a> &gt;&#160;</td>
+          <td class="paramname"><em>vertex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a> &gt;&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3D_PRIMITIVE_TOPOLOGY&#160;</td>
+          <td class="paramname"><em>topology</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set mesh information </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">meshIndex</td><td>Index of all meshes </td></tr>
+    <tr><td class="paramname">vertex</td><td>Pointer to vertex buffer </td></tr>
+    <tr><td class="paramname">index</td><td>Pointer to index buffer </td></tr>
+    <tr><td class="paramname">topology</td><td>Topology type </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a993db977d5efc6b131a014f27973da5c_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a993db977d5efc6b131a014f27973da5c_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a993db977d5efc6b131a014f27973da5c_icgraph" id="aclass_a_c_graphics_component_a993db977d5efc6b131a014f27973da5c_icgraph">
+<area shape="rect" title="Set mesh information" alt="" coords="505,152,662,195"/>
+<area shape="rect" href="class_a_c_sprite.html#ab8e50a82a7298b03becdc2337891b917" title="Constructor" alt="" coords="280,5,414,32"/>
+<area shape="poly" title=" " alt="" coords="557,141,513,91,486,67,456,46,413,30,415,25,458,42,489,63,517,88,561,138"/>
+<area shape="rect" href="class_c_color_only_shape.html#aada7cecd529128f34a8d253507362215" title="Constructor" alt="" coords="248,56,446,99"/>
+<area shape="poly" title=" " alt="" coords="529,147,456,113,425,102,426,97,458,108,531,142"/>
+<area shape="rect" href="class_c_debug_collider_shape.html#abe7e81543dbd6d6177cc1de86cc60938" title="Constructor" alt="" coords="269,123,425,165"/>
+<area shape="poly" title=" " alt="" coords="489,164,425,156,425,151,490,159"/>
+<area shape="rect" href="class_a_c_model.html#a8e7d56feee9de06ef5922326b13fe907" title="Create opacity mesh data and texture data" alt="" coords="248,189,446,216"/>
+<area shape="poly" title=" " alt="" coords="489,188,446,193,445,188,489,182"/>
+<area shape="rect" href="class_a_c_model.html#a997a74b08255a81dce51b16bdc50c115" title="Create transparent mesh data and texture data" alt="" coords="237,240,457,267"/>
+<area shape="poly" title=" " alt="" coords="525,204,458,231,417,242,416,237,456,225,523,199"/>
+<area shape="rect" href="class_c_tex_shape.html#af8ed1a66936a293ec274b3ab72780963" title="Constructor" alt="" coords="265,291,429,317"/>
+<area shape="poly" title=" " alt="" coords="554,208,511,246,458,281,429,293,427,288,456,276,508,242,550,204"/>
+<area shape="rect" href="class_c_basic_model.html#a89b929950e49c70cfe47261de4a333d2" title="Constructor" alt="" coords="5,160,189,187"/>
+<area shape="poly" title=" " alt="" coords="232,192,189,187,190,181,233,187"/>
+<area shape="rect" href="class_c_skeletal_model.html#a395eeab5a0b4af93475f010a411f26f3" title="Constructor" alt="" coords="9,211,185,253"/>
+<area shape="poly" title=" " alt="" coords="233,219,186,224,185,219,232,213"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac3ec2eb65e83103f7e6929ff8d4789ca" name="ac3ec2eb65e83103f7e6929ff8d4789ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ec2eb65e83103f7e6929ff8d4789ca">&#9670;&#160;</a></span>SetNumericMaterialToAllMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::SetNumericMaterialToAllMesh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_per_mesh_material_numeric.html">PerMeshMaterialNumeric</a> &amp;&#160;</td>
+          <td class="paramname"><em>numeric</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set numeric part of the material to all meshes </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numeric</td><td>Numeric part of the material </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a912aba43aff9d9063b36f75bd316e51b" name="a912aba43aff9d9063b36f75bd316e51b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912aba43aff9d9063b36f75bd316e51b">&#9670;&#160;</a></span>SetNumericPartMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::SetNumericPartMaterial </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_per_mesh_material_numeric.html">PerMeshMaterialNumeric</a>&#160;</td>
+          <td class="paramname"><em>numeric</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set numeric part of the material </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">meshIndex</td><td>Index of all meshes </td></tr>
+    <tr><td class="paramname">numeric</td><td>Numeric part of the material </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Pointer to the material </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a912aba43aff9d9063b36f75bd316e51b_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a912aba43aff9d9063b36f75bd316e51b_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a912aba43aff9d9063b36f75bd316e51b_icgraph" id="aclass_a_c_graphics_component_a912aba43aff9d9063b36f75bd316e51b_icgraph">
+<area shape="rect" title="Set numeric part of the material" alt="" coords="505,52,672,95"/>
+<area shape="rect" href="class_a_c_model.html#a8e7d56feee9de06ef5922326b13fe907" title="Create opacity mesh data and texture data" alt="" coords="248,35,446,61"/>
+<area shape="poly" title=" " alt="" coords="489,66,446,61,446,56,490,60"/>
+<area shape="rect" href="class_a_c_model.html#a997a74b08255a81dce51b16bdc50c115" title="Create transparent mesh data and texture data" alt="" coords="237,85,457,112"/>
+<area shape="poly" title=" " alt="" coords="490,86,458,90,457,84,489,81"/>
+<area shape="rect" href="class_c_basic_model.html#a89b929950e49c70cfe47261de4a333d2" title="Constructor" alt="" coords="5,5,189,32"/>
+<area shape="poly" title=" " alt="" coords="232,37,189,32,190,27,233,32"/>
+<area shape="rect" href="class_c_skeletal_model.html#a395eeab5a0b4af93475f010a411f26f3" title="Constructor" alt="" coords="9,56,185,99"/>
+<area shape="poly" title=" " alt="" coords="233,64,186,70,185,64,232,59"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a998e35b7460dd55e425537867615c06d" name="a998e35b7460dd55e425537867615c06d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a998e35b7460dd55e425537867615c06d">&#9670;&#160;</a></span>SetTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::SetTexture </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>texIndexPerMesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_texture.html">CTexture</a>&#160;</td>
+          <td class="paramname"><em>tex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set texture </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">meshIndex</td><td>Index of all meshes </td></tr>
+    <tr><td class="paramname">texIndexPerMesh</td><td>Index of textures per mesh </td></tr>
+    <tr><td class="paramname">tex</td><td>Texture to use </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a998e35b7460dd55e425537867615c06d_cgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a998e35b7460dd55e425537867615c06d_cgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a998e35b7460dd55e425537867615c06d_cgraph" id="aclass_a_c_graphics_component_a998e35b7460dd55e425537867615c06d_cgraph">
+<area shape="rect" title="Set texture" alt="" coords="5,5,163,48"/>
+<area shape="rect" href="class_c_unique_ptr.html#a214aca2b0021fdf82a55034e39f1a8f9" title="Make unique pointer" alt="" coords="211,13,338,40"/>
+<area shape="poly" title=" " alt="" coords="163,24,195,24,195,29,163,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a998e35b7460dd55e425537867615c06d_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a998e35b7460dd55e425537867615c06d_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a998e35b7460dd55e425537867615c06d_icgraph" id="aclass_a_c_graphics_component_a998e35b7460dd55e425537867615c06d_icgraph">
+<area shape="rect" title="Set texture" alt="" coords="505,73,662,116"/>
+<area shape="rect" href="class_a_c_sprite.html#ab8e50a82a7298b03becdc2337891b917" title="Constructor" alt="" coords="280,5,414,32"/>
+<area shape="poly" title=" " alt="" coords="519,70,456,47,413,35,414,30,458,41,521,65"/>
+<area shape="rect" href="class_a_c_model.html#a8e7d56feee9de06ef5922326b13fe907" title="Create opacity mesh data and texture data" alt="" coords="248,56,446,83"/>
+<area shape="poly" title=" " alt="" coords="489,87,446,83,446,77,489,82"/>
+<area shape="rect" href="class_a_c_model.html#a997a74b08255a81dce51b16bdc50c115" title="Create transparent mesh data and texture data" alt="" coords="237,107,457,133"/>
+<area shape="poly" title=" " alt="" coords="490,107,458,111,457,106,489,102"/>
+<area shape="rect" href="class_c_tex_shape.html#af8ed1a66936a293ec274b3ab72780963" title="Constructor" alt="" coords="265,157,429,184"/>
+<area shape="poly" title=" " alt="" coords="521,125,458,148,416,159,415,154,456,143,519,120"/>
+<area shape="rect" href="class_c_basic_model.html#a89b929950e49c70cfe47261de4a333d2" title="Constructor" alt="" coords="5,27,189,53"/>
+<area shape="poly" title=" " alt="" coords="232,59,189,53,190,48,233,53"/>
+<area shape="rect" href="class_c_skeletal_model.html#a395eeab5a0b4af93475f010a411f26f3" title="Constructor" alt="" coords="9,77,185,120"/>
+<area shape="poly" title=" " alt="" coords="233,85,186,91,185,86,232,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adea1c54e724428d7ea3d1d8e36e2392d" name="adea1c54e724428d7ea3d1d8e36e2392d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adea1c54e724428d7ea3d1d8e36e2392d">&#9670;&#160;</a></span>SetUVOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::SetUVOffset </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#a52b5008b61e10ae145e2a0555ece28f6">Vector2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set uv offset </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_adea1c54e724428d7ea3d1d8e36e2392d_cgraph.png" border="0" usemap="#aclass_a_c_graphics_component_adea1c54e724428d7ea3d1d8e36e2392d_cgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_adea1c54e724428d7ea3d1d8e36e2392d_cgraph" id="aclass_a_c_graphics_component_adea1c54e724428d7ea3d1d8e36e2392d_cgraph">
+<area shape="rect" title="Set uv offset" alt="" coords="5,73,163,116"/>
+<area shape="rect" href="struct_vector.html#afddecbe9897818c30f985b0ab9cc526e" title="Get the fourth element" alt="" coords="211,5,287,32"/>
+<area shape="poly" title=" " alt="" coords="131,70,203,37,205,41,133,75"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="212,56,286,83"/>
+<area shape="poly" title=" " alt="" coords="163,80,196,75,197,80,164,85"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="212,107,286,133"/>
+<area shape="poly" title=" " alt="" coords="164,104,197,109,196,115,163,109"/>
+<area shape="rect" href="struct_vector.html#a4ba4ff1b2c182f27529be07f82e290fe" title="Get the third element" alt="" coords="212,157,286,184"/>
+<area shape="poly" title=" " alt="" coords="133,114,205,148,203,153,131,119"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6947a32dfe5d33165e8dd0bf0b76dd7c" name="a6947a32dfe5d33165e8dd0bf0b76dd7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6947a32dfe5d33165e8dd0bf0b76dd7c">&#9670;&#160;</a></span>SetUVTiling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::SetUVTiling </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#a52b5008b61e10ae145e2a0555ece28f6">Vector2f</a> &amp;&#160;</td>
+          <td class="paramname"><em>tiling</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set uv tiling </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a6947a32dfe5d33165e8dd0bf0b76dd7c_cgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a6947a32dfe5d33165e8dd0bf0b76dd7c_cgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a6947a32dfe5d33165e8dd0bf0b76dd7c_cgraph" id="aclass_a_c_graphics_component_a6947a32dfe5d33165e8dd0bf0b76dd7c_cgraph">
+<area shape="rect" title="Set uv tiling" alt="" coords="5,23,163,65"/>
+<area shape="rect" href="struct_vector.html#a4407486f92778f38fd9163d559026b91" title="Get the first element" alt="" coords="211,5,285,32"/>
+<area shape="poly" title=" " alt="" coords="163,29,195,24,196,29,163,34"/>
+<area shape="rect" href="struct_vector.html#a181d70c39c99dc2377df11e7126a6baa" title="Get the second element" alt="" coords="211,56,285,83"/>
+<area shape="poly" title=" " alt="" coords="163,54,196,59,195,64,163,59"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a27acf950518c654ba6919cc8c53172c2" name="a27acf950518c654ba6919cc8c53172c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27acf950518c654ba6919cc8c53172c2">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACGraphicsComponent::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing for the first draw frame </p>
+
+<p><a class="el" href="class_a_c_model.html#a54d21430bc1c5635b9ff9f3c488bc66c">ACModel</a>で再実装されています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a27acf950518c654ba6919cc8c53172c2_cgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a27acf950518c654ba6919cc8c53172c2_cgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a27acf950518c654ba6919cc8c53172c2_cgraph" id="aclass_a_c_graphics_component_a27acf950518c654ba6919cc8c53172c2_cgraph">
+<area shape="rect" title="Processing for the first draw frame" alt="" coords="5,5,163,48"/>
+<area shape="rect" href="class_c_scene_registry.html#a787faf02c2f73dfd080e3d1a838b27c2" title="Get feature for thread&#45;safe" alt="" coords="211,13,378,40"/>
+<area shape="poly" title=" " alt="" coords="163,24,195,24,195,29,163,29"/>
+<area shape="rect" href="class_a_c_singleton_base.html#a86122d51b9f611ffbc300eb790c3dabf" title="Get singleton instance" alt="" coords="426,13,634,40"/>
+<area shape="poly" title=" " alt="" coords="379,24,410,24,410,29,379,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_graphics_component_a27acf950518c654ba6919cc8c53172c2_icgraph.png" border="0" usemap="#aclass_a_c_graphics_component_a27acf950518c654ba6919cc8c53172c2_icgraph" alt=""/></div>
+<map name="aclass_a_c_graphics_component_a27acf950518c654ba6919cc8c53172c2_icgraph" id="aclass_a_c_graphics_component_a27acf950518c654ba6919cc8c53172c2_icgraph">
+<area shape="rect" title="Processing for the first draw frame" alt="" coords="164,5,321,48"/>
+<area shape="rect" href="class_a_c_model.html#a54d21430bc1c5635b9ff9f3c488bc66c" title="Processing for the first draw frame" alt="" coords="5,13,116,40"/>
+<area shape="poly" title=" " alt="" coords="148,29,116,29,116,24,148,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a9c64ac1a5a38b522af5acea05cc1a50f" name="a9c64ac1a5a38b522af5acea05cc1a50f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c64ac1a5a38b522af5acea05cc1a50f">&#9670;&#160;</a></span>m_gameObj</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt;<a class="el" href="class_c_game_object.html">CGameObject</a>&gt; ACGraphicsComponent::m_gameObj</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Game object that is the owner of this graphics component </p>
+
+</div>
+</div>
+<a id="ac6461ca45132ed0b6bed3cf865ae8bd7" name="ac6461ca45132ed0b6bed3cf865ae8bd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6461ca45132ed0b6bed3cf865ae8bd7">&#9670;&#160;</a></span>m_layer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> ACGraphicsComponent::m_layer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Graphics layer to which this class belongs </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_graphics_component_8h_source.html">GraphicsComponent.h</a></li>
+<li><a class="el" href="_graphics_component_8cpp.html">GraphicsComponent.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

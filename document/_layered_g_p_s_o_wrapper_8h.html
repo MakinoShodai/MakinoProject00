@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: LayeredGPSOWrapper.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a>  </div>
+  <div class="headertitle"><div class="title">LayeredGPSOWrapper.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file handles class that wraps GPSO with common layers and different settings for each component type.  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_graphics_pipeline_elements_8h_source.html">GraphicsPipelineElements.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_graphics_pipeline_state_8h_source.html">GraphicsPipelineState.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_graphics_component_8h_source.html">GraphicsComponent.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+LayeredGPSOWrapper.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_layered_g_p_s_o_wrapper_8h__incl.png" border="0" usemap="#a_layered_g_p_s_o_wrapper_8h" alt=""/></div>
+<map name="a_layered_g_p_s_o_wrapper_8h" id="a_layered_g_p_s_o_wrapper_8h">
+<area shape="rect" title="This file handles class that wraps GPSO with common layers and different settings for each component ..." alt="" coords="1640,5,1806,32"/>
+<area shape="rect" href="_graphics_pipeline_elements_8h.html" title="This file handles elements of graphics pipeline state." alt="" coords="2109,229,2294,256"/>
+<area shape="poly" title=" " alt="" coords="1786,30,1856,48,1940,74,2029,108,2114,152,2153,183,2184,216,2180,219,2150,187,2111,157,2027,113,1938,79,1854,53,1784,35"/>
+<area shape="rect" href="_graphics_pipeline_state_8h.html" title="This file handles graphics pipeline states." alt="" coords="1642,80,1804,107"/>
+<area shape="poly" title=" " alt="" coords="1726,33,1726,64,1720,64,1720,33"/>
+<area shape="rect" href="_graphics_component_8h.html" title="This file handles component for graphics." alt="" coords="597,379,748,405"/>
+<area shape="poly" title=" " alt="" coords="1640,25,1373,37,1205,47,1035,62,877,81,745,105,694,118,656,134,632,150,626,158,624,167,624,244,628,277,637,309,660,364,655,366,631,311,623,278,619,244,619,166,621,156,628,146,654,129,693,113,744,99,876,75,1034,56,1205,42,1372,31,1640,20"/>
+<area shape="poly" title=" " alt="" coords="1804,97,1932,114,2002,130,2071,152,2129,183,2177,217,2174,221,2126,188,2069,157,2001,135,1931,119,1804,102"/>
+<area shape="poly" title=" " alt="" coords="1642,101,1441,115,1186,139,1058,157,940,178,841,203,802,217,770,232,745,247,729,262,700,305,687,335,679,364,674,362,682,333,695,303,725,258,742,243,767,227,800,212,840,198,939,173,1057,152,1185,134,1441,109,1642,96"/>
+<area shape="rect" href="_graphics_layer_8h.html" title="This file handles the layer function in the graphics processing." alt="" coords="973,453,1089,480"/>
+<area shape="poly" title=" " alt="" coords="1642,98,1557,107,1513,116,1472,130,1435,148,1405,173,1386,203,1379,242,1379,319,1377,367,1370,387,1352,408,1322,417,1259,430,1105,456,1104,451,1258,424,1321,412,1350,403,1365,385,1372,366,1374,319,1374,241,1381,201,1401,169,1432,144,1470,125,1512,111,1557,101,1641,92"/>
+<area shape="rect" href="_descriptor_heap_8h.html" title="This file handles descriptor heap." alt="" coords="1565,677,1686,704"/>
+<area shape="poly" title=" " alt="" coords="1722,108,1709,165,1703,203,1700,241,1700,319,1693,419,1676,517,1655,602,1637,663,1632,662,1650,601,1671,516,1688,419,1695,319,1695,241,1697,202,1703,164,1717,106"/>
+<area shape="rect" href="_dynamic_cb_allocator_8h.html" title="This file handles class that allocates data for constant buffer per object." alt="" coords="1139,155,1289,181"/>
+<area shape="poly" title=" " alt="" coords="1642,109,1305,157,1304,151,1641,104"/>
+<area shape="rect" href="_swap_chain_8h.html" title="This file handles swap chain." alt="" coords="1810,453,1908,480"/>
+<area shape="poly" title=" " alt="" coords="1729,106,1743,164,1749,202,1751,241,1751,319,1755,364,1762,382,1776,404,1796,426,1821,443,1818,447,1793,430,1772,407,1757,385,1750,365,1746,319,1746,241,1743,203,1737,165,1724,108"/>
+<area shape="rect" href="_graphics_object_asset_8h.html" title="This file handles assets that manage what is needed for the drawing process." alt="" coords="1182,379,1339,405"/>
+<area shape="poly" title=" " alt="" coords="1642,102,1564,108,1481,119,1408,135,1379,145,1359,157,1337,178,1318,204,1290,261,1274,318,1266,364,1260,363,1269,316,1285,259,1314,201,1333,175,1356,153,1377,140,1406,130,1480,114,1564,103,1642,96"/>
+<area shape="rect" href="_descriptor_heap_pool_8h.html" title="This file handles pool class that manages descriptor heap for graphics pipeline state." alt="" coords="1785,379,1933,405"/>
+<area shape="poly" title=" " alt="" coords="1736,105,1769,153,1797,210,1821,269,1854,363,1849,365,1816,271,1792,213,1765,156,1731,108"/>
+<area shape="rect" href="_shader_8h.html" title="This file handles each shaders." alt="" coords="1984,155,2057,181"/>
+<area shape="poly" title=" " alt="" coords="1776,105,1969,152,1968,157,1775,110"/>
+<area shape="rect" href="_static_resource_8h.html" title="This file handles interface class of static resources that don&#39;t need to be updated on a per&#45;object b..." alt="" coords="2160,379,2281,405"/>
+<area shape="poly" title=" " alt="" coords="1804,98,1937,111,2090,136,2162,153,2226,174,2277,198,2295,213,2309,228,2318,247,2319,267,2314,287,2305,306,2279,342,2249,371,2246,367,2275,338,2301,303,2309,285,2314,266,2313,248,2305,231,2292,216,2274,203,2224,179,2161,158,2089,141,1936,117,1804,103"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="886,901,976,928"/>
+<area shape="poly" title=" " alt="" coords="619,408,565,427,512,456,462,490,424,522,410,539,400,560,393,584,391,615,391,767,393,786,399,801,409,813,422,821,456,836,496,851,568,870,669,886,871,906,870,912,669,892,567,876,494,856,454,841,419,826,406,816,395,804,388,788,386,767,386,615,388,584,395,558,405,536,420,518,459,486,510,451,563,422,617,403"/>
+<area shape="rect" href="_utility_for_direct_x_8h.html" title="This file defines utility functions that are useful for DirectX." alt="" coords="1164,752,1290,779"/>
+<area shape="poly" title=" " alt="" coords="632,408,588,427,542,455,522,473,507,493,496,515,492,540,492,617,493,666,500,684,517,702,550,715,610,726,785,744,983,754,1149,760,1149,765,983,760,784,749,609,732,548,720,513,706,496,687,488,667,487,617,487,540,491,514,502,490,518,469,539,451,585,422,630,403"/>
+<area shape="rect" href="_mesh_buffer_8h.html" title="This file handles vertex and index buffers needed to construct the mesh." alt="" coords="648,453,745,480"/>
+<area shape="poly" title=" " alt="" coords="679,405,690,438,685,439,674,407"/>
+<area shape="poly" title=" " alt="" coords="736,403,958,448,957,453,735,409"/>
+<area shape="rect" href="_texture_8h.html" title="This file handles textures." alt="" coords="823,453,898,480"/>
+<area shape="poly" title=" " alt="" coords="706,403,814,445,812,450,704,408"/>
+<area shape="rect" href="_utility_for_math_8h.html" title="This file provides utility in handling mathematics." alt="" coords="184,827,297,853"/>
+<area shape="poly" title=" " alt="" coords="597,405,392,431,306,445,266,456,251,473,241,491,237,508,236,526,240,566,243,615,243,692,243,811,238,811,238,692,238,615,234,566,230,526,232,507,236,489,246,470,263,451,305,440,392,426,597,399"/>
+<area shape="rect" href="_int_key_generater_8h.html" title="This file handles class that generates keys of integer numeric type." alt="" coords="276,453,402,480"/>
+<area shape="poly" title=" " alt="" coords="614,409,413,452,412,447,613,403"/>
+<area shape="rect" href="_weak_ptr_8h.html" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="889,976,973,1003"/>
+<area shape="poly" title=" " alt="" coords="934,929,934,960,928,960,928,929"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="884,1051,949,1077"/>
+<area shape="poly" title=" " alt="" coords="931,1004,924,1036,919,1035,926,1003"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="811,1125,923,1152"/>
+<area shape="poly" title=" " alt="" coords="910,1079,886,1114,882,1111,906,1076"/>
+<area shape="poly" title=" " alt="" coords="1221,781,1191,818,1170,838,1147,856,1109,875,1068,890,991,908,990,903,1066,885,1107,870,1144,851,1167,834,1187,814,1217,778"/>
+<area shape="poly" title=" " alt="" coords="705,479,920,886,915,888,700,482"/>
+<area shape="rect" href="_vertex_buffer_8h.html" title="This file handles vertex buffer." alt="" coords="527,603,631,629"/>
+<area shape="poly" title=" " alt="" coords="648,481,608,499,590,513,576,529,570,543,568,558,572,588,567,588,563,558,565,542,571,527,586,509,605,495,646,476"/>
+<area shape="rect" href="_index_buffer_8h.html" title="This file handles index buffer." alt="" coords="586,528,682,555"/>
+<area shape="poly" title=" " alt="" coords="687,482,656,518,652,514,683,479"/>
+<area shape="rect" href="_gpu_optimized_resource_8h.html" title=" " alt="" coords="527,677,698,704"/>
+<area shape="poly" title=" " alt="" coords="587,629,603,662,598,664,582,631"/>
+<area shape="poly" title=" " alt="" coords="640,555,647,589,646,630,631,665,626,663,640,629,642,589,635,556"/>
+<area shape="poly" title=" " alt="" coords="884,478,916,499,948,526,968,551,982,574,1001,618,1021,660,1037,681,1059,702,1103,728,1150,746,1148,751,1100,733,1056,706,1033,684,1016,663,996,621,978,577,964,554,944,530,913,503,881,483"/>
+<area shape="rect" href="_render_target_8h.html" title="This file handles render targets." alt="" coords="1467,528,1576,555"/>
+<area shape="poly" title=" " alt="" coords="899,470,961,477,1452,530,1451,535,960,483,898,475"/>
+<area shape="rect" href="_texture_registry_8h.html" title="This file handles all texture resources together in the registry." alt="" coords="811,528,934,555"/>
+<area shape="poly" title=" " alt="" coords="865,480,870,512,865,513,860,481"/>
+<area shape="poly" title=" " alt="" coords="1498,558,1410,607,1357,641,1306,679,1274,711,1247,742,1243,738,1270,707,1303,675,1354,637,1407,602,1495,553"/>
+<area shape="poly" title=" " alt="" coords="1540,553,1565,574,1589,601,1607,632,1619,662,1615,664,1602,634,1585,604,1561,578,1537,557"/>
+<area shape="rect" href="_depth_stencil_8h.html" title="This file handles depth stencil." alt="" coords="1469,603,1575,629"/>
+<area shape="poly" title=" " alt="" coords="1524,555,1524,587,1519,587,1519,555"/>
+<area shape="poly" title=" " alt="" coords="1565,706,1305,753,1304,747,1564,700"/>
+<area shape="rect" href="_application_8h.html" title="This file handles application objects such as window and DirectX device." alt="" coords="1528,752,1625,779"/>
+<area shape="poly" title=" " alt="" coords="1619,706,1596,741,1591,738,1615,703"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="1916,827,2002,853"/>
+<area shape="poly" title=" " alt="" coords="1625,773,1901,825,1900,830,1624,778"/>
+<area shape="poly" title=" " alt="" coords="1528,772,313,837,312,832,1527,767"/>
+<area shape="poly" title=" " alt="" coords="1916,847,991,912,991,906,1915,842"/>
+<area shape="rect" href="_release_singleton_8h.html" title="Release singleton instances by controlling the order." alt="" coords="1892,901,2026,928"/>
+<area shape="poly" title=" " alt="" coords="1962,854,1962,886,1956,886,1956,854"/>
+<area shape="rect" href="_utility_for_exception_8h.html" title="This file defines utility functions that are useful for exception." alt="" coords="1609,901,1752,928"/>
+<area shape="poly" title=" " alt="" coords="1916,855,1744,900,1743,894,1915,850"/>
+<area shape="rect" href="_math_structures_8h.html" title="This file handles mathematical structures such as vectors, matrices and quaternions." alt="" coords="744,976,865,1003"/>
+<area shape="poly" title=" " alt="" coords="243,853,247,890,255,910,267,926,291,936,333,945,458,961,729,982,728,987,457,967,332,951,289,941,264,930,250,913,242,892,237,854"/>
+<area shape="rect" href="_utility_for_bit_8h.html" title="This file defines utility functions that are useful for bit operations." alt="" coords="278,901,379,928"/>
+<area shape="poly" title=" " alt="" coords="257,852,303,889,300,893,254,856"/>
+<area shape="poly" title=" " alt="" coords="825,1001,886,1040,883,1044,822,1005"/>
+<area shape="poly" title=" " alt="" coords="812,1002,858,1110,853,1112,807,1004"/>
+<area shape="poly" title=" " alt="" coords="1541,628,1597,666,1594,670,1538,632"/>
+<area shape="poly" title=" " alt="" coords="894,553,923,574,952,601,970,629,978,655,988,679,1009,702,1041,722,1077,737,1150,755,1148,760,1075,743,1039,727,1005,706,983,682,973,657,965,632,948,604,920,578,891,557"/>
+<area shape="poly" title=" " alt="" coords="935,552,1550,672,1549,677,934,557"/>
+<area shape="poly" title=" " alt="" coords="848,558,826,571,806,589,795,608,794,618,797,628,830,676,864,709,902,732,942,746,988,754,1037,760,1153,776,1259,794,1367,808,1579,826,1765,834,1900,836,1900,842,1765,839,1579,831,1366,813,1258,799,1152,781,1037,765,987,759,941,751,899,736,861,714,825,679,793,631,789,619,789,607,802,585,822,567,845,553"/>
+<area shape="rect" href="_texture_resource_8h.html" title="This file handles texture resources." alt="" coords="807,603,938,629"/>
+<area shape="poly" title=" " alt="" coords="875,555,875,587,870,587,870,555"/>
+<area shape="poly" title=" " alt="" coords="883,628,913,665,934,685,958,702,1004,723,1054,739,1149,756,1148,761,1053,744,1003,728,955,706,930,689,909,669,878,631"/>
+<area shape="poly" title=" " alt="" coords="828,632,673,675,672,670,826,627"/>
+<area shape="poly" title=" " alt="" coords="938,621,1502,675,1550,679,1549,685,1501,680,938,626"/>
+<area shape="rect" href="_abstract_cb_allocator_8h.html" title="This file allocates data for Constant buffer view." alt="" coords="1414,379,1563,405"/>
+<area shape="poly" title=" " alt="" coords="1231,180,1463,367,1459,371,1228,184"/>
+<area shape="rect" href="_dynamic_resource_8h.html" title="This file handles interface of dynamic resource that need to be allocated per object." alt="" coords="781,229,919,256"/>
+<area shape="poly" title=" " alt="" coords="1150,185,929,228,928,223,1149,179"/>
+<area shape="poly" title=" " alt="" coords="1424,409,1333,430,1237,460,1194,478,1160,498,1138,519,1132,529,1130,540,1130,767,1126,792,1116,815,1101,834,1082,852,1037,880,992,899,989,894,1035,875,1079,848,1097,831,1111,812,1121,790,1124,766,1124,540,1127,527,1133,515,1157,493,1192,473,1235,455,1332,425,1422,403"/>
+<area shape="poly" title=" " alt="" coords="1502,404,1544,455,1569,490,1591,527,1606,563,1615,602,1625,661,1620,662,1610,603,1601,565,1586,529,1564,493,1540,459,1498,407"/>
+<area shape="poly" title=" " alt="" coords="1485,407,1469,445,1454,501,1447,566,1450,598,1459,628,1467,644,1478,653,1504,675,1558,738,1554,742,1500,679,1474,657,1463,647,1454,630,1445,599,1442,566,1448,500,1464,444,1480,405"/>
+<area shape="rect" href="_constant_buffer_resource_8h.html" title="This file handles constant buffers." alt="" coords="1317,677,1489,704"/>
+<area shape="poly" title=" " alt="" coords="1431,408,1393,426,1377,439,1364,455,1343,499,1340,538,1349,579,1364,628,1372,647,1384,664,1379,667,1368,649,1359,630,1343,580,1335,538,1338,498,1359,452,1373,435,1391,422,1429,404"/>
+<area shape="poly" title=" " alt="" coords="1554,403,1796,450,1795,456,1553,409"/>
+<area shape="poly" title=" " alt="" coords="1396,706,1362,762,1348,799,1342,839,1342,916,1338,931,1329,946,1297,971,1251,993,1194,1012,1070,1041,965,1059,964,1054,1069,1036,1192,1007,1249,988,1295,967,1325,942,1334,929,1336,916,1336,838,1342,798,1357,759,1391,703"/>
+<area shape="poly" title=" " alt="" coords="1373,707,1273,748,1271,743,1371,702"/>
+<area shape="poly" title=" " alt="" coords="1434,702,1533,743,1531,748,1432,707"/>
+<area shape="poly" title=" " alt="" coords="1420,702,1655,890,1651,894,1417,707"/>
+<area shape="poly" title=" " alt="" coords="1861,481,1859,510,1852,550,1838,593,1814,631,1788,659,1764,678,1736,692,1700,707,1596,737,1489,755,1389,764,1306,767,1305,762,1389,759,1488,750,1595,731,1698,701,1734,687,1761,674,1784,655,1810,628,1833,590,1847,549,1854,510,1856,480"/>
+<area shape="poly" title=" " alt="" coords="1811,481,1592,528,1591,522,1809,476"/>
+<area shape="poly" title=" " alt="" coords="1859,481,1851,511,1837,551,1815,594,1785,631,1746,658,1702,676,1700,671,1743,653,1781,627,1811,591,1832,549,1846,509,1854,480"/>
+<area shape="poly" title=" " alt="" coords="1908,472,2012,493,2059,508,2090,526,2123,568,2134,589,2140,610,2142,632,2140,655,2123,705,2098,743,2066,775,2032,802,2000,821,1997,817,2029,797,2063,771,2094,740,2118,703,2135,654,2137,632,2135,611,2129,591,2119,571,2087,530,2057,513,2011,498,1907,477"/>
+<area shape="rect" href="_utility_for_async_8h.html" title="This file defines utility functions that are useful for asynchronous." alt="" coords="1954,528,2076,555"/>
+<area shape="poly" title=" " alt="" coords="1887,478,1975,519,1973,523,1885,483"/>
+<area shape="rect" href="_application_error_8h.html" title="This file handles processing when the application makes an error." alt="" coords="1984,677,2108,704"/>
+<area shape="poly" title=" " alt="" coords="2020,555,2043,662,2037,663,2015,556"/>
+<area shape="poly" title=" " alt="" coords="2041,706,1976,815,1972,812,2036,703"/>
+<area shape="poly" title=" " alt="" coords="846,258,824,294,790,333,757,356,722,374,719,370,754,352,787,329,819,291,841,255"/>
+<area shape="poly" title=" " alt="" coords="886,254,968,290,1017,317,1065,350,1110,388,1146,433,1171,483,1178,511,1180,540,1180,617,1184,650,1192,683,1215,737,1210,739,1187,684,1178,651,1175,617,1175,540,1173,512,1166,485,1142,436,1106,392,1062,354,1014,322,966,295,884,259"/>
+<area shape="rect" href="_model_8h.html" title="This file handles model class." alt="" coords="851,304,918,331"/>
+<area shape="poly" title=" " alt="" coords="858,255,874,289,869,291,853,258"/>
+<area shape="rect" href="_sprite_8h.html" title="This file handles sprite." alt="" coords="710,304,776,331"/>
+<area shape="poly" title=" " alt="" coords="833,259,776,297,773,293,830,254"/>
+<area shape="rect" href="_shape_8h.html" title="This file handles graphics component for shape." alt="" coords="420,304,490,331"/>
+<area shape="poly" title=" " alt="" coords="781,259,505,310,504,304,780,254"/>
+<area shape="poly" title=" " alt="" coords="851,333,725,376,723,371,849,328"/>
+<area shape="rect" href="_loaded_model_info_8h.html" title="This file handles mesh information of loaded model." alt="" coords="796,379,925,405"/>
+<area shape="poly" title=" " alt="" coords="883,332,872,365,867,363,878,330"/>
+<area shape="poly" title=" " alt="" coords="796,406,717,424,676,438,636,456,563,487,501,513,476,530,458,551,446,578,442,615,442,766,445,782,454,796,489,822,542,845,606,863,748,891,871,906,871,911,748,896,605,869,540,850,487,827,450,800,440,784,436,767,436,615,441,577,453,548,473,526,498,509,561,482,634,451,674,433,716,419,794,400"/>
+<area shape="poly" title=" " alt="" coords="873,404,988,527,1161,702,1203,740,1199,744,1157,706,984,531,869,407"/>
+<area shape="poly" title=" " alt="" coords="833,408,740,449,738,444,831,403"/>
+<area shape="poly" title=" " alt="" coords="863,406,863,438,858,438,858,406"/>
+<area shape="poly" title=" " alt="" coords="733,333,697,369,693,366,729,329"/>
+<area shape="poly" title=" " alt="" coords="491,328,621,371,619,376,489,333"/>
+<area shape="rect" href="_box_collider3_d_8h.html" title="This file handles 3D box collider." alt="" coords="247,379,362,405"/>
+<area shape="poly" title=" " alt="" coords="430,334,345,374,343,369,428,329"/>
+<area shape="rect" href="_capsule_collider3_d_8h.html" title="This file handles 3D capsule collider." alt="" coords="386,379,524,405"/>
+<area shape="poly" title=" " alt="" coords="458,331,458,363,452,363,452,331"/>
+<area shape="rect" href="_sphere_collider3_d_8h.html" title="This file handles 3D sphere collider." alt="" coords="90,379,223,405"/>
+<area shape="poly" title=" " alt="" coords="421,330,224,377,223,372,420,324"/>
+<area shape="rect" href="_collider3_d_8h.html" title="This file handles 3D abstract collider." alt="" coords="111,453,202,480"/>
+<area shape="poly" title=" " alt="" coords="280,408,197,448,195,444,277,403"/>
+<area shape="rect" href="_component_8h.html" title="This file handles abstract class for component used in update processing." alt="" coords="105,752,203,779"/>
+<area shape="poly" title=" " alt="" coords="159,480,157,737,151,737,154,480"/>
+<area shape="rect" href="_bouding_volume_8h.html" title="This file handles Bounding volume using AABB." alt="" coords="5,603,129,629"/>
+<area shape="poly" title=" " alt="" coords="113,483,78,501,63,514,51,529,46,543,46,558,55,588,50,589,40,559,41,542,46,527,59,510,75,497,111,478"/>
+<area shape="rect" href="_b_v_node_8h.html" title="This file handles information needed for the dynamic bouding volume tree." alt="" coords="60,528,141,555"/>
+<area shape="poly" title=" " alt="" coords="149,482,121,517,117,514,144,479"/>
+<area shape="poly" title=" " alt="" coords="188,777,309,824,340,839,370,851,509,880,648,897,774,907,871,910,871,916,773,912,648,903,508,885,369,856,337,844,307,829,186,782"/>
+<area shape="poly" title=" " alt="" coords="170,777,216,815,212,819,167,781"/>
+<area shape="poly" title=" " alt="" coords="68,630,66,659,67,698,75,740,83,759,94,777,110,793,128,805,170,823,167,828,126,810,107,797,90,780,78,762,70,741,61,699,60,659,62,630"/>
+<area shape="poly" title=" " alt="" coords="97,556,82,590,77,587,92,554"/>
+<area shape="poly" title=" " alt="" coords="403,409,218,453,216,448,402,403"/>
+<area shape="poly" title=" " alt="" coords="159,406,159,438,154,438,154,406"/>
+<area shape="poly" title=" " alt="" coords="1258,406,1241,464,1234,501,1231,540,1231,617,1230,736,1225,736,1226,617,1226,540,1229,501,1236,463,1253,405"/>
+<area shape="poly" title=" " alt="" coords="1182,406,761,460,760,454,1182,401"/>
+<area shape="poly" title=" " alt="" coords="1191,409,914,458,913,453,1190,403"/>
+<area shape="poly" title=" " alt="" coords="1845,408,1823,428,1801,455,1788,480,1780,502,1772,544,1762,586,1751,608,1734,631,1707,655,1676,673,1673,668,1704,651,1730,628,1747,605,1757,584,1766,543,1775,501,1783,477,1797,452,1819,425,1842,404"/>
+<area shape="poly" title=" " alt="" coords="1902,403,1950,422,2008,448,2067,483,2120,526,2145,561,2158,602,2165,657,2163,680,2157,702,2133,742,2093,781,2055,805,2016,823,2014,818,2053,801,2089,777,2129,739,2152,700,2157,680,2159,657,2152,603,2141,563,2116,530,2064,487,2005,453,1948,426,1900,408"/>
+<area shape="poly" title=" " alt="" coords="1862,406,1862,438,1856,438,1856,406"/>
+<area shape="poly" title=" " alt="" coords="2053,179,2157,221,2155,226,2051,184"/>
+<area shape="poly" title=" " alt="" coords="2031,180,2059,216,2099,254,2141,277,2185,290,2273,301,2311,308,2341,322,2353,334,2362,349,2368,368,2370,391,2370,767,2367,795,2361,817,2350,834,2336,847,2318,856,2298,861,2250,864,2136,855,2075,852,2014,856,1866,875,1714,890,1419,908,1166,915,991,917,991,911,1166,910,1419,903,1714,885,1865,870,2013,851,2075,847,2137,850,2250,859,2297,856,2316,851,2333,843,2346,831,2356,815,2362,794,2364,767,2364,391,2363,368,2357,351,2349,337,2338,327,2309,313,2272,306,2184,295,2139,282,2096,258,2056,219,2027,184"/>
+<area shape="poly" title=" " alt="" coords="2022,182,2008,281,1991,355,1966,436,1931,518,1884,595,1856,629,1824,660,1788,686,1748,706,1711,718,1663,728,1544,745,1305,763,1305,758,1543,739,1662,723,1710,713,1746,702,1785,681,1820,656,1852,626,1880,592,1926,516,1961,434,1986,353,2002,280,2017,181"/>
+<area shape="poly" title=" " alt="" coords="2017,182,2007,216,2004,236,2004,256,2012,292,2024,326,2055,389,2127,497,2154,547,2163,572,2167,598,2166,624,2158,650,2144,677,2122,706,2097,719,2052,730,1920,747,1768,758,1640,764,1640,759,1768,753,1919,741,2051,724,2095,714,2119,702,2140,674,2154,648,2160,623,2162,598,2157,574,2149,550,2122,500,2051,392,2019,328,2007,294,1999,256,1998,235,2001,214,2012,181"/>
+<area shape="poly" title=" " alt="" coords="2216,407,2178,465,2113,551,2071,596,2023,639,1971,677,1915,706,1879,715,1819,724,1652,740,1305,763,1305,757,1652,734,1819,719,1878,710,1913,702,1968,672,2020,635,2067,592,2109,547,2174,462,2211,404"/>
+<area shape="poly" title=" " alt="" coords="2238,404,2262,426,2288,458,2310,497,2317,518,2319,540,2319,692,2317,715,2310,736,2300,754,2286,771,2250,797,2206,816,2157,829,2107,837,2018,843,2017,837,2107,831,2156,824,2204,811,2247,792,2282,767,2295,751,2305,734,2311,714,2314,692,2314,540,2311,519,2305,499,2284,461,2258,430,2234,408"/>
+<area shape="poly" title=" " alt="" coords="2160,408,1923,455,1922,450,2159,403"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_layered_g_p_s_o_wrapper_8h__dep__incl.png" border="0" usemap="#a_layered_g_p_s_o_wrapper_8hdep" alt=""/></div>
+<map name="a_layered_g_p_s_o_wrapper_8hdep" id="a_layered_g_p_s_o_wrapper_8hdep">
+<area shape="rect" title="This file handles class that wraps GPSO with common layers and different settings for each component ..." alt="" coords="208,5,374,32"/>
+<area shape="rect" href="_layered_g_p_s_o_wrapper_8cpp.html" title=" " alt="" coords="5,80,185,107"/>
+<area shape="poly" title=" " alt="" coords="244,40,130,82,128,77,242,35"/>
+<area shape="rect" href="_shadow_g_p_s_o_wrapper_8h.html" title="This file handles GPSO wrapper classes for shadowing." alt="" coords="208,80,374,107"/>
+<area shape="poly" title=" " alt="" coords="294,48,294,80,288,80,288,48"/>
+<area shape="rect" href="_standard_g_p_s_o_wrapper_8h.html" title="This file handles GPSO wrap class for standard layer." alt="" coords="397,80,569,107"/>
+<area shape="poly" title=" " alt="" coords="339,35,450,77,448,82,337,40"/>
+<area shape="rect" href="_shadow_g_p_s_o_wrapper_8cpp.html" title=" " alt="" coords="105,155,285,181"/>
+<area shape="poly" title=" " alt="" coords="264,118,213,156,210,152,261,114"/>
+<area shape="rect" href="_standard_render_pass_8h.html" title="This file handles scene base class for stage." alt="" coords="309,155,465,181"/>
+<area shape="poly" title=" " alt="" coords="321,114,372,152,369,156,318,118"/>
+<area shape="rect" href="_scene_registry_8cpp.html" title=" " alt="" coords="235,229,366,256"/>
+<area shape="poly" title=" " alt="" coords="362,194,317,231,314,227,359,189"/>
+<area shape="rect" href="_standard_render_pass_8cpp.html" title=" " alt="" coords="390,229,560,256"/>
+<area shape="poly" title=" " alt="" coords="416,189,462,227,458,231,412,194"/>
+<area shape="poly" title=" " alt="" coords="456,118,405,156,402,152,453,114"/>
+<area shape="rect" href="_standard_g_p_s_o_wrapper_8cpp.html" title=" " alt="" coords="489,155,674,181"/>
+<area shape="poly" title=" " alt="" coords="514,114,566,152,563,156,511,118"/>
+</map>
+</div>
+</div>
+<p><a href="_layered_g_p_s_o_wrapper_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_g_p_s_o_setting_override_with_type.html">GPSOSettingOverrideWithType</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPSO setting for overriding and graphics component types using it  <a href="struct_g_p_s_o_setting_override_with_type.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_layered_g_p_s_o_setting.html">LayeredGPSOSetting</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setting for <a class="el" href="class_c_layered_g_p_s_o_wrapper.html" title="This class wraps GPSO with common layers and different settings for each component type">CLayeredGPSOWrapper</a>  <a href="struct_layered_g_p_s_o_setting.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_layered_g_p_s_o_wrapper.html">CLayeredGPSOWrapper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class wraps GPSO with common layers and different settings for each component type  <a href="class_c_layered_g_p_s_o_wrapper.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_layered_g_p_s_o_wrapper_prefab.html">ACLayeredGPSOWrapperPrefab</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract class for prefab of <a class="el" href="class_c_layered_g_p_s_o_wrapper.html" title="This class wraps GPSO with common layers and different settings for each component type">CLayeredGPSOWrapper</a>  <a href="class_a_c_layered_g_p_s_o_wrapper_prefab.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This file handles class that wraps GPSO with common layers and different settings for each component type. </p>
+<dl class="section author"><dt>著者</dt><dd>Shodai Makino </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2024/1/1 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

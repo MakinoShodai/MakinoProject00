@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: Camera.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Camera.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_camera_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __CAMERA_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __CAMERA_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_component_8h.html">Component.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_game_object_8h.html">GameObject.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_c_camera_component.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_camera_component.html">CCameraComponent</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_component.html">ACComponent</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="class_c_camera_component.html">CCameraComponent</a>(<a class="code hl_class" href="class_c_game_object.html">CGameObject</a>* owner, std::wstring cameraName, <span class="keywordtype">bool</span> isFocusMode = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_camera_component.html#ac7a5567d296aef6d7e1705257ae94161">Start</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_camera_component.html#a312614c976b29c7272d6c7c71b65ce8f">OnDestroy</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_camera_component.html#aa5a692a13628d280d1c95a82fbf2fd29">ApplyRotation</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    DirectX::XMMATRIX <a class="code hl_function" href="class_c_camera_component.html#abfa4560e0c329083f80aaa8a7a6f553e">GenerateViewMatrix</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    DirectX::XMMATRIX <a class="code hl_function" href="class_c_camera_component.html#af5be76b0277d839421be8594f9a604cb">GenerateProjectionMatrix</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    DirectX::XMFLOAT4X4 <a class="code hl_function" href="class_c_camera_component.html#a416f1458b04bcd673fc5c68b5c1df927">GenerateViewProjectionMatrix</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#ae74a5ff6bafa790d01f32f2a97d9c1de">   60</a></span>    <span class="keyword">const</span> std::wstring&amp; <a class="code hl_function" href="class_c_camera_component.html#ae74a5ff6bafa790d01f32f2a97d9c1de">GetName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_name; }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#a0f3be26917cd2e41c078400250b86a91">   63</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_camera_component.html#a0f3be26917cd2e41c078400250b86a91">GetPriority</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_priority; }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#a36314c77308f7f991dd55bbc34402c5e">   65</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_camera_component.html#a36314c77308f7f991dd55bbc34402c5e">SetPriority</a>(<span class="keywordtype">int</span> priority) { m_priority = priority; }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#afebd4422fee6c0f6eb58130c71621940">   68</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; <a class="code hl_function" href="class_c_camera_component.html#afebd4422fee6c0f6eb58130c71621940">GetFocus</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_focus; }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#a834b9be794ebd020bda154cd869eaf94">   70</a></span>    <a class="code hl_class" href="struct_vector.html">Vector3f</a> <a class="code hl_function" href="class_c_camera_component.html#a834b9be794ebd020bda154cd869eaf94">GetLookDir</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_isFocusMode) ? (m_focus - <a class="code hl_variable" href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">m_gameObj</a>-&gt;GetTransform().pos).GetNormalize() : m_focus; }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#a32507e305cb817c47492ace915d59912">   72</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_camera_component.html#a32507e305cb817c47492ace915d59912">SetFocus</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; focus) { <span class="keywordflow">if</span> (m_isFocusMode) { m_focus = focus; } }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#aa82192fcad999234ec1f71bc9a342e5c">   75</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; <a class="code hl_function" href="class_c_camera_component.html#aa82192fcad999234ec1f71bc9a342e5c">GetUp</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_up; }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#a3a7b0716ccb2a195c091ee9a853831bd">   77</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_camera_component.html#a3a7b0716ccb2a195c091ee9a853831bd">SetUp</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; up) { m_up = up; }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#ace7d2b6e60be4d2706874909b8717ae5">   80</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_c_camera_component.html#ace7d2b6e60be4d2706874909b8717ae5">GetFovAngleY</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_fovAngleY; }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#a40579dcec1edec1a6923ab193d99ef97">   82</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_camera_component.html#a40579dcec1edec1a6923ab193d99ef97">SetFovAngleY</a>(<span class="keywordtype">float</span> fovAngleY) { m_fovAngleY = fovAngleY; }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#a36881289fb0b61bfa4c6334dfb95eafa">   85</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_c_camera_component.html#a36881289fb0b61bfa4c6334dfb95eafa">GetAspect</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_aspect; }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#a35647146e593d123c3319ca9f87ca8b7">   87</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_camera_component.html#a35647146e593d123c3319ca9f87ca8b7">SetAspect</a>(<span class="keywordtype">float</span> aspect) { m_aspect = aspect; }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#aeece690b4a3d380df9e05701242dfdf5">   90</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_c_camera_component.html#aeece690b4a3d380df9e05701242dfdf5">GetNear</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_near; }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#a1e59f2fd15a5d8a2a9db19e077fdec6f">   92</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_camera_component.html#a1e59f2fd15a5d8a2a9db19e077fdec6f">SetNear</a>(<span class="keywordtype">float</span> nearValue) { m_near = nearValue; }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#a77d31f86bc9b672c413689d7e9e8c196">   95</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_c_camera_component.html#a77d31f86bc9b672c413689d7e9e8c196">GetFar</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_far; }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#af11398674544cb73a5224c757a54a819">   97</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_camera_component.html#af11398674544cb73a5224c757a54a819">SetFar</a>(<span class="keywordtype">float</span> farValue) { m_far = farValue; }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_c_camera_component.html#a4bddfb4e0f26cda9fde1a6fb42e87d5d">  100</a></span>    <span class="keyword">const</span> DirectX::XMMATRIX&amp; <a class="code hl_function" href="class_c_camera_component.html#a4bddfb4e0f26cda9fde1a6fb42e87d5d">GetRotationMatrix</a>() { <span class="keywordflow">return</span> m_rotationMatrix; }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">const</span> std::wstring m_name;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">int</span> m_priority;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">bool</span> m_isFocusMode;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_class" href="struct_vector.html">Vector3f</a> m_focus;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_class" href="struct_vector.html">Vector3f</a> m_up;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">float</span> m_fovAngleY;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">float</span> m_aspect;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">float</span> m_near;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">float</span> m_far;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    DirectX::XMMATRIX m_rotationMatrix;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>};</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#endif </span><span class="comment">// !__CAMERA_H__</span></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div><div class="ttdoc">This file handles abstract class for component used in update processing.</div></div>
+<div class="ttc" id="a_game_object_8h_html"><div class="ttname"><a href="_game_object_8h.html">GameObject.h</a></div><div class="ttdoc">This file handles base class for game object.</div></div>
+<div class="ttc" id="aclass_a_c_component_html"><div class="ttname"><a href="class_a_c_component.html">ACComponent</a></div><div class="ttdoc">This is abstract class for component used in update processing</div><div class="ttdef"><b>Definition</b> Component.h:23</div></div>
+<div class="ttc" id="aclass_a_c_component_html_a350f4f03d8f125df479f4bdd6603aa32"><div class="ttname"><a href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">ACComponent::m_gameObj</a></div><div class="ttdeci">CWeakPtr&lt; CGameObject &gt; m_gameObj</div><div class="ttdoc">Game object that is the owner of this component</div><div class="ttdef"><b>Definition</b> Component.h:113</div></div>
+<div class="ttc" id="aclass_c_camera_component_html"><div class="ttname"><a href="class_c_camera_component.html">CCameraComponent</a></div><div class="ttdoc">Camera component</div><div class="ttdef"><b>Definition</b> Camera.h:16</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a0f3be26917cd2e41c078400250b86a91"><div class="ttname"><a href="class_c_camera_component.html#a0f3be26917cd2e41c078400250b86a91">CCameraComponent::GetPriority</a></div><div class="ttdeci">int GetPriority() const</div><div class="ttdoc">Get the priority of this camera</div><div class="ttdef"><b>Definition</b> Camera.h:63</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a1e59f2fd15a5d8a2a9db19e077fdec6f"><div class="ttname"><a href="class_c_camera_component.html#a1e59f2fd15a5d8a2a9db19e077fdec6f">CCameraComponent::SetNear</a></div><div class="ttdeci">void SetNear(float nearValue)</div><div class="ttdoc">Set a near clipping value</div><div class="ttdef"><b>Definition</b> Camera.h:92</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a312614c976b29c7272d6c7c71b65ce8f"><div class="ttname"><a href="class_c_camera_component.html#a312614c976b29c7272d6c7c71b65ce8f">CCameraComponent::OnDestroy</a></div><div class="ttdeci">void OnDestroy() override</div><div class="ttdoc">Destroy processing</div><div class="ttdef"><b>Definition</b> Camera.cpp:32</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a32507e305cb817c47492ace915d59912"><div class="ttname"><a href="class_c_camera_component.html#a32507e305cb817c47492ace915d59912">CCameraComponent::SetFocus</a></div><div class="ttdeci">void SetFocus(const Vector3f &amp;focus)</div><div class="ttdoc">Set a focus position. Value will not change unless in focus mode</div><div class="ttdef"><b>Definition</b> Camera.h:72</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a35647146e593d123c3319ca9f87ca8b7"><div class="ttname"><a href="class_c_camera_component.html#a35647146e593d123c3319ca9f87ca8b7">CCameraComponent::SetAspect</a></div><div class="ttdeci">void SetAspect(float aspect)</div><div class="ttdoc">Set an aspect ratio</div><div class="ttdef"><b>Definition</b> Camera.h:87</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a36314c77308f7f991dd55bbc34402c5e"><div class="ttname"><a href="class_c_camera_component.html#a36314c77308f7f991dd55bbc34402c5e">CCameraComponent::SetPriority</a></div><div class="ttdeci">void SetPriority(int priority)</div><div class="ttdoc">Set a priority to this camera</div><div class="ttdef"><b>Definition</b> Camera.h:65</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a36881289fb0b61bfa4c6334dfb95eafa"><div class="ttname"><a href="class_c_camera_component.html#a36881289fb0b61bfa4c6334dfb95eafa">CCameraComponent::GetAspect</a></div><div class="ttdeci">float GetAspect() const</div><div class="ttdoc">Get the aspect ratio</div><div class="ttdef"><b>Definition</b> Camera.h:85</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a3a7b0716ccb2a195c091ee9a853831bd"><div class="ttname"><a href="class_c_camera_component.html#a3a7b0716ccb2a195c091ee9a853831bd">CCameraComponent::SetUp</a></div><div class="ttdeci">void SetUp(const Vector3f &amp;up)</div><div class="ttdoc">Set a up vector</div><div class="ttdef"><b>Definition</b> Camera.h:77</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a40579dcec1edec1a6923ab193d99ef97"><div class="ttname"><a href="class_c_camera_component.html#a40579dcec1edec1a6923ab193d99ef97">CCameraComponent::SetFovAngleY</a></div><div class="ttdeci">void SetFovAngleY(float fovAngleY)</div><div class="ttdoc">Set a fov angle Y</div><div class="ttdef"><b>Definition</b> Camera.h:82</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a416f1458b04bcd673fc5c68b5c1df927"><div class="ttname"><a href="class_c_camera_component.html#a416f1458b04bcd673fc5c68b5c1df927">CCameraComponent::GenerateViewProjectionMatrix</a></div><div class="ttdeci">DirectX::XMFLOAT4X4 GenerateViewProjectionMatrix()</div><div class="ttdoc">Generate a view projection matrix</div><div class="ttdef"><b>Definition</b> Camera.cpp:106</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a4bddfb4e0f26cda9fde1a6fb42e87d5d"><div class="ttname"><a href="class_c_camera_component.html#a4bddfb4e0f26cda9fde1a6fb42e87d5d">CCameraComponent::GetRotationMatrix</a></div><div class="ttdeci">const DirectX::XMMATRIX &amp; GetRotationMatrix()</div><div class="ttdoc">Get matrix with the same rotation as the view matrix of this camera</div><div class="ttdef"><b>Definition</b> Camera.h:100</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a77d31f86bc9b672c413689d7e9e8c196"><div class="ttname"><a href="class_c_camera_component.html#a77d31f86bc9b672c413689d7e9e8c196">CCameraComponent::GetFar</a></div><div class="ttdeci">float GetFar() const</div><div class="ttdoc">Get the far clipping value</div><div class="ttdef"><b>Definition</b> Camera.h:95</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_a834b9be794ebd020bda154cd869eaf94"><div class="ttname"><a href="class_c_camera_component.html#a834b9be794ebd020bda154cd869eaf94">CCameraComponent::GetLookDir</a></div><div class="ttdeci">Vector3f GetLookDir() const</div><div class="ttdoc">Obtain look direction vector regardless of focus mode</div><div class="ttdef"><b>Definition</b> Camera.h:70</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_aa5a692a13628d280d1c95a82fbf2fd29"><div class="ttname"><a href="class_c_camera_component.html#aa5a692a13628d280d1c95a82fbf2fd29">CCameraComponent::ApplyRotation</a></div><div class="ttdeci">void ApplyRotation()</div><div class="ttdoc">Apply the rotation of this gameobject to this look direction vector</div><div class="ttdef"><b>Definition</b> Camera.cpp:37</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_aa82192fcad999234ec1f71bc9a342e5c"><div class="ttname"><a href="class_c_camera_component.html#aa82192fcad999234ec1f71bc9a342e5c">CCameraComponent::GetUp</a></div><div class="ttdeci">const Vector3f &amp; GetUp() const</div><div class="ttdoc">Get the up vector</div><div class="ttdef"><b>Definition</b> Camera.h:75</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_abfa4560e0c329083f80aaa8a7a6f553e"><div class="ttname"><a href="class_c_camera_component.html#abfa4560e0c329083f80aaa8a7a6f553e">CCameraComponent::GenerateViewMatrix</a></div><div class="ttdeci">DirectX::XMMATRIX GenerateViewMatrix()</div><div class="ttdoc">Generate a view matrix</div><div class="ttdef"><b>Definition</b> Camera.cpp:60</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_ac7a5567d296aef6d7e1705257ae94161"><div class="ttname"><a href="class_c_camera_component.html#ac7a5567d296aef6d7e1705257ae94161">CCameraComponent::Start</a></div><div class="ttdeci">void Start() override</div><div class="ttdoc">Processing for the first update frame</div><div class="ttdef"><b>Definition</b> Camera.cpp:20</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_ace7d2b6e60be4d2706874909b8717ae5"><div class="ttname"><a href="class_c_camera_component.html#ace7d2b6e60be4d2706874909b8717ae5">CCameraComponent::GetFovAngleY</a></div><div class="ttdeci">float GetFovAngleY() const</div><div class="ttdoc">Get the fov angle Y</div><div class="ttdef"><b>Definition</b> Camera.h:80</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_ae74a5ff6bafa790d01f32f2a97d9c1de"><div class="ttname"><a href="class_c_camera_component.html#ae74a5ff6bafa790d01f32f2a97d9c1de">CCameraComponent::GetName</a></div><div class="ttdeci">const std::wstring &amp; GetName() const</div><div class="ttdoc">Get the name of this camera</div><div class="ttdef"><b>Definition</b> Camera.h:60</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_aeece690b4a3d380df9e05701242dfdf5"><div class="ttname"><a href="class_c_camera_component.html#aeece690b4a3d380df9e05701242dfdf5">CCameraComponent::GetNear</a></div><div class="ttdeci">float GetNear() const</div><div class="ttdoc">Get the near clipping value</div><div class="ttdef"><b>Definition</b> Camera.h:90</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_af11398674544cb73a5224c757a54a819"><div class="ttname"><a href="class_c_camera_component.html#af11398674544cb73a5224c757a54a819">CCameraComponent::SetFar</a></div><div class="ttdeci">void SetFar(float farValue)</div><div class="ttdoc">Set a far clipping value</div><div class="ttdef"><b>Definition</b> Camera.h:97</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_af5be76b0277d839421be8594f9a604cb"><div class="ttname"><a href="class_c_camera_component.html#af5be76b0277d839421be8594f9a604cb">CCameraComponent::GenerateProjectionMatrix</a></div><div class="ttdeci">DirectX::XMMATRIX GenerateProjectionMatrix()</div><div class="ttdoc">Generate a projection matrix</div><div class="ttdef"><b>Definition</b> Camera.cpp:92</div></div>
+<div class="ttc" id="aclass_c_camera_component_html_afebd4422fee6c0f6eb58130c71621940"><div class="ttname"><a href="class_c_camera_component.html#afebd4422fee6c0f6eb58130c71621940">CCameraComponent::GetFocus</a></div><div class="ttdeci">const Vector3f &amp; GetFocus() const</div><div class="ttdoc">Get the focus position if in focus mode, otherwise, look direction vector</div><div class="ttdef"><b>Definition</b> Camera.h:68</div></div>
+<div class="ttc" id="aclass_c_game_object_html"><div class="ttname"><a href="class_c_game_object.html">CGameObject</a></div><div class="ttdoc">This is base class for game object</div><div class="ttdef"><b>Definition</b> GameObject.h:35</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 3 &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: WeakPtr.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#concepts">Concepts</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">WeakPtr.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file handles weak pointer that can be generated from unique pointer and shared pointer.  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_utility_8h_source.html">Utility.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+WeakPtr.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_weak_ptr_8h__incl.png" border="0" usemap="#a_weak_ptr_8h" alt=""/></div>
+<map name="a_weak_ptr_8h" id="a_weak_ptr_8h">
+<area shape="rect" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="20,5,103,32"/>
+<area shape="rect" href="_utility_8h.html" title="This file defines utility functions that are useful for general programs." alt="" coords="29,80,94,107"/>
+<area shape="poly" title=" " alt="" coords="64,33,64,64,59,64,59,33"/>
+<area shape="rect" href="_utility_for_type_8h.html" title="This file defines utility functions that are useful for type operations." alt="" coords="5,155,118,181"/>
+<area shape="poly" title=" " alt="" coords="64,107,64,139,59,139,59,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_weak_ptr_8h__dep__incl.png" border="0" usemap="#a_weak_ptr_8hdep" alt=""/></div>
+<map name="a_weak_ptr_8hdep" id="a_weak_ptr_8hdep">
+<area shape="rect" title="This file handles weak pointer that can be generated from unique pointer and shared pointer." alt="" coords="3069,5,3153,32"/>
+<area shape="rect" href="_render_pass_asset_8h.html" title="This file handles abstract class for rendering pass asset that scene uses." alt="" coords="1656,304,1793,331"/>
+<area shape="poly" title=" " alt="" coords="3055,35,1784,306,1783,301,3053,30"/>
+<area shape="rect" href="_shared_ptr_8h.html" title="This file handles self&#45;made shared pointer." alt="" coords="3066,304,3156,331"/>
+<area shape="poly" title=" " alt="" coords="3114,47,3114,304,3108,304,3108,47"/>
+<area shape="rect" href="_unique_ptr_8h.html" title="This file handles unique pointer that can generate weak reference pointer." alt="" coords="3645,80,3734,107"/>
+<area shape="poly" title=" " alt="" coords="3168,24,3645,84,3644,89,3168,30"/>
+<area shape="rect" href="_render_pass_asset_8cpp.html" title=" " alt="" coords="913,379,1064,405"/>
+<area shape="poly" title=" " alt="" coords="1641,328,1391,350,1083,381,1065,383,1064,378,1083,376,1390,345,1640,323"/>
+<area shape="rect" href="_scene_8h.html" title="This file handles scene class." alt="" coords="2311,379,2380,405"/>
+<area shape="poly" title=" " alt="" coords="1808,326,2311,384,2310,389,1808,331"/>
+<area shape="rect" href="_standard_render_pass_8h.html" title="This file handles scene base class for stage." alt="" coords="5,453,161,480"/>
+<area shape="poly" title=" " alt="" coords="1640,326,1366,346,1227,362,1128,381,1103,395,1077,408,990,425,882,435,627,445,371,448,261,451,173,456,161,457,161,452,172,451,261,445,371,443,627,440,881,430,990,419,1075,403,1100,390,1126,376,1226,357,1365,341,1640,320"/>
+<area shape="rect" href="_application_clock_8cpp.html" title=" " alt="" coords="3454,528,3597,555"/>
+<area shape="poly" title=" " alt="" coords="2395,391,2594,394,2872,403,3152,421,3267,434,3354,451,3419,481,3503,525,3501,530,3416,486,3353,456,3267,439,3151,426,2872,408,2594,399,2395,396"/>
+<area shape="rect" href="_camera_8cpp.html" title=" " alt="" coords="3955,453,4046,480"/>
+<area shape="poly" title=" " alt="" coords="2396,391,3142,408,3604,426,3797,437,3943,451,3955,452,3954,458,3943,456,3797,443,3604,431,3142,413,2396,397"/>
+<area shape="rect" href="_collider3_d_8cpp.html" title=" " alt="" coords="2252,528,2357,555"/>
+<area shape="poly" title=" " alt="" coords="2297,407,2257,425,2239,438,2225,455,2221,465,2222,475,2234,494,2255,511,2279,525,2276,530,2252,516,2230,498,2217,476,2216,464,2221,452,2236,434,2254,420,2295,402"/>
+<area shape="rect" href="_collider_wrapper_8cpp.html" title=" " alt="" coords="2330,453,2468,480"/>
+<area shape="poly" title=" " alt="" coords="2366,416,2392,451,2388,455,2362,420"/>
+<area shape="rect" href="_collision_algorithm_8cpp.html" title=" " alt="" coords="2492,453,2642,480"/>
+<area shape="poly" title=" " alt="" coords="2396,407,2529,450,2528,455,2394,412"/>
+<area shape="rect" href="_component_8cpp.html" title=" " alt="" coords="4264,453,4377,480"/>
+<area shape="poly" title=" " alt="" coords="2395,391,2668,394,3111,404,3648,421,4202,451,4264,456,4263,461,4201,456,3647,427,3111,409,2668,400,2395,396"/>
+<area shape="rect" href="_debug_camera_8cpp.html" title=" " alt="" coords="2667,453,2795,480"/>
+<area shape="poly" title=" " alt="" coords="2396,400,2667,451,2666,456,2395,405"/>
+<area shape="rect" href="_directional_light_8cpp.html" title=" " alt="" coords="2830,528,2965,555"/>
+<area shape="poly" title=" " alt="" coords="2311,416,2291,431,2276,447,2270,463,2276,478,2303,491,2355,503,2508,520,2683,531,2830,536,2830,541,2683,536,2508,526,2354,508,2301,497,2272,482,2264,463,2272,444,2288,427,2308,412"/>
+<area shape="rect" href="_dynamic_b_v_tree_8cpp.html" title=" " alt="" coords="2820,453,2960,480"/>
+<area shape="poly" title=" " alt="" coords="2396,397,2807,451,2819,452,2819,458,2807,456,2395,402"/>
+<area shape="rect" href="_dynamic_cb_world_mat_8cpp.html" title=" " alt="" coords="3761,453,3930,480"/>
+<area shape="poly" title=" " alt="" coords="2396,392,2920,412,3301,429,3691,451,3761,456,3760,461,3691,456,3300,435,2920,417,2396,398"/>
+<area shape="rect" href="_for_physics_objects_8cpp.html" title=" " alt="" coords="2984,453,3142,480"/>
+<area shape="poly" title=" " alt="" coords="2396,395,2644,417,2973,451,2984,452,2984,457,2972,456,2643,422,2396,400"/>
+<area shape="rect" href="_game_object_8cpp.html" title=" " alt="" coords="4086,528,4205,555"/>
+<area shape="poly" title=" " alt="" coords="2396,391,2589,393,2885,402,3237,420,3419,433,3597,451,3674,463,3750,477,4086,529,4085,534,3749,483,3673,468,3596,456,3418,439,3236,425,2885,407,2589,399,2396,396"/>
+<area shape="rect" href="_graphics_component_8cpp.html" title=" " alt="" coords="3630,528,3795,555"/>
+<area shape="poly" title=" " alt="" coords="2396,391,2602,394,2893,403,3187,421,3308,434,3400,451,3428,463,3456,478,3551,505,3640,525,3639,530,3550,510,3454,482,3426,468,3398,456,3307,439,3186,426,2893,408,2602,399,2396,396"/>
+<area shape="rect" href="_graphics_pipeline_state_8cpp.html" title=" " alt="" coords="3166,453,3341,480"/>
+<area shape="poly" title=" " alt="" coords="2396,394,2715,415,3154,451,3166,452,3165,457,3153,456,2715,420,2396,399"/>
+<area shape="rect" href="_physics_world_8cpp.html" title=" " alt="" coords="373,453,500,480"/>
+<area shape="poly" title=" " alt="" coords="2295,397,1442,415,906,433,681,444,511,456,501,457,500,452,511,451,680,438,906,427,1442,410,2295,391"/>
+<area shape="rect" href="_piston_machine_8cpp.html" title=" " alt="" coords="524,453,656,480"/>
+<area shape="poly" title=" " alt="" coords="2296,396,2046,396,1646,403,1164,421,914,436,669,456,656,457,656,452,668,451,914,431,1164,416,1646,398,2045,391,2295,390"/>
+<area shape="rect" href="_player_camera_8cpp.html" title=" " alt="" coords="680,453,809,480"/>
+<area shape="poly" title=" " alt="" coords="2296,396,2066,397,1704,405,1269,423,1043,437,822,456,809,457,809,452,821,451,1043,432,1269,418,1703,400,2066,392,2296,391"/>
+<area shape="rect" href="_player_control_component_8cpp.html" title=" " alt="" coords="833,453,1024,480"/>
+<area shape="poly" title=" " alt="" coords="2296,397,1785,414,1416,431,1037,456,1024,457,1023,452,1036,451,1415,426,1784,408,2296,392"/>
+<area shape="rect" href="_point_light_8cpp.html" title=" " alt="" coords="3214,528,3318,555"/>
+<area shape="poly" title=" " alt="" coords="2329,419,2314,450,2313,465,2319,478,2353,484,2437,492,2697,509,3213,535,3213,540,2697,514,2436,497,2352,489,2316,482,2308,466,2309,449,2324,416"/>
+<area shape="rect" href="_rigid_body_8cpp.html" title=" " alt="" coords="1048,453,1153,480"/>
+<area shape="poly" title=" " alt="" coords="2296,396,2112,399,1833,407,1503,425,1333,439,1166,456,1154,458,1153,452,1165,451,1332,434,1503,420,1833,402,2112,394,2296,391"/>
+<area shape="rect" href="_scene_8cpp.html" title=" " alt="" coords="1177,453,1261,480"/>
+<area shape="poly" title=" " alt="" coords="2296,396,2126,398,1873,406,1576,424,1423,438,1273,456,1261,458,1260,453,1272,451,1422,432,1576,418,1873,400,2126,392,2296,391"/>
+<area shape="rect" href="_scene_phase_8cpp.html" title=" " alt="" coords="4070,453,4190,480"/>
+<area shape="poly" title=" " alt="" coords="2396,392,3194,410,3692,428,3900,439,4058,451,4069,452,4069,457,4057,456,3900,444,3691,433,3194,415,2396,397"/>
+<area shape="rect" href="_scene_registry_8h.html" title="This file handles registry class that manages all scene." alt="" coords="3467,453,3584,480"/>
+<area shape="poly" title=" " alt="" coords="2396,392,2829,407,3135,424,3449,451,3467,453,3466,458,3448,456,3135,429,2829,412,2396,397"/>
+<area shape="rect" href="_sky_dome_8cpp.html" title=" " alt="" coords="1285,453,1388,480"/>
+<area shape="poly" title=" " alt="" coords="2296,397,1923,412,1664,429,1401,456,1389,458,1388,452,1400,451,1664,424,1923,406,2296,392"/>
+<area shape="rect" href="_static_cb_dir_light_param_8cpp.html" title=" " alt="" coords="1413,453,1591,480"/>
+<area shape="poly" title=" " alt="" coords="2296,399,2002,421,1603,456,1591,457,1591,452,1603,451,2002,416,2295,394"/>
+<area shape="rect" href="_static_cb_light_v_p_mat_8cpp.html" title=" " alt="" coords="185,453,349,480"/>
+<area shape="poly" title=" " alt="" coords="2295,396,2005,396,1531,403,955,421,655,436,361,456,350,457,349,452,360,451,655,431,955,415,1531,397,2005,391,2295,390"/>
+<area shape="rect" href="_static_cb_orthographic_mat_8cpp.html" title=" " alt="" coords="1615,453,1807,480"/>
+<area shape="poly" title=" " alt="" coords="2296,402,1808,457,1807,452,2295,396"/>
+<area shape="rect" href="_static_cb_v_p_mat_8cpp.html" title=" " alt="" coords="1831,453,1967,480"/>
+<area shape="poly" title=" " alt="" coords="2296,404,1968,457,1967,452,2295,399"/>
+<area shape="rect" href="_static_sb_point_lights_8cpp.html" title=" " alt="" coords="1992,453,2153,480"/>
+<area shape="poly" title=" " alt="" coords="2297,409,2121,455,2120,450,2295,404"/>
+<area shape="poly" title=" " alt="" coords="3528,496,3528,528,3523,528,3523,496"/>
+<area shape="poly" title=" " alt="" coords="3451,476,3354,483,2357,540,2357,535,3354,477,3451,471"/>
+<area shape="poly" title=" " alt="" coords="3452,479,2966,535,2965,530,3451,474"/>
+<area shape="poly" title=" " alt="" coords="3600,474,4086,530,4085,536,3599,479"/>
+<area shape="poly" title=" " alt="" coords="3573,483,3681,525,3679,530,3571,488"/>
+<area shape="poly" title=" " alt="" coords="3466,487,3312,530,3311,525,3465,482"/>
+<area shape="poly" title=" " alt="" coords="3162,334,3491,450,3489,455,3160,339"/>
+<area shape="rect" href="_imgui_helper_8h.html" title="This file handles helper class for imgui." alt="" coords="3388,379,3488,405"/>
+<area shape="poly" title=" " alt="" coords="3172,329,3387,377,3386,382,3171,335"/>
+<area shape="rect" href="_static_cb_light_v_p_mat_8h.html" title="This file handles the static CB allocater of the light&#39;s view projection matrix." alt="" coords="1139,379,1289,405"/>
+<area shape="poly" title=" " alt="" coords="3050,324,1289,390,1289,385,3050,318"/>
+<area shape="poly" title=" " alt="" coords="3504,398,3556,416,3579,431,3599,452,3604,463,3603,475,3592,496,3572,515,3550,530,3547,525,3569,511,3588,493,3598,474,3598,464,3594,455,3576,435,3553,421,3502,403"/>
+<area shape="poly" title=" " alt="" coords="3466,413,3512,451,3509,455,3463,418"/>
+<area shape="poly" title=" " alt="" coords="1123,408,1121,408,907,425,740,432,574,439,361,456,350,457,349,452,360,451,574,434,740,427,907,419,1120,403,1123,402"/>
+<area shape="poly" title=" " alt="" coords="1123,408,1121,408,854,426,646,432,439,437,173,456,161,457,161,452,172,451,438,432,646,426,854,421,1120,403,1123,402"/>
+<area shape="poly" title=" " alt="" coords="3630,100,3543,107,3443,118,3351,134,3315,145,3288,157,3264,177,3249,198,3231,245,3223,268,3212,292,3195,313,3170,333,3121,347,3037,359,2804,377,2557,387,2381,393,2381,387,2556,382,2804,371,3037,354,3120,342,3167,328,3192,310,3208,289,3218,266,3226,243,3244,195,3260,173,3286,152,3313,140,3350,129,3442,113,3542,102,3629,95"/>
+<area shape="rect" href="_abstract_cb_allocator_8h.html" title="This file allocates data for Constant buffer view." alt="" coords="3454,155,3603,181"/>
+<area shape="poly" title=" " alt="" coords="3649,116,3558,156,3556,152,3647,111"/>
+<area shape="rect" href="_callback_system_8h.html" title="This file handles object&#39;s callback function system." alt="" coords="4257,229,4384,256"/>
+<area shape="poly" title=" " alt="" coords="3750,93,3867,98,4009,108,4144,126,4198,138,4239,152,4264,169,4286,189,4315,228,4311,231,4282,193,4261,173,4236,157,4197,143,4143,131,4008,114,3866,104,3750,99"/>
+<area shape="rect" href="_game_object_8h.html" title="This file handles base class for game object." alt="" coords="4166,304,4272,331"/>
+<area shape="poly" title=" " alt="" coords="3750,92,3854,95,3976,103,4090,121,4134,135,4166,153,4182,169,4195,188,4211,231,4219,272,4222,303,4216,304,4214,273,4206,233,4190,191,4178,172,4163,157,4132,140,4089,127,3976,109,3853,100,3750,97"/>
+<area shape="rect" href="_component_8h.html" title="This file handles abstract class for component used in update processing." alt="" coords="4409,229,4507,256"/>
+<area shape="poly" title=" " alt="" coords="3750,92,3851,94,3982,103,4128,121,4202,135,4273,152,4321,168,4367,189,4438,226,4436,231,4365,193,4319,173,4272,157,4200,140,4127,126,3981,108,3850,100,3750,97"/>
+<area shape="rect" href="_graphics_component_8h.html" title="This file handles component for graphics." alt="" coords="3660,229,3810,256"/>
+<area shape="poly" title=" " alt="" coords="3676,121,3665,150,3664,166,3668,180,3688,207,3714,227,3710,231,3684,211,3663,182,3659,166,3660,149,3671,119"/>
+<area shape="rect" href="_loaded_model_info_8h.html" title="This file handles mesh information of loaded model." alt="" coords="3317,229,3446,256"/>
+<area shape="poly" title=" " alt="" coords="3630,98,3548,102,3455,112,3374,129,3344,141,3324,156,3319,165,3318,174,3327,193,3344,211,3364,227,3360,231,3341,215,3323,196,3313,175,3314,163,3320,153,3341,137,3372,124,3455,106,3547,97,3630,93"/>
+<area shape="rect" href="_mesh_buffer_8h.html" title="This file handles vertex and index buffers needed to construct the mesh." alt="" coords="3333,155,3430,181"/>
+<area shape="poly" title=" " alt="" coords="3631,111,3431,158,3430,153,3629,106"/>
+<area shape="rect" href="_shader_8h.html" title="This file handles each shaders." alt="" coords="3974,229,4048,256"/>
+<area shape="poly" title=" " alt="" coords="3750,96,3981,116,4088,132,4125,142,4145,153,4153,168,4151,182,4142,194,4128,205,4089,223,4049,235,4047,230,4087,218,4125,200,4138,190,4146,180,4148,169,4141,157,4123,147,4087,137,3981,121,3750,101"/>
+<area shape="rect" href="_singleton_8h.html" title="File handling abstract singleton class." alt="" coords="3395,304,3481,331"/>
+<area shape="poly" title=" " alt="" coords="3629,98,3545,102,3449,111,3364,129,3333,141,3312,157,3295,180,3290,204,3294,228,3308,254,3325,274,3347,288,3395,306,3393,311,3344,293,3322,278,3303,258,3289,230,3285,204,3290,178,3308,153,3330,137,3363,124,3448,106,3544,96,3629,93"/>
+<area shape="rect" href="_stable_handle_vector_8h.html" title="This file handles dynamic array capable of generating stable handles." alt="" coords="3827,155,3974,181"/>
+<area shape="poly" title=" " alt="" coords="3742,110,3864,152,3862,157,3740,115"/>
+<area shape="rect" href="_static_sb_allocator_8h.html" title="This file handles abstract class for static structured buffer allocator." alt="" coords="3998,155,4131,181"/>
+<area shape="poly" title=" " alt="" coords="3750,104,3999,151,3998,157,3749,109"/>
+<area shape="rect" href="_utility_for_direct_x_8h.html" title="This file defines utility functions that are useful for DirectX." alt="" coords="3678,155,3803,181"/>
+<area shape="poly" title=" " alt="" coords="3709,118,3734,153,3729,156,3705,121"/>
+<area shape="poly" title=" " alt="" coords="4292,268,4238,306,4235,301,4289,263"/>
+<area shape="poly" title=" " alt="" coords="4151,324,2381,392,2381,387,4151,319"/>
+<area shape="poly" title=" " alt="" coords="4189,342,4020,455,4017,451,4186,337"/>
+<area shape="poly" title=" " alt="" coords="4238,342,4314,451,4310,454,4234,345"/>
+<area shape="poly" title=" " alt="" coords="4174,339,3878,455,3876,450,4172,334"/>
+<area shape="poly" title=" " alt="" coords="4267,335,4320,361,4370,395,4389,415,4400,436,4401,459,4390,482,4378,492,4360,502,4313,517,4206,536,4205,531,4312,512,4358,497,4375,488,4386,478,4396,458,4395,438,4384,418,4366,399,4317,365,4264,339"/>
+<area shape="poly" title=" " alt="" coords="4228,346,4232,377,4231,414,4223,450,4215,467,4203,482,4182,493,4145,502,4038,518,3795,538,3795,533,4037,513,4144,497,4181,488,4200,478,4211,464,4218,448,4226,413,4226,378,4223,347"/>
+<area shape="poly" title=" " alt="" coords="4206,345,4140,454,4135,451,4201,343"/>
+<area shape="poly" title=" " alt="" coords="4444,271,4330,454,4326,452,4440,268"/>
+<area shape="poly" title=" " alt="" coords="4464,271,4466,316,4462,373,4446,431,4433,458,4414,482,4400,493,4379,502,4325,518,4206,537,4205,531,4324,512,4377,497,4397,488,4410,478,4428,455,4441,429,4457,372,4461,316,4458,271"/>
+<area shape="poly" title=" " alt="" coords="4402,263,4262,306,4260,301,4401,258"/>
+<area shape="poly" title=" " alt="" coords="3750,269,3842,452,3837,454,3746,271"/>
+<area shape="poly" title=" " alt="" coords="3736,272,3716,528,3711,527,3730,271"/>
+<area shape="poly" title=" " alt="" coords="3826,255,4166,305,4166,311,3825,260"/>
+<area shape="poly" title=" " alt="" coords="3446,180,3674,226,3673,231,3445,185"/>
+<area shape="poly" title=" " alt="" coords="3384,197,3384,229,3379,229,3379,197"/>
+<area shape="poly" title=" " alt="" coords="3469,339,3487,356,3503,377,3519,417,3527,452,3521,453,3514,419,3498,380,3483,360,3465,343"/>
+<area shape="poly" title=" " alt="" coords="3440,346,3440,378,3435,378,3435,346"/>
+<area shape="poly" title=" " alt="" coords="3741,197,3739,229,3733,229,3736,197"/>
+<area shape="poly" title=" " alt="" coords="3663,188,3445,231,3444,226,3662,182"/>
+<area shape="poly" title=" " alt="" coords="3803,183,3975,229,3973,234,3801,188"/>
+</map>
+</div>
+</div>
+<p><a href="_weak_ptr_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ref_count.html">RefCount&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure that handles references and its reference counts  <a href="struct_ref_count.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_weak_ptr.html">CWeakPtr&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer handling weak reference to an instance of '<a class="el" href="class_c_unique_ptr_weakable.html" title="Unique pointer that can generate weak reference pointer">CUniquePtrWeakable</a>' and '<a class="el" href="class_c_shared_ptr.html" title="Self-made shared pointer class">CSharedPtr</a>'  <a href="class_c_weak_ptr.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_weak_ptr_from_this.html">IWeakPtrFromThis</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty interface to let '<a class="el" href="class_a_c_weak_ptr_from_this.html" title="Class inheriting from this class can create WeakPtrs from its instance">ACWeakPtrFromThis</a>' do type checking without template  <a href="class_i_weak_ptr_from_this.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class inheriting from this class can create WeakPtrs from its instance  <a href="class_a_c_weak_ptr_from_this.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_array_smart_ptr.html">CArraySmartPtr&lt; SmartPtr, T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that wraps a smart pointer of array type. Internally has the size of an array  <a href="class_c_array_smart_ptr.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="concepts" name="concepts"></a>
+Concepts</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the internal type convertible in smart pointer? <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_is_not_array_type.html">IsNotArrayType</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is it not an array type? <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ae0137243e314ddf0e5f7f7040fa44e9f" id="r_ae0137243e314ddf0e5f7f7040fa44e9f"><td class="memTemplParams" colspan="2">template&lt;class T , class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</td></tr>
+<tr class="memitem:ae0137243e314ddf0e5f7f7040fa44e9f"><td class="memTemplItemLeft" align="right" valign="top">std::remove_extent_t&lt; U &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_weak_ptr_8h.html#ae0137243e314ddf0e5f7f7040fa44e9f">CastSmartPtrInstance</a> (std::remove_extent_t&lt; T &gt; *instance)</td></tr>
+<tr class="memdesc:ae0137243e314ddf0e5f7f7040fa44e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast smart pointer instance (T to U)  <br /></td></tr>
+<tr class="separator:ae0137243e314ddf0e5f7f7040fa44e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This file handles weak pointer that can be generated from unique pointer and shared pointer. </p>
+<dl class="section author"><dt>著者</dt><dd>Shodai Makino </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2023/11/28 </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ae0137243e314ddf0e5f7f7040fa44e9f" name="ae0137243e314ddf0e5f7f7040fa44e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0137243e314ddf0e5f7f7040fa44e9f">&#9670;&#160;</a></span>CastSmartPtrInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class U &gt; <br />
+requires <a class="el" href="concept_is_convertible_smart_ptr.html">IsConvertibleSmartPtr</a>&lt;T, U&gt;</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::remove_extent_t&lt; U &gt; * CastSmartPtrInstance </td>
+          <td>(</td>
+          <td class="paramtype">std::remove_extent_t&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cast smart pointer instance (T to U) </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Cast source </td></tr>
+    <tr><td class="paramname">U</td><td>Cast destination</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instance</td><td>Instance to be cast </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>If cast succeeds, return pointer, otherwise nullptr </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

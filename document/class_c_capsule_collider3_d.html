@@ -1,0 +1,845 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: CCapsuleCollider3D クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_capsule_collider3_d-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CCapsuleCollider3D クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>3D Capsule collider component  
+ <a href="class_c_capsule_collider3_d.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_capsule_collider3_d_8h_source.html">CapsuleCollider3D.h</a>&gt;</code></p>
+<div class="dynheader">
+CCapsuleCollider3D の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_capsule_collider3_d__inherit__graph.png" border="0" usemap="#a_c_capsule_collider3_d_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_capsule_collider3_d_inherit__map" id="a_c_capsule_collider3_d_inherit__map">
+<area shape="rect" title="3D Capsule collider component" alt="" coords="13,320,150,347"/>
+<area shape="rect" href="class_a_c_collider3_d.html" title="Collider abstract class in 3D coordinate space" alt="" coords="32,245,131,272"/>
+<area shape="poly" title=" " alt="" coords="84,288,84,320,79,320,79,288"/>
+<area shape="rect" href="class_a_c_component.html" title="This is abstract class for component used in update processing" alt="" coords="29,171,134,197"/>
+<area shape="poly" title=" " alt="" coords="84,213,84,245,79,245,79,213"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="5,80,158,123"/>
+<area shape="poly" title=" " alt="" coords="84,139,84,170,79,170,79,139"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="17,5,146,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,84,80,79,80,79,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CCapsuleCollider3D 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_capsule_collider3_d__coll__graph.png" border="0" usemap="#a_c_capsule_collider3_d_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_capsule_collider3_d_coll__map" id="a_c_capsule_collider3_d_coll__map">
+<area shape="rect" title="3D Capsule collider component" alt="" coords="1165,151,1302,177"/>
+<area shape="rect" href="class_a_c_collider3_d.html" title="Collider abstract class in 3D coordinate space" alt="" coords="1018,151,1116,177"/>
+<area shape="poly" title=" " alt="" coords="1132,161,1165,161,1165,167,1132,167"/>
+<area shape="rect" href="class_a_c_component.html" title="This is abstract class for component used in update processing" alt="" coords="701,53,807,80"/>
+<area shape="poly" title=" " alt="" coords="823,74,906,91,995,119,1048,148,1045,153,993,124,905,96,822,79"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="354,5,506,48"/>
+<area shape="poly" title=" " alt="" coords="522,35,701,58,701,63,521,41"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="118,13,247,40"/>
+<area shape="poly" title=" " alt="" coords="263,24,353,24,353,29,263,29"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="336,72,523,99"/>
+<area shape="poly" title=" " alt="" coords="539,76,701,67,701,72,539,82"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="645,104,863,147"/>
+<area shape="poly" title=" " alt="" coords="878,138,1017,155,1017,161,878,143"/>
+<area shape="rect" href="struct_mkpe_1_1_bounding_volume.html" title="Bounding volume using AABB" alt="" coords="674,251,834,277"/>
+<area shape="poly" title=" " alt="" coords="849,265,922,257,958,248,993,235,1012,223,1029,207,1055,176,1059,179,1033,211,1015,227,995,240,960,254,922,263,850,271"/>
+<area shape="rect" href="struct_vector.html" title=" " alt="" coords="369,216,491,243"/>
+<area shape="poly" title=" " alt="" coords="506,221,862,188,1017,168,1018,174,863,193,507,226"/>
+<area shape="poly" title=" " alt="" coords="505,244,548,251,674,260,674,265,547,256,504,249"/>
+<area shape="rect" title=" " alt="" coords="5,232,44,259"/>
+<area shape="poly" title=" " alt="" coords="58,233,117,220,184,215,252,214,368,220,368,226,252,220,185,220,118,225,59,238"/>
+<area shape="rect" href="struct_vector.html" title="Colomn vector structure" alt="" coords="119,291,246,317"/>
+<area shape="poly" title=" " alt="" coords="59,255,145,288,143,293,58,260"/>
+<area shape="poly" title=" " alt="" coords="243,283,382,241,384,246,245,288"/>
+<area shape="poly" title=" " alt="" coords="163,273,170,267,182,264,194,266,202,273,204,282,201,291,196,289,199,282,197,276,192,271,182,269,172,271,166,277"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a8e4ff19443e494ec2d80c404c5075a79" id="r_a8e4ff19443e494ec2d80c404c5075a79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#a8e4ff19443e494ec2d80c404c5075a79">CCapsuleCollider3D</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner, float length=2.0f, float radius=0.5f, const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;offset=<a class="el" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997">Vector3f::Zero</a>())</td></tr>
+<tr class="memdesc:a8e4ff19443e494ec2d80c404c5075a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a8e4ff19443e494ec2d80c404c5075a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845d43329bb029225847600cabacb174" id="r_a845d43329bb029225847600cabacb174"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#a845d43329bb029225847600cabacb174">~CCapsuleCollider3D</a> () override=default</td></tr>
+<tr class="memdesc:a845d43329bb029225847600cabacb174"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a845d43329bb029225847600cabacb174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845ecd4f00017072debc8176a86ed632" id="r_a845ecd4f00017072debc8176a86ed632"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#a845ecd4f00017072debc8176a86ed632">GetScalingRadius</a> () const</td></tr>
+<tr class="memdesc:a845ecd4f00017072debc8176a86ed632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scaling radius of capsule hemispheres  <br /></td></tr>
+<tr class="separator:a845ecd4f00017072debc8176a86ed632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c350cf71f3616b11337aecc7bf58efa" id="r_a3c350cf71f3616b11337aecc7bf58efa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#a3c350cf71f3616b11337aecc7bf58efa">GetRadius</a> () const</td></tr>
+<tr class="memdesc:a3c350cf71f3616b11337aecc7bf58efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get radius of capsule hemispheres  <br /></td></tr>
+<tr class="separator:a3c350cf71f3616b11337aecc7bf58efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719c4389b4525354bab10b9f5a2c11fb" id="r_a719c4389b4525354bab10b9f5a2c11fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#a719c4389b4525354bab10b9f5a2c11fb">SetRadius</a> (float radius)</td></tr>
+<tr class="memdesc:a719c4389b4525354bab10b9f5a2c11fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set radius of capsule hemispheres  <br /></td></tr>
+<tr class="separator:a719c4389b4525354bab10b9f5a2c11fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49cefde5cbc511d482705e3a8f937d91" id="r_a49cefde5cbc511d482705e3a8f937d91"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#a49cefde5cbc511d482705e3a8f937d91">GetHeight</a> () const</td></tr>
+<tr class="memdesc:a49cefde5cbc511d482705e3a8f937d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get height of capsule collider  <br /></td></tr>
+<tr class="separator:a49cefde5cbc511d482705e3a8f937d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab8c1c153e4a5cf1de23567c66017c5" id="r_a9ab8c1c153e4a5cf1de23567c66017c5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#a9ab8c1c153e4a5cf1de23567c66017c5">GetScalingLength</a> () const</td></tr>
+<tr class="memdesc:a9ab8c1c153e4a5cf1de23567c66017c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scaling height of capsule collider  <br /></td></tr>
+<tr class="separator:a9ab8c1c153e4a5cf1de23567c66017c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25d12bbb607c9ba1ecc1066452b4004" id="r_ae25d12bbb607c9ba1ecc1066452b4004"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#ae25d12bbb607c9ba1ecc1066452b4004">GetLength</a> () const</td></tr>
+<tr class="memdesc:ae25d12bbb607c9ba1ecc1066452b4004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get length of capsule collider axis  <br /></td></tr>
+<tr class="separator:ae25d12bbb607c9ba1ecc1066452b4004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dad34cfa08445a11f0ad972b3748db4" id="r_a5dad34cfa08445a11f0ad972b3748db4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#a5dad34cfa08445a11f0ad972b3748db4">SetLength</a> (float length)</td></tr>
+<tr class="memdesc:a5dad34cfa08445a11f0ad972b3748db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set length of capsule collider axis  <br /></td></tr>
+<tr class="separator:a5dad34cfa08445a11f0ad972b3748db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2007385cfe0c7ca331dab82a1df9503" id="r_ab2007385cfe0c7ca331dab82a1df9503"><td class="memItemLeft" align="right" valign="top">UINT8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#ab2007385cfe0c7ca331dab82a1df9503">GetAxisIndex</a> () const</td></tr>
+<tr class="memdesc:ab2007385cfe0c7ca331dab82a1df9503"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get axis of capsule collider  <br /></td></tr>
+<tr class="separator:ab2007385cfe0c7ca331dab82a1df9503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e694ac7a736b3eaf50a8eb1b434e99" id="r_a81e694ac7a736b3eaf50a8eb1b434e99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#a81e694ac7a736b3eaf50a8eb1b434e99">SetAxisIndex</a> (UINT8 axisIndex)</td></tr>
+<tr class="memdesc:a81e694ac7a736b3eaf50a8eb1b434e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set axis of capsule collider  <br /></td></tr>
+<tr class="separator:a81e694ac7a736b3eaf50a8eb1b434e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017a846964e11458061c395b689a6f3a" id="r_a017a846964e11458061c395b689a6f3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#a017a846964e11458061c395b689a6f3a">GenerateInvInertiaTensorLocal</a> (<a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> *local) override</td></tr>
+<tr class="memdesc:a017a846964e11458061c395b689a6f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a reduced version of the local inertia tensor  <br /></td></tr>
+<tr class="separator:a017a846964e11458061c395b689a6f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a387fe70df0f68073b9b33215cf3d86ae" id="r_a387fe70df0f68073b9b33215cf3d86ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_capsule_collider3_d.html#a387fe70df0f68073b9b33215cf3d86ae">GetLocalSupportVector</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;v) const override</td></tr>
+<tr class="memdesc:a387fe70df0f68073b9b33215cf3d86ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get support vector in local coordinate space  <br /></td></tr>
+<tr class="separator:a387fe70df0f68073b9b33215cf3d86ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_collider3_d"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_collider3_d')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:af039578b8e4159e4626febebd3a96056 inherit pub_methods_class_a_c_collider3_d" id="r_af039578b8e4159e4626febebd3a96056"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#af039578b8e4159e4626febebd3a96056">ACCollider3D</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner, <a class="el" href="_collider3_d_8h.html#a033b6c37bb0154119927a48c7eb7b3f7">ColliderType</a> type, const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;offset)</td></tr>
+<tr class="memdesc:af039578b8e4159e4626febebd3a96056 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:af039578b8e4159e4626febebd3a96056 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef413eb0627679aba186c631db7a956f inherit pub_methods_class_a_c_collider3_d" id="r_aef413eb0627679aba186c631db7a956f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#aef413eb0627679aba186c631db7a956f">~ACCollider3D</a> ()=0</td></tr>
+<tr class="memdesc:aef413eb0627679aba186c631db7a956f inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:aef413eb0627679aba186c631db7a956f inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b275548b6f2185f5a1986af14b1707 inherit pub_methods_class_a_c_collider3_d" id="r_ad2b275548b6f2185f5a1986af14b1707"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#ad2b275548b6f2185f5a1986af14b1707">Awake</a> ()</td></tr>
+<tr class="memdesc:ad2b275548b6f2185f5a1986af14b1707 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awake processing  <br /></td></tr>
+<tr class="separator:ad2b275548b6f2185f5a1986af14b1707 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88239cd448e608af230c96f371ca9aac inherit pub_methods_class_a_c_collider3_d" id="r_a88239cd448e608af230c96f371ca9aac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a88239cd448e608af230c96f371ca9aac">Start</a> () override final</td></tr>
+<tr class="memdesc:a88239cd448e608af230c96f371ca9aac inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start processing  <br /></td></tr>
+<tr class="separator:a88239cd448e608af230c96f371ca9aac inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc9420ace54618403f4cbb88eddd7d0 inherit pub_methods_class_a_c_collider3_d" id="r_a3fc9420ace54618403f4cbb88eddd7d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a3fc9420ace54618403f4cbb88eddd7d0">Update</a> () override final</td></tr>
+<tr class="memdesc:a3fc9420ace54618403f4cbb88eddd7d0 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update processing  <br /></td></tr>
+<tr class="separator:a3fc9420ace54618403f4cbb88eddd7d0 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f32db9b754241a044949413877f9ab inherit pub_methods_class_a_c_collider3_d" id="r_a92f32db9b754241a044949413877f9ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a92f32db9b754241a044949413877f9ab">OnDestroy</a> () override</td></tr>
+<tr class="memdesc:a92f32db9b754241a044949413877f9ab inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing at destruction  <br /></td></tr>
+<tr class="separator:a92f32db9b754241a044949413877f9ab inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df57f3b5f2ac6504cc0cc660f564ec3 inherit pub_methods_class_a_c_collider3_d" id="r_a6df57f3b5f2ac6504cc0cc660f564ec3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_mkpe_1_1_bounding_volume.html">Mkpe::BoundingVolume</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a6df57f3b5f2ac6504cc0cc660f564ec3">GenerateBoudingVolume</a> () const</td></tr>
+<tr class="memdesc:a6df57f3b5f2ac6504cc0cc660f564ec3 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate bounding volume  <br /></td></tr>
+<tr class="separator:a6df57f3b5f2ac6504cc0cc660f564ec3 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaa50b7d2610e7004e9699e57ea568d3 inherit pub_methods_class_a_c_collider3_d" id="r_adaa50b7d2610e7004e9699e57ea568d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#adaa50b7d2610e7004e9699e57ea568d3">CheckScalingRotation</a> ()</td></tr>
+<tr class="memdesc:adaa50b7d2610e7004e9699e57ea568d3 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if scaling and rotation updates are needed, update if necessary  <br /></td></tr>
+<tr class="separator:adaa50b7d2610e7004e9699e57ea568d3 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa636755cea54cf57a8583660cf0acd4a inherit pub_methods_class_a_c_collider3_d" id="r_aa636755cea54cf57a8583660cf0acd4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#aa636755cea54cf57a8583660cf0acd4a">ScalingRotationUpdate</a> ()</td></tr>
+<tr class="memdesc:aa636755cea54cf57a8583660cf0acd4a inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update required values according to scale and rotation without checks  <br /></td></tr>
+<tr class="separator:aa636755cea54cf57a8583660cf0acd4a inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8c0b529813902dbed5f36568bd1e43 inherit pub_methods_class_a_c_collider3_d" id="r_a4e8c0b529813902dbed5f36568bd1e43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a4e8c0b529813902dbed5f36568bd1e43">CheckMyLeafNodeID</a> (<a class="el" href="namespace_mkpe_1_1_dbvt.html#a6bf7f174a99e1d05a3ec19fc096ed037">Mkpe::Dbvt::NodeID</a> id) const</td></tr>
+<tr class="memdesc:a4e8c0b529813902dbed5f36568bd1e43 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the ID sent the same as my leaf node ID?  <br /></td></tr>
+<tr class="separator:a4e8c0b529813902dbed5f36568bd1e43 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a611d6f8c1237788e166bae6f57ea9105 inherit pub_methods_class_a_c_collider3_d" id="r_a611d6f8c1237788e166bae6f57ea9105"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_collider3_d_8h.html#a033b6c37bb0154119927a48c7eb7b3f7">ColliderType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a611d6f8c1237788e166bae6f57ea9105">GetColliderType</a> () const</td></tr>
+<tr class="memdesc:a611d6f8c1237788e166bae6f57ea9105 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get collider type  <br /></td></tr>
+<tr class="separator:a611d6f8c1237788e166bae6f57ea9105 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afafa2768d6771f99cc1e666b994e9c45 inherit pub_methods_class_a_c_collider3_d" id="r_afafa2768d6771f99cc1e666b994e9c45"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#afafa2768d6771f99cc1e666b994e9c45">GetMaxRotateScalar</a> () const</td></tr>
+<tr class="memdesc:afafa2768d6771f99cc1e666b994e9c45 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum extent to which a vertex is shifted by rotation  <br /></td></tr>
+<tr class="separator:afafa2768d6771f99cc1e666b994e9c45 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c4e77d7696e71cde0659336ef054cd inherit pub_methods_class_a_c_collider3_d" id="r_a97c4e77d7696e71cde0659336ef054cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a97c4e77d7696e71cde0659336ef054cd">GetCenter</a> () const</td></tr>
+<tr class="memdesc:a97c4e77d7696e71cde0659336ef054cd inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the center coordinates considering offset  <br /></td></tr>
+<tr class="separator:a97c4e77d7696e71cde0659336ef054cd inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b4ee0cc419e72c4aa60241b37cb111 inherit pub_methods_class_a_c_collider3_d" id="r_a08b4ee0cc419e72c4aa60241b37cb111"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a08b4ee0cc419e72c4aa60241b37cb111">SetOffset</a> (const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;offset)</td></tr>
+<tr class="memdesc:a08b4ee0cc419e72c4aa60241b37cb111 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the offset of the center coordinates of the collider  <br /></td></tr>
+<tr class="separator:a08b4ee0cc419e72c4aa60241b37cb111 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6833d0c89d87416a067232060a93eb inherit pub_methods_class_a_c_collider3_d" id="r_a7d6833d0c89d87416a067232060a93eb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a7d6833d0c89d87416a067232060a93eb">GetOffset</a> () const</td></tr>
+<tr class="memdesc:a7d6833d0c89d87416a067232060a93eb inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the offset of the center coordinates of the collider  <br /></td></tr>
+<tr class="separator:a7d6833d0c89d87416a067232060a93eb inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47c48977d0adf037ed369fe0e22760f1 inherit pub_methods_class_a_c_collider3_d" id="r_a47c48977d0adf037ed369fe0e22760f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a47c48977d0adf037ed369fe0e22760f1">SetTag</a> (<a class="el" href="_collider_tag_8h.html#a07165bcdc51acc98f8ccbd93f03b6110">ColliderTag</a> tag)</td></tr>
+<tr class="memdesc:a47c48977d0adf037ed369fe0e22760f1 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to tag of this collider  <br /></td></tr>
+<tr class="separator:a47c48977d0adf037ed369fe0e22760f1 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ad83d9c55f83d29884dd1cf9091bde inherit pub_methods_class_a_c_collider3_d" id="r_a67ad83d9c55f83d29884dd1cf9091bde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_collider_tag_8h.html#a07165bcdc51acc98f8ccbd93f03b6110">ColliderTag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a67ad83d9c55f83d29884dd1cf9091bde">GetTag</a> () const</td></tr>
+<tr class="memdesc:a67ad83d9c55f83d29884dd1cf9091bde inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get tag of this collider  <br /></td></tr>
+<tr class="separator:a67ad83d9c55f83d29884dd1cf9091bde inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2834c7f8778665d467426d40bb78ca02 inherit pub_methods_class_a_c_collider3_d" id="r_a2834c7f8778665d467426d40bb78ca02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a2834c7f8778665d467426d40bb78ca02">CheckTag</a> (<a class="el" href="_collider_tag_8h.html#a07165bcdc51acc98f8ccbd93f03b6110">ColliderTag</a> mask)</td></tr>
+<tr class="memdesc:a2834c7f8778665d467426d40bb78ca02 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the tag applicable to the sent mask position?  <br /></td></tr>
+<tr class="separator:a2834c7f8778665d467426d40bb78ca02 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc9efe4073af251864866292c1806510 inherit pub_methods_class_a_c_collider3_d" id="r_acc9efe4073af251864866292c1806510"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#acc9efe4073af251864866292c1806510">CheckTagEither</a> (<a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> *other)</td></tr>
+<tr class="memdesc:acc9efe4073af251864866292c1806510 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the other's tag collide or overlap with this collider?  <br /></td></tr>
+<tr class="separator:acc9efe4073af251864866292c1806510 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a836f4c2c62a9bfa0767eb8dd76c89d09 inherit pub_methods_class_a_c_collider3_d" id="r_a836f4c2c62a9bfa0767eb8dd76c89d09"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a836f4c2c62a9bfa0767eb8dd76c89d09">CheckTagCollide</a> (<a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> *other)</td></tr>
+<tr class="memdesc:a836f4c2c62a9bfa0767eb8dd76c89d09 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the other's tag collide with this collider?  <br /></td></tr>
+<tr class="separator:a836f4c2c62a9bfa0767eb8dd76c89d09 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8537663ec9382df5724143af018a9045 inherit pub_methods_class_a_c_collider3_d" id="r_a8537663ec9382df5724143af018a9045"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a8537663ec9382df5724143af018a9045">CheckTagOverlap</a> (<a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> *other)</td></tr>
+<tr class="memdesc:a8537663ec9382df5724143af018a9045 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the other's tag overlap with this collider?  <br /></td></tr>
+<tr class="separator:a8537663ec9382df5724143af018a9045 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa548ab6e191097b759aed0310e9305e3 inherit pub_methods_class_a_c_collider3_d" id="r_aa548ab6e191097b759aed0310e9305e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#aa548ab6e191097b759aed0310e9305e3">SetIsOverlap</a> (bool isOverlap)</td></tr>
+<tr class="memdesc:aa548ab6e191097b759aed0310e9305e3 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the overlap flag  <br /></td></tr>
+<tr class="separator:aa548ab6e191097b759aed0310e9305e3 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4c20e118f66ab80e801bf9bd814084 inherit pub_methods_class_a_c_collider3_d" id="r_acd4c20e118f66ab80e801bf9bd814084"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#acd4c20e118f66ab80e801bf9bd814084">IsOverlap</a> () const</td></tr>
+<tr class="memdesc:acd4c20e118f66ab80e801bf9bd814084 inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can it overlap with the contact opponent?  <br /></td></tr>
+<tr class="separator:acd4c20e118f66ab80e801bf9bd814084 inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b3a04765f6a5db384344fbd0ff6a05a inherit pub_methods_class_a_c_collider3_d" id="r_a7b3a04765f6a5db384344fbd0ff6a05a"><td class="memItemLeft" align="right" valign="top">const Mkpe::CContactColliderList &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a7b3a04765f6a5db384344fbd0ff6a05a">GetContactColliderdLists</a> () const</td></tr>
+<tr class="memdesc:a7b3a04765f6a5db384344fbd0ff6a05a inherit pub_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list class of the contact colliders for each categories  <br /></td></tr>
+<tr class="separator:a7b3a04765f6a5db384344fbd0ff6a05a inherit pub_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_component.html">ACComponent</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component" id="r_a9b2b2d42737a1fe9bb397af5927ff322"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a9b2b2d42737a1fe9bb397af5927ff322">ACComponent</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner)</td></tr>
+<tr class="memdesc:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a9b2b2d42737a1fe9bb397af5927ff322 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component" id="r_a642abc9ed76961dd974d8934485e8055"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a642abc9ed76961dd974d8934485e8055">PrePhysicsUpdate</a> ()</td></tr>
+<tr class="memdesc:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-update process for physics simulation  <br /></td></tr>
+<tr class="separator:a642abc9ed76961dd974d8934485e8055 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component" id="r_a9f7ad72915aa2e6736bf55e39309d81e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a9f7ad72915aa2e6736bf55e39309d81e">OnEnable</a> ()</td></tr>
+<tr class="memdesc:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is enabled  <br /></td></tr>
+<tr class="separator:a9f7ad72915aa2e6736bf55e39309d81e inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d54222d4b8efabdc66f145c3531da0 inherit pub_methods_class_a_c_component" id="r_a02d54222d4b8efabdc66f145c3531da0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a02d54222d4b8efabdc66f145c3531da0">OnDisable</a> ()</td></tr>
+<tr class="memdesc:a02d54222d4b8efabdc66f145c3531da0 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when this component is disabled  <br /></td></tr>
+<tr class="separator:a02d54222d4b8efabdc66f145c3531da0 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component" id="r_aaed0e5be88178643fba5329ab9b708a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#aaed0e5be88178643fba5329ab9b708a7">OnCollisionBegin</a> (const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;opponent)</td></tr>
+<tr class="memdesc:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when collision begins  <br /></td></tr>
+<tr class="separator:aaed0e5be88178643fba5329ab9b708a7 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component" id="r_a21ed1397839942770494c5ab8e96316b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a21ed1397839942770494c5ab8e96316b">OnCollisionHit</a> (const <a class="el" href="class_c_contact_opponent.html">CContactOpponent</a> &amp;opponent)</td></tr>
+<tr class="memdesc:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing during collision  <br /></td></tr>
+<tr class="separator:a21ed1397839942770494c5ab8e96316b inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component" id="r_a4f1e621bcb3400e0d38f73b758fc0def"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a4f1e621bcb3400e0d38f73b758fc0def">OnCollisionEnd</a> (const <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> &gt; &amp;opponent)</td></tr>
+<tr class="memdesc:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when collision ends  <br /></td></tr>
+<tr class="separator:a4f1e621bcb3400e0d38f73b758fc0def inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component" id="r_ab7d85ad6e45f8b12776d219d27e52210"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ab7d85ad6e45f8b12776d219d27e52210">GetGameObject</a> ()</td></tr>
+<tr class="memdesc:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that this component has  <br /></td></tr>
+<tr class="separator:ab7d85ad6e45f8b12776d219d27e52210 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component" id="r_ab8f9b780e9c36420c4180c2de84f9733"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ab8f9b780e9c36420c4180c2de84f9733">GetGameObject</a> () const</td></tr>
+<tr class="memdesc:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that this component has  <br /></td></tr>
+<tr class="separator:ab8f9b780e9c36420c4180c2de84f9733 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component" id="r_a73c656cb09cfd57d43bd4ebdbd992091"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_transformf.html">Transformf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091">GetTransform</a> () const</td></tr>
+<tr class="memdesc:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get transform of the object  <br /></td></tr>
+<tr class="separator:a73c656cb09cfd57d43bd4ebdbd992091 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component" id="r_a1677e72c01ba17b59662de344623cf18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18">GetScene</a> ()</td></tr>
+<tr class="memdesc:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scene where this component exists <br  />
+  <br /></td></tr>
+<tr class="separator:a1677e72c01ba17b59662de344623cf18 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component" id="r_a1311a24d05c9ba046f11411fc300fa9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; const <a class="el" href="class_c_scene.html">CScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1311a24d05c9ba046f11411fc300fa9c">GetScene</a> () const</td></tr>
+<tr class="memdesc:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scene where this component exists <br  />
+  <br /></td></tr>
+<tr class="separator:a1311a24d05c9ba046f11411fc300fa9c inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component" id="r_a7732e25a7799100e9b39be4f2ab1c4c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_callback_system.html">CCallbackSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a7732e25a7799100e9b39be4f2ab1c4c0">GetCallbackSystem</a> ()</td></tr>
+<tr class="memdesc:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the callback system that the gameobject has  <br /></td></tr>
+<tr class="separator:a7732e25a7799100e9b39be4f2ab1c4c0 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component" id="r_ac9afe74cc73092c13a933bf7b82d8fa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ac9afe74cc73092c13a933bf7b82d8fa2">SetIsActive</a> (bool isActive)</td></tr>
+<tr class="memdesc:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the active flag of this component  <br /></td></tr>
+<tr class="separator:ac9afe74cc73092c13a933bf7b82d8fa2 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component" id="r_ad7205261ebda783caeedc9f1c210c2f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ad7205261ebda783caeedc9f1c210c2f4">IsActiveSelf</a> () const</td></tr>
+<tr class="memdesc:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component itself active?  <br /></td></tr>
+<tr class="separator:ad7205261ebda783caeedc9f1c210c2f4 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component" id="r_ad2aa36309aaee515ea36a1765c9b0f97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#ad2aa36309aaee515ea36a1765c9b0f97">IsActiveOverall</a> () const</td></tr>
+<tr class="memdesc:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component itself and the game object that owns it active?  <br /></td></tr>
+<tr class="separator:ad2aa36309aaee515ea36a1765c9b0f97 inherit pub_methods_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis&lt; ACComponent &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_ab2905432621e2737bc3f95cb9101a8e2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#ab2905432621e2737bc3f95cb9101a8e2">~ACWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="memdesc:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_aa549f0fbf364d84137496a7eed607bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_component.html">ACComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#aa549f0fbf364d84137496a7eed607bb5">WeakFromThis</a> ()</td></tr>
+<tr class="memdesc:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer from this class  <br /></td></tr>
+<tr class="separator:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_i_weak_ptr_from_this.html">IWeakPtrFromThis</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this" id="r_a5a3acc569a8076065b930bc52a87255c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_weak_ptr_from_this.html#a5a3acc569a8076065b930bc52a87255c">~IWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="separator:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_methods_class_a_c_collider3_d"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_collider3_d')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:ac9c14cef93e0521810a59fb863f4e13c inherit pro_methods_class_a_c_collider3_d" id="r_ac9c14cef93e0521810a59fb863f4e13c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">Mkpe::CColliderWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#ac9c14cef93e0521810a59fb863f4e13c">GetWrapper</a> ()</td></tr>
+<tr class="memdesc:ac9c14cef93e0521810a59fb863f4e13c inherit pro_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this collider wrapper  <br /></td></tr>
+<tr class="separator:ac9c14cef93e0521810a59fb863f4e13c inherit pro_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb51ed432035e399b4768d9b06da8db8 inherit pro_methods_class_a_c_collider3_d" id="r_adb51ed432035e399b4768d9b06da8db8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">Mkpe::CColliderWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#adb51ed432035e399b4768d9b06da8db8">GetWrapper</a> () const</td></tr>
+<tr class="memdesc:adb51ed432035e399b4768d9b06da8db8 inherit pro_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this collider wrapper  <br /></td></tr>
+<tr class="separator:adb51ed432035e399b4768d9b06da8db8 inherit pro_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9380db3cf36af442f3c85fed83fdaf inherit pro_methods_class_a_c_collider3_d" id="r_a2e9380db3cf36af442f3c85fed83fdaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a2e9380db3cf36af442f3c85fed83fdaf">UpdateScalingOffset</a> ()</td></tr>
+<tr class="memdesc:a2e9380db3cf36af442f3c85fed83fdaf inherit pro_methods_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the scaling offset of the center coordinates of the collider  <br /></td></tr>
+<tr class="separator:a2e9380db3cf36af442f3c85fed83fdaf inherit pro_methods_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_collider3_d"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_collider3_d')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_collider3_d.html">ACCollider3D</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:aba7cf9fb882bde47d877b24ed56eb593 inherit pro_attribs_class_a_c_collider3_d" id="r_aba7cf9fb882bde47d877b24ed56eb593"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_stable_handle_vector_8h.html#a7de582bb76d446033c9722437b4c5b9a">WeakStableHandle</a>&lt; <a class="el" href="class_c_unique_ptr_weakable.html">CUniquePtrWeakable</a>&lt; <a class="el" href="class_mkpe_1_1_c_collider_wrapper.html">Mkpe::CColliderWrapper</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#aba7cf9fb882bde47d877b24ed56eb593">m_wrapperHandle</a></td></tr>
+<tr class="memdesc:aba7cf9fb882bde47d877b24ed56eb593 inherit pro_attribs_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle to own wrapper  <br /></td></tr>
+<tr class="separator:aba7cf9fb882bde47d877b24ed56eb593 inherit pro_attribs_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa2114fb54ed69a8de8f7075cac658a0 inherit pro_attribs_class_a_c_collider3_d" id="r_afa2114fb54ed69a8de8f7075cac658a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_mkpe_1_1_bounding_volume.html">Mkpe::BoundingVolume</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#afa2114fb54ed69a8de8f7075cac658a0">m_localBV</a></td></tr>
+<tr class="memdesc:afa2114fb54ed69a8de8f7075cac658a0 inherit pro_attribs_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounding volume in local coordinate space  <br /></td></tr>
+<tr class="separator:afa2114fb54ed69a8de8f7075cac658a0 inherit pro_attribs_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff68994d1b06b8d0d27935df42aa837e inherit pro_attribs_class_a_c_collider3_d" id="r_aff68994d1b06b8d0d27935df42aa837e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_collider3_d_8h.html#a033b6c37bb0154119927a48c7eb7b3f7">ColliderType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#aff68994d1b06b8d0d27935df42aa837e">m_type</a></td></tr>
+<tr class="memdesc:aff68994d1b06b8d0d27935df42aa837e inherit pro_attribs_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of this collider  <br /></td></tr>
+<tr class="separator:aff68994d1b06b8d0d27935df42aa837e inherit pro_attribs_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b929dfbe400053582ff0961f313074 inherit pro_attribs_class_a_c_collider3_d" id="r_a70b929dfbe400053582ff0961f313074"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a70b929dfbe400053582ff0961f313074">m_offset</a></td></tr>
+<tr class="memdesc:a70b929dfbe400053582ff0961f313074 inherit pro_attribs_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset of the center coordinates of the collider  <br /></td></tr>
+<tr class="separator:a70b929dfbe400053582ff0961f313074 inherit pro_attribs_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae031fce546394249cba53edd6a922ac4 inherit pro_attribs_class_a_c_collider3_d" id="r_ae031fce546394249cba53edd6a922ac4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#ae031fce546394249cba53edd6a922ac4">m_scalingOffset</a></td></tr>
+<tr class="memdesc:ae031fce546394249cba53edd6a922ac4 inherit pro_attribs_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scaling offset of the center coordinates of the collider to actual value  <br /></td></tr>
+<tr class="separator:ae031fce546394249cba53edd6a922ac4 inherit pro_attribs_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f079e29cca67379d56c34ee43a7e5fb inherit pro_attribs_class_a_c_collider3_d" id="r_a4f079e29cca67379d56c34ee43a7e5fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_collider_tag_8h.html#a07165bcdc51acc98f8ccbd93f03b6110">ColliderTag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a4f079e29cca67379d56c34ee43a7e5fb">m_tag</a></td></tr>
+<tr class="memdesc:a4f079e29cca67379d56c34ee43a7e5fb inherit pro_attribs_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag of this collider  <br /></td></tr>
+<tr class="separator:a4f079e29cca67379d56c34ee43a7e5fb inherit pro_attribs_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cd5be7cd94a68752b0b0e8e86fc9340 inherit pro_attribs_class_a_c_collider3_d" id="r_a3cd5be7cd94a68752b0b0e8e86fc9340"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_collider3_d.html#a3cd5be7cd94a68752b0b0e8e86fc9340">m_isOverlap</a></td></tr>
+<tr class="memdesc:a3cd5be7cd94a68752b0b0e8e86fc9340 inherit pro_attribs_class_a_c_collider3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can it overlap with the contact opponent?  <br /></td></tr>
+<tr class="separator:a3cd5be7cd94a68752b0b0e8e86fc9340 inherit pro_attribs_class_a_c_collider3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_component.html">ACComponent</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component" id="r_a350f4f03d8f125df479f4bdd6603aa32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a350f4f03d8f125df479f4bdd6603aa32">m_gameObj</a></td></tr>
+<tr class="memdesc:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game object that is the owner of this component  <br /></td></tr>
+<tr class="separator:a350f4f03d8f125df479f4bdd6603aa32 inherit pro_attribs_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component" id="r_a1b75230266b37261b0078008cfacab2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_component.html#a1b75230266b37261b0078008cfacab2a">m_isActive</a></td></tr>
+<tr class="memdesc:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component active?  <br /></td></tr>
+<tr class="separator:a1b75230266b37261b0078008cfacab2a inherit pro_attribs_class_a_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>3D Capsule collider component </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a8e4ff19443e494ec2d80c404c5075a79" name="a8e4ff19443e494ec2d80c404c5075a79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e4ff19443e494ec2d80c404c5075a79">&#9670;&#160;</a></span>CCapsuleCollider3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CCapsuleCollider3D::CCapsuleCollider3D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html">CGameObject</a> *&#160;</td>
+          <td class="paramname"><em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>length</em> = <code>2.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em> = <code>0.5f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>offset</em> = <code><a class="el" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997">Vector3f::Zero</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">owner</td><td>Game object that is the owner of this component </td></tr>
+    <tr><td class="paramname">length</td><td>The length of capsule collider axis </td></tr>
+    <tr><td class="paramname">radius</td><td>The radius of capsule hemispheres </td></tr>
+    <tr><td class="paramname">offset</td><td>The offset of the center coordinates of the sphere collider </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a845d43329bb029225847600cabacb174" name="a845d43329bb029225847600cabacb174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845d43329bb029225847600cabacb174">&#9670;&#160;</a></span>~CCapsuleCollider3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CCapsuleCollider3D::~CCapsuleCollider3D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a017a846964e11458061c395b689a6f3a" name="a017a846964e11458061c395b689a6f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017a846964e11458061c395b689a6f3a">&#9670;&#160;</a></span>GenerateInvInertiaTensorLocal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCapsuleCollider3D::GenerateInvInertiaTensorLocal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> *&#160;</td>
+          <td class="paramname"><em>local</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a reduced version of the local inertia tensor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">local</td><td>Variable to receive the result </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_a_c_collider3_d.html#a37203de6892ff3d41ae0c856eb6f073a">ACCollider3D</a>を実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_capsule_collider3_d_a017a846964e11458061c395b689a6f3a_cgraph.png" border="0" usemap="#aclass_c_capsule_collider3_d_a017a846964e11458061c395b689a6f3a_cgraph" alt=""/></div>
+<map name="aclass_c_capsule_collider3_d_a017a846964e11458061c395b689a6f3a_cgraph" id="aclass_c_capsule_collider3_d_a017a846964e11458061c395b689a6f3a_cgraph">
+<area shape="rect" title="Generate a reduced version of the local inertia tensor" alt="" coords="5,56,177,115"/>
+<area shape="rect" href="class_mkpe_1_1_c_collider_wrapper.html#a787d517f30fca145bef0a97b2ddf6b0e" title="Get the mass of rigid body" alt="" coords="232,5,394,48"/>
+<area shape="poly" title=" " alt="" coords="176,60,216,49,217,55,178,65"/>
+<area shape="rect" href="class_a_c_collider3_d.html#ac9c14cef93e0521810a59fb863f4e13c" title="Get this collider wrapper" alt="" coords="225,72,401,99"/>
+<area shape="poly" title=" " alt="" coords="177,83,209,83,209,88,177,88"/>
+<area shape="rect" href="struct_vector.html#ae21e7072563fc077194b4964f2655ae5" title="Get vector with all 1 values" alt="" coords="252,123,374,165"/>
+<area shape="poly" title=" " alt="" coords="178,105,237,121,236,127,176,111"/>
+<area shape="rect" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219" title="Get instance. If the instance has already been destroyed, return nullptr" alt="" coords="480,47,590,73"/>
+<area shape="poly" title=" " alt="" coords="401,73,464,65,465,71,402,78"/>
+<area shape="rect" href="class_a_c_component.html#a1677e72c01ba17b59662de344623cf18" title="Get scene where this component exists" alt="" coords="449,97,620,124"/>
+<area shape="poly" title=" " alt="" coords="402,93,434,96,433,102,401,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab2007385cfe0c7ca331dab82a1df9503" name="ab2007385cfe0c7ca331dab82a1df9503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2007385cfe0c7ca331dab82a1df9503">&#9670;&#160;</a></span>GetAxisIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT8 CCapsuleCollider3D::GetAxisIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get axis of capsule collider </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_capsule_collider3_d_ab2007385cfe0c7ca331dab82a1df9503_icgraph.png" border="0" usemap="#aclass_c_capsule_collider3_d_ab2007385cfe0c7ca331dab82a1df9503_icgraph" alt=""/></div>
+<map name="aclass_c_capsule_collider3_d_ab2007385cfe0c7ca331dab82a1df9503_icgraph" id="aclass_c_capsule_collider3_d_ab2007385cfe0c7ca331dab82a1df9503_icgraph">
+<area shape="rect" title="Get axis of capsule collider" alt="" coords="219,72,355,115"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a6a1f0a675bd7c0d9e406b949e56fdca0" title="Box and capsule collision algorithm" alt="" coords="5,5,171,48"/>
+<area shape="poly" title=" " alt="" coords="206,69,153,51,155,46,208,64"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a274048851bc6723f057afed02fbc9846" title="Capsule and capsule collision algorithm" alt="" coords="5,72,171,115"/>
+<area shape="poly" title=" " alt="" coords="203,96,171,96,171,91,203,91"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#acd6a6ee1d4353a1f282ef3eb51d2b030" title="Capsule and sphere collision algorithm" alt="" coords="5,139,171,181"/>
+<area shape="poly" title=" " alt="" coords="208,123,155,141,153,135,206,118"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a49cefde5cbc511d482705e3a8f937d91" name="a49cefde5cbc511d482705e3a8f937d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49cefde5cbc511d482705e3a8f937d91">&#9670;&#160;</a></span>GetHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CCapsuleCollider3D::GetHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get height of capsule collider </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_capsule_collider3_d_a49cefde5cbc511d482705e3a8f937d91_cgraph.png" border="0" usemap="#aclass_c_capsule_collider3_d_a49cefde5cbc511d482705e3a8f937d91_cgraph" alt=""/></div>
+<map name="aclass_c_capsule_collider3_d_a49cefde5cbc511d482705e3a8f937d91_cgraph" id="aclass_c_capsule_collider3_d_a49cefde5cbc511d482705e3a8f937d91_cgraph">
+<area shape="rect" title="Get height of capsule collider" alt="" coords="5,5,142,48"/>
+<area shape="rect" href="class_a_c_component.html#a73c656cb09cfd57d43bd4ebdbd992091" title="Get transform of the object" alt="" coords="190,13,381,40"/>
+<area shape="poly" title=" " alt="" coords="142,24,174,24,174,29,142,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_capsule_collider3_d_a49cefde5cbc511d482705e3a8f937d91_icgraph.png" border="0" usemap="#aclass_c_capsule_collider3_d_a49cefde5cbc511d482705e3a8f937d91_icgraph" alt=""/></div>
+<map name="aclass_c_capsule_collider3_d_a49cefde5cbc511d482705e3a8f937d91_icgraph" id="aclass_c_capsule_collider3_d_a49cefde5cbc511d482705e3a8f937d91_icgraph">
+<area shape="rect" title="Get height of capsule collider" alt="" coords="207,5,343,48"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#ab4fa4bb97bc39b0f1441ab20feb24f88" title="Allocate data for debugging collider shape" alt="" coords="5,5,159,48"/>
+<area shape="poly" title=" " alt="" coords="191,29,159,29,159,24,191,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae25d12bbb607c9ba1ecc1066452b4004" name="ae25d12bbb607c9ba1ecc1066452b4004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25d12bbb607c9ba1ecc1066452b4004">&#9670;&#160;</a></span>GetLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CCapsuleCollider3D::GetLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get length of capsule collider axis </p>
+
+</div>
+</div>
+<a id="a387fe70df0f68073b9b33215cf3d86ae" name="a387fe70df0f68073b9b33215cf3d86ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a387fe70df0f68073b9b33215cf3d86ae">&#9670;&#160;</a></span>GetLocalSupportVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> CCapsuleCollider3D::GetLocalSupportVector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_utility_for_math_8h.html#afc90efb8e49ed4917d40330808764413">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get support vector in local coordinate space </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>Input vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Support vector in local coordinate space </dd></dl>
+
+<p><a class="el" href="class_a_c_collider3_d.html#adff4d1f7e5f502396c9bd83cb15e3458">ACCollider3D</a>を実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_capsule_collider3_d_a387fe70df0f68073b9b33215cf3d86ae_cgraph.png" border="0" usemap="#aclass_c_capsule_collider3_d_a387fe70df0f68073b9b33215cf3d86ae_cgraph" alt=""/></div>
+<map name="aclass_c_capsule_collider3_d_a387fe70df0f68073b9b33215cf3d86ae_cgraph" id="aclass_c_capsule_collider3_d_a387fe70df0f68073b9b33215cf3d86ae_cgraph">
+<area shape="rect" title="Get support vector in local coordinate space" alt="" coords="5,90,170,132"/>
+<area shape="rect" href="struct_vector.html#a8ab815e67c75162daf574aac3c7597e0" title="Dot product" alt="" coords="740,22,827,48"/>
+<area shape="poly" title=" " alt="" coords="115,87,160,57,188,43,217,32,286,17,358,8,429,3,499,3,627,10,725,22,724,28,626,16,499,8,430,9,358,13,287,22,218,37,190,48,163,61,117,91"/>
+<area shape="rect" href="struct_vector.html#ac6645f7df485a2cd90507a989c785370" title="Get normalized this vector" alt="" coords="218,98,364,124"/>
+<area shape="poly" title=" " alt="" coords="170,108,202,108,202,114,170,114"/>
+<area shape="rect" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997" title="Get vector with all 0 values" alt="" coords="421,123,513,150"/>
+<area shape="poly" title=" " alt="" coords="171,127,218,134,317,138,405,137,405,142,316,144,217,139,170,132"/>
+<area shape="rect" href="struct_vector.html#a5fa1e63b510986c5a7c6a933b028c505" title="Normalize this vector" alt="" coords="228,47,354,74"/>
+<area shape="poly" title=" " alt="" coords="169,88,219,75,221,80,171,93"/>
+<area shape="rect" href="namespace_utl.html#a75c2632367f9deb0982e619d36602586" title="Get value sign" alt="" coords="255,199,327,226"/>
+<area shape="poly" title=" " alt="" coords="129,130,219,178,244,190,242,194,216,183,126,135"/>
+<area shape="rect" href="struct_vector.html#a2a17b2b690d93fe77c6acce69e1fb17b" title="Calculate vector length" alt="" coords="414,47,520,74"/>
+<area shape="poly" title=" " alt="" coords="339,94,402,76,404,81,341,99"/>
+<area shape="poly" title=" " alt="" coords="365,119,405,125,405,130,364,124"/>
+<area shape="rect" href="struct_vector.html#a1422d1d25bdd05ed068c786f9c45fcd3" title="Calculate vector length squared" alt="" coords="569,47,692,74"/>
+<area shape="poly" title=" " alt="" coords="520,58,554,58,554,63,520,63"/>
+<area shape="poly" title=" " alt="" coords="692,47,724,42,725,47,692,53"/>
+<area shape="poly" title=" " alt="" coords="354,58,398,58,398,63,354,63"/>
+<area shape="rect" href="namespace_utl.html#ac7bd30f0e57ed421e2db52acf38e8a33" title="Check if the value of Float is equal to 0" alt="" coords="412,199,521,226"/>
+<area shape="poly" title=" " alt="" coords="327,210,396,210,396,215,327,215"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c350cf71f3616b11337aecc7bf58efa" name="a3c350cf71f3616b11337aecc7bf58efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c350cf71f3616b11337aecc7bf58efa">&#9670;&#160;</a></span>GetRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CCapsuleCollider3D::GetRadius </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get radius of capsule hemispheres </p>
+
+</div>
+</div>
+<a id="a9ab8c1c153e4a5cf1de23567c66017c5" name="a9ab8c1c153e4a5cf1de23567c66017c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ab8c1c153e4a5cf1de23567c66017c5">&#9670;&#160;</a></span>GetScalingLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CCapsuleCollider3D::GetScalingLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get scaling height of capsule collider </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_capsule_collider3_d_a9ab8c1c153e4a5cf1de23567c66017c5_icgraph.png" border="0" usemap="#aclass_c_capsule_collider3_d_a9ab8c1c153e4a5cf1de23567c66017c5_icgraph" alt=""/></div>
+<map name="aclass_c_capsule_collider3_d_a9ab8c1c153e4a5cf1de23567c66017c5_icgraph" id="aclass_c_capsule_collider3_d_a9ab8c1c153e4a5cf1de23567c66017c5_icgraph">
+<area shape="rect" title="Get scaling height of capsule collider" alt="" coords="219,72,355,115"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a6a1f0a675bd7c0d9e406b949e56fdca0" title="Box and capsule collision algorithm" alt="" coords="5,5,171,48"/>
+<area shape="poly" title=" " alt="" coords="206,69,153,51,155,46,208,64"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a274048851bc6723f057afed02fbc9846" title="Capsule and capsule collision algorithm" alt="" coords="5,72,171,115"/>
+<area shape="poly" title=" " alt="" coords="203,96,171,96,171,91,203,91"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#acd6a6ee1d4353a1f282ef3eb51d2b030" title="Capsule and sphere collision algorithm" alt="" coords="5,139,171,181"/>
+<area shape="poly" title=" " alt="" coords="208,123,155,141,153,135,206,118"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a845ecd4f00017072debc8176a86ed632" name="a845ecd4f00017072debc8176a86ed632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845ecd4f00017072debc8176a86ed632">&#9670;&#160;</a></span>GetScalingRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CCapsuleCollider3D::GetScalingRadius </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get scaling radius of capsule hemispheres </p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_capsule_collider3_d_a845ecd4f00017072debc8176a86ed632_icgraph.png" border="0" usemap="#aclass_c_capsule_collider3_d_a845ecd4f00017072debc8176a86ed632_icgraph" alt=""/></div>
+<map name="aclass_c_capsule_collider3_d_a845ecd4f00017072debc8176a86ed632_icgraph" id="aclass_c_capsule_collider3_d_a845ecd4f00017072debc8176a86ed632_icgraph">
+<area shape="rect" title="Get scaling radius of capsule hemispheres" alt="" coords="219,105,355,148"/>
+<area shape="rect" href="class_c_dynamic_cb_world_mat.html#ab4fa4bb97bc39b0f1441ab20feb24f88" title="Allocate data for debugging collider shape" alt="" coords="11,5,165,48"/>
+<area shape="poly" title=" " alt="" coords="237,100,169,62,145,51,147,46,172,58,239,95"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a6a1f0a675bd7c0d9e406b949e56fdca0" title="Box and capsule collision algorithm" alt="" coords="5,72,171,115"/>
+<area shape="poly" title=" " alt="" coords="203,115,171,110,172,105,204,110"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#a274048851bc6723f057afed02fbc9846" title="Capsule and capsule collision algorithm" alt="" coords="5,139,171,181"/>
+<area shape="poly" title=" " alt="" coords="204,143,172,149,171,143,203,138"/>
+<area shape="rect" href="namespace_mkpe_1_1_collision_algorithm.html#acd6a6ee1d4353a1f282ef3eb51d2b030" title="Capsule and sphere collision algorithm" alt="" coords="5,205,171,248"/>
+<area shape="poly" title=" " alt="" coords="239,158,172,196,147,207,145,202,169,191,237,154"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a81e694ac7a736b3eaf50a8eb1b434e99" name="a81e694ac7a736b3eaf50a8eb1b434e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e694ac7a736b3eaf50a8eb1b434e99">&#9670;&#160;</a></span>SetAxisIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCapsuleCollider3D::SetAxisIndex </td>
+          <td>(</td>
+          <td class="paramtype">UINT8&#160;</td>
+          <td class="paramname"><em>axisIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set axis of capsule collider </p>
+
+</div>
+</div>
+<a id="a5dad34cfa08445a11f0ad972b3748db4" name="a5dad34cfa08445a11f0ad972b3748db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dad34cfa08445a11f0ad972b3748db4">&#9670;&#160;</a></span>SetLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCapsuleCollider3D::SetLength </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>length</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set length of capsule collider axis </p>
+
+</div>
+</div>
+<a id="a719c4389b4525354bab10b9f5a2c11fb" name="a719c4389b4525354bab10b9f5a2c11fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a719c4389b4525354bab10b9f5a2c11fb">&#9670;&#160;</a></span>SetRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCapsuleCollider3D::SetRadius </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set radius of capsule hemispheres </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_capsule_collider3_d_8h_source.html">CapsuleCollider3D.h</a></li>
+<li><a class="el" href="_capsule_collider3_d_8cpp.html">CapsuleCollider3D.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

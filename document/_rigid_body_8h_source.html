@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: RigidBody.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">RigidBody.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_rigid_body_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __RIGIDBODY_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __RIGIDBODY_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_component_8h.html">Component.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_game_object_8h.html">GameObject.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_collider3_d_8h.html">Collider3D.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_stable_handle_vector_8h.html">StableHandleVector.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_simulation_body_8h.html">SimulationBody.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// Forward declaration</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mkpe.html">Mkpe</a> { <span class="keyword">class </span>CColliderWrapper; }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_rigid_body_material.html">   22</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_rigid_body_material.html">RigidBodyMaterial</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_rigid_body_material.html#a3101044b1ee7a47b9a798bbb38d6ba90">   24</a></span>    <span class="keywordtype">float</span>    <a class="code hl_variable" href="struct_rigid_body_material.html#a3101044b1ee7a47b9a798bbb38d6ba90">friction</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_rigid_body_material.html#adda65f2f8afa529f58ec6858e3558041">   26</a></span>    <span class="keywordtype">float</span>    <a class="code hl_variable" href="struct_rigid_body_material.html#adda65f2f8afa529f58ec6858e3558041">restitution</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_struct" href="struct_rigid_body_material.html">RigidBodyMaterial</a>(<span class="keywordtype">float</span> <a class="code hl_variable" href="struct_rigid_body_material.html#a3101044b1ee7a47b9a798bbb38d6ba90">friction</a> = 0.5f, <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_rigid_body_material.html#adda65f2f8afa529f58ec6858e3558041">restitution</a> = 0.0f);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespace_rigid_body_axis_lock.html">   37</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_rigid_body_axis_lock.html">RigidBodyAxisLock</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">   39</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">Bit</a> = uint8_t;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespace_rigid_body_axis_lock_1_1_flag.html">   42</a></span>    <span class="keyword">namespace </span>Flag {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="namespace_rigid_body_axis_lock_1_1_flag.html#a364a25c7e14bfab7aeadb8a131864050">   44</a></span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">Bit</a> <a class="code hl_variable" href="namespace_rigid_body_axis_lock_1_1_flag.html#a364a25c7e14bfab7aeadb8a131864050">NONE</a> = 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespace_rigid_body_axis_lock_1_1_flag.html#a5d8aa667205ec658ea7bee20bc56f558">   46</a></span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">Bit</a> <a class="code hl_variable" href="namespace_rigid_body_axis_lock_1_1_flag.html#a5d8aa667205ec658ea7bee20bc56f558">_X</a> = 1 &lt;&lt; 0;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="namespace_rigid_body_axis_lock_1_1_flag.html#a9f23e6e9c4305768dc507480a418a041">   48</a></span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">Bit</a> <a class="code hl_variable" href="namespace_rigid_body_axis_lock_1_1_flag.html#a9f23e6e9c4305768dc507480a418a041">_Y</a> = 1 &lt;&lt; 1;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="namespace_rigid_body_axis_lock_1_1_flag.html#a2706f8e2247eb8b6f9e7a76bf8ea06de">   50</a></span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">Bit</a> <a class="code hl_variable" href="namespace_rigid_body_axis_lock_1_1_flag.html#a2706f8e2247eb8b6f9e7a76bf8ea06de">_Z</a> = 1 &lt;&lt; 2;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="namespace_rigid_body_axis_lock_1_1_flag.html#a79bb3f373dd73db746ef0c782823338c">   52</a></span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">Bit</a> <a class="code hl_variable" href="namespace_rigid_body_axis_lock_1_1_flag.html#a79bb3f373dd73db746ef0c782823338c">ALL</a> = <a class="code hl_variable" href="namespace_rigid_body_axis_lock_1_1_flag.html#a5d8aa667205ec658ea7bee20bc56f558">_X</a> | <a class="code hl_variable" href="namespace_rigid_body_axis_lock_1_1_flag.html#a9f23e6e9c4305768dc507480a418a041">_Y</a> | <a class="code hl_variable" href="namespace_rigid_body_axis_lock_1_1_flag.html#a2706f8e2247eb8b6f9e7a76bf8ea06de">_Z</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    } <span class="comment">// namespace Flag</span></div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace RigidBodyAxisLock</span></div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="};">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585">   57</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585">RigidBodyType</a> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_enumvalue" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585a84a8921b25f505d0d2077aeb5db4bc16">Static</a>,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_enumvalue" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585a40c78b58b86002ee38fad2d3c9dd787e">Kinematic</a>,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_enumvalue" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585a971fd8cc345d8bd9f92e9f7d88fdf20c">Dynamic</a>,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="_rigid_body_8h.html#a0336cd953cf16f8bb083c757a611d0c5">   67</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_rigid_body_8h.html#a0336cd953cf16f8bb083c757a611d0c5">GRAVITYSCALE_NULL</a> = -1.0f;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> std::string CALLBACK_SEND_RIGIDBODY_TO_WRAPPER = <span class="stringliteral">&quot;SendRigidBodyToWrapper&quot;</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">const</span> std::string CALLBACK_SEND_SIMULATIONBODY_TO_WRAPPER = <span class="stringliteral">&quot;SendSimulationBodyToWrapper&quot;</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="};">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html">   74</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_rigid_body.html">CRigidBody</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_component.html">ACComponent</a> {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_class" href="class_c_rigid_body.html">CRigidBody</a>(<a class="code hl_class" href="class_c_game_object.html">CGameObject</a>* owner);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#a44045d927f131496861e79649706f022">   85</a></span>    <a class="code hl_function" href="class_c_rigid_body.html#a44045d927f131496861e79649706f022">~CRigidBody</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#aff76c36313cdffb15bbdb8bcf918c05a">Awake</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#a075d9d55b87e21f6156fec20702a3711">Start</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#aa050e9de295fade523fa1d5efcb8aea0">  100</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#aa050e9de295fade523fa1d5efcb8aea0">Update</a>()<span class="keyword"> override </span>{}</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#a10532b33bd766ec20ffba2032c60403a">OnDestroy</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#a76bd729c2f736a37107527ebed824592">OnDisable</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#a83e8eb50f4c574bfdc67c43b8e82c328">AddForce</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; force, <a class="code hl_enumeration" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0ac">ForceMode</a> mode = <a class="code hl_enumvalue" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0aca9eb6b78a99cdb6ffd3d40d18621d9f80">ForceMode::Force</a>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#a26285a1bd56ce0dbb49a681da72d624a">AddTorque</a>(<span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; torque, <a class="code hl_enumeration" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0ac">ForceMode</a> mode = <a class="code hl_enumvalue" href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0aca9eb6b78a99cdb6ffd3d40d18621d9f80">ForceMode::Force</a>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#a027e27aa76af9882ef0679e6332c6ce7">BindWrapper</a>(<a class="code hl_class" href="class_mkpe_1_1_c_collider_wrapper.html">Mkpe::CColliderWrapper</a>* wrapper);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#a6db16c64904de5788ac9f96cb772b931">SetMoveLock</a>(<a class="code hl_typedef" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">RigidBodyAxisLock::Bit</a> bit);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#ab97ad2c6508bc8f24c79594cf1b5e9fe">SetRotateLock</a>(<a class="code hl_typedef" href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">RigidBodyAxisLock::Bit</a> bit);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#a9ce2091eb213a8aacf5d28ccb04b073c">  148</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_rigid_body.html#a9ce2091eb213a8aacf5d28ccb04b073c">IsStatic</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_bodyType == <a class="code hl_enumvalue" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585a84a8921b25f505d0d2077aeb5db4bc16">RigidBodyType::Static</a>; }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#a9b69cc565e34437b97f761f6e3dff800">SetIsPseudoVelocity</a>(<span class="keywordtype">bool</span> isPseudoVelocity);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#a765e28c1cf302124609d4ffb04ef3b2d">  158</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_rigid_body.html#a765e28c1cf302124609d4ffb04ef3b2d">IsPseudoVelocity</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_isPseudoVelocity; }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#ac369f1d754603fd195a68f4530dda9b8">  161</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#ac369f1d754603fd195a68f4530dda9b8">SetMaterial</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_rigid_body_material.html">RigidBodyMaterial</a>&amp; material) { m_material = material; }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#af646fea54afe827ec60a1a9ce2d92a0f">  163</a></span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_rigid_body_material.html">RigidBodyMaterial</a>&amp; <a class="code hl_function" href="class_c_rigid_body.html#af646fea54afe827ec60a1a9ce2d92a0f">GetMaterial</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_material; }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#aaae104a70e5cab6749ff89ce9b450084">SetBodyType</a>(<a class="code hl_enumeration" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585">RigidBodyType</a> bodyType);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#ae5bec9ac5b2a8204ff36a1cb86bc267f">  168</a></span>    <a class="code hl_enumeration" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585">RigidBodyType</a> <a class="code hl_function" href="class_c_rigid_body.html#ae5bec9ac5b2a8204ff36a1cb86bc267f">GetBodyType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_bodyType; }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#a41deddf5ddeb8deaea18698d850e78e0">  171</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; <a class="code hl_function" href="class_c_rigid_body.html#a41deddf5ddeb8deaea18698d850e78e0">GetLinearVelocity</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_simulationBodyHandle) ? GetSimulation()-&gt;GetLinearVelocity() : <a class="code hl_function" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997">Vector3f::Zero</a>(); }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#abef57df2dc3193a755392304644f4ae6">  173</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; <a class="code hl_function" href="class_c_rigid_body.html#abef57df2dc3193a755392304644f4ae6">GetAngularVelocity</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_simulationBodyHandle) ? GetSimulation()-&gt;GetAngularVelocity() : <a class="code hl_function" href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997">Vector3f::Zero</a>(); }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#a67bfe6c3bd0e32d7ee66cf1d6e14550b">SetMass</a>(<span class="keywordtype">float</span> mass);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#aea129e1d632dc39962039b1507fba873">  178</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_c_rigid_body.html#aea129e1d632dc39962039b1507fba873">GetInvMass</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_invMass; }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#aecc453d1738a0738f0ea4d145b7a695d">  180</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_c_rigid_body.html#aecc453d1738a0738f0ea4d145b7a695d">GetMass</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1.0f / m_invMass; }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#ac1a6647d496e866efe7aef2924e0fb61">  183</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#ac1a6647d496e866efe7aef2924e0fb61">SetLinearDrag</a>(<span class="keywordtype">float</span> drag) { <span class="keywordflow">if</span> (m_simulationBodyHandle) { GetSimulation()-&gt;SetLinearDrag(drag); } }</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#a8889d9442426a855d183fcf4768b69c9">  185</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#a8889d9442426a855d183fcf4768b69c9">SetAngularDrag</a>(<span class="keywordtype">float</span> drag) { <span class="keywordflow">if</span> (m_simulationBodyHandle) { GetSimulation()-&gt;SetAngularDrag(drag); } }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_rigid_body.html#ad2b595b4738e42d12e646647c16a144e">SetGravityScale</a>(<span class="keywordtype">float</span> gravityScale = <a class="code hl_variable" href="_rigid_body_8h.html#a0336cd953cf16f8bb083c757a611d0c5">GRAVITYSCALE_NULL</a>);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#ad4897dc975d5285c74d1d5cab809cb5f">  193</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_c_rigid_body.html#ad4897dc975d5285c74d1d5cab809cb5f">GetGravityScale</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_gravityScale; }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#a149fe3a416366e0e8e39793f1e4ddf5d">  196</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; <a class="code hl_function" href="class_c_rigid_body.html#a149fe3a416366e0e8e39793f1e4ddf5d">GetMoveAllowable</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_moveAllowable; }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="class_c_rigid_body.html#a4bdf0e09cb8c53fcf5a5d28615ab30dd">  198</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="struct_vector.html">Vector3f</a>&amp; <a class="code hl_function" href="class_c_rigid_body.html#a4bdf0e09cb8c53fcf5a5d28615ab30dd">GetRotateAllowable</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_rotateAllowable; }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;Mkpe::CSimulationBody&gt;</a> GetSimulation();</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const Mkpe::CSimulationBody&gt;</a> GetSimulation() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordtype">void</span> SetSimulationGravity();</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <a class="code hl_struct" href="struct_rigid_body_material.html">RigidBodyMaterial</a> m_material;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <a class="code hl_enumeration" href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585">RigidBodyType</a> m_bodyType;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <a class="code hl_class" href="struct_vector.html">Vector3f</a> m_moveAllowable;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <a class="code hl_class" href="struct_vector.html">Vector3f</a> m_rotateAllowable;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keywordtype">float</span> m_invMass;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordtype">float</span> m_gravityScale;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keywordtype">bool</span> m_isPseudoVelocity;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <a class="code hl_class" href="class_c_weak_ptr.html">WeakStableHandle&lt;CWeakPtr&lt;CRigidBody&gt;</a>&gt; m_rigidBodyHandle;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_class" href="class_c_weak_ptr.html">WeakStableHandle&lt;CUniquePtrWeakable&lt;Mkpe::CSimulationBody&gt;</a>&gt; m_simulationBodyHandle;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>};</div>
+</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">#endif </span><span class="comment">// !__RIGIDBODY_H__</span></div>
+<div class="ttc" id="a_collider3_d_8h_html"><div class="ttname"><a href="_collider3_d_8h.html">Collider3D.h</a></div><div class="ttdoc">This file handles 3D abstract collider.</div></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div><div class="ttdoc">This file handles abstract class for component used in update processing.</div></div>
+<div class="ttc" id="a_game_object_8h_html"><div class="ttname"><a href="_game_object_8h.html">GameObject.h</a></div><div class="ttdoc">This file handles base class for game object.</div></div>
+<div class="ttc" id="a_rigid_body_8h_html_a0336cd953cf16f8bb083c757a611d0c5"><div class="ttname"><a href="_rigid_body_8h.html#a0336cd953cf16f8bb083c757a611d0c5">GRAVITYSCALE_NULL</a></div><div class="ttdeci">constexpr float GRAVITYSCALE_NULL</div><div class="ttdoc">Constant indicating that the gravity scale is not used.</div><div class="ttdef"><b>Definition</b> RigidBody.h:67</div></div>
+<div class="ttc" id="a_rigid_body_8h_html_afa062a6a839a5127af1ec7ba30ab4585"><div class="ttname"><a href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585">RigidBodyType</a></div><div class="ttdeci">RigidBodyType</div><div class="ttdoc">Rigid body type</div><div class="ttdef"><b>Definition</b> RigidBody.h:57</div></div>
+<div class="ttc" id="a_rigid_body_8h_html_afa062a6a839a5127af1ec7ba30ab4585a40c78b58b86002ee38fad2d3c9dd787e"><div class="ttname"><a href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585a40c78b58b86002ee38fad2d3c9dd787e">RigidBodyType::Kinematic</a></div><div class="ttdeci">@ Kinematic</div><div class="ttdoc">Kinematic</div></div>
+<div class="ttc" id="a_rigid_body_8h_html_afa062a6a839a5127af1ec7ba30ab4585a84a8921b25f505d0d2077aeb5db4bc16"><div class="ttname"><a href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585a84a8921b25f505d0d2077aeb5db4bc16">RigidBodyType::Static</a></div><div class="ttdeci">@ Static</div><div class="ttdoc">Static</div></div>
+<div class="ttc" id="a_rigid_body_8h_html_afa062a6a839a5127af1ec7ba30ab4585a971fd8cc345d8bd9f92e9f7d88fdf20c"><div class="ttname"><a href="_rigid_body_8h.html#afa062a6a839a5127af1ec7ba30ab4585a971fd8cc345d8bd9f92e9f7d88fdf20c">RigidBodyType::Dynamic</a></div><div class="ttdeci">@ Dynamic</div><div class="ttdoc">Dynamic</div></div>
+<div class="ttc" id="a_simulation_body_8h_html"><div class="ttname"><a href="_simulation_body_8h.html">SimulationBody.h</a></div><div class="ttdoc">This file handles rigid body class for computing.</div></div>
+<div class="ttc" id="a_simulation_body_8h_html_a82ef2c5b8d4fe771828e8cdf8582a0ac"><div class="ttname"><a href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0ac">ForceMode</a></div><div class="ttdeci">ForceMode</div><div class="ttdoc">How to apply force</div><div class="ttdef"><b>Definition</b> SimulationBody.h:18</div></div>
+<div class="ttc" id="a_simulation_body_8h_html_a82ef2c5b8d4fe771828e8cdf8582a0aca9eb6b78a99cdb6ffd3d40d18621d9f80"><div class="ttname"><a href="_simulation_body_8h.html#a82ef2c5b8d4fe771828e8cdf8582a0aca9eb6b78a99cdb6ffd3d40d18621d9f80">ForceMode::Force</a></div><div class="ttdeci">@ Force</div><div class="ttdoc">Continuous application of force</div></div>
+<div class="ttc" id="a_stable_handle_vector_8h_html"><div class="ttname"><a href="_stable_handle_vector_8h.html">StableHandleVector.h</a></div><div class="ttdoc">This file handles dynamic array capable of generating stable handles.</div></div>
+<div class="ttc" id="aclass_a_c_component_html"><div class="ttname"><a href="class_a_c_component.html">ACComponent</a></div><div class="ttdoc">This is abstract class for component used in update processing</div><div class="ttdef"><b>Definition</b> Component.h:23</div></div>
+<div class="ttc" id="aclass_c_game_object_html"><div class="ttname"><a href="class_c_game_object.html">CGameObject</a></div><div class="ttdoc">This is base class for game object</div><div class="ttdef"><b>Definition</b> GameObject.h:35</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html"><div class="ttname"><a href="class_c_rigid_body.html">CRigidBody</a></div><div class="ttdoc">Rigid body component</div><div class="ttdef"><b>Definition</b> RigidBody.h:74</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a027e27aa76af9882ef0679e6332c6ce7"><div class="ttname"><a href="class_c_rigid_body.html#a027e27aa76af9882ef0679e6332c6ce7">CRigidBody::BindWrapper</a></div><div class="ttdeci">void BindWrapper(Mkpe::CColliderWrapper *wrapper)</div><div class="ttdoc">Bind this collider to wrapper</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:74</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a075d9d55b87e21f6156fec20702a3711"><div class="ttname"><a href="class_c_rigid_body.html#a075d9d55b87e21f6156fec20702a3711">CRigidBody::Start</a></div><div class="ttdeci">void Start() override</div><div class="ttdoc">Start processing</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:33</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a10532b33bd766ec20ffba2032c60403a"><div class="ttname"><a href="class_c_rigid_body.html#a10532b33bd766ec20ffba2032c60403a">CRigidBody::OnDestroy</a></div><div class="ttdeci">void OnDestroy() override</div><div class="ttdoc">Processing at destruction</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:39</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a149fe3a416366e0e8e39793f1e4ddf5d"><div class="ttname"><a href="class_c_rigid_body.html#a149fe3a416366e0e8e39793f1e4ddf5d">CRigidBody::GetMoveAllowable</a></div><div class="ttdeci">const Vector3f &amp; GetMoveAllowable() const</div><div class="ttdoc">Get allowable vector for movement</div><div class="ttdef"><b>Definition</b> RigidBody.h:196</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a26285a1bd56ce0dbb49a681da72d624a"><div class="ttname"><a href="class_c_rigid_body.html#a26285a1bd56ce0dbb49a681da72d624a">CRigidBody::AddTorque</a></div><div class="ttdeci">void AddTorque(const Vector3f &amp;torque, ForceMode mode=ForceMode::Force)</div><div class="ttdoc">Add torque to this rigid body</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:68</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a41deddf5ddeb8deaea18698d850e78e0"><div class="ttname"><a href="class_c_rigid_body.html#a41deddf5ddeb8deaea18698d850e78e0">CRigidBody::GetLinearVelocity</a></div><div class="ttdeci">const Vector3f &amp; GetLinearVelocity() const</div><div class="ttdoc">Get the linear velocity</div><div class="ttdef"><b>Definition</b> RigidBody.h:171</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a44045d927f131496861e79649706f022"><div class="ttname"><a href="class_c_rigid_body.html#a44045d927f131496861e79649706f022">CRigidBody::~CRigidBody</a></div><div class="ttdeci">~CRigidBody()=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a4bdf0e09cb8c53fcf5a5d28615ab30dd"><div class="ttname"><a href="class_c_rigid_body.html#a4bdf0e09cb8c53fcf5a5d28615ab30dd">CRigidBody::GetRotateAllowable</a></div><div class="ttdeci">const Vector3f &amp; GetRotateAllowable() const</div><div class="ttdoc">Get allowable vector for rotation</div><div class="ttdef"><b>Definition</b> RigidBody.h:198</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a67bfe6c3bd0e32d7ee66cf1d6e14550b"><div class="ttname"><a href="class_c_rigid_body.html#a67bfe6c3bd0e32d7ee66cf1d6e14550b">CRigidBody::SetMass</a></div><div class="ttdeci">void SetMass(float mass)</div><div class="ttdoc">Set mass</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:145</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a6db16c64904de5788ac9f96cb772b931"><div class="ttname"><a href="class_c_rigid_body.html#a6db16c64904de5788ac9f96cb772b931">CRigidBody::SetMoveLock</a></div><div class="ttdeci">void SetMoveLock(RigidBodyAxisLock::Bit bit)</div><div class="ttdoc">Set axis lock for movement</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:84</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a765e28c1cf302124609d4ffb04ef3b2d"><div class="ttname"><a href="class_c_rigid_body.html#a765e28c1cf302124609d4ffb04ef3b2d">CRigidBody::IsPseudoVelocity</a></div><div class="ttdeci">bool IsPseudoVelocity() const</div><div class="ttdoc">Use pseudo velocity?</div><div class="ttdef"><b>Definition</b> RigidBody.h:158</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a76bd729c2f736a37107527ebed824592"><div class="ttname"><a href="class_c_rigid_body.html#a76bd729c2f736a37107527ebed824592">CRigidBody::OnDisable</a></div><div class="ttdeci">void OnDisable() override</div><div class="ttdoc">Processing when this component is disabled</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:54</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a83e8eb50f4c574bfdc67c43b8e82c328"><div class="ttname"><a href="class_c_rigid_body.html#a83e8eb50f4c574bfdc67c43b8e82c328">CRigidBody::AddForce</a></div><div class="ttdeci">void AddForce(const Vector3f &amp;force, ForceMode mode=ForceMode::Force)</div><div class="ttdoc">Add force to this rigid body</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:62</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a8889d9442426a855d183fcf4768b69c9"><div class="ttname"><a href="class_c_rigid_body.html#a8889d9442426a855d183fcf4768b69c9">CRigidBody::SetAngularDrag</a></div><div class="ttdeci">void SetAngularDrag(float drag)</div><div class="ttdoc">Set aerodynamic drag for rotation by torque</div><div class="ttdef"><b>Definition</b> RigidBody.h:185</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a9b69cc565e34437b97f761f6e3dff800"><div class="ttname"><a href="class_c_rigid_body.html#a9b69cc565e34437b97f761f6e3dff800">CRigidBody::SetIsPseudoVelocity</a></div><div class="ttdeci">void SetIsPseudoVelocity(bool isPseudoVelocity)</div><div class="ttdoc">Set the flag to use pseudo velocity</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:99</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_a9ce2091eb213a8aacf5d28ccb04b073c"><div class="ttname"><a href="class_c_rigid_body.html#a9ce2091eb213a8aacf5d28ccb04b073c">CRigidBody::IsStatic</a></div><div class="ttdeci">bool IsStatic() const</div><div class="ttdoc">Is this rigid body static?</div><div class="ttdef"><b>Definition</b> RigidBody.h:148</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_aa050e9de295fade523fa1d5efcb8aea0"><div class="ttname"><a href="class_c_rigid_body.html#aa050e9de295fade523fa1d5efcb8aea0">CRigidBody::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">Update processing</div><div class="ttdef"><b>Definition</b> RigidBody.h:100</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_aaae104a70e5cab6749ff89ce9b450084"><div class="ttname"><a href="class_c_rigid_body.html#aaae104a70e5cab6749ff89ce9b450084">CRigidBody::SetBodyType</a></div><div class="ttdeci">void SetBodyType(RigidBodyType bodyType)</div><div class="ttdoc">Set rigid body type</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:119</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_ab97ad2c6508bc8f24c79594cf1b5e9fe"><div class="ttname"><a href="class_c_rigid_body.html#ab97ad2c6508bc8f24c79594cf1b5e9fe">CRigidBody::SetRotateLock</a></div><div class="ttdeci">void SetRotateLock(RigidBodyAxisLock::Bit bit)</div><div class="ttdoc">Set axis lock for rotation</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:92</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_abef57df2dc3193a755392304644f4ae6"><div class="ttname"><a href="class_c_rigid_body.html#abef57df2dc3193a755392304644f4ae6">CRigidBody::GetAngularVelocity</a></div><div class="ttdeci">const Vector3f &amp; GetAngularVelocity() const</div><div class="ttdoc">Get the angular velocity</div><div class="ttdef"><b>Definition</b> RigidBody.h:173</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_ac1a6647d496e866efe7aef2924e0fb61"><div class="ttname"><a href="class_c_rigid_body.html#ac1a6647d496e866efe7aef2924e0fb61">CRigidBody::SetLinearDrag</a></div><div class="ttdeci">void SetLinearDrag(float drag)</div><div class="ttdoc">Set aerodynamic drag for movement by force</div><div class="ttdef"><b>Definition</b> RigidBody.h:183</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_ac369f1d754603fd195a68f4530dda9b8"><div class="ttname"><a href="class_c_rigid_body.html#ac369f1d754603fd195a68f4530dda9b8">CRigidBody::SetMaterial</a></div><div class="ttdeci">void SetMaterial(const RigidBodyMaterial &amp;material)</div><div class="ttdoc">Set material of rigid body</div><div class="ttdef"><b>Definition</b> RigidBody.h:161</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_ad2b595b4738e42d12e646647c16a144e"><div class="ttname"><a href="class_c_rigid_body.html#ad2b595b4738e42d12e646647c16a144e">CRigidBody::SetGravityScale</a></div><div class="ttdeci">void SetGravityScale(float gravityScale=GRAVITYSCALE_NULL)</div><div class="ttdoc">Set gravity scale</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:153</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_ad4897dc975d5285c74d1d5cab809cb5f"><div class="ttname"><a href="class_c_rigid_body.html#ad4897dc975d5285c74d1d5cab809cb5f">CRigidBody::GetGravityScale</a></div><div class="ttdeci">float GetGravityScale() const</div><div class="ttdoc">Get the gravity scale</div><div class="ttdef"><b>Definition</b> RigidBody.h:193</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_ae5bec9ac5b2a8204ff36a1cb86bc267f"><div class="ttname"><a href="class_c_rigid_body.html#ae5bec9ac5b2a8204ff36a1cb86bc267f">CRigidBody::GetBodyType</a></div><div class="ttdeci">RigidBodyType GetBodyType() const</div><div class="ttdoc">Get the rigid body type</div><div class="ttdef"><b>Definition</b> RigidBody.h:168</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_aea129e1d632dc39962039b1507fba873"><div class="ttname"><a href="class_c_rigid_body.html#aea129e1d632dc39962039b1507fba873">CRigidBody::GetInvMass</a></div><div class="ttdeci">float GetInvMass() const</div><div class="ttdoc">Get the inverse of the mass</div><div class="ttdef"><b>Definition</b> RigidBody.h:178</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_aecc453d1738a0738f0ea4d145b7a695d"><div class="ttname"><a href="class_c_rigid_body.html#aecc453d1738a0738f0ea4d145b7a695d">CRigidBody::GetMass</a></div><div class="ttdeci">float GetMass() const</div><div class="ttdoc">Get the mass</div><div class="ttdef"><b>Definition</b> RigidBody.h:180</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_af646fea54afe827ec60a1a9ce2d92a0f"><div class="ttname"><a href="class_c_rigid_body.html#af646fea54afe827ec60a1a9ce2d92a0f">CRigidBody::GetMaterial</a></div><div class="ttdeci">const RigidBodyMaterial &amp; GetMaterial() const</div><div class="ttdoc">Get the material of rigid body</div><div class="ttdef"><b>Definition</b> RigidBody.h:163</div></div>
+<div class="ttc" id="aclass_c_rigid_body_html_aff76c36313cdffb15bbdb8bcf918c05a"><div class="ttname"><a href="class_c_rigid_body.html#aff76c36313cdffb15bbdb8bcf918c05a">CRigidBody::Awake</a></div><div class="ttdeci">void Awake() override</div><div class="ttdoc">Awake processing</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:27</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="aclass_mkpe_1_1_c_collider_wrapper_html"><div class="ttname"><a href="class_mkpe_1_1_c_collider_wrapper.html">Mkpe::CColliderWrapper</a></div><div class="ttdoc">Wrapper class that exists in a 1:1 relationship with a collider</div><div class="ttdef"><b>Definition</b> ColliderWrapper.h:24</div></div>
+<div class="ttc" id="anamespace_mkpe_html"><div class="ttname"><a href="namespace_mkpe.html">Mkpe</a></div><div class="ttdef"><b>Definition</b> BoudingVolume.h:14</div></div>
+<div class="ttc" id="anamespace_rigid_body_axis_lock_1_1_flag_html_a2706f8e2247eb8b6f9e7a76bf8ea06de"><div class="ttname"><a href="namespace_rigid_body_axis_lock_1_1_flag.html#a2706f8e2247eb8b6f9e7a76bf8ea06de">RigidBodyAxisLock::Flag::_Z</a></div><div class="ttdeci">const Bit _Z</div><div class="ttdoc">Z axis</div><div class="ttdef"><b>Definition</b> RigidBody.h:50</div></div>
+<div class="ttc" id="anamespace_rigid_body_axis_lock_1_1_flag_html_a364a25c7e14bfab7aeadb8a131864050"><div class="ttname"><a href="namespace_rigid_body_axis_lock_1_1_flag.html#a364a25c7e14bfab7aeadb8a131864050">RigidBodyAxisLock::Flag::NONE</a></div><div class="ttdeci">const Bit NONE</div><div class="ttdoc">No flag</div><div class="ttdef"><b>Definition</b> RigidBody.h:44</div></div>
+<div class="ttc" id="anamespace_rigid_body_axis_lock_1_1_flag_html_a5d8aa667205ec658ea7bee20bc56f558"><div class="ttname"><a href="namespace_rigid_body_axis_lock_1_1_flag.html#a5d8aa667205ec658ea7bee20bc56f558">RigidBodyAxisLock::Flag::_X</a></div><div class="ttdeci">const Bit _X</div><div class="ttdoc">X axis</div><div class="ttdef"><b>Definition</b> RigidBody.h:46</div></div>
+<div class="ttc" id="anamespace_rigid_body_axis_lock_1_1_flag_html_a79bb3f373dd73db746ef0c782823338c"><div class="ttname"><a href="namespace_rigid_body_axis_lock_1_1_flag.html#a79bb3f373dd73db746ef0c782823338c">RigidBodyAxisLock::Flag::ALL</a></div><div class="ttdeci">const Bit ALL</div><div class="ttdoc">All axis</div><div class="ttdef"><b>Definition</b> RigidBody.h:52</div></div>
+<div class="ttc" id="anamespace_rigid_body_axis_lock_1_1_flag_html_a9f23e6e9c4305768dc507480a418a041"><div class="ttname"><a href="namespace_rigid_body_axis_lock_1_1_flag.html#a9f23e6e9c4305768dc507480a418a041">RigidBodyAxisLock::Flag::_Y</a></div><div class="ttdeci">const Bit _Y</div><div class="ttdoc">Y axis</div><div class="ttdef"><b>Definition</b> RigidBody.h:48</div></div>
+<div class="ttc" id="anamespace_rigid_body_axis_lock_html"><div class="ttname"><a href="namespace_rigid_body_axis_lock.html">RigidBodyAxisLock</a></div><div class="ttdoc">Bit namespace for locking rigid body axis</div><div class="ttdef"><b>Definition</b> RigidBody.h:37</div></div>
+<div class="ttc" id="anamespace_rigid_body_axis_lock_html_af98041c2001ca8902c75ac58fdb1e309"><div class="ttname"><a href="namespace_rigid_body_axis_lock.html#af98041c2001ca8902c75ac58fdb1e309">RigidBodyAxisLock::Bit</a></div><div class="ttdeci">uint8_t Bit</div><div class="ttdoc">Bit variable type for locking rigid body axis</div><div class="ttdef"><b>Definition</b> RigidBody.h:39</div></div>
+<div class="ttc" id="astruct_rigid_body_material_html"><div class="ttname"><a href="struct_rigid_body_material.html">RigidBodyMaterial</a></div><div class="ttdoc">Rigid body material</div><div class="ttdef"><b>Definition</b> RigidBody.h:22</div></div>
+<div class="ttc" id="astruct_rigid_body_material_html_a3101044b1ee7a47b9a798bbb38d6ba90"><div class="ttname"><a href="struct_rigid_body_material.html#a3101044b1ee7a47b9a798bbb38d6ba90">RigidBodyMaterial::friction</a></div><div class="ttdeci">float friction</div><div class="ttdoc">Friction factor</div><div class="ttdef"><b>Definition</b> RigidBody.h:24</div></div>
+<div class="ttc" id="astruct_rigid_body_material_html_adda65f2f8afa529f58ec6858e3558041"><div class="ttname"><a href="struct_rigid_body_material.html#adda65f2f8afa529f58ec6858e3558041">RigidBodyMaterial::restitution</a></div><div class="ttdeci">float restitution</div><div class="ttdoc">Restitution factor</div><div class="ttdef"><b>Definition</b> RigidBody.h:26</div></div>
+<div class="ttc" id="astruct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector&lt; float, 3 &gt;</a></div></div>
+<div class="ttc" id="astruct_vector_html_a3cef2702aed5a001b5862be56eb81997"><div class="ttname"><a href="struct_vector.html#a3cef2702aed5a001b5862be56eb81997">Vector&lt; float, 3 &gt;::Zero</a></div><div class="ttdeci">static const Vector &amp; Zero()</div><div class="ttdoc">Get vector with all 0 values</div><div class="ttdef"><b>Definition</b> MathStructures.h:210</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

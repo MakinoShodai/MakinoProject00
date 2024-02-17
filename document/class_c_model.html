@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjectName: CModel クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ProjectName
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_c_model-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">CModel クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_model_8h_source.html">Model.h</a>&gt;</code></p>
+<div class="dynheader">
+CModel の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_model__inherit__graph.png" border="0" usemap="#a_c_model_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_c_model_inherit__map" id="a_c_model_inherit__map">
+<area shape="rect" title=" " alt="" coords="51,80,117,107"/>
+<area shape="rect" href="class_a_c_graphics_component.html" title="Abstract class of component of graphics" alt="" coords="5,5,163,32"/>
+<area shape="poly" title=" " alt="" coords="87,48,87,80,81,80,81,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CModel 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_model__coll__graph.png" border="0" usemap="#a_c_model_coll__map" alt="Collaboration graph"/></div>
+<map name="a_c_model_coll__map" id="a_c_model_coll__map">
+<area shape="rect" title=" " alt="" coords="153,172,218,199"/>
+<area shape="rect" href="class_a_c_graphics_component.html" title="Abstract class of component of graphics" alt="" coords="107,96,264,123"/>
+<area shape="poly" title=" " alt="" coords="188,138,188,172,183,172,183,138"/>
+<area shape="rect" href="class_c_weak_ptr.html" title=" " alt="" coords="5,5,193,32"/>
+<area shape="poly" title=" " alt="" coords="124,41,175,94,171,97,120,45"/>
+<area shape="rect" href="class_c_graphics_layer.html" title="This class handles the layer function in the graphics processing" alt="" coords="217,5,331,32"/>
+<area shape="poly" title=" " alt="" coords="257,46,233,74,205,98,201,93,229,70,253,43"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a2b917a994dbfdf507eea842791a7bc19" id="r_a2b917a994dbfdf507eea842791a7bc19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a2b917a994dbfdf507eea842791a7bc19">CModel</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner, <a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer)</td></tr>
+<tr class="memdesc:a2b917a994dbfdf507eea842791a7bc19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a2b917a994dbfdf507eea842791a7bc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a534a0f40a4f542a329cd8e97ee4dde" id="r_a7a534a0f40a4f542a329cd8e97ee4dde"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a7a534a0f40a4f542a329cd8e97ee4dde">~CModel</a> () override</td></tr>
+<tr class="memdesc:a7a534a0f40a4f542a329cd8e97ee4dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:a7a534a0f40a4f542a329cd8e97ee4dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1304feef11d57eaa12e4f39318b683e" id="r_ab1304feef11d57eaa12e4f39318b683e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#ab1304feef11d57eaa12e4f39318b683e">PreDraw</a> ()</td></tr>
+<tr class="memdesc:ab1304feef11d57eaa12e4f39318b683e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre drawing processing  <br /></td></tr>
+<tr class="separator:ab1304feef11d57eaa12e4f39318b683e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5da2e285d89826ad6106b70da00e9f" id="r_a4d5da2e285d89826ad6106b70da00e9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a4d5da2e285d89826ad6106b70da00e9f">AcceptForAllocateData</a> (<a class="el" href="class_i_dynamic_resource.html">IDynamicResource</a> *allocator, UINT meshIndex) override</td></tr>
+<tr class="memdesc:a4d5da2e285d89826ad6106b70da00e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visitor pattern function for 'AllocateData'  <br /></td></tr>
+<tr class="separator:a4d5da2e285d89826ad6106b70da00e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c10d043ccaa04c314456ec324b936d" id="r_a22c10d043ccaa04c314456ec324b936d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a22c10d043ccaa04c314456ec324b936d">AcceptForCreateBuffer</a> (<a class="el" href="class_i_dynamic_sb_allocator.html">IDynamicSbAllocator</a> *allocator) override</td></tr>
+<tr class="memdesc:a22c10d043ccaa04c314456ec324b936d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visitor pattern function for 'CreateBuffer'  <br /></td></tr>
+<tr class="separator:a22c10d043ccaa04c314456ec324b936d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d203c01ddde26eb9f1c4416c482d85" id="r_ae8d203c01ddde26eb9f1c4416c482d85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_model_data.html">CModelData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#ae8d203c01ddde26eb9f1c4416c482d85">GetModelData</a> ()</td></tr>
+<tr class="separator:ae8d203c01ddde26eb9f1c4416c482d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471e6c5a6d3cea4a321de6bf6751726f" id="r_a471e6c5a6d3cea4a321de6bf6751726f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_model_data_1_1_unique_data.html">CModelData::UniqueData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a471e6c5a6d3cea4a321de6bf6751726f">GetUniqueData</a> ()</td></tr>
+<tr class="separator:a471e6c5a6d3cea4a321de6bf6751726f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_graphics_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_graphics_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a7b37d055e80ecb4145a86f03abb4a8e6 inherit pub_methods_class_a_c_graphics_component" id="r_a7b37d055e80ecb4145a86f03abb4a8e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a7b37d055e80ecb4145a86f03abb4a8e6">ACGraphicsComponent</a> (<a class="el" href="class_c_game_object.html">CGameObject</a> *owner, <a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer)</td></tr>
+<tr class="memdesc:a7b37d055e80ecb4145a86f03abb4a8e6 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:a7b37d055e80ecb4145a86f03abb4a8e6 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f21739d3903597b5a27ec3af605fb2 inherit pub_methods_class_a_c_graphics_component" id="r_ac0f21739d3903597b5a27ec3af605fb2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#ac0f21739d3903597b5a27ec3af605fb2">~ACGraphicsComponent</a> ()</td></tr>
+<tr class="memdesc:ac0f21739d3903597b5a27ec3af605fb2 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ac0f21739d3903597b5a27ec3af605fb2 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593c31ff21abdf7074ae1b40a5586831 inherit pub_methods_class_a_c_graphics_component" id="r_a593c31ff21abdf7074ae1b40a5586831"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a593c31ff21abdf7074ae1b40a5586831">AskToAllocateTextures</a> (UINT meshNum, const <a class="el" href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a> &amp;gpso, UINT totalNum)</td></tr>
+<tr class="memdesc:a593c31ff21abdf7074ae1b40a5586831 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask for textures assignment information to be built  <br /></td></tr>
+<tr class="separator:a593c31ff21abdf7074ae1b40a5586831 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accacea0b02e3091b401ceb7f4cc2ef4b inherit pub_methods_class_a_c_graphics_component" id="r_accacea0b02e3091b401ceb7f4cc2ef4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#accacea0b02e3091b401ceb7f4cc2ef4b">SetLayer</a> (<a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a> layer)</td></tr>
+<tr class="memdesc:accacea0b02e3091b401ceb7f4cc2ef4b inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Belong to a new layer  <br /></td></tr>
+<tr class="separator:accacea0b02e3091b401ceb7f4cc2ef4b inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11907622e291958581ecc628ab688d14 inherit pub_methods_class_a_c_graphics_component" id="r_a11907622e291958581ecc628ab688d14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a11907622e291958581ecc628ab688d14">GetGameObj</a> ()</td></tr>
+<tr class="memdesc:a11907622e291958581ecc628ab688d14 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get game object that is the owner of this graphics component  <br /></td></tr>
+<tr class="separator:a11907622e291958581ecc628ab688d14 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f454a392ab04150b2fc8ead6205fc56 inherit pub_methods_class_a_c_graphics_component" id="r_a0f454a392ab04150b2fc8ead6205fc56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_graphics_layer.html">CGraphicsLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a0f454a392ab04150b2fc8ead6205fc56">GetLayer</a> ()</td></tr>
+<tr class="memdesc:a0f454a392ab04150b2fc8ead6205fc56 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get graphics layer to which this class belongs  <br /></td></tr>
+<tr class="separator:a0f454a392ab04150b2fc8ead6205fc56 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388fdd5f49c6e0d4d62ce3b02522629d inherit pub_methods_class_a_c_graphics_component" id="r_a388fdd5f49c6e0d4d62ce3b02522629d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_mesh_buffer.html">CMeshBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a388fdd5f49c6e0d4d62ce3b02522629d">GetMeshBuffer</a> (UINT meshIndex)</td></tr>
+<tr class="memdesc:a388fdd5f49c6e0d4d62ce3b02522629d inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mesh buffer  <br /></td></tr>
+<tr class="separator:a388fdd5f49c6e0d4d62ce3b02522629d inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545bba36a3c30ed07c4969e9e0fde6c6 inherit pub_methods_class_a_c_graphics_component" id="r_a545bba36a3c30ed07c4969e9e0fde6c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_graphics_component_8h.html#adc273d5c200d86f6912ce9c4934e94c2">MeshKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a545bba36a3c30ed07c4969e9e0fde6c6">GetMeshKey</a> (UINT meshIndex)</td></tr>
+<tr class="memdesc:a545bba36a3c30ed07c4969e9e0fde6c6 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a key for mesh buffer  <br /></td></tr>
+<tr class="separator:a545bba36a3c30ed07c4969e9e0fde6c6 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f8fdd8e71b45c11b5ac589740db1b4 inherit pub_methods_class_a_c_graphics_component" id="r_af5f8fdd8e71b45c11b5ac589740db1b4"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#af5f8fdd8e71b45c11b5ac589740db1b4">GetMeshNum</a> ()</td></tr>
+<tr class="memdesc:af5f8fdd8e71b45c11b5ac589740db1b4 inherit pub_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of all meshes  <br /></td></tr>
+<tr class="separator:af5f8fdd8e71b45c11b5ac589740db1b4 inherit pub_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_methods_class_a_c_graphics_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_a_c_graphics_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a1023845869feb009deea2bed525ae963 inherit pro_methods_class_a_c_graphics_component" id="r_a1023845869feb009deea2bed525ae963"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a1023845869feb009deea2bed525ae963">InitializeMesh</a> (UINT meshNum, UINT texNumPerMesh)</td></tr>
+<tr class="memdesc:a1023845869feb009deea2bed525ae963 inherit pro_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare arrays of the meshes and its textures  <br /></td></tr>
+<tr class="separator:a1023845869feb009deea2bed525ae963 inherit pro_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a8ab9440f067691a0a1a1ade33aca4 inherit pro_methods_class_a_c_graphics_component" id="r_a43a8ab9440f067691a0a1a1ade33aca4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a43a8ab9440f067691a0a1a1ade33aca4">SetMeshInfo</a> (UINT meshIndex, <a class="el" href="class_c_vertex_buffer.html">CVertexBuffer</a> *vertex, <a class="el" href="class_c_index_buffer.html">CIndexBuffer</a> *index, D3D_PRIMITIVE_TOPOLOGY topology)</td></tr>
+<tr class="memdesc:a43a8ab9440f067691a0a1a1ade33aca4 inherit pro_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mesh information  <br /></td></tr>
+<tr class="separator:a43a8ab9440f067691a0a1a1ade33aca4 inherit pro_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998e35b7460dd55e425537867615c06d inherit pro_methods_class_a_c_graphics_component" id="r_a998e35b7460dd55e425537867615c06d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a998e35b7460dd55e425537867615c06d">SetTexture</a> (UINT meshIndex, UINT texIndexPerMesh, <a class="el" href="class_c_texture.html">CTexture</a> tex)</td></tr>
+<tr class="memdesc:a998e35b7460dd55e425537867615c06d inherit pro_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set texture  <br /></td></tr>
+<tr class="separator:a998e35b7460dd55e425537867615c06d inherit pro_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb59722b7b70a60f5a668b257279103 inherit pro_methods_class_a_c_graphics_component" id="r_a0bb59722b7b70a60f5a668b257279103"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_texture.html">CTexture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a0bb59722b7b70a60f5a668b257279103">GetTexture</a> (UINT meshIndex, UINT texIndexPerMesh)</td></tr>
+<tr class="memdesc:a0bb59722b7b70a60f5a668b257279103 inherit pro_methods_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get texture  <br /></td></tr>
+<tr class="separator:a0bb59722b7b70a60f5a668b257279103 inherit pro_methods_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_a_c_graphics_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_c_graphics_component')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_graphics_component.html">ACGraphicsComponent</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a9c64ac1a5a38b522af5acea05cc1a50f inherit pro_attribs_class_a_c_graphics_component" id="r_a9c64ac1a5a38b522af5acea05cc1a50f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#a9c64ac1a5a38b522af5acea05cc1a50f">m_gameObj</a></td></tr>
+<tr class="memdesc:a9c64ac1a5a38b522af5acea05cc1a50f inherit pro_attribs_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game object that is the owner of this graphics component  <br /></td></tr>
+<tr class="separator:a9c64ac1a5a38b522af5acea05cc1a50f inherit pro_attribs_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac14c6a67a6fdf0b84a3ef91e1dc3e0 inherit pro_attribs_class_a_c_graphics_component" id="r_acac14c6a67a6fdf0b84a3ef91e1dc3e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_graphics_layer.html">CGraphicsLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_graphics_component.html#acac14c6a67a6fdf0b84a3ef91e1dc3e0">m_layer</a></td></tr>
+<tr class="memdesc:acac14c6a67a6fdf0b84a3ef91e1dc3e0 inherit pro_attribs_class_a_c_graphics_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphics layer to which this class belongs  <br /></td></tr>
+<tr class="separator:acac14c6a67a6fdf0b84a3ef91e1dc3e0 inherit pro_attribs_class_a_c_graphics_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a2b917a994dbfdf507eea842791a7bc19" name="a2b917a994dbfdf507eea842791a7bc19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b917a994dbfdf507eea842791a7bc19">&#9670;&#160;</a></span>CModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CModel::CModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_game_object.html">CGameObject</a> *&#160;</td>
+          <td class="paramname"><em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_graphics_layer_8h.html#a397bed8b403d46e344350d9b731b1cdf">GraphicsLayer</a>&#160;</td>
+          <td class="paramname"><em>layer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">owner</td><td>Game object that is the owner of this graphics component </td></tr>
+    <tr><td class="paramname">layer</td><td>Graphics layer to which this class belongs </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_model_a2b917a994dbfdf507eea842791a7bc19_cgraph.png" border="0" usemap="#aclass_c_model_a2b917a994dbfdf507eea842791a7bc19_cgraph" alt=""/></div>
+<map name="aclass_c_model_a2b917a994dbfdf507eea842791a7bc19_cgraph" id="aclass_c_model_a2b917a994dbfdf507eea842791a7bc19_cgraph">
+<area shape="rect" title="Constructor" alt="" coords="5,523,123,550"/>
+<area shape="rect" href="class_c_model_data.html#a2c69ddaa47cdd89e46b6892e926d6d46" title=" " alt="" coords="172,70,353,96"/>
+<area shape="poly" title=" " alt="" coords="66,522,103,402,133,318,168,234,205,165,241,108,246,111,210,167,173,236,138,320,108,404,72,524"/>
+<area shape="rect" href="class_c_unique_ptr.html#a71e1c43f63d8d3431ac1557c97a71b53" title="Get instance" alt="" coords="204,615,321,642"/>
+<area shape="poly" title=" " alt="" coords="85,548,124,574,172,601,191,608,189,613,170,605,121,579,82,552"/>
+<area shape="rect" href="class_c_mesh_buffer_full.html#a1e8e561882f3e142bfd6ac9a068d8de9" title="Get index buffer entity" alt="" coords="418,372,594,415"/>
+<area shape="poly" title=" " alt="" coords="74,521,112,478,139,455,170,437,227,415,287,401,347,393,402,389,402,395,348,398,288,406,229,420,172,441,142,460,116,482,78,524"/>
+<area shape="rect" href="class_c_model_data.html#a704ca2de3b6175030a76f6a877952571" title=" " alt="" coords="171,666,354,692"/>
+<area shape="poly" title=" " alt="" coords="76,549,114,599,141,627,172,652,182,657,179,662,169,656,137,631,110,603,72,552"/>
+<area shape="rect" href="class_c_mesh_buffer_full.html#aba9c1f5e9c79c734c9859c70967754ee" title="Get vertex buffer entity" alt="" coords="415,439,598,482"/>
+<area shape="poly" title=" " alt="" coords="80,520,119,492,143,478,170,467,228,454,287,447,399,447,399,452,288,452,229,459,171,472,146,483,121,496,83,525"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a1023845869feb009deea2bed525ae963" title="Prepare arrays of the meshes and its textures" alt="" coords="184,548,341,591"/>
+<area shape="poly" title=" " alt="" coords="123,544,169,551,168,557,123,549"/>
+<area shape="rect" href="class_c_model_data.html#a47160020c311ffdb67296eb02ed9d24f" title=" " alt="" coords="198,271,327,298"/>
+<area shape="poly" title=" " alt="" coords="71,521,110,456,169,373,233,306,236,310,173,377,115,459,75,524"/>
+<area shape="rect" href="class_c_model_data.html#a68c35ff8dcd13035695685886620f4f8" title=" " alt="" coords="199,716,326,743"/>
+<area shape="poly" title=" " alt="" coords="72,549,85,581,106,622,135,666,172,702,186,711,184,715,169,707,131,669,101,625,80,583,68,551"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a43a8ab9440f067691a0a1a1ade33aca4" title="Set mesh information" alt="" coords="184,767,341,810"/>
+<area shape="poly" title=" " alt="" coords="71,550,81,589,101,644,131,702,150,729,173,753,176,756,173,760,169,757,146,733,126,705,96,646,76,591,66,551"/>
+<area shape="rect" href="class_a_c_graphics_component.html#a998e35b7460dd55e425537867615c06d" title="Set texture" alt="" coords="184,482,341,524"/>
+<area shape="poly" title=" " alt="" coords="123,524,168,516,169,521,123,529"/>
+<area shape="rect" href="class_c_application.html#acc7074d703253b55819cf96620992675" title="When an error occurs, display a message box" alt="" coords="403,44,609,71"/>
+<area shape="poly" title=" " alt="" coords="353,71,387,67,388,73,354,76"/>
+<area shape="rect" href="class_a_c_singleton.html#a355bd3105e9ca4a74c4c4d8f43d3be0e" title="Get singleton instance" alt="" coords="1450,224,1629,267"/>
+<area shape="poly" title=" " alt="" coords="293,67,343,47,401,30,497,12,572,5,746,4,992,4,1069,11,1146,28,1221,53,1291,85,1356,119,1414,153,1501,213,1498,217,1411,158,1354,123,1289,89,1219,58,1145,33,1069,16,992,10,746,10,573,10,498,17,403,35,345,52,295,72"/>
+<area shape="rect" href="namespace_utl_1_1_str.html#ad72076fbe2405636f8945604a5d79dbc" title="Convert &#39;std::string&#39; to &#39;std::wstring&#39;" alt="" coords="428,95,584,122"/>
+<area shape="poly" title=" " alt="" coords="354,90,413,96,412,101,353,95"/>
+<area shape="rect" href="class_c_int_key_generater.html#af4834f22e0b0649e5aac1f28304b2389" title="Generate a key" alt="" coords="402,556,610,583"/>
+<area shape="poly" title=" " alt="" coords="341,567,386,567,386,572,341,572"/>
+<area shape="rect" href="class_c_unique_ptr.html#ae35d2fd3d6ea8f9c1dc7ecc86ed15ceb" title="Make unique pointer" alt="" coords="423,506,590,532"/>
+<area shape="poly" title=" " alt="" coords="341,551,423,534,424,539,342,556"/>
+<area shape="poly" title=" " alt="" coords="267,269,284,232,312,180,351,127,374,102,400,81,409,76,412,80,404,85,378,106,355,130,316,183,288,234,271,272"/>
+<area shape="poly" title=" " alt="" coords="296,268,345,242,401,218,495,192,571,182,648,180,746,180,992,180,1111,185,1231,198,1435,229,1434,235,1230,203,1111,191,992,186,746,186,648,185,571,187,496,198,403,223,347,247,299,273"/>
+<area shape="poly" title=" " alt="" coords="272,268,325,229,362,209,401,194,495,168,571,158,648,156,746,156,992,156,1121,162,1250,177,1367,197,1461,218,1460,223,1366,202,1249,183,1121,168,992,162,746,162,648,161,571,163,496,174,403,199,364,214,328,234,275,273"/>
+<area shape="poly" title=" " alt="" coords="271,269,321,207,358,170,401,138,427,125,429,130,403,143,362,174,325,210,275,272"/>
+<area shape="poly" title=" " alt="" coords="287,296,339,326,403,358,419,364,417,369,401,363,336,331,284,300"/>
+<area shape="poly" title=" " alt="" coords="276,297,326,358,362,394,403,425,412,430,409,434,401,429,359,398,322,362,271,300"/>
+<area shape="poly" title=" " alt="" coords="271,297,287,336,315,389,354,445,377,470,404,492,411,496,408,501,400,496,374,474,350,448,311,392,283,338,266,299"/>
+<area shape="poly" title=" " alt="" coords="229,272,223,262,227,253,240,247,262,244,286,247,299,253,296,258,284,252,262,250,242,252,230,256,228,262,233,269"/>
+<area shape="rect" href="class_c_index_buffer.html#a1da8cdfad63417296440cfb0b6d01dae" title="Create index buffer" alt="" coords="436,271,576,298"/>
+<area shape="poly" title=" " alt="" coords="327,282,420,282,420,287,327,287"/>
+<area shape="rect" href="class_c_vertex_buffer.html#a0b656936a16c4ac0ff27cc369280965d" title="Create vertex buffer" alt="" coords="433,220,580,247"/>
+<area shape="poly" title=" " alt="" coords="326,268,423,248,424,253,328,274"/>
+<area shape="rect" href="class_c_mesh_buffer_full.html#a78f9d780fc8b1ecc615a79e19bb51b92" title="Disallow setting vertex and index buffers externally" alt="" coords="424,322,588,348"/>
+<area shape="poly" title=" " alt="" coords="328,295,424,315,423,321,326,300"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#abe58624d99faa1cb3ea36b2c090deff7" title="Create resource" alt="" coords="658,320,836,363"/>
+<area shape="poly" title=" " alt="" coords="577,245,611,257,661,282,705,309,702,314,658,286,609,262,576,250"/>
+<area shape="poly" title=" " alt="" coords="836,328,883,318,1033,295,1183,277,1435,256,1435,261,1184,283,1033,300,884,323,837,333"/>
+<area shape="poly" title=" " alt="" coords="789,317,883,294,1033,271,1183,254,1321,244,1435,239,1435,244,1321,249,1183,260,1033,276,884,299,791,322"/>
+<area shape="rect" href="class_c_command_manager.html#a2190493f7e13f1a69192b951e1326005" title="Execute registered commands" alt="" coords="884,320,1097,363"/>
+<area shape="poly" title=" " alt="" coords="836,339,868,339,868,344,836,344"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#a6000be26dd503b2a15417118b6592e50" title="Set command to copy data" alt="" coords="902,438,1079,480"/>
+<area shape="poly" title=" " alt="" coords="784,361,885,417,913,429,911,434,882,421,782,366"/>
+<area shape="rect" href="class_c_command_manager.html#a7d39f0cc090f028abaa158ecaab27e52" title="Get command list for graphics" alt="" coords="1155,530,1375,572"/>
+<area shape="poly" title=" " alt="" coords="837,361,884,372,946,382,997,384,1045,393,1071,405,1099,424,1110,435,1117,447,1124,471,1130,494,1147,516,1152,520,1149,524,1143,520,1125,496,1119,472,1112,449,1106,438,1095,428,1068,410,1044,398,997,389,946,387,883,378,835,366"/>
+<area shape="rect" href="class_a_c_gpu_optimized_resource.html#ab8e1ac31d1670a26a8eb63627e651f45" title="Update heap properties and resource descriptor, for resource" alt="" coords="902,504,1079,547"/>
+<area shape="poly" title=" " alt="" coords="764,362,813,425,847,460,885,490,893,495,890,500,882,495,843,464,809,429,760,365"/>
+<area shape="poly" title=" " alt="" coords="1097,322,1384,274,1435,264,1436,269,1385,279,1098,328"/>
+<area shape="rect" href="class_c_command_manager.html#a34216c09f3c7d6e9e57eca7af578457c" title="Clear graphics command list and graphics command allocator, However, it is not associated with execut..." alt="" coords="1145,346,1384,388"/>
+<area shape="poly" title=" " alt="" coords="1098,349,1130,352,1129,357,1097,354"/>
+<area shape="rect" href="class_c_command_manager.html#af6a8b626d58ef495a821ca64748e9d00" title="Executes registered graphics commands, but does not wait or clear, so it is only used in special situ..." alt="" coords="1145,412,1384,455"/>
+<area shape="poly" title=" " alt="" coords="1051,361,1098,379,1146,398,1168,405,1166,410,1144,403,1096,384,1049,366"/>
+<area shape="rect" href="class_c_command_manager.html#ab1ae23d30c351a64b2bd364537db6518" title="Wait for the GPU to complete processing" alt="" coords="1154,479,1375,506"/>
+<area shape="poly" title=" " alt="" coords="1070,361,1099,380,1116,402,1123,425,1130,446,1147,465,1154,470,1151,474,1143,469,1125,448,1118,426,1111,405,1095,384,1067,366"/>
+<area shape="poly" title=" " alt="" coords="1336,343,1383,325,1487,273,1489,277,1385,330,1338,348"/>
+<area shape="poly" title=" " alt="" coords="1360,409,1383,398,1421,371,1456,340,1511,278,1515,282,1460,343,1425,375,1386,403,1362,414"/>
+<area shape="rect" href="class_c_swap_chain.html#a3adcd8ff2ffa23e627ce094ecdd1b7de" title="Get the index of the back buffer to be used for the next drawing" alt="" coords="1432,471,1647,514"/>
+<area shape="poly" title=" " alt="" coords="1368,453,1422,465,1421,470,1367,458"/>
+<area shape="poly" title=" " alt="" coords="1365,527,1383,516,1399,499,1417,475,1455,411,1520,280,1525,282,1460,413,1421,478,1403,503,1386,520,1368,531"/>
+<area shape="poly" title=" " alt="" coords="1367,527,1421,515,1422,520,1368,532"/>
+<area shape="poly" title=" " alt="" coords="341,506,407,510,407,515,341,511"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7a534a0f40a4f542a329cd8e97ee4dde" name="a7a534a0f40a4f542a329cd8e97ee4dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a534a0f40a4f542a329cd8e97ee4dde">&#9670;&#160;</a></span>~CModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CModel::~CModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a4d5da2e285d89826ad6106b70da00e9f" name="a4d5da2e285d89826ad6106b70da00e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d5da2e285d89826ad6106b70da00e9f">&#9670;&#160;</a></span>AcceptForAllocateData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> CModel::AcceptForAllocateData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_dynamic_resource.html">IDynamicResource</a> *&#160;</td>
+          <td class="paramname"><em>allocator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>meshIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Visitor pattern function for 'AllocateData' </p>
+
+<p><a class="el" href="class_a_c_graphics_component.html#a995fb7108cd664484a64178588e4d64c">ACGraphicsComponent</a>を実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_model_a4d5da2e285d89826ad6106b70da00e9f_cgraph.png" border="0" usemap="#aclass_c_model_a4d5da2e285d89826ad6106b70da00e9f_cgraph" alt=""/></div>
+<map name="aclass_c_model_a4d5da2e285d89826ad6106b70da00e9f_cgraph" id="aclass_c_model_a4d5da2e285d89826ad6106b70da00e9f_cgraph">
+<area shape="rect" title="Visitor pattern function for &#39;AllocateData&#39;" alt="" coords="5,5,213,32"/>
+<area shape="rect" href="class_i_dynamic_resource.html#a90d18da6d0fe3f8b05ef0b4c360016c3" title="Allocate data calculated for a mesh held by sent graphics component in the constant buffer" alt="" coords="261,5,473,32"/>
+<area shape="poly" title=" " alt="" coords="213,16,245,16,245,21,213,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a22c10d043ccaa04c314456ec324b936d" name="a22c10d043ccaa04c314456ec324b936d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c10d043ccaa04c314456ec324b936d">&#9670;&#160;</a></span>AcceptForCreateBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CModel::AcceptForCreateBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_dynamic_sb_allocator.html">IDynamicSbAllocator</a> *&#160;</td>
+          <td class="paramname"><em>allocator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Visitor pattern function for 'CreateBuffer' </p>
+
+<p><a class="el" href="class_a_c_graphics_component.html#aa612722a6c23e7f76f85180ac8721ffa">ACGraphicsComponent</a>を実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_model_a22c10d043ccaa04c314456ec324b936d_cgraph.png" border="0" usemap="#aclass_c_model_a22c10d043ccaa04c314456ec324b936d_cgraph" alt=""/></div>
+<map name="aclass_c_model_a22c10d043ccaa04c314456ec324b936d_cgraph" id="aclass_c_model_a22c10d043ccaa04c314456ec324b936d_cgraph">
+<area shape="rect" title="Visitor pattern function for &#39;CreateBuffer&#39;" alt="" coords="5,13,210,40"/>
+<area shape="rect" href="class_i_dynamic_sb_allocator.html#a3ef5b4a60443ca8bb151d94d662e7dd7" title="Create a strutured buffer corresponding to the component sent" alt="" coords="258,5,400,48"/>
+<area shape="poly" title=" " alt="" coords="210,24,242,24,242,29,210,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae8d203c01ddde26eb9f1c4416c482d85" name="ae8d203c01ddde26eb9f1c4416c482d85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d203c01ddde26eb9f1c4416c482d85">&#9670;&#160;</a></span>GetModelData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_model_data.html">CModelData</a> * CModel::GetModelData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_model_ae8d203c01ddde26eb9f1c4416c482d85_icgraph.png" border="0" usemap="#aclass_c_model_ae8d203c01ddde26eb9f1c4416c482d85_icgraph" alt=""/></div>
+<map name="aclass_c_model_ae8d203c01ddde26eb9f1c4416c482d85_icgraph" id="aclass_c_model_ae8d203c01ddde26eb9f1c4416c482d85_icgraph">
+<area shape="rect" title=" " alt="" coords="217,80,373,107"/>
+<area shape="rect" href="class_c_dynamic_cb_anim_matrix.html#a8451281ae63a30637de81c3dc9be5dd0" title="Allocate data calculated for a mesh held by sent model in the constant buffer" alt="" coords="5,5,169,48"/>
+<area shape="poly" title=" " alt="" coords="235,77,155,51,157,46,237,72"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a783c8e28303283c12aa1440e9273cd1e" title="Allocate data for model" alt="" coords="8,72,166,115"/>
+<area shape="poly" title=" " alt="" coords="201,96,166,96,166,91,201,91"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a2ae07e5eada731c9555ccfeda9b52540" title="Create buffer for model" alt="" coords="8,139,166,181"/>
+<area shape="poly" title=" " alt="" coords="237,115,157,141,155,136,235,109"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a471e6c5a6d3cea4a321de6bf6751726f" name="a471e6c5a6d3cea4a321de6bf6751726f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a471e6c5a6d3cea4a321de6bf6751726f">&#9670;&#160;</a></span>GetUniqueData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_c_model_data_1_1_unique_data.html">CModelData::UniqueData</a> * CModel::GetUniqueData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_model_a471e6c5a6d3cea4a321de6bf6751726f_icgraph.png" border="0" usemap="#aclass_c_model_a471e6c5a6d3cea4a321de6bf6751726f_icgraph" alt=""/></div>
+<map name="aclass_c_model_a471e6c5a6d3cea4a321de6bf6751726f_icgraph" id="aclass_c_model_a471e6c5a6d3cea4a321de6bf6751726f_icgraph">
+<area shape="rect" title=" " alt="" coords="217,80,378,107"/>
+<area shape="rect" href="class_c_dynamic_cb_anim_matrix.html#a8451281ae63a30637de81c3dc9be5dd0" title="Allocate data calculated for a mesh held by sent model in the constant buffer" alt="" coords="5,5,169,48"/>
+<area shape="poly" title=" " alt="" coords="237,77,156,51,158,46,239,72"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a783c8e28303283c12aa1440e9273cd1e" title="Allocate data for model" alt="" coords="8,72,166,115"/>
+<area shape="poly" title=" " alt="" coords="201,96,166,96,166,91,201,91"/>
+<area shape="rect" href="class_c_dynamic_sb_anim_mat.html#a2ae07e5eada731c9555ccfeda9b52540" title="Create buffer for model" alt="" coords="8,139,166,181"/>
+<area shape="poly" title=" " alt="" coords="239,114,158,141,156,135,237,109"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab1304feef11d57eaa12e4f39318b683e" name="ab1304feef11d57eaa12e4f39318b683e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1304feef11d57eaa12e4f39318b683e">&#9670;&#160;</a></span>PreDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CModel::PreDraw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pre drawing processing </p>
+
+<p><a class="el" href="class_a_c_graphics_component.html#af46c7382df0dc09611bb4d2291fd7c53">ACGraphicsComponent</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_model_ab1304feef11d57eaa12e4f39318b683e_cgraph.png" border="0" usemap="#aclass_c_model_ab1304feef11d57eaa12e4f39318b683e_cgraph" alt=""/></div>
+<map name="aclass_c_model_ab1304feef11d57eaa12e4f39318b683e_cgraph" id="aclass_c_model_ab1304feef11d57eaa12e4f39318b683e_cgraph">
+<area shape="rect" title="Pre drawing processing" alt="" coords="5,43,128,69"/>
+<area shape="rect" href="class_a_c_singleton.html#a355bd3105e9ca4a74c4c4d8f43d3be0e" title="Get singleton instance" alt="" coords="176,5,346,48"/>
+<area shape="poly" title=" " alt="" coords="128,44,160,39,160,45,128,49"/>
+<area shape="rect" href="class_c_model_data.html#a5b06ef55df8e020c159b33a97475bda7" title=" " alt="" coords="197,72,325,99"/>
+<area shape="poly" title=" " alt="" coords="128,63,182,71,181,76,128,68"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_model_8h_source.html">Model.h</a></li>
+<li><a class="el" href="_model_8cpp.html">Model.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjectName: ACScene クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ProjectName
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_a_c_scene-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">ACScene クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is abstract class for scene  
+ <a href="class_a_c_scene.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_scene_8h_source.html">Scene.h</a>&gt;</code></p>
+<div class="dynheader">
+ACScene の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_scene__inherit__graph.png" border="0" usemap="#a_a_c_scene_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_a_c_scene_inherit__map" id="a_a_c_scene_inherit__map">
+<area shape="rect" title="This is abstract class for scene" alt="" coords="73,171,150,197"/>
+<area shape="rect" href="class_c_test_scene.html" title=" " alt="" coords="5,245,98,272"/>
+<area shape="poly" title=" " alt="" coords="94,211,64,247,60,243,89,208"/>
+<area shape="rect" href="class_c_test_scene2.html" title=" " alt="" coords="122,245,221,272"/>
+<area shape="poly" title=" " alt="" coords="134,208,163,243,159,247,129,211"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="35,80,188,123"/>
+<area shape="poly" title=" " alt="" coords="114,139,114,170,109,170,109,139"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="47,5,176,32"/>
+<area shape="poly" title=" " alt="" coords="114,48,114,80,109,80,109,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+ACScene 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_scene__coll__graph.png" border="0" usemap="#a_a_c_scene_coll__map" alt="Collaboration graph"/></div>
+<map name="a_a_c_scene_coll__map" id="a_a_c_scene_coll__map">
+<area shape="rect" title="This is abstract class for scene" alt="" coords="43,171,120,197"/>
+<area shape="rect" href="class_a_c_weak_ptr_from_this.html" title=" " alt="" coords="5,80,158,123"/>
+<area shape="poly" title=" " alt="" coords="84,139,84,170,79,170,79,139"/>
+<area shape="rect" href="class_i_weak_ptr_from_this.html" title="Empty interface to let &#39;ACWeakPtrFromThis&#39; do type checking without template" alt="" coords="17,5,146,32"/>
+<area shape="poly" title=" " alt="" coords="84,48,84,80,79,80,79,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:afb113cd1194decf7287fe129a892cad5" id="r_afb113cd1194decf7287fe129a892cad5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#afb113cd1194decf7287fe129a892cad5">ACScene</a> ()</td></tr>
+<tr class="memdesc:afb113cd1194decf7287fe129a892cad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <br /></td></tr>
+<tr class="separator:afb113cd1194decf7287fe129a892cad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd26f03f76b3daae743e517bb0ebea60" id="r_abd26f03f76b3daae743e517bb0ebea60"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#abd26f03f76b3daae743e517bb0ebea60">~ACScene</a> ()</td></tr>
+<tr class="memdesc:abd26f03f76b3daae743e517bb0ebea60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:abd26f03f76b3daae743e517bb0ebea60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ea89b60daa1235e166659894f15c0fa" id="r_a3ea89b60daa1235e166659894f15c0fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#a3ea89b60daa1235e166659894f15c0fa">Start</a> ()=0</td></tr>
+<tr class="memdesc:a3ea89b60daa1235e166659894f15c0fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing when switching to this scene  <br /></td></tr>
+<tr class="separator:a3ea89b60daa1235e166659894f15c0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadcf572ce15d221f34042f3c050d8151" id="r_aadcf572ce15d221f34042f3c050d8151"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#aadcf572ce15d221f34042f3c050d8151">Draw</a> ()=0</td></tr>
+<tr class="memdesc:aadcf572ce15d221f34042f3c050d8151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing process  <br /></td></tr>
+<tr class="separator:aadcf572ce15d221f34042f3c050d8151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57089dfb6db3b1b88df5e97f7aebe2b5" id="r_a57089dfb6db3b1b88df5e97f7aebe2b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#a57089dfb6db3b1b88df5e97f7aebe2b5">Update</a> ()</td></tr>
+<tr class="memdesc:a57089dfb6db3b1b88df5e97f7aebe2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updating process  <br /></td></tr>
+<tr class="separator:a57089dfb6db3b1b88df5e97f7aebe2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f6a11d80979d4fb4670e37bbd73b5ac" id="r_a3f6a11d80979d4fb4670e37bbd73b5ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#a3f6a11d80979d4fb4670e37bbd73b5ac">EndFrameProcess</a> ()</td></tr>
+<tr class="memdesc:a3f6a11d80979d4fb4670e37bbd73b5ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing at end of a frame  <br /></td></tr>
+<tr class="separator:a3f6a11d80979d4fb4670e37bbd73b5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affba765fed83a585c7e87e939102aaee" id="r_affba765fed83a585c7e87e939102aaee"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="concept_is_c_game_object_child.html">IsCGameObjectChild</a> T, class... Args&gt; </td></tr>
+<tr class="memitem:affba765fed83a585c7e87e939102aaee"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#affba765fed83a585c7e87e939102aaee">CreateGameObject</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:affba765fed83a585c7e87e939102aaee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a game object  <br /></td></tr>
+<tr class="separator:affba765fed83a585c7e87e939102aaee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4213e708a004d67315e1f874cf2701a" id="r_ae4213e708a004d67315e1f874cf2701a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#ae4213e708a004d67315e1f874cf2701a">FindGameObject</a> (const std::wstring &amp;name)</td></tr>
+<tr class="memdesc:ae4213e708a004d67315e1f874cf2701a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a game object from the array of game objects  <br /></td></tr>
+<tr class="separator:ae4213e708a004d67315e1f874cf2701a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f26cf91f60fb0710f7bd0d67f403e0f" id="r_a8f26cf91f60fb0710f7bd0d67f403e0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#a8f26cf91f60fb0710f7bd0d67f403e0f">DestroyGameObject</a> (<a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt; object)</td></tr>
+<tr class="memdesc:a8f26cf91f60fb0710f7bd0d67f403e0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule destroying a game object from the array of game objects  <br /></td></tr>
+<tr class="separator:a8f26cf91f60fb0710f7bd0d67f403e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a02da6a0a90b9c66bbd9cbe49cf969" id="r_a31a02da6a0a90b9c66bbd9cbe49cf969"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#a31a02da6a0a90b9c66bbd9cbe49cf969">AddGraphicsPipelineStatePointer</a> (<a class="el" href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a> *pipelineState)</td></tr>
+<tr class="memdesc:a31a02da6a0a90b9c66bbd9cbe49cf969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a pointer to a graphics pipeline state  <br /></td></tr>
+<tr class="separator:a31a02da6a0a90b9c66bbd9cbe49cf969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37ba00f05bf1f7d4f1ae71d055f8bee8" id="r_a37ba00f05bf1f7d4f1ae71d055f8bee8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_camera_registry.html">CCameraRegistry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#a37ba00f05bf1f7d4f1ae71d055f8bee8">GetCameraRegistry</a> ()</td></tr>
+<tr class="memdesc:a37ba00f05bf1f7d4f1ae71d055f8bee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer to camera registry  <br /></td></tr>
+<tr class="separator:a37ba00f05bf1f7d4f1ae71d055f8bee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f803465070b9d5991f3ff4aa1236e30" id="r_a0f803465070b9d5991f3ff4aa1236e30"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_camera_registry.html">CCameraRegistry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#a0f803465070b9d5991f3ff4aa1236e30">GetCameraRegistry</a> () const</td></tr>
+<tr class="memdesc:a0f803465070b9d5991f3ff4aa1236e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer to camera registry  <br /></td></tr>
+<tr class="separator:a0f803465070b9d5991f3ff4aa1236e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76eb8b826e98caa1d6da8bc23b14e918" id="r_a76eb8b826e98caa1d6da8bc23b14e918"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_graphics_layer_registry.html">CGraphicsLayerRegistry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#a76eb8b826e98caa1d6da8bc23b14e918">GetGraphicsLayerRegistry</a> ()</td></tr>
+<tr class="memdesc:a76eb8b826e98caa1d6da8bc23b14e918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to the registry class handles graphics components array of each graphics layers  <br /></td></tr>
+<tr class="separator:a76eb8b826e98caa1d6da8bc23b14e918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77fc4d8f2dc1fc5709dd2eda2ebf1e45" id="r_a77fc4d8f2dc1fc5709dd2eda2ebf1e45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_int_key_generater.html">CIntKeyGenerater</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_scene.html#a77fc4d8f2dc1fc5709dd2eda2ebf1e45">GetMeshKeyGenerater</a> ()</td></tr>
+<tr class="memdesc:a77fc4d8f2dc1fc5709dd2eda2ebf1e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get key generater class for mesh buffer  <br /></td></tr>
+<tr class="separator:a77fc4d8f2dc1fc5709dd2eda2ebf1e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_c_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_c_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis&lt; ACScene &gt;</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_ab2905432621e2737bc3f95cb9101a8e2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#ab2905432621e2737bc3f95cb9101a8e2">~ACWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="memdesc:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <br /></td></tr>
+<tr class="separator:ab2905432621e2737bc3f95cb9101a8e2 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this" id="r_aa549f0fbf364d84137496a7eed607bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_a_c_scene.html">ACScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_c_weak_ptr_from_this.html#aa549f0fbf364d84137496a7eed607bb5">WeakFromThis</a> ()</td></tr>
+<tr class="memdesc:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get weak pointer from this class  <br /></td></tr>
+<tr class="separator:aa549f0fbf364d84137496a7eed607bb5 inherit pub_methods_class_a_c_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_weak_ptr_from_this"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_weak_ptr_from_this')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_i_weak_ptr_from_this.html">IWeakPtrFromThis</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this" id="r_a5a3acc569a8076065b930bc52a87255c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_weak_ptr_from_this.html#a5a3acc569a8076065b930bc52a87255c">~IWeakPtrFromThis</a> ()=default</td></tr>
+<tr class="separator:a5a3acc569a8076065b930bc52a87255c inherit pub_methods_class_i_weak_ptr_from_this"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This is abstract class for scene </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="afb113cd1194decf7287fe129a892cad5" name="afb113cd1194decf7287fe129a892cad5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb113cd1194decf7287fe129a892cad5">&#9670;&#160;</a></span>ACScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ACScene::ACScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="abd26f03f76b3daae743e517bb0ebea60" name="abd26f03f76b3daae743e517bb0ebea60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd26f03f76b3daae743e517bb0ebea60">&#9670;&#160;</a></span>~ACScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ACScene::~ACScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a31a02da6a0a90b9c66bbd9cbe49cf969" name="a31a02da6a0a90b9c66bbd9cbe49cf969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31a02da6a0a90b9c66bbd9cbe49cf969">&#9670;&#160;</a></span>AddGraphicsPipelineStatePointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACScene::AddGraphicsPipelineStatePointer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a> *&#160;</td>
+          <td class="paramname"><em>pipelineState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a pointer to a graphics pipeline state </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pipelineState</td><td>Pointer to a graphics pipeline state to be added</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function is called from inside <a class="el" href="class_c_graphics_pipeline_state.html" title="This class handles graphics pipeline state">CGraphicsPipelineState</a>, so there is no need to call it from anywhere else. </p>
+
+</div>
+</div>
+<a id="affba765fed83a585c7e87e939102aaee" name="affba765fed83a585c7e87e939102aaee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affba765fed83a585c7e87e939102aaee">&#9670;&#160;</a></span>CreateGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="concept_is_c_game_object_child.html">IsCGameObjectChild</a> T, class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; T &gt; ACScene::CreateGameObject </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a game object </p>
+<dl class="section return"><dt>戻り値</dt><dd>Weak pointer to the created game object </dd></dl>
+
+</div>
+</div>
+<a id="a8f26cf91f60fb0710f7bd0d67f403e0f" name="a8f26cf91f60fb0710f7bd0d67f403e0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f26cf91f60fb0710f7bd0d67f403e0f">&#9670;&#160;</a></span>DestroyGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACScene::DestroyGameObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Schedule destroying a game object from the array of game objects </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>game object to be destroyed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aadcf572ce15d221f34042f3c050d8151" name="aadcf572ce15d221f34042f3c050d8151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadcf572ce15d221f34042f3c050d8151">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACScene::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Drawing process </p>
+
+<p><a class="el" href="class_c_test_scene.html#ae4dc3c96d0670867066fe675974176b9">CTestScene</a>, <a class="el" href="class_c_test_scene2.html#abb5dd250c1c3b551012f698780dfc54c">CTestScene2</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a3f6a11d80979d4fb4670e37bbd73b5ac" name="a3f6a11d80979d4fb4670e37bbd73b5ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f6a11d80979d4fb4670e37bbd73b5ac">&#9670;&#160;</a></span>EndFrameProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACScene::EndFrameProcess </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processing at end of a frame </p>
+
+</div>
+</div>
+<a id="ae4213e708a004d67315e1f874cf2701a" name="ae4213e708a004d67315e1f874cf2701a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4213e708a004d67315e1f874cf2701a">&#9670;&#160;</a></span>FindGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_game_object.html">CGameObject</a> &gt; ACScene::FindGameObject </td>
+          <td>(</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find a game object from the array of game objects </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of game object to be found </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Weak pointer to the found game object </dd></dl>
+
+</div>
+</div>
+<a id="a37ba00f05bf1f7d4f1ae71d055f8bee8" name="a37ba00f05bf1f7d4f1ae71d055f8bee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37ba00f05bf1f7d4f1ae71d055f8bee8">&#9670;&#160;</a></span>GetCameraRegistry() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_camera_registry.html">CCameraRegistry</a> &gt; ACScene::GetCameraRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get weak pointer to camera registry </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_scene_a37ba00f05bf1f7d4f1ae71d055f8bee8_cgraph.png" border="0" usemap="#aclass_a_c_scene_a37ba00f05bf1f7d4f1ae71d055f8bee8_cgraph" alt=""/></div>
+<map name="aclass_a_c_scene_a37ba00f05bf1f7d4f1ae71d055f8bee8_cgraph" id="aclass_a_c_scene_a37ba00f05bf1f7d4f1ae71d055f8bee8_cgraph">
+<area shape="rect" title="Get weak pointer to camera registry" alt="" coords="5,13,204,40"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a51172a212695bc5668112397d0bfb431" title="Get weak ptr" alt="" coords="252,5,397,48"/>
+<area shape="poly" title=" " alt="" coords="204,24,236,24,236,29,204,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_scene_a37ba00f05bf1f7d4f1ae71d055f8bee8_icgraph.png" border="0" usemap="#aclass_a_c_scene_a37ba00f05bf1f7d4f1ae71d055f8bee8_icgraph" alt=""/></div>
+<map name="aclass_a_c_scene_a37ba00f05bf1f7d4f1ae71d055f8bee8_icgraph" id="aclass_a_c_scene_a37ba00f05bf1f7d4f1ae71d055f8bee8_icgraph">
+<area shape="rect" title="Get weak pointer to camera registry" alt="" coords="188,5,386,32"/>
+<area shape="rect" href="class_c_static_cb_v_p.html#a6d03f43ba553bb36771e947dc27183d6" title="Scene start processing" alt="" coords="5,5,140,32"/>
+<area shape="poly" title=" " alt="" coords="172,21,140,21,140,16,172,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f803465070b9d5991f3ff4aa1236e30" name="a0f803465070b9d5991f3ff4aa1236e30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f803465070b9d5991f3ff4aa1236e30">&#9670;&#160;</a></span>GetCameraRegistry() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_c_weak_ptr.html">CWeakPtr</a>&lt; <a class="el" href="class_c_camera_registry.html">CCameraRegistry</a> &gt; ACScene::GetCameraRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get weak pointer to camera registry </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_scene_a0f803465070b9d5991f3ff4aa1236e30_cgraph.png" border="0" usemap="#aclass_a_c_scene_a0f803465070b9d5991f3ff4aa1236e30_cgraph" alt=""/></div>
+<map name="aclass_a_c_scene_a0f803465070b9d5991f3ff4aa1236e30_cgraph" id="aclass_a_c_scene_a0f803465070b9d5991f3ff4aa1236e30_cgraph">
+<area shape="rect" title="Get weak pointer to camera registry" alt="" coords="5,13,204,40"/>
+<area shape="rect" href="class_c_unique_ptr_weakable.html#a51172a212695bc5668112397d0bfb431" title="Get weak ptr" alt="" coords="252,5,397,48"/>
+<area shape="poly" title=" " alt="" coords="204,24,236,24,236,29,204,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a76eb8b826e98caa1d6da8bc23b14e918" name="a76eb8b826e98caa1d6da8bc23b14e918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76eb8b826e98caa1d6da8bc23b14e918">&#9670;&#160;</a></span>GetGraphicsLayerRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_graphics_layer_registry.html">CGraphicsLayerRegistry</a> * ACScene::GetGraphicsLayerRegistry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get pointer to the registry class handles graphics components array of each graphics layers </p>
+
+</div>
+</div>
+<a id="a77fc4d8f2dc1fc5709dd2eda2ebf1e45" name="a77fc4d8f2dc1fc5709dd2eda2ebf1e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77fc4d8f2dc1fc5709dd2eda2ebf1e45">&#9670;&#160;</a></span>GetMeshKeyGenerater()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_int_key_generater.html">CIntKeyGenerater</a> * ACScene::GetMeshKeyGenerater </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get key generater class for mesh buffer </p>
+
+</div>
+</div>
+<a id="a3ea89b60daa1235e166659894f15c0fa" name="a3ea89b60daa1235e166659894f15c0fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ea89b60daa1235e166659894f15c0fa">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ACScene::Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processing when switching to this scene </p>
+
+<p><a class="el" href="class_c_test_scene.html#a5b46561318373e0420b6ed7851cc4b56">CTestScene</a>, <a class="el" href="class_c_test_scene2.html#a6e05b5acc18f551e9b9e4ac3f173a480">CTestScene2</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a57089dfb6db3b1b88df5e97f7aebe2b5" name="a57089dfb6db3b1b88df5e97f7aebe2b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57089dfb6db3b1b88df5e97f7aebe2b5">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ACScene::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updating process </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_c_scene_a57089dfb6db3b1b88df5e97f7aebe2b5_cgraph.png" border="0" usemap="#aclass_a_c_scene_a57089dfb6db3b1b88df5e97f7aebe2b5_cgraph" alt=""/></div>
+<map name="aclass_a_c_scene_a57089dfb6db3b1b88df5e97f7aebe2b5_cgraph" id="aclass_a_c_scene_a57089dfb6db3b1b88df5e97f7aebe2b5_cgraph">
+<area shape="rect" title="Updating process" alt="" coords="5,72,131,99"/>
+<area shape="rect" href="class_a_c_singleton.html#a355bd3105e9ca4a74c4c4d8f43d3be0e" title="Get singleton instance" alt="" coords="179,5,382,48"/>
+<area shape="poly" title=" " alt="" coords="118,69,186,50,187,55,120,74"/>
+<area shape="rect" href="class_c_game_object.html#a0df7d53e4dd2cdd453ee04e35e36f89d" title="Process to be called at instance destruction" alt="" coords="194,72,367,99"/>
+<area shape="poly" title=" " alt="" coords="131,83,178,83,178,88,131,88"/>
+<area shape="rect" href="class_c_static_resource_registry.html#aef27c0b157c98f64ae31d2812edeed79" title="Processing when a new scene is created" alt="" coords="197,123,364,165"/>
+<area shape="poly" title=" " alt="" coords="120,97,187,115,186,121,118,102"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="_scene_8h_source.html">Scene.h</a></li>
+<li><a class="el" href="_scene_8cpp.html">Scene.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

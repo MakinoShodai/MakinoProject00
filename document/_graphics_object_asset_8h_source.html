@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Physics_x_AsyncRender: GraphicsObjectAsset.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Physics_x_AsyncRender
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a18a06c85ee29a4133592728e5dbd98.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_7badc3f5e3bf6bd05c1d7f5def061dbe.html">MakinoProject00</a></li><li class="navelem"><a class="el" href="dir_79132286cc0f632e93d5289e24a913da.html">MakinoProject00</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">GraphicsObjectAsset.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_graphics_object_asset_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef __GRAPHICS_OBJECT_ASSET_H__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define __GRAPHICS_OBJECT_ASSET_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_utility_for_direct_x_8h.html">UtilityForDirectX.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_mesh_buffer_8h.html">MeshBuffer.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_texture_8h.html">Texture.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// Forward declaration</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span><a class="code hl_class" href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_graphics_object_asset_8h.html#a2270fc53a002e3e127b4a0b09ef647c9">   20</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_graphics_object_asset_8h.html#a2270fc53a002e3e127b4a0b09ef647c9">CBVWithNamePair</a> = std::pair&lt;Utl::Dx::ShaderString, Utl::Dx::CPU_DESCRIPTOR_HANDLE&gt;;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_c_graphics_object_asset.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_graphics_object_asset.html">CGraphicsObjectAsset</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis</a>&lt;CGraphicsObjectAsset&gt; {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_c_graphics_object_asset.html#afd9bca9dcda2970f1be21c6de70b96bd">   33</a></span>    <a class="code hl_function" href="class_c_graphics_object_asset.html#afd9bca9dcda2970f1be21c6de70b96bd">CGraphicsObjectAsset</a>() : m_meshBufferPtr(nullptr), m_isActive(true) {}</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_c_graphics_object_asset.html#a97dd500e9b5d6f5ce5f028ef6c406959">   38</a></span>    <a class="code hl_function" href="class_c_graphics_object_asset.html#a97dd500e9b5d6f5ce5f028ef6c406959">~CGraphicsObjectAsset</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_object_asset.html#aa761f44bc77b2eaf5f73859096fc765a">AddSRV</a>(<a class="code hl_class" href="class_c_texture.html">CTexture</a> tex);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_object_asset.html#a4917af0ca46ada9bb2aa655d7d082cc3">AddCBV</a>(<a class="code hl_class" href="class_utl_1_1_dx_1_1_shader_string.html">Utl::Dx::ShaderString</a> hlslName, <a class="code hl_struct" href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a> cpuHandle);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_graphics_object_asset.html#a5f230ea3a014049ad788f720c9d2c2ea">AskToAllocateSRV</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a>&amp; gpso, UINT totalNum);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_c_graphics_object_asset.html#af17b9b0d7ce45fd6d94df02ec17b1298">   66</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_object_asset.html#af17b9b0d7ce45fd6d94df02ec17b1298">ClearCBVs</a>() { m_cbvs.clear(); }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_c_graphics_object_asset.html#ac8e03be20b4519b6489b08f1b9126a01">   69</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_object_asset.html#ac8e03be20b4519b6489b08f1b9126a01">SetIsActive</a>(<span class="keywordtype">bool</span> isActive) { m_isActive = isActive; }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_c_graphics_object_asset.html#acc4a8a5286027a5a27031a6f45be1aec">   71</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_graphics_object_asset.html#acc4a8a5286027a5a27031a6f45be1aec">IsActive</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_isActive; }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_c_graphics_object_asset.html#ad6e5f6f9eeff1bcafcf0d02bbe80141d">   73</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_graphics_object_asset.html#ad6e5f6f9eeff1bcafcf0d02bbe80141d">SetMeshBuff</a>(<a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CMeshBuffer&gt;</a> mesh) { m_meshBufferPtr = mesh; }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_c_graphics_object_asset.html#a78b800a751eb2add38ddc44ebdeff8a1">   75</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="class_c_mesh_buffer.html">CMeshBuffer</a>* <a class="code hl_function" href="class_c_graphics_object_asset.html#a78b800a751eb2add38ddc44ebdeff8a1">GetMeshBuff</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_meshBufferPtr.<a class="code hl_function" href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219">Get</a>(); }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_c_graphics_object_asset.html#aec689656f53f82d25a7be6e1afa67604">   77</a></span>    <span class="keyword">const</span> std::vector&lt;CBVWithNamePair&gt;* <a class="code hl_function" href="class_c_graphics_object_asset.html#aec689656f53f82d25a7be6e1afa67604">GetCBVsArray</a>() { <span class="keywordflow">return</span> &amp;m_cbvs; }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">bool</span> m_isActive;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="class_c_weak_ptr.html">CWeakPtr&lt;const CMeshBuffer&gt;</a> m_meshBufferPtr;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    std::vector&lt;CTexture&gt; m_srvs;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    std::vector&lt;CBVWithNamePair&gt; m_cbvs;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif </span><span class="comment">// !__GRAPHICS_OBJECT_ASSET_H__</span></div>
+<div class="ttc" id="a_graphics_object_asset_8h_html_a2270fc53a002e3e127b4a0b09ef647c9"><div class="ttname"><a href="_graphics_object_asset_8h.html#a2270fc53a002e3e127b4a0b09ef647c9">CBVWithNamePair</a></div><div class="ttdeci">std::pair&lt; Utl::Dx::ShaderString, Utl::Dx::CPU_DESCRIPTOR_HANDLE &gt; CBVWithNamePair</div><div class="ttdoc">Pair of handle for constant buffer view and its name in hlsl</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.h:20</div></div>
+<div class="ttc" id="a_mesh_buffer_8h_html"><div class="ttname"><a href="_mesh_buffer_8h.html">MeshBuffer.h</a></div><div class="ttdoc">This file handles vertex and index buffers needed to construct the mesh.</div></div>
+<div class="ttc" id="a_texture_8h_html"><div class="ttname"><a href="_texture_8h.html">Texture.h</a></div><div class="ttdoc">This file handles textures.</div></div>
+<div class="ttc" id="a_utility_for_direct_x_8h_html"><div class="ttname"><a href="_utility_for_direct_x_8h.html">UtilityForDirectX.h</a></div><div class="ttdoc">This file defines utility functions that are useful for DirectX.</div></div>
+<div class="ttc" id="aclass_a_c_weak_ptr_from_this_html"><div class="ttname"><a href="class_a_c_weak_ptr_from_this.html">ACWeakPtrFromThis</a></div><div class="ttdoc">Class inheriting from this class can create WeakPtrs from its instance</div><div class="ttdef"><b>Definition</b> WeakPtr.h:184</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html"><div class="ttname"><a href="class_c_graphics_object_asset.html">CGraphicsObjectAsset</a></div><div class="ttdoc">Asset for graphics object</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.h:28</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html_a4917af0ca46ada9bb2aa655d7d082cc3"><div class="ttname"><a href="class_c_graphics_object_asset.html#a4917af0ca46ada9bb2aa655d7d082cc3">CGraphicsObjectAsset::AddCBV</a></div><div class="ttdeci">void AddCBV(Utl::Dx::ShaderString hlslName, Utl::Dx::CPU_DESCRIPTOR_HANDLE cpuHandle)</div><div class="ttdoc">Add a constant buffer view</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.cpp:11</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html_a5f230ea3a014049ad788f720c9d2c2ea"><div class="ttname"><a href="class_c_graphics_object_asset.html#a5f230ea3a014049ad788f720c9d2c2ea">CGraphicsObjectAsset::AskToAllocateSRV</a></div><div class="ttdeci">bool AskToAllocateSRV(const CGraphicsPipelineState &amp;gpso, UINT totalNum)</div><div class="ttdoc">Ask for SRVs assignment information to be built</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.cpp:16</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html_a78b800a751eb2add38ddc44ebdeff8a1"><div class="ttname"><a href="class_c_graphics_object_asset.html#a78b800a751eb2add38ddc44ebdeff8a1">CGraphicsObjectAsset::GetMeshBuff</a></div><div class="ttdeci">const CMeshBuffer * GetMeshBuff() const</div><div class="ttdoc">Get pointer to vertex buffer</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.h:75</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html_a97dd500e9b5d6f5ce5f028ef6c406959"><div class="ttname"><a href="class_c_graphics_object_asset.html#a97dd500e9b5d6f5ce5f028ef6c406959">CGraphicsObjectAsset::~CGraphicsObjectAsset</a></div><div class="ttdeci">~CGraphicsObjectAsset() override=default</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html_aa761f44bc77b2eaf5f73859096fc765a"><div class="ttname"><a href="class_c_graphics_object_asset.html#aa761f44bc77b2eaf5f73859096fc765a">CGraphicsObjectAsset::AddSRV</a></div><div class="ttdeci">void AddSRV(CTexture tex)</div><div class="ttdoc">Add a shader resource view</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.cpp:6</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html_ac8e03be20b4519b6489b08f1b9126a01"><div class="ttname"><a href="class_c_graphics_object_asset.html#ac8e03be20b4519b6489b08f1b9126a01">CGraphicsObjectAsset::SetIsActive</a></div><div class="ttdeci">void SetIsActive(bool isActive)</div><div class="ttdoc">Set active flag</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.h:69</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html_acc4a8a5286027a5a27031a6f45be1aec"><div class="ttname"><a href="class_c_graphics_object_asset.html#acc4a8a5286027a5a27031a6f45be1aec">CGraphicsObjectAsset::IsActive</a></div><div class="ttdeci">bool IsActive() const</div><div class="ttdoc">Is this asset active?</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.h:71</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html_ad6e5f6f9eeff1bcafcf0d02bbe80141d"><div class="ttname"><a href="class_c_graphics_object_asset.html#ad6e5f6f9eeff1bcafcf0d02bbe80141d">CGraphicsObjectAsset::SetMeshBuff</a></div><div class="ttdeci">void SetMeshBuff(CWeakPtr&lt; const CMeshBuffer &gt; mesh)</div><div class="ttdoc">Set pointer to vertex buffer</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.h:73</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html_aec689656f53f82d25a7be6e1afa67604"><div class="ttname"><a href="class_c_graphics_object_asset.html#aec689656f53f82d25a7be6e1afa67604">CGraphicsObjectAsset::GetCBVsArray</a></div><div class="ttdeci">const std::vector&lt; CBVWithNamePair &gt; * GetCBVsArray()</div><div class="ttdoc">Get constant pointer to SRVs array</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.h:77</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html_af17b9b0d7ce45fd6d94df02ec17b1298"><div class="ttname"><a href="class_c_graphics_object_asset.html#af17b9b0d7ce45fd6d94df02ec17b1298">CGraphicsObjectAsset::ClearCBVs</a></div><div class="ttdeci">void ClearCBVs()</div><div class="ttdoc">Clear all CBVs</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.h:66</div></div>
+<div class="ttc" id="aclass_c_graphics_object_asset_html_afd9bca9dcda2970f1be21c6de70b96bd"><div class="ttname"><a href="class_c_graphics_object_asset.html#afd9bca9dcda2970f1be21c6de70b96bd">CGraphicsObjectAsset::CGraphicsObjectAsset</a></div><div class="ttdeci">CGraphicsObjectAsset()</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition</b> GraphicsObjectAsset.h:33</div></div>
+<div class="ttc" id="aclass_c_graphics_pipeline_state_html"><div class="ttname"><a href="class_c_graphics_pipeline_state.html">CGraphicsPipelineState</a></div><div class="ttdoc">This class handles graphics pipeline state</div><div class="ttdef"><b>Definition</b> GraphicsPipelineState.h:27</div></div>
+<div class="ttc" id="aclass_c_mesh_buffer_html"><div class="ttname"><a href="class_c_mesh_buffer.html">CMeshBuffer</a></div><div class="ttdoc">This class handles, pointers to vertex and index buffers, needed to construct the mesh.</div><div class="ttdef"><b>Definition</b> MeshBuffer.h:21</div></div>
+<div class="ttc" id="aclass_c_texture_html"><div class="ttname"><a href="class_c_texture.html">CTexture</a></div><div class="ttdoc">This class handles something like a reference to a texture and does'nt have an entity</div><div class="ttdef"><b>Definition</b> Texture.h:17</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html"><div class="ttname"><a href="class_c_weak_ptr.html">CWeakPtr</a></div><div class="ttdoc">Pointer handling weak reference to an instance of 'CUniquePtrWeakable' and 'CSharedPtr'</div><div class="ttdef"><b>Definition</b> WeakPtr.h:99</div></div>
+<div class="ttc" id="aclass_c_weak_ptr_html_a5295091a138e45632de0bb5839899219"><div class="ttname"><a href="class_c_weak_ptr.html#a5295091a138e45632de0bb5839899219">CWeakPtr::Get</a></div><div class="ttdeci">InstanceType * Get() const</div><div class="ttdoc">Get instance. If the instance has already been destroyed, return nullptr</div><div class="ttdef"><b>Definition</b> WeakPtr.h:148</div></div>
+<div class="ttc" id="aclass_utl_1_1_dx_1_1_shader_string_html"><div class="ttname"><a href="class_utl_1_1_dx_1_1_shader_string.html">Utl::Dx::ShaderString</a></div><div class="ttdoc">Class with an attribute added to the string indicating which shader</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:187</div></div>
+<div class="ttc" id="astruct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e_html"><div class="ttname"><a href="struct_utl_1_1_dx_1_1_c_p_u___d_e_s_c_r_i_p_t_o_r___h_a_n_d_l_e.html">Utl::Dx::CPU_DESCRIPTOR_HANDLE</a></div><div class="ttdoc">D3D12_CPU_DESCRIPTOR_HANDLE interface</div><div class="ttdef"><b>Definition</b> UtilityForDirectX.h:68</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
