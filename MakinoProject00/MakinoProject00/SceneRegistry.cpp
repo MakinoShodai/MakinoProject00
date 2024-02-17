@@ -423,6 +423,7 @@ bool CSceneRegistry::HierarchyProcess() {
     sceneName[sizeof(sceneName) - 1] = '\0';
     ImGui::Text("Scene Name");
     ImGui::SameLine();
+    ImGui::PushItemWidth(ImGui::CalcTextSize("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX").x);
     ImGui::InputText("##Scene Name", sceneName, IM_ARRAYSIZE(sceneName), INPUT_TEXT_FLAG | ImGuiInputTextFlags_CharsNoBlank, SceneFileSystem::ProhibitedCharacterCallback);
     if (ImGui::IsItemDeactivatedAfterEdit()) {
         std::string afterName = sceneName;
@@ -430,13 +431,24 @@ bool CSceneRegistry::HierarchyProcess() {
             m_name = sceneName;
         }
     }
+    ImGui::PopItemWidth();
+
+    // Get map of rendering pass class
+    const auto& map = ACRegistrarForRenderPassAsset::GetClassMap();
+
+    // Calculate width for the combo box of rendering pass
+    float renderpassComboWidth = 0.0f;
+    for (const auto& it : map) {
+        ImVec2 text_size = ImGui::CalcTextSize(it.first.c_str());
+        renderpassComboWidth = (std::max)(renderpassComboWidth, text_size.x);
+    }
 
     // Render Pass Asset kind
     ImGui::Text("Render Pass Asset");
     ImGui::SameLine();
+    ImGui::SetNextItemWidth(renderpassComboWidth + ImGui::GetFrameHeight() + ImGui::GetStyle().ItemSpacing.x * 2);
     if (ImGui::BeginCombo("##Render Pass Asset", m_renderPassAssetName.c_str())) {
-        // Display prefab class name
-        const auto& map = ACRegistrarForRenderPassAsset::GetClassMap();
+        // Display names of rendering pass class
         for (const auto& it : map) {
             bool isSelected = (it.first == m_renderPassAssetName);
             // If changed
@@ -475,6 +487,7 @@ bool CSceneRegistry::HierarchyProcess() {
         m_hierarchyData.push_back(CObjectHierarchyData(
             FixHierarchyName(nullptr, m_hierarchyData[m_currentSelectedObjectIndex].GetHierarchyName().GetWithIntKey()), 
             m_hierarchyData[m_currentSelectedObjectIndex]));
+        m_currentSelectedObjectIndex = m_hierarchyData.size() - 1;
     }
     ImGui::PopStyleColor();
 
@@ -495,6 +508,9 @@ bool CSceneRegistry::HierarchyProcess() {
     }
     ImGui::PopStyleColor(2);
 
+    ImVec2 objectListTextSize = ImGui::CalcTextSize("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+    ImGui::BeginChild("Object List", ImVec2(objectListTextSize.x, objectListTextSize.y * 25));
+
     // Display objects to hierarchy
     size_t hierarchySize = m_hierarchyData.size();
     for (size_t i = 0; i < hierarchySize; ++i) {
@@ -503,6 +519,8 @@ bool CSceneRegistry::HierarchyProcess() {
             m_isObjectSelected = true;
         }
     }
+
+    ImGui::EndChild();
 
     // Window end
     ImGui::End();
@@ -821,6 +839,7 @@ void CSceneRegistry::DisplayObjectDetails() {
             ImGui::EndCombo();
         }
 
+        ImGui::SetNextItemOpen(true, ImGuiCond_Once);
         if (ImGui::TreeNode("Transform")) {
             // Position
             ImGui::Text("Position");

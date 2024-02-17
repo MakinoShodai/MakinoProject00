@@ -11,6 +11,6 @@ int CRandom::GenerateRange(int min, int max) {
 
 // Constructor
 CRandom::CRandom()
-    : ACSingletonBase(0)
+    : ACMainThreadSingleton(0)
     , m_engine(m_seed_gen())
 { }

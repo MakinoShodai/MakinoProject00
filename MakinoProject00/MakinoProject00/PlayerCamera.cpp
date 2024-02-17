@@ -45,6 +45,8 @@ void CPlayerCameraControl::Start() {
         m_cameraComponent->SetFocus(playerPos + Vector3f(0.0f, FOCUS_OFFSET_Y, 0.0f));
     }
 
+    CInputSystem::GetMain().SetIsRepeatCursorInScreen(true);
+
 #ifdef _DEBUG
     //m_focusPointShapeObj = GetScene()->CreateGameObject<CGameObject>(Transformf(m_cameraComponent->GetFocus(), Vector3f::Ones() * 0.1f, Vector3f::Zero()));
     //m_focusPointShapeObj->AddComponent<CColorOnlyShape>(GraphicsLayer::Transparent, ShapeKind::Sphere, Colorf(1.0f, 0.0f, 0.0f, 0.3f));
