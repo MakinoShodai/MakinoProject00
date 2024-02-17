@@ -11,6 +11,20 @@
 
 namespace Utl {
     /**
+       @brief How many bits are standing?
+       @param b Bits to be checked
+       @return Number of standing bits
+    */
+    UINT CountBits(uint64_t b);
+
+    /**
+       @brief How many bits are standing?
+       @param b Bits to be checked
+       @return Number of standing bits
+    */
+    UINT CountBits(uint32_t b);
+
+    /**
        @brief Bool check of enum class for bit operation
        @param flag Variable to be checked
        @return Result

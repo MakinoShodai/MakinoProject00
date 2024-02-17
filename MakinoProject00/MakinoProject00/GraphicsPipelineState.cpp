@@ -7,6 +7,7 @@
 #include "Scene.h"
 #include "DescriptorHeapPool.h"
 #include "UtilityForException.h"
+#include "UtilityForString.h"
 
 // Constructor
 CGraphicsPipelineState::CGraphicsPipelineState()
@@ -25,21 +26,26 @@ CGraphicsPipelineState::~CGraphicsPipelineState() {
 }
 
 // Create graphics pipeline state
-void CGraphicsPipelineState::Create(ACScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, 
+void CGraphicsPipelineState::Create(CScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, 
     std::initializer_list<GraphicsLayer> useLayers, std::initializer_list<GraphicsComponentType> useTypes) {
     // Pass to function for std::vector
     Create(scene, gpsoName, setting, useLayers, std::vector<GraphicsComponentType>(useTypes.begin(), useTypes.end()));
 }
 
 // Create graphics pipeline state
-void CGraphicsPipelineState::Create(ACScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, 
+void CGraphicsPipelineState::Create(CScene* scene, const std::wstring gpsoName, const Gpso::GPSOSetting& setting, 
     std::initializer_list<GraphicsLayer> useLayers, std::vector<GraphicsComponentType> useTypes) {
     if (m_gpso != nullptr) {
         throw Utl::Error::CFatalError(L"This gpso has been already created!" + gpsoName);
     }
     
+    // If scene is nullptr
+    if (scene == nullptr && (useLayers.size() > 0 || useTypes.size() > 0)) {
+        throw Utl::Error::CFatalError(L"You are trying to do a layer or type specification with GPSO where no scene is specified!" + gpsoName);
+    }
+
     // Initialize variables
-    m_scene = scene->WeakFromThis();
+    m_scene = (scene) ? scene->WeakFromThis() : nullptr;
 #ifdef _DEBUG
     m_gpsoName = gpsoName;
 #endif // _DEBUG
@@ -142,12 +148,19 @@ void CGraphicsPipelineState::Create(ACScene* scene, const std::wstring gpsoName,
     HR_CHECK(L"Create graphics pipeline state object",
         CApplication::GetAny().GetDXDevice()->CreateGraphicsPipelineState(&gpipeline, IID_PPV_ARGS(m_gpso.GetAddressOf())));
 
-    // Send this graphics pipeline state to the scene
-    m_scene->AddGraphicsPipelineStatePointer(this);
+    if (m_scene) {
+        // Send this graphics pipeline state to the scene
+        m_scene->AddGraphicsPipelineStatePointer(this);
+    }
 }
 
 // Set this graphics pipeline state to command list
 void CGraphicsPipelineState::SetCommand() {
+    // If there is no object to draw, do nothing.
+    if ((m_scene && false == m_scene->GetGraphicsLayerRegistry()->CheckExists(m_useLayers, m_useComponentTypes)) && m_externalGraphicsObjectAssets.empty()) {
+        return;
+    }
+
     // Variable declarations
     ID3D12GraphicsCommandList* cmdList = CCommandManager::GetMain().GetGraphicsCmdList();
     CDescriptorHeapPool* pool = &CDescriptorHeapPool::GetMain();
@@ -157,12 +170,6 @@ void CGraphicsPipelineState::SetCommand() {
     // Begin GPSO event
     PIX_BEGIN_EVENT(cmdList, PIX_COLOR_DEFAULT, (L"GPSO Event: " + m_gpsoName).c_str());
 #endif // _DEBUG
-
-    // Transition the state of a current applied depth stencil
-    CDepthStencil* currentAppliedDSV = ACRenderTarget::GetCurrentAppliedDepthStencil();
-    if (currentAppliedDSV != nullptr) {
-        currentAppliedDSV->StateTransition(m_dsvState);
-    }
 
     // Set gpso and root signature
     cmdList->SetPipelineState(m_gpso.Get());
@@ -184,6 +191,11 @@ void CGraphicsPipelineState::SetCommand() {
         if ((*it) == nullptr) {
             m_externalGraphicsObjectAssets.erase(it);
             it--;
+            continue;
+        }
+
+        // Active check
+        if (false == it->Get()->IsActive()) {
             continue;
         }
 
@@ -209,7 +221,7 @@ void CGraphicsPipelineState::SetCommand() {
 
             // If the necessary texture for this GPSO is not found, output a message
             if (!isAllAllocate) {
-                OutputDebugString(L"Warning! The necessary texture for this GPSO is not found\n");
+                throw Utl::Error::CStopDrawingSceneError(L"Warning! The necessary texture for this GPSO is not found\n");
             }
         }
 
@@ -223,9 +235,10 @@ void CGraphicsPipelineState::SetCommand() {
         // Draw object
         else {
             // Associate descriptor heap with root parameter
+            UINT staticTableSize = (UINT)m_staticRootDescriptorTableOffset.size();
             UINT tableSize = (UINT)m_dynamicRootDescriptorTableOffset.size();
             for (UINT i = 0; i < tableSize; ++i) {
-                cmdList->SetGraphicsRootDescriptorTable(m_totalStaticDescRangeNum + i,
+                cmdList->SetGraphicsRootDescriptorTable(staticTableSize + i,
                     pool->GetGPUHandle(m_dynamicRootDescriptorTableOffset[i]));
             }
 
@@ -320,7 +333,7 @@ void CGraphicsPipelineState::BindShaderInfo(ACShader* shader, D3D12_GRAPHICS_PIP
         // If it is not found
         else {
             // Error processing
-            throw Utl::Error::CFatalError(L"The static resource contained in the loaded shader, does not exist.");
+            throw Utl::Error::CFatalError(L"The static resource contained in the loaded shader, does not exist.\n" + Utl::Str::string2WString(it.first));
         }
     }
 
@@ -362,7 +375,7 @@ void CGraphicsPipelineState::BindShaderInfoDynamic(ACShader* shader, D3D12_GRAPH
             // If it is not found
             else {
                 // Error processing
-                throw Utl::Error::CFatalError(L"The constant buffer contained in the loaded shader, does not exist.");
+                throw Utl::Error::CFatalError(L"The constant buffer contained in the loaded shader, does not exist : " + Utl::Str::string2WString(it.first));
             }
         }
             break;
@@ -378,7 +391,7 @@ void CGraphicsPipelineState::BindShaderInfoDynamic(ACShader* shader, D3D12_GRAPH
             // If it is not found
             else {
                 // Error processing
-                throw Utl::Error::CFatalError(L"The constant buffer contained in the loaded shader, does not exist.");
+                throw Utl::Error::CFatalError(L"The constant buffer contained in the loaded shader, does not exist : " + Utl::Str::string2WString(it.first));
             }
         }
             break;

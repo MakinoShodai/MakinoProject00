@@ -41,6 +41,10 @@ public:
     /** @brief Move assignment operator */
     Vector& operator=(Vector&& other) noexcept { if (this != &other) { for (uint8_t i = 0; i < SIZE; ++i) { vals[i] = std::move(other.vals[i]); } } return *this; }
 
+    /** @brief Set from different size */
+    template<uint8_t OTHER_SIZE, Utl::Type::Traits::IsFloatingPoint... Args>
+    void SetFromDiffSize(const Vector<T, OTHER_SIZE>& copy, Args... args);
+
     /** @brief Dot product */
     const T Dot(const Vector& other) const {
         T ret = T(0);
@@ -97,15 +101,18 @@ public:
     /**
        @brief Calculate the angle of rotation from this vector to another vector in 2D, ignoring one axis
        @param v Another vector
-       @return Radian angle
+       @return Radian angle [-Pi, Pi]
        @attention
        Be sure to make both vectors unit vectors.
        No internal normalization is performed to improve computational efficiency.
+       The value of the axis to be ignored must be 0.
     */
     float AngleTo(const Vector& v, uint8_t ignoreAxis) const requires (SIZE == 3);
 
     /** @brief Get pointer to array of elements */
     const T* GetArrayPtr() const { return vals; }
+    /** @brief Get pointer to array of elements */
+    T* GetArrayPtr() { return vals; }
 
     /** @brief Get the first element */
     T& x() { return vals[0]; }
@@ -256,7 +263,7 @@ public:
     Matrix& operator=(const Matrix& copy) { memcpy(&vals[0], &copy.vals[0], ROW * COLUMN * sizeof(T)); return *this; }
 
     /** @brief Get a transpose matrix */
-    Matrix Transpose() {
+    Matrix Transpose() const {
         Matrix ret;
         for (uint8_t i = 0; i < ROW; ++i) {
             for (uint8_t j = 0; j < COLUMN; ++j) {
@@ -290,7 +297,7 @@ public:
     }
 
     /** @brief Product with column vector */
-    const Vector<T, COLUMN> operator*(const Vector<T, COLUMN>& vec) const {
+    const Vector<T, ROW> operator*(const Vector<T, COLUMN>& vec) const {
         Vector<T, ROW> ret;
         for (uint8_t i = 0; i < ROW; ++i) {
             for (uint8_t j = 0; j < COLUMN; ++j) {
@@ -504,6 +511,26 @@ private:
     T vals[4];
 };
 
+// Set from different size
+template<Utl::Type::Traits::IsFloatingPoint T, uint8_t SIZE>
+template<uint8_t OTHER_SIZE, Utl::Type::Traits::IsFloatingPoint... Args>
+void Vector<T, SIZE>::SetFromDiffSize(const Vector<T, OTHER_SIZE>& copy, Args... args) {
+    static_assert(sizeof...(args) <= (SIZE - OTHER_SIZE), "Too many arguments provided to Vector constructor");
+
+    if constexpr (SIZE <= OTHER_SIZE) {
+        for (uint8_t i = 0; i < SIZE; ++i) {
+            vals[i] = copy[i];
+        }
+    }
+    else {
+        uint8_t i = 0;
+        for (; i < OTHER_SIZE; ++i) {
+            vals[i] = copy[i];
+        }
+
+        (..., (vals[i++] = args));
+    }
+}
 
 /** @brief float * Vector operator */
 template<Utl::Type::Traits::IsFloatingPoint T, uint8_t SIZE>
@@ -531,14 +558,26 @@ const Matrix<T, SIZE, SIZE> Vector<T, SIZE>::GetDiagonalMatrix() const {
 template<Utl::Type::Traits::IsFloatingPoint T, uint8_t SIZE>
 float Vector<T, SIZE>::AngleTo(const Vector& v, uint8_t ignoreAxis) const requires(SIZE == 3) {
     // Calculate dot product and cross product
-    T d = Dot(v);
-    Vector c = Cross(v);
+    T d = Utl::Clamp(Dot(v), T(-1), T(1));
 
-    // Convert Pi standard to 2Pi standard
-    if (c[ignoreAxis] < 0.0f)
-        return Utl::GetPI2<T>() - std::acos(d);
-    else
-        return std::acos(d);
+    T epsilon = std::numeric_limits<T>::epsilon();
+    // Vectors are parallel
+    if (std::abs(d - T(1)) < epsilon) {
+        return T(0);
+    }
+    // Vectors are antiparallel
+    else if (std::abs(d + T(1)) < epsilon) {
+        return Utl::GetPI<T>();
+    }
+    // Calculate angle normally
+    else {
+        // Convert [0, Pi] to [-Pi, Pi]
+        Vector c = Cross(v);
+        if (c[ignoreAxis] < T(0))
+            return -std::acos(d);
+        else
+            return std::acos(d);
+    }
 }
 
 // Get a inverse matrix
@@ -625,7 +664,7 @@ Quaternion<T>::Quaternion(T rad, const Vector<T, 3>& axis) {
 
 // Constructor
 template<Utl::Type::Traits::IsFloatingPoint T>
-inline Quaternion<T>::Quaternion(const Vector<T, 3>& eulerAngle) {
+Quaternion<T>::Quaternion(const Vector<T, 3>& eulerAngle) {
     // Prepare variables needed for calculations
     T cosX = std::cos(eulerAngle.x() * Utl::Inv::Get2<T>());
     T sinX = std::sin(eulerAngle.x() * Utl::Inv::Get2<T>());
@@ -709,13 +748,13 @@ const Matrix<T, 3, 3> Quaternion<T>::GetMatrix() const {
     T wz = w() * z();
     // Calculate each components
     mat(0, 0) = T(1) - T(2) * (yy + zz);
-    mat(0, 1) = T(2) * (xy + wz);
-    mat(0, 2) = T(2) * (xz - wy);
-    mat(1, 0) = T(2) * (xy - wz);
+    mat(0, 1) = T(2) * (xy - wz);
+    mat(0, 2) = T(2) * (xz + wy);
+    mat(1, 0) = T(2) * (xy + wz);
     mat(1, 1) = T(1) - T(2) * (xx + zz);
-    mat(1, 2) = T(2) * (yz + wx);
-    mat(2, 0) = T(2) * (xz + wy);
-    mat(2, 1) = T(2) * (yz - wx);
+    mat(1, 2) = T(2) * (yz - wx);
+    mat(2, 0) = T(2) * (xz - wy);
+    mat(2, 1) = T(2) * (yz + wx);
     mat(2, 2) = T(1) - T(2) * (xx + yy);
     return mat;
 }

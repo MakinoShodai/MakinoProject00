@@ -42,6 +42,8 @@ public:
     virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CTexShape* shape, UINT meshIndex) = 0;
     /** @brief Get handle of allocated data in constant buffer */
     virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CColorOnlyShape* shape, UINT meshIndex) = 0;
+    /** @brief Get handle of allocated data in constant buffer */
+    virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE GetAllocatedDataHandle(CDebugColliderShape* shape, UINT meshIndex) = 0;
 
     /**
        @brief Refresh process that must be called at the end of every frame
@@ -77,6 +79,8 @@ protected:
     inline virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CTexShape* shape, UINT meshIndex) { return AllocateData(static_cast<ACGraphicsComponent*>(shape), meshIndex); }
     /** @brief Allocate data calculated for a mesh held by sent color only shape in the constant buffer */
     inline virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CColorOnlyShape* shape, UINT meshIndex) { return AllocateData(static_cast<ACGraphicsComponent*>(shape), meshIndex); }
+    /** @brief Allocate data calculated for a mesh held by sent color only shape in the constant buffer */
+    inline virtual Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CDebugColliderShape* shape, UINT meshIndex) { return AllocateData(static_cast<ACGraphicsComponent*>(shape), meshIndex); }
 };
 
 #endif // !__DYNAMIC_RESOURCE_H__

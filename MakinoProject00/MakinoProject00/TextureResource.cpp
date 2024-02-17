@@ -25,14 +25,14 @@ void CTextureResource::Create(TexLoadResult* loadResult) {
     UINT alignedRowPitch = Utl::Align<UINT>(img->rowPitch, D3D12_TEXTURE_DATA_PITCH_ALIGNMENT);
 
     // Define Mapping function
-    auto mappingFunc = [&](UINT8* mappedBuffer) {
+    auto mappingFunc = [img, alignedRowPitch](UINT8* mappedBuffer) {
         // Copy one line at a time
         for (size_t y = 0; y < img->height; ++y) {
             // Calculate the starting address of the copy source
             UINT8* srcAddress = img->pixels + y * img->rowPitch;
             // Calculate the starting address of the copy desination
             UINT8* destAddress = mappedBuffer + y * alignedRowPitch;
-            std::copy_n(srcAddress, alignedRowPitch, destAddress);
+            std::copy_n(srcAddress, img->rowPitch, destAddress);
         }
     };
 

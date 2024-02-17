@@ -14,12 +14,18 @@
 #include <tchar.h>
 #include <string>
 #include <fstream>
+#include <array>
+#include <deque>
+#include <regex>
+#include <set>
 #include <Windows.h>
 #include <wrl.h>
+#include <functional>
 #include <d3d12.h>
 #include <dxgi1_6.h>
 #include <DirectXMath.h>
 #include <DirectXTex/DirectXTex.h>
+#include <d3d12shader.h>
 #include <shlobj.h>
 #include <strsafe.h>
 #include <random>
@@ -33,6 +39,10 @@
 #include "assimp/Importer.hpp"
 #include "assimp/scene.h"
 #include "assimp/postprocess.h"
+#define IMGUI_DEFINE_MATH_OPERATORS
+#include "imgui/imgui.h"
+#include "imgui/imgui_impl_dx12.h"
+#include "imgui/imgui_impl_win32.h"
 
 #ifdef _DEBUG
 #include "pix3.h"

@@ -1,6 +1,15 @@
 ﻿#include "CameraRegistry.h"
 #include "Application.h"
 
+// Processing at the end of the update process
+void CCameraRegistry::EndUpdate() {
+    // Apply the rotation to look direction vector
+    for (auto& it : m_cameras) {
+        if (it == nullptr) { continue; }
+        it->ApplyRotation();
+    }
+}
+
 // Get a camera with highest priority
 CWeakPtr<CCameraComponent> CCameraRegistry::GetCameraPriority() const {
     int highestPriority = Utl::Limit::INT_LOWEST;
@@ -8,6 +17,8 @@ CWeakPtr<CCameraComponent> CCameraRegistry::GetCameraPriority() const {
 
     // Find the camera with highest priority
     for (auto& it : m_cameras) {
+        if (it == nullptr) { continue; }
+
         if (highestPriority < it->GetPriority()) {
             ret = it;
             highestPriority = it->GetPriority();
@@ -23,6 +34,7 @@ CWeakPtr<CCameraComponent> CCameraRegistry::GetCameraPriority() const {
 CWeakPtr<CCameraComponent> CCameraRegistry::GetCameraName(const std::wstring& name) const {
     // Find the camera with highest priority
     for (auto& it : m_cameras) {
+        if (it == nullptr) { continue; }
         if (name == it->GetName()) {
             return it;
         }
@@ -37,5 +49,16 @@ CWeakPtr<CCameraComponent> CCameraRegistry::GetCameraName(const std::wstring& na
 void CCameraRegistry::AddCamera(CCameraComponent* camera) {
     if (camera != nullptr) {
         m_cameras.push_back(camera->WeakFromThis());
+    }
+}
+
+// Remove a camera from the registry
+void CCameraRegistry::RemoveCamera(CCameraComponent* camera) {
+    if (camera != nullptr) {
+        auto it = std::find_if(m_cameras.begin(), m_cameras.end(), 
+            [camera](const CWeakPtr<CCameraComponent>& element) { return element == camera; });
+        if (it != m_cameras.end()) {
+            m_cameras.erase(it);
+        }
     }
 }

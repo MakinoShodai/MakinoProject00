@@ -17,4 +17,7 @@ void CDescriptorHeap::Create(D3D12_DESCRIPTOR_HEAP_TYPE type, D3D12_DESCRIPTOR_H
     // Get handles for descriptor heap
     m_cpuHandle = m_descriptorHeap->GetCPUDescriptorHandleForHeapStart();
     m_gpuHandle = m_descriptorHeap->GetGPUDescriptorHandleForHeapStart();
+
+    // Set type of descriptor heap
+    m_heapType = type;
 }

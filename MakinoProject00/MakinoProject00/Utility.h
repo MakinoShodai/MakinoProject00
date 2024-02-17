@@ -54,6 +54,27 @@ namespace Utl {
     template<Type::Traits::IsFloatingPoint T>
     T GetRAD_2_DEG() { if constexpr (std::is_same_v<T, float>) return RAD_2_DEG; if constexpr (std::is_same_v<T, double>) return RAD_2_DEGd; }
 
+    /** @brief Helper structure for functions that convert values between input and output ranges */
+    struct ConversionRangeParameter {
+        /** @brief Minimum value of input value */
+        float inMin;
+        /** @brief Maximum value of input value */
+        float inMax;
+        /** @brief Minimum value of output value */
+        float outMin;
+        /** @brief Maximum value of output value */
+        float outMax;
+
+        /**
+           @brief Constructor
+           @param inMin Minimum value of input value
+           @param inMax Maximum value of input value
+           @param outMin Minimum value of output value
+           @param outMin Maximum value of output value
+        */
+        ConversionRangeParameter(float inMin, float inMax, float outMin, float outMax);
+    };
+
     /**
        @brief
        @tparam RetType the type of return variable. Integer type only
@@ -68,6 +89,16 @@ namespace Utl {
     RetType Align(T size, RetType alignment) {
         return ((RetType)size + (alignment - 1)) & ~(alignment - 1);
     }
+
+    /**
+       @brief Converts radian values in the range [-Pi, Pi] to [0, 2Pi]
+    */
+    const float ConvertTo0To2Pi(float rad);
+
+    /**
+       @brief Converts radian values in the range [0, 2Pi] to [-Pi, Pi]
+    */
+    const float ConvertToPlusMinusPi(float rad);
 
     /**
        @brief Check if the value of Float is equal to 0
@@ -91,7 +122,8 @@ namespace Utl {
        @param max Maximum value
        @return Clamped value
     */
-    const float Clamp(const float val, const float min, const float max);
+    template<Type::Traits::IsFloatingPoint T>
+    const T Clamp(const T val, const T min, const T max);
 
     /**
        @brief Convert value, which is the value of inMin ～ inMax, to outMin ～ outMax
@@ -100,14 +132,43 @@ namespace Utl {
        @param inMax Maximum value of input value
        @param outMin Minimum value of output value
        @param outMin Maximum value of output value
+       @return Converted value
     */
-    const float ConversionValue(float value, float inMin, float inMax, float outMin, float outMax);
+    const float ConversionValueInRange(float value, float inMin, float inMax, float outMin, float outMax);
+
+    /**
+       @brief Convert value, which is the value of inMin ～ inMax, to outMin ～ outMax
+       @param value Value to be converted
+       @param range Helper structure with input and output ranges
+       @return Converted value
+    */
+    const float ConversionValueInRange(float value, const ConversionRangeParameter& range);
+
+    /**
+       @brief Linear interpolation from A to B
+       @param a Start value
+       @param b End value
+       @param t Parameter
+    */
+    float Lerp(float a, float b, float t);
 
     /**
        @brief Get value sign
        @param value Value for which the sign is to be got
     */
     int Sign(float value);
+
+    /**
+       @brief Function to call repeatedly to generate hash values from multiple variables
+       @param seed Variable to store the seed value
+       @param v Variable used for hash value generation
+       @details
+       Same process as hash_combine function in boost library
+    */
+    template <typename T>
+    void HashCombine(std::size_t* seed, const T& v) {
+        *seed ^= std::hash<T>()(v) + 0x9e3779b9 + (*seed << 6) + (*seed >> 2);
+    }
 
     /** @brief Class to check if it is the main thread */
     class CMainThreadChecker {
@@ -157,6 +218,10 @@ namespace Utl {
     namespace Limit {
         /** @brief Int lowest value */
         constexpr int INT_LOWEST = (std::numeric_limits<int>::lowest)();
+        /** @brief float lowest value */
+        constexpr float FLAOT_LOWEST = (std::numeric_limits<float>::lowest)();
+        /** @brief float highest value */
+        constexpr float FLAOT_HIGHEST = (std::numeric_limits<float>::max)();
     }
 
     /** @brief Value used for geometric calculations */
@@ -166,5 +231,14 @@ namespace Utl {
     } // namespace Geo
 
 } // namespace Utl
+
+// Clamp a value in min to max
+template<Utl::Type::Traits::IsFloatingPoint T>
+const T Utl::Clamp(const T val, const T min, const T max) {
+    return // Clamp a value in max
+        (val > max) ? max :
+        // Clamp a value in min
+        (val < min) ? min : val;
+}
 
 #endif // !__UTILITY_H__

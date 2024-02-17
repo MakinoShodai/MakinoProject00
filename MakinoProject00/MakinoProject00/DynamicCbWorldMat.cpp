@@ -2,6 +2,7 @@
 #include "GraphicsComponent.h"
 #include "GameObject.h"
 #include "RenderTarget.h"
+#include "Scene.h"
 
 // Sprite coordinate system magnification
 float SPRITE_COORDINATE_SYSTEM_MAGNIFICATION = 1.0f / SPRITE_SCREEN_BOUNDARY;
@@ -36,6 +37,22 @@ void CalculateSpriteScale(ACSprite* sprite, const Transformf& transform, Vector2
         pos->x() = transform.pos.x() * SPRITE_COORDINATE_SYSTEM_MAGNIFICATION * halfRtvWidth;
         pos->y() = transform.pos.y() * SPRITE_COORDINATE_SYSTEM_MAGNIFICATION * halfRtvHeight;
     }
+}
+
+// Allocate data for no component
+Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicCbWorldMat::AllocateDataNoComponent(Vector3f pos, Vector3f scale, Quaternionf rotation) {
+    // Get the transform of the game object and Set its quaternion to a XMVECTORF32
+    DirectX::XMVECTORF32 quaternion = { rotation.x(), rotation.y(), rotation.z(), rotation.w() };
+
+    // Calculate a world matrix
+    DirectX::XMFLOAT4X4 mat;
+    DirectX::XMStoreFloat4x4(&mat,
+        DirectX::XMMatrixScaling(scale.x(), scale.y(), scale.z()) *
+        DirectX::XMMatrixRotationQuaternion(quaternion) *
+        DirectX::XMMatrixTranslation(pos.x(), pos.y(), pos.z())
+    );
+
+    return DirectDataCopy(&mat);
 }
 
 // World matrix
@@ -92,6 +109,80 @@ Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicCbWorldMat::AllocateData(CSprite3D* sprit
         DirectX::XMMatrixScaling(scaleX, transform.scale.y(), transform.scale.z()) *
         DirectX::XMMatrixRotationQuaternion(quaternion) *
         DirectX::XMMatrixTranslation(transform.pos.x(), transform.pos.y(), transform.pos.z())
+    );
+
+    return DirectDataCopy(&mat);
+}
+
+// Allocate data for billboard
+Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicCbWorldMat::AllocateData(CBillboard* billboard) {
+    auto camera = billboard->GetGameObj()->GetScene()->GetCameraRegistry()->GetCameraPriority();
+    if (camera) {
+        // Get the transform of the game object
+        const Transformf& transform = billboard->GetGameObj()->GetTransform();
+
+        // Calculate sprite scale according to resolution
+        float scaleX = transform.scale.x() * billboard->GetResolutionRatio();
+
+        // Calculate a world matrix
+        DirectX::XMFLOAT4X4 mat;
+        DirectX::XMStoreFloat4x4(&mat,
+            DirectX::XMMatrixScaling(scaleX, transform.scale.y(), transform.scale.z()) *
+            camera->GetRotationMatrix() *
+            DirectX::XMMatrixTranslation(transform.pos.x(), transform.pos.y(), transform.pos.z())
+        );
+
+        return DirectDataCopy(&mat);
+    }
+
+    throw Utl::Error::CStopDrawingSceneError(L"Warning! Couldn't get the camera from the scene.\n");
+}
+
+// Allocate data for debugging collider shape
+Utl::Dx::CPU_DESCRIPTOR_HANDLE CDynamicCbWorldMat::AllocateData(CDebugColliderShape* shape) {
+    // Calculate the position and scale associated with the collider
+    Vector3f pos;
+    Vector3f scale;
+    switch (shape->GetKind()) {
+    // Sphere
+    case ShapeKind::Sphere:
+    {
+        CSphereCollider3D* sphere = dynamic_cast<CSphereCollider3D*>(shape->GetCollider().Get());
+        pos = sphere->GetCenter();
+        scale = (sphere->GetScalingRadius() * 2.0f) * Vector3f::Ones();
+    }
+        break;
+    // Capsule
+    case ShapeKind::Capsule:
+    {
+        CCapsuleCollider3D* capsule = dynamic_cast<CCapsuleCollider3D*>(shape->GetCollider().Get());
+        pos = capsule->GetCenter();
+        scale.z() = scale.x() = capsule->GetScalingRadius() * 2.0f;
+        scale.y() = capsule->GetHeight();
+    }
+        break;
+    // Box
+    case ShapeKind::Box:
+    {
+        CBoxCollider3D* box = dynamic_cast<CBoxCollider3D*>(shape->GetCollider().Get());
+        pos = box->GetCenter();
+        scale = box->GetScalingSize();
+    }
+        break;
+    default:
+        throw Utl::Error::CFatalError(L"Non-existent graphic type is sent to the collider");
+    }
+
+    // Set gameobject's quaternion to a XMVECTORF32
+    const Quaternionf& rotation = shape->GetGameObj()->GetTransform().rotation;
+    DirectX::XMVECTORF32 quaternion = { rotation.x(), rotation.y(), rotation.z(), rotation.w() };
+
+    // Calculate a world matrix
+    DirectX::XMFLOAT4X4 mat;
+    DirectX::XMStoreFloat4x4(&mat,
+        DirectX::XMMatrixScaling(scale.x(), scale.y(), scale.z()) *
+        DirectX::XMMatrixRotationQuaternion(quaternion) *
+        DirectX::XMMatrixTranslation(pos.x(), pos.y(), pos.z())
     );
 
     return DirectDataCopy(&mat);

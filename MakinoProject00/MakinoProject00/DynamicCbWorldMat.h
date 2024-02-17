@@ -22,6 +22,15 @@ class CDynamicCbWorldMat : public ACDynamicCbAllocator<DirectX::XMFLOAT4X4> {
 public:
     CDynamicCbWorldMat(UINT maxUsePerFrame) : ACDynamicCbAllocator(maxUsePerFrame, "WorldMat") {}
 
+    /**
+       @brief Allocate data for no component
+       @param pos Position
+       @param scale Scale
+       @param rotation Rotation
+       @return Handle for CPU
+    */
+    Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateDataNoComponent(Vector3f pos, Vector3f scale, Quaternionf rotation);
+
 protected:
     /** @brief Allocate data */
     Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(ACGraphicsComponent* component);
@@ -30,6 +39,10 @@ protected:
     Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CSpriteUI* sprite);
     /** @brief Allocate data for sprite 3D */
     Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CSprite3D* sprite);
+    /** @brief Allocate data for billboard */
+    Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CBillboard* billboard);
+    /** @brief Allocate data for debugging collider shape */
+    Utl::Dx::CPU_DESCRIPTOR_HANDLE AllocateData(CDebugColliderShape* shape);
 };
 
 #endif // !__DYNAMIC_CB_WORLD_MAT_H__

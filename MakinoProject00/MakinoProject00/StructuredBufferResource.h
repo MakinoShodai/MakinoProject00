@@ -136,7 +136,7 @@ inline void CStructuredBufferResource<T>::DataCopy(const T* src, UINT copyNum, U
         memcpy(m_mappedBuffer + offset * (UINT64)m_typeSize, src, (UINT64)m_typeSize * copyNum);
     }
     else {
-        OutputDebugString(L"Warning! Structured buffer you tried to copy, is being unmapped!\n");
+        throw Utl::Error::CStopDrawingSceneError(L"Warning! Structured buffer you tried to copy, is being unmapped!\n");
     }
 }
 

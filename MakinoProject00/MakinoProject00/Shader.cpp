@@ -150,6 +150,7 @@ void ACShader::SetSampler(std::initializer_list<SamplerTransmitter> settings) {
             // Bind to the sampler and flag it as existing because same name existed in the samplers being hold
             Gpso::BindSamplerState(&it.sampler, setting.setting, Utl::Dx::ConvertShaderType2ShaderVisibility(m_shaderType), it.slotNum, it.spaceNum);
             isExist = true;
+            break;
         }
 
         // If it is not exist
@@ -165,11 +166,12 @@ void ACShader::AddDescriptorRange(const D3D12_SHADER_INPUT_BIND_DESC& bindDesc, 
     std::unordered_map<std::string, ShaderResourceInfo>* nameToInfoMap = nullptr;
 
     // Change variable depending on whether the resource is static or dynamic
-    if (Utl::Str::CheckSuffixChar(bindDesc.Name, RESOURCE_SUFFIX_DYNAMIC)) {
+    std::string name = bindDesc.Name;
+    if (CheckAndRemoveSuffix(&name, RESOURCE_SUFFIX_DYNAMIC)) {
         descriptorRanges = &m_dynamicDescriptorRanges;
         nameToInfoMap = &m_dynamicNameToInfoMap;
     }
-    else if (Utl::Str::CheckSuffixChar(bindDesc.Name, RESOURCE_SUFFIX_STATIC)) {
+    else if (CheckAndRemoveSuffix(&name, RESOURCE_SUFFIX_STATIC)) {
         descriptorRanges = &m_staticDescriptorRanges;
         nameToInfoMap = &m_staticNameToInfoMap;
     }
@@ -189,8 +191,31 @@ void ACShader::AddDescriptorRange(const D3D12_SHADER_INPUT_BIND_DESC& bindDesc, 
     descRange.OffsetInDescriptorsFromTableStart = D3D12_DESCRIPTOR_RANGE_OFFSET_APPEND; // Automatic offset determination
 
     // Set descriptor range name and its index to static map
-    size_t strLength = strlen(bindDesc.Name);
-    nameToInfoMap->emplace(std::string(bindDesc.Name, strLength - 2), ShaderResourceInfo(bindDesc.Type, (UINT)descriptorRanges->size() - 1));
+    nameToInfoMap->emplace(name, ShaderResourceInfo(bindDesc.Type, (UINT)descriptorRanges->size() - 1));
+}
+
+// Check and remove suffix
+bool ACShader::CheckAndRemoveSuffix(std::string* str, const std::string& suffix) {
+    if (str->length() >= suffix.length()) {
+        std::string copy = *str;
+
+        if (copy.back() == ']') {
+            size_t pos = copy.rfind('[');
+            if (pos != std::string::npos) {
+                copy.erase(pos);
+            }
+        }
+
+        size_t copySize = copy.size();
+        size_t suffixSize = suffix.size();
+        if (copySize >= suffixSize &&
+            copy.compare(copySize - suffixSize, suffixSize, suffix) == 0) {
+            str->erase(copySize - suffixSize, suffixSize);
+            return true;
+        }
+    }
+
+    return false;
 }
 
 // Destructor

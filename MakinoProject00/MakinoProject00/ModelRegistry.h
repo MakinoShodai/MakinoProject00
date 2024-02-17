@@ -60,6 +60,21 @@ public:
     void AddModelLoadDesc(const std::wstring& filePath, ModelInfo::Load::ModelDesc loadDesc);
 
     /**
+       @brief Add the additional texture of model
+       @param modelFilePath Path of model file
+       @param srcTexPath Texture file path of the source to be added
+       @param additionalTex Additional texture
+    */
+    void AddModelAdditionalTex(const std::wstring& modelFilePath, const std::wstring& srcTexPath, ModelInfo::Load::AdditionalModelTex additionalTex);
+
+    /**
+       @brief Add a texture of the material to be forced in the transparent layer
+       @param modelFilePath Path of model file
+       @param transparentTexPath Path of basic texture file of the material to be forced in the transparent layer
+    */
+    void AddModelTransparentTex(const std::wstring& modelFilePath, const std::wstring& transparentTexPath);
+
+    /**
        @brief Add descriptor to load animation
        @param filePath Path of model file
        @param loadDesc Descriptor to load animation
@@ -88,11 +103,18 @@ public:
            If the model with specified path doesn't exist in the map, throw fatal exception
         */
         const CStaticModelData& GetModel(const std::wstring& filePath);
+
+        /**
+           @brief Get ID of a loaded animation
+           @param filePath Path of animation file
+           @return ID of a loaded animation
+        */
+        const ModelInfo::AnimID GetAnimID(const std::wstring& filePath);
     };
 
     /** @brief Get feature for thread-safe */
     inline static CThreadSafeFeature& GetAny() {
-        static CThreadSafeFeature instance(&GetProtected());
+        static CThreadSafeFeature instance(GetProtected().Get());
         return instance;
     }
 
@@ -100,12 +122,7 @@ protected:
     /**
        @brief Constructor
     */
-    CModelRegistry() : ACMainThreadSingleton(-10) {}
-
-    /**
-       @brief Process to be called at instance creation
-    */
-    void OnCreate() override;
+    CModelRegistry();
 
     /**
        @brief Extract relevant part from sent path

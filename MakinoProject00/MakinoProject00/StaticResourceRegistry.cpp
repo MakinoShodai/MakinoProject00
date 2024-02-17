@@ -1,15 +1,27 @@
 ﻿#include "StaticResourceRegistry.h"
 #include "StaticCbVPMat.h"
 #include "StaticCbOrthographicMat.h"
+#include "StaticSrvShadowMap.h"
+#include "StaticCbLightVPMat.h"
+#include "StaticCbDirLightParam.h"
+#include "StaticSbPointLights.h"
 
 // Initialize
 void CStaticResourceRegistry::Initialize() {
-    EmplaceCbAllocator<CStaticCbVP>();
-    EmplaceCbAllocator<CStaticCbOrthographicMat>();
+    EmplaceStaticAllocator<CStaticCbVP>();
+    EmplaceStaticAllocator<CStaticCbRemovePosVP>();
+    EmplaceStaticAllocator<CStaticCbDirLightParam>();
+    EmplaceStaticAllocator<CStaticCbLightVP>();
+    EmplaceStaticAllocator<CStaticCbOrthographicMat>();
+    EmplaceStaticAllocator<CStaticCbOrthographicViewProjMat>();
+    EmplaceStaticAllocator<CStaticSrvShadowMap1>();
+    EmplaceStaticAllocator<CStaticSrvShadowMap2>();
+    EmplaceStaticAllocator<CStaticSrvShadowMap3>();
+    EmplaceStaticAllocator<CStaticSbPointLights>();
 }
 
 // Processing when a new scene is created
-void CStaticResourceRegistry::SceneStart(ACScene* scene) {
+void CStaticResourceRegistry::SceneStart(CScene* scene) {
     for (auto& it : m_staticResources) {
         it->Start(scene);
     }

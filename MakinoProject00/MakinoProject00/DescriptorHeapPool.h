@@ -41,6 +41,11 @@ public:
     void ReadyToDraw();
 
     /**
+       @brief Set current descriptor heap to command list
+    */
+    void SetCurrentDescriptorHeapToCommand();
+
+    /**
        @brief Get CPU handle for descriptor heap
        @param offset Offset after the currently used region in a descriptor heap
        @return CPU handle

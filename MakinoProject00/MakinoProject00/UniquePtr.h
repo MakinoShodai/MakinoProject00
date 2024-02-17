@@ -86,29 +86,22 @@ public:
     inline static CUniquePtrWeakable<T> Make(size_t size) requires std::is_array_v<T>;
 
     /** @brief Get instance */
-    inline InstanceType* Get() { return m_instance; }
-    /** @brief Get instance */
-    inline const InstanceType* Get() const { return m_instance; }
+    inline InstanceType* Get() const { return m_instance; }
     /** @brief Get weak ptr */
-    inline CWeakPtr<T> GetWeakPtr() { return CWeakPtr<T>(m_refCount); }
-    /** @brief Get weak ptr */
-    inline const CWeakPtr<T> GetWeakPtr() const { return CWeakPtr<T>(m_refCount); }
+    inline CWeakPtr<T> GetWeakPtr() const { return CWeakPtr<T>(m_refCount); }
 
     /** @brief Instance reference operator */
-    inline InstanceType* operator->() { return m_instance; }
-    /** @brief Instance reference operator */
-    inline const InstanceType* operator->() const { return m_instance; }
+    inline InstanceType* operator->() const { return m_instance; }
 
     /** @brief Operator for array */
-    InstanceType& operator[](size_t index) requires std::is_array_v<T> { return m_instance[index]; }
-    /** @brief Operator for array */
-    const InstanceType& operator[](size_t index) const requires std::is_array_v<T> { return m_instance[index]; }
-
+    InstanceType& operator[](size_t index) const requires std::is_array_v<T> { return m_instance[index]; }
     /** @brief Dereference operator */
-    InstanceType& operator*() { assert(m_instance != nullptr); return *m_instance; }
-    /** @brief Dereference operator */
-    const InstanceType& operator*() const { assert(m_instance != nullptr); return *m_instance; }
+    InstanceType& operator*() const { assert(m_instance != nullptr); return *m_instance; }
 
+    /** @brief Comparison operator */
+    bool operator==(const InstanceType* instance) const { return m_instance == instance; }
+    /** @brief Comparison operator */
+    bool operator!=(const InstanceType* instance) const { return m_instance != instance; }
     /** @brief Comparison operator */
     bool operator==(const CUniquePtrWeakable& other) const { return m_instance == other.m_instance; }
     /** @brief Comparison operator */
@@ -309,6 +302,12 @@ public:
     void Reset(InstanceType* instance = nullptr);
 
     /**
+       @brief Swap ownership
+       @param other Unique pointer that has ownership to be swapped
+    */
+    void Swap(CUniquePtr& other);
+
+    /**
        @brief Make unique pointer
        @tparam Args Instance constructor arguments
 
@@ -324,24 +323,19 @@ public:
     inline static CUniquePtr<T> Make(size_t size) requires std::is_array_v<T> { return CUniquePtr<T>(new CUniquePtr<T>::InstanceType[size]); }
 
     /** @brief Get instance */
-    inline InstanceType* Get() { return m_instance; }
-    /** @brief Get instance */
-    inline const InstanceType* Get() const { return m_instance; }
+    inline InstanceType* Get() const { return m_instance; }
     /** @brief Instance reference operator */
-    inline InstanceType* operator->() { return m_instance; }
-    /** @brief Instance reference operator */
-    inline const InstanceType* operator->() const { return m_instance; }
+    inline InstanceType* operator->() const { return m_instance; }
 
     /** @brief Operator for array */
-    InstanceType& operator[](size_t index) requires std::is_array_v<T> { return m_instance[index]; }
-    /** @brief Operator for array */
-    const InstanceType& operator[](size_t index) const requires std::is_array_v<T> { return m_instance[index]; }
-
+    InstanceType& operator[](size_t index) const requires std::is_array_v<T> { return m_instance[index]; }
     /** @brief Dereference operator */
-    InstanceType& operator*() { assert(m_instance != nullptr); return *m_instance; }
-    /** @brief Dereference operator */
-    const InstanceType& operator*() const { assert(m_instance != nullptr); return *m_instance; }
+    InstanceType& operator*() const { assert(m_instance != nullptr); return *m_instance; }
 
+    /** @brief Comparison operator */
+    bool operator==(const InstanceType* instance) const { return m_instance == instance; }
+    /** @brief Comparison operator */
+    bool operator!=(const InstanceType* instance) const { return m_instance != instance; }
     /** @brief Comparison operator */
     bool operator==(const CUniquePtr& other) const { return m_instance == other.m_instance; }
     /** @brief Comparison operator */
@@ -426,6 +420,14 @@ void CUniquePtr<T>::Reset(InstanceType* instance) {
 
     // Set new instance
     m_instance = instance;
+}
+
+// Swap ownership
+template<class T>
+void CUniquePtr<T>::Swap(CUniquePtr& other) {
+    InstanceType* myInstance = m_instance;
+    m_instance = other.m_instance;
+    other.m_instance = myInstance;
 }
 
 #endif // !__UNIQUE_PTR_H__

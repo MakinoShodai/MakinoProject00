@@ -102,7 +102,25 @@ bool CModelRegistry::LoadAnimPak(const std::wstring& filePath) {
 // Add descriptor to load model
 void CModelRegistry::AddModelLoadDesc(const std::wstring& filePath, ModelInfo::Load::ModelDesc loadDesc) {
     if (m_modelLoadDescs == nullptr) { throw Utl::Error::CFatalError(L"All models have already been loaded"); }
+    auto it = m_modelLoadDescs->find(filePath);
+    if (it != m_modelLoadDescs->end()) {
+        throw Utl::Error::CFatalError(L"The model descriptor is already created");
+    }
+
     m_modelLoadDescs->emplace(filePath, std::move(loadDesc));
+}
+
+// Add the additional texture of model
+void CModelRegistry::AddModelAdditionalTex(const std::wstring& modelFilePath, const std::wstring& srcTexPath, ModelInfo::Load::AdditionalModelTex additionalTex) {
+    if (m_modelLoadDescs == nullptr) { throw Utl::Error::CFatalError(L"All models have already been loaded"); }
+    ModelInfo::Load::ModelDesc& desc = (*m_modelLoadDescs)[modelFilePath];
+    desc.additionalTex[srcTexPath].push_back(additionalTex);
+}
+
+// Add a texture of the material to be forced in the transparent layer
+void CModelRegistry::AddModelTransparentTex(const std::wstring& modelFilePath, const std::wstring& transparentTexPath) {
+    if (m_modelLoadDescs == nullptr) { throw Utl::Error::CFatalError(L"All models have already been loaded"); }
+    (*m_modelLoadDescs)[modelFilePath].transparentTex.insert(transparentTexPath);
 }
 
 // Add descriptor to load animation
@@ -131,8 +149,20 @@ const CStaticModelData& CModelRegistry::CThreadSafeFeature::GetModel(const std::
     }
 }
 
-// Process to be called at instance creation
-void CModelRegistry::OnCreate() {
+// Get ID of a loaded animation
+const ModelInfo::AnimID CModelRegistry::CThreadSafeFeature::GetAnimID(const std::wstring& filePath) {
+    auto it = m_owner->m_loadedAnimIDMap.find(filePath);
+    if (it != m_owner->m_loadedAnimIDMap.end()) {
+        return it->second;
+    }
+    else {
+        throw Utl::Error::CFatalError(L"The animation for specified path doesn't exist in the map! path : " + filePath);
+    }
+}
+
+// Constructor
+CModelRegistry::CModelRegistry()
+    : ACMainThreadSingleton(-10) {
     m_modelLoadDescs = CUniquePtr<std::unordered_map<std::wstring, ModelInfo::Load::ModelDesc>>::Make();
     m_animLoadDescs = CUniquePtr<std::unordered_map<std::wstring, ModelInfo::Load::AnimDesc>>::Make();
     m_animInterpolationMap = CUniquePtr<std::map<std::wstring, ForMakeAnimToAnimData>>::Make();

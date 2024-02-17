@@ -32,8 +32,9 @@ public:
 
     /**
        @brief Initialize
+       @param fps Frame per seconds
     */
-    void Initialize();
+    void Initialize(double fps);
 
     /**
        @brief Set sleep mode of the application
@@ -41,22 +42,49 @@ public:
     */
     void SleepApplication(bool isSleep);
 
-    /** @brief Get elapsed time from prev frame */
-    double GetDeltaTime() { return m_deltaTime; }
+    /**
+       @brief Set frame per seconds
+       @param fps Frame per seconds
+    */
+    void SetFPS(double fps) { m_frameTime = 1 / fps; }
 
+    /**
+       @brief Get the delta time appropriate for the timing of the call to this function
+       @return Delta time
+    */
+    float GetAppropriateDeltaTime();
+
+    /** @brief Get elapsed time from prev frame */
+    float GetDeltaTime() { return m_deltaTime; }
+
+    /** @brief Feature for thread-safe */
+    class CThreadSafeFeature : public ACInnerClass<CAppClock> {
+    public:
+        // Friend declaration
+        using ACInnerClass<CAppClock>::ACInnerClass;
+
+        /** @brief Get time per frame */
+        float GetFrameTime() { return (float)m_owner->m_frameTime; }
+    };
+
+    /** @brief Get feature for thread-safe */
+    inline static CThreadSafeFeature& GetAny() {
+        static CThreadSafeFeature instance(GetProtected().Get());
+        return instance;
+    }
 protected:
     /**
        @brief Constructor
     */
-    CAppClock() : ACMainThreadSingleton(0), m_deltaTime(0.0), m_frameTime(0.0), m_isSleep(false) {}
+    CAppClock() : ACMainThreadSingleton(0), m_deltaTime(0.0f), m_frameTime(0.0), m_isSleep(false) {}
 
 private:
     /** @brief Time of prev frame */
     std::optional<Seconds> m_prevTime;
     /** @brief Elapsed time from prev frame */
-    double m_deltaTime;
+    float m_deltaTime;
     /** @brief Time per frame */
-    double m_frameTime;
+    std::atomic<double> m_frameTime;
     /** @brief Sleep the application? */
     bool m_isSleep;
 };

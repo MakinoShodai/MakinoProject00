@@ -151,8 +151,7 @@ Utl::Dx::CPU_DESCRIPTOR_HANDLE ACCbAllocator<ConstBuffType>::GetPrevAllocatedDat
 
     // If the index in the dynamic array has just been updated, retrieve using the previous index
     if (m_currentOffset == 0) {
-        OutputDebugString(L"Warning! Trying to get previous data in constant buffer without allocating data.\n");
-        return Utl::Dx::CPU_DESCRIPTOR_HANDLE();
+        throw Utl::Error::CStopDrawingSceneError(L"Warning! Trying to get previous data in constant buffer without allocating data.\n");
     }
 
     // Get previous data

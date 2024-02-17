@@ -25,6 +25,8 @@ float4 main(INPUT input) : SV_TARGET {
 #else
     float4 color = changeColor.color;
 #endif // _USE_TEX
-
+    
+    clip(color.a - 0.001f);
+    
     return color;
 }

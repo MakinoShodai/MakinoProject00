@@ -37,6 +37,8 @@ enum class GraphicsComponentType {
     TexShape,
     /** @brief Color only shape */
     ColorShape,
+    /** @brief Shape for debugging collider */
+    DebugColliderShape,
 };
 
 /** @brief Key for mesh buffer */
@@ -50,11 +52,30 @@ struct MeshWrapperForGraphics {
     MeshKey key;
 };
 
+/** @brief Numeric part of the material for mesh that graphics component has */
+struct PerMeshMaterialNumeric {
+    /** @brief Specular shininess */
+    float shininess;
+    /** @brief Specular coefficient */
+    float shininessScale;
+
+    /** @brief Constructor */
+    PerMeshMaterialNumeric(float shininess = 1.0f, float shininessScale = 0.0f) : shininess(shininess), shininessScale(shininessScale) {}
+};
+
+/** @brief Material for mesh that graphics component has */
+struct PerMeshMaterial {
+    /** @brief Numeric part of this material */
+    PerMeshMaterialNumeric numeric;
+    /** @brief Texture of this material */
+    CUniquePtr<CUniquePtr<CTexture>[]> texture;
+    
+    /** @brief Constructor */
+    PerMeshMaterial() : numeric(), texture(nullptr) {}
+};
+
 /** @brief Abstract class of component of graphics */
 class ACGraphicsComponent {
-    /** @brief Array of unique pointers to texture */
-    using UniquePtrTextureArray = CUniquePtr<CUniquePtr<CTexture>[]>;
-
 public:
     /**
        @brief Constructor
@@ -70,14 +91,30 @@ public:
     virtual ~ACGraphicsComponent();
 
     /**
+       @brief Processing when this component is added to an object
+    */
+    void Awake();
+
+    /**
        @brief Processing for the first draw frame
     */
-    void Start();
+    virtual void Start();
 
     /**
        @brief Pre drawing processing
     */
     virtual void PreDraw() {}
+
+    /**
+       @brief Process to be called at instance destruction
+    */
+    virtual void OnDestroy();
+
+    /**
+       @brief Drawing conditions set in derived classes
+       @return Can this graphcis component draw?
+    */
+    inline virtual bool IsDrawCondition() { return true; }
 
     /**
        @brief Ask for textures assignment information to be built
@@ -94,10 +131,30 @@ public:
     */
     void SetLayer(GraphicsLayer layer);
 
+    /** @brief Set active flag */
+    void SetIsActive(bool isActive) { m_isActive = isActive; }
+    /** @brief Is this graphics component itself active? */
+    inline virtual bool IsActiveSelf() const { return m_isActive; }
+    /** @brief Is this graphics component itself and the game object that owns it active? */
+    virtual bool IsActiveOverall() const;
+
     /** @brief Set color */
     void SetColor(const Colorf& color) { m_color = color; }
     /** @brief Get color */
-    const Colorf& GetColor() { return m_color; }
+    virtual const Colorf& GetColor() const { return m_color; }
+
+    /**
+       @brief Set numeric part of the material to all meshes
+       @param numeric Numeric part of the material
+    */
+    void SetNumericMaterialToAllMesh(const PerMeshMaterialNumeric& numeric);
+
+    /**
+       @brief Get numeric part of the material
+       @param meshIndex Index of all meshes
+       @return Pointer to the material
+    */
+    const PerMeshMaterialNumeric& GetMaterialNumeric(UINT meshIndex) { return m_materials[meshIndex].numeric; }
 
     /** @brief Get type of this graphics component */
     const GraphicsComponentType GetType() { return m_type; }
@@ -111,14 +168,20 @@ public:
     MeshKey GetMeshKey(UINT meshIndex) { return m_meshWrappers[meshIndex].key; }
     /** @brief Get the number of all meshes */
     UINT GetMeshNum() { return m_meshWrappers.Size(); }
+    /** @brief Set uv tiling */
+    void SetUVTiling(const Vector2f& tiling) { m_texCoordParam.x() = tiling.x(); m_texCoordParam.y() = tiling.y(); }
+    /** @brief Set uv offset */
+    void SetUVOffset(const Vector2f& offset) { m_texCoordParam.z() = offset.x(); m_texCoordParam.w() = offset.y(); }
+    /** @brief Get parameter for texture coordinate (xy = tiling, zw = offset) */
+    const Vector4f& GetTexCoordParam() { return m_texCoordParam; }
 
 protected:
     /**
-       @brief Prepare arrays of the meshes and its textures
+       @brief Prepare arrays of the meshes and its materials
        @param meshNum The number of all meshes
-       @param texNumPerMesh The number of textures per mesh
+       @param texIndexPerMesh The number of textures per mesh
     */
-    void InitializeMesh(UINT meshNum, UINT texNumPerMesh);
+    void InitializeMesh(UINT meshNum, UINT texIndexPerMesh);
 
     /**
        @brief Set mesh information
@@ -135,7 +198,15 @@ protected:
        @param texIndexPerMesh Index of textures per mesh
        @param tex Texture to use
     */
-    void SetTexture(UINT meshIndex, UINT texIndexPerMesh, CTexture tex) { m_textures[meshIndex][texIndexPerMesh] = CUniquePtr<CTexture>::Make(std::move(tex)); }
+    void SetTexture(UINT meshIndex, UINT texIndexPerMesh, CTexture tex) { m_materials[meshIndex].texture[texIndexPerMesh] = CUniquePtr<CTexture>::Make(std::move(tex)); }
+
+    /**
+       @brief Set numeric part of the material
+       @param meshIndex Index of all meshes
+       @param numeric Numeric part of the material
+       @return Pointer to the material
+    */
+    void SetNumericPartMaterial(UINT meshIndex, PerMeshMaterialNumeric numeric) { m_materials[meshIndex].numeric = std::move(numeric); }
 
     /**
        @brief Get texture
@@ -143,7 +214,7 @@ protected:
        @param texIndexPerMesh Index of textures per mesh
        @return Pointer to the texture
     */
-    CTexture* GetTexture(UINT meshIndex, UINT texIndexPerMesh) { return m_textures[meshIndex][texIndexPerMesh].Get(); }
+    CTexture* GetTexture(UINT meshIndex, UINT texIndexPerMesh) { return m_materials[meshIndex].texture[texIndexPerMesh].Get(); }
 
 protected:
     /** @brief Game object that is the owner of this graphics component */
@@ -154,15 +225,20 @@ protected:
 private:
     /** @brief Type of this graphics component */
     const GraphicsComponentType m_type;
+    /** @brief Is this graphics component active? */
+    bool m_isActive;
+
     /** @brief Array of mesh buffers */
     CArrayUniquePtr<MeshWrapperForGraphics> m_meshWrappers;
-    /** @brief Array of textures to be used per mesh */
-    CUniquePtr<UniquePtrTextureArray[]> m_textures;
-    /** @brief The number of textures per mesh */
-    UINT m_texNumPerMesh;
+    /** @brief Array of materials to be used per mesh */
+    CUniquePtr<PerMeshMaterial[]> m_materials;
+    /** @brief The number of materials per mesh */
+    UINT m_matNumPerMesh;
 
-    /** @brief Color */
+    /** @brief Color of this graphics component */
     Colorf m_color;
+    /** @brief parameter for texture coordinate (xy = tiling, zw = offset) */
+    Vector4f m_texCoordParam;
 };
 
 #endif // !__GRAPHICS_COMPONENT_H__

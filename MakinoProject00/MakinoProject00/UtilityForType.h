@@ -30,12 +30,14 @@ namespace Utl {
 
 
             /**
-               @brief std::is_base_of and std::remove_extent 
+               @brief std::is_base_of and std::remove_extent and not the same type
                @tparam Base Base class type
                @tparam Derived Derived class type
             */
             template<class Base, class Derived>
-            concept IsBaseOfRemoveExtent = std::is_base_of<typename std::remove_extent<Base>::type, typename std::remove_extent<Derived>::type>::value;
+            concept IsBaseOfRemoveExtentNotSame 
+                = std::is_base_of<typename std::remove_extent<Base>::type, typename std::remove_extent<Derived>::type>::value
+                && std::is_same_v<Base, Derived>;
         }
 
         /** @brief Type trait checking */

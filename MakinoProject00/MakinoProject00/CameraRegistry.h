@@ -24,6 +24,11 @@ public:
     ~CCameraRegistry() = default;
 
     /**
+       @brief Processing at the end of the update process
+    */
+    void EndUpdate();
+
+    /**
        @brief Get a camera with highest priority
        @return Weak pointer to camera component
     */
@@ -41,6 +46,12 @@ public:
        @param camera Camera to be added
     */
     void AddCamera(CCameraComponent* camera);
+
+    /**
+       @brief Remove a camera from the registry
+       @param camera Camera to be removed
+    */
+    void RemoveCamera(CCameraComponent* camera);
 
 private:
     /** @brief All cameras in a scene */

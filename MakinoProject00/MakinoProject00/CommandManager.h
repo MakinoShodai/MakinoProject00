@@ -50,6 +50,22 @@ public:
     */
     void UnsafeGraphicsCommandsExecute();
 
+    /**
+       @brief Clear the current command list
+    */
+    void ClearCurrentCommandList();
+
+    /**
+       @brief Secure command queues and command lists
+    */
+    void SecureCommands();
+
+    /**
+       @brief Add the state controller of the resource with the resource barrier command to the current command list
+       @param controller The state controller of the resource
+    */
+    void AddResStateController(CWeakPtr<Utl::Dx::ResStateController> controller) { m_resStateControllers.push_back(controller); }
+
     /** @brief Get command queue */
     ID3D12CommandQueue* GetCommandQueue() { return m_cmdQueue.Get(); }
     /** @brief Get command list for graphics */
@@ -75,7 +91,7 @@ public:
 
     /** @brief Get feature for thread-safe */
     inline static CThreadSafeFeature& GetAny() {
-        static CThreadSafeFeature instance(&GetProtected());
+        static CThreadSafeFeature instance(GetProtected().Get());
         return instance;
     }
 
@@ -97,6 +113,8 @@ private:
     Microsoft::WRL::ComPtr<ID3D12CommandAllocator> m_graphicsCmdAllocator[SCREEN_BUFFERING_NUM];
     /** @brief Command list for graphics */
     Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList> m_graphicsCmdList[SCREEN_BUFFERING_NUM];
+    /** @brief Resource state controllers with state barrier command set in current graphics command list */
+    std::vector<CWeakPtr<Utl::Dx::ResStateController>> m_resStateControllers;
 };
 
 #ifdef _DEBUG

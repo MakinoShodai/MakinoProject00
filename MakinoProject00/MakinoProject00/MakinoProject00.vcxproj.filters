@@ -94,14 +94,8 @@
     <Filter Include="ヘッダー ファイル\Framework\Standard">
       <UniqueIdentifier>{20698230-7090-488f-b8dd-0ed55dabb09d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル\Framework\Standard\StandardComponent">
-      <UniqueIdentifier>{8f128ec5-3249-4053-8e90-63c16e86d249}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Framework\Standard">
       <UniqueIdentifier>{4e66886c-c582-4902-ae96-e3065ecaab27}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Framework\Standard\StandardComponent">
-      <UniqueIdentifier>{4e4a9f34-453d-4f22-af22-31a17c6a2c1a}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\Framework\Graphics\Resource">
       <UniqueIdentifier>{71ca4d56-7867-49c5-ad32-e8a70157335d}</UniqueIdentifier>
@@ -114,12 +108,6 @@
     </Filter>
     <Filter Include="ヘッダー ファイル\Framework\Graphics\Resource\Mesh">
       <UniqueIdentifier>{5b3a3b35-eefe-4bc4-ba0b-f09acfa76793}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Framework\Standard\StandardResource">
-      <UniqueIdentifier>{c3f725d3-7fa7-4b94-b75e-c9683c37cabb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Framework\Standard\StandardResource">
-      <UniqueIdentifier>{96eec525-14a7-49c3-ba2f-f5c67977d73e}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\Crypter">
       <UniqueIdentifier>{eee714cd-0263-4da4-95e5-b527fcf94022}</UniqueIdentifier>
@@ -150,6 +138,114 @@
     </Filter>
     <Filter Include="リソース ファイル\Resource">
       <UniqueIdentifier>{a3f35066-9196-4eae-99ed-68eb22d8339e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Standard\Component">
+      <UniqueIdentifier>{8f128ec5-3249-4053-8e90-63c16e86d249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Standard\Resource">
+      <UniqueIdentifier>{c3f725d3-7fa7-4b94-b75e-c9683c37cabb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Standard\Component">
+      <UniqueIdentifier>{4e4a9f34-453d-4f22-af22-31a17c6a2c1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Standard\Resource">
+      <UniqueIdentifier>{96eec525-14a7-49c3-ba2f-f5c67977d73e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Standard\GPSO">
+      <UniqueIdentifier>{a953010d-504f-43e0-8efa-1f8edf93eba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Standard\GPSO">
+      <UniqueIdentifier>{b3347a93-cb42-4c4c-95ed-8093d78eecd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Sample">
+      <UniqueIdentifier>{66b9eaeb-ae8b-4b21-975f-ec3db1af7cb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Sample">
+      <UniqueIdentifier>{3e6f8b27-a4b6-4d87-94c0-0db6e1e6c7c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\PhysicsEngine">
+      <UniqueIdentifier>{b3e18572-f3fc-4310-bf86-924479e00d10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\PhysicsEngine\CollisionAlgorithm">
+      <UniqueIdentifier>{8cc1423f-8f9c-4d78-bfba-ea218413262a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\PhysicsEngine\BV">
+      <UniqueIdentifier>{675e22d1-0402-494a-9d61-13289e6dc890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\PhysicsEngine\Engine">
+      <UniqueIdentifier>{7dec2c9f-266b-4d15-bdd8-8da6f91b2d00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Setting">
+      <UniqueIdentifier>{c1ae6cc9-88eb-4688-867d-c164df44bbba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\Setting">
+      <UniqueIdentifier>{439706cc-bb5e-48e5-a68f-1c82782c135a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Physics">
+      <UniqueIdentifier>{fdd72efa-8410-4733-b45d-7a548d4978ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Physics\CollisionAlgorithm">
+      <UniqueIdentifier>{d79855c4-aa5c-4fbc-90d4-6b82c26a5bcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Physics\BV">
+      <UniqueIdentifier>{9c4ec6fc-dda2-4bc5-abad-755ca7a01f51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Physics\Engine">
+      <UniqueIdentifier>{18f5a1aa-114a-4bb1-b5f2-b3b486590fdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\Player">
+      <UniqueIdentifier>{8d01ca90-e30b-4376-a5a7-568823aab609}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Player">
+      <UniqueIdentifier>{7606e5d3-e3b4-45e4-ba00-deb815641eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Camera">
+      <UniqueIdentifier>{2c728a0f-e6ba-464d-a4a8-8b4c759118cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\Camera">
+      <UniqueIdentifier>{2f0cc2f8-b675-4146-a3ac-5fb9364e9014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\VertexShader\LightPosWorldPos">
+      <UniqueIdentifier>{f4dcbef0-cf24-4c24-b789-b5053d8d71ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\Shadow">
+      <UniqueIdentifier>{9609682a-228d-411b-be51-451781a87715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Shadow">
+      <UniqueIdentifier>{77453c6f-dd78-4339-ab81-a184b3022ce1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PixelShader\DepthWrite">
+      <UniqueIdentifier>{9f8797b5-7c70-472b-a019-5acb8eec84f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\VertexShader\LightVP">
+      <UniqueIdentifier>{66839765-3748-4594-a6e7-9f092a87aa83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\imgui">
+      <UniqueIdentifier>{d8d5491e-fa68-4887-b1dd-88eaf4b85603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\imgui">
+      <UniqueIdentifier>{98f0b488-f5e1-473b-bac6-df259f589a32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Framework\Standard\RenderPass">
+      <UniqueIdentifier>{a86da532-3637-4a69-ae5a-91c2bd80f767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Framework\Standard\RenderPass">
+      <UniqueIdentifier>{6aa1e60a-82d2-4050-bf34-234d70e5a063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\Environment">
+      <UniqueIdentifier>{32fa2057-be59-4522-b995-f18d064e1562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Environment">
+      <UniqueIdentifier>{4b948dca-f7c7-4dcb-8e0e-5fd048236a40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PixelShader\Shading">
+      <UniqueIdentifier>{2725d695-6887-4026-8dbb-7ef8ddfbd206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\PhysicsSample">
+      <UniqueIdentifier>{6972791c-25be-427c-b252-311c46ac45de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\PhysicsSample">
+      <UniqueIdentifier>{0c751879-024c-418f-835a-264d4714d6c7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -247,22 +343,22 @@
       <Filter>ソース ファイル\Framework\SystemDesign</Filter>
     </ClCompile>
     <ClCompile Include="StaticCbVPMat.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
     </ClCompile>
     <ClCompile Include="DynamicCbWorldMat.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
     </ClCompile>
     <ClCompile Include="CameraRegistry.cpp">
       <Filter>ソース ファイル\Framework\SystemDesign</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
     </ClCompile>
     <ClCompile Include="StaticCbOrthographicMat.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
     </ClCompile>
     <ClCompile Include="SceneRegistry.cpp">
       <Filter>ソース ファイル\Framework\SystemDesign</Filter>
@@ -280,7 +376,7 @@
       <Filter>ソース ファイル\Framework\Graphics\Registry</Filter>
     </ClCompile>
     <ClCompile Include="DynamicSbAnimMat.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
     </ClCompile>
     <ClCompile Include="DynamicSbRegistry.cpp">
       <Filter>ソース ファイル\Framework\Graphics\Registry</Filter>
@@ -325,16 +421,217 @@
       <Filter>ソース ファイル\Framework\Graphics\Registry</Filter>
     </ClCompile>
     <ClCompile Include="Model.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
     </ClCompile>
     <ClCompile Include="LoadedModelInfo.cpp">
       <Filter>ソース ファイル\Framework\Graphics\Generic</Filter>
     </ClCompile>
     <ClCompile Include="Shape.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
     </ClCompile>
     <ClCompile Include="DynamicCbColor.cpp">
-      <Filter>ソース ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="StandardGPSOWrapper.cpp">
+      <Filter>ソース ファイル\Framework\Standard\GPSO</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelLoadSetting.cpp">
+      <Filter>ソース ファイル\Game\Setting</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeCamera.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider3D.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CapsuleCollider3D.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBody.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereCollider3D.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionAlgorithm.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\CollisionAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionAlgorithmBoxBox.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\CollisionAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionAlgorithmBoxSphere.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\CollisionAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionAlgorithmCapsuleCapsule.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\CollisionAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionAlgorithmSphereSphere.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\CollisionAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="BoudingVolume.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\BV</Filter>
+    </ClCompile>
+    <ClCompile Include="BVNode.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\BV</Filter>
+    </ClCompile>
+    <ClCompile Include="BVOverlapPair.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\BV</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicBVTree.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\BV</Filter>
+    </ClCompile>
+    <ClCompile Include="GJKAlgorithm.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\CollisionAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="ColliderWrapper.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstraintSolverDirector.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="SolverConstraint.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulationBody.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider3D.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsWorld.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityForBit.cpp">
+      <Filter>ソース ファイル\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityForComplexCalculations.cpp">
+      <Filter>ソース ファイル\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="ScenePhase.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="TagSetting.cpp">
+      <Filter>ソース ファイル\Game\Setting</Filter>
+    </ClCompile>
+    <ClCompile Include="ColliderTag.cpp">
+      <Filter>ソース ファイル\Game\Setting</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactColliderList.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactPoint.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactPointMap.cpp">
+      <Filter>ソース ファイル\Framework\PhysicsEngine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerPrefab.cpp">
+      <Filter>ソース ファイル\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugCamera.cpp">
+      <Filter>ソース ファイル\Game\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerControlComponent.cpp">
+      <Filter>ソース ファイル\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAnimControlComponent.cpp">
+      <Filter>ソース ファイル\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCamera.cpp">
+      <Filter>ソース ファイル\Game\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticCbLightVPMat.cpp">
+      <Filter>ソース ファイル\Game\Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowGPSOWrapper.cpp">
+      <Filter>ソース ファイル\Game\Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticCbDirLightParam.cpp">
+      <Filter>ソース ファイル\Game\Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticSrvAllocator.cpp">
+      <Filter>ソース ファイル\Framework\Graphics\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicCbMaterial.cpp">
+      <Filter>ソース ファイル\Game\Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="LightRegistry.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLight.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionalLight.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticSbPointLights.cpp">
+      <Filter>ソース ファイル\Game\Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_demo.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx12.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_win32.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImguiHelper.cpp">
+      <Filter>ソース ファイル\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="StandardRenderPass.cpp">
+      <Filter>ソース ファイル\Framework\Standard\RenderPass</Filter>
+    </ClCompile>
+    <ClCompile Include="SamplePrefab.cpp">
+      <Filter>ソース ファイル\Framework\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityForFile.cpp">
+      <Filter>ソース ファイル\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneFileSystem.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderPassAsset.cpp">
+      <Filter>ソース ファイル\Framework\SystemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLightPrefab.cpp">
+      <Filter>ソース ファイル\Framework\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="StonePrefab.cpp">
+      <Filter>ソース ファイル\Game\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="Ruins.cpp">
+      <Filter>ソース ファイル\Game\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>ソース ファイル\Game\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyDome.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicCbTexCoordParam.cpp">
+      <Filter>ソース ファイル\Framework\Standard\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Trees.cpp">
+      <Filter>ソース ファイル\Game\Environment</Filter>
+    </ClCompile>
+    <ClCompile Include="PistonMachine.cpp">
+      <Filter>ソース ファイル\Game\PhysicsSample</Filter>
+    </ClCompile>
+    <ClCompile Include="ForPhysicsObjects.cpp">
+      <Filter>ソース ファイル\Game\PhysicsSample</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -356,6 +653,33 @@
     <FxCompile Include="VS_Standard3DSprite.hlsl">
       <Filter>リソース ファイル\VertexShader\Standard</Filter>
     </FxCompile>
+    <FxCompile Include="VS_LightPosWorldPos3D.hlsl">
+      <Filter>リソース ファイル\VertexShader\LightPosWorldPos</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_LightPosWorldPos3DAnim.hlsl">
+      <Filter>リソース ファイル\VertexShader\LightPosWorldPos</Filter>
+    </FxCompile>
+    <FxCompile Include="PS_DepthWrite.hlsl">
+      <Filter>リソース ファイル\PixelShader\DepthWrite</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_LightVP3D.hlsl">
+      <Filter>リソース ファイル\VertexShader\LightVP</Filter>
+    </FxCompile>
+    <FxCompile Include="PS_ShadingTex.hlsl">
+      <Filter>リソース ファイル\PixelShader\Shading</Filter>
+    </FxCompile>
+    <FxCompile Include="PS_ShadingColorOnly.hlsl">
+      <Filter>リソース ファイル\PixelShader\Shading</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_LightVP3DAnim.hlsl">
+      <Filter>リソース ファイル\VertexShader\LightVP</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_StandardRemovePos3D.hlsl">
+      <Filter>リソース ファイル\VertexShader\Standard</Filter>
+    </FxCompile>
+    <FxCompile Include="VS_LightVPOutUV3D.hlsl">
+      <Filter>リソース ファイル\VertexShader\LightVP</Filter>
+    </FxCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
@@ -369,6 +693,12 @@
     </None>
     <None Include="CommonResources.hlsli">
       <Filter>リソース ファイル\Resource</Filter>
+    </None>
+    <None Include="VSi_LightVP.hlsli">
+      <Filter>リソース ファイル\VertexShader\LightVP</Filter>
+    </None>
+    <None Include="PSi_Shading.hlsli">
+      <Filter>リソース ファイル\PixelShader\Shading</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -487,25 +817,25 @@
       <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
     </ClInclude>
     <ClInclude Include="StaticCbVPMat.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
     </ClInclude>
     <ClInclude Include="DynamicCbWorldMat.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
     </ClInclude>
     <ClInclude Include="CameraRegistry.h">
       <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
     </ClInclude>
     <ClInclude Include="Sprite.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
     </ClInclude>
     <ClInclude Include="DynamicCbAllocator.h">
       <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ConstantBuffer</Filter>
     </ClInclude>
     <ClInclude Include="StaticCbOrthographicMat.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
     </ClInclude>
     <ClInclude Include="SceneRegistry.h">
       <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
@@ -553,7 +883,7 @@
       <Filter>ヘッダー ファイル\Framework\Graphics\Resource</Filter>
     </ClInclude>
     <ClInclude Include="DynamicSbAnimMat.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
     </ClInclude>
     <ClInclude Include="DynamicSbRegistry.h">
       <Filter>ヘッダー ファイル\Framework\Graphics\Registry</Filter>
@@ -601,16 +931,238 @@
       <Filter>ヘッダー ファイル\Framework\Utility</Filter>
     </ClInclude>
     <ClInclude Include="Model.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
     </ClInclude>
     <ClInclude Include="LoadedModelInfo.h">
       <Filter>ヘッダー ファイル\Framework\Graphics\Generic</Filter>
     </ClInclude>
     <ClInclude Include="DynamicCbColor.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardResource</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
     </ClInclude>
     <ClInclude Include="Shape.h">
-      <Filter>ヘッダー ファイル\Framework\Standard\StandardComponent</Filter>
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="StandardGPSOWrapper.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\GPSO</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetNameDefine.h">
+      <Filter>ヘッダー ファイル\Game\Setting</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelLoadSetting.h">
+      <Filter>ヘッダー ファイル\Game\Setting</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityForDebug.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="FreeCamera.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityForComplexCalculations.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="TagSetting.h">
+      <Filter>ヘッダー ファイル\Game\Setting</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionAlgorithm.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\CollisionAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionAlgorithmBoxBox.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\CollisionAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionAlgorithmBoxSphere.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\CollisionAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionAlgorithmCapsuleCapsule.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\CollisionAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionAlgorithmSphereSphere.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\CollisionAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="GJKAlgorithm.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\CollisionAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="BoudingVolume.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\BV</Filter>
+    </ClInclude>
+    <ClInclude Include="BVNode.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\BV</Filter>
+    </ClInclude>
+    <ClInclude Include="BVOverlapPair.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\BV</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicBVTree.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\BV</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider3D.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="CapsuleCollider3D.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBody.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereCollider3D.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider3D.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ColliderWrapper.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstraintSolverDirector.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ContactColliderList.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ContactPoint.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ContactPointMap.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsWorld.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="SolverConstraint.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulationBody.h">
+      <Filter>ヘッダー ファイル\Framework\Physics\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ColliderTag.h">
+      <Filter>ヘッダー ファイル\Game\Setting</Filter>
+    </ClInclude>
+    <ClInclude Include="ScenePhase.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="IDResource.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerPrefab.h">
+      <Filter>ヘッダー ファイル\Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateMode.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="Easing.h">
+      <Filter>ヘッダー ファイル\Framework\Useful</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugCamera.h">
+      <Filter>ヘッダー ファイル\Game\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCamera.h">
+      <Filter>ヘッダー ファイル\Game\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAnimControlComponent.h">
+      <Filter>ヘッダー ファイル\Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerControlComponent.h">
+      <Filter>ヘッダー ファイル\Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticSrvShadowMap.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticSrvAllocator.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource\ShaderResource</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticCbLightVPMat.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowGPSOWrapper.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticCbDirLightParam.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicCbMaterial.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="LightRegistry.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLight.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticSbAllocator.h">
+      <Filter>ヘッダー ファイル\Framework\Graphics\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticSbPointLights.h">
+      <Filter>ヘッダー ファイル\Game\Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx12.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_win32.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImguiHelper.h">
+      <Filter>ヘッダー ファイル\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityForFile.h">
+      <Filter>ヘッダー ファイル\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="StandardRenderPass.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\RenderPass</Filter>
+    </ClInclude>
+    <ClInclude Include="SamplePrefab.h">
+      <Filter>ヘッダー ファイル\Framework\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderPassAsset.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneFileSystem.h">
+      <Filter>ヘッダー ファイル\Framework\SystemDesign</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLightPrefab.h">
+      <Filter>ヘッダー ファイル\Framework\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyDome.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionalLight.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="StonePrefab.h">
+      <Filter>ヘッダー ファイル\Game\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="Ruins.h">
+      <Filter>ヘッダー ファイル\Game\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>ヘッダー ファイル\Game\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicCbTexCoordParam.h">
+      <Filter>ヘッダー ファイル\Framework\Standard\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Trees.h">
+      <Filter>ヘッダー ファイル\Game\Environment</Filter>
+    </ClInclude>
+    <ClInclude Include="PistonMachine.h">
+      <Filter>ヘッダー ファイル\Game\PhysicsSample</Filter>
+    </ClInclude>
+    <ClInclude Include="ForPhysicsObjects.h">
+      <Filter>ヘッダー ファイル\Game\PhysicsSample</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -70,7 +70,7 @@ public:
     CLayeredGPSOWrapper();
 
     /** @brief Destructor */
-    virtual ~CLayeredGPSOWrapper() = default;
+    ~CLayeredGPSOWrapper() = default;
 
     /**
        @brief Create graphics pipeline states
@@ -79,7 +79,7 @@ public:
        @param setting Graphics pipeline state setting
        @param useLayer Layers handled by this GPSO (Draw in the order passed)
     */
-    void Create(ACScene* scene, const std::wstring gpsoName, const LayeredGPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers);
+    virtual void Create(CScene* scene, const std::wstring gpsoName, const LayeredGPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers);
 
     /**
        @brief Call 'SetCommand' function from GPSOs wrapped this class
@@ -99,6 +99,21 @@ private:
     /** @brief The name of this gpso wrapper. Used for debbuging */
     std::wstring m_name;
 #endif // _DEBUG
+};
+
+/** @brief Abstract class for prefab of CLayeredGPSOWrapper */
+class ACLayeredGPSOWrapperPrefab : public CLayeredGPSOWrapper {
+public:
+    /**
+       @brief Function for creating a prefab of a gpso wrapper
+       @param scene The scene where this GPSO exists
+    */
+    virtual void Prefab(CScene* scene) = 0;
+
+    /**
+       @brief Function that do nothing to avoid accidental calls from the outside
+    */
+    void Create(CScene* scene, const std::wstring gpsoName, const LayeredGPSOSetting& setting, std::initializer_list<GraphicsLayer> useLayers) override;
 };
 
 #endif // !__LAYERED_GPSO_WRAPPER_H__

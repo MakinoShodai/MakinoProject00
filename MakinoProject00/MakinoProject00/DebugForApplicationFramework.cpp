@@ -55,7 +55,6 @@ void Dbg::LoadMicrosoftPixDLL() {
 
     // If the path of Pix has not been found, exit
     if (!foundDirectory) {
-        // # TODO: Error processing
         return;
     }
 

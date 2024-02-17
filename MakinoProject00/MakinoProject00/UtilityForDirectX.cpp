@@ -56,8 +56,20 @@ void Utl::Dx::ResStateController::StateTransition(D3D12_RESOURCE_STATES state) {
 
     // Transition resource state
     Utl::Dx::RESOURCE_BARRIER barrier(m_resource, m_currentState, state);
-    CCommandManager::GetMain().GetGraphicsCmdList()->ResourceBarrier(1, &barrier);
+    CCommandManager& command = CCommandManager::GetMain();
+    command.GetGraphicsCmdList()->ResourceBarrier(1, &barrier);
+    command.AddResStateController(WeakFromThis());
     m_currentState = state;
+}
+
+// Determine the exact current resource state on the GPU
+void Utl::Dx::ResStateController::ApplyCurrentStateOnGpu() {
+    m_currentStateOnGpu = m_currentState;
+}
+
+// Modify the current resource state to the resource state on the gpu
+void Utl::Dx::ResStateController::ModifyToCurrentStateOnGpu() {
+    m_currentState = m_currentStateOnGpu;
 }
 
 // Constructor

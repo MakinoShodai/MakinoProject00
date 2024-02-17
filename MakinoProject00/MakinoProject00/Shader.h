@@ -9,7 +9,6 @@
 #ifndef __SHADER_H__
 #define __SHADER_H__
 
-#include <d3d12shader.h>
 #include "Application.h"
 #include "GraphicsPipelineElements.h"
 #include "UtilityForDirectX.h"
@@ -121,6 +120,16 @@ private:
        @param rangeType Range type of the descriptor range to be added
     */
     void AddDescriptorRange(const D3D12_SHADER_INPUT_BIND_DESC& bindDesc, D3D12_DESCRIPTOR_RANGE_TYPE rangeType);
+
+    /**
+       @brief Check and remove suffix
+       @param str String to be checked
+       @param suffix Suffix
+       @return Did it contain a suffix?
+       @details
+       Ignore array specifiers to determine
+    */
+    bool CheckAndRemoveSuffix(std::string* str, const std::string& suffix);
 
 protected:
     /** @brief Shader type */

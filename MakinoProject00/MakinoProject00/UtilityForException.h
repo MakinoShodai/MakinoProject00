@@ -28,6 +28,22 @@ namespace Utl {
             std::wstring m_message;
         };
 
+        /** @brief Exception to stop drawing the scene */
+        class CStopDrawingSceneError : public std::exception {
+        public:
+            /**
+               @brief Constructor
+               @param msg Exception message
+            */
+            CStopDrawingSceneError(std::wstring msg);
+
+            /** @brief Get error details */
+            const std::wstring& WhatW() const noexcept { return m_message; }
+
+        private:
+            /** @brief Exception message */
+            std::wstring m_message;
+        };
     } // namespace Error
 } // namespace Utl
 

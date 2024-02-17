@@ -1,4 +1,9 @@
 ﻿#include "ApplicationClock.h"
+#include "Scene.h"
+#include "PhysicsWorld.h"
+#include "UtilityForDebug.h"
+#include "ImguiHelper.h"
+#include "SceneRegistry.h"
 
 // Destructor
 CAppClock::~CAppClock() {
@@ -18,26 +23,21 @@ bool CAppClock::ManageFrameRate() {
     
     // If the previous frame's time was retained
     if (m_prevTime.has_value()) {
-        // If the elapsed time is within the time of one frame
+        // If the elapsed time does not exceed the time of one frame, return false
         double elapsedTime = (currentTime - m_prevTime.value()).count();
         if (elapsedTime < m_frameTime) {
-            // Sleep threads until 1 frame time
-            Seconds sleepTime(m_frameTime - elapsedTime);
-            Sleep(static_cast<DWORD>((m_frameTime - elapsedTime) * 1000));
+            return false;
         }
 
         // Get current time again
         currentTime = std::chrono::duration_cast<Seconds>(std::chrono::high_resolution_clock::now().time_since_epoch());
         
         // Recalculate elapsed time from previous frame
-        m_deltaTime = (currentTime - m_prevTime.value()).count();
-
-        // #TODO : 
-        OutputDebugString((L"FPS : " + std::to_wstring(1 / m_deltaTime) + L"\n").c_str());
+        m_deltaTime = (float)((currentTime - m_prevTime.value()).count());
     }
     else {
         // Set the elapsed time to the time of one frame as it is
-        m_deltaTime = m_frameTime;
+        m_deltaTime = (float)m_frameTime;
     }
     // Update prev frame time
     m_prevTime = currentTime;
@@ -46,9 +46,36 @@ bool CAppClock::ManageFrameRate() {
 }
 
 // Initialize
-void CAppClock::Initialize() {
-    // 60FPS
-    m_frameTime = 1.0 / 5000.0;
+void CAppClock::Initialize(double fps) {
+#ifdef _EDITOR
+    // Set window function for drawing fps
+    CImguiHelper::GetAny().AddWindowFunction([this]() -> bool {
+        if (CSceneRegistry::GetMain().IsDisplayFPS()) {
+            char fpsText[32];
+            snprintf(fpsText, sizeof(fpsText), "FPS: %.1f", 1.0f / this->m_deltaTime);
+
+            // Set background color of the next window to 0.2
+            ImGui::SetNextWindowBgAlpha(0.2f);
+
+            // Set position of the next window to top left of screen
+            ImGui::SetNextWindowPos(ImVec2(10, 10), ImGuiCond_Always);
+
+            // Calculate size of the fps text and set it to size of the next window
+            ImVec2 textSize = ImGui::CalcTextSize(fpsText);
+            ImGui::SetNextWindowSize(ImVec2(textSize.x + 20, textSize.y + 20));
+
+            // Draw fps
+            ImGuiWindowFlags flags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoSavedSettings;
+            ImGui::Begin("FPSWindow", nullptr, flags);
+            ImGui::Text("%s", fpsText);
+            ImGui::End();
+        }
+
+        return true;
+        });
+#endif // _EDITOR
+
+    SetFPS(fps);
 
     // Request a minimum resolution for periodic timers
     timeBeginPeriod(1);
@@ -63,4 +90,14 @@ void CAppClock::SleepApplication(bool isSleep) {
 
     // Set flag
     m_isSleep = isSleep;
+}
+
+// Get the delta time appropriate for the timing of the call to this function
+float CAppClock::GetAppropriateDeltaTime() {
+    if (CScene::GetCurrentScenePhase() == ScenePhase::Update) {
+        return (float)m_deltaTime;
+    }
+    else {
+        return Mkpe::CPhysicsWorld::GetTimeStep();
+    }
 }

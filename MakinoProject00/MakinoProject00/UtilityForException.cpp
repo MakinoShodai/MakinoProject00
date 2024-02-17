@@ -6,12 +6,16 @@
 Utl::Error::CFatalError::CFatalError(std::wstring msg) 
     : m_message(std::move(msg)) { 
     if (Utl::CMainThreadChecker::IsMainThread()) {
-        // Wait for present is called
-        CSwapChain::GetMain().WaitForPresent();
+        // Sequre commands
+        CCommandManager::GetMain().SecureCommands();;
+    }
+}
 
-        // Wait for GPU
-        if (CCommandManager::GetMain().GetCommandQueue() != nullptr) {
-            CCommandManager::GetAny().WaitForGPU();
-        }
+// Constructor
+Utl::Error::CStopDrawingSceneError::CStopDrawingSceneError(std::wstring msg) 
+    : m_message(std::move(msg)) {
+    if (Utl::CMainThreadChecker::IsMainThread()) {
+        // Clear command list
+        CCommandManager::GetMain().ClearCurrentCommandList();
     }
 }

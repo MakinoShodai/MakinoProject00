@@ -4,6 +4,8 @@
 
 // Destructor
 CCommandManager::~CCommandManager() {
+    if (m_cmdQueue == nullptr) { return; }
+
     // Wait for GPU
     GetAny().WaitForGPU();
 
@@ -77,6 +79,45 @@ void CCommandManager::UnsafeGraphicsCommandsExecute() {
 
     // Execute command list
     m_cmdQueue->ExecuteCommandLists(1, cmdList);
+
+    // command has been executed, determine the resource state on the GPU
+    for (auto& it : m_resStateControllers) {
+        if (it == nullptr) { continue; }
+        it->ApplyCurrentStateOnGpu();
+    }
+    m_resStateControllers.clear();
+}
+
+// Clear the current command list.
+void CCommandManager::ClearCurrentCommandList() {
+    // Get next back buffer index
+    UINT bufferIndex = CSwapChain::GetMain().GetNextBackBufferIndex();
+    // Close command list
+    HR_CHECK_OUTWIND("Close command list for graphics",
+        m_graphicsCmdList[bufferIndex]->Close()
+    );
+
+    // Just clear the commands
+    GetAny().UnsafeGraphicsCommandsClear(bufferIndex);
+
+    // Command cleared without execution, modify resource states
+    for (auto& it : m_resStateControllers) {
+        if (it == nullptr) { continue; }
+        it->ModifyToCurrentStateOnGpu();
+    }
+    m_resStateControllers.clear();
+}
+
+// Secure command queues and command lists
+void CCommandManager::SecureCommands() {
+    // Wait for present is called
+    CSwapChain::GetMain().WaitForPresent();
+    if (m_cmdQueue != nullptr) {
+        // Wait for GPU
+        GetAny().WaitForGPU();
+        // Clear current command list
+        ClearCurrentCommandList();
+    }
 }
 
 // Clear graphics command list and graphics command allocator, However, it is not associated with execution and is used only in special situations

@@ -12,7 +12,7 @@
 #include "Singleton.h"
 
  // Random value generator
-class CRandom : ACSingletonBase<CRandom> {
+class CRandom : public ACMainThreadSingleton<CRandom> {
     // Friend declaration
     friend class ACSingletonBase;
 

@@ -51,7 +51,7 @@ public:
 
     /** @brief Get feature for thread-safe */
     inline static CThreadSafeFeature& GetAny() {
-        static CThreadSafeFeature instance(&GetProtected());
+        static CThreadSafeFeature instance(GetProtected().Get());
         return instance;
     }
 
@@ -97,6 +97,7 @@ auto CThreadPool::CThreadSafeFeature::EnqueueTask(F&& function, Args && ...args)
         catch (const Utl::Error::CFatalError& e) {
             // Error processing
             CApplicationError::GetAny().Exit(e.WhatW());
+            throw e;
         }
     };
 

@@ -3,7 +3,6 @@
 
 // Initialize
 ACRenderTarget* ACRenderTarget::ms_currentAppliedRenderTarget = nullptr;
-CDepthStencil* ACRenderTarget::ms_currentAppliedDepthStencil = nullptr;
 
 // Apply this render target to the destination render target by calling 'OMSetRenderTargets'
 void ACRenderTarget::Apply(CDepthStencil* dsv, std::initializer_list<ACRenderTarget*> otherRT) {
@@ -45,14 +44,18 @@ void ACRenderTarget::Apply(CDepthStencil* dsv, std::initializer_list<ACRenderTar
         i++;
     }
     
+    // State check process to be called when applying a destination for drawing
+    D3D12_CPU_DESCRIPTOR_HANDLE dsvHandle;
+    if (dsv != nullptr) {
+        dsv->CheckStateAtApplying();
+        dsvHandle = dsv->GetCPUHandleDSV();
+    }
+
     // Apply render targets to the destination render targets
-    D3D12_CPU_DESCRIPTOR_HANDLE dsvHandle = (dsv != nullptr) ? dsv->GetCPUHandleDSV() : NULL;
     cmdList->OMSetRenderTargets(rtNum, &rtvHandles[0], FALSE, (dsv != nullptr) ? &dsvHandle : nullptr);
 
     // Set this render target to the current applied render target
     ms_currentAppliedRenderTarget = this;
-    // Set the sent depth stencil to the current applied depth stencil
-    ms_currentAppliedDepthStencil = dsv;
 }
 
 // Clear the color of all pixels on this render target
